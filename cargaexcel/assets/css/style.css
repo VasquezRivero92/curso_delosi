@@ -1,0 +1,20 @@
+/*******************************************************************************/
+body{
+    background: url(../img/bg.png) repeat 50% 0%;
+    color: #fff;
+}
+#fullcont, .row{ min-width: 320px; }
+/*******************************************************************************/
+#t-excel,#t-excel td{ border: 1px solid #fff; }
+#t-excel td{ padding: 1px 8px; }
+#exc-tabla{ display: none; }
+#mail-masivo{
+    display: none;
+    pointer-events: auto;
+}
+#exc-registrar.disable,
+#mail-masivo.disable{
+    opacity: 0.7;
+    pointer-events: none;
+}
+/*******************************************************************************/

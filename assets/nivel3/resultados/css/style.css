@@ -1,0 +1,146 @@
+@charset "utf-8";
+*{ -webkit-transform:translateZ(0); }
+/*****************************************  estilos base  *****************************************/
+html{ overflow:hidden; }
+body{
+    margin:0px; padding:0px;
+    background-color:#333333;
+    overflow:hidden;
+}
+.resizeWindow{
+    position: absolute;
+    width: 1350px; height: 700px;
+    left: 0px; top: 0px;
+    margin: 0;
+    overflow: hidden;
+    transform-origin: 0% 0%;
+}
+#qLoverlay{ display: none; z-index: 999; }
+#historia{ display: block; background-color: #434343; }
+.showNewPassword{}
+/*****************************************  loader  *****************************************/
+#qLoverlay{
+    display: none;
+    background:url(../images/fondoLoader.png) no-repeat center center;
+    z-index: 999;
+}
+#qLpercentage{
+    position:absolute;
+    width: 250px; height: 120px;
+    left: 550px; bottom: 330px;
+    font-family:"Bebas";
+    font-size: 111px;
+    line-height: 120px;
+    color:#ffffff;
+    text-align: center;
+}
+#img_loader01{
+    position: absolute;
+    width: 215px; height: 126px;
+    left: 567px; bottom: 175px;
+    background:url(../images/loadG.png) no-repeat 50% 100%;
+    overflow: hidden;
+}
+#img_loader01 div{
+    position: absolute; display: block;
+    width: 100%;
+    left: 0; right: 0;
+    bottom: 0;
+    background:url(../images/load.png) no-repeat 50% 100%;
+    overflow: hidden;
+}
+#qLoverlay img{ visibility:hidden; }
+/*****************************************  pantallas iniciales  *****************************************/
+.instrucciones{
+    position:absolute;
+    width:1350px; height:700px;
+    left:0px; top:0px;
+    z-index:600;
+    display:none;
+}
+/*******************************  Instruccion 4  *******************************/
+#instruccion_4{ background: url(../images/bginst4.png) no-repeat center center; }
+#i4tit_1{
+    position: absolute;
+    left: 202px; top: 276px;
+    width: 342px;
+    font-family: "Bebas";
+    font-size: 24px;
+    line-height: 33px;
+    color: #ffffff;
+    text-transform: uppercase;
+    background: rgba(0,0,0,0);
+}
+#i4txt_1{
+    position: absolute;
+    left: 623px; top: 170px;
+    font-family: "Catalogo";
+    font-size: 17px;
+    line-height: 23px;
+    color: #333745;
+    background: rgba(255,255,255,0);
+}
+#i4txt_1 span{
+    font-family: "CatalogoGruesa";
+    color: #ff3650;
+    text-transform: uppercase;
+}
+#i4txt_2{
+    position: absolute;
+    left: 621px; top: 395px;
+    width: 500px;
+    font-family: "CatalogoGruesa";
+    font-size: 25px;
+    line-height: 30px;
+    color: #ff3650;
+    text-align: center;
+}
+#i4btn_1{
+    position: absolute;
+    width: 158px; height: 36px;
+    left: 794px; top: 461px;
+    font-family: "Catalogo";
+    font-size: 17px;
+    line-height: 35px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    background: #ff3650;
+    cursor: pointer;
+}
+/*******************************  Instruccion 5  *******************************/
+#instruccion_5{ background: url(../images/bginst5.png) no-repeat center center; }
+#i5tit_1{
+    position: absolute;
+    left: 467px; top: 153px;
+    font-family: "CatalogoGruesa";
+    font-size: 17px;
+    line-height: 23px;
+    color: #ff3650;
+    text-transform: uppercase;
+}
+#i5txt_1{
+    position: absolute;
+    width: 420px;
+    left: 467px; top: 221px;
+    font-family: "Catalogo";
+    font-size: 17px;
+    line-height: 23px;
+    color: #333745;
+    background: rgba(0,0,0,0);
+}
+#i5btn_1{
+    position: absolute;
+    width: 100px; height: 35px;
+    left: 626px; top: 443px;
+    font-family: "Catalogo";
+    font-size: 17px;
+    line-height: 34px;
+    color: #ffffff;
+    text-align: center;
+    background: #ff3650;
+    cursor: pointer;
+}
+/*******************************  Instruccion 6  *******************************/
+#instruccion_6{ background: url(../images/bginst6.png) no-repeat center center; }
+/*******************************************************************************/

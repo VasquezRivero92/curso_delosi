@@ -1,0 +1,274 @@
+@charset "utf-8";
+*{ -webkit-transform:translateZ(0); }
+/*****************************************  estilos base  *****************************************/
+html{ overflow:hidden; }
+body{
+    margin:0px; padding:0px;
+    background-color:#333333;
+    overflow:hidden;
+}
+.resizeWindow{
+    position: absolute;
+    width: 1350px; height: 700px;
+    left: 0px; top: 0px;
+    margin: 0;
+    overflow: hidden;
+    transform-origin: 0% 0%;
+}
+#qLoverlay{ display: none; z-index: 999; }
+#historia{ display: block; background-color: #434343; }
+/*****************************************  loader  *****************************************/
+#qLoverlay{
+    display: none;
+    background:url(../images/fondoLoader.png) no-repeat center center;
+    z-index: 999;
+}
+#qLpercentage{
+    position:absolute;
+    width: 250px; height: 120px;
+    left: 550px; bottom: 330px;
+    font-family:"Bebas";
+    font-size: 111px;
+    line-height: 120px;
+    color:#ffffff;
+    text-align: center;
+}
+#img_loader01{
+    position: absolute;
+    width: 215px; height: 126px;
+    left: 567px; bottom: 175px;
+    background:url(../images/loadG.png) no-repeat 50% 100%;
+    overflow: hidden;
+}
+#img_loader01 div{
+    position: absolute; display: block;
+    width: 100%;
+    left: 0; right: 0;
+    bottom: 0;
+    background:url(../images/load.png) no-repeat 50% 100%;
+    overflow: hidden;
+}
+#qLoverlay img{ visibility:hidden; }
+/*****************************************  pantallas iniciales  *****************************************/
+.instrucciones{
+    position:absolute;
+    width:1350px; height:700px;
+    left:0px; top:0px;
+    z-index:600;
+    display:none;
+}
+#instrucciones_1{ background: url(../images/bginst1.png) no-repeat center center; }
+.g-oficina #instrucciones_2{ background: url(../images/bginst2O.png) no-repeat center center; }
+.g-oficina #instrucciones_3{ background: url(../images/bginst3O.png) no-repeat center center; }
+.g-oficina #instrucciones_4{ background: url(../images/bginst4O.png) no-repeat center center; }
+.g-oficina #instrucciones_5{ background: url(../images/bginst5O.png) no-repeat center center; }
+.g-planta #instrucciones_2{ background: url(../images/bginst2P.png) no-repeat center center; }
+.g-planta #instrucciones_3{ background: url(../images/bginst3P.png) no-repeat center center; }
+.g-planta #instrucciones_4{ background: url(../images/bginst4P.png) no-repeat center center; }
+.g-planta #instrucciones_5{ background: url(../images/bginst5P.png) no-repeat center center; }
+.g-restaurante #instrucciones_2{ background: url(../images/bginst2R.png) no-repeat center center; }
+.g-restaurante #instrucciones_3{ background: url(../images/bginst3R.png) no-repeat center center; }
+.g-restaurante #instrucciones_4{ background: url(../images/bginst4R.png) no-repeat center center; }
+.g-restaurante #instrucciones_5{ background: url(../images/bginst5R.png) no-repeat center center; }
+
+.btnPrev{
+    position: absolute;
+    width: 33px; height: 80px;
+    top: 60px;
+    background: url(../images/btnPrev.png) no-repeat 0px 0px;
+    cursor: pointer;
+}
+#btnPrev_2{ left: 160px; }
+#btnPrev_3{ left: 160px; }
+#btnPrev_4{ left: 160px; }
+#btnPrev_5{ left: 160px; }
+.btnNext{
+    position: absolute;
+    width: 33px; height: 80px;
+    top: 60px;
+    background: url(../images/btnNext.png) no-repeat 0px 0px;
+    cursor: pointer;
+}
+#btnNext_1{ right: 160px; }
+#btnNext_2{ right: 160px; }
+#btnNext_3{ right: 160px; }
+#btnNext_4{ right: 160px; }
+#btnJugar{
+    position: absolute;
+    width: 167px; height: 71px;
+    left: 1010px; top: 540px;
+    background: url(../images/btnJugar.png) no-repeat center center;
+    cursor: pointer;
+}
+/*****************************************  pantallas del juego  *****************************************/
+.game{
+    position: absolute;
+    width: 1350px; height: 700px;
+    left: 0px; top: 0px;
+    overflow: hidden;
+    display: none;
+}
+#pregWindow,#capaResumen{
+    position:absolute;
+    width:1350px; height:700px;	
+    background-color:rgba(0,0,0,0.8);
+    overflow:hidden;
+    display:none;
+    z-index:600;
+}
+.caratula{
+    position:absolute;
+    width:1350px; height:700px;
+    left:0px; top:0px;
+    background-repeat:no-repeat;
+    background-position:center center;
+}
+/*****************************************  Ventana pausa  *****************************************/
+#pausaTouch{
+    position: absolute;
+    width: 116px; height: 95px;
+    left: 1098px; top: 20px; 
+    background: rgba(0,0,0,0) url(../images/btnPausa.png) no-repeat 50% 50%;
+    z-index:560;
+    cursor: pointer;
+}
+#PauseGame{
+    position: absolute;
+    width: 1350px; height: 700px;
+    left: 0px; top: 0px;
+    background: rgba(0,0,0,0.8) url(../images/fondoPausa.png) no-repeat 50% 50%;
+    display: none;
+    z-index: 630;
+}
+#btnReanudar{
+    position: absolute;
+    width: 158px; height: 35px;
+    left: 579px; top: 505px; 
+    background: url(../images/btnReanudar.png) no-repeat 50% 50%;
+    cursor: pointer;
+}
+/*****************************************  Entorno del juego  *****************************************/
+.gameEnv{ display:none; }
+/*****************************************  marcador (parte superior)  *****************************************/
+#CTimer{
+    position:absolute;
+    top: 17px; left: 913px;
+    font-family: "Bebas";
+    font-size: 64px;
+    color: #333745;
+    text-align: right;
+    width: 160px;
+    z-index: 560;
+}
+#CTimer div{
+    position:relative;
+    display:block;
+    float:left;
+}
+#CMin, #CSeg{ width:70px; color:#ff3650; }
+/*******************************************************************************/
+#pregBien{ background-image: url(../images/BGpregBien.png); }
+#btnListo{
+    position: absolute;
+    width: 167px; height: 41px;
+    top: 500px; left: 450px;
+    background: url(../images/btnListo.png) no-repeat 50% 50%;
+    cursor: pointer;
+}
+/*******************************************************************************/
+#pregMal{ background-image: url(../images/BGpregMal.png); }
+.rImg{
+    position: absolute;
+    width: 104px; height: 104px;
+    top: 365px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+#rImg1{ left: 437px; }
+#rImg2{ left: 548px; }
+#rImg3{ left: 659px; }
+#rImg4{ left: 770px; }
+#btnFin{
+    position: absolute;
+    width: 167px; height: 41px;
+    top: 521px; left: 574px;
+    background: url(../images/btnFin.png) no-repeat 50% 50%;
+    cursor: pointer;
+}
+/****************************  ventana de resultados ****************************/
+#caratulaFin1{ background:url(../images/fondoFin.png); }
+#resumenAvatar{
+    position: absolute;
+    width: 268px; height: 341px;
+    top: 203px; left: 394px;
+    background-color: rgba(0,0,0,0);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+}
+.avOF #resumenAvatar{ background-image: url(../images/avrsOF.png); }
+.avOM #resumenAvatar{ background-image: url(../images/avrsOM.png); }
+.avPF #resumenAvatar{ background-image: url(../images/avrsPF.png); }
+.avPM #resumenAvatar{ background-image: url(../images/avrsPM.png); }
+.avRF #resumenAvatar{ background-image: url(../images/avrsRF.png); }
+.avRM #resumenAvatar{ background-image: url(../images/avrsRM.png); }
+
+#resumenPuntaje{
+    position: absolute;
+    width: 164px;
+    top: 189px; left: 836px;
+    font-family: "CatalogoGruesa";
+    font-size: 48px;
+    color: #ff3650;
+    text-align: center;
+}
+#resumenEstrellas{
+    position: absolute;
+    width: 243px; height: 116px;
+    top: 358px; left: 797px;
+    background-color: rgba(0,0,0,0);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+#resumenEstrellas.st0{ background-image: url(../images/st0.png); }
+#resumenEstrellas.st1{ background-image: url(../images/st1.png); }
+#resumenEstrellas.st2{ background-image: url(../images/st2.png); }
+#resumenEstrellas.st3{ background-image: url(../images/st3.png); }
+#resumenBtns{
+    position: absolute;
+    width: 350px; height: 44px;
+    left: 743px; top: 510px;
+    text-align: center;
+}
+#resumenBtns *{
+    position: relative;
+    display: inline-block;
+    width: 136px; height: 44px;
+    font-size: 0;
+    margin: 0 10px;
+    vertical-align: top;
+    cursor: pointer;
+}
+#btnReinicio{ background: url(../images/btnReintentar.png) no-repeat 50% 50%; }
+#btnContinuar{ background:url(../images/btnContinuar.png) no-repeat 50% 50%; }
+#resumenOportunidad{
+    position: absolute;
+    width: 172px; height: 11px;
+    left: 755px; top: 567px;
+    background: url(../images/oportunidad.png) no-repeat 50% 50%;
+}
+/*****************************************  objetos ocultos  *****************************************/
+#objetosOcultos{
+    position:absolute;
+    left:0px; top:0px;
+    width:0px; height:0px;
+    visibility:hidden;
+    overflow:hidden;
+    opacity:0;
+}
+#objetosOcultos div, #objetosOcultos img{
+    position:absolute;
+    width:0px; height:0px;
+    opacity:0;
+}
+/*******************************************************************************/

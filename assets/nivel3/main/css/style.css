@@ -1,0 +1,588 @@
+@charset "utf-8";
+*{ -webkit-transform:translateZ(0); }
+/*****************************************  estilos base  *****************************************/
+html{ overflow:hidden; }
+body{
+    margin:0px; padding:0px;
+    background-color:#333333;
+    overflow:hidden;
+}
+.resizeWindow{
+    position: absolute;
+    width: 1350px; height: 700px;
+    left: 0px; top: 0px;
+    margin: 0;
+    overflow: hidden;
+    transform-origin: 0% 0%;
+}
+#qLoverlay{ display: none; z-index: 999; }
+#historia{ display: block; background-color: #434343; }
+/*****************************************  loader  *****************************************/
+#qLoverlay{
+    display: none;
+    background:url(../images/fondoLoader.png) no-repeat center center;
+    z-index: 999;
+}
+#qLpercentage{
+    position:absolute;
+    width: 250px; height: 120px;
+    left: 550px; bottom: 330px;
+    font-family:"Bebas";
+    font-size: 111px;
+    line-height: 120px;
+    color:#ffffff;
+    text-align: center;
+}
+#img_loader01{
+    position: absolute;
+    width: 215px; height: 126px;
+    left: 567px; bottom: 175px;
+    background:url(../images/loadG.png) no-repeat 50% 100%;
+    overflow: hidden;
+}
+#img_loader01 div{
+    position: absolute; display: block;
+    width: 100%;
+    left: 0; right: 0;
+    bottom: 0;
+    background:url(../images/load.png) no-repeat 50% 100%;
+    overflow: hidden;
+}
+#qLoverlay img{ visibility:hidden; }
+/*****************************************  pantallas iniciales  *****************************************/
+.instrucciones{
+    position:absolute;
+    width:1350px; height:700px;
+    left:0px; top:0px;
+    z-index:600;
+    display:none;
+}
+/*******************************  Instruccion 1  *******************************/
+#instruccion_1{ background: url(../images/bginst1.png) no-repeat center center; }
+#i1tit_1{
+    position: absolute;
+    width: 800px;
+    left: 275px; top: 145px;
+    font-family:"Bebas";
+    font-size: 29px;
+    line-height: 30px;
+    color:#ff3650;
+    text-align: center;
+    letter-spacing: 4px;
+}
+#i1tit_2{
+    position: absolute;
+    width: 800px;
+    padding-top: 25px;
+    left: 275px; top: 205px;
+    font-family:"CatalogoGruesa";
+    font-size: 60px;
+    line-height: 65px;
+    color:#ffffff;
+    text-align: center;
+    background: url(../images/i1bg1.png) no-repeat 50% 0%;
+}
+#i1tit_3{
+    position: absolute;
+    width: 800px;
+    left: 275px; top: 301px;
+    font-family:"CatalogoGruesa";
+    font-size: 50px;
+    line-height: 40px;
+    color:#ffffff;
+    text-align: center;
+    /*background: url(../images/i1bg2.png) no-repeat 50% 50%;*/
+}
+#i1tit_4{
+    position: absolute;
+    width: 800px;
+    padding-bottom: 22px;
+    left: 275px; top: 342px;
+    font-family:"CatalogoGruesa";
+    font-size: 65px;
+    line-height: 80px;
+    color:#ffffff;
+    text-align: center;
+    background: url(../images/i1bg1.png) no-repeat 50% 100%;
+}
+/*******************************  Instruccion 2  *******************************/
+#instruccion_2{ background: url(../images/bginst2.png) no-repeat center center; }
+#i2img_1{
+    position: absolute;
+    width: 544px; height: 597px;
+    left: 674px; top: 15px;
+    background-color: rgba(0,0,0,0);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.avOF #i2img_1{ background-image: url(../images/i2avOF.png); }
+.avOM #i2img_1{ background-image: url(../images/i2avOM.png); }
+.avPF #i2img_1{ background-image: url(../images/i2avPF.png); }
+.avPM #i2img_1{ background-image: url(../images/i2avPM.png); }
+.avRF #i2img_1{ background-image: url(../images/i2avRF.png); }
+.avRM #i2img_1{ background-image: url(../images/i2avRM.png); }
+#i2tit_1{
+    position: absolute;
+    width: 410px; height: 110px;
+    left: 265px; top: 38px;
+    font-family: "Bebas";
+    font-size: 56px;
+    line-height: 102px;
+    color: #ffffff;
+    text-align: center;
+    background-image: url(../images/i2bg1.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+#i2txt_1{
+    position: absolute;
+    width: 327px;
+    left: 309px; top: 219px;
+    font-family: "Catalogo";
+    font-size: 17px;
+    line-height: 23px;
+    color: #333745;
+}
+#i2btn_1{
+    position: absolute;
+    width: 158px; height: 36px;
+    left: 389px; top: 539px;
+    font-family: "Catalogo";
+    font-size: 18px;
+    line-height: 35px;
+    color: #ffffff;
+    text-align: center;
+    background: #ff3650;
+    cursor: pointer;
+}
+/*******************************  Instruccion 3  *******************************/
+#instruccion_3{ background: url(../images/bginst3.png) no-repeat center center; }
+
+#i3tit_1{
+    position: absolute;
+    width: 905px; height: 89px;
+    left: 222px; top: 55px;
+    font-family: "Bebas";
+    font-size: 40px;
+    line-height: 80px;
+    color: #ffffff;
+    text-align: center;
+    background: url(../images/i3bg1.png) no-repeat 50% 50%;
+}
+#i3txt_1{
+    position: absolute;
+    width: 800px;
+    left: 275px; top: 175px;
+    font-family: "CatalogoGruesa";
+    font-size: 17px;
+    line-height: 20px;
+    color: #333745;
+    text-align: center;
+}
+
+.i3btn{
+    position: absolute;
+    width: 196px; height: 240px;
+    top: 253px;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    cursor: pointer;
+}
+.i3btn.disable{ opacity: 0.5; pointer-events: none; }
+/***.i3btn:hover{ background-position: 0px -210px; }/***/
+#i3btn_1{ left: 203px; background-image: url(../images/i3btn1.png); }
+#i3btn_2{ left: 443px; background-image: url(../images/i3btn2.png); }
+#i3btn_3{ left: 683px; background-image: url(../images/i3btn3.png); }
+#i3btn_4{ left: 922px; background-image: url(../images/i3btn4.png); }
+
+
+#i3txt_2{
+    position: absolute; display: none;
+    width: 800px;
+    left: 275px; top: 510px;
+    font-family: 'CatalogoGruesa';
+    font-size: 17px;
+    line-height: 20px;
+    color: #333745;
+    text-align: center;
+}
+#btnJugar{
+    position: absolute; display: none;
+    width: 170px; height: 40px;
+    left: 590px; top: 545px;
+    font-family: 'Catalogo';
+    font-size: 17px;
+    line-height: 40px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    background: #ff3650;
+    box-shadow: 0px 0px 0px 4px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+/*******************************  Instruccion 4  *******************************/
+#instruccion_4{ background: url(../images/bginst4.png) no-repeat center center; }
+#i4_video{
+    position:absolute;
+    width: 800px; height: 450px;
+    left:275px; top:50px;
+}
+#i4btn_1{
+    position: absolute;
+    width: 100px; height: 35px;
+    left: 626px; top: 520px;
+    font-family: "Catalogo";
+    font-size: 17px;
+    line-height: 34px;
+    color: #ffffff;
+    text-align: center;
+    background: #ff3650;
+    box-shadow: 0px 0px 0px 4px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+/*******************************************************************************/
+/**********************************  Sliders  **********************************/
+/*******************************************************************************/
+.cont-carousel {
+    position: absolute;
+    width: 820px;
+    left: 266px; top: 203px;
+}
+.owl-carousel {
+    display: none;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    /* position relative and z-index fix webkit rendering fonts issue */
+    position: relative;
+    z-index: 1;
+}
+.owl-carousel .owl-stage {
+    position: relative;
+    -ms-touch-action: pan-Y;
+    -moz-backface-visibility: hidden;/* fix firefox animation glitch */
+}
+.owl-carousel .owl-stage:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+.owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    /* fix for flashing background */
+    -webkit-transform: translate3d(0px, 0px, 0px);
+}
+.owl-carousel .owl-wrapper,
+.owl-carousel .owl-item {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+}
+.owl-carousel .owl-item {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+.owl-carousel .owl-item:first-of-type { margin-right: 20px; }
+.owl-carousel .owl-item img { display: block; width: 100%; }
+.owl-carousel .owl-nav.disabled,
+.owl-carousel .owl-dots.disabled { display: none; }
+.owl-carousel .owl-nav{
+    position: absolute; display: none;
+    width: 100%; top:136px;
+    -webkit-tap-highlight-color: transparent;
+}
+.owl-carousel .owl-nav .owl-prev,
+.owl-carousel .owl-nav .owl-next{
+    position: absolute;
+    top: 0;
+    width: 33px; height: 88px;
+    font-size: 0;
+    color: transparent;
+    cursor: pointer;
+    cursor: hand;
+    user-select: none;
+}
+.owl-carousel .owl-nav .owl-prev{ left: -103px; background: url(../images/slider/prev.png) no-repeat 50% 50%; }
+.owl-carousel .owl-nav .owl-next{ right: -103px; background: url(../images/slider/next.png) no-repeat 50% 50%; }
+.owl-carousel .owl-nav .disabled{ opacity: 0; cursor: default; }
+.owl-carousel.owl-loaded{ display: block; }
+.owl-carousel.owl-loading{ display: block; opacity: 0; }
+.owl-carousel.owl-hidden{ opacity: 0; }
+.owl-carousel.owl-refresh .owl-item{ visibility: hidden; }
+.owl-carousel.owl-drag .owl-item{ user-select: none; }
+.owl-carousel.owl-grab{
+    cursor: move;
+    cursor: grab;
+}
+.owl-carousel.owl-rtl{ direction: rtl; }
+.owl-carousel.owl-rtl .owl-item{ float: right; }
+
+.item{
+    width: 400px; height: 395px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 200ms;
+}
+.item.itemLoading{ transform: scale(0.95,0.95); }
+.item div{
+    position: absolute;
+    width: 400px; height: 395px;
+    left: 0px; top: 0px;
+    user-select: none;
+}
+.item div:nth-child(1){ display: block; }
+.item div:nth-child(2){ display: none; }
+.item.selected div:nth-child(1){ display: none; }
+.item.selected div:nth-child(2){ display: block; }
+.item.wPlay div:nth-child(3){ display: none; }
+@keyframes itemLoading{
+    0%, { background-position: 50% 0%; }
+    100% { background-position: 50% 100%; }
+}
+.itemLoader{
+    display: none;
+    background-color: rgba(255,255,255,1);
+    background-image: url(../images/slider/loading.png);
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+}
+.itemLoading .itemLoader{
+    display: block;
+    animation: itemLoading 800ms steps(9) forwards;
+}
+
+@keyframes itmHand{
+    0%,80%,100% { 
+        opacity: 0; 
+        transform: scale(0.5,0.5);
+    }
+    85%,95% { 
+        opacity: 1; 
+        transform: scale(0.6,0.6);
+    }
+    90% { 
+        transform: scale(0.5,0.5);
+    }
+}
+.itmHand{
+    display: none;
+    background: url(../images/slider/hand.png) no-repeat center center;
+}
+.item.wPlay .itmHand{
+    display: block;
+    animation: itmHand 7s linear infinite;
+}
+.no-js .owl-carousel{ display: block; }
+.no-carousel{
+    position: absolute;
+    width: 850px;
+    left: 250px; top: 203px;
+    text-align: center;
+}
+.no-carousel .item{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+/*******************************  general de los sliders   *******************************/
+.stit_1{
+    position: absolute;
+    width: 800px;
+    left: 275px; top: 41px;
+    font-family: "CatalogoGruesa";
+    font-size: 18px;
+    line-height: 20px;
+    color: #ff3650;
+    text-align: center;
+}
+.stit_2{
+    position: absolute;
+    left : 67px; top : 67px;
+    width : 1215px; height : 62px;
+}
+
+.stxt_1{
+    position: absolute;
+    width: 800px; height: 50px;
+    padding-top: 5px;
+    left: 275px; top: 140px;
+    font-family: "CatalogoGruesa";
+    font-size: 17px;
+    line-height: 19px;
+    color: #333745;
+    text-align: center;
+    background: url(../images/stxt_1.png) no-repeat 50% 50%;
+}
+/*******************************  Slider Page 1  *******************************/
+#sliderPage_1{ background: url(../images/bgspg1.png) no-repeat center center; }
+#s1tit_2{ background: url(../images/s1tit2.png) no-repeat 50% 50%; }
+
+.owl-oficina #s1i1{ background: url(../images/slider/sliderOfi1A.png) no-repeat 50% 0%; }
+.owl-oficina #s1i2{ background: url(../images/slider/sliderOfi1B.png) no-repeat 50% 0%; }
+.owl-oficina #s1i1h{ background: url(../images/slider/sliderOfi1Ah.png) no-repeat 50% 0%; }
+.owl-oficina #s1i2h{ background: url(../images/slider/sliderOfi1Bh.png) no-repeat 50% 0%; }
+.owl-oficina #s1i1p{ background: url(../images/slider/sliderOfi1Ap.png) no-repeat 50% 0%; }
+.owl-oficina #s1i2p{ background: url(../images/slider/sliderOfi1Bp.png) no-repeat 50% 0%; }
+
+.owl-planta #s1i1{ background: url(../images/slider/sliderPla1A.png) no-repeat 50% 0%; }
+.owl-planta #s1i2{ background: url(../images/slider/sliderPla1B.png) no-repeat 50% 0%; }
+.owl-planta #s1i3{ background: url(../images/slider/sliderPla1C.png) no-repeat 50% 0%; }
+.owl-planta #s1i4{ background: url(../images/slider/sliderPla1D.png) no-repeat 50% 0%; }
+.owl-planta #s1i5{ background: url(../images/slider/sliderPla1E.png) no-repeat 50% 0%; }
+.owl-planta #s1i1h{ background: url(../images/slider/sliderPla1Ah.png) no-repeat 50% 0%; }
+.owl-planta #s1i2h{ background: url(../images/slider/sliderPla1Bh.png) no-repeat 50% 0%; }
+.owl-planta #s1i3h{ background: url(../images/slider/sliderPla1Ch.png) no-repeat 50% 0%; }
+.owl-planta #s1i4h{ background: url(../images/slider/sliderPla1Dh.png) no-repeat 50% 0%; }
+.owl-planta #s1i5h{ background: url(../images/slider/sliderPla1Eh.png) no-repeat 50% 0%; }
+.owl-planta #s1i1p{ background: url(../images/slider/sliderPla1Ap.png) no-repeat 50% 0%; }
+.owl-planta #s1i2p{ background: url(../images/slider/sliderPla1Bp.png) no-repeat 50% 0%; }
+.owl-planta #s1i3p{ background: url(../images/slider/sliderPla1Cp.png) no-repeat 50% 0%; }
+.owl-planta #s1i4p{ background: url(../images/slider/sliderPla1Dp.png) no-repeat 50% 0%; }
+.owl-planta #s1i5p{ background: url(../images/slider/sliderPla1Ep.png) no-repeat 50% 0%; }
+
+.owl-restaurante #s1i1{ background: url(../images/slider/sliderRes1A.png) no-repeat 50% 0%; }
+.owl-restaurante #s1i2{ background: url(../images/slider/sliderRes1B.png) no-repeat 50% 0%; }
+.owl-restaurante #s1i3{ background: url(../images/slider/sliderRes1C.png) no-repeat 50% 0%; }
+.owl-restaurante #s1i4{ background: url(../images/slider/sliderRes1D.png) no-repeat 50% 0%; }
+.owl-restaurante #s1i5{ background: url(../images/slider/sliderRes1E.png) no-repeat 50% 0%; }
+.owl-restaurante #s1i1h{ background: url(../images/slider/sliderRes1Ah.png) no-repeat 50% 0%; }
+.owl-restaurante #s1i2h{ background: url(../images/slider/sliderRes1Bh.png) no-repeat 50% 0%; }
+.owl-restaurante #s1i3h{ background: url(../images/slider/sliderRes1Ch.png) no-repeat 50% 0%; }
+.owl-restaurante #s1i4h{ background: url(../images/slider/sliderRes1Dh.png) no-repeat 50% 0%; }
+.owl-restaurante #s1i5h{ background: url(../images/slider/sliderRes1Eh.png) no-repeat 50% 0%; }
+.owl-restaurante #s1i1p{ background: url(../images/slider/sliderRes1Ap.png) no-repeat 50% 0%; }
+.owl-restaurante #s1i2p{ background: url(../images/slider/sliderRes1Bp.png) no-repeat 50% 0%; }
+.owl-restaurante #s1i3p{ background: url(../images/slider/sliderRes1Cp.png) no-repeat 50% 0%; }
+.owl-restaurante #s1i4p{ background: url(../images/slider/sliderRes1Dp.png) no-repeat 50% 0%; }
+.owl-restaurante #s1i5p{ background: url(../images/slider/sliderRes1Ep.png) no-repeat 50% 0%; }
+
+/*******************************  Slider Page 2  *******************************/
+#sliderPage_2{ background: url(../images/bgspg1.png) no-repeat center center; }
+#s2tit_2{ background: url(../images/s2tit2.png) no-repeat 50% 50%; }
+
+.owl-oficina #s2i2{ background: url(../images/slider/sliderOfi2B.png) no-repeat 50% 0%; }
+.owl-oficina #s2i3{ background: url(../images/slider/sliderOfi2C.png) no-repeat 50% 0%; }
+.owl-oficina #s2i2h{ background: url(../images/slider/sliderOfi2Bh.png) no-repeat 50% 0%; }
+.owl-oficina #s2i3h{ background: url(../images/slider/sliderOfi2Ch.png) no-repeat 50% 0%; }
+.owl-oficina #s2i2p{ background: url(../images/slider/sliderOfi2Bp.png) no-repeat 50% 0%; }
+.owl-oficina #s2i3p{ background: url(../images/slider/sliderOfi2Cp.png) no-repeat 50% 0%; }
+
+.owl-planta #s2i1{ background: url(../images/slider/sliderPla2A.png) no-repeat 50% 0%; }
+.owl-planta #s2i2{ background: url(../images/slider/sliderPla2B.png) no-repeat 50% 0%; }
+.owl-planta #s2i3{ background: url(../images/slider/sliderPla2C.png) no-repeat 50% 0%; }
+.owl-planta #s2i4{ background: url(../images/slider/sliderPla2D.png) no-repeat 50% 0%; }
+.owl-planta #s2i1h{ background: url(../images/slider/sliderPla2Ah.png) no-repeat 50% 0%; }
+.owl-planta #s2i2h{ background: url(../images/slider/sliderPla2Bh.png) no-repeat 50% 0%; }
+.owl-planta #s2i3h{ background: url(../images/slider/sliderPla2Ch.png) no-repeat 50% 0%; }
+.owl-planta #s2i4h{ background: url(../images/slider/sliderPla2Dh.png) no-repeat 50% 0%; }
+.owl-planta #s2i1p{ background: url(../images/slider/sliderPla2Ap.png) no-repeat 50% 0%; }
+.owl-planta #s2i2p{ background: url(../images/slider/sliderPla2Bp.png) no-repeat 50% 0%; }
+.owl-planta #s2i3p{ background: url(../images/slider/sliderPla2Cp.png) no-repeat 50% 0%; }
+.owl-planta #s2i4p{ background: url(../images/slider/sliderPla2Dp.png) no-repeat 50% 0%; }
+
+.owl-restaurante #s2i1{ background: url(../images/slider/sliderRes2A.png) no-repeat 50% 0%; }
+.owl-restaurante #s2i2{ background: url(../images/slider/sliderRes2B.png) no-repeat 50% 0%; }
+.owl-restaurante #s2i3{ background: url(../images/slider/sliderRes2C.png) no-repeat 50% 0%; }
+.owl-restaurante #s2i4{ background: url(../images/slider/sliderRes2D.png) no-repeat 50% 0%; }
+.owl-restaurante #s2i1h{ background: url(../images/slider/sliderRes2Ah.png) no-repeat 50% 0%; }
+.owl-restaurante #s2i2h{ background: url(../images/slider/sliderRes2Bh.png) no-repeat 50% 0%; }
+.owl-restaurante #s2i3h{ background: url(../images/slider/sliderRes2Ch.png) no-repeat 50% 0%; }
+.owl-restaurante #s2i4h{ background: url(../images/slider/sliderRes2Dh.png) no-repeat 50% 0%; }
+.owl-restaurante #s2i1p{ background: url(../images/slider/sliderRes2Ap.png) no-repeat 50% 0%; }
+.owl-restaurante #s2i2p{ background: url(../images/slider/sliderRes2Bp.png) no-repeat 50% 0%; }
+.owl-restaurante #s2i3p{ background: url(../images/slider/sliderRes2Cp.png) no-repeat 50% 0%; }
+.owl-restaurante #s2i4p{ background: url(../images/slider/sliderRes2Dp.png) no-repeat 50% 0%; }
+
+/*******************************  Slider Page 3  *******************************/
+#sliderPage_3{ background: url(../images/bgspg1.png) no-repeat center center; }
+#s3tit_2{ background: url(../images/s3tit2.png) no-repeat 50% 50%; }
+
+.owl-oficina #s3i1{ background: url(../images/slider/sliderOfi3A.png) no-repeat 50% 0%; }
+.owl-oficina #s3i2{ background: url(../images/slider/sliderOfi3B.png) no-repeat 50% 0%; }
+.owl-oficina #s3i3{ background: url(../images/slider/sliderOfi3C.png) no-repeat 50% 0%; }
+.owl-oficina #s3i1h{ background: url(../images/slider/sliderOfi3Ah.png) no-repeat 50% 0%; }
+.owl-oficina #s3i2h{ background: url(../images/slider/sliderOfi3Bh.png) no-repeat 50% 0%; }
+.owl-oficina #s3i3h{ background: url(../images/slider/sliderOfi3Ch.png) no-repeat 50% 0%; }
+.owl-oficina #s3i1p{ background: url(../images/slider/sliderOfi3Ap.png) no-repeat 50% 0%; }
+.owl-oficina #s3i2p{ background: url(../images/slider/sliderOfi3Bp.png) no-repeat 50% 0%; }
+.owl-oficina #s3i3p{ background: url(../images/slider/sliderOfi3Cp.png) no-repeat 50% 0%; }
+
+.owl-planta #s3i1{ background: url(../images/slider/sliderPla3A.png) no-repeat 50% 0%; }
+.owl-planta #s3i2{ background: url(../images/slider/sliderPla3B.png) no-repeat 50% 0%; }
+.owl-planta #s3i3{ background: url(../images/slider/sliderPla3C.png) no-repeat 50% 0%; }
+.owl-planta #s3i4{ background: url(../images/slider/sliderPla3D.png) no-repeat 50% 0%; }
+.owl-planta #s3i1h{ background: url(../images/slider/sliderPla3Ah.png) no-repeat 50% 0%; }
+.owl-planta #s3i2h{ background: url(../images/slider/sliderPla3Bh.png) no-repeat 50% 0%; }
+.owl-planta #s3i3h{ background: url(../images/slider/sliderPla3Ch.png) no-repeat 50% 0%; }
+.owl-planta #s3i4h{ background: url(../images/slider/sliderPla3Dh.png) no-repeat 50% 0%; }
+.owl-planta #s3i1p{ background: url(../images/slider/sliderPla3Ap.png) no-repeat 50% 0%; }
+.owl-planta #s3i2p{ background: url(../images/slider/sliderPla3Bp.png) no-repeat 50% 0%; }
+.owl-planta #s3i3p{ background: url(../images/slider/sliderPla3Cp.png) no-repeat 50% 0%; }
+.owl-planta #s3i4p{ background: url(../images/slider/sliderPla3Dp.png) no-repeat 50% 0%; }
+
+.owl-restaurante #s3i1{ background: url(../images/slider/sliderRes3A.png) no-repeat 50% 0%; }
+.owl-restaurante #s3i2{ background: url(../images/slider/sliderRes3B.png) no-repeat 50% 0%; }
+.owl-restaurante #s3i3{ background: url(../images/slider/sliderRes3C.png) no-repeat 50% 0%; }
+.owl-restaurante #s3i4{ background: url(../images/slider/sliderRes3D.png) no-repeat 50% 0%; }
+.owl-restaurante #s3i1h{ background: url(../images/slider/sliderRes3Ah.png) no-repeat 50% 0%; }
+.owl-restaurante #s3i2h{ background: url(../images/slider/sliderRes3Bh.png) no-repeat 50% 0%; }
+.owl-restaurante #s3i3h{ background: url(../images/slider/sliderRes3Ch.png) no-repeat 50% 0%; }
+.owl-restaurante #s3i4h{ background: url(../images/slider/sliderRes3Dh.png) no-repeat 50% 0%; }
+.owl-restaurante #s3i1p{ background: url(../images/slider/sliderRes3Ap.png) no-repeat 50% 0%; }
+.owl-restaurante #s3i2p{ background: url(../images/slider/sliderRes3Bp.png) no-repeat 50% 0%; }
+.owl-restaurante #s3i3p{ background: url(../images/slider/sliderRes3Cp.png) no-repeat 50% 0%; }
+.owl-restaurante #s3i4p{ background: url(../images/slider/sliderRes3Dp.png) no-repeat 50% 0%; }
+
+/*******************************  Slider Page 4  *******************************/
+#sliderPage_4{ background: url(../images/bgspg1.png) no-repeat center center; }
+#s4tit_2{ background: url(../images/s4tit2.png) no-repeat 50% 50%; }
+
+.owl-oficina #s4i1{ background: url(../images/slider/sliderOfi4A.png) no-repeat 50% 0%; }
+.owl-oficina #s4i2{ background: url(../images/slider/sliderOfi4B.png) no-repeat 50% 0%; }
+.owl-oficina #s4i3{ background: url(../images/slider/sliderOfi4C.png) no-repeat 50% 0%; }
+.owl-oficina #s4i1h{ background: url(../images/slider/sliderOfi4Ah.png) no-repeat 50% 0%; }
+.owl-oficina #s4i2h{ background: url(../images/slider/sliderOfi4Bh.png) no-repeat 50% 0%; }
+.owl-oficina #s4i3h{ background: url(../images/slider/sliderOfi4Ch.png) no-repeat 50% 0%; }
+.owl-oficina #s4i1p{ background: url(../images/slider/sliderOfi4Ap.png) no-repeat 50% 0%; }
+.owl-oficina #s4i2p{ background: url(../images/slider/sliderOfi4Bp.png) no-repeat 50% 0%; }
+.owl-oficina #s4i3p{ background: url(../images/slider/sliderOfi4Cp.png) no-repeat 50% 0%; }
+
+.owl-planta #s4i1{ background: url(../images/slider/sliderPla4A.png) no-repeat 50% 0%; }
+.owl-planta #s4i2{ background: url(../images/slider/sliderPla4B.png) no-repeat 50% 0%; }
+.owl-planta #s4i3{ background: url(../images/slider/sliderPla4C.png) no-repeat 50% 0%; }
+.owl-planta #s4i1h{ background: url(../images/slider/sliderPla4Ah.png) no-repeat 50% 0%; }
+.owl-planta #s4i2h{ background: url(../images/slider/sliderPla4Bh.png) no-repeat 50% 0%; }
+.owl-planta #s4i3h{ background: url(../images/slider/sliderPla4Ch.png) no-repeat 50% 0%; }
+.owl-planta #s4i1p{ background: url(../images/slider/sliderPla4Ap.png) no-repeat 50% 0%; }
+.owl-planta #s4i2p{ background: url(../images/slider/sliderPla4Bp.png) no-repeat 50% 0%; }
+.owl-planta #s4i3p{ background: url(../images/slider/sliderPla4Cp.png) no-repeat 50% 0%; }
+
+.owl-restaurante #s4i1{ background: url(../images/slider/sliderRes4A.png) no-repeat 50% 0%; }
+.owl-restaurante #s4i2{ background: url(../images/slider/sliderRes4B.png) no-repeat 50% 0%; }
+.owl-restaurante #s4i3{ background: url(../images/slider/sliderRes4C.png) no-repeat 50% 0%; }
+.owl-restaurante #s4i1h{ background: url(../images/slider/sliderRes4Ah.png) no-repeat 50% 0%; }
+.owl-restaurante #s4i2h{ background: url(../images/slider/sliderRes4Bh.png) no-repeat 50% 0%; }
+.owl-restaurante #s4i3h{ background: url(../images/slider/sliderRes4Ch.png) no-repeat 50% 0%; }
+.owl-restaurante #s4i1p{ background: url(../images/slider/sliderRes4Ap.png) no-repeat 50% 0%; }
+.owl-restaurante #s4i2p{ background: url(../images/slider/sliderRes4Bp.png) no-repeat 50% 0%; }
+.owl-restaurante #s4i3p{ background: url(../images/slider/sliderRes4Cp.png) no-repeat 50% 0%; }
+
+.btnVolver{
+    position: absolute; display: none;
+    width: 200px;
+    height: 44px;
+    left: 1050px; top: 10px;
+    background: url(../images/btnVolver.svg) no-repeat 50% 50%;
+    cursor: pointer;
+}
+/*******************************************************************************/

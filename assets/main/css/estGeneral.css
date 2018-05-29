@@ -1,0 +1,282 @@
+@charset "utf-8";
+*{ -webkit-transform:translateZ(0); }
+/*****************************************  estilos base  *****************************************/
+html{ overflow:hidden; }
+body{
+    margin:0px; padding:0px;
+    background-color:#333333;
+    overflow:hidden;
+}
+.resizeWindow{
+    position: absolute;
+    width: 1350px; height: 700px;
+    left: 0px; top: 0px;
+    margin: 0;
+    overflow: hidden;
+    transform-origin: 0% 0%;
+}
+#qLoverlay{ display: none; z-index: 999; }
+#historia{ display: block; background-color: #434343; }
+.showNewPassword,.selectAvatar{}
+/*****************************************  loader  *****************************************/
+#qLoverlay{
+    display: none;
+    background:url(../images/fondoLoader.png) no-repeat center center;
+    z-index: 999;
+}
+#qLpercentage{
+    position:absolute;
+    width: 250px; height: 120px;
+    left: 550px; bottom: 330px;
+    font-family: "Bebas";
+    font-size: 111px;
+    line-height: 120px;
+    color: #ffffff;
+    text-align: center;
+}
+#img_loader01{
+    position: absolute;
+    width: 215px; height: 126px;
+    left: 567px; bottom: 175px;
+    background:url(../images/loadG.png) no-repeat 50% 100%;
+    overflow: hidden;
+}
+#img_loader01 div{
+    position: absolute; display: block;
+    width: 100%;
+    left: 0; right: 0;
+    bottom: 0;
+    background:url(../images/load.png) no-repeat 50% 100%;
+    overflow: hidden;
+}
+#qLoverlay img{ visibility:hidden; }
+/*****************************************  pantallas iniciales  *****************************************/
+.instrucciones{
+    position:absolute;
+    width:1350px; height:700px;
+    left:0px; top:0px;
+    z-index:600;
+    display:none;
+}
+/*******************************  Instruccion 1  *******************************/
+#instruccion_1{ background: url(../images/bginst1.png) no-repeat 50% 50%; }
+#instruccion_1 form{
+    position: relative;
+    max-width: 493px;
+    margin: 50px auto 50px;
+    padding: 40px 0 50px;
+    background: rgba(255,255,255,1);
+    border: 8px solid #00a2bb;
+}
+#i1txt1{
+    padding: 0 40px 30px;
+    font-family: "Catalogo";
+    font-size: 17px;
+    line-height: 23px;
+    color: #333745;
+}
+
+.formInput{
+    display: block;
+    width: 90%;
+    max-width: 385px;
+    margin:0 auto 20px; padding:7px 10px;
+    font-family:"Catalogo";
+    font-size:17px;
+    line-height:20px;
+    color:#333745;
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: 14px 50%;
+    border:2px solid #333745;
+    outline:none;
+}
+.formInput.error{ border:2px solid #ff0000; color: #ff0000; }
+#i1submit{
+    display:block;
+    width:238px; height:36px;
+    margin: 40px auto 0;
+    font-family:"Catalogo";
+    font-size:18px;
+    line-height:35px;
+    color:#ffffff;
+    background: #ff3650;
+    border:0 none;
+    cursor:pointer;
+}
+/*******************************  Instruccion 2  *******************************/
+#instruccion_2{ background: url(../images/bginst2.png) no-repeat 50% 50%; }
+#i2_video{
+    position:absolute;
+    width: 800px; height: 450px;
+    left:275px; top:50px;
+}
+#i2_btn{
+    position: absolute;
+    width: 158px; height: 35px;
+    left: 595px; top: 539px;
+    font-family:"Catalogo";
+    font-size: 17px;
+    line-height: 34px;
+    color:#ffffff;
+    text-align: center;
+    background: #ff3650;
+    box-shadow: 0px 0px 0px 5px rgba(0,0,0,0.25);
+    cursor: pointer;
+}
+/*******************************  Instruccion 3  *******************************/
+#instruccion_3{ background: url(../images/bginst3.png) no-repeat 50% 50%; }
+#i3tit_1{
+    position: absolute;
+    width: 327px; height: 110px;
+    left: 511px; top: 38px;
+    background: url(../images/i3tit1.png) no-repeat 50% 50%;
+}
+#i3txt_1{
+    position: absolute;
+    width: 800px;
+    left: 275px; top: 212px;
+    font-family:"Catalogo";
+    font-size: 17px;
+    line-height: 23px;
+    color:#ff3650;
+    text-align: center;
+}
+#i3txt_1 span{ font-family:"CatalogoGruesa"; }
+#i3txt_2{
+    position: absolute;
+    width: 440px;
+    left: 461px; top: 259px;
+    font-family:"Catalogo";
+    font-size: 16px;
+    line-height: 23px;
+    color:#333745;
+    text-align: left;
+    background: rgba(0,0,0,0);
+}
+#i3txt_2 span{ font-family:"CatalogoGruesa"; }
+#i3btn_1{
+    position: absolute;
+    width: 158px; height: 35px;
+    left: 595px; top: 539px;
+    font-family:"Catalogo";
+    font-size: 17px;
+    line-height: 34px;
+    color:#ffffff;
+    text-align: center;
+    background: #ff3650;
+    cursor: pointer;
+}
+/*******************************  Instruccion 4  *******************************/
+#instruccion_4{ background: url(../images/bginst4.png) no-repeat center center; }
+#i4tit_1{
+    position: absolute;
+    width: 468px; height: 110px;
+    left: 441px; top: 31px;
+    background: url(../images/i4tit1.png) no-repeat 50% 50%;
+}
+#i4txt_1{
+    position: absolute;
+    width: 470px;
+    left: 440px; top: 152px;
+    font-family: "CatalogoGruesa";
+    font-size: 17px;
+    line-height: 23px;
+    color: #333745;
+    text-align: center;
+}
+.i4avatar{
+    position: absolute;
+    width: 232px; height: 266px;
+    top: 231px;
+    background-color: rgba(0,0,0,0);
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+    cursor: pointer;
+}
+#i4avatar_F{ left: 427px; }
+#i4avatar_M{ left: 685px; }
+
+.av-oficina #i4avatar_M{ background-image: url(../images/i4avOM.png); }
+.av-oficina #i4avatar_F{ background-image: url(../images/i4avOF.png); }
+.av-planta #i4avatar_M{ background-image: url(../images/i4avPM.png); }
+.av-planta #i4avatar_F{ background-image: url(../images/i4avPF.png); }
+.av-restaurante #i4avatar_M{ background-image: url(../images/i4avRM.png); }
+.av-restaurante #i4avatar_F{ background-image: url(../images/i4avRF.png); }
+/*******************************  Instruccion 5  *******************************/
+#instruccion_5{ background: url(../images/bginst5.png) no-repeat center center; }
+#i5txt1{
+    width: 95%;
+    max-width: 620px;
+    margin: 50px auto 0;
+    padding: 20px 20px 40px;
+    font-family: "Catalogo";
+    font-size: 17px;
+    line-height: 23px;
+    color: #333745;
+    background: #ffffff;
+    border: 8px solid #00a2bb;
+    box-sizing: border-box;
+}
+#i5btn{
+    width: 107px; height: 39px;
+    margin: -20px auto 0;
+    font-family: "Catalogo";
+    font-size: 17px;
+    line-height: 40px;
+    color: #ffffff;
+    text-align: center;
+    background: #ff3350;
+    cursor:pointer;
+}
+/*******************************  Instruccion 6  *******************************/
+#instruccion_6{ background: url(../images/bginst6.png) no-repeat center center; }
+#i6tit_1{
+    position: absolute;
+    width: 510px;
+    left: 415px; top: 115px;
+    font-family: "Bebas";
+    font-size: 31px;
+    line-height: 40px;
+    letter-spacing: 4px;
+    color: #ffffff;
+    text-align: center;
+}
+#tilde{
+    left: 642px; top: 105px;
+    position: absolute;
+    width: 510px;
+}
+.i6btn{
+    position: absolute;
+    width: 382px; height: 219px;
+    top: 276px;
+    text-decoration: none;
+    background-color: rgba(0,0,0,0);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    cursor: pointer;
+}
+#i6btn_1{ left: 737px; background-image: url(../images/i6b1.png); }
+#i6btn_2{ left: 252px; background-image: url(../images/i6b2.png); }
+
+#i6Logout{ position: absolute; display: none; }
+/*******************************************************************************/
+/**********************************  Popups  **********************************/
+/*******************************************************************************/
+.clearfix:before,.clearfix:after{
+    content: '\0020';
+    display: block; clear: both;
+    width: 0; height: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+.clearfix{ zoom: 1; }
+.popup{
+    position: absolute; display: none;
+    width: 100%; height: 100%;
+    left: 0; top: 0;
+    background: rgba(0,0,0,0.7);
+    overflow-y: scroll;
+}
+/*******************************************************************************/

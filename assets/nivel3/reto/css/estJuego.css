@@ -1,0 +1,122 @@
+@charset "utf-8";
+/*******************************************************************************/
+#tragamonedas{
+    background: url(../images/fondo1.png) no-repeat 50% 50%;
+}
+#tragamonedas .disable{
+    pointer-events: none;
+    opacity: 0.5;
+}
+#tragamonedas .jSlots-wrapper{
+    position: absolute; display: inline-block;
+    height: 190px;
+    left: 194px; top: 346px;
+    overflow: hidden;
+}
+#tragamonedas .slot{
+    float: left;
+    padding: 0; margin: 0 63px 0 0;
+    list-style: none;
+}
+#tragamonedas .slot li{
+    width: 190px; height: 190px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.g-oficina #tragamonedas .slot:nth-child(1) .rlItm1{ background-image: url(../images/r-oficina/s1_1.png); }
+.g-oficina #tragamonedas .slot:nth-child(1) .rlItm2{ background-image: url(../images/r-oficina/s1_2.png); }
+.g-oficina #tragamonedas .slot:nth-child(1) .rlItm3{ background-image: url(../images/r-oficina/s1_3.png); }
+.g-oficina #tragamonedas .slot:nth-child(1) .rlItm4{ background-image: url(../images/r-oficina/s1_4.png); }
+.g-oficina #tragamonedas .slot:nth-child(2) .rlItm1{ background-image: url(../images/r-oficina/s2_1.png); }
+.g-oficina #tragamonedas .slot:nth-child(2) .rlItm2{ background-image: url(../images/r-oficina/s2_2.png); }
+.g-oficina #tragamonedas .slot:nth-child(2) .rlItm3{ background-image: url(../images/r-oficina/s2_3.png); }
+.g-oficina #tragamonedas .slot:nth-child(2) .rlItm4{ background-image: url(../images/r-oficina/s2_4.png); }
+.g-oficina #tragamonedas .slot:nth-child(3) .rlItm1{ background-image: url(../images/r-oficina/s3_1.png); }
+.g-oficina #tragamonedas .slot:nth-child(3) .rlItm2{ background-image: url(../images/r-oficina/s3_2.png); }
+.g-oficina #tragamonedas .slot:nth-child(3) .rlItm3{ background-image: url(../images/r-oficina/s3_3.png); }
+.g-oficina #tragamonedas .slot:nth-child(3) .rlItm4{ background-image: url(../images/r-oficina/s3_4.png); }
+.g-oficina #tragamonedas .slot:nth-child(4) .rlItm1{ background-image: url(../images/r-oficina/s4_1.png); }
+.g-oficina #tragamonedas .slot:nth-child(4) .rlItm2{ background-image: url(../images/r-oficina/s4_2.png); }
+.g-oficina #tragamonedas .slot:nth-child(4) .rlItm3{ background-image: url(../images/r-oficina/s4_3.png); }
+.g-oficina #tragamonedas .slot:nth-child(4) .rlItm4{ background-image: url(../images/r-oficina/s4_4.png); }
+
+.g-planta #tragamonedas .slot:nth-child(1) .rlItm1{ background-image: url(../images/r-planta/s1_1.png); }
+.g-planta #tragamonedas .slot:nth-child(1) .rlItm2{ background-image: url(../images/r-planta/s1_2.png); }
+.g-planta #tragamonedas .slot:nth-child(1) .rlItm3{ background-image: url(../images/r-planta/s1_3.png); }
+.g-planta #tragamonedas .slot:nth-child(1) .rlItm4{ background-image: url(../images/r-planta/s1_4.png); }
+.g-planta #tragamonedas .slot:nth-child(2) .rlItm1{ background-image: url(../images/r-planta/s2_1.png); }
+.g-planta #tragamonedas .slot:nth-child(2) .rlItm2{ background-image: url(../images/r-planta/s2_2.png); }
+.g-planta #tragamonedas .slot:nth-child(2) .rlItm3{ background-image: url(../images/r-planta/s2_3.png); }
+.g-planta #tragamonedas .slot:nth-child(2) .rlItm4{ background-image: url(../images/r-planta/s2_4.png); }
+.g-planta #tragamonedas .slot:nth-child(3) .rlItm1{ background-image: url(../images/r-planta/s3_1.png); }
+.g-planta #tragamonedas .slot:nth-child(3) .rlItm2{ background-image: url(../images/r-planta/s3_2.png); }
+.g-planta #tragamonedas .slot:nth-child(3) .rlItm3{ background-image: url(../images/r-planta/s3_3.png); }
+.g-planta #tragamonedas .slot:nth-child(3) .rlItm4{ background-image: url(../images/r-planta/s3_4.png); }
+.g-planta #tragamonedas .slot:nth-child(4) .rlItm1{ background-image: url(../images/r-planta/s4_1.png); }
+.g-planta #tragamonedas .slot:nth-child(4) .rlItm2{ background-image: url(../images/r-planta/s4_2.png); }
+.g-planta #tragamonedas .slot:nth-child(4) .rlItm3{ background-image: url(../images/r-planta/s4_3.png); }
+.g-planta #tragamonedas .slot:nth-child(4) .rlItm4{ background-image: url(../images/r-planta/s4_4.png); }
+
+.g-restaurante #tragamonedas .slot:nth-child(1) .rlItm1{ background-image: url(../images/r-restaurante/s1_1.png); }
+.g-restaurante #tragamonedas .slot:nth-child(1) .rlItm2{ background-image: url(../images/r-restaurante/s1_2.png); }
+.g-restaurante #tragamonedas .slot:nth-child(1) .rlItm3{ background-image: url(../images/r-restaurante/s1_3.png); }
+.g-restaurante #tragamonedas .slot:nth-child(1) .rlItm4{ background-image: url(../images/r-restaurante/s1_4.png); }
+.g-restaurante #tragamonedas .slot:nth-child(2) .rlItm1{ background-image: url(../images/r-restaurante/s2_1.png); }
+.g-restaurante #tragamonedas .slot:nth-child(2) .rlItm2{ background-image: url(../images/r-restaurante/s2_2.png); }
+.g-restaurante #tragamonedas .slot:nth-child(2) .rlItm3{ background-image: url(../images/r-restaurante/s2_3.png); }
+.g-restaurante #tragamonedas .slot:nth-child(2) .rlItm4{ background-image: url(../images/r-restaurante/s2_4.png); }
+.g-restaurante #tragamonedas .slot:nth-child(3) .rlItm1{ background-image: url(../images/r-restaurante/s3_1.png); }
+.g-restaurante #tragamonedas .slot:nth-child(3) .rlItm2{ background-image: url(../images/r-restaurante/s3_2.png); }
+.g-restaurante #tragamonedas .slot:nth-child(3) .rlItm3{ background-image: url(../images/r-restaurante/s3_3.png); }
+.g-restaurante #tragamonedas .slot:nth-child(3) .rlItm4{ background-image: url(../images/r-restaurante/s3_4.png); }
+.g-restaurante #tragamonedas .slot:nth-child(4) .rlItm1{ background-image: url(../images/r-restaurante/s4_1.png); }
+.g-restaurante #tragamonedas .slot:nth-child(4) .rlItm2{ background-image: url(../images/r-restaurante/s4_2.png); }
+.g-restaurante #tragamonedas .slot:nth-child(4) .rlItm3{ background-image: url(../images/r-restaurante/s4_3.png); }
+.g-restaurante #tragamonedas .slot:nth-child(4) .rlItm4{ background-image: url(../images/r-restaurante/s4_4.png); }
+
+@keyframes flashBtn{
+    0%,100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+.btn{
+    position: absolute;
+    width: 83px; height: 26px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    cursor: pointer;
+}
+.btn.hover{
+    animation: flashBtn 700ms linear infinite;
+}
+.btnUp{ top: 261px; background-image:url(../images/btnUp.png); }
+.btnDown{ top: 601px; background-image:url(../images/btnDown.png); }
+#btnUp_1,#btnDown_1{ left: 244px; }
+#btnUp_2,#btnDown_2{ left: 497px; }
+#btnUp_3,#btnDown_3{ left: 749px; }
+#btnUp_4,#btnDown_4{ left: 1002px; }
+/*******************************************************************************/
+#btnPlay{
+    position: absolute;
+    width: 89px; height: 73px;
+    left: 32px; top: 387px;
+    background: url(../images/btnPlay.png) no-repeat 50% 50%;
+    cursor: pointer;
+}
+#btnComprobar{
+    position: absolute;
+    width: 100px; height: 73px;
+    left: 1201px; top: 386px;
+    background: url(../images/btnComprobar.png) no-repeat 50% 50%;
+    cursor: pointer;
+}
+#slideImagen{
+    position: absolute;
+    width: 1050px; height: 80px;
+    left: 150px; top: 150px;
+    background-color: rgba(0,0,0,0);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+/*******************************************************************************/
