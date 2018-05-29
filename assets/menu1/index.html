@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Delosi Main</title>
+        <link rel="stylesheet" type="text/css" href="./css/animate.css"/>
+        <link rel="stylesheet" type="text/css" href="./css/estGeneral.css"/>
+        <script type="text/javascript" src="./js/libs/prefixfree.min.js"></script>
+        <script type="text/javascript" src="./js/libs/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="./js/libs/jquery-ui.js"></script>
+        <script type="text/javascript" src="./js/libs/jquery.ui.touch-punch.js"></script>
+        <script type="text/javascript" src="./js/libs/panicoLoader.js"></script>
+        <script type="text/javascript" src="./js/libs/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="./js/sonido.js"></script>
+        <script type="text/javascript" src="./js/inicio.js"></script>
+    </head>
+    <body class=""><!-- av-restaurante avOM showNewPassword selectAvatar -->
+        <!-- - - - - - - - - - - - - - - - -  Loader  - - - - - - - - - - - - - - - - -->
+        <div id="qLoverlay" class="resizeWindow">
+            <div id="img_loader01"><div></div></div>
+        </div>
+        <div id="historia" class="resizeWindow">
+            <!-- - - - - - - - - - - - - -  Instruccion 1  - - - - - - - - - - - - - -->
+            <div id="instruccion_1" class="instrucciones">
+                <div id="i1tit_1"></div>
+                <div id="i1txt_1">¡Hola, y Bienvenido a <span>EXPERTOS DE LA PREVENCIÓN!</span></div>
+                <div id="i1txt_2">Has sido seleccionado a este programa por tu potencial para prevenir accidentes y el cuidado que tienes en  resguardar la seguridad y salud en el trabajo.
+                    <br><br>Queremos que seas nuestro próximo <span>EXPERTO DE LA PREVENCIÓN</span>, y para ello deberás pasar por los 7 capítulos de este programa.
+                    <br><br>Al final de cada capítulo se te presentaran una serie de <span>DESAFÍOS DE PREVENCIÓN</span> en los que pondrás a prueba lo aprendido en cada capítulo del programa.</div>
+                <div id="i1btn_1">Continuar</div>
+            </div>
+            <!-- - - - - - - - - - - - - -  Instruccion 2  - - - - - - - - - - - - - -->
+            <div id="instruccion_2" class="instrucciones">
+                <div id="i2tit_1"></div>
+                <div id="i2txt_1">Tu avatar te acompañará durante todo el curso.</div>
+                <div id="i2avatar_F" class="i2avatar"></div>
+                <div id="i2avatar_M" class="i2avatar"></div>
+            </div>
+            <!-- - - - - - - - - - - - - -  Instruccion 3  - - - - - - - - - - - - - -->
+            <div id="instruccion_3" class="instrucciones">
+                <div id="i3bg"></div>
+                <div id="i3tit_1" class="i3p1"></div>
+                <div id="i3img_1" class="i3p1"></div>
+                <div id="i3avatar" class="i3p1"></div>
+                <div id="i3nombre" class="i3p1">Lorem ipsum dolor sit amet</div>
+                <div id="i3img_2" class="i3p1"></div>
+                <div id="i3img_3" class="i3p1"></div>
+                <div id="i3img_4" class="i3p2"></div>
+                <div id="i3pop_1">
+                    <div id="i3txt_1">Esta es tu <span>LÍNEA DE APRENDIZAJE A  EXPERTO DE LA  PREVENCIÓN</span><br>Con el objetivo de desarrollarte en los tema de Seguridad y Salud en el Trabajo y contribuyas a la generación de una Cultura Preventiva, se ha diseñado un programa hecho a tu medida.</div>
+                    <div id="i3btn_1">Siguiente</div>
+                </div>
+                <div id="i3pop_2">
+                    <div id="i3txt_2">Para convertirte en un <span>Experto de la prevención</span> deberás terminar todos los capítulos del curso.</div>
+                    <div id="i3txt_3">¡Contamos contigo!</div>
+                    <div id="i3btn_2">Siguiente</div>
+                </div>
+                <!--<a href="#" id="btnJugar"></a>-->
+            </div>
+            <!-- - - - - - - - - - - - - -  Instruccion 4  - - - - - - - - - - - - - -->
+            <div id="instruccion_4" class="instrucciones">
+                <div id="i4avatar"></div>
+                <div id="i4RazonSocial" class="i4txt">-/-</div>
+                <div id="i4Nivel" class="i4txt">-/-</div>
+                <div id="i4Puntaje" class="i4txt">-/-</div>
+                <div id="i4Estrellas" class="i4txt">-/-</div>
+                <div id="i4Nombre">Lorem ipsum dolor sit amet</div>
+                <a id="i4Logout" href="#">Cerrar Sesión</a>
+                <div id="i4Buzon"></div>
+                <a id="i4Nivel_1" class="i4Nivel" href="#"></a>
+            </div>
+        </div>
+        <div id="popup1" class="popup">
+            <form id="formNewPass" class="clearfix" method="post" action="#">
+                <div id="txt1">Todavía no tienes una contraseña personalizada. Ingresa la que usarás a partir de ahora.</div>
+                <input id="newPassword" class="formInput" type="password" maxlength="40" value="" placeholder="Nueva contraseña">
+                <input id="reNewPassword" class="formInput" type="password" maxlength="40" value="" placeholder="Repetir nueva contraseña">
+                <input id="submit" class="clearfix" type="submit" value="Actualizar Contraseña">
+            </form>
+        </div>
+        <div id="popup2" class="popup">
+            <form id="formBuzon" class="clearfix" method="post" action="#">
+                <div id="pop2txt1">Sabemos que es importante para ti, tener todos los conceptos claros de cada nivel, si tienes una duda o consulta detállala en el siguiente recuadro y te responderemos dentro de las 24 horas.</div>
+                <textarea id="pop2ta" maxlength="400"></textarea>
+                <div id="pop2txt2">(*) Los días miércoles las respuestas a tus dudas o consultas serán en tiempo real de 8:30 a.m. a 6:00 p.m.</div>
+                <input id="pop2sub" class="clearfix" type="submit" value="ENVIAR">
+            </form>
+        </div>
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    </body>
+</html>

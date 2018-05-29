@@ -1,0 +1,447 @@
+/********************************************************************************/
+/**********************************  FUENTES  **********************************/
+/********************************************************************************/
+@font-face{
+    font-family:'Ubuntu';
+    src:url('../fonts/Ubuntu-R.eot');
+    src:url('../fonts/Ubuntu-R.eot?#iefix')format('embedded-opentype'),
+        url('../fonts/Ubuntu-R.otf')format('opentype'),
+        url('../fonts/Ubuntu-R.woff')format('woff'),
+        url('../fonts/Ubuntu-R.ttf')format('truetype'),
+        url('../fonts/Ubuntu-R.svg#Ubuntu')format('svg');
+    font-weight:normal; font-style:normal;
+}
+/********************************************************************************/
+/***********************************  GENERAL  ***********************************/
+/********************************************************************************/
+body{
+    background: url(../img/bg.png) no-repeat 50% 50%;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Ubuntu';
+    color: #fff;
+}
+a{ text-decoration: none; }
+select,input,button{ font-family: 'Ubuntu'; font-size: 14px; }
+#fullcont, .row{
+    min-width:320px;
+}
+h2{
+    font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
+}
+progress{ display: none; }
+
+.ucase{ text-transform:uppercase; }
+.lcase{ text-transform:lowercase; }
+
+.row.superwidth{
+    display: inline-block;
+    max-width:1440px;
+    width:auto;
+}
+/********************************************************************************/
+/***********************************  HEADER  ***********************************/
+/********************************************************************************/
+#header-cont{
+    background:#fff;
+}
+#header-cont .row{
+    background:rgba(0,0,0,0);
+    text-align: center;
+}
+#menu{
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+#menu li{
+    display: inline-block;
+    padding: 0 5px;
+}
+#menu a{
+    padding:0 5px;
+    line-height: 50px;
+    color: #45155b;
+}
+#menu a:hover{ color: #000; text-decoration: underline; }
+/********************************************************************************/
+/************************************  MAIN  ************************************/
+/********************************************************************************/
+#main-cont .row{
+    padding: 30px 20px;
+}
+table{
+    background: #804f92;
+}
+#t-cursos{ margin: 0 auto; }
+#t-cursos,#t-cursos td{
+    border: 1px solid #fff;
+}
+#t-cursos td{
+    padding: 8px 12px;
+}
+.selcur{
+    padding:3px 5px;
+    font-size: 16px;
+    outline: none;
+}
+.r-update{
+    line-height: 18px;
+}
+.r-update *{
+    vertical-align: middle;
+}
+.r-update span{
+    padding: 4px 8px;
+    background:#333;
+    transition: background 300ms;
+}
+.r-update span:hover{ background:#000; }
+.btnupdate{
+    cursor: pointer;
+}
+.loadupdate{
+    display: none;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+.btnupdate.loading{
+    opacity: 0.5;
+    pointer-events: none;
+}
+/********************************************************************************/
+/*********************************  REGISTRAR  *********************************/
+/********************************************************************************/
+#registro-cont{
+    padding: 30px 20px 40px;
+    text-align: center;
+}
+#reg-single{
+    border: 1px solid #fff;
+    text-align: left;
+    margin: 0 auto;
+}
+#reg-single td{
+    padding: 5px 12px;
+}
+#t-excel,#t-excel td{
+    border: 1px solid #fff;
+}
+#t-excel td{
+    padding: 5px 8px;
+}
+#reg-button{
+    text-align: center;
+    padding-bottom: 20px;
+}
+/********************************************************************************/
+/**********************************  CONSULTA  **********************************/
+/********************************************************************************/
+#consulta-cont{
+    padding: 30px 20px 60px;
+    text-align: center;
+}
+#form-query{
+    display: inline-block;
+    padding: 20px 20px 20px;
+    border: 1px solid #fff;
+    margin-bottom: 20px;
+}
+#form-query input,
+#form-query select{
+    margin-bottom: 5px;
+}
+.q-input{
+    padding:5px;
+    outline: none;
+    border: 1px solid #fff;
+}
+.q-input.error{
+    border: 1px solid #f00;
+    background: #fcc;
+}
+#q-submit{
+    font-size: 16px;
+    pointer-events: auto;
+}
+#q-submit.disable{
+    pointer-events: none;
+}
+#q-orden{ display: inline-block; }
+#q-orden > div{
+    display: inline-block;
+    margin: 0 10px 10px 0;
+}
+#q-orden label{
+    cursor: pointer;
+}
+#load-consul{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+#ctabla-consul{
+    display: inline-block;
+}
+#rep-consulta{
+    display: block; float: right;
+    padding: 0 14px;
+    line-height: 35px;
+    color: #fff;
+    background-color:#333;
+    transition: background 300ms;
+    cursor: pointer;
+}
+#rep-consulta:hover{ background-color:#000; }
+#tabla-consul{
+    clear:both;
+}
+#tabla-consul,#tabla-consul td,#tabla-consul th{
+    border: 1px solid #fff;
+}
+#tabla-consul td,#tabla-consul th{
+    padding: 5px 8px;
+    vertical-align: middle;
+}
+#tabla-consul th{
+    font-weight: 700;
+}
+#tabla-consul input{
+    width: 40px; height: 40px;
+    padding: 5px 10px;
+    color: #fff;
+    background-color:#333;
+    background-image: url(../img/edit.png);
+    background-position: 50% 50%;
+    transition: background 300ms;
+    outline:none;
+    border: 0;
+    cursor: pointer;
+}
+.uerow{
+    display: none;
+}
+/********************************************************************************/
+#editar-cont{
+    padding: 30px 20px 60px;
+    text-align: center;
+}
+#uplist_ue{ text-align: center; }
+#uplist_ue div{
+    display: inline-block;
+    margin: 0 5px;
+    padding: 0 5px;
+    cursor: pointer;
+}
+#uplist_ue div:hover{
+    color: #999;
+}
+/********************************************************************************/
+/**********************************  MASIVO  **********************************/
+/********************************************************************************/
+#masivo-cont{
+    padding: 30px 20px 60px;
+    text-align: center;
+}
+#masivo-cont a{ color: #aaffaa; }
+#masivo-menu{
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 20px;
+}
+#masivo-menu div{
+    display: inline-block;
+    margin: 0 10px;
+    color: #ffffff;
+    cursor: pointer;
+}
+#masivo-menu div:hover{ color: #ddddff; text-decoration: underline; }
+#masivo-menu div.active{ text-decoration: underline; }
+
+.reg-multi{
+    display: none;
+    min-width: 450px;
+    margin: 0 auto;
+    padding: 10px 12px 20px;
+    border: 1px solid #fff;
+    text-align: left;
+    background: #804f92;
+}
+.reg-multi.active{ display: inline-block; }
+
+#masivo-cont #exc-tabla{
+    display: inline-block;
+    margin-top: 20px;
+}
+#masivo-cont table,#masivo-cont td{ border: 1px solid #fff; }
+#masivo-cont td{ padding: 5px 8px; }
+/********************************************************************************/
+/****************************  ESTADISTICAS - MAIN  ****************************/
+/********************************************************************************/
+#estad-main .row{
+    padding: 30px 40px;
+}
+#estadisticas-menu{
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 20px;
+}
+#estadisticas-menu a{
+    display: inline-block;
+    margin: 0 10px;
+    color: #ffffff;
+}
+#estadisticas-menu a:hover{
+    color: #ddddff;
+    text-decoration: underline;
+}
+#estad-main table{
+    margin: 0 auto;
+    text-align: center;
+}
+#estad-main table,#estad-main td{
+    border: 1px solid #fff;
+}
+#estad-main td{
+    padding: 5px 10px;
+}
+/********************************************************************************/
+/***************************  ESTADISTICAS - ESTATUS  ***************************/
+/********************************************************************************/
+#estad-estatus .row{ padding: 30px 40px; }
+.tipo-estadistica{
+    display: inline-block;
+    margin:0 15px 10px 0;
+    padding: 0 14px;
+    font-size: 18px;
+    line-height: 35px;
+    text-transform: uppercase;
+    background:#333;
+    transition: background 300ms;
+    cursor: pointer;
+}
+.tipo-estadistica.active,
+.tipo-estadistica:hover{ background:#000; }
+
+#cont-select select{
+    display: inline-block;
+    margin:0 15px 10px 0;
+    padding:3px 10px;
+    font-size: 16px;
+    outline: none;
+}
+#estad-estatus canvas{
+    background: #fff;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    border: 1px solid #000;
+    padding: 20px 0 30px;
+}
+#canvas-estatus{
+    position: relative; display: block;
+    /*height: 700px;*/
+    background: rgba(0,0,0,0.2);
+}
+#canvas-estatus canvas{  }
+/********************************************************************************/
+/****************************  ESTADISTICAS - AVANCE  ****************************/
+/********************************************************************************/
+#estad-avance .row{
+    padding: 30px 40px;
+    text-align: center;
+}
+#estad-avance canvas{
+    background: #fff;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    border: 1px solid #000;
+    padding: 20px 0 30px;
+}
+
+#estad-avance table{
+    margin: 0 auto;
+    clear:both;
+}
+#estad-avance table,#estad-avance td{
+    border: 1px solid #fff;
+}
+#estad-avance td{
+    padding: 8px;
+    vertical-align: middle;
+}
+/********************************************************************************/
+/****************************  ESTADISTICAS - MAIN  ****************************/
+/********************************************************************************/
+/* esto es para el reporte de participacion */
+#rep-est{
+    display: inline-block;
+    margin:0 0 10px;
+    padding: 0 14px;
+    line-height: 35px;
+    color: #fff;
+    background-color:#333;
+    transition: background 300ms;
+    cursor: pointer;
+}
+#rep-est:hover{ background-color:#000; }
+/********************************************************************************/
+/**********************************  RANKING  **********************************/
+/********************************************************************************/
+#ranking-cont{
+    padding: 30px 20px 60px;
+    text-align: center;
+    display: inline-block;
+    width: auto;
+    min-width: 100%;
+}
+#ranking-cont table{
+    margin: 0 auto;
+    clear:both;
+}
+#ranking-cont table,
+#ranking-cont td,
+#ranking-cont th{
+    border: 1px solid #fff;
+}
+#ranking-cont td,
+#ranking-cont th{
+    padding: 8px;
+    vertical-align: middle;
+}
+#ranking-cont th{
+    font-weight: 700;
+}
+/********************************************************************************/
+/**********************************  REPORTE  **********************************/
+/********************************************************************************/
+#reporte-cont .row{
+    padding: 30px 40px;
+    text-align: center;
+}
+#ctabla-reporte{
+    display: inline-block;
+    text-align: right;
+}
+#tabla-reporte,#tabla-reporte td,#tabla-reporte th{
+    border: 1px solid #fff;
+    text-align: center;
+}
+#tabla-reporte td,#tabla-reporte th{
+    padding: 8px 12px;
+}
+#rep-descarga{
+    display: inline-block;
+    margin:0 0 10px;
+    padding: 0 14px;
+    line-height: 35px;
+    color: #fff;
+    background-color:#333;
+    transition: background 300ms;
+    cursor: pointer;
+}
+#rep-descarga:hover{ background-color:#000; }
+/********************************************************************************/

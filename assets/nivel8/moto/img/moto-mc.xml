@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="moto-mc.png">
+	<!-- Created with Adobe Animate version 16.2.0.24 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="moto-abajo instancia 10000" x="0" y="0" width="332" height="202" pivotX="166" pivotY="101"/>
+	<SubTexture name="moto-abajo instancia 10001" x="332" y="0" width="332" height="202"/>
+	<SubTexture name="moto-abajo instancia 10002" x="664" y="0" width="332" height="202"/>
+	<SubTexture name="moto-abajo instancia 10003" x="996" y="0" width="332" height="202"/>
+	<SubTexture name="moto-abajo instancia 10004" x="1328" y="0" width="332" height="202"/>
+	<SubTexture name="moto-abajo instancia 10005" x="1660" y="0" width="332" height="202"/>
+	<SubTexture name="moto-abajo instancia 10006" x="1992" y="0" width="332" height="202"/>
+	<SubTexture name="moto-abajo instancia 10007" x="2324" y="0" width="332" height="202"/>
+	<SubTexture name="moto-abajo instancia 10008" x="2656" y="0" width="332" height="202"/>
+	<SubTexture name="moto-arriba instancia 10000" x="0" y="202" width="332" height="202" pivotX="166" pivotY="101"/>
+	<SubTexture name="moto-arriba instancia 10001" x="332" y="202" width="332" height="202"/>
+	<SubTexture name="moto-arriba instancia 10002" x="664" y="202" width="332" height="202"/>
+	<SubTexture name="moto-arriba instancia 10003" x="996" y="202" width="332" height="202"/>
+	<SubTexture name="moto-arriba instancia 10004" x="1328" y="202" width="332" height="202"/>
+	<SubTexture name="moto-arriba instancia 10005" x="1660" y="202" width="332" height="202"/>
+	<SubTexture name="moto-arriba instancia 10006" x="1992" y="202" width="332" height="202"/>
+	<SubTexture name="moto-arriba instancia 10007" x="2324" y="202" width="332" height="202"/>
+	<SubTexture name="moto-arriba instancia 10008" x="2656" y="202" width="332" height="202"/>
+	<SubTexture name="moto-atras instancia 10000" x="0" y="404" width="332" height="202" pivotX="166" pivotY="101"/>
+	<SubTexture name="moto-atras instancia 10001" x="332" y="404" width="332" height="202"/>
+	<SubTexture name="moto-atras instancia 10002" x="664" y="404" width="332" height="202"/>
+	<SubTexture name="moto-atras instancia 10003" x="996" y="404" width="332" height="202"/>
+	<SubTexture name="moto-atras instancia 10004" x="1328" y="404" width="332" height="202"/>
+	<SubTexture name="moto-atras instancia 10005" x="1660" y="404" width="332" height="202"/>
+	<SubTexture name="moto-atras instancia 10006" x="1992" y="404" width="332" height="202"/>
+	<SubTexture name="moto-atras instancia 10007" x="2324" y="404" width="332" height="202"/>
+	<SubTexture name="moto-atras instancia 10008" x="2656" y="404" width="332" height="202"/>
+	<SubTexture name="moto-frente instancia 10000" x="0" y="606" width="332" height="202" pivotX="166" pivotY="101"/>
+	<SubTexture name="moto-frente instancia 10001" x="332" y="606" width="332" height="202"/>
+	<SubTexture name="moto-frente instancia 10002" x="664" y="606" width="332" height="202"/>
+	<SubTexture name="moto-frente instancia 10003" x="996" y="606" width="332" height="202"/>
+	<SubTexture name="moto-frente instancia 10004" x="1328" y="606" width="332" height="202"/>
+	<SubTexture name="moto-frente instancia 10005" x="1660" y="606" width="332" height="202"/>
+	<SubTexture name="moto-frente instancia 10006" x="1992" y="606" width="332" height="202"/>
+	<SubTexture name="moto-frente instancia 10007" x="2324" y="606" width="332" height="202"/>
+	<SubTexture name="moto-frente instancia 10008" x="2656" y="606" width="332" height="202"/>
+</TextureAtlas>

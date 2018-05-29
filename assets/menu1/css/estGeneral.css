@@ -1,0 +1,382 @@
+@charset "utf-8";
+*{ -webkit-transform:translateZ(0); }
+/*****************************************  estilos base  *****************************************/
+html{ overflow:hidden; }
+body{
+    margin:0px; padding:0px;
+    background-color:#333333;
+    overflow:hidden;
+}
+.resizeWindow{
+    position: absolute;
+    width: 1350px; height: 700px;
+    left: 0px; top: 0px;
+    margin: 0;
+    overflow: hidden;
+    transform-origin: 0% 0%;
+}
+#qLoverlay{ display: none; z-index: 999; }
+#historia{ display: block; background-color: #434343; }
+.showNewPassword,.selectAvatar{}
+/*****************************************  loader  *****************************************/
+#qLoverlay{
+    display: none;
+    background:url(../images/fondoLoader.png) no-repeat center center;
+    z-index: 999;
+}
+#qLpercentage{
+    position:absolute;
+    width: 250px; height: 120px;
+    left: 550px; bottom: 330px;
+    font-family: "Bebas";
+    font-size: 111px;
+    line-height: 120px;
+    color: #ffffff;
+    text-align: center;
+}
+#img_loader01{
+    position: absolute;
+    width: 215px; height: 126px;
+    left: 567px; bottom: 175px;
+    background:url(../images/loadG.png) no-repeat 50% 100%;
+    overflow: hidden;
+}
+#img_loader01 div{
+    position: absolute; display: block;
+    width: 100%;
+    left: 0; right: 0;
+    bottom: 0;
+    background:url(../images/load.png) no-repeat 50% 100%;
+    overflow: hidden;
+}
+#qLoverlay img{ visibility:hidden; }
+/*****************************************  pantallas iniciales  *****************************************/
+.instrucciones{
+    position:absolute;
+    width:1350px; height:700px;
+    left:0px; top:0px;
+    z-index:600;
+    display:none;
+}
+/*******************************  Instruccion 3  *******************************/
+#instruccion_3{ background: url(../images/bginst3.png) no-repeat center center; }
+#i3bg{
+    position: absolute; display: none;
+    width: 100%; height: 100%;
+    left: 0; top: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 2;
+}
+#i3tit_1{
+    position: absolute;
+    width: 580px; height: 110px;
+    left: 215px; top: 23px;
+    background: url(../images/i3tit1.png) no-repeat 50% 50%;
+}
+#i3img_1{
+    position: absolute;
+    width: 256px; height: 245px;
+    left: 907px; top: -13px;
+    background: url(../images/i3img1.png) no-repeat 50% 50%;
+}
+#i3avatar{
+    position: absolute;
+    width: 94px; height: 93px;
+    left: 988px; top: 16px;
+    background-color: rgba(0,0,0,0);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.avOF #i3avatar{ background-image: url(../images/i3avOF.png); }
+.avOM #i3avatar{ background-image: url(../images/i3avOM.png); }
+.avPF #i3avatar{ background-image: url(../images/i3avPF.png); }
+.avPM #i3avatar{ background-image: url(../images/i3avPM.png); }
+.avRF #i3avatar{ background-image: url(../images/i3avRF.png); }
+.avRM #i3avatar{ background-image: url(../images/i3avRM.png); }
+
+#i3nombre{
+    position: absolute;
+    width: 216px;
+    left: 927px; top: 136px;
+    font-family: "CatalogoGruesa";
+    font-size: 16px;
+    line-height: 17px;
+    color: #9a999e;
+    text-align: center;
+    text-transform: uppercase;
+}
+#i3img_2{
+    position: absolute;
+    width: 659px; height: 236px;
+    left: 181px; top: 167px;
+    background: url(../images/i3img2.png) no-repeat 50% 50%;
+}
+#i3img_3{
+    position: absolute;
+    width: 189px; height: 166px;
+    left: 939px; top: 241px;
+    background: url(../images/i3img3.png) no-repeat 50% 50%;
+}
+#i3img_4{
+    position: absolute;
+    width: 982px; height: 173px;
+    left: 180px; top: 421px;
+    background: url(../images/i3img4.png) no-repeat 50% 50%;
+}
+#i3pop_1{
+    position: absolute; display: none;
+    width: 649px; height: 163px;
+    left: 350px; top: 431px;
+    background: url(../images/i3pop1.png) no-repeat 50% 0%;
+    z-index: 3;
+}
+#i3txt_1{
+    padding: 20px 20px 0;
+    font-family: "Catalogo";
+    font-size: 17px;
+    line-height: 23px;
+    color: #333745;
+    text-align: center;
+}
+#i3txt_1 span{ font-family: "CatalogoGruesa"; color: #ff3650; }
+#i3btn_1{
+    position: absolute;
+    width: 157px; height: 35px;
+    left: 246px; top: 123px;
+    font-family:"Catalogo";
+    font-size: 17px;
+    line-height: 34px;
+    color:#ffffff;
+    text-align: center;
+    background: #ff3650;
+    cursor: pointer;
+}
+#i3pop_2{
+    position: absolute; display: none;
+    width: 493px; height: 184px;
+    left: 428px; top: 214px;
+    background: url(../images/i3pop2.png) no-repeat 50% 0%;
+    z-index: 3;
+}
+#i3txt_2{
+    padding: 34px 20px 0;
+    font-family: "Catalogo";
+    font-size: 17px;
+    line-height: 23px;
+    color: #333745;
+    text-align: center;
+}
+#i3txt_2 span{ font-family: "CatalogoGruesa"; color: #ff3650; }
+
+#i3txt_3{
+    position: absolute;
+    top: 95px;
+    font-family: "CatalogoGruesa";
+    font-size: 24px;
+    line-height: 32px;
+    color: #ff3650;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+#i3btn_2{
+    position: absolute;
+    width: 157px; height: 35px;
+    left: 168px; top: 144px;
+    font-family:"Catalogo";
+    font-size: 17px;
+    line-height: 34px;
+    color:#ffffff;
+    text-align: center;
+    text-decoration: none;
+    background: #ff3650;
+    cursor: pointer;
+}
+.i3p1{ z-index: 3; }
+.i3p2{ z-index: 1; }
+.i3pop2 .i3p1{ z-index: 1; }
+.i3pop2 .i3p2{ z-index: 3; }
+
+/*******************************  Instruccion 4  *******************************/
+#instruccion_4{ background: url(../images/bginst4.png) no-repeat center center; }
+#i4avatar{
+    position: absolute;
+    width: 94px; height: 93px;
+    left: 988px; top: 16px;
+    background-color: rgba(0,0,0,0);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.avOF #i4avatar{ background-image: url(../images/i3avOF.png); }
+.avOM #i4avatar{ background-image: url(../images/i3avOM.png); }
+.avPF #i4avatar{ background-image: url(../images/i3avPF.png); }
+.avPM #i4avatar{ background-image: url(../images/i3avPM.png); }
+.avRF #i4avatar{ background-image: url(../images/i3avRF.png); }
+.avRM #i4avatar{ background-image: url(../images/i3avRM.png); }
+.i4txt{
+    position: absolute;
+    width: 160px;
+    top: 295px;
+    font-family: 'CatalogoGruesa';
+    line-height: 50px;
+    color: #ff3650;
+    text-align: center;
+    background: rgba(0,0,0,0);
+}
+#i4RazonSocial{ left: 173px; font-size: 18px; }
+#i4Nivel{ left: 343px; font-size: 39px; }
+#i4Puntaje{ left: 510px; font-size: 36px; }
+#i4Estrellas{ left: 679px; font-size: 39px; }
+#i4Nombre{
+    position: absolute;
+    width: 236px;
+    left: 917px; top: 136px;
+    font-family: 'CatalogoGruesa';
+    font-size: 17px;
+    line-height: 17px;
+    color: #9a999e;
+    text-align: center;
+    text-transform: uppercase;
+    background: rgba(0,0,0,0);
+}
+#i4Logout{
+    position: absolute;
+    width: 125px; height: 35px;
+    left: 972px; top: 192px;
+    font-family: 'Catalogo';
+    font-size: 17px;
+    line-height: 33px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    background: #ff3650;
+}
+#i4Buzon{
+    position: absolute;
+    width: 189px; height: 116px;
+    left: 939px; top: 291px;
+    background: url(../images/i4buzon.png) no-repeat 50% 0%;
+    cursor: pointer;
+}
+.i4Nivel{
+    position: absolute;
+    width: 157px; height: 119px;
+    top: 474px;
+    text-decoration: none;
+    background-color: rgba(0,0,0,0);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    cursor: pointer;
+}
+.i4Nivel.disable{
+    background-position: 0px -119px;
+    pointer-events: none;
+}
+#i4Cuestionario{
+    position: absolute;
+    width: 190px; height: 77px;
+    left: 1140px; top: 250px;
+    text-decoration: none;
+    background: rgba(0,0,0,0) url(../images/i4Cuestionario.png) no-repeat 50% 50%;
+    cursor: pointer;
+}
+#i4Certificado{
+    position: absolute;
+    width: 190px; height: 90px;
+    left: 1140px; top: 335px;
+    text-decoration: none;
+    background-color: rgba(0,0,0,0);
+    background-image: url(../images/i4Certificado.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    cursor: pointer;
+}
+#i4Certificado.disable{
+    background-position: 0px -90px;
+    pointer-events: none;
+    opacity: 0.7;
+}
+#i4Nivel_1{ left: 182px; background-image: url(../images/i4nivel_1.png); }
+#i4Nivel_2{ left: 316px; background-image: url(../images/i4nivel_2.png); }
+#i4Nivel_3{ left: 455px; background-image: url(../images/i4nivel_3.png); }
+#i4Nivel_4{ left: 594px; background-image: url(../images/i4nivel_4.png); }
+
+/*******************************************************************************/
+/**********************************  Popups  **********************************/
+/*******************************************************************************/
+.clearfix:before,.clearfix:after{
+    content: '\0020';
+    display: block; clear: both;
+    width: 0; height: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+.clearfix{ zoom: 1; }
+.popup{
+    position: absolute; display: none;
+    width: 100%; height: 100%;
+    left: 0; top: 0;
+    background: rgba(0,0,0,0.7);
+    overflow-y: scroll;
+}
+.popup form{
+    position: relative;
+    max-width: 493px;
+    margin: 50px auto 50px;
+    padding: 40px 0 50px;
+    background: rgba(255,255,255,1);
+    border: 8px solid #00a2bb;
+}
+/*******************************  Popup Buzon  *******************************/
+#pop2txt1{
+    padding: 0 40px 30px;
+    font-family: "Catalogo";
+    font-size: 17px;
+    line-height: 23px;
+    color: #333745;
+    text-align: center;
+}
+#pop2ta{
+    display: block;
+    width: 90%;
+    max-width: 385px;
+    min-height: 100px;
+    margin:0 auto 20px; padding:7px 10px;
+    font-family:"Catalogo";
+    font-size:17px;
+    line-height:20px;
+    color:#333745;
+    background-color: #ffffff;
+    border:3px solid #77c4d3;
+    outline:none;
+}
+#pop2ta.error{ border:2px solid #ff0000; color: #ff0000; }
+#pop2txt2{
+    padding: 0 40px 20px;
+    font-family: "Catalogo";
+    font-size: 17px;
+    line-height: 23px;
+    color: #333745;
+    text-align: center;
+}
+#pop2sub{
+    display:block;
+    width:238px; height:36px;
+    margin: 0 auto 0;
+    font-family:"Catalogo";
+    font-size:18px;
+    line-height:35px;
+    color:#ffffff;
+    background: #ff3650;
+    border:0 none;
+    cursor:pointer;
+}
+#pop2close{
+    position: absolute;
+    width: 40px; height: 40px;
+    right: 5px; top: 5px;
+    background: rgba(0,0,0,0)  url(../images/button_cancel.png) no-repeat 50% 50%;
+    background-size: contain;
+    cursor:pointer;
+}
+/*******************************************************************************/

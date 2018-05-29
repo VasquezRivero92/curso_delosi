@@ -1,0 +1,129 @@
+@charset "utf-8";
+/*******************************************************************************/
+#gamePreg{
+    background: url(../images/fondo1.png) no-repeat 50% 50%;
+}
+.btn{
+    position: absolute;
+    cursor: pointer;
+}
+/*******************************************************************************/
+.tPreg{
+    position: absolute;
+    width: 830px; height: 200px;
+    left: 260px; top: 270px;
+    font-family: "Catalogo";
+    font-size: 39px; line-height: 200px;
+    color: #ffffff;
+    text-align: center;
+    background: #ff3350;
+    box-shadow: 20px 20px 0px 0px rgba(0,0,0,0.3);
+}
+.tPreg.toTop{
+    transition: all 500ms;
+    width: 590px; height: 85px;
+    left: 380px; top: 166px;
+    font-size: 19px; line-height: 85px;
+    box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.3);
+}
+.tPreg span{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 20px;
+    line-height: 40px;
+}
+.tPreg.toTop span{ line-height: 20px; }
+
+.ciPreg{
+    position: absolute;
+    width: 412px; height: 412px;
+    left: 469px; top: 266px;
+    background: #e2ab2e;
+    border-radius: 50%;
+}
+.imgPreg{
+    position: absolute;
+    width: 264px; height: 264px;
+    left: 74px; top: 74px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 27px #ff3350;
+}
+.ciPreg.anim .imgPreg{ transition: all 2s linear; }
+.ciPreg.a10 .imgPreg{ box-shadow: 0px 0px 40px 40px #ff3350; }
+.ciPreg.a8 .imgPreg{ box-shadow: 0px 0px 100px 100px #ff3350; }
+.ciPreg.a6 .imgPreg{ box-shadow: 0px 0px 180px 180px #ff3350; }
+.ciPreg.a4 .imgPreg{ box-shadow: 0px 0px 280px 280px #ff3350; }
+.ciPreg.a2 .imgPreg{ box-shadow: 0px 0px 400px 400px #ff3350; }
+
+.imgPreg img{ position: absolute; }
+#imgPreg_1 img{ left: -28px; top: -60px; }
+#imgPreg_2 img{ left: -11px; top: -55px; }
+#imgPreg_3 img{ left: -59px; top: -39px; }
+#imgPreg_4 img{ left: -34px; top: -27px; }
+#imgPreg_5 img{ left: -102px; top: -63px; }
+
+.btnPlay{
+    position: absolute;
+    width: 90px; height: 124px;
+    left: 630px; top: 535px;
+    background: rgba(0,0,0,0) url(../images/btnPlay.png) no-repeat 50% 50%;
+    opacity: 1;
+    cursor: pointer;
+}
+.btnPlay.disable{
+    pointer-events: none;
+    transition: opacity 500ms;
+    opacity: 0;
+}
+
+.btn{
+    position: absolute;
+    width: 300px; height: 80px;
+    font-family: "Catalogo";
+    font-size: 18px; line-height: 70px;
+    color: #ffffff;
+    text-align: center;
+    background: #0d8ba0;
+    cursor: pointer;
+    pointer-events: none;
+    opacity: 0;
+}
+.btn.show{
+    pointer-events: auto;
+    transition: opacity 1000ms, left 600ms, top 600ms;
+    opacity: 1;
+}
+
+#gPreg_1 .btn{ width: 400px; height: 90px; line-height: 85px; }
+#btn_1_1{ left: 90px; top: 325px; }
+#btn_1_2{ left: 860px; top: 325px; }
+#btn_1_3{ left: 475px; top: 600px; }
+
+#gPreg_2 .btn{ width: 400px; height: 90px; line-height: 85px; }
+#btn_2_1{ left: 90px; top: 325px; }
+#btn_2_2{ left: 860px; top: 325px; }
+#btn_2_3{ left: 860px; top: 500px; }
+#btn_2_4{ left: 90px; top: 500px; }
+
+#btn_3_1{ left: 190px; top: 325px; }
+#btn_3_2{ left: 860px; top: 325px; }
+#btn_3_3{ left: 525px; top: 600px; }
+
+#btn_4_1{ left: 190px; top: 325px; }
+#btn_4_2{ left: 860px; top: 325px; }
+#btn_4_3{ left: 860px; top: 525px; }
+#btn_4_4{ left: 190px; top: 525px; }
+
+#btn_5_1{ left: 190px; top: 325px; }
+#btn_5_2{ left: 860px; top: 325px; }
+#btn_5_3{ left: 560px; top: 600px; }
+
+.btn span{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 10px;
+    line-height: 18px;
+}
+/*******************************************************************************/

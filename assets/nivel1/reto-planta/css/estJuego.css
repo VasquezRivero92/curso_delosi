@@ -1,0 +1,117 @@
+@charset "utf-8";
+/*********************************  Power Ups  *********************************/
+.powerUp{}
+.powerUp1{
+    position:absolute; z-index:1; 
+    width:70px; height:70px;
+    background-color: rgba(0,0,0,0);
+    opacity:1;
+    transition:opacity 500ms linear;
+    font-size: 0px;
+}
+.powerUp1.hit{ opacity:0; }
+#powerUp_1{ width:200px; height:110px; left:1250px; top:170px; }
+#powerUp_2{ width:250px; height:200px; left:2180px; top:650px; }
+#powerUp_3{ width:160px; height:110px; left:740px; top:380px; }
+#powerUp_4{ width:250px; height:60px; left:1580px; top:220px; }
+#powerUp_5{ width:200px; height:100px; left:2330px; top:160px; }
+#powerUp_6{ width:150px; height:330px; left:1340px; top:520px; }
+#powerUp_7{ width:85px; height:66px; left:550px; top:690px; }
+#powerUp_8{ width:110px; height:149px; left:1130px; top:445px; }
+#powerUp_9{ width:119px; height:59px; left:480px; top:420px; }
+#powerUp_10{ width:170px; height:100px; left:2060px; top:190px; }
+#powerUp_11{ width:120px; height:40px; left:1010px; top:190px; }
+#powerUp_12{ width:150px; height:100px; left:80px; top:270px; }
+#powerUp_13{ width:120px; height:130px; left:740px; top:570px; }
+#powerUp_14{ width:80px; height:130px; left:1850px; top:450px; }
+#powerUp_15{ width:250px; height:120px; left:1500px; top:480px; }
+/*******************************************************************************/
+.icoPel{
+    position:absolute;
+    background-color: rgba(255,0,0,0);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+#icoPel_1{ width:171px; height:176px; left:1240px; top:68px; background-image:url(../images/pwrup/peligro1.png); }
+#icoPel_2{ width:221px; height:278px; left:2205px; top:670px; background-image:url(../images/pwrup/peligro2.png); }
+#icoPel_3{ width:137px; height:226px; left:715px; top:205px; background-image:url(../images/pwrup/peligro3.png); }
+#icoPel_4{ width:196px; height:74px; left:1610px; top:0px; background-image:url(../images/pwrup/peligro4.png); }
+#icoPel_5{ width:202px; height:78px; left:2305px; top:0px; background-image:url(../images/pwrup/peligro5.png); }
+#icoPel_6{ width:243px; height:329px; left:1360px; top:460px; background-image:url(../images/pwrup/peligro6.png); }
+#icoPel_7{ width:85px; height:66px; left:550px; top:690px; background-image:url(../images/pwrup/peligro7.png); }
+#icoPel_8{ width:104px; height:138px; left:1130px; top:455px; background-image:url(../images/pwrup/peligro8.png); }
+#icoPel_9{ width:119px; height:59px; left:480px; top:420px; background-image:url(../images/pwrup/peligro9.png); }
+#icoPel_10{ width:171px; height:155px; left:2060px; top:75px; background-image:url(../images/pwrup/peligro10.png); }
+#icoPel_11{ width:76px; height:118px; left:1034px; top:69px; background-image:url(../images/pwrup/peligro11.png); }
+
+.icoPrev{
+    position:absolute;
+    background-color: rgba(0,255,0,0);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+#icoPrev_1{ width:124px; height:176px; left:1288px; top:65px; background-image:url(../images/pwrup/prevencion1.png); }
+#icoPrev_3{ width:109px; height:250px; left:713px; top:148px; background-image:url(../images/pwrup/prevencion3.png); }
+#icoPrev_4{ width:196px; height:60px; left:1610px; top:2px; background-image:url(../images/pwrup/prevencion4.png); }
+#icoPrev_5{ width:171px; height:65px; left:2320px; top:0px; background-image:url(../images/pwrup/prevencion5.png); }
+#icoPrev_6{ width:207px; height:323px; left:1360px; top:455px; background-image:url(../images/pwrup/prevencion6.png); }
+#icoPrev_8{ width:43px; height:128px; left:1128px; top:410px; background-image:url(../images/pwrup/prevencion8.png); }
+/**********************************  Paredes  **********************************/
+.ParedMask{ position:absolute; left:0px; top:0px; width:50px; height:50px; display:none; }
+.fondoOPC{ position:absolute; top:0px; left:0px; z-index:1; display:none; }
+/***********************************  Player  ***********************************/
+#Player_1{
+    position:absolute;
+    width:80px; height:45px;
+    z-index:2;
+    background-color: rgba(0,0,0,0);
+}
+#Player_1 .sprite{
+    position:absolute;
+    width:200px; height:200px;
+    left:-60px; bottom:0px;
+    background-position:0px 0px;
+    background-color: rgba(250,0,0,0);
+}
+.playerF .sprite{ background-image: url(../images/sprite_F.png); }
+.playerM .sprite{ background-image: url(../images/sprite_M.png); }
+#Player_1 .ptje{
+    position:absolute; display:none;
+    width:99px; height:91px;
+    left:-90px; top:-145px;
+    background: rgba(250,0,0,0) url(../images/alert.png) no-repeat 50% 50%;
+    cursor: pointer;
+}
+/*************************  Objetos por cada escenario  *************************/
+.conteo{
+    position:absolute;
+    background-repeat:no-repeat;
+    background-position:center center;
+    display: none;
+}
+#conteo1{
+    position:absolute; 
+    width:271px; height:181px;
+    left:759px; top:244px;
+    background-image:url(../images/conteo1.png);
+}
+#conteo2{
+    position:absolute; 
+    width:276px; height:181px;
+    left:536px; top:244px;
+    background-image:url(../images/conteo2.png);
+}
+#conteo3{
+    position:absolute; 
+    width:280px; height:181px;
+    left:315px; top:244px;
+    background-image:url(../images/conteo3.png);
+}
+#gameArea1{
+    position:absolute;
+    width:2548px; height:884px;
+    left:0px; top:0px;
+    background:url(../images/fondo1.jpg) no-repeat;
+    overflow:hidden;
+}
+/*******************************************************************************/
