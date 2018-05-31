@@ -31,8 +31,7 @@ $.post(bdir + 'ajax/init_curso_driver').done(function (data) {
     $.get(bdir + 'ajax/get_intentos_drivers').done(function (data) {        
         //alert( "puntaje " + data);
         console.log("data:" + data);
-        $intentos_juego = data;        
-        
+        $intentos_juego = data;    
 
         if(data == 110 || data == 121){
             $('#i3btn_4').addClass('disable');
