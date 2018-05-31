@@ -21,7 +21,6 @@ class Drivers extends Nivel_Controller {
         $this->data['own_dir'] = $this->data['assets_dir'] . '/nivel' . $this->cur . '/main';
         $resul = $this->base_model->get_puntaje($this->session->user_id, $this->cur);
         
-
         if ($resul && $resul->puntaje !== null && $resul->intentos == 110){
             $this->session->position = 1;
             $this->session->win = 3;            
@@ -29,6 +28,9 @@ class Drivers extends Nivel_Controller {
             $this->session->position = 1;
             $this->session->win = 3;            
         }else if ($resul && $resul->puntaje !== null && $resul->intentos == 111){
+            $this->session->position = 1;
+            $this->session->win = 1;
+        }else if ($resul && $resul->puntaje !== null && $resul->intentos == 100){
             $this->session->position = 1;
             $this->session->win = 1;
         }else{
