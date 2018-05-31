@@ -27,10 +27,16 @@ class Drivers extends Nivel_Controller {
         }else if ($resul && $resul->puntaje !== null && $resul->intentos == 121){
             $this->session->position = 1;
             $this->session->win = 3;            
+        }else if ($resul && $resul->puntaje !== null && $resul->intentos == 120){
+            $this->session->position = 1;
+            $this->session->win = 3;            
         }else if ($resul && $resul->puntaje !== null && $resul->intentos == 111){
             $this->session->position = 1;
             $this->session->win = 1;
         }else if ($resul && $resul->puntaje !== null && $resul->intentos == 100){
+            $this->session->position = 1;
+            $this->session->win = 1;
+        }else if ($resul && $resul->puntaje !== null && $resul->intentos == 112){
             $this->session->position = 1;
             $this->session->win = 1;
         }else{
