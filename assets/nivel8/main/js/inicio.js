@@ -42,12 +42,7 @@ $.post(bdir + 'ajax/init_curso_driver').done(function (data) {
             $('#i3btn_3').removeClass('disable');
             console.log("2");
 =======
-        $intentos_juego = data;        
-        // $p_intentos = data.substring(-2, 1);
-        // $s_intentos = data.substring(-1, 1);
-
-        // $p_intentos = data.charAt(1);
-        // $s_intentos = data.charAt(2);
+        $intentos_juego = data;     
 
          if(data == 111 || data == 100){
             $('#i3btn_4').addClass('disable');
