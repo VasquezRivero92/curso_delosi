@@ -31,9 +31,7 @@ $.post(bdir + 'ajax/init_curso_driver').done(function (data) {
     $.get(bdir + 'ajax/get_intentos_drivers').done(function (data) {        
         //alert( "puntaje " + data);
         console.log("data:" + data);
-<<<<<<< HEAD
         $intentos_juego = data;    
-
         if(data == 110 || data == 121){
             $('#i3btn_4').addClass('disable');
             console.log("1");
@@ -41,24 +39,11 @@ $.post(bdir + 'ajax/init_curso_driver').done(function (data) {
             $('#btnJugar').css("display","block");
             $('#i3btn_3').removeClass('disable');
             console.log("2");
-=======
-        $intentos_juego = data;     
-
-         if(data == 111 || data == 100){
-            $('#i3btn_4').addClass('disable');
-        }else if(data == 122){
-            
-            $('#btnJugar').css("display","block");
-            $('#i3btn_3').removeClass('disable');
->>>>>>> d9bd8707ae1199414123af2ad198c95d3a67c210
         }else{
             $('#i3btn_2').addClass('disable');
             $('#i3btn_3').addClass('disable');
             $('#i3btn_4').addClass('disable');
-<<<<<<< HEAD
             console.log("3");
-=======
->>>>>>> d9bd8707ae1199414123af2ad198c95d3a67c210
         }
 
     });
@@ -379,11 +364,7 @@ function sl_1(){
         }else{ 
             $('#sliderPage_1').removeClass('cvhangeimg'); 
             //$('#s1tit_1').show(); 
-<<<<<<< HEAD
             //$('#s1t3').addClass('img_disabled');
-=======
-            $//('#s1t3').addClass('img_disabled');
->>>>>>> d9bd8707ae1199414123af2ad198c95d3a67c210
             $('.owl-stage-outer').css("overflow","hidden"); 
             $('#s1i3_0_1').hide();
             $('#s1i3_0_2').hide();

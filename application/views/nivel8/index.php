@@ -28,11 +28,8 @@
     $avatar = 'av' . strtoupper(substr($this->session->grupo, 0, 1)) . $this->session->avatar;
     $owlgrupo = 'owl-' . $this->session->grupo;
     ?>
-<<<<<<< HEAD
-    <body class="<?php echo $avatar . ' ' . $owlgrupo; ?> ">
-=======
+
     <body class="<?php echo $avatar . ' ' . $owlgrupo; ?>">
->>>>>>> d9bd8707ae1199414123af2ad198c95d3a67c210
         <!-- - - - - - - - - - - - - - - - -  Loader  - - - - - - - - - - - - - - - - -->
         <div id="qLoverlay" class="resizeWindow">
             <div id="img_loader01"><div></div></div>
@@ -241,11 +238,11 @@
             </div>
         </div>
         <div class="btnVolver"></div>
-<<<<<<< HEAD
+
     <!-- </div>  -->              
             </div>
             
-=======
+
     </div>               
             </div>
             <!-- - - - - - - - - - - - - -  Instruccion 4 (video)  - - - - - - - - - - - - - -->
@@ -256,7 +253,6 @@
                 </video>- - - - - - - - - - - - - -->
                 <div id="i4btn_1">Continuar</div>
             </div>
->>>>>>> d9bd8707ae1199414123af2ad198c95d3a67c210
         </div>
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     </body>
