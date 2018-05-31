@@ -197,7 +197,7 @@ class Ajax extends MY_Controller {
         $this->email->from('no-reply@aprendiendoaprevenir.com', $this->config->item('site_title', 'ion_auth'));
         $this->email->to('aprendiendoaprevenir.sst@gmail.com');
         $this->email->to('aprendiendoaprevenir@franquiciasperu.com');
-        $this->email->to('lordonez@factoriamedia.com');
+        $this->email->to('jvasquez@factoriamedia.com');
         $this->email->subject('Consulta en buzón - ' . $this->config->item('site_title', 'ion_auth'));
         $this->email->message($message);
         $this->email->send();
@@ -217,7 +217,7 @@ class Ajax extends MY_Controller {
         $message = $this->load->view('mail/buzon', $datamail, true);
         $this->email->from('no-reply@aprendiendoaprevenir.com', $this->config->item('site_title', 'ion_auth'));
         $this->email->to('mcabrejos@franquiciasperu.com');
-        $this->email->to('lordonez@factoriamedia.com');
+        $this->email->to('jvasquez@factoriamedia.com');
         $this->email->subject('Consulta en buzón de reclamaciones- ' . $this->config->item('site_title', 'ion_auth'));
         $this->email->message($message);
         $this->email->send();
