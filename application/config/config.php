@@ -24,7 +24,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   | a PHP script and you can easily do that on your own.
   | 192.168.1.210/delodemo
  */
+<<<<<<< HEAD
 $config['base_url'] = 'http://localhost/cursodelosi-github/';//'http://192.168.0.210/cursodelosi/';
+=======
+$config['base_url'] = 'http://localhost/cursodelosi/';//'http://192.168.0.210/cursodelosi/';
+>>>>>>> d9bd8707ae1199414123af2ad198c95d3a67c210
 
 /*
   |--------------------------------------------------------------------------

@@ -28,7 +28,11 @@
     $avatar = 'av' . strtoupper(substr($this->session->grupo, 0, 1)) . $this->session->avatar;
     $owlgrupo = 'owl-' . $this->session->grupo;
     ?>
+<<<<<<< HEAD
     <body class="<?php echo $avatar . ' ' . $owlgrupo; ?> ">
+=======
+    <body class="<?php echo $avatar . ' ' . $owlgrupo; ?>">
+>>>>>>> d9bd8707ae1199414123af2ad198c95d3a67c210
         <!-- - - - - - - - - - - - - - - - -  Loader  - - - - - - - - - - - - - - - - -->
         <div id="qLoverlay" class="resizeWindow">
             <div id="img_loader01"><div></div></div>
@@ -237,9 +241,22 @@
             </div>
         </div>
         <div class="btnVolver"></div>
+<<<<<<< HEAD
     <!-- </div>  -->              
             </div>
             
+=======
+    </div>               
+            </div>
+            <!-- - - - - - - - - - - - - -  Instruccion 4 (video)  - - - - - - - - - - - - - -->
+            <div id="instruccion_4" class="instrucciones">
+                <!-- - - - - - - - - - - - - -  Instruccion 4 (video)  <video id="i4_video" controls preload="auto">
+                    <source src="<?php echo base_url($own_dir . '/videos/videoi4.mp4'); ?>" type="video/mp4"/>
+                    <source src="<?php echo base_url($own_dir . '/videos/videoi4.webm'); ?>" type="video/webm"/>
+                </video>- - - - - - - - - - - - - -->
+                <div id="i4btn_1">Continuar</div>
+            </div>
+>>>>>>> d9bd8707ae1199414123af2ad198c95d3a67c210
         </div>
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     </body>
