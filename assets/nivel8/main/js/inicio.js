@@ -3,14 +3,11 @@ var sClick = [true, false, true, false, false];
 var lAudio = [null, '', '', '', ''];
 var sID = 0;
 var completo = false;
-var checkS3 = [true, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
+//var checkS3 = [true, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
 var act_desc = new Boolean(false);
 var sli_1,sli_2,sli_3 = new Boolean(false);
 var id_sl = 0;
-var $sIDL;
 var $count_btn = 0;
-var $id;
-
 var $intentos_juego = 0;
 /*******************************************************************************/
 function showInicio() {
@@ -47,12 +44,6 @@ $.post(bdir + 'ajax/init_curso_driver').done(function (data) {
         }
 
     });
-
-    //var $resul = <?php echo $this->base_model->get_puntaje($this->session->user_id, $this->cur); ?>;
-    //console.log($resul->puntaje);
-    //if ($resul->puntaje !== null && $resul->intentos == 2){
-   
-    //}
 }
 function redimensionarJuego() {
     scale1 = (window.innerWidth / 1350);
@@ -181,60 +172,60 @@ $(document).ready(function (e) {
         }
 
         if(id_sl == 1){
-    $('.s4_1').removeClass('img_disabled');
-    $('.s4_2').addClass('img_disabled');
-    $('.s4_3').addClass('img_disabled');  
-    $('.s4_4').addClass('img_disabled');
-    $('.s4_5').addClass('img_disabled');
-    $('.s4s1').removeClass('op');
-    $('.s4s2').addClass('op');
-    $('.s4s3').addClass('op');
-    $('.s4s4').addClass('op');
-    $('.s4s5').addClass('op');
+            $('.s4_1').removeClass('img_disabled');
+            $('.s4_2').addClass('img_disabled');
+            $('.s4_3').addClass('img_disabled');  
+            $('.s4_4').addClass('img_disabled');
+            $('.s4_5').addClass('img_disabled');
+            $('.s4s1').removeClass('op');
+            $('.s4s2').addClass('op');
+            $('.s4s3').addClass('op');
+            $('.s4s4').addClass('op');
+            $('.s4s5').addClass('op');
         }else if(id_sl == 2){
-    $('.s4_1').addClass('img_disabled');
-    $('.s4_2').removeClass('img_disabled');
-    $('.s4_3').addClass('img_disabled');  
-    $('.s4_4').addClass('img_disabled');
-    $('.s4_5').addClass('img_disabled');
-    $('.s4s1').addClass('op');
-    $('.s4s2').removeClass('op');
-    $('.s4s3').addClass('op');
-    $('.s4s4').addClass('op');
-    $('.s4s5').addClass('op');
+            $('.s4_1').addClass('img_disabled');
+            $('.s4_2').removeClass('img_disabled');
+            $('.s4_3').addClass('img_disabled');  
+            $('.s4_4').addClass('img_disabled');
+            $('.s4_5').addClass('img_disabled');
+            $('.s4s1').addClass('op');
+            $('.s4s2').removeClass('op');
+            $('.s4s3').addClass('op');
+            $('.s4s4').addClass('op');
+            $('.s4s5').addClass('op');
         }else if(id_sl == 3){
-    $('.s4_1').addClass('img_disabled');
-    $('.s4_2').addClass('img_disabled');
-    $('.s4_3').removeClass('img_disabled');  
-    $('.s4_4').addClass('img_disabled');
-    $('.s4_5').addClass('img_disabled');
-    $('.s4s1').addClass('op');
-    $('.s4s2').addClass('op');
-    $('.s4s3').removeClass('op');
-    $('.s4s4').addClass('op');
-    $('.s4s5').addClass('op');
+            $('.s4_1').addClass('img_disabled');
+            $('.s4_2').addClass('img_disabled');
+            $('.s4_3').removeClass('img_disabled');  
+            $('.s4_4').addClass('img_disabled');
+            $('.s4_5').addClass('img_disabled');
+            $('.s4s1').addClass('op');
+            $('.s4s2').addClass('op');
+            $('.s4s3').removeClass('op');
+            $('.s4s4').addClass('op');
+            $('.s4s5').addClass('op');
         }else if(id_sl == 4){
-    $('.s4_1').addClass('img_disabled');
-    $('.s4_2').addClass('img_disabled');
-    $('.s4_3').addClass('img_disabled');  
-    $('.s4_4').removeClass('img_disabled');
-    $('.s4_5').addClass('img_disabled');
-    $('.s4s1').addClass('op');
-    $('.s4s2').addClass('op');
-    $('.s4s3').addClass('op');
-    $('.s4s4').removeClass('op');
-    $('.s4s5').addClass('op');
+            $('.s4_1').addClass('img_disabled');
+            $('.s4_2').addClass('img_disabled');
+            $('.s4_3').addClass('img_disabled');  
+            $('.s4_4').removeClass('img_disabled');
+            $('.s4_5').addClass('img_disabled');
+            $('.s4s1').addClass('op');
+            $('.s4s2').addClass('op');
+            $('.s4s3').addClass('op');
+            $('.s4s4').removeClass('op');
+            $('.s4s5').addClass('op');
         }else if(id_sl == 5){
-    $('.s4_1').addClass('img_disabled');
-    $('.s4_2').addClass('img_disabled');
-    $('.s4_3').addClass('img_disabled');  
-    $('.s4_4').addClass('img_disabled');
-    $('.s4_5').removeClass('img_disabled');
-    $('.s4s1').addClass('op');
-    $('.s4s2').addClass('op');
-    $('.s4s3').addClass('op');
-    $('.s4s4').addClass('op');
-    $('.s4s5').removeClass('op');
+            $('.s4_1').addClass('img_disabled');
+            $('.s4_2').addClass('img_disabled');
+            $('.s4_3').addClass('img_disabled');  
+            $('.s4_4').addClass('img_disabled');
+            $('.s4_5').removeClass('img_disabled');
+            $('.s4s1').addClass('op');
+            $('.s4s2').addClass('op');
+            $('.s4s3').addClass('op');
+            $('.s4s4').addClass('op');
+            $('.s4s5').removeClass('op');
         }
         // lAudio[sID] = 's' + sID + 'i' + id_sl;
         // playTexto(window[lAudio[sID]]);
@@ -301,19 +292,19 @@ $('.punt_anim').click(function () {
             }else if($id==4){
                 $('#s2i1_0_3').addClass('inn_pop3').show();
             }else if($id==5){
-                $('#s2i4_0_4').addClass('inn_pop3').show();
+                $('#s2i4_0_4').addClass('inn_pop1').show();
             }else if($id==6){
-                $('#s2i4_0_1').addClass('inn_pop2').show();
+                $('#s2i4_0_1').addClass('inn_pop4').show();
             }else if($id==7){
-                $('#s2i4_0_2').addClass('inn_pop4').show();
+                $('#s2i4_0_2').addClass('inn_pop2').show();
             }else if($id==8){
-                $('#s2i4_0_5').addClass('inn_pop3').show();
+                $('#s2i4_0_5').addClass('inn_pop1').show();
             }else if($id==9){
-                $('#s2i4_0_3').addClass('inn_pop1').show();
+                $('#s2i4_0_3').addClass('inn_pop3').show();
             }
-            $('#s2i1_2_1').addClass('img_disabled');  
-            $('#s2i4_1_1').addClass('img_disabled');
-            $('#s2i4_1_2').addClass('img_disabled');
+                $('#s2i1_2_1').addClass('img_disabled');  
+                $('#s2i4_1_1').addClass('img_disabled');
+                $('#s2i4_1_2').addClass('img_disabled');
 
         }            
     
@@ -337,7 +328,7 @@ $('#i3btn_4').click(function() {
 
 
 $('#s4t1').click(function(){
-id = parseInt($(this).attr('id').split('_')[2]);
+    id = parseInt($(this).attr('id').split('_')[2]);
 
 });
 
@@ -440,9 +431,8 @@ function sl_2(){
             $('.s3btn').stop().delay(500).fadeIn(10).removeClass('detail');
             //console.log(checkS3);
             
-            var fullS3 = checkS3.every(function (itm) {
-                return itm === true;
-            });
+            // 
+
             if (fullS3) {//aqui va lo mismo que en el carrusel
                 $('#popup_1').stop().fadeIn(1000);
                 playTexto(window.sP2ipop);
@@ -467,7 +457,7 @@ function sl_2(){
             $('.s3btn').stop().fadeOut(10);
             $(this).stop().fadeIn(10).addClass('detail');
             $('#s3det_' + id).stop().fadeIn(500);
-            checkS3[id] = true;
+            // checkS3[id] = true;
             setTimeout(function () {
                 $('#s3det_11').data('plugin_tinyscrollbar').update();
                 //$('#s3det_11').tinyscrollbar({trackSize: 330, thumbSize: 50});

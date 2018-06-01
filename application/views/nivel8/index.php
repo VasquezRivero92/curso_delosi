@@ -18,8 +18,6 @@
             var odir = '<?php echo base_url($own_dir); ?>';
             var grup = '<?php echo strtoupper(substr($this->session->grupo, 0, 1)); ?>';
             var win = <?php echo $this->session->win; ?>;
-            
-             
         </script>
         <script src="<?php echo base_url($own_dir . '/js/sonido.js'); ?>"></script>
         <script src="<?php echo base_url($own_dir . '/js/inicio.js'); ?>"></script>
