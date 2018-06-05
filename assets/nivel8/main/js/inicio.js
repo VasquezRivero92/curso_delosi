@@ -29,7 +29,7 @@ $.post(bdir + 'ajax/init_curso_driver').done(function (data) {
         //alert( "puntaje " + data);
         console.log("data:" + data);
         $intentos_juego = data;    
-        if(data == 110 || data == 121){
+        if(data == 110 || data == 121 || data == 120){
             $('#i3btn_4').addClass('disable');
             console.log("1");
         }else if(data == 122){            

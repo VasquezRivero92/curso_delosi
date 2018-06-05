@@ -46,7 +46,7 @@
                     <div class="moto">
                         <img id="punto_1" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/>
                         <img id="punto_2" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/>
-                        <img id="punto_3" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/>
+                        <!-- <img id="punto_3" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/> -->
                         <img id="punto_4" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/>
                     </div>
                     <div class="preguntas">
@@ -63,10 +63,10 @@
                         <div id="pregunta1_2">
                             <div id="p_fondo1_1" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r3.png'); ?>" alt=""/>    
                             </div>
-                            <div id="tPreg1_2" class="tPreg"><span>Si un cliente sufre el hurto de su cartera por un tercero</span></div>
-                            <div id="btn_2_1" class="btn" data-rspt="0"><span>a) Le explicas que debe poner su denuncia en la Comisaría más</span></div>
-                            <div id="btn_2_2" class="btn" data-rspt="0"><span>b) Le dices que no puedes, pero le permites tomar fotos como muestra de empatía.</span></div>
-                            <div id="btn_2_3" class="btn" data-rspt="0"><span>c) Le dices que sí puedes, y que se lo harás</span></div>
+                            <div id="tPreg1_2" class="tPreg"><span>Es la llanta trasera de la moto ¿Que deberia hacer?</span></div>
+                            <div id="btn_2_1" class="btn" data-rspt="0"><span>Nada en particular</span></div>
+                            <div id="btn_2_2" class="btn" data-rspt="0"><span>Todo esta ok</span></div>
+                            <div id="btn_2_3" class="btn" data-rspt="0"><span>Esta normal</span></div>
                         </div>
 
                         <div id="pregunta1_3">
@@ -81,10 +81,10 @@
                         <div id="pregunta1_4">
                             <div id="p_fondo1_1" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r1.png'); ?>" alt=""/>  
                             </div>
-                            <div id="tPreg_4" class="tPreg"><span>Si un cliente sufre el hurto de su cartera por un tercero</span></div>
-                            <div id="btn_4_1" class="btn" data-rspt="0"><span>a) Le explicas que debe poner su denuncia en la Comisaría más</span></div>
-                            <div id="btn_4_2" class="btn" data-rspt="0"><span>b) Le dices que no puedes, pero le permites</span></div>
-                            <div id="btn_4_3" class="btn" data-rspt="0"><span>c) Le dices que sí puedes, y que se lo harás </span></div>                            
+                            <div id="tPreg_4" class="tPreg"><span>Es la luz delantera de la moto ¿Que deberia hacer?</span></div>
+                            <div id="btn_4_1" class="btn" data-rspt="0"><span>Nada en particular</span></div>
+                            <div id="btn_4_2" class="btn" data-rspt="0"><span>Todo esta ok</span></div>
+                            <div id="btn_4_3" class="btn" data-rspt="0"><span>Esta normal</span></div>                            
                         </div>
                     </div>
                     <div id="btnpass_1" class="btn_pass"><img src="<?php echo base_url($own_dir . '/images/btn_pass.png'); ?>" alt=""/></div>                    
@@ -95,7 +95,7 @@
                     <div class="moto">
                         <img id="punto2_1" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/>
                         <img id="punto2_2" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/>
-                        <img id="punto2_3" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/>
+                        <!-- <img id="punto2_3" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/> -->
                         <img id="punto2_4" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/>
                     </div>
                     <div class="preguntas">
@@ -112,10 +112,10 @@
                         <div id="pregunta2_2">
                             <div id="p_fondo2_2" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r4.png'); ?>" alt=""/>
                             </div>
-                            <div id="tPreg1_2" class="tPreg"><span>Si un cliente sufre el hurto de su cartera por un tercero</span></div>
-                            <div id="btn_2_1" class="btn" data-rspt="0"><span>a) Le explicas que debe poner su denuncia en la Comisaría más</span></div>
-                            <div id="btn_2_2" class="btn" data-rspt="0"><span>b) Le dices que no puedes, pero le permites</span></div>
-                            <div id="btn_2_3" class="btn" data-rspt="0"><span>c) Le dices que sí puedes, y que se lo harás</span></div>
+                            <div id="tPreg1_2" class="tPreg"><span>Usa el calzado correcto ¿Que deberia hacer?</span></div>
+                            <div id="btn_2_1" class="btn" data-rspt="0"><span>Nada en particular</span></div>
+                            <div id="btn_2_2" class="btn" data-rspt="0"><span>Todo esta ok</span></div>
+                            <div id="btn_2_3" class="btn" data-rspt="0"><span>Esta normal</span></div>
                         </div>
 
                         <div id="pregunta2_3">
@@ -130,10 +130,10 @@
                         <div id="pregunta2_4">
                             <div id="p_fondo2_4" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r5.png'); ?>" alt=""/>
                             </div>
-                            <div id="tPreg_4" class="tPreg"><span>Si un cliente sufre el hurto de su cartera por un tercero</span></div>
-                            <div id="btn_4_1" class="btn" data-rspt="0"><span>a) Le explicas que debe poner su denuncia en la Comisaría más</span></div>
-                            <div id="btn_4_2" class="btn" data-rspt="0"><span>b) Le dices que no puedes, pero le permites</span></div>
-                            <div id="btn_4_3" class="btn" data-rspt="0"><span>c) Le dices que sí puedes, y que se lo harás</span></div>                            
+                            <div id="tPreg_4" class="tPreg"><span>Las luz trasera  y direccionales funcionan ¿Que deberia hacer?</span></div>
+                            <div id="btn_4_1" class="btn" data-rspt="0"><span>Nada en particular</span></div>
+                            <div id="btn_4_2" class="btn" data-rspt="0"><span>Todo esta ok</span></div>
+                            <div id="btn_4_3" class="btn" data-rspt="0"><span>Esta normal</span></div>                            
                         </div>
                     </div>
                     <div id="btnpass_2" class="btn_pass"><img src="<?php echo base_url($own_dir . '/images/btn_pass.png'); ?>" alt=""/></div>                    
@@ -161,10 +161,10 @@
                         <div id="pregunta3_2">
                            <div id="p_fondo3_2" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r6.png'); ?>" alt=""/>
                             </div>
-                            <div id="tPreg1_2" class="tPreg"><span>Si un cliente sufre el hurto de su cartera por un tercero</span></div>
-                            <div id="btn_2_1" class="btn" data-rspt="0"><span>a) Le explicas que debe poner su denuncia en la Comisaría más</span></div>
-                            <div id="btn_2_2" class="btn" data-rspt="0"><span>b) Le dices que no puedes, pero le permites</span></div>
-                            <div id="btn_2_3" class="btn" data-rspt="0"><span>c) Le dices que sí puedes, y que se lo harás</span></div>
+                            <div id="tPreg1_2" class="tPreg"><span>Tiene el casco adecuado ¿Que deberia hacer?</span></div>
+                            <div id="btn_2_1" class="btn" data-rspt="0"><span>Nada en particular</span></div>
+                            <div id="btn_2_2" class="btn" data-rspt="0"><span>Todo esta ok</span></div>
+                            <div id="btn_2_3" class="btn" data-rspt="0"><span>Esta normal</span></div>
                         </div>
 
                         <div id="pregunta3_3">
@@ -179,10 +179,10 @@
                         <div id="pregunta3_4">
                             <div id="p_fondo3_4" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r8.png'); ?>" alt=""/>
                             </div>
-                            <div id="tPreg_4" class="tPreg"><span>Si un cliente sufre el hurto de su cartera por un tercero</span></div>
-                            <div id="btn_4_1" class="btn" data-rspt="0"><span>a) Le explicas que debe poner su denuncia en la Comisaría más</span></div>
-                            <div id="btn_4_2" class="btn" data-rspt="0"><span>b) Le dices que no puedes, pero le permites</span></div>
-                            <div id="btn_4_3" class="btn" data-rspt="0"><span>c) Le dices que sí puedes, y que se lo harás </span></div>                            
+                            <div id="tPreg_4" class="tPreg"><span>El motor esta completo y funcionando ¿Que deberia hacer?</span></div>
+                            <div id="btn_4_1" class="btn" data-rspt="0"><span>Nada en particular</span></div>
+                            <div id="btn_4_2" class="btn" data-rspt="0"><span>Todo esta ok</span></div>
+                            <div id="btn_4_3" class="btn" data-rspt="0"><span>Esta normal</span></div>                            
                         </div>
                     </div>
                     <div id="btnpass_3" class="btn_pass"><img src="<?php echo base_url($own_dir . '/images/btn_pass.png'); ?>" alt=""/></div>                    
@@ -193,7 +193,7 @@
                     <div class="moto">
                         <img id="punto4_1" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/>
                         <img id="punto4_2" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/>
-                        <img id="punto4_3" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/>
+                        <!-- <img id="punto4_3" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/> -->
                         <img id="punto4_4" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/>
                     </div>
                     <div class="preguntas">
@@ -242,7 +242,7 @@
                     <div class="moto">
                         <img id="punto5_1" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/>
                         <img id="punto5_2" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/>
-                        <img id="punto5_3" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/>
+                        <!-- <img id="punto5_3" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/> -->
                         <img id="punto5_4" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/>
                     </div>
                     <div class="preguntas">

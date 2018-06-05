@@ -81,7 +81,7 @@ var $J = {
     numJ: 0,
     intentos: 2,
     //para el control de tiempo
-    CTInicial: 30,
+    CTInicial: 60,
     CTiempo: 0,
     CMin: 0,
     CSeg: 0
@@ -203,7 +203,9 @@ function initBotones() {
         $sigpregunta =0;
         $('#driver_1').css("background-image", "url("+odir+"/images/driver_1.png)");
         $('#driver_2').css("background-image", "url("+odir+"/images/driver_2.png)"); 
-        $('#driver_5').css("background-image", "url("+odir+"/images/driver_5.png)");       
+        $('#driver_5').css("background-image", "url("+odir+"/images/driver_5.png)"); 
+        $(this).css("pointer-events"," none");
+        $('.btn').removeAttr('style')    
     });
     
     $('.btn').click(function () {
@@ -246,14 +248,14 @@ function initBotones() {
         
         
         
-        if($sigpregunta == 4){
+        if($sigpregunta == 3){
         
         setTimeout(function(){ $('.btn_pass').animateCss('bounceIn').show(); }, 500);
         }
     });
 
     $('.btn_pass').click(function() {
-        $J.CTiempo = 30,
+        $J.CTiempo = 60,
         $sigpregunta = 0;
          var id_p = parseInt($(this).attr('id').split('_')[1], 10);
         $('.btn_pass').css("pointer-events"," none");
