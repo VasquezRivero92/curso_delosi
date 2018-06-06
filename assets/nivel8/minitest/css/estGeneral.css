@@ -136,7 +136,7 @@ b{ font-weight: bold; }
 /*****************************************  marcador (parte superior)  *****************************************/
 #marcador{
     position: absolute; display: none;
-    top: 0px; left: 0px;
+    top: -4px; left: 0px;
     width: 1350px; height: 150px;
     background: url(../images/BGmarcador.png) no-repeat 100% 50%;
 }

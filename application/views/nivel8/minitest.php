@@ -87,7 +87,7 @@
                             <div id="btn_4_3" class="btn" data-rspt="0"><span>Esta normal</span></div>                            
                         </div>
                     </div>
-                    <div id="btnpass_1" class="btn_pass"><img src="<?php echo base_url($own_dir . '/images/btn_pass.png'); ?>" alt=""/></div>                    
+                    <div id="btnpass_1" class="btn_pass"><img src="<?php echo base_url($own_dir . '/images/btn_pass.png'); ?>" alt=""/><span>Siguiente</br> driver</span></div>                    
                 </div>
 
                 <div id="gPreg_2" class="gPreg">
@@ -144,7 +144,7 @@
                     <div class="moto">
                         <img id="punto3_1" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/>
                         <img id="punto3_2" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/>
-                        <img id="punto3_3" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/>
+                        <!-- <img id="punto3_3" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/> -->
                         <img id="punto3_4" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/>
                     </div>
                     <div class="preguntas">
@@ -153,7 +153,7 @@
                             <div id="p_fondo3_3" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r10.png'); ?>" alt=""/>    
                             </div>
                             <div id="tPreg_1" class="tPreg"><span>El faro frontal de la motocicleta esta roto  ¿Que se deberia hacer?</span></div>
-                            <div id="btn_1_1" class="btn" data-rspt="1"><span>Una Motocicleta debe estar en optimas condiciones. Debe reemplazar ese faro lo antes posible.</span></div>
+                            <div id="btn_1_1" class="btn" data-rspt="0"><span>Una Motocicleta debe estar en optimas condiciones. Debe reemplazar ese faro lo antes posible.</span></div>
                             <div id="btn_1_2" class="btn" data-rspt="0"><span>Es una condición común, se puede dejar pasar. Ademas es turno de día no las necesita.</span></div>
                             <div id="btn_1_3" class="btn" data-rspt="0"><span>La moto funciona igual sin esa luz. Puedes apoyarte en la luz de calle.</span></div>
                         </div>
@@ -170,10 +170,10 @@
                         <div id="pregunta3_3">
                             <div id="p_fondo3_1" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r9.png'); ?>" alt=""/>
                             </div>
-                            <div id="tPreg_3" class="tPreg"><span>Si un cliente sufre el hurto de su cartera por un tercero</span></div>
-                            <div id="btn_3_1" class="btn" data-rspt="0"><span>a) Le explicas que debe poner su</span></div>
-                            <div id="btn_3_2" class="btn" data-rspt="0"><span>b) Le dices que no puedes, pero le permites</span></div>
-                            <div id="btn_3_3" class="btn" data-rspt="0"><span>c) Le dices que sí puedes, y que se lo harás</span></div>
+                            <div id="tPreg_3" class="tPreg"><span>El faro frontal de la motocicleta esta roto  ¿Que se deberia hacer?</span></div>
+                            <div id="btn_3_1" class="btn" data-rspt="1"><span>Una Motocicleta debe estar en optimas condiciones. Debe reemplazar ese faro lo antes posible.</span></div>
+                            <div id="btn_3_2" class="btn" data-rspt="0"><span>Es una condición común, se puede dejar pasar. Ademas es turno de día no las necesita.</span></div>
+                            <div id="btn_3_3" class="btn" data-rspt="0"><span>La moto funciona igual sin esa luz. Puedes apoyarte en la luz de calle.</span></div>
                         </div>
 
                         <div id="pregunta3_4">
@@ -201,19 +201,19 @@
                         <div id="pregunta4_1">
                             <div id="p_fondo4_1" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r12.png'); ?>" alt=""/>
                             </div>
-                            <div id="tPreg_1" class="tPreg"><span>Al driver le hace falta la revisión tecnica de la moto ¿Que deberia hacer?</span></div>
-                            <div id="btn_1_1" class="btn" data-rspt="0"><span>No pasa nada, nadie se fija en eso. Ademas no hay tantos controles en su ruta.</span></div>
-                            <div id="btn_1_2" class="btn" data-rspt="0"><span>Que se consiga la revisión tecnica de la  moto de alguien más y que incie su turno.</span></div>
-                            <div id="btn_1_3" class="btn" data-rspt="1"><span>Un driver debe contar con toda su documentación antes de iniciar su turno,  ¡Siempre!</span></div>
+                            <div id="tPreg_1" class="tPreg"><span>Tiene el casco adecuado ¿Que deberia hacer?</span></div>
+                            <div id="btn_1_1" class="btn" data-rspt="0"><span>Nada en particular</span></div>
+                            <div id="btn_1_2" class="btn" data-rspt="0"><span>Todo esta ok</span></div>
+                            <div id="btn_1_3" class="btn" data-rspt="1"><span>Esta normal</span></div>
                         </div>
 
                         <div id="pregunta4_2">
                             <div id="p_fondo4_2" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r11.png'); ?>" alt=""/>
                             </div>
-                            <div id="tPreg1_2" class="tPreg"><span>Si un cliente sufre el hurto de su cartera por un tercero</span></div>
-                            <div id="btn_2_1" class="btn" data-rspt="0"><span>a) Le explicas que debe poner su denuncia en la Comisaría má</span></div>
-                            <div id="btn_2_2" class="btn" data-rspt="0"><span>b) Le dices que no puedes, pero le permites</span></div>
-                            <div id="btn_2_3" class="btn" data-rspt="0"><span>c) Le dices que sí puedes, y que se lo harás</span></div>
+                            <div id="tPreg1_2" class="tPreg"><span>Al driver le hace falta la revisión tecnica de la moto ¿Que deberia hacer?</span></div>
+                            <div id="btn_2_1" class="btn" data-rspt="0"><span>No pasa nada, nadie se fija en eso. Ademas no hay tantos controles en su ruta.</span></div>
+                            <div id="btn_2_2" class="btn" data-rspt="0"><span>Que se consiga la revisión tecnica de la  moto de alguien más y que incie su turno.</span></div>
+                            <div id="btn_2_3" class="btn" data-rspt="0"><span>Un driver debe contar con toda su documentación antes de iniciar su turno,  ¡Siempre!</span></div>
                         </div>
 
                         <div id="pregunta4_3">
@@ -228,10 +228,10 @@
                         <div id="pregunta4_4">
                             <div id="p_fondo4_4" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r3.png'); ?>" alt=""/>
                             </div>
-                            <div id="tPreg_4" class="tPreg"><span>Si un cliente sufre el hurto de su cartera por un tercero</span></div>
-                            <div id="btn_4_1" class="btn" data-rspt="0"><span>a) Le explicas que debe poner su</span></div>
-                            <div id="btn_4_2" class="btn" data-rspt="0"><span>b) Le dices que no puedes, pero le permites</span></div>
-                            <div id="btn_4_3" class="btn" data-rspt="0"><span>c) Le dices que sí puedes, y que se lo harás</span></div>                            
+                            <div id="tPreg_4" class="tPreg"><span>Es la llanta trasera de la moto ¿Que deberia hacer?</span></div>
+                            <div id="btn_4_1" class="btn" data-rspt="0"><span>Nada en particular</span></div>
+                            <div id="btn_4_2" class="btn" data-rspt="0"><span>Todo esta ok</span></div>
+                            <div id="btn_4_3" class="btn" data-rspt="0"><span>Esta normal</span></div>                            
                         </div>
                     </div>
                     <div id="btnpass_4" class="btn_pass"><img src="<?php echo base_url($own_dir . '/images/btn_pass.png'); ?>" alt=""/></div>                    
@@ -250,19 +250,19 @@
                         <div id="pregunta5_1">
                             <div id="p_fondo5_1" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r16.png'); ?>" alt=""/>
                             </div>
-                            <div id="tPreg_1" class="tPreg"><span>El casco del driver esta visiblemente dañado ¿Que se deberia hacer?</span></div>
-                            <div id="btn_1_1" class="btn" data-rspt="0"><span>Es una cosa menor, el visor no protege nada igual</span></div>
-                            <div id="btn_1_2" class="btn" data-rspt="1"><span>El casco debera ser reemplazado de inmediato.</span></div>
-                            <div id="btn_1_3" class="btn" data-rspt="0"><span>Que conduzca sin casco hasta que repare el que tiene.</span></div>
+                            <div id="tPreg_1" class="tPreg"><span>La driver se ve preparada y antenta ¿Que deberia hacer?</span></div>
+                            <div id="btn_1_1" class="btn" data-rspt="0"><span>Nada en particular</span></div>
+                            <div id="btn_1_2" class="btn" data-rspt="1"><span>Todo esta ok</span></div>
+                            <div id="btn_1_3" class="btn" data-rspt="0"><span>Esta normal</span></div>
                         </div>
 
                         <div id="pregunta5_2">
                             <div id="p_fondo5_2" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r15.png'); ?>" alt=""/>
                             </div>
-                            <div id="tPreg1_2" class="tPreg"><span>Si un cliente sufre el hurto de su cartera por un tercero</span></div>
-                            <div id="btn_2_1" class="btn" data-rspt="0"><span>a) Le explicas que debe poner su denuncia en la Comisaría más</span></div>
-                            <div id="btn_2_2" class="btn" data-rspt="0"><span>b) Le dices que no puedes, pero le permites</span></div>
-                            <div id="btn_2_3" class="btn" data-rspt="0"><span>c) Le dices que sí puedes, y que se lo harás</span></div>
+                            <div id="tPreg1_2" class="tPreg"><span>El casco del driver esta visiblemente dañado ¿Que se deberia hacer?</span></div>
+                            <div id="btn_2_1" class="btn" data-rspt="0"><span>Es una cosa menor, el visor no protege nada igual</span></div>
+                            <div id="btn_2_2" class="btn" data-rspt="0"><span>El casco debera ser reemplazado de inmediato.</span></div>
+                            <div id="btn_2_3" class="btn" data-rspt="0"><span>Que conduzca sin casco hasta que repare el que tiene.</span></div>
                         </div>
 
                         <div id="pregunta5_3">
@@ -277,10 +277,10 @@
                         <div id="pregunta5_4">
                             <div id="p_fondo5_4" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r8.png'); ?>" alt=""/>
                             </div>
-                            <div id="tPreg_4" class="tPreg"><span>Si un cliente sufre el hurto de su cartera por un tercero</span></div>
-                            <div id="btn_4_1" class="btn" data-rspt="0"><span>a) Le explicas que debe poner su denuncia en la Comisaría más</span></div>
-                            <div id="btn_4_2" class="btn" data-rspt="0"><span>b) Le dices que no puedes, pero le permites</span></div>
-                            <div id="btn_4_3" class="btn" data-rspt="0"><span>c) Le dices que sí puedes, y que se lo harás</span></div>                            
+                            <div id="tPreg_4" class="tPreg"><span>El motor esta completo y funcionando ¿Que deberia hacer?</span></div>
+                            <div id="btn_4_1" class="btn" data-rspt="0"><span>Nada en particular</span></div>
+                            <div id="btn_4_2" class="btn" data-rspt="0"><span>Todo esta ok</span></div>
+                            <div id="btn_4_3" class="btn" data-rspt="0"><span>Esta normal</span></div>                            
                         </div>
                     </div>
                     <div id="btnpass_5" class="btn_pass"><img src="<?php echo base_url($own_dir . '/images/btn_pass.png'); ?>" alt=""/></div>                    
