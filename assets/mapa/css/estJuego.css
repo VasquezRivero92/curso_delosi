@@ -1,0 +1,311 @@
+@charset "utf-8";
+/*********************************  Power Ups  *********************************/
+.powerUp{}
+.powerUp1{
+    position:absolute; z-index:1; 
+    width:70px; height:70px;
+    background-color: rgba(132, 82, 82, 0.76);
+    opacity:1;
+    transition:opacity 500ms linear;
+    font-size: 0px;
+}
+.powerUp1.hit{ opacity:0; }
+#powerUp_1{   left : 1791px;
+  top : 998px;
+  width : 121px;
+  height : 67px; 
+}
+#powerUp_2{ 
+  left : 1402px;
+  top : 1035px;
+  width : 58px;
+  height : 135px;
+}
+#powerUp_3{   
+  left : 1959px;
+  top : 1035px;
+  width : 58px;
+  height : 135px;
+}
+#powerUp_4{ width:20px; height:20px; left:0px; top:0px; }
+#powerUp_5{ width:20px; height:20px; left:0px; top:0px; }
+#powerUp_6{ width:20px; height:20px; left:0px; top:0px; }
+#powerUp_7{ 
+  left : 2595px;
+  top : 1780px;
+  width : 138px;
+  height : 63px;
+}
+#powerUp_8{ 
+  left : 1232px;
+  top : 1795px;
+  width : 131px;
+  height : 82px;
+}
+#powerUp_9{ 
+  left : 1667px;
+  top : 2109px;
+  width : 121px;
+  height : 41px;
+}
+#powerUp_10{ 
+  left : 526px;
+  top : 1438px;
+  width : 58px;
+  height : 135px;
+}
+#powerUp_11{
+  left : 2035px;
+  top : 1770px;
+  width : 67px;
+  height : 132px;
+}
+#powerUp_12{ 
+  left : 591px;
+  top : 1916px;
+  width : 134px;
+  height : 65px;
+}
+#powerUp_13{ width:20px; height:20px; left:0px; top:0px; }
+
+/*******************************************************************************/
+.icoPel{
+    position:absolute;
+    background-color: rgba(255,0,0,0);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+#icoPel_1{   
+  left : 1783px;
+  top : 816px;
+  width : 136px;
+  height : 226px;
+  z-index: 101;
+  background-image:url(../images/mapa/preguntas.svg); }
+#icoPel_2{ 
+  left : 1780px;
+  top : 1100px;
+  width : 129px;
+  height : 130px;
+  z-index: 122;
+    background-image:url(../images/mapa/arbolito.svg); }
+#icoPel_3{ 
+  left : 1994px;
+  top : 882px;
+  width : 555px;
+  height : 577px;
+  z-index: 125;
+    background-image:url(../images/mapa/twinbuild.svg); }
+#icoPel_4{ 
+  left : 1538px;
+  top : 1279px;
+  width : 371px;
+  height : 89px;
+  z-index: 132;
+    background-image:url(../images/mapa/asientoback.svg); }
+#icoPel_5{ 
+  left : 1619px;
+  top : 1390px;
+  width : 203px;
+  height : 176px; 
+  z-index: 141;   
+    background-image:url(../images/mapa/fuente.svg); }
+#icoPel_6{ 
+  left : 1538px;
+  top : 1583px;
+  width : 371px;
+  height : 81px; 
+  z-index: 162;   
+    background-image:url(../images/mapa/asiento_front.svg); }
+#icoPel_7{ 
+  left : 2553px;
+  top : 1840px;
+  width : 243px;
+  height : 361px; 
+  z-index: 191;  
+    background-image:url(../images/mapa/gim.svg); }
+#icoPel_8{ 
+  left : 1234px;
+  top : 1751px;
+  width : 104px;
+  height : 101px;  
+  z-index: 183;  
+    background-image:url(../images/mapa/not1.svg); }
+#icoPel_9{ 
+  left : 1672px;
+  top : 2046px;
+  width : 104px;
+  height : 101px; 
+  z-index: 220;   
+    background-image:url(../images/mapa/not2.svg); }
+#icoPel_10{ 
+  left : 91px;
+  top : 1310px;
+  width : 437px;
+  height : 330px;    
+  z-index: 100;  
+    background-image:url(../images/mapa/bomber.svg); }
+#icoPel_11{ 
+  left : 2094px;
+  top : 1641px;
+  width : 378px;
+  height : 568px;
+  z-index: 200; 
+    background-image:url(../images/mapa/museo.svg); }
+#icoPel_12{ 
+  left : 486px;
+  top : 1930px;
+  width : 469px;
+  height : 282px; 
+  z-index: 199;   
+    background-image:url(../images/mapa/cient.svg); }
+#icoPel_13{ 
+  left : 719px;
+  top : 1426px;
+  width : 167px;
+  height : 500px; 
+  z-index: 155; 
+    background-image:url(../images/mapa/buildcent.svg); }
+
+/* #icoPel_11{ 
+    background-image:url(../images/mapa/peligro11.png); } */
+
+.icoPrev{
+    position:absolute;
+    background-color: rgba(0,255,0,0);
+    background-repeat: no-repeat;
+    /* background-position: 50% 50%; */
+}
+#icoPrev_1{   
+  left : 1360px;
+  top : 834px;
+  width : 50px;
+  height : 70px;
+   background-image:url(../images/people/1.svg); }
+#icoPrev_2{ 
+  left : 1385px;
+  top : 864px;
+  width : 67px;
+  height : 41px;
+  background-image:url(../images/people/table.svg); }
+#icoPrev_3{ 
+  left : 1448px;
+  top : 842px;
+  width : 34px;
+  height : 63px;
+  background-image:url(../images/people/3.svg); }
+#icoPrev_4{ 
+  left : 2873px;
+  top : 1157px;
+  width : 30px;
+  height : 65px;
+  background-image:url(../images/people/4.svg); }
+#icoPrev_5{ 
+  left : 3178px;
+  top : 1091px;
+  width : 29px;
+  height : 58px;
+  background-image:url(../images/people/5.svg); }
+#icoPrev_6{ 
+  left : 201px;
+  top : 1057px;
+  width : 34px;
+  height : 65px;
+  background-image:url(../images/people/6.svg); }
+#icoPrev_7{ 
+  left : 349px;
+  top : 995px;
+  width : 35px;
+  height : 70px;
+  background-image:url(../images/people/7.svg); }
+#icoPrev_8{ 
+  left : 1363px;
+  top : 2013px;
+  width : 35px;
+  height : 70px;
+  background-image:url(../images/people/8.svg); }
+#icoPrev_9{ 
+  left : 1874px;
+  top : 1309px;
+  width : 29px;
+  height : 58px;
+  z-index: 135;
+  background-image:url(../images/people/9.svg); }
+#icoPrev_10{ 
+  left : 2605px;
+  top : 2150px;
+  width : 29px;
+  height : 58px;
+  z-index: 200;
+  background-image:url(../images/people/10.svg); }
+
+#icoPrev_11 {
+  background-image:url(../images/people/Dayang.svg); 
+  left : 1820px;
+  top : 937px;
+  width : 57px;
+  height : 64px;
+  display: inline-block;
+  z-index: 102;
+}
+
+/**********************************  Paredes  **********************************/
+.ParedMask{ position:absolute; left:0px; top:0px; width:50px; height:50px; display:none; }
+.fondoOPC{ position:absolute; top:0px; left:0px; z-index:1; display:none; }
+/***********************************  Player  ***********************************/
+#Player_1{
+    position:absolute;
+    width:25px; height:20px;
+    z-index:2;
+    background-color: rgba(132, 82, 82, 0.76);
+}
+#Player_1 .sprite{
+    position:absolute;
+    width:120px; height:120px;
+    left:-50px; bottom:0px;
+    background-position:0px 0px;
+    background-color: rgba(250,0,0,0);
+}
+.playerF .sprite{ background-image: url(../images/mapa/sprite_F.png); }
+.playerM .sprite{ background-image: url(../images/mapa/sprite_M.png); }
+#Player_1 .ptje{
+    position:absolute; display:none;
+    width:99px; height:91px;
+    left: -110px; top: -165px;
+    background: rgba(250,0,0,0) url(../images/alert.png) no-repeat 50% 50%;
+    cursor: pointer;
+    z-index: 200;
+}
+/*************************  Objetos por cada escenario  *************************/
+.conteo{
+    position:absolute;
+    background-repeat:no-repeat;
+    background-position:center center;
+    display: none;
+}
+#conteo1{
+    position:absolute; 
+    width:271px; height:181px;
+    left:759px; top:244px;
+    background-image:url(../images/conteo1.png);
+}
+#conteo2{
+    position:absolute; 
+    width:276px; height:181px;
+    left:536px; top:244px;
+    background-image:url(../images/conteo2.png);
+}
+#conteo3{
+    position:absolute; 
+    width:280px; height:181px;
+    left:315px; top:244px;
+    background-image:url(../images/conteo3.png);
+}
+#gameArea1{
+    position:absolute;
+    width:3403px; height:2293px;
+    left:0px; top:0px;
+    background:url(../images/mapa/city.svg) no-repeat;
+    overflow:hidden;
+}
+/*******************************************************************************/

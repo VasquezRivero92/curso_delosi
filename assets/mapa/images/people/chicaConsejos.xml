@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="chik.png">
+	<!-- Created with Adobe Animate version 16.2.0.24 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="dayang instancia 10000" x="0" y="0" width="57" height="64" pivotX="6.8" pivotY="-0.05"/>
+	<SubTexture name="dayang instancia 10001" x="57" y="0" width="57" height="64"/>
+	<SubTexture name="dayang instancia 10002" x="114" y="0" width="57" height="64"/>
+	<SubTexture name="dayang instancia 10003" x="171" y="0" width="57" height="64"/>
+	<SubTexture name="dayang instancia 10004" x="228" y="0" width="57" height="64"/>
+	<SubTexture name="dayang instancia 10005" x="285" y="0" width="57" height="64"/>
+	<SubTexture name="dayang instancia 10006" x="342" y="0" width="57" height="64"/>
+	<SubTexture name="dayang instancia 10007" x="399" y="0" width="57" height="64"/>
+	<SubTexture name="dayang instancia 10008" x="456" y="0" width="57" height="64"/>
+	<SubTexture name="dayang instancia 10009" x="513" y="0" width="57" height="64"/>
+	<SubTexture name="dayang instancia 10010" x="570" y="0" width="57" height="64"/>
+	<SubTexture name="dayang instancia 10011" x="627" y="0" width="57" height="64"/>
+	<SubTexture name="dayang instancia 10012" x="684" y="0" width="57" height="64"/>
+	<SubTexture name="dayang instancia 10013" x="741" y="0" width="57" height="64"/>
+	<SubTexture name="dayang instancia 10014" x="798" y="0" width="57" height="64"/>
+	<SubTexture name="dayang instancia 10015" x="855" y="0" width="57" height="64"/>
+	<SubTexture name="dayang instancia 10016" x="912" y="0" width="57" height="64"/>
+	<SubTexture name="dayang instancia 10017" x="969" y="0" width="57" height="64"/>
+</TextureAtlas>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="sprite_W.png">
+	<!-- Created with Adobe Animate version 16.2.0.24 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="woman instancia 10000" x="0" y="0" width="121" height="121" pivotX="0.05" pivotY="0"/>
+	<SubTexture name="woman instancia 10001" x="121" y="0" width="121" height="121"/>
+	<SubTexture name="woman instancia 10002" x="242" y="0" width="121" height="121"/>
+	<SubTexture name="woman instancia 10003" x="363" y="0" width="121" height="121"/>
+	<SubTexture name="woman instancia 10004" x="484" y="0" width="121" height="121"/>
+	<SubTexture name="woman instancia 10005" x="605" y="0" width="121" height="121"/>
+	<SubTexture name="woman instancia 10006" x="726" y="0" width="121" height="121"/>
+	<SubTexture name="woman instancia 10007" x="847" y="0" width="121" height="121"/>
+	<SubTexture name="woman instancia 10008" x="968" y="0" width="121" height="121"/>
+	<SubTexture name="woman instancia 10009" x="0" y="121" width="121" height="121"/>
+	<SubTexture name="woman instancia 10010" x="121" y="121" width="121" height="121"/>
+	<SubTexture name="woman instancia 10011" x="242" y="121" width="121" height="121"/>
+	<SubTexture name="woman instancia 10012" x="363" y="121" width="121" height="121"/>
+	<SubTexture name="woman instancia 10013" x="484" y="121" width="121" height="121"/>
+	<SubTexture name="woman instancia 10014" x="605" y="121" width="121" height="121"/>
+	<SubTexture name="woman instancia 10015" x="726" y="121" width="121" height="121"/>
+	<SubTexture name="woman instancia 10016" x="847" y="121" width="121" height="121"/>
+	<SubTexture name="woman instancia 10017" x="968" y="121" width="121" height="121"/>
+	<SubTexture name="woman instancia 10018" x="0" y="242" width="121" height="121"/>
+	<SubTexture name="woman instancia 10019" x="121" y="242" width="121" height="121"/>
+	<SubTexture name="woman instancia 10020" x="242" y="242" width="121" height="121"/>
+	<SubTexture name="woman instancia 10021" x="363" y="242" width="121" height="121"/>
+	<SubTexture name="woman instancia 10022" x="484" y="242" width="121" height="121"/>
+	<SubTexture name="woman instancia 10023" x="605" y="242" width="121" height="121"/>
+	<SubTexture name="woman instancia 10024" x="726" y="242" width="121" height="121"/>
+	<SubTexture name="woman instancia 10025" x="847" y="242" width="121" height="121"/>
+	<SubTexture name="woman instancia 10026" x="968" y="242" width="121" height="121"/>
+	<SubTexture name="woman instancia 10027" x="0" y="363" width="121" height="121"/>
+	<SubTexture name="woman instancia 10028" x="121" y="363" width="121" height="121"/>
+	<SubTexture name="woman instancia 10029" x="242" y="363" width="121" height="121"/>
+	<SubTexture name="woman instancia 10030" x="363" y="363" width="121" height="121"/>
+	<SubTexture name="woman instancia 10031" x="484" y="363" width="121" height="121"/>
+	<SubTexture name="woman instancia 10032" x="605" y="363" width="121" height="121"/>
+	<SubTexture name="woman instancia 10033" x="726" y="363" width="121" height="121"/>
+	<SubTexture name="woman instancia 10034" x="847" y="363" width="121" height="121"/>
+	<SubTexture name="woman instancia 10035" x="968" y="363" width="121" height="121"/>
+</TextureAtlas>

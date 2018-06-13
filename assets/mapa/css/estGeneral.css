@@ -17,7 +17,7 @@ body{
 }
 #qLoverlay{ display: none; z-index: 999; }
 #historia{ display: block; background-color: #434343; }
-.showNewPassword,.selectAvatar{}
+.showNewPassword{}
 /*****************************************  loader  *****************************************/
 #qLoverlay{
     display: none;
@@ -28,10 +28,10 @@ body{
     position:absolute;
     width: 250px; height: 120px;
     left: 550px; bottom: 330px;
-    font-family: "Bebas";
+    font-family:"Bebas";
     font-size: 111px;
     line-height: 120px;
-    color: #ffffff;
+    color:#ffffff;
     text-align: center;
 }
 #img_loader01{
@@ -58,225 +58,550 @@ body{
     z-index:600;
     display:none;
 }
-/*******************************  Instruccion 1  *******************************/
-#instruccion_1{ background: url(../images/bginst1.png) no-repeat 50% 50%; }
-#instruccion_1 form{
-    position: relative;
-    max-width: 493px;
-    margin: 50px auto 50px;
-    padding: 40px 0 50px;
-    background: rgba(255,255,255,1);
-    border: 8px solid #00a2bb;
+#bg_2{
+  position : absolute ;
+  left : 222px;
+  top : 134px;
+  width : 970px;
+  height : 486px;
+  background: url(../images/presentacion/back.svg)  no-repeat center center;
 }
-#i1txt1{
-    padding: 0 40px 30px;
-    font-family: "Catalogo";
-    font-size: 17px;
-    line-height: 23px;
-    color: #333745;
+#welcome_2{
+    font-family:"Bebas";
+  font-size : 17px;
+  line-height : 17.01px;
+  color : #FFFFFF;
+  position : absolute ;
+  left : 479px;
+  top : 322px;
+  width : 362px;
+  height : 220px;
+}
+#alcalde_2{
+  position : absolute ;
+  left : 861px;
+  top : 81px;
+  width : 340px;
+  height : 797px;
+  background: url(../images/presentacion/alcalde.svg)  no-repeat center center;
+}
+#btn_cont{
+  position : absolute ;
+  left : 577px;
+  top : 515px;
+  width : 191px;
+  height : 50px;
+  cursor: pointer;
+   background: url(../images/presentacion/btn.svg)  no-repeat center center; 
 }
 
-.formInput{
-    display: block;
-    width: 90%;
-    max-width: 385px;
-    margin:0 auto 20px; padding:7px 10px;
-    font-family:"Catalogo";
-    font-size:17px;
-    line-height:20px;
-    color:#333745;
-    background-color: #ffffff;
-    background-repeat: no-repeat;
-    background-position: 14px 50%;
-    border:2px solid #333745;
-    outline:none;
+#instrucciones_1{ background: url(../images/presentacion/welcome.png)  no-repeat center center;}
+#instrucciones_2{ /* background: url(../images/bginst2.png)  no-repeat center center; */}
+.touchIsOn #instrucciones_2{ /* background: url(../images/bginst2t.png) no-repeat center center; */ }
+#instrucciones_3{ /* background: url(../images/bginst3.png) no-repeat center center;  */}
+.touchIsOn #instrucciones_3{ /* background: url(../images/bginst3t.png) no-repeat center center; */ }
+#instrucciones_4{ /* background: url(../images/bginst4.png) no-repeat center center;  */}
+#instrucciones_5{ /* background: url(../images/bginst5.png) no-repeat center center;  */}
+.btnPrev{
+    position: absolute;
+    width: 33px; height: 80px;
+    background: url(../images/btnPrev.png) no-repeat 0px 0px;
+    cursor: pointer;
 }
-.formInput.error{ border:2px solid #ff0000; color: #ff0000; }
-#i1submit{
-    display:block;
-    width:238px; height:36px;
-    margin: 40px auto 0;
-    font-family:"Catalogo";
-    font-size:18px;
-    line-height:35px;
-    color:#ffffff;
-    background: #ff3650;
-    border:0 none;
+#btnPrev_2{ left: 160px; top: 310px; }
+#btnPrev_3{ left: 160px; top: 310px; }
+#btnPrev_4{ left: 160px; top: 310px; }
+#btnPrev_5{ left: 160px; top: 310px; }
+.btnNext{
+    position: absolute;
+    width: 33px; height: 80px;
+    background: url(../images/btnNext.png) no-repeat 0px 0px;
+    cursor: pointer;
+}
+#btnNext_1{ right: 160px; top: 310px; }
+#btnNext_2{ right: 160px; top: 310px; }
+#btnNext_3{ right: 160px; top: 310px; }
+#btnNext_4{ right: 160px; top: 310px; }
+#btnJugar{
+    position:absolute;
+    width:167px; height:71px;
+    left:597px; top:527px;
+    background: url(../images/btnJugar.png) no-repeat center center;
     cursor:pointer;
 }
-/*******************************  Instruccion 2  *******************************/
-#instruccion_2{ background: url(../images/bginst2.png) no-repeat 50% 50%; }
-#i2_video{
+/*****************************************  pantallas del juego  *****************************************/
+.mapa_anim{
     position:absolute;
-    width: 800px; height: 450px;
-    left:275px; top:50px;
+    width:3403px; height:2293px;
+    left:-1036px; top:0px;
+    background:url(../images/mapa/city.svg) no-repeat;
+    overflow:hidden;   
 }
-#i2_btn{
+.fug_artif{
+    position : absolute ;
+    left: 630px;
+    top: 434px;
+    width : 108px;
+    height : 109px;
+    opacity: 0;
+    background:url(../images/presentacion/fireworks.svg) no-repeat;
+}
+.game{
+    position:absolute;
+    width:1350px; height:700px;
+    left:0px; top:0px;
+    overflow:hidden;
+    display:none;
+}
+.gameFrame{
+    position:absolute;
+    width:1350px; height:700px;
+    left:0px; top:0px;
+    overflow:hidden;
+}
+#infoWindow,#pregWindow,#capaResumen{
+    position:absolute;
+    width:1351px; height:701px;	
+    background-color:rgba(0,0,0,0.8);
+    overflow:hidden;
+    display:none;
+    z-index:600;
+}
+.caratula{
+    position:absolute;
+    width:1350px; height:700px;
+    left:0px; top:0px;
+    background-repeat:no-repeat;
+    background-position:center center;
+}
+/*****************************************  Ventana pausa  *****************************************/
+#pausaTouch{
     position: absolute;
-    width: 158px; height: 35px;
-    left: 595px; top: 539px;
-    font-family:"Catalogo";
-    font-size: 17px;
-    line-height: 34px;
-    color:#ffffff;
-    text-align: center;
-    background: #ff3650;
-    box-shadow: 0px 0px 0px 5px rgba(0,0,0,0.25);
+    width: 116px; height: 95px;
+    left: 1112px; top: 23px; 
+    background: rgba(0,0,0,0) url(../images/btnPausa.png) no-repeat 50% 50%;
+    z-index:560;
     cursor: pointer;
 }
-/*******************************  Instruccion 3  *******************************/
-#instruccion_3{ background: url(../images/bginst3.png) no-repeat 50% 50%; }
-#i3tit_1{
+#PauseGame{
     position: absolute;
-    width: 327px; height: 110px;
-    left: 511px; top: 38px;
-    background: url(../images/i3tit1.png) no-repeat 50% 50%;
+    width: 1350px; height: 700px;
+    left: 0px; top: 0px;
+    background: rgba(0,0,0,0.8) url(../images/fondoPausa.png) no-repeat 50% 50%;
+    display: none;
+    z-index: 630;
 }
-#i3txt_1{
+#btnReanudar{
     position: absolute;
-    width: 800px;
-    left: 275px; top: 212px;
-    font-family:"Catalogo";
-    font-size: 17px;
-    line-height: 23px;
-    color:#ff3650;
-    text-align: center;
+    width: 158px; height: 35px;
+    left: 579px; top: 409px; 
+    background: url(../images/btnReanudar.png) no-repeat 50% 50%;
+    cursor: pointer;
 }
-#i3txt_1 span{ font-family:"CatalogoGruesa"; }
-#i3txt_2{
-    position: absolute;
-    width: 440px;
-    left: 461px; top: 259px;
-    font-family:"Catalogo";
-    font-size: 16px;
-    line-height: 23px;
+/*****************************************  Entorno del juego  *****************************************/
+.gameEnv{ display:none; }
+/*****************************************  marcador (parte superior) *****************************************/
+#marcador{
+    position:absolute;
+    top:0px; left:0px;
+    width:1350px; height:150px;
+    /* background: url(../images/BGmarcador.png) no-repeat 100% 50%; */
+    z-index:560;
+}
+#CTimer{
+    position:absolute;
+    top:22px; left:930px;
+    font-family:"Bebas";
+    font-size:64px;
     color:#333745;
-    text-align: left;
-    background: rgba(0,0,0,0);
+    text-align:right;
+    width:160px;
 }
-#i3txt_2 span{ font-family:"CatalogoGruesa"; }
-#i3btn_1{
+#CTimer div{
+    position:relative;
+    display:block;
+    float:left;
+}
+#CMin, #CSeg{ width:70px; color:#ff3650; }
+.iconCheck{
+    position:absolute;
+    width:35px; height:35px;
+    z-index:560;
+    background-image:url(../images/icon_check.png);
+    background-position:-35px 0px;
+    display:none;
+}
+.iconCheck.anim{ animation:tada 1s; }
+.iconCheck.check{ background-position:0px 0px; }
+#icon_1{ left:425px; top:38px; }
+#icon_2{ left:450px; top:72px; }
+#icon_3{ left:475px; top:38px; }
+#icon_4{ left:500px; top:72px; }
+#icon_5{ left:525px; top:38px; }
+#icon_6{ left:550px; top:72px; }
+#icon_7{ left:575px; top:38px; }
+#icon_8{ left:600px; top:72px; }
+#icon_9{ left:625px; top:38px; }
+#icon_10{ left:650px; top:72px; }
+#icon_11{ left:675px; top:38px; }
+/*****************************************  minimap (canvas)  *****************************************
+.miniMap{
     position: absolute;
-    width: 158px; height: 35px;
-    left: 595px; top: 539px;
-    font-family:"Catalogo";
-    font-size: 17px;
-    line-height: 34px;
-    color:#ffffff;
+    bottom: 0px; right: 0px;
+    height: 100px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+#miniMap1{ z-index:560; }
+#miniMap2{ z-index:561; }
+/*********************************  ventana de preguntas *********************************/
+#pregMain{ background-image: url(../images/BGpregMain.png); }
+#pregTXT{
+    position: absolute;
+    width: 250px;
+    left: 376px; top: 500px;
+    font-family: 'CatalogoSG';
+    font-size: 16px;
+    line-height: 17px;
     text-align: center;
-    background: #ff3650;
+    color: #333745;
+}
+.pregVista{
+    position: absolute;
+    width: 238px; height: 205px;
+    left: 400px; top: 274px;
+    background-color: rgba(0,0,0,0);
+    background-repeat: no-repeat;
+    background-position:50% 50%;
+}
+#pregVista_1{ background-image: url(../images/preg/pregA_1.png); }
+#pregVista_2{ background-image: url(../images/preg/pregA_2.png); }
+#pregVista_3{ background-image: url(../images/preg/pregA_3.png); }
+#pregVista_4{ background-image: url(../images/preg/pregA_4.png); }
+#pregVista_5{ background-image: url(../images/preg/pregA_5.png); }
+#pregVista_6{ background-image: url(../images/preg/pregA_6.png); }
+#pregVista_7{ background-image: url(../images/preg/pregA_7.png); }
+#pregVista_8{ background-image: url(../images/preg/pregA_8.png); }
+#pregVista_9{ background-image: url(../images/preg/pregA_9.png); }
+#pregVista_10{ background-image: url(../images/preg/pregA_10.png); }
+#pregVista_11{ background-image: url(../images/preg/pregA_11.png); }
+#pregVista_12{ background-image: url(../images/preg/pregA_12.png); }
+#pregVista_13{ background-image: url(../images/preg/pregA_13.png); }
+#pregVista_14{ background-image: url(../images/preg/pregA_14.png); }
+#pregVista_15{ background-image: url(../images/preg/pregA_15.png); }
+.pregOpc{
+    position: absolute;
+    width: 263px; height: 42px;
+    left: 725px;
+    background:#77c4d3;
+    text-align:center;
+    color:#333745;
+    font-family:"Catalogo";
+    font-size:15px;
+    line-height: 37px;
     cursor: pointer;
 }
-/*******************************  Instruccion 4  *******************************/
-#instruccion_4{ background: url(../images/bginst4.png) no-repeat center center; }
-#i4tit_1{
-    position: absolute;
-    width: 468px; height: 110px;
-    left: 441px; top: 31px;
-    background: url(../images/i4tit1.png) no-repeat 50% 50%;
+.pregOpc span{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 16px;
 }
-#i4txt_1{
+.pregOpc:hover{ background:#333745; color:#ffffff; }
+#preg_1{ top:260px; }
+#preg_2{ top:315px; }
+#preg_3{ top:370px; }
+#preg_4{ top:425px; }
+#preg_5{ top:480px; }
+/*******************************************************************************/
+#pregBien{ background-image: url(../images/BGpregBien.png); }
+#bienResp{
     position: absolute;
-    width: 470px;
-    left: 440px; top: 152px;
+    width: 100%; height: 25px;
+    top: 200px;
+    left: 0px; right: 0px;
     font-family: "CatalogoGruesa";
-    font-size: 17px;
-    line-height: 23px;
-    color: #333745;
-    text-align: center;
+    font-size: 22px;
+    line-height: 25px;
+    text-align:center;
+    color:#333745;
+    text-transform: uppercase;
 }
-.i4avatar{
+#bienFlechas{
     position: absolute;
-    width: 232px; height: 266px;
-    top: 231px;
+    width: 585px; height: 171px;
+    left: 388px; top: 259px;
+    background: url(../images/bienFlechas.png) no-repeat 50% 50%;
+}
+.bienSlider{ position: absolute; left: 0px; top: 0px; }
+.bienSlider div{
+    position: absolute; display: none;
+    width: 238px; height: 300px;
+    top: 290px;
+    padding-top: 214px;
+    font-family: 'CatalogoSG';
+    font-size: 16px;
+    line-height: 17px;
+    text-align: center;
+    color: #333745;
     background-color: rgba(0,0,0,0);
     background-repeat: no-repeat;
     background-position: 50% 0%;
-    cursor: pointer;
-}
-#i4avatar_F{ left: 427px; }
-#i4avatar_M{ left: 685px; }
-
-.av-oficina #i4avatar_M{ background-image: url(../images/i4avOM.png); }
-.av-oficina #i4avatar_F{ background-image: url(../images/i4avOF.png); }
-.av-planta #i4avatar_M{ background-image: url(../images/i4avPM.png); }
-.av-planta #i4avatar_F{ background-image: url(../images/i4avPF.png); }
-.av-restaurante #i4avatar_M{ background-image: url(../images/i4avRM.png); }
-.av-restaurante #i4avatar_F{ background-image: url(../images/i4avRF.png); }
-/*******************************  Instruccion 5  *******************************/
-#instruccion_5{ background: url(../images/bginst5.png) no-repeat center center; }
-#i5txt1{
-    width: 95%;
-    max-width: 620px;
-    margin: 50px auto 0;
-    padding: 20px 20px 40px;
-    font-family: "Catalogo";
-    font-size: 17px;
-    line-height: 23px;
-    color: #333745;
-    background: #ffffff;
-    border: 8px solid #00a2bb;
     box-sizing: border-box;
 }
-#i5btn{
-    width: 107px; height: 39px;
-    margin: -20px auto 0;
-    font-family: "Catalogo";
-    font-size: 17px;
-    line-height: 40px;
-    color: #ffffff;
+.bSlideA{ left: 331px; padding-right: 26px; }
+#bienSlide_1 .bSlideA{ background-image: url(../images/preg/pregA_1.png); }
+#bienSlide_2 .bSlideA{ background-image: url(../images/preg/pregA_2.png); }
+#bienSlide_3 .bSlideA{ background-image: url(../images/preg/pregA_3.png); }
+#bienSlide_4 .bSlideA{ background-image: url(../images/preg/pregA_4.png); }
+#bienSlide_5 .bSlideA{ background-image: url(../images/preg/pregA_5.png); }
+#bienSlide_6 .bSlideA{ background-image: url(../images/preg/pregA_6.png); }
+#bienSlide_7 .bSlideA{ background-image: url(../images/preg/pregA_7.png); }
+#bienSlide_8 .bSlideA{ background-image: url(../images/preg/pregA_8.png); }
+#bienSlide_9 .bSlideA{ background-image: url(../images/preg/pregA_9.png); }
+#bienSlide_10 .bSlideA{ background-image: url(../images/preg/pregA_10.png); }
+#bienSlide_11 .bSlideA{ background-image: url(../images/preg/pregA_11.png); }
+.bSlideB{ left: 556px; padding-right: 20px;  }
+#bienSlide_1 .bSlideB{ background-image: url(../images/preg/pregB_1.png); }
+#bienSlide_2 .bSlideB{ background-image: url(../images/preg/pregB_2.png); }
+#bienSlide_3 .bSlideB{ background-image: url(../images/preg/pregB_3.png); }
+#bienSlide_4 .bSlideB{ background-image: url(../images/preg/pregB_4.png); }
+#bienSlide_5 .bSlideB{ background-image: url(../images/preg/pregB_5.png); }
+#bienSlide_6 .bSlideB{ background-image: url(../images/preg/pregB_6.png); }
+#bienSlide_7 .bSlideB{ background-image: url(../images/preg/pregB_7.png); }
+#bienSlide_8 .bSlideB{ background-image: url(../images/preg/pregB_8.png); }
+#bienSlide_9 .bSlideB{ background-image: url(../images/preg/pregB_9.png); }
+#bienSlide_10 .bSlideB{ background-image: url(../images/preg/pregB_10.png); }
+#bienSlide_11 .bSlideB{ background-image: url(../images/preg/pregB_11.png); }
+.bSlideC{ left: 781px; padding-left: 7px; }
+#bienSlide_1 .bSlideC{ background-image: url(../images/preg/pregC_1.png); }
+#bienSlide_2 .bSlideC{ background-image: url(../images/preg/pregC_2.png); }
+#bienSlide_3 .bSlideC{ background-image: url(../images/preg/pregC_3.png); }
+#bienSlide_4 .bSlideC{ background-image: url(../images/preg/pregC_4.png); }
+#bienSlide_5 .bSlideC{ background-image: url(../images/preg/pregC_5.png); }
+#bienSlide_6 .bSlideC{ background-image: url(../images/preg/pregC_6.png); }
+#bienSlide_7 .bSlideC{ background-image: url(../images/preg/pregC_7.png); }
+#bienSlide_8 .bSlideC{ background-image: url(../images/preg/pregC_8.png); }
+#bienSlide_9 .bSlideC{ background-image: url(../images/preg/pregC_9.png); }
+#bienSlide_10 .bSlideC{ background-image: url(../images/preg/pregC_10.png); }
+#bienSlide_11 .bSlideC{ background-image: url(../images/preg/pregC_11.png); }
+#btnListo{
+    position: absolute;
+    width: 167px; height: 41px;
+    top: 575px; left: 590px;
+    background: url(../images/btnListo.png) no-repeat 50% 50%;
+    cursor: pointer;
+}
+/*******************************************************************************/
+#pregMal{ background-image: url(../images/BGpregMal.png); }
+#btnReintento{
+    position: absolute;
+    width: 167px; height: 41px;
+    top: 485px; left: 490px;
+    background: url(../images/btnReintento.png) no-repeat 50% 50%;
+    cursor: pointer;
+}
+/****************************  ventana de resultados ****************************/
+#caratulaFin1{ background:url(../images/fondoFin.png); }
+/***#caratulaFin2{ background:url(../images/fondoGanaste.png); }/***/
+#resumenAvatar{
+    position: absolute;
+    width: 268px; height: 341px;
+    top: 203px; left: 394px;
+    background-color: rgba(0,0,0,0);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+}
+.playerF #resumenAvatar{ background-image: url(../images/avrsF.png); }
+.playerM #resumenAvatar{ background-image: url(../images/avrsM.png); }
+#resumenPuntaje{
+    position: absolute;
+    width: 164px;
+    top: 189px; left: 836px;
+    font-family: "CatalogoGruesa";
+    font-size: 48px;
+    color: #ff3650;
     text-align: center;
-    background: #ff3350;
-    cursor:pointer;
 }
-/*******************************  Instruccion 6  *******************************/
-#instruccion_6{ background: url(../images/bginst6.png) no-repeat center center; }
-#i6tit_1{
+#resumenEstrellas{
     position: absolute;
-    width: 510px;
-    left: 415px; top: 115px;
-    font-family: "Bebas";
-    font-size: 31px;
-    line-height: 40px;
-    letter-spacing: 4px;
-    color: #ffffff;
-    text-align: center;
-}
-#tilde{
-    left: 642px; top: 105px;
-    position: absolute;
-    width: 510px;
-}
-.i6btn{
-    position: absolute;
-    width: 382px; height: 219px;
-    top: 276px;
-    text-decoration: none;
+    width: 243px; height: 116px;
+    top: 358px; left: 797px;
     background-color: rgba(0,0,0,0);
     background-repeat: no-repeat;
     background-position: 50% 50%;
+}
+#resumenEstrellas.st0{ background-image: url(../images/st0.png); }
+#resumenEstrellas.st1{ background-image: url(../images/st1.png); }
+#resumenEstrellas.st2{ background-image: url(../images/st2.png); }
+#resumenEstrellas.st3{ background-image: url(../images/st3.png); }
+#resumenBtns{
+    position: absolute;
+    width: 350px; height: 44px;
+    left: 743px; top: 510px;
+    text-align: center;
+}
+#resumenBtns *{
+    position: relative;
+    display: inline-block;
+    width: 136px; height: 44px;
+    font-size: 0;
+    margin: 0 10px;
+    vertical-align: top;
     cursor: pointer;
 }
-#i6btn_1{ left: 737px; background-image: url(../images/i6b1.png); }
-#i6btn_2{ left: 252px; background-image: url(../images/i6b2.png); }
+#btnReinicio{ background: url(../images/btnReintentar.png) no-repeat 50% 50%; }
+#btnContinuar{ background:url(../images/btnContinuar.png) no-repeat 50% 50%; }
+#resumenOportunidad{
+    position: absolute;
+    width: 172px; height: 11px;
+    left: 755px; top: 567px;
+    background:url(../images/oportunidad.png) no-repeat 50% 50%;
+}
+/*****************************************  Key Controls  *****************************************/
+.touchElement{
+    display: block; opacity: 0;
+    transition: opacity 1s linear;
+    pointer-events: none;
+}
+.touchElement.show{
+    opacity: 1;
+    transition: opacity 0.5s linear;
+    pointer-events: auto;
+}
+#contKeyControls{
+    position:absolute;
+    width:200px; height:200px;
+    top:490px; left:20px;
+    z-index:650;
+    overflow:hidden;
+}
+#circleExt{
+    position:absolute;
+    width:200px; height:200px;
+    top:0px; left:0px;
+    opacity:0.3;
+    background: url(../images/pad.png) no-repeat 0px 0px;
+}
+#circleExt .dirBtn{
+    width:66px; height:66px;
+    position:absolute; 
+    background-color:rgba(255,255,255,0);
+    border-radius:40%;
+    cursor:pointer;
+}
+#circleExt .dirBtn.on{
+    background-color:rgba(255,255,255,0.5);
+}
+#DBtn_0{ top:67px; left:0px; }
+#DBtn_1{ top:0px; left:67px; }
+#DBtn_2{ top:67px; right:0px; }
+#DBtn_3{ bottom:0px; right:67px; }
+/*****************************************  objetos ocultos  *****************************************/
+#objetosOcultos{
+    position:absolute;
+    left:0px; top:0px;
+    width:0px; height:0px;
+    visibility:hidden;
+    overflow:hidden;
+    opacity:0;
+}
+#objetosOcultos div, #objetosOcultos img{
+    position:absolute;
+    width:0px; height:0px;
+    opacity:0;
+}
+/*******************************************************************************/
 
-#i6Logout{ position: absolute; display: none; }
-/*******************************************************************************/
-/**********************************  Popups  **********************************/
-/*******************************************************************************/
-.clearfix:before,.clearfix:after{
-    content: '\0020';
-    display: block; clear: both;
-    width: 0; height: 0;
-    visibility: hidden;
-    overflow: hidden;
+
+.fuegosArtif{
+  animation: fireworks linear 0.4s;
+  animation-iteration-count: 3;
+  transform-origin: 50% 50%;
+  -webkit-animation: fireworks linear 0.4s;
+  -webkit-animation-iteration-count: 3;
+  -webkit-transform-origin: 50% 50%;
+  -moz-animation: fireworks linear 0.4s;
+  -moz-animation-iteration-count: 3;
+  -moz-transform-origin: 50% 50%;
+  -o-animation: fireworks linear 0.4s;
+  -o-animation-iteration-count: 3;
+  -o-transform-origin: 50% 50%;
+  -ms-animation: fireworks linear 0.4s;
+  -ms-animation-iteration-count: 3;
+  -ms-transform-origin: 50% 50%;
 }
-.clearfix{ zoom: 1; }
-.popup{
-    position: absolute; display: none;
-    width: 100%; height: 100%;
-    left: 0; top: 0;
-    background: rgba(0,0,0,0.7);
-    overflow-y: scroll;
+
+@keyframes fireworks{
+  0% {
+    opacity:0;
+    transform:  translate(0px,200px)  scaleX(0.00) scaleY(0.00) ;
+  }
+  51% {
+    opacity:1;
+    transform:  translate(0px,-4px)  scaleX(2.55) scaleY(2.55) ;
+  }
+  100% {
+    opacity:0;
+    transform:  translate(0px,-200px)  scaleX(5.00) scaleY(5.00) ;
+  }
 }
-/*******************************************************************************/
+
+@-moz-keyframes fireworks{
+  0% {
+    opacity:0;
+    -moz-transform:  translate(0px,200px)  scaleX(0.00) scaleY(0.00) ;
+  }
+  51% {
+    opacity:1;
+    -moz-transform:  translate(0px,-4px)  scaleX(2.55) scaleY(2.55) ;
+  }
+  100% {
+    opacity:0;
+    -moz-transform:  translate(0px,-200px)  scaleX(5.00) scaleY(5.00) ;
+  }
+}
+
+@-webkit-keyframes fireworks {
+  0% {
+    opacity:0;
+    -webkit-transform:  translate(0px,200px)  scaleX(0.00) scaleY(0.00) ;
+  }
+  51% {
+    opacity:1;
+    -webkit-transform:  translate(0px,-4px)  scaleX(2.55) scaleY(2.55) ;
+  }
+  100% {
+    opacity:0;
+    -webkit-transform:  translate(0px,-200px)  scaleX(5.00) scaleY(5.00) ;
+  }
+}
+
+@-o-keyframes fireworks {
+  0% {
+    opacity:0;
+    -o-transform:  translate(0px,200px)  scaleX(0.00) scaleY(0.00) ;
+  }
+  51% {
+    opacity:1;
+    -o-transform:  translate(0px,-4px)  scaleX(2.55) scaleY(2.55) ;
+  }
+  100% {
+    opacity:0;
+    -o-transform:  translate(0px,-200px)  scaleX(5.00) scaleY(5.00) ;
+  }
+}
+
+@-ms-keyframes fireworks {
+  0% {
+    opacity:0;
+    -ms-transform:  translate(0px,200px)  scaleX(0.00) scaleY(0.00) ;
+  }
+  51% {
+    opacity:1;
+    -ms-transform:  translate(0px,-4px)  scaleX(2.55) scaleY(2.55) ;
+  }
+  100% {
+    opacity:0;
+    -ms-transform:  translate(0px,-200px)  scaleX(5.00) scaleY(5.00) ;
+  }
+}
