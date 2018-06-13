@@ -10,21 +10,21 @@ var loader = {};
 loader.imageDone = 0;
 loader.imageCounter = 0;
 var audios = [
-    ['BGIntro','assets/sounds/instrucciones.mp3'],
-    ['BGJuego','assets/sounds/juego.mp3'],
-    ['BGWin','assets/sounds/ganaste.mp3'],
-    ['txti1','assets/sounds/r1/ab1.mp3'],
-    ['txti2','assets/sounds/r1/ab1.mp3'],
-    ['txti3','assets/sounds/r1/ab1.mp3'],
-    ['txti4','assets/sounds/r1/ab1.mp3'],
-    ['txti5','assets/sounds/r1/ab1.mp3'],
-    ['beep','assets/sounds/beep.mp3'],
-    ['beepXL','assets/sounds/beep_largo.mp3'],
-    ['bien','assets/sounds/acierto2.mp3'],
-    ['audioBlip','assets/sounds/blip.mp3'],
-    ['audioCrash','assets/sounds/crash.mp3'],
-    ['audioCatch','assets/sounds/catch.mp3'],
-    ['audioPower','assets/sounds/power.mp3']
+    ['BGIntro', bdir + 'assets/sounds/instrucciones.mp3'],
+    ['BGJuego', bdir + 'assets/sounds/juego.mp3'],
+    ['BGWin', bdir + 'assets/sounds/ganaste.mp3'],
+    ['txti1', bdir + 'assets/sounds/r1/ab1.mp3'],
+    ['txti2', bdir + 'assets/sounds/r1/ab1.mp3'],
+    ['txti3', bdir + 'assets/sounds/r1/ab1.mp3'],
+    ['txti4', bdir + 'assets/sounds/r1/ab1.mp3'],
+    ['txti5', bdir + 'assets/sounds/r1/ab1.mp3'],
+    ['beep', bdir + 'assets/sounds/beep.mp3'],
+    ['beepXL', bdir + 'assets/sounds/beep_largo.mp3'],
+    ['bien', bdir + 'assets/sounds/acierto2.mp3'],
+    ['audioBlip', bdir + 'assets/sounds/blip.mp3'],
+    ['audioCrash', bdir + 'assets/sounds/crash.mp3'],
+    ['audioCatch', bdir + 'assets/sounds/catch.mp3'],
+    ['audioPower', bdir + 'assets/sounds/power.mp3']
 ];
 try {
     window.AudioContext = window.AudioContext || window.webkitAudioContext;

@@ -14,6 +14,12 @@
         <script src="<?php echo base_url($assets_dir . '/js/jquery.ui.touch-punch.min.js'); ?>"></script>
         <script src="<?php echo base_url($own_dir . '/js/libs/panicoLoader.js'); ?>"></script>
         <script src="<?php echo base_url($own_dir . '/js/libs/utils.js'); ?>"></script>
+        
+        <script type="text/javascript">
+            var bdir = '<?php echo base_url(); ?>';
+            var odir = '<?php echo base_url($own_dir); ?>';
+            var grup = '<?php echo strtoupper(substr($this->session->grupo, 0, 1)); ?>';
+        </script>
 
         <script src="<?php echo base_url($own_dir . '/js/clases.js'); ?>"></script>
         <script src="<?php echo base_url($own_dir . '/js/inicio.js'); ?>"></script>
