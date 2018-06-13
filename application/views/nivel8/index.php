@@ -27,6 +27,39 @@
     $owlgrupo = 'owl-' . $this->session->grupo;
     ?>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- pruebitaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa -->
     <body class="<?php echo $avatar . ' ' . $owlgrupo; ?>">
         <!-- - - - - - - - - - - - - - - - -  Loader  - - - - - - - - - - - - - - - - -->
         <div id="qLoverlay" class="resizeWindow">
