@@ -355,6 +355,15 @@
     display: none;
     cursor: pointer;
 }
+.btn_pass span {
+    margin: -75px;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 90px;
+    line-height: 25px;
+    position: absolute;
+    font-size: 20px;
+}
 .btnPlay.disable {
     pointer-events: none;
     transition: opacity 500ms;

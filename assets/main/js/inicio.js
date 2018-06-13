@@ -154,7 +154,7 @@ $(document).ready(function (e) {
             $('#instruccion_6').stop().fadeIn(500);
         } else {
             setTimeout(function () {
-                window.location = bdir + 'menu1';
+                window.location = bdir + 'mapa';
             }, 500);
         }
     });

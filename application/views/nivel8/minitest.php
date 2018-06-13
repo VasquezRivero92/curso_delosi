@@ -136,7 +136,7 @@
                             <div id="btn_4_3" class="btn" data-rspt="0"><span>Esta normal</span></div>                            
                         </div>
                     </div>
-                    <div id="btnpass_2" class="btn_pass"><img src="<?php echo base_url($own_dir . '/images/btn_pass.png'); ?>" alt=""/></div>                    
+                    <div id="btnpass_2" class="btn_pass"><img src="<?php echo base_url($own_dir . '/images/btn_pass.png'); ?>" alt=""/><span>Siguiente</br> driver</span></div>                    
                 </div>
 
                 <div id="gPreg_3" class="gPreg">
@@ -185,7 +185,7 @@
                             <div id="btn_4_3" class="btn" data-rspt="0"><span>Esta normal</span></div>                            
                         </div>
                     </div>
-                    <div id="btnpass_3" class="btn_pass"><img src="<?php echo base_url($own_dir . '/images/btn_pass.png'); ?>" alt=""/></div>                    
+                    <div id="btnpass_3" class="btn_pass"><img src="<?php echo base_url($own_dir . '/images/btn_pass.png'); ?>" alt=""/><span>Siguiente</br> driver</span></div>                    
                 </div>
 
                 <div id="gPreg_4" class="gPreg">
@@ -234,7 +234,7 @@
                             <div id="btn_4_3" class="btn" data-rspt="0"><span>Esta normal</span></div>                            
                         </div>
                     </div>
-                    <div id="btnpass_4" class="btn_pass"><img src="<?php echo base_url($own_dir . '/images/btn_pass.png'); ?>" alt=""/></div>                    
+                    <div id="btnpass_4" class="btn_pass"><img src="<?php echo base_url($own_dir . '/images/btn_pass.png'); ?>" alt=""/><span>Siguiente</br> driver</span></div>                    
                 </div>
 
                 <div id="gPreg_5" class="gPreg">
@@ -283,7 +283,7 @@
                             <div id="btn_4_3" class="btn" data-rspt="0"><span>Esta normal</span></div>                            
                         </div>
                     </div>
-                    <div id="btnpass_5" class="btn_pass"><img src="<?php echo base_url($own_dir . '/images/btn_pass.png'); ?>" alt=""/></div>                    
+                    <div id="btnpass_5" class="btn_pass"><img src="<?php echo base_url($own_dir . '/images/btn_pass.png'); ?>" alt=""/><span>Siguiente</br> driver</span></div>                    
                 </div>
             </div>
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->

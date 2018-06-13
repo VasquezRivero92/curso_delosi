@@ -91,7 +91,6 @@ class Admin extends MY_Controller {
                 if ($this->has_access('adm02')) {//esto ahora siempre ocurre
                     $sendID = false;
                 }
-
                 $this->data['are_data'] = $this->rel_array($this->base_model->get_areas($sendID)->result());
                 $this->data['are_value'] = $this->form_validation->set_value('area') ? $this->form_validation->set_value('area') : 1;
                 $this->data['are_extra'] = array('id' => 'area');
@@ -125,7 +124,6 @@ class Admin extends MY_Controller {
                     'id' => 'fingpla',
                     'type' => 'text'
                 );
-
                 $this->data['regempuser'] = array(
                     'name' => 'regempuser',
                     'content' => 'Registrar y nuevo',

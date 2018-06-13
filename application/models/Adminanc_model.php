@@ -82,7 +82,7 @@ class Adminanc_model extends CI_Model {
                 ->where('c.id_version', $this->id_version)
                 ->where('u.active', 1)
                 ->where('um.id_menu', 2)
-                //->order_by('um.curso', 'desc')
+                ->order_by('um.curso', 'desc')
                 ->order_by('um.puntaje', 'desc')
                 ->order_by('um.fecha', 'asc')
                 ->limit($limit)

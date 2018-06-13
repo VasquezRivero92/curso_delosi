@@ -22,8 +22,8 @@ class Main extends MY_Controller {
             if ($this->session->avatar) {
                 if ($this->entraarecla()) {
                     $this->data['firstWindow'] = 6;
-                } else {
-                    redirect('/menu1', 'refresh');
+                }else{
+                    redirect('/mapa', 'refresh');
                 }
             } else {
                 $this->data['firstWindow'] = 3;
