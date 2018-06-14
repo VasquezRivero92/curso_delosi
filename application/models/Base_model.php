@@ -93,6 +93,27 @@ class Base_model extends CI_Model {
                         ->get()
                         ->num_rows();
     }
+
+    public function usuarios_cocina() {
+        return (bool) $this->db->select('id_user')
+                        ->from('users_empresa')
+                        ->where('id_cargo', '1')
+                        ->where('id_user', $this->session->user_id)
+                        ->limit(1)
+                        ->get()
+                        ->num_rows();
+    }
+
+     public function usuarios_ofi() {
+        return (bool) $this->db->select('id_user')
+                        ->from('users_empresa')
+                        ->where('id_cargo', '7')
+                        ->where('id_user', $this->session->user_id)
+                        ->limit(1)
+                        ->get()
+                        ->num_rows();
+    }
+
     /*     * ************************************************************************ */
     public function entraformulario() {
         return (bool) $this->db->select('id_user')

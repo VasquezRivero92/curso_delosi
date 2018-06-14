@@ -15,6 +15,10 @@ class mapa extends Nivel_Controller {
     }
 
     function index() {
+        if ($this->entraadriver()) {
+            //variable
+
+        }
     	$this->data['own_dir'] = $this->data['assets_dir'] . '/mapa';
 
         $this->data['avatar'] = $this->session->avatar ? ' av' . strtoupper(substr($this->session->grupo, 0, 1)) . $this->session->avatar : 'av-' . $this->session->grupo;
