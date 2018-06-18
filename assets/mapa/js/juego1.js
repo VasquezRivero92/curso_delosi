@@ -1,7 +1,7 @@
 /*******************************************************************************/
 $J[1].showJuego = function () {
     $JAct = 1;
-    $('#escenaJuego1').fadeIn(1000);
+    $('#instrucciones_4').fadeIn(1000);
     introJuego();
     CalcularLimites();
     PlayerMov.id = $('#Player_1');
