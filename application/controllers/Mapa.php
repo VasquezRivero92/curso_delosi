@@ -21,7 +21,7 @@ class mapa extends Nivel_Controller {
             redirect('/main', 'refresh');
         } else {
             $this->data['avatar'] = 'av' . strtoupper(substr($this->session->grupo, 0, 1)) . $this->session->avatar;
-            echo $this->data['avatar'];
+            //echo $this->data['avatar'];
         }
     	$this->data['own_dir'] = $this->data['assets_dir'] . '/mapa';
 
