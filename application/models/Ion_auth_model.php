@@ -1596,6 +1596,8 @@ class Ion_auth_model extends CI_Model {
             $grupo = 'planta';
         } elseif ($user->id_grupo == 3) {
             $grupo = 'oficina';
+        }   elseif ($user->id_grupo == 4) {
+            $grupo = 'driver';
         }
         if ($user->avatar == 1) {
             $avatar = 'M';
