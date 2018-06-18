@@ -50,7 +50,7 @@
                 <div class="fug_artif fuegosArtif"></div>
             </div>
             <!-- - - - - - - - - - - - - - - -  Mapa  - - - - - - - - - - - - - - - -->
-            <div id="escenaJuego1" class="game">
+            <div id="instrucciones_4" class="game">
                 <div class="gameFrame">
                     <div id="gameArea1"></div>
                     <div id="Player_1">
@@ -102,93 +102,113 @@
             </div>
             <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
             <div id="marcador" class="gameEnv">
-                <div id="CTimer"><div id="CMin">00</div><div>:</div><div id="CSeg">00</div></div>
+                <div id="topBar" class="avOF">
+                    <div id="i4avatar"></div>
+                    <div id="i4Nombre">Estephany Rosario del pilar esquivel de la Rosa</div>
+                    <a id="i4Logout" href="#"></a>                   
+                    <div class="anim"></div>
+                </div>
+                <div id="botBar">
+                    <div id="i4RazonSocial" class="i4txt">-/-</div>
+                    <div id="i4Puntaje" class="i4txt">00</div>
+                    <div id="i4Estrellas" class="i4txt">00</div>                    
+                </div>
+                <div id="centerBar"></div>
             </div>
-            <!-- <div id="icon_1" class="iconCheck"></div>
-            <div id="icon_2" class="iconCheck"></div>
-            <div id="icon_3" class="iconCheck"></div>
-            <div id="icon_4" class="iconCheck"></div>
-            <div id="icon_5" class="iconCheck"></div>
-            <div id="icon_6" class="iconCheck"></div>
-            <div id="icon_7" class="iconCheck"></div>
-            <div id="icon_8" class="iconCheck"></div>
-            <div id="icon_9" class="iconCheck"></div>
-            <div id="icon_10" class="iconCheck"></div>
-            <div id="icon_11" class="iconCheck"></div> -->
-            <div id="pausaTouch" class="gameEnv"></div>
+
+            <div id="pausaTouch" class="gameEnv"><span>AYUDA<br>||</span></div>
             <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
             <div id="pregWindow">
-                <div id="pregMain" class="caratula">
-                    <div id="pregTXT">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quod iste voluptatibus perferendis doloremque, eaque, alias similique adipisci eveniet reiciendis.</div>
-                    <div id="preg_1" class="pregOpc"><span>SI</span></div>
-                    <div id="preg_2" class="pregOpc"><span>NO</span></div>
+
+                <div id="popAct_0" class="caratula">
+                    <div class="pop_restring"><p class="textCent">Por el moemnto no puedes ingresar a este curso.</p></div>
+                    
+                    <br>Vuelve pronto.
+                    <div id="preg_0" class="CV_btn2 pregOpc">VOLVER</div>
                 </div>
+
                 <div id="popAct_1" class="caratula">
-                    <div id="preg_1_1" class="pregOpc">SI</div>
-                    <div id="preg_1_0" class="pregOpc">NO</div>
-                </div>
-                <div id="popAct_2" class="caratula">
-                    <div id="preg_2_1" class="pregOpc">SI</div>
-                    <div id="preg_2_0" class="pregOpc">NO</div>
-                </div>
-                <div id="popAct_3" class="caratula">
-                    <div id="preg_3_1" class="pregOpc">SI</div>
-                    <div id="preg_3_0" class="pregOpc">NO</div>
-                </div>
-                <div id="popAct_7" class="caratula">
-                    <div id="preg_7_1" class="pregOpc">SI</div>
-                    <div id="preg_7_0" class="pregOpc">NO</div>
-                </div>
-                <div id="popAct_8" class="caratula">
-                    <div id="preg_8_1" class="pregOpc">SI</div>
-                    <div id="preg_8_0" class="pregOpc">NO</div>
-                </div>
-                <div id="popAct_9" class="caratula">
-                    <div id="preg_9_1" class="pregOpc">SI</div>
-                    <div id="preg_9_0" class="pregOpc">NO</div>
-                </div>
-                <div id="popAct_10" class="caratula">
-                    <div id="preg_10_1" class="pregOpc">SI</div>
-                    <div id="preg_10_0" class="pregOpc">NO</div>
-                </div>
-                <div id="popAct_11" class="caratula">
-                    <div id="preg_11_1" class="pregOpc">SI</div>
-                    <div id="preg_11_0" class="pregOpc">NO</div>
-                </div>
-                <div id="popAct_12" class="caratula">
-                    <div id="preg_12_1" class="pregOpc">SI</div>
-                    <div id="preg_12_0" class="pregOpc">NO</div>
-                </div>
+                    <div id="i4Buzon"></div>
+                    <div class="opcAyuda"><p class="ayuda_MC">PREGUNTAS  FRECUENTES</p></div>
+                    <div id="preg_1_1" class="aceptaCd pregOpc">Salir</div>
 
-                <div id="popAct_0" class="caratula"><div id="preg_0" class="pregOpc">ACEPTAR</div></div>
-
-                <!-- <div id="pregBien" class="caratula">
-                    <div id="bienResp"></div>
-                    <div id="bienFlechas"></div>
-                    <div id="btnListo"></div>
-                </div>
-                <div id="pregMal" class="caratula"><div id="btnReintento"></div></div> -->
-            </div>
-            <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-            <!-- <div id="capaResumen">
-                <div id="caratulaFin1" class="caratula">
-                    <div id="resumenAvatar"></div>
-                    <div id="resumenPuntaje"></div>
-                    <div id="resumenEstrellas"></div>
-                    <div id="resumenBtns">
-                        <div id="btnReinicio">&nbsp;</div>
-                        <?php echo anchor('nivel1/resultados', '&nbsp;', array('id' => 'btnContinuar')); ?>
-                        <a id="btnContinuar" href="#"></a>
+                     <div id="popup2" class="popup">
+                        <form id="formBuzon" class="clearfix" method="post" action="#">
+                            <div id="pop2txt1">Sabemos que es importante para ti, tener todos los conceptos claros de cada nivel, si tienes una duda o consulta detállala en el siguiente recuadro y te responderemos dentro de las 24 horas.</div>
+                            <textarea id="pop2ta" maxlength="400"></textarea>
+                            <div id="pop2txt2">(*) Los días miércoles las respuestas a tus dudas o consultas serán en tiempo real de 8:30 a.m. a 6:00 p.m.</div>
+                            <input id="pop2sub" class="clearfix" type="submit" value="ENVIAR">
+                            <div id="pop2close"></div>
+                        </form>
                     </div>
-                    <div id="resumenOportunidad"></div>
+                   
                 </div>
-            </div> -->
+
+                <div id="popAct_2" class="caratula"> 
+                    <div class="drivers"><p class="textCent">Escenario - drivers</p></div>
+                    
+                    <a id="preg_2_1" class="CV_btn1 disable" href="#">IR AL CURSO</a>
+                    <!-- <div id="preg_2_1" class="CV_btn1 pregOpc">IR AL CURSO</div> -->
+                    <div id="preg_2_0" class="CV_btn2 pregOpc">VOLVER</div>
+                </div>
+
+
+                <div id="popAct_3" class="caratula"> 
+                    <div class="prevencion">
+                        <p class="textCent">Escenario - Prevención en el trabajo</p>
+                    </div>                    
+
+                    <a href="#"  id="i4Certificado" class="disable"></a>
+                    <a id="i4Nivel_1" class="i4Nivel" href="#"></a>
+                    <a id="i4Nivel_2" class="i4Nivel disable" href="#"></a>
+                    <a id="i4Nivel_3" class="i4Nivel disable" href="#"></a>
+                    <a id="i4Nivel_4" class="i4Nivel disable" href="#"></a>
+
+                    <div id="preg_3_0" class="CV_btn2 pregOpc">VOLVER</div>
+                </div>
             <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-            <div id="infoWindow">
-                <div id="conteo3" class="conteo"></div>
-                <div id="conteo2" class="conteo"></div>
-                <div id="conteo1" class="conteo"></div>
+
+                <div id="popAct_7" class="caratula"> 
+                    <div class="pausas"><p class="textCent">Bienvenidos al Gimnasio, por el momento esta en construcción.<br>Vuelve pronto.</p></div>
+                    <div id="preg_7_0" class="CV_btn2 pregOpc">VOLVER</div>
+                </div>
+
+                <div id="popAct_8" class="caratula"> 
+                    <div class="pop_restring1"><p class="textCent">Muy pronto habrá novedades1, por el momento esta en construcción.
+                    <br>Vuelve pronto.</p></div>
+                    
+                    <div id="preg_8_0" class="CV_btn2 pregOpc">VOLVER</div>
+                </div>
+
+                <div id="popAct_9" class="caratula"> 
+                     <div class="pop_restring2"><p class="textCent">Muy pronto habrá novedades2, por el momento esta en construcción.<br>Vuelve pronto.</p></div>
+                   
+                    <div id="preg_9_0" class="CV_btn2 pregOpc">VOLVER</div>
+                </div>
+
+                <div id="popAct_10" class="caratula"> 
+                    <div class="auxilio"><p class="textCent">Bienvenidos a Primeros Auxilios, por el momento esta en construcción.
+                    <br>Vuelve pronto.</p></div>
+                    
+                    <div id="preg_10_0" class="CV_btn2 pregOpc">VOLVER</div>
+                </div>
+
+                <div id="popAct_11" class="caratula"> 
+                     <div class="museo"><p class="textCent">Bienvenidos al Museo, por el momento esta en construcción.
+                    <br>Vuelve pronto.</p></div>
+                    
+                    <div id="preg_11_0" class="CV_btn2 pregOpc">VOLVER</div>
+                </div>
+
+                <div id="popAct_12" class="caratula"> 
+                     <div class="quimica"><p class="textCent">Bienvenidos a la casa de la Ciencia, por el momento esta en construcción.</p></div>
+                    
+                    <br>Vuelve pronto.
+                    <div id="preg_12_0" class="CV_btn2 pregOpc">VOLVER</div>
+                </div>
+
             </div>
+            <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
             <div id="PauseGame"><div id="btnReanudar"></div></div>
             <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
             <div id="objetosOcultos">                

@@ -86,7 +86,6 @@ $J[1].hitPowerUps = function () {
         }
         if( itm.visible > 0 ){
             itm.visible--;
-            console.log('item opacity 0');
         }
     });
     $PowerPE.forEach(function (itm, i) { if(itm && itm.enPantalla()){ itm.draw(i); } });

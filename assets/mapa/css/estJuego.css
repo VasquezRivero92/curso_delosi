@@ -277,6 +277,7 @@
 .avDF .sprite{ background-image: url(../images/sprite4_F.png); }
 .avDM .sprite{ background-image: url(../images/sprite4_M.png); }
 
+
 #Player_1 .ptje{
     position:absolute; display:none;
     width:99px; height:91px;
@@ -292,7 +293,7 @@
     background-position:center center;
     display: none;
 }
-#conteo1{
+/* #conteo1{
     position:absolute; 
     width:271px; height:181px;
     left:759px; top:244px;
@@ -309,7 +310,7 @@
     width:280px; height:181px;
     left:315px; top:244px;
     background-image:url(../images/conteo3.png);
-}
+} */
 #gameArea1{
     position:absolute;
     width:3403px; height:2293px;
@@ -318,3 +319,534 @@
     overflow:hidden;
 }
 /*******************************************************************************/
+.anim{
+  position : absolute ;
+  left: 132px;
+  top: 56px;
+  width : 25px;
+  height : 27px; 
+  background:url(../images/UI/ligts.svg) no-repeat;
+  cursor: pointer;
+}
+#topBar{
+  position : absolute ;
+  left : 1186px;
+  top : 110px;
+  width : 287px;
+  height : 147px;  
+  background:url(../images/UI/cont_avatar.svg) no-repeat;
+  -webkit-transition: All 0.4s cubic-bezier(.31,.11,.42,1);
+  -moz-transition: All 0.4s cubic-bezier(.31,.11,.42,1);
+  -o-transition: All 0.4s cubic-bezier(.31,.11,.42,1);
+  transition: All 0.4s cubic-bezier(.31,.11,.42,1);
+}
+.animPers{
+ left: 1064px !important; 
+}
+
+#botBar{
+  position : absolute ;
+  left : 1175px;
+  top : 270px;
+  width : 178px;
+  height : 256px; 
+  background:url(../images/UI/statusPlayer.svg) no-repeat;
+}
+#i4avatar{
+    position: absolute;
+    width: 114px; height: 107px;
+    left: 9px; top: 16px;
+    background-color: rgba(0,0,0,0);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.avOF #i4avatar{ background-image: url(../images/i3avOF.png); }
+.avOM #i4avatar{ background-image: url(../images/i3avOM.png); }
+.avPF #i4avatar{ background-image: url(../images/i3avPF.png); }
+.avPM #i4avatar{ background-image: url(../images/i3avPM.png); }
+.avRF #i4avatar{ background-image: url(../images/i3avRF.png); }
+.avRM #i4avatar{ background-image: url(../images/i3avRM.png); }
+.i4txt{
+    position: absolute;
+    width: 160px;
+    top: 295px;
+    font-family: 'CatalogoGruesa';
+    line-height: 50px;
+    color: #ff3650;
+    text-align: center;
+    background: rgba(0,0,0,0);
+}
+#i4RazonSocial{ 
+    left: 52px;
+    top: 95px;
+    width: 120px;
+    font-size: 14px;
+}
+/* #i4Nivel{ left: 343px; font-size: 39px; } */
+#i4Puntaje{ 
+    left: 73px;
+    top: 140px;
+    width: 100px;
+    font-size: 22px; 
+}
+#i4Estrellas{ 
+    left: 94px;
+    top: 182px;
+    width: 58px;
+    font-size: 22px;
+}
+#i4Nombre{
+    position: absolute;
+    width: 117px;
+    left: 164px;
+    top: 42px;
+    font-family: 'CatalogoGruesa';
+    font-size: 14px;
+    line-height: 15px;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+}
+#i4Logout{
+    position: absolute;
+    width: 95px;
+    height: 35px;
+    left: 176px;
+    top: 108px;
+    font-family: 'Catalogo';
+    font-size: 17px;
+    line-height: 33px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    background: url(../images/UI/closeSetion.png) no-repeat 0px 0px;
+}
+#i4Logout:hover{    
+  background: url(../images/UI/closeSetion.png) no-repeat -97px 0px; 
+}
+#i4Buzon{
+    position: absolute;
+    width: 189px; height: 116px;
+    left: 39px; top: 291px;
+    background: url(../images/popups/i4buzon.png) no-repeat 50% 0%;
+    cursor: pointer;
+}
+
+
+
+/*******************************************************************************/
+/**********************************  Popups  **********************************/
+/*******************************************************************************/
+.clearfix:before,.clearfix:after{
+    content: '\0020';
+    display: block; clear: both;
+    width: 0; height: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+.clearfix{ zoom: 1; }
+.popup{
+    position: absolute; display: none;
+    width: 100%; height: 100%;
+    left: 0; top: 0;
+    background: rgba(0,0,0,0.7);
+    overflow-y: scroll;
+}
+.popup form{
+    position: relative;
+    max-width: 493px;
+    margin: 50px auto 50px;
+    padding: 40px 0 50px;
+    background: rgba(255,255,255,1);
+    border: 8px solid #00a2bb;
+}
+
+/*******************************  Popup Buzon  *******************************/
+#pop2txt1{
+    padding: 0 40px 30px;
+    font-family: "Catalogo";
+    font-size: 17px;
+    line-height: 23px;
+    color: #333745;
+    text-align: center;
+}
+#pop2ta{
+    display: block;
+    width: 90%;
+    max-width: 385px;
+    min-height: 100px;
+    margin:0 auto 20px; padding:7px 10px;
+    font-family:"Catalogo";
+    font-size:17px;
+    line-height:20px;
+    color:#333745;
+    background-color: #ffffff;
+    border:3px solid #77c4d3;
+    outline:none;
+}
+#pop2ta.error{ border:2px solid #ff0000; color: #ff0000; }
+#pop2txt2{
+    padding: 0 40px 20px;
+    font-family: "Catalogo";
+    font-size: 17px;
+    line-height: 23px;
+    color: #333745;
+    text-align: center;
+}
+#pop2sub{
+    display:block;
+    width:238px; height:36px;
+    margin: 0 auto 0;
+    font-family:"Catalogo";
+    font-size:18px;
+    line-height:35px;
+    color:#ffffff;
+    background: #ff3650;
+    border:0 none;
+    cursor:pointer;
+}
+#pop2close{
+    position: absolute;
+    width: 40px; height: 40px;
+    right: 5px; top: 5px;
+    background: rgba(0,0,0,0)  url(../images/button_cancel.png) no-repeat 50% 50%;
+    background-size: contain;
+    cursor:pointer;
+}
+/*******************************  Nivel PopUp Content Prevencion  *********************************/
+
+.i4Nivel{
+    position: absolute;
+    width: 157px; height: 119px;
+    top: 564px;
+    text-decoration: none;
+    background-color: rgba(0,0,0,0);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    cursor: pointer;
+}
+.i4Nivel.disable{
+    background-position: 0px -119px;
+    pointer-events: none;
+}
+#i4Cuestionario{
+    position: absolute;
+    width: 190px; height: 77px;
+    left: 1140px; top: 250px;
+    text-decoration: none;
+    background: rgba(0,0,0,0) url(../images/i4Cuestionario.png) no-repeat 50% 50%;
+    cursor: pointer;
+}
+#i4Certificado{
+    position: absolute;
+    width: 190px; height: 90px;
+    left: 50px; top: 40px;
+    text-decoration: none;
+    background-color: rgba(0,0,0,0);
+    background-image: url(../images/i4Certificado.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    cursor: pointer;
+}
+#i4Certificado.disable{
+    background-position: 0px -90px;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+#i4Nivel_1{ left: 22px; background-image: url(../images/i4nivel_1.png); }
+#i4Nivel_2{ left: 165px; background-image: url(../images/i4nivel_2.png); }
+#i4Nivel_3{ left: 309px; background-image: url(../images/i4nivel_3.png); }
+#i4Nivel_4{ left: 453px; background-image: url(../images/i4nivel_4.png); }
+
+
+/*******************************************************************************/
+/************  PopUp Genericos  ************/
+
+.CV_btn2{
+    background : -moz-linear-gradient(49.61% -50.26% -89.14deg,rgba(179, 179, 179, 1) 40.29%,rgba(51, 51, 51, 1) 93.48%);
+    background : -webkit-linear-gradient(-89.14deg, rgba(179, 179, 179, 1) 40.29%, rgba(51, 51, 51, 1) 93.48%);
+    background : -webkit-gradient(linear,49.61% -50.26% ,50.24% 111.19% ,color-stop(0.4029,rgba(179, 179, 179, 1) ),color-stop(0.9348,rgba(51, 51, 51, 1) ));
+    background : -o-linear-gradient(-89.14deg, rgba(179, 179, 179, 1) 40.29%, rgba(51, 51, 51, 1) 93.48%);
+    background : -ms-linear-gradient(-89.14deg, rgba(179, 179, 179, 1) 40.29%, rgba(51, 51, 51, 1) 93.48%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#B3B3B3', endColorstr='#333333' ,GradientType=0)";
+    background : linear-gradient(179.14deg, rgba(179, 179, 179, 1) 40.29%, rgba(51, 51, 51, 1) 93.48%);
+    position : absolute ;
+    left: 1130px;
+    top: 20px;
+    width : 191px;
+    height : 50px;
+    border-radius : 24px;
+    -moz-border-radius : 24px;
+    -webkit-border-radius : 24px;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#B3B3B3',endColorstr='#333333' , GradientType=1);
+    font-size: 27px;
+    line-height: 50px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'CatalogoGruesa';
+    cursor: pointer;
+}
+.CV_btn1{
+    background : -moz-linear-gradient(49.61% -50.26% -89.14deg,rgba(179, 179, 179, 1) 40.29%,rgba(51, 51, 51, 1) 93.48%);
+    background : -webkit-linear-gradient(-89.14deg, rgba(179, 179, 179, 1) 40.29%, rgba(51, 51, 51, 1) 93.48%);
+    background : -webkit-gradient(linear,49.61% -50.26% ,50.24% 111.19% ,color-stop(0.4029,rgba(179, 179, 179, 1) ),color-stop(0.9348,rgba(51, 51, 51, 1) ));
+    background : -o-linear-gradient(-89.14deg, rgba(179, 179, 179, 1) 40.29%, rgba(51, 51, 51, 1) 93.48%);
+    background : -ms-linear-gradient(-89.14deg, rgba(179, 179, 179, 1) 40.29%, rgba(51, 51, 51, 1) 93.48%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#B3B3B3', endColorstr='#333333' ,GradientType=0)";
+    background : linear-gradient(179.14deg, rgba(179, 179, 179, 1) 40.29%, rgba(51, 51, 51, 1) 93.48%);
+    position : absolute ;
+    left: 570px;
+    top: 540px;
+    width : 191px;
+    height : 50px;
+    border-radius : 24px;
+    -moz-border-radius : 24px;
+    -webkit-border-radius : 24px;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#B3B3B3',endColorstr='#333333' , GradientType=1);
+    font-size: 27px;
+    line-height: 55px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'CatalogoGruesa';
+    cursor: pointer;
+}
+.textCent{
+    width: 541px;
+    top: 210px;
+    left: 120px;
+    font-size: 25px;
+    line-height: 36px;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'CatalogoGruesa';
+    text-transform: uppercase;
+    position: absolute;
+}
+.ayuda_MC{
+    width: 541px;
+    top: 96px;
+    left: 167px;
+    font-size: 35px;
+    line-height: 36px;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Bebas';
+    text-transform: uppercase;
+    position: absolute;
+}
+
+/**********  PopUp0  ************/
+
+.pop_restring{
+    background: url(../images/popups/restringido.svg) no-repeat;
+    position : absolute ;
+    left : 222px;
+    top : 105px;
+    width : 970px;
+    height : 624px;
+    font-size: 27px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'CatalogoGruesa';
+}
+
+/**********  PopUp1  ************/
+
+.opcAyuda{
+    background: url(../images/popups/restringido.svg) no-repeat;
+    position : absolute ;
+    left : 222px;
+    top : 105px;
+    width : 970px;
+    height : 624px;
+    font-size: 27px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'CatalogoGruesa';
+}
+
+.aceptaCd{
+    background : -moz-linear-gradient(49.61% -50.26% -89.14deg,rgba(179, 179, 179, 1) 40.29%,rgba(51, 51, 51, 1) 93.48%);
+    background : -webkit-linear-gradient(-89.14deg, rgba(179, 179, 179, 1) 40.29%, rgba(51, 51, 51, 1) 93.48%);
+    background : -webkit-gradient(linear,49.61% -50.26% ,50.24% 111.19% ,color-stop(0.4029,rgba(179, 179, 179, 1) ),color-stop(0.9348,rgba(51, 51, 51, 1) ));
+    background : -o-linear-gradient(-89.14deg, rgba(179, 179, 179, 1) 40.29%, rgba(51, 51, 51, 1) 93.48%);
+    background : -ms-linear-gradient(-89.14deg, rgba(179, 179, 179, 1) 40.29%, rgba(51, 51, 51, 1) 93.48%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#B3B3B3', endColorstr='#333333' ,GradientType=0)";
+    background : linear-gradient(179.14deg, rgba(179, 179, 179, 1) 40.29%, rgba(51, 51, 51, 1) 93.48%);
+    position : absolute ;
+    left : 577px;
+    top : 515px;
+    width : 191px;
+    height : 50px;
+    border-radius : 24px;
+    -moz-border-radius : 24px;
+    -webkit-border-radius : 24px;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#B3B3B3',endColorstr='#333333' , GradientType=1);
+    font-size: 27px;
+    line-height: 46px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'CatalogoGruesa';
+    cursor: pointer;
+}
+
+/**********  PopUp2  ************/
+.drivers{
+    background: url(../images/popups/driver.svg) no-repeat;
+    position : absolute ;
+    left : 222px;
+    top : 105px;
+    width : 970px;
+    height : 624px;
+    font-size: 27px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'CatalogoGruesa';
+}
+
+
+/**********  PopUp3  ************/
+.prevencion{
+    background: url(../images/popups/prevencion.svg) no-repeat;
+    position : absolute ;
+    left : 222px;
+    top : 105px;
+    width : 970px;
+    height : 624px;
+    font-size: 27px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'CatalogoGruesa';
+}
+
+
+
+
+/**********  PopUp7  ************/
+.pausas{
+    background: url(../images/popups/pausas.svg) no-repeat;
+    position : absolute ;
+    left : 222px;
+    top : 105px;
+    width : 970px;
+    height : 624px;
+    font-size: 27px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'CatalogoGruesa';
+}
+
+
+/**********  PopUp8  ************/
+.pop_restring1{
+    background: url(../images/popups/restringido.svg) no-repeat;
+    position : absolute ;
+    left : 222px;
+    top : 105px;
+    width : 970px;
+    height : 624px;
+    font-size: 27px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'CatalogoGruesa';
+}
+
+
+/**********  PopUp9  ************/
+
+.pop_restring2{
+    background: url(../images/popups/restringido.svg) no-repeat;
+    position : absolute ;
+    left : 222px;
+    top : 105px;
+    width : 970px;
+    height : 624px;
+    font-size: 27px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'CatalogoGruesa';
+}
+
+/**********  PopUp10  ************/
+.auxilio{
+    background: url(../images/popups/emergencia.svg) no-repeat;
+    position : absolute ;
+    left : 222px;
+    top : 105px;
+    width : 970px;
+    height : 624px;
+    font-size: 27px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'CatalogoGruesa';
+}
+
+
+
+/**********  PopUp11  ************/
+.museo{
+    background: url(../images/popups/museo.svg) no-repeat;
+    position : absolute ;
+    left : 222px;
+    top : 105px;
+    width : 970px;
+    height : 624px;
+    font-size: 27px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'CatalogoGruesa';
+}
+
+
+
+/**********  PopUp12  ************/
+
+.quimica{
+    background: url(../images/popups/quimicos.svg) no-repeat;
+    position : absolute ;
+    left : 222px;
+    top : 105px;
+    width : 970px;
+    height : 624px;
+    font-size: 27px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'CatalogoGruesa';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

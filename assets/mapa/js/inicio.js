@@ -1,6 +1,4 @@
 /*******************************************************************************/
-// personaje sprite
-var $pj_sprite = 0;
 // numero de juego actual
 var $JAct = 0;
 // Maximo nivel alcanzado
@@ -26,7 +24,7 @@ var $PowerPR = [];
 var $ActPwrUp = 0;
 //var $CasasActv = [0,1,2,3,4,5,6,7,8,9,10,11,12];
 var $CasasActv = [null,true,false,false,true,true,true,false,true,true,false,false,false];
-var $Preguntas = [null, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+var $Preguntas = [null, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
 var $slA = [null,
     'ttttt',  
     'yyyyy',
@@ -46,13 +44,7 @@ var $KC_boton;
 var $ExisteTouch = 0;
 var $J = [];
 $J[1] = new Lab_Juego();
-//for (var i = 1; i <= 6; i++) { $J[i] = new Lab_Juego(); }
-//var $seleccionPlayer = 0;
-// MiniMap y su canvas
-/***
- var $MiniMap1 = new Lab_MiniMap(1); //paredes estaticas
- var $MiniMap2 = new Lab_MiniMap(2); //Player
- /***/
+
 var $scaleActual = 1;
 
 $.fn.reverse = [].reverse;
@@ -90,24 +82,15 @@ function initSonidos() {
     });
 }
 function initBotones() {
-    /*
-    $('.btnPrev').click(function () {
-        playSound(window.audioCatch);
-        var id = parseInt($(this).attr('id').split('_')[1], 10);
-        $('.instrucciones').stop().delay(10).fadeOut(500);
-        var j = id - 1;
-        $('#instrucciones_' + j).stop().fadeIn(10);
-        playTexto(window['txti' + j]);
+
+    $('.anim').click(function() {
+        if($( "#topBar" ).hasClass( "animPers" )){
+            $('#topBar').removeClass('animPers');
+        }else{
+            $('#topBar').addClass('animPers');
+        }
+        
     });
-    $('.btnNext').click(function () {
-        playSound(window.audioCatch);
-        var id = parseInt($(this).attr('id').split('_')[1], 10);
-        $('.instrucciones').stop().delay(300).fadeOut(100);
-        var j = id + 1;
-        $('#instrucciones_' + j).stop().fadeIn(500);
-        playTexto(window['txti' + j]);
-    });
-    */  
 
     $('#btn_cont').click(function () {
         stopBGMusic();
@@ -133,18 +116,9 @@ function initBotones() {
         $('.instrucciones').stop().fadeOut(1000);
         $J[1].showJuego();
         $('.caratula').stop().fadeOut(10);
-        // $( ".mapa_anim" ).stop().animate({
-        //     top: "-497px",
-        // }, 3000, function() { 
-        // });
-
     }
 
     //botones del juego
-    /*$('#btnReinicio').click(function () {
-        showInicio();
-        $('.caratula, .game, #capaResumen').stop().fadeOut(500);
-    });*/
     $('#pausaTouch').click(function () {
         if ($MuevePlayer) {
             if ($(this).hasClass("paused")) {
@@ -163,7 +137,7 @@ function initBotones() {
     });
     $('.pregOpc').click(function () {
         $('.caratula').stop().fadeOut(300);
-        var idResp = parseInt($(this).attr('id').split("_")[1], 10);
+        var idResp = parseInt($(this).attr('id').split("_")[2], 10);
         //$('#powerUp_'+$ActPwrUp).addClass("hit");
         $PowerUps[$ActPwrUp - 1].hit = false;
         $('#pregWindow').stop().fadeOut(400);
@@ -188,31 +162,61 @@ function initBotones() {
             }
         //}
     });
-    $('#btnReintento').click(function () {
-        /*$('#pregWindow').stop().fadeOut(400);
-        $(".caratula").stop().delay(500).fadeOut(10);
-        $J[$JAct].CTiempo = $J[$JAct].CTiempo + 1;
-        isPaused = false;
-        $ActPwrUp = 1;*/
-    });
-    $('#btnListo').click(function () {
-        /*$ActPwrUp = 1;
-        $('#pregWindow').stop().fadeOut(400);
-        $('.caratula').stop().delay(500).fadeOut(10);*/
-        /*if ($J[1].contAciertos >= 11) {
-            setTimeout(function () {
-                $J[1].finJuego(2);
-            }, 500);
-        } else {
-        }*/
-            /*$J[$JAct].CTiempo = $J[$JAct].CTiempo + 1;
-            isPaused = false;*/
-    });
+
     $("#Player_1 .ptje").click(function () {
         if ($ActPwrUp) {
             muestraPregunta();
         }
     });
+//********************** Enviar Comentarios *********************//
+
+    $('#i4Buzon').click(function () {
+        playSound(window.playBTN);
+        $('#pop2txt1').show().html(pop2txt1);
+        $('#pop2ta').val('');
+        $('#popup2').fadeIn(1000);
+    });
+
+    //Envío de buzón
+    pop2txt1 = $('#pop2txt1').html();
+    $('#pop2sub').click(function (e) {
+        playSound(window.playBTN);
+        e.preventDefault();
+        // var data = new Object();
+        // if ($('#pop2ta').val() && $('#pop2ta').val().trim().length > 0) {
+        //     data.texto = $('#pop2ta').val().trim();
+        //     $('#pop2ta').addClass('disable');
+        //     $('#pop2sub').addClass('disable');
+        //     $.ajax({
+        //         data: data,
+        //         type: 'POST',
+        //         dataType: 'json',
+        //         url: bdir + 'ajax/send_buzon'
+        //     }).done(function (data, textStatus, jqXHR) {
+        //         $('#pop2txt1').show().html(data);
+        //         console.log("OK:");
+        //         console.log(data);
+        //         setTimeout(function () {
+        //             $('#popup2').fadeOut(1000);
+        //         }, 1000);
+        //     }).fail(function (jqXHR, textStatus, errorThrown) {
+        //         console.log("Fail:");
+        //         console.log(jqXHR);
+        //     }).always(function () {
+        //         $('#pop2ta').removeClass('disable');
+        //         $('#pop2sub').removeClass('disable');
+        //     });
+        // } else {
+        //     $('#pop2txt1').html('Complete el campo');
+        // }
+    });
+    $('#pop2close').click(function () {
+        playSound(window.playBTN);
+        $('#popup2').fadeOut(1000);
+    });
+
+
+
 } // termina initBotones
 function initJuegos() {
     $ParedMask1 = new Lab_Objeto(0, 0, 120, 90);
@@ -224,12 +228,6 @@ function initJuegos() {
     $J.forEach(function (itm, i) {
         $J[i].init(i);
     });
-    
-    // for ($i = 0; $i < 6; $i++) {
-    //         if(i == $pj_sprite){
-    //             $("#player").addClass('anima bounceIn');
-    //         }
-    //     }
 }
 function showInicio() {
     playBGMusic(window.BGIntro);
@@ -245,20 +243,6 @@ function showInicio() {
 }
 function introJuego() {
     $(".caratula,.conteo").stop().fadeOut(10);
-    //$(".conteo").removeClass('anima bounceIn');
-    //$("#infoWindow").show();
-    // setTimeout(function () {
-    //     $("#conteo3").addClass('anima bounceIn').show();
-    //     playSound(window.beep);
-    // }, 1500);
-    // setTimeout(function () {
-    //     $("#conteo2").addClass('anima bounceIn').show();
-    //     playSound(window.beep);
-    // }, 2500);
-    // setTimeout(function () {
-    //     $("#conteo1").addClass('anima bounceIn').show();
-    //     playSound(window.beep);
-    // }, 3500);
     setTimeout(function () {
         if ($ExisteTouch) {
             $(".touchElement").addClass("show");
@@ -269,9 +253,6 @@ function introJuego() {
         $J[$JAct].inicioJuego();
         $(".gameEnv").show();
     }, 500);
-    /*setTimeout(function () {
-        playSound(window.beepXL);
-    }, 4500);*/
 }
 /*******************************************************************************/
 function redimensionarJuego() {
@@ -304,15 +285,15 @@ function pausarJuego() {
 function muestraPregunta() {
     playSound(window.audioCatch);
     isPaused = true;
-    $(".caratula").stop().fadeOut(10);
-    $(".pregVista").hide();
-    $("#bienFlechas").removeClass("animated bounceIn").hide();
-    $(".bienSlider div").removeClass("animated bounceInRight").hide();
+    $(".caratula").hide();
+    $("#pregWindow").show();
+    //$(".pregVista").hide();
+    //$("#bienFlechas").removeClass("animated bounceIn").hide();
+    //$(".bienSlider div").removeClass("animated bounceInRight").hide();
     PlayerMov.areaPtje.stop().removeClass('animated rubberBand').fadeOut(300);
-    $('#pregTXT').html($slA[$ActPwrUp]);
-    $("#pregVista_" + $ActPwrUp).show();
-    $("#pregMain").show();
-    $("#pregWindow").fadeIn(400);
+    
+    //$('#pregTXT').html($slA[$ActPwrUp]);
+    $("#popAct_" + $ActPwrUp).show();
 }
 $.fn.extend({
     disableSelection: function () {
