@@ -30,7 +30,7 @@
         <script src="<?php echo base_url($own_dir . '/js/controlPuntos1.js'); ?>"></script>
         <script src="<?php echo base_url($own_dir . '/js/juego1.js'); ?>"></script>
     </head>
-    <body class="player<?php echo $this->session->avatar; ?>">
+    <body class="<?php echo $avatar; ?>">
         <!-- - - - - - - - - - - - - - - - -  Loader  - - - - - - - - - - - - - - - - -->
         <div id="qLoverlay" class="resizeWindow">
             <div id="img_loader01"><div></div></div>

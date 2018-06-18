@@ -28,7 +28,7 @@ class Menu1 extends MY_Controller {
         if (!$this->session->avatar) {
             redirect('/main', 'refresh');
         } else {
-            $this->data['avatar'] = ' av' . strtoupper(substr($this->session->grupo, 0, 1)) . $this->session->avatar;
+            $this->data['avatar'] = 'av' . strtoupper(substr($this->session->grupo, 0, 1)) . $this->session->avatar;
         }
         if ($this->session->first_login) {
             $this->data['firstWindow'] = 3;

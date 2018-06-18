@@ -9,9 +9,9 @@ class mapa extends Nivel_Controller {
         parent::__construct();
         
         if ($this->entraadriver()) {
-            echo "driver";
+            
         } else {
-            echo "no es driver";
+            
         }
         
     }
@@ -20,7 +20,8 @@ class mapa extends Nivel_Controller {
         if (!$this->session->avatar) {
             redirect('/main', 'refresh');
         } else {
-            $this->data['avatar'] = ' av' . strtoupper(substr($this->session->grupo, 0, 1)) . $this->session->avatar;
+            $this->data['avatar'] = 'av' . strtoupper(substr($this->session->grupo, 0, 1)) . $this->session->avatar;
+            echo $this->data['avatar'];
         }
     	$this->data['own_dir'] = $this->data['assets_dir'] . '/mapa';
 

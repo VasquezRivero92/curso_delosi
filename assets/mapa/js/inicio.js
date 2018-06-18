@@ -1,4 +1,6 @@
 /*******************************************************************************/
+// personaje sprite
+var $pj_sprite = 0;
 // numero de juego actual
 var $JAct = 0;
 // Maximo nivel alcanzado
@@ -222,6 +224,12 @@ function initJuegos() {
     $J.forEach(function (itm, i) {
         $J[i].init(i);
     });
+    
+    // for ($i = 0; $i < 6; $i++) {
+    //         if(i == $pj_sprite){
+    //             $("#player").addClass('anima bounceIn');
+    //         }
+    //     }
 }
 function showInicio() {
     playBGMusic(window.BGIntro);

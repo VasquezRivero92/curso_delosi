@@ -268,6 +268,15 @@
 }
 .playerF .sprite{ background-image: url(../images/mapa/sprite_F.png); }
 .playerM .sprite{ background-image: url(../images/mapa/sprite_M.png); }
+.avOF .sprite{ background-image: url(../images/sprite1_F.png); }
+.avOM .sprite{ background-image: url(../images/sprite1_M.png); }
+.avPF .sprite{ background-image: url(../images/sprite2_F.png); }
+.avPM .sprite{ background-image: url(../images/sprite2_M.png); }
+.avRF .sprite{ background-image: url(../images/sprite3_F.png); }
+.avRM .sprite{ background-image: url(../images/sprite3_M.png); }
+.avDF .sprite{ background-image: url(../images/sprite4_F.png); }
+.avDM .sprite{ background-image: url(../images/sprite4_M.png); }
+
 #Player_1 .ptje{
     position:absolute; display:none;
     width:99px; height:91px;
