@@ -10,8 +10,8 @@ var loader = {};
 loader.imageDone = 0;
 loader.imageCounter = 0;
 var audios = [
-    ['BGIntro', bdir + 'assets/sounds/instrucciones.mp3'],
-    ['BGJuego', bdir + 'assets/sounds/juego.mp3'],
+    ['BGIntro', bdir + 'assets/sounds/intromapa.mp3'],
+    ['BGJuego', bdir + 'assets/sounds/mapa.mp3'],
     ['BGWin', bdir + 'assets/sounds/ganaste.mp3'],
     ['txti1', bdir + 'assets/sounds/r1/ab1.mp3'],
     ['txti2', bdir + 'assets/sounds/r1/ab1.mp3'],
@@ -24,7 +24,15 @@ var audios = [
     ['audioBlip', bdir + 'assets/sounds/blip.mp3'],
     ['audioCrash', bdir + 'assets/sounds/crash.mp3'],
     ['audioCatch', bdir + 'assets/sounds/catch.mp3'],
-    ['audioPower', bdir + 'assets/sounds/power.mp3']
+    ['audioPower', bdir + 'assets/sounds/power.mp3'],
+    ['Fireworks', bdir + 'assets/sounds/fireworks.mp3'],
+    ['Hablar1', bdir + 'assets/sounds/effects/hablar1.mp3'],
+    ['Hablar2', bdir + 'assets/sounds/effects/hablar2.mp3'],
+    ['Hablar3', bdir + 'assets/sounds/effects/hablar3.mp3'],
+    ['Hablar4', bdir + 'assets/sounds/effects/hablar4.mp3'],
+    ['Hablar5', bdir + 'assets/sounds/effects/hablar5.mp3'],
+    ['Hablar6', bdir + 'assets/sounds/effects/hablar6.mp3'],
+    ['Hablar7', bdir + 'assets/sounds/effects/hablar7.mp3']
 ];
 try {
     window.AudioContext = window.AudioContext || window.webkitAudioContext;

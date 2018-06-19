@@ -75,7 +75,8 @@ $J[1].hitPowerUps = function () {
                 if( !itm.hit /*&& itm.visible === 0*/ ){
                     itm.hit = true;
                     $ActPwrUp = parseInt(itm.id.split("_")[1], 10);
-                    console.log($ActPwrUp);
+                    //console.log($ActPwrUp);
+                    snd_hablar($ActPwrUp);
                     PlayerMov.areaPtje.stop().addClass('animated rubberBand').fadeIn(100);
                 }
             }else{

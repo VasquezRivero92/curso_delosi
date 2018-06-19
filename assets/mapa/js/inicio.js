@@ -93,9 +93,12 @@ function initBotones() {
     });
 
     $('#btn_cont').click(function () {
-        stopBGMusic();
+        //stopBGMusic();
         stopTexto();
         playSound(window.audioCatch);
+        setTimeout(function () {
+            playTexto(window.Fireworks);           
+        }, 100);
         $('.instrucciones').stop().hide();
         $('#instrucciones_3').fadeIn(1000);
         $( ".mapa_anim" ).delay(1000).stop().animate({
@@ -132,35 +135,28 @@ function initBotones() {
     $('#btnReanudar').click(function () {
         $('#pausaTouch').removeClass('paused');
         $('#PauseGame').fadeOut(200);
-        $J[$JAct].CTiempo = $J[$JAct].CTiempo + 1;
+        //$J[$JAct].CTiempo = $J[$JAct].CTiempo + 1;
         isPaused = false;
     });
     $('.pregOpc').click(function () {
         $('.caratula').stop().fadeOut(300);
         var idResp = parseInt($(this).attr('id').split("_")[2], 10);
-        //$('#powerUp_'+$ActPwrUp).addClass("hit");
+        $('#powerUp_'+$ActPwrUp).addClass("hit");
         $PowerUps[$ActPwrUp - 1].hit = false;
         $('#pregWindow').stop().fadeOut(400);
-        //if(){
-            if (idResp === $Preguntas[$ActPwrUp]) {
-                playSound(window.bien);
-                $PowerUps[$ActPwrUp - 1].visible = 200;
-
-                switch (idResp) {
-                    case 1:
-                        
-                    break; 
-                }           
-
-            } else {
-                playSound(window.audioCrash);
-                $ActPwrUp = 1;
-                $('#pregWindow').stop().fadeOut(400);
-                $('.caratula').stop().delay(500).fadeOut(10);
-                $J[$JAct].CTiempo = $J[$JAct].CTiempo + 1;
+        if (idResp === $Preguntas[$ActPwrUp]) {
+            playSound(window.bien);
+        } else {
+            playSound(window.audioCrash);
+            $ActPwrUp = 1;
+            $('#pregWindow').stop().fadeOut(400);
+            $('.caratula').stop().delay(500).fadeOut(10);
+            //$J[$JAct].CTiempo = $J[$JAct].CTiempo + 1;
+            setTimeout(function () {
                 isPaused = false;
-            }
-        //}
+            }, 1500);
+            $PowerUps[$ActPwrUp - 1].visible = 200;
+        }
     });
 
     $("#Player_1 .ptje").click(function () {
@@ -182,33 +178,33 @@ function initBotones() {
     $('#pop2sub').click(function (e) {
         playSound(window.playBTN);
         e.preventDefault();
-        // var data = new Object();
-        // if ($('#pop2ta').val() && $('#pop2ta').val().trim().length > 0) {
-        //     data.texto = $('#pop2ta').val().trim();
-        //     $('#pop2ta').addClass('disable');
-        //     $('#pop2sub').addClass('disable');
-        //     $.ajax({
-        //         data: data,
-        //         type: 'POST',
-        //         dataType: 'json',
-        //         url: bdir + 'ajax/send_buzon'
-        //     }).done(function (data, textStatus, jqXHR) {
-        //         $('#pop2txt1').show().html(data);
-        //         console.log("OK:");
-        //         console.log(data);
-        //         setTimeout(function () {
-        //             $('#popup2').fadeOut(1000);
-        //         }, 1000);
-        //     }).fail(function (jqXHR, textStatus, errorThrown) {
-        //         console.log("Fail:");
-        //         console.log(jqXHR);
-        //     }).always(function () {
-        //         $('#pop2ta').removeClass('disable');
-        //         $('#pop2sub').removeClass('disable');
-        //     });
-        // } else {
-        //     $('#pop2txt1').html('Complete el campo');
-        // }
+        var data = new Object();
+        if ($('#pop2ta').val() && $('#pop2ta').val().trim().length > 0) {
+            data.texto = $('#pop2ta').val().trim();
+            $('#pop2ta').addClass('disable');
+            $('#pop2sub').addClass('disable');
+            $.ajax({
+                data: data,
+                type: 'POST',
+                dataType: 'json',
+                url: bdir + 'ajax/send_buzon'
+            }).done(function (data, textStatus, jqXHR) {
+                $('#pop2txt1').show().html(data);
+                console.log("OK:");
+                console.log(data);
+                setTimeout(function () {
+                    $('#popup2').fadeOut(1000);
+                }, 1000);
+            }).fail(function (jqXHR, textStatus, errorThrown) {
+                console.log("Fail:");
+                console.log(jqXHR);
+            }).always(function () {
+                $('#pop2ta').removeClass('disable');
+                $('#pop2sub').removeClass('disable');
+            });
+        } else {
+            $('#pop2txt1').html('Complete el campo');
+        }
     });
     $('#pop2close').click(function () {
         playSound(window.playBTN);
@@ -295,6 +291,22 @@ function muestraPregunta() {
     //$('#pregTXT').html($slA[$ActPwrUp]);
     $("#popAct_" + $ActPwrUp).show();
 }
+function snd_hablar(snd){
+    switch (snd) {
+        case 1:
+            playSound(window.Hablar2);                      
+        break; 
+        case 2:
+            playSound(window.Hablar4);                      
+        break;  
+        case 3:
+            playSound(window.Hablar4);                      
+        break; 
+        default:
+            playSound(window.Hablar3); 
+        break;
+    }           
+   }
 $.fn.extend({
     disableSelection: function () {
         this.each(function () {
