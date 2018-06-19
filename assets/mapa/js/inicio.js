@@ -1,4 +1,4 @@
-/*******************************************************************************/
+
 // numero de juego actual
 var $JAct = 0;
 // Maximo nivel alcanzado
@@ -93,22 +93,28 @@ function initBotones() {
     });
 
     $('#btn_cont').click(function () {
-        //stopBGMusic();
-        stopTexto();
         playSound(window.audioCatch);
         setTimeout(function () {
             playTexto(window.Fireworks);           
         }, 100);
         $('.instrucciones').stop().hide();
         $('#instrucciones_3').fadeIn(1000);
-        $( ".mapa_anim" ).delay(1000).stop().animate({
-            top: "-497px",
-        }, 5000, function() { 
-            $('.instrucciones').stop().fadeOut(1000);
-            $J[1].showJuego();
-            $('.caratula').stop().fadeOut(10);
-        });
-        $(".mapa_anim").delay(2500).fadeOut(1500);
+
+        setTimeout(function () {
+            $( ".mapa_anim" ).addClass('mapa_animation');
+            setTimeout(function () {
+                $('.instrucciones').stop().fadeOut(1000);
+                $J[1].showJuego();
+                $('.caratula').stop().fadeOut(10);
+                $( ".mapa_anim" ).removeClass('mapa_animation');
+                $(".mapa_anim").delay(2500).fadeOut(1500);
+            }, 5000);
+        }, 1000);
+
+        // $( ".mapa_anim" ).delay(1000).stop().animate({
+        //     top: "-497px",
+        // }, 5000, function() { });
+
 
     });
 
@@ -318,4 +324,6 @@ $.fn.extend({
         });
     }
 });
-/*******************************************************************************/
+
+
+

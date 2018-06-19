@@ -116,7 +116,7 @@
                 <div id="centerBar"></div>
             </div>
 
-            <div id="pausaTouch" class="gameEnv"><span>AYUDA<br>||</span></div>
+            <div id="pausaTouch" class="gameEnv"><span>AYUDA</span></div>
             <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
             <div id="pregWindow">
 

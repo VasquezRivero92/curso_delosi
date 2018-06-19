@@ -135,7 +135,11 @@ body{
     width:3403px; height:2293px;
     left:-1036px; top:0px;
     background:url(../images/mapa/city.svg) no-repeat;
-    overflow:hidden;   
+    overflow:hidden;  
+    -webkit-transition: all 5s ease-in-out;
+    -moz-transition: all 5s ease-in-out;
+    -o-transition: all 5s ease-in-out;
+    transition: all 5s ease-in-out; 
 }
 .fug_artif{
     position : absolute ;
@@ -526,8 +530,9 @@ body{
     width:0px; height:0px;
     opacity:0;
 }
-/*******************************************************************************/
+/*************  Animaciones en general generadas con CSS  ************/
 
+.mapa_animation{ top: -497px; }
 
 .fuegosArtif{
   animation: fireworks linear 0.4s;
@@ -548,76 +553,38 @@ body{
 }
 
 @keyframes fireworks{
-  0% {
-    opacity:0;
-    transform:  translate(0px,200px)  scaleX(0.00) scaleY(0.00) ;
-  }
-  51% {
-    opacity:1;
-    transform:  translate(0px,-4px)  scaleX(2.55) scaleY(2.55) ;
-  }
-  100% {
-    opacity:0;
-    transform:  translate(0px,-200px)  scaleX(5.00) scaleY(5.00) ;
-  }
+  0% {opacity:0; transform:  translate(0px,200px)  scaleX(0.00) scaleY(0.00) ;}
+  51% {opacity:1;transform:  translate(0px,-4px)  scaleX(2.55) scaleY(2.55) ;}
+  100% {opacity:0;transform:  translate(0px,-200px)  scaleX(5.00) scaleY(5.00) ;}
 }
 
 @-moz-keyframes fireworks{
-  0% {
-    opacity:0;
-    -moz-transform:  translate(0px,200px)  scaleX(0.00) scaleY(0.00) ;
-  }
-  51% {
-    opacity:1;
-    -moz-transform:  translate(0px,-4px)  scaleX(2.55) scaleY(2.55) ;
-  }
-  100% {
-    opacity:0;
-    -moz-transform:  translate(0px,-200px)  scaleX(5.00) scaleY(5.00) ;
-  }
+  0% {opacity:0; -moz-transform:  translate(0px,200px)  scaleX(0.00) scaleY(0.00) ;}
+  51% {opacity:1; -moz-transform:  translate(0px,-4px)  scaleX(2.55) scaleY(2.55) ;}
+  100% {opacity:0; -moz-transform:  translate(0px,-200px)  scaleX(5.00) scaleY(5.00) ;}
 }
 
 @-webkit-keyframes fireworks {
-  0% {
-    opacity:0;
-    -webkit-transform:  translate(0px,200px)  scaleX(0.00) scaleY(0.00) ;
-  }
-  51% {
-    opacity:1;
-    -webkit-transform:  translate(0px,-4px)  scaleX(2.55) scaleY(2.55) ;
-  }
-  100% {
-    opacity:0;
-    -webkit-transform:  translate(0px,-200px)  scaleX(5.00) scaleY(5.00) ;
-  }
+  0% {opacity:0; -webkit-transform:  translate(0px,200px)  scaleX(0.00) scaleY(0.00) ;}
+  51% {opacity:1; -webkit-transform:  translate(0px,-4px)  scaleX(2.55) scaleY(2.55) ;}
+  100% {opacity:0; -webkit-transform:  translate(0px,-200px)  scaleX(5.00) scaleY(5.00) ;}
 }
 
 @-o-keyframes fireworks {
-  0% {
-    opacity:0;
-    -o-transform:  translate(0px,200px)  scaleX(0.00) scaleY(0.00) ;
-  }
-  51% {
-    opacity:1;
-    -o-transform:  translate(0px,-4px)  scaleX(2.55) scaleY(2.55) ;
-  }
-  100% {
-    opacity:0;
-    -o-transform:  translate(0px,-200px)  scaleX(5.00) scaleY(5.00) ;
-  }
+  0% {opacity:0; -o-transform:  translate(0px,200px)  scaleX(0.00) scaleY(0.00) ;}
+  51% {opacity:1; -o-transform:  translate(0px,-4px)  scaleX(2.55) scaleY(2.55) ;}
+  100% {opacity:0; -o-transform:  translate(0px,-200px)  scaleX(5.00) scaleY(5.00) ;}
 }
 
 @-ms-keyframes fireworks {
-  0% {
-    opacity:0;
-    -ms-transform:  translate(0px,200px)  scaleX(0.00) scaleY(0.00) ;
-  }
-  51% {
-    opacity:1;
-    -ms-transform:  translate(0px,-4px)  scaleX(2.55) scaleY(2.55) ;
-  }
-  100% {
-    opacity:0;
-    -ms-transform:  translate(0px,-200px)  scaleX(5.00) scaleY(5.00) ;
-  }
+  0% {opacity:0; -ms-transform:  translate(0px,200px)  scaleX(0.00) scaleY(0.00) ;}
+  51% {opacity:1; -ms-transform:  translate(0px,-4px)  scaleX(2.55) scaleY(2.55) ;}
+  100% {opacity:0; -ms-transform:  translate(0px,-200px)  scaleX(5.00) scaleY(5.00) ;}
 }
+
+
+
+
+
+
+
