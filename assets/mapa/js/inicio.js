@@ -170,7 +170,7 @@ function initBotones() {
             muestraPregunta();
         }
     });
-//********************** Enviar Comentarios *********************//
+
 
     $('#i4Buzon').click(function () {
         playSound(window.playBTN);
@@ -219,7 +219,8 @@ function initBotones() {
 
 
 
-} // termina initBotones
+}
+
 function initJuegos() {
     $ParedMask1 = new Lab_Objeto(0, 0, 120, 90);
     $ParedMask1.canvas = document.createElement('canvas');

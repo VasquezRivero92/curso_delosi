@@ -88,24 +88,23 @@ function initSonidos() {
     });
 }
 function initBotones() {
-    /*
-    $('.btnPrev').click(function () {
-        playSound(window.audioCatch);
-        var id = parseInt($(this).attr('id').split('_')[1], 10);
-        $('.instrucciones').stop().delay(10).fadeOut(500);
-        var j = id - 1;
-        $('#instrucciones_' + j).stop().fadeIn(10);
-        playTexto(window['txti' + j]);
-    });
-    $('.btnNext').click(function () {
-        playSound(window.audioCatch);
-        var id = parseInt($(this).attr('id').split('_')[1], 10);
-        $('.instrucciones').stop().delay(300).fadeOut(100);
-        var j = id + 1;
-        $('#instrucciones_' + j).stop().fadeIn(500);
-        playTexto(window['txti' + j]);
-    });
-    */  
+    
+    // $('.btnPrev').click(function () {
+    //     playSound(window.audioCatch);
+    //     var id = parseInt($(this).attr('id').split('_')[1], 10);
+    //     $('.instrucciones').stop().delay(10).fadeOut(500);
+    //     var j = id - 1;
+    //     $('#instrucciones_' + j).stop().fadeIn(10);
+    //     playTexto(window['txti' + j]);
+    // });
+    // $('.btnNext').click(function () {
+    //     playSound(window.audioCatch);
+    //     var id = parseInt($(this).attr('id').split('_')[1], 10);
+    //     $('.instrucciones').stop().delay(300).fadeOut(100);
+    //     var j = id + 1;
+    //     $('#instrucciones_' + j).stop().fadeIn(500);
+    //     playTexto(window['txti' + j]);
+    // });
 
     $('#btn_cont').click(function () {
         stopBGMusic();
@@ -139,10 +138,10 @@ function initBotones() {
     }
 
     //botones del juego
-    /*$('#btnReinicio').click(function () {
-        showInicio();
-        $('.caratula, .game, #capaResumen').stop().fadeOut(500);
-    });*/
+    // $('#btnReinicio').click(function () {
+    //     showInicio();
+    //     $('.caratula, .game, #capaResumen').stop().fadeOut(500);
+    // });
     $('#pausaTouch').click(function () {
         if ($MuevePlayer) {
             if ($(this).hasClass("paused")) {

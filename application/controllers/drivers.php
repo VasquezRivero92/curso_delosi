@@ -20,31 +20,36 @@ class Drivers extends Nivel_Controller {
         // Lo normal
         $this->data['own_dir'] = $this->data['assets_dir'] . '/nivel' . $this->cur . '/main';
         $resul = $this->base_model->get_puntaje($this->session->user_id, $this->cur);
-        
-        if ($resul && $resul->puntaje == null && $resul->intentos == 100 || $resul->puntaje !== null){
-            $this->session->position = 1;
-            $this->session->win = 1;   
-        }else if ($resul && $resul->puntaje == null && $resul->intentos == 121 || $resul->puntaje !== null){
-            $this->session->position = 1;
-            $this->session->win = 3;       
-        }else if ($resul && $resul->puntaje == null && $resul->intentos == 120 || $resul->puntaje !== null){
-            $this->session->position = 1;
-            $this->session->win = 3;  
-        }else if ($resul && $resul->puntaje == null && $resul->intentos == 111 || $resul->puntaje !== null){
-            $this->session->position = 1;
+      
+        if(!$resul){            
             $this->session->win = 1;
-        }else if ($resul && $resul->puntaje == null && $resul->intentos == 110 || $resul->puntaje !== null){
-            $this->session->position = 1;
-            $this->session->win = 3;
-        }else if ($resul && $resul->puntaje == null && $resul->intentos == 112 || $resul->puntaje !== null){
-            $this->session->position = 1;
-            $this->session->win = 1;
-        }else{            
-            $this->session->position = 2;
-            $this->session->win = 2;
-        }  
+        }else{
+            if ($resul && $resul->intentos == 100){
+                $this->session->position = 1;
+                $this->session->win = 1;   
+            }else if ($resul && $resul->intentos == 121){
+                $this->session->position = 1;
+                $this->session->win = 3;       
+            }else if ($resul && $resul->intentos == 120){
+                $this->session->position = 1;
+                $this->session->win = 3;  
+            }else if ($resul && $resul->intentos == 111){
+                $this->session->position = 1;
+                $this->session->win = 1;
+            }else if ($resul && $resul->intentos == 110){
+                $this->session->position = 1;
+                $this->session->win = 3;
+            }else if ($resul && $resul->intentos == 112){
+                $this->session->position = 1;
+                $this->session->win = 1;
+            }else{            
+                $this->session->position = 2;
+                $this->session->win = 2;
+            }  
+        }
         $this->data['checked'] = $this->base_model->check_curso_user($this->session->user_id, $this->cur);
         $this->load->view('nivel' . $this->cur . '/index', $this->data);
+        //echo ($this->session->win);
     }
 
     function minitest() {        
