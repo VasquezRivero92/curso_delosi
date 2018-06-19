@@ -30,7 +30,7 @@
         <script src="<?php echo base_url($own_dir . '/js/controlPuntos1.js'); ?>"></script>
         <script src="<?php echo base_url($own_dir . '/js/juego1.js'); ?>"></script>
     </head>
-    <body class="<?php echo $avatar; ?>">
+    <body class="<?php echo $avatar; ?>" data-firstwindow="<?php echo $firstWindow; ?>">
         <!-- - - - - - - - - - - - - - - - -  Loader  - - - - - - - - - - - - - - - - -->
         <div id="qLoverlay" class="resizeWindow">
             <div id="img_loader01"><div></div></div>
@@ -102,7 +102,7 @@
             </div>
             <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
             <div id="marcador" class="gameEnv">
-                <div id="topBar" class="avOF">
+                <div id="topBar" class="<?php echo $avatar_p; ?>">
                     <div id="i4avatar"></div>
                     <div id="i4Nombre"><?php echo strtoupper($user_login['nombre'] . ' ' . $user_login['apat'] . ' ' . $user_login['amat']); ?></div>
                     <a id="i4Logout" href="#"></a>                   

@@ -342,12 +342,14 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }
-.avOF #i4avatar{ background-image: url(../images/i3avOF.png); }
-.avOM #i4avatar{ background-image: url(../images/i3avOM.png); }
-.avPF #i4avatar{ background-image: url(../images/i3avPF.png); }
-.avPM #i4avatar{ background-image: url(../images/i3avPM.png); }
-.avRF #i4avatar{ background-image: url(../images/i3avRF.png); }
-.avRM #i4avatar{ background-image: url(../images/i3avRM.png); }
+.av_OF #i4avatar{ background-image: url(../images/i3avOF.png); }
+.av_OM #i4avatar{ background-image: url(../images/i3avOM.png); }
+.av_PF #i4avatar{ background-image: url(../images/i3avPF.png); }
+.av_PM #i4avatar{ background-image: url(../images/i3avPM.png); }
+.av_RF #i4avatar{ background-image: url(../images/i3avRF.png); }
+.av_RM #i4avatar{ background-image: url(../images/i3avRM.png); }
+.av_DF #i4avatar{ background-image: url(../images/i3avDF.png); }
+.av_DM #i4avatar{ background-image: url(../images/i3avDM.png); }
 .i4txt{
     position: absolute;
     width: 160px;
