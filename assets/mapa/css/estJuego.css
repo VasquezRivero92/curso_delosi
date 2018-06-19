@@ -4,7 +4,7 @@
 .powerUp1{
     position:absolute; z-index:1; 
     width:70px; height:70px;
-    background-color: rgba(132, 82, 82, 0.76);
+    background-color: rgba(132, 82, 82, 0);
     opacity:1;
     transition:opacity 500ms linear;
     font-size: 0px;
@@ -257,7 +257,7 @@
     position:absolute;
     width:25px; height:20px;
     z-index:2;
-    background-color: rgba(132, 82, 82, 0.76);
+    background-color: rgba(132, 82, 82, 0);
 }
 #Player_1 .sprite{
     position:absolute;
@@ -293,24 +293,6 @@
     background-position:center center;
     display: none;
 }
-/* #conteo1{
-    position:absolute; 
-    width:271px; height:181px;
-    left:759px; top:244px;
-    background-image:url(../images/conteo1.png);
-}
-#conteo2{
-    position:absolute; 
-    width:276px; height:181px;
-    left:536px; top:244px;
-    background-image:url(../images/conteo2.png);
-}
-#conteo3{
-    position:absolute; 
-    width:280px; height:181px;
-    left:315px; top:244px;
-    background-image:url(../images/conteo3.png);
-} */
 #gameArea1{
     position:absolute;
     width:3403px; height:2293px;
