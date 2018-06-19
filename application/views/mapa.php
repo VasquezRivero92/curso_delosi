@@ -104,14 +104,14 @@
             <div id="marcador" class="gameEnv">
                 <div id="topBar" class="avOF">
                     <div id="i4avatar"></div>
-                    <div id="i4Nombre">Estephany Rosario del pilar esquivel de la Rosa</div>
+                    <div id="i4Nombre"><?php echo strtoupper($user_login['nombre'] . ' ' . $user_login['apat'] . ' ' . $user_login['amat']); ?></div>
                     <a id="i4Logout" href="#"></a>                   
                     <div class="anim"></div>
                 </div>
                 <div id="botBar">
-                    <div id="i4RazonSocial" class="i4txt">-/-</div>
-                    <div id="i4Puntaje" class="i4txt">00</div>
-                    <div id="i4Estrellas" class="i4txt">00</div>                    
+                    <div id="i4RazonSocial" class="i4txt"><?php echo $empresa; ?></div>
+                    <div id="i4Puntaje" class="i4txt"><?php echo $user_stats['puntaje']; ?></div>
+                    <div id="i4Estrellas" class="i4txt"><?php echo $user_stats['estrellas']; ?></div>                    
                 </div>
                 <div id="centerBar"></div>
             </div>
@@ -158,12 +158,26 @@
                         <p class="textCent">Escenario - Prevención en el trabajo</p>
                     </div>                    
 
-                    <a href="#"  id="i4Certificado" class="disable"></a>
+                    <!-- <a href="#"  id="i4Certificado" class="disable"></a>
                     <a id="i4Nivel_1" class="i4Nivel" href="#"></a>
                     <a id="i4Nivel_2" class="i4Nivel disable" href="#"></a>
                     <a id="i4Nivel_3" class="i4Nivel disable" href="#"></a>
-                    <a id="i4Nivel_4" class="i4Nivel disable" href="#"></a>
-
+                    <a id="i4Nivel_4" class="i4Nivel disable" href="#"></a> -->
+                    <?php
+                echo anchor('cuestionario', '&nbsp;', array('id' => 'i4Cuestionario'));
+                echo anchor('mapa/certificado_prevencion', '&nbsp;', array('id' => 'i4Certificado', 'class' => $certificado, 'target' => '_blank'));
+                for ($i = 4; $i > 0; $i--) {
+                    $clases = 'i4Nivel disable';
+                    if ($maxnivel >= $i) {
+                        foreach ($niveles as $niv) {
+                            if ($niv->id == $i && $niv->estado == 1) {
+                                $clases = 'i4Nivel';
+                            }
+                        }
+                    }
+                    echo anchor('nivel' . $i, '&nbsp;', array('id' => 'i4Nivel_' . $i, 'class' => $clases));
+                }
+                ?>
                     <div id="preg_3_0" class="CV_btn2 pregOpc">VOLVER</div>
                 </div>
             <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
