@@ -1,4 +1,4 @@
-
+var $drivers = 0;
 // numero de juego actual
 var $JAct = 0;
 // Maximo nivel alcanzado
@@ -231,6 +231,9 @@ function initJuegos() {
     $J.forEach(function (itm, i) {
         $J[i].init(i);
     });
+    $drivers = parseInt($('body').data('drivers'), 10);   
+
+    console.log($drivers);    
 }
 function showInicio() {
     playBGMusic(window.BGIntro);
@@ -294,9 +297,21 @@ function muestraPregunta() {
     //$("#bienFlechas").removeClass("animated bounceIn").hide();
     //$(".bienSlider div").removeClass("animated bounceInRight").hide();
     PlayerMov.areaPtje.stop().removeClass('animated rubberBand').fadeOut(300);
+
+    if($ActPwrUp == 2){
+        if($drivers == 2){
+            $("#popAct_" + $ActPwrUp).show();
+        }else{
+            $("#popAct_0").show();        
+        }    
+    }else{
+        $("#popAct_" + $ActPwrUp).show();
+        }
+
+
     
     //$('#pregTXT').html($slA[$ActPwrUp]);
-    $("#popAct_" + $ActPwrUp).show();
+    
 }
 function snd_hablar(snd){
     switch (snd) {

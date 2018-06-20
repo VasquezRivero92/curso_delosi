@@ -10,9 +10,9 @@ class mapa extends Nivel_Controller {
         $this->data['user_login'] = $this->base_model->user_info_login();
         $stats = $this->base_model->user_stats(1);
         if ($this->entraadriver()) {
-            
+            $this->data['drivers'] = 2;
         } else {
-            
+           $this->data['drivers'] = 0; 
         }
         if ($stats->num_rows()) {
                 $this->data['user_stats'] = $stats->result_array()[0];
@@ -26,7 +26,7 @@ class mapa extends Nivel_Controller {
         if (!$this->session->avatar) {
             redirect('/main', 'refresh');
         } else {
-            $this->data['firstWindow'] = 4;
+            $this->data['firstWindow'] = 4;            
             $this->data['avatar'] = 'av' . strtoupper(substr($this->session->grupo, 0, 1)) . $this->session->avatar;
             $this->data['avatar_p'] = 'av_' . strtoupper(substr($this->session->grupo, 0, 1)) . $this->session->avatar;
             //echo $this->data['avatar'];

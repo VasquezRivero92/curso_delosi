@@ -70,7 +70,7 @@
             <div id="instruccion_6" class="instrucciones">
                 <div id="tilde"><img src="<?php echo base_url($own_dir . '/images/tilde.png'); ?>"></div>
                 <div id="i6tit_1">ELIGE A QUE MODULO QUIERES IR:</div>                
-                <?php echo anchor('menu1', '&nbsp;', array('id' => 'i6btn_1', 'class' => 'i6btn')); ?>
+                <?php echo anchor('mapa', '&nbsp;', array('id' => 'i6btn_1', 'class' => 'i6btn')); ?>
                 <?php echo anchor('menu2', '&nbsp;', array('id' => 'i6btn_2', 'class' => 'i6btn')); ?>
             </div>
         </div>
