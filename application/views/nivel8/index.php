@@ -92,10 +92,10 @@
                             
                             <img id="s1i3_1_1" src="<?php echo base_url($own_dir . '/images/slider/s1i3_1.png'); ?>" alt=""/>
                             <img id="s1i3_1_2" src="<?php echo base_url($own_dir . '/images/slider/s1i3_1.png'); ?>" alt=""/>
-                            <img id="s1i3_0_1"  src="<?php echo base_url($own_dir . '/images/slider/s1i3_g1.png'); ?>" alt=""/>
-                            <img id="s1i3_0_2"  src="<?php echo base_url($own_dir . '/images/slider/s1i3_g2.png'); ?>" alt=""/>
-                            <img id="s1i3_0_3"  src="<?php echo base_url($own_dir . '/images/slider/s1i3_g3.png'); ?>" alt=""/>
-                            <img id="s1i3_0_4"  src="<?php echo base_url($own_dir . '/images/slider/s1i3_g4.png'); ?>" alt=""/>                            
+                            <img id="s1i3_0_1" src="<?php echo base_url($own_dir . '/images/slider/s1i3_g1.png'); ?>" alt=""/>
+                            <img id="s1i3_0_2" src="<?php echo base_url($own_dir . '/images/slider/s1i3_g2.png'); ?>" alt=""/>
+                            <img id="s1i3_0_3" src="<?php echo base_url($own_dir . '/images/slider/s1i3_g3.png'); ?>" alt=""/>
+                            <img id="s1i3_0_4" src="<?php echo base_url($own_dir . '/images/slider/s1i3_g4.png'); ?>" alt=""/>                            
                         </div>                        
                     </div>
                 </div>
