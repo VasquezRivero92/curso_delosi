@@ -105,7 +105,7 @@
                 <div id="topBar" class="<?php echo $avatar_p; ?>">
                     <div id="i4avatar"></div>
                     <div id="i4Nombre"><?php echo strtoupper($user_login['nombre'] . ' ' . $user_login['apat'] . ' ' . $user_login['amat']); ?></div>
-                    <a id="i4Logout" href="#"></a>                   
+                    <?php echo anchor('login/logout', ' ', array('id' => 'i4Logout')); ?>
                     <div class="anim"></div>
                 </div>
                 <div id="botBar">

@@ -240,12 +240,29 @@ function showInicio() {
     playTexto(window.txti1);
     redimensionarJuego();
     $('.instrucciones').stop().hide();
-    $('#instrucciones_1').fadeIn(1000);
+
+    var fw = parseInt($('body').data('firstwindow'), 10);
+    //$('.instrucciones').stop().hide();
+    playBGMusic(window.menuBG);    
+    if (fw == 4) {
+       $J[1].showJuego();
+    }else{
+        $('#instrucciones_1').fadeIn(1000);
     setTimeout(function () {
         $(".instrucciones").stop().delay(300).fadeOut(100);
         $("#instrucciones_2").stop().fadeIn(500);
         playTexto(window.txti2);
     }, 3000);
+    }
+
+    // $('#instrucciones_1').fadeIn(1000);
+    // setTimeout(function () {
+    //     $(".instrucciones").stop().delay(300).fadeOut(100);
+    //     $("#instrucciones_2").stop().fadeIn(500);
+    //     playTexto(window.txti2);
+    // }, 3000);
+
+
 }
 function introJuego() {
     $(".caratula,.conteo").stop().fadeOut(10);

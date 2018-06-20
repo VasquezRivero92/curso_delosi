@@ -2,7 +2,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class mapa extends Nivel_Controller {
+class Mapa extends Nivel_Controller {
 
 
      function __construct() {
@@ -17,7 +17,7 @@ class mapa extends Nivel_Controller {
         if ($stats->num_rows()) {
                 $this->data['user_stats'] = $stats->result_array()[0];
         } else {
-                $this->data['user_stats'] = array('id_menu' => 1, 'curso' => 1, 'puntaje' => '', 'estrellas' => '');
+                $this->data['user_stats'] = array('id_menu' => 1, 'curso' => 1, 'puntaje' => '0', 'estrellas' => '0');
         }
         
     }
@@ -25,11 +25,16 @@ class mapa extends Nivel_Controller {
     function index() {
         if (!$this->session->avatar) {
             redirect('/main', 'refresh');
-        } else {
-            $this->data['firstWindow'] = 4;            
+        } else {                       
             $this->data['avatar'] = 'av' . strtoupper(substr($this->session->grupo, 0, 1)) . $this->session->avatar;
             $this->data['avatar_p'] = 'av_' . strtoupper(substr($this->session->grupo, 0, 1)) . $this->session->avatar;
             //echo $this->data['avatar'];
+        }
+        if ($this->session->first_login) {
+            $this->data['firstWindow'] = 1;
+            $this->session->first_login = false;
+        } else {
+            $this->data['firstWindow'] = 4;
         }
     	$this->data['own_dir'] = $this->data['assets_dir'] . '/mapa';
         $empresaUser = $this->base_model->get_empresas($this->session->user_id)->row();
