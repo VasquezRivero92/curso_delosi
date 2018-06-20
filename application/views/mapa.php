@@ -147,7 +147,8 @@
                 <div id="popAct_2" class="caratula"> 
                     <div class="drivers"><p class="textCent">Escenario - drivers</p></div>
                     
-                    <a id="preg_2_1" class="CV_btn1 disable" href="#">IR AL CURSO</a>
+                    <!-- <a id="preg_2_1" class="CV_btn1 disable" href="#">IR AL CURSO</a> -->
+                    <?php echo anchor('drivers', 'IR AL CURSO', array('id' => 'preg_2_1','class' => 'CV_btn1 disable')); ?>
                     <!-- <div id="preg_2_1" class="CV_btn1 pregOpc">IR AL CURSO</div> -->
                     <div id="preg_2_0" class="CV_btn2 pregOpc">VOLVER</div>
                 </div>
