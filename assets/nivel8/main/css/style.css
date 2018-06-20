@@ -107,13 +107,14 @@ body{
     background-color: rgba(0,0,0,0);
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    background-image: url(../images/i2avOM.png); 
 }
-.avOF #i2img_1{ background-image: url(../images/i2avOF.png); }
+/*.avOF #i2img_1{ background-image: url(../images/i2avOF.png); }
 .avOM #i2img_1{ background-image: url(../images/i2avOM.png); }
 .avPF #i2img_1{ background-image: url(../images/i2avPF.png); }
 .avPM #i2img_1{ background-image: url(../images/i2avPM.png); }
 .avRF #i2img_1{ background-image: url(../images/i2avRF.png); }
-.avRM #i2img_1{ background-image: url(../images/i2avRM.png); }
+.avRM #i2img_1{ background-image: url(../images/i2avRM.png); }*/
 #i2tit_1{
     position : absolute ;
   left : 333px;

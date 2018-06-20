@@ -26,7 +26,7 @@
     $avatar = 'av' . strtoupper(substr($this->session->grupo, 0, 1)) . $this->session->avatar;
     $owlgrupo = 'owl-' . $this->session->grupo;
     ?>
-    <body class="<?php echo $avatar . ' ' . $owlgrupo; ?>">
+    <body>
         <!-- - - - - - - - - - - - - - - - -  Loader  - - - - - - - - - - - - - - - - -->
         <div id="qLoverlay" class="resizeWindow">
             <div id="img_loader01"><div></div></div>
