@@ -408,60 +408,55 @@ body{
     left: 220px;
     top: 100px; }
     
-    #s1i3_1_1{         position: absolute;
+#s1i3_1_1{         position: absolute;
     left: 190px;
     top: 335px; }
-     #s1i3_1_2{        position: absolute;
+#s1i3_1_2{        position: absolute;
     left: 600px;
     top: 195px; }
-    #s1i3_2_1{       position: absolute;
+#s1i3_2_1{       position: absolute;
     left: 635px;
     top: 210px; 
     cursor: pointer;}
-    #s1i3_2_2{       position: absolute;
+#s1i3_2_2{       position: absolute;
     left: 515px;
     top: 160px; 
     cursor: pointer;}
-    #s1i3_2_3{       position: absolute;
+#s1i3_2_3{       position: absolute;
     left: 525px;
     top: 100px; 
     z-index: 2;
     cursor: pointer;}
-    #s1i3_2_4{         position: absolute;
+#s1i3_2_4{         position: absolute;
     left: 220px;
     top: 350px;
     cursor: pointer;}
-    #s1i3_3{     position: absolute;
+#s1i3_3{     position: absolute;
     left: 220px;
     top: 100px; }
-
-    #s1i3_0_1{   
-display: none;
-      position: absolute;
-      
+#s1i3_0_1{   
+    display: none;
+    position: absolute;      
     left: 639px;
     top: 214px;}
-    #s1i3_0_2{     
-        display: none;
-        position: absolute;
-        
+#s1i3_0_2{     
+    display: none;
+    position: absolute;        
     left: 519px;
     top: 43px; }
-    #s1i3_0_3{   
-        display: none;
-       position: absolute;
-        
+#s1i3_0_3{   
+    display: none;
+    position: absolute;        
     left: 167px;
     top: 77px;
     z-index: 3;}
-    #s1i3_0_4{     
-        display: none;
-        position: absolute;
-        left: -38px;
-        top: 175px; }
-    .globos_disabled{
-        display: none;
-            }
+#s1i3_0_4{     
+    display: none;
+    position: absolute;
+    left: -38px;
+    top: 175px; }
+.globos_disabled{
+    display: none;}
 #s1t1{
     position: absolute;
     left: 250px;
@@ -470,9 +465,8 @@ display: none;
     height: 85px;
     font-family: "Catalogo";
     font-size : 16px;
-    color : #333745;
-    
-}
+    color : #333745;    
+    }
 #s1t2{
     position: absolute;
     left: 250px;
@@ -482,7 +476,7 @@ display: none;
     font-family: "Catalogo";
     font-size: 16px;
     color: #333745;
-}
+    }
 #s1t3{
     position : absolute ;
     left : 74px;
@@ -495,92 +489,87 @@ display: none;
     font-variant : small-caps;
     color : #FFFFFF;
     text-align: left;
-}
+    }
 
 /*******************************  Slider Page 2  *******************************/
-    #sliderPage_2{ background: url(../images/bgspg2.png) no-repeat center center; }
+#sliderPage_2{ background: url(../images/bgspg2.png) no-repeat center center; }
     
-    .cvhangeimg2{
+.cvhangeimg2{
        background: url(../images/bgspg2_1.png) no-repeat center center !important;; 
     }
 
-    .cvhangeimg3{
+.cvhangeimg3{
        background: url(../images/bgspg2_2.png) no-repeat center center !important;; 
     }
 
-    .img_disabled{
+.img_disabled{
         display: none;
     }
 
-    #s2t1{
-
-
-    }
-
-    #s2i1{         position: absolute;
+#s2i1{         position: absolute;
         left: 390px;
         top: 30px;
          }
        
-    #s2i1_1_1{
+#s2i1_1_1{
         position: absolute;
         left: 440px;
         top: 295px;
         cursor: pointer;
     }
-    #s2i1_1_2{        position: absolute;
+#s2i1_1_2{        position: absolute;
         left: 491px;
         top: 418px;
         cursor: pointer;
     }
-    #s2i1_1_3{        position: absolute;
+#s2i1_1_3{        position: absolute;
         left: 425px;
         top: 160px;
         cursor: pointer;
     }
-    #s2i1_1_4{       position: absolute;
+#s2i1_1_4{       position: absolute;
         left: 506px;
         top: 190px;
         cursor: pointer;
     }
 
-    #s2i1_2_1{         
+#s2i1_2_1{         
         position: absolute;
         left: 390px;
         top: 145px;
     }
     
-    #s2i1_0_1{   
+#s2i1_0_1{   
         display: none;
         position: absolute;
         left: -70px;
         top: 165px;
     }
-    #s2i1_0_2{     
+#s2i1_0_2{     
         display: none;
         position: absolute;
         left: -65px;
         top: 300px;
     }
-    #s2i1_0_3{   
+#s2i1_0_3{   
         display: none;
         position: absolute;
         left: 510px;
         top: 30px;
     }
-    #s2i1_0_4{     
+#s2i1_0_4{     
         display: none;
         position: absolute;            
         left: 495px;
         top: 280px;
     }
 
-    #s2i2{         
+#s2i2{         
         position: absolute;
         left: 230px;
         top: 60px;
     }
-    #s2t2 {
+#s2t2 {
         position: absolute;
         left: 245px;
         top: 380px;
@@ -590,12 +579,12 @@ display: none;
         font-size: 16px;
         color: #333745;
     }
-    #s2i3{
+#s2i3{
         position: absolute;
         left: 230px;
         top: 38px;
     }
-    #s2t3{
+#s2t3{
         position: absolute;
         left: 245px;
         top: 370px;
@@ -606,81 +595,80 @@ display: none;
         color: #333745;
     }
 
-
-
-
-    #s2i4{
+#s2i4{
         position: absolute;
         left: 282px;
         top: 30px;
          }
        
-    #s2i4_2_5{         position: absolute;
+#s2i4_2_5{         position: absolute;
         left: 630px;
         top: 170px;
         cursor: pointer;
     }
-    #s2i4_2_6{       position: absolute;
+#s2i4_2_6{       position: absolute;
         left: 327px;
         top: 285px;
         cursor: pointer;
     }
-    #s2i4_2_7{        position: absolute;
+#s2i4_2_7{        position: absolute;
         left: 355px;
         top: 380px;
         cursor: pointer;
     }
-    #s2i4_2_8{       position: absolute;
+#s2i4_2_8{       position: absolute;
         left: 625px;
         top: 290px;
         cursor: pointer;
+        z-index: 99;
     }
-    #s2i4_2_9{        position: absolute;
+#s2i4_2_9{        position: absolute;
         left: 485px;
         top: 130px;
         cursor: pointer;
     }
     
-    #s2i4_1_1{         
+#s2i4_1_1{         
         position: absolute;
         left: 320px;
         top: 365px;
     }
-     #s2i4_1_2{        
+#s2i4_1_2{        
         position: absolute;
         left: 595px;
         top: 155px;
     }
    
-    #s2i4_0_1{   
+#s2i4_0_1{   
         display: none;
         position: absolute;
         left: -40px;
         top: 175px;
     }
-    #s2i4_0_2{     
+#s2i4_0_2{     
         display: none;
         position: absolute;
         left: 58px;
         top: 356px;
     }
-    #s2i4_0_3{   
+#s2i4_0_3{   
         display: none;
         position: absolute;
         left: 489px;
         top: 45px;
     }
-    #s2i4_0_4{     
+#s2i4_0_4{     
         display: none;
         position: absolute;            
         left: 634px;
         top: 174px;
     }
-    #s2i4_0_5{     
+#s2i4_0_5{     
         display: none;
         position: absolute;            
         left: 629px;
         top: 293px;
+        z-index: 100;
     }
     
 
@@ -784,7 +772,8 @@ display: none;
     color : #333745;
     }
 
-#s3i6{     position: absolute;
+#s3i6{
+    position: absolute;
     left: 230px;
     top: 25px;
     }

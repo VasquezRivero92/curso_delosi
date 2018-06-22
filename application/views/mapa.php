@@ -185,6 +185,7 @@
 
                 <div id="popAct_7" class="caratula"> 
                     <div class="pausas"><p class="textCent">Bienvenidos al Gimnasio, por el momento esta en construcción.<br>Vuelve pronto.</p></div>
+                    <?php echo anchor('pausasactivas', 'IR AL CURSO', array('id' => 'preg_2_1','class' => 'CV_btn1 disable')); ?>
                     <div id="preg_7_0" class="CV_btn2 pregOpc">VOLVER</div>
                 </div>
 

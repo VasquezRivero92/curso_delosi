@@ -30,11 +30,15 @@ class Mapa extends Nivel_Controller {
             $this->data['avatar_p'] = 'av_' . strtoupper(substr($this->session->grupo, 0, 1)) . $this->session->avatar;
             //echo $this->data['avatar'];
         }
-        if ($this->session->first_login) {
-            $this->data['firstWindow'] = 1;
-            $this->session->first_login = false;
-        } else {
-            $this->data['firstWindow'] = 4;
+        if ($this->ion_auth->logged_in()){
+            if ($this->session->first_login) {
+                $this->data['firstWindow'] = 1;
+                $this->session->first_login = false;
+            } else {
+                $this->data['firstWindow'] = 4;
+            }
+        }else {
+            redirect('main', 'refresh');
         }
     	$this->data['own_dir'] = $this->data['assets_dir'] . '/mapa';
         $empresaUser = $this->base_model->get_empresas($this->session->user_id)->row();

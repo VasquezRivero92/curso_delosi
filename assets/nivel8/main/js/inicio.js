@@ -3,7 +3,6 @@ var sClick = [true, false, true, false, false];
 var lAudio = [null, '', '', '', ''];
 var sID = 0;
 var completo = false;
-//var checkS3 = [true, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
 var act_desc = new Boolean(false);
 var sli_1,sli_2,sli_3 = new Boolean(false);
 var id_sl = 0;

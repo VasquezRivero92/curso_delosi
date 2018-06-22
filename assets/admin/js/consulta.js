@@ -88,7 +88,7 @@ function crearTablaConsulta(porPtj) {
     tabla += '<th>DNI</th>';
     tabla += '<th>Datos<br>autorizados</th>';
     cursos.forEach(function (cur) {
-        tabla += '<th>N. ' + cur.id + '</th>';
+        tabla += '<th>' + cur.descrip + '</th>';
         tabla += '<th>Visto</th>';
     });
     tabla += '<th>Total</th>';

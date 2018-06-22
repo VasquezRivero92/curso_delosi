@@ -7,20 +7,22 @@
         <link rel="stylesheet" href="<?php echo base_url($assets_dir . '/css/animate.css'); ?>">
         <link rel="stylesheet" href="<?php echo base_url($assets_dir . '/fonts/style.css'); ?>">
         <link rel="stylesheet" href="<?php echo base_url($own_dir . '/css/estGeneral.css'); ?>">
-        <script src="<?php echo base_url($assets_dir . '/js/prefixfree.min.js'); ?>"></script>
-        <script src="<?php echo base_url($assets_dir . '/js/jquery-1.11.0.min.js'); ?>"></script>
-        <script src="<?php echo base_url($assets_dir . '/js/jquery-ui.js'); ?>"></script>
-        <script src="<?php echo base_url($assets_dir . '/js/jquery.ui.touch-punch.min.js'); ?>"></script>
-        <script src="<?php echo base_url($own_dir . '/js/libs/panicoLoader.js'); ?>"></script>
-        <script src="<?php echo base_url($assets_dir . '/js/owl.carousel.min.js'); ?>"></script>
         <script type="text/javascript">
             var bdir = '<?php echo base_url(); ?>';
             var odir = '<?php echo base_url($own_dir); ?>';
             var grup = '<?php echo strtoupper(substr($this->session->grupo, 0, 1)); ?>';
             var entraarecla = <?php echo $entraarecla; ?>;
+            if(!bdir){location.reload();
+                console.log("21312");}
         </script>
-        <script src="<?php echo base_url($own_dir . '/js/sonido.js'); ?>"></script>
+        <script src="<?php echo base_url($assets_dir . '/js/prefixfree.min.js'); ?>"></script>
+        <script src="<?php echo base_url($assets_dir . '/js/jquery-1.11.0.min.js'); ?>"></script>
+        <script src="<?php echo base_url($assets_dir . '/js/jquery-ui.js'); ?>"></script>
+        <script src="<?php echo base_url($assets_dir . '/js/jquery.ui.touch-punch.min.js'); ?>"></script>
+        <script src="<?php echo base_url($own_dir . '/js/libs/panicoLoader.js'); ?>"></script>
+        <script src="<?php echo base_url($assets_dir . '/js/owl.carousel.min.js'); ?>"></script>  
         <script src="<?php echo base_url($own_dir . '/js/inicio.js'); ?>"></script>
+        <script src="<?php echo base_url($own_dir . '/js/sonido.js'); ?>"></script>        
     </head>
     <body class="<?php echo $avatar; ?>" data-firstwindow="<?php echo $firstWindow; ?>">
         <!-- - - - - - - - - - - - - - - - -  Loader  - - - - - - - - - - - - - - - - -->
