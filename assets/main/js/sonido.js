@@ -13,9 +13,9 @@ var audios = [
     ['menuBG', bdir + 'assets/sounds/menu.mp3'],//fondo
     ['playBTN', bdir + 'assets/sounds/catch.mp3'],
     ['txti1', odir + '/sounds/txti1.mp3']
-    //['txti2', odir + '/sounds/ab1.mp3'],
-    //['txti3A', odir + '/sounds/ab1.mp3'],
-    //['txti3B', odir + '/sounds/ab1.mp3'],
+    // ['txti2', odir + '/sounds/ab1.mp3']
+    // ['txti3A', odir + '/sounds/ab1.mp3']
+    // ['txti3B', odir + '/sounds/ab1.mp3']
     //['txti4', odir + '/sounds/ab1.mp3']
 ];
 try {

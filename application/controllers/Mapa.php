@@ -4,7 +4,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Mapa extends Nivel_Controller {
 
-
      function __construct() {
         parent::__construct();
         $this->data['user_login'] = $this->base_model->user_info_login();
@@ -19,7 +18,6 @@ class Mapa extends Nivel_Controller {
         } else {
                 $this->data['user_stats'] = array('id_menu' => 1, 'curso' => 1, 'puntaje' => '0', 'estrellas' => '0');
         }
-        
     }
 
     function index() {
@@ -31,9 +29,9 @@ class Mapa extends Nivel_Controller {
             //echo $this->data['avatar'];
         }
         if ($this->ion_auth->logged_in()){
-            if ($this->session->first_login) {
+            if ($this->data['user_login']['mapa'] == 1) {
                 $this->data['firstWindow'] = 1;
-                $this->session->first_login = false;
+                $this->db->where('id',$this->session->user_id)->update('users', array('mapa' => 0));                    
             } else {
                 $this->data['firstWindow'] = 4;
             }

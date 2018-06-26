@@ -16,6 +16,7 @@ class Main extends MY_Controller {
     function index() {
         $this->load->library('form_validation');
         $this->data['own_dir'] = $this->data['assets_dir'] . '/main';
+        $this->data['entraarecla'] = (int)$this->entraarecla();
         if ($this->session->old_last_login) {
             $this->base_model->add_visita();
                      
@@ -28,7 +29,7 @@ class Main extends MY_Controller {
             } else {
                 $this->data['firstWindow'] = 3;
             }
-            $this->data['entraarecla'] = (int)$this->entraarecla();
+            
         } else {
             $this->data['firstWindow'] = 1;
             $this->session->old_last_login = time();

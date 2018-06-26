@@ -43,6 +43,7 @@ class Base_model extends CI_Model {
             $data['nombre'] = !empty($user->nombre) ? htmlspecialchars($user->nombre, ENT_QUOTES, 'UTF-8') : NULL;
             $data['apat'] = !empty($user->apat) ? ' ' . htmlspecialchars($user->apat, ENT_QUOTES, 'UTF-8') : NULL;
             $data['amat'] = !empty($user->amat) ? ' ' . htmlspecialchars($user->amat, ENT_QUOTES, 'UTF-8') : NULL;
+            $data['mapa'] = $user->mapa;
             return $data;
         } else {
             $data['id'] = $this->session->user_id;
@@ -75,6 +76,15 @@ class Base_model extends CI_Model {
                         ->get()
                         ->num_rows();
     }
+
+    public function entramapa() {
+        $mapa = $this->db->select('mapa')                     
+                        ->where('id', $this->session->user_id)
+                        ->get('users');
+
+                return $mapa;
+    }
+
     public function entraarecla() {
         return (bool) $this->db->select('id_user')
                         ->from('users_anc')
