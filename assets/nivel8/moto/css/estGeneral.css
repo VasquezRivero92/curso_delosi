@@ -88,7 +88,7 @@ body{
 #btnJugar{
     position:absolute;
     width:167px; height:71px;
-    left:597px; top:527px;
+    left:597px; top:539px;
     background: url(../images/btnJugar.png) no-repeat center center;
     cursor:pointer;
 }
@@ -123,6 +123,21 @@ body{
     background-position:center center;
 }
 /*****************************************  Ventana pausa  *****************************************/
+#reset_time{
+    background: url(../images/game/endTime.png) no-repeat center center;
+    display: none;
+    z-index: 601;
+}
+#btnReset{
+    position: absolute;
+    width: 168px; height: 43px;
+    left: 495px;
+    top: 477px;
+    background: url(../images/game/btn_return.png) no-repeat 50% 50%;
+    cursor: pointer;
+}
+
+
 #pausaTouch{
     position: absolute;
     width: 116px; height: 95px;
@@ -201,23 +216,25 @@ body{
 #miniMap2{ z-index:561; }
 /*********************************  ventana de preguntas *********************************/
 /*#pregMain{ background-image: url(../img/BGpregMain.png); }*/
-#pregMain{ background-image: url(../img/BGpregMain.png); }
+#pregMain{ /* background-image: url(../images/pregs/base.png); */ }
 #pregTXT{
-    position: absolute;
-    width: 560px;
-    height: 90px;
-    left: 380px;
-    top: 281px;
+position: absolute;
+    width: 414px;
+    height: 112px;
+    left: 479px;
+    top: 223px;
     font-family: 'CatalogoSG';
     font-size: 16px;
     line-height: 90px;
     text-align: center;
     color: #333745;
+    background: url(../images/pregs/pregA.png) no-repeat center center;
 }
 #pregTXT span{
     display: inline-block;
     vertical-align: middle;
     line-height: 16px;
+    width: 350px;
 }
 .pregVista{
     position: absolute;
@@ -227,25 +244,10 @@ body{
     background-repeat: no-repeat;
     background-position:50% 50%;
 }
-#pregVista_1{ background-image: url(../images/preg/pregA_1.png); }
-#pregVista_2{ background-image: url(../images/preg/pregA_2.png); }
-#pregVista_3{ background-image: url(../images/preg/pregA_3.png); }
-#pregVista_4{ background-image: url(../images/preg/pregA_4.png); }
-#pregVista_5{ background-image: url(../images/preg/pregA_5.png); }
-#pregVista_6{ background-image: url(../images/preg/pregA_6.png); }
-#pregVista_7{ background-image: url(../images/preg/pregA_7.png); }
-#pregVista_8{ background-image: url(../images/preg/pregA_8.png); }
-#pregVista_9{ background-image: url(../images/preg/pregA_9.png); }
-#pregVista_10{ background-image: url(../images/preg/pregA_10.png); }
-#pregVista_11{ background-image: url(../images/preg/pregA_11.png); }
-#pregVista_12{ background-image: url(../images/preg/pregA_12.png); }
-#pregVista_13{ background-image: url(../images/preg/pregA_13.png); }
-#pregVista_14{ background-image: url(../images/preg/pregA_14.png); }
-#pregVista_15{ background-image: url(../images/preg/pregA_15.png); }
 .pregOpc{
     position: absolute;
-    width: 218px;
-    height: 104px;
+    width: 250px;
+    height: 131px;
     border-radius:  10px;
     top: 382px;
     background: #ffbb2c;
@@ -256,24 +258,40 @@ body{
     line-height: 104px;
     cursor: pointer;
 }
+.img_ask{
+    top: 311px;
+    left: 542px;
+    position: absolute;
+    width: 291px;
+    height: 189px;
+}
+#image_ref_1{ background: url('../images/pregs/pic1.png') no-repeat center center; }
+#image_ref_2{ background: url('../images/pregs/pic2.png') no-repeat center center; }
+#image_ref_3{ background: url('../images/pregs/pic3.png') no-repeat center center; }
+#image_ref_4{ background: url('../images/pregs/pic4.png') no-repeat center center; }
+#image_ref_5{ background: url('../images/pregs/pic5.png') no-repeat center center; }
+
 .pregOpc span{
-        margin-top: -30px;
+    padding: 5px;
+    margin-top: -5px;
     display: inline-block;
     vertical-align: middle;
     line-height: 16px;
+    width: 190px;
 }
-.pregOpc:hover{ background:#333745; color:#ffffff; }
-#preg_1{left: 320px;}
-#preg_2{left: 570px;}
-#preg_3{left: 814px;}
-.imaA1{     
+.pregOpc{     
     top: 67px;
     left: 69px;
     position: absolute;
 }
+.pregOpc:hover{ cursor: pointer; }
+#preg_1{ top: 444px; left: 337px; background: url('../images/pregs/op1.png') no-repeat; }
+#preg_2{ top: 500px; left: 562px; background: url('../images/pregs/op2.png') no-repeat;}
+#preg_3{ top: 444px; left: 790px; background: url('../images/pregs/op3.png') no-repeat;}
+
 
 /*******************************************************************************/
-#pregBien{ background-image: url(../img/BGacierto.png); }
+#pregBien{ background-image: url(../images/game/BGacierto.png); }
 #bienResp{
     position: absolute;
     width: 100%; height: 25px;
@@ -286,65 +304,8 @@ body{
     color:#333745;
     text-transform: uppercase;
 }
-#bienFlechas{
-    position: absolute;
-    width: 585px; height: 171px;
-    left: 388px; top: 259px;
-    background: url(../images/bienFlechas.png) no-repeat 50% 50%;
-}
-.bienSlider{ position: absolute; left: 0px; top: 0px; }
-.bienSlider div{
-    position: absolute; display: none;
-    width: 238px; height: 300px;
-    top: 290px;
-    padding-top: 214px;
-    font-family: 'CatalogoSG';
-    font-size: 16px;
-    line-height: 17px;
-    text-align: center;
-    color: #333745;
-    background-color: rgba(0,0,0,0);
-    background-repeat: no-repeat;
-    background-position: 50% 0%;
-    box-sizing: border-box;
-}
-.bSlideA{ left: 331px; padding-right: 26px; }
-#bienSlide_1 .bSlideA{ background-image: url(../images/preg/pregA_1.png); }
-#bienSlide_2 .bSlideA{ background-image: url(../images/preg/pregA_2.png); }
-#bienSlide_3 .bSlideA{ background-image: url(../images/preg/pregA_3.png); }
-#bienSlide_4 .bSlideA{ background-image: url(../images/preg/pregA_4.png); }
-#bienSlide_5 .bSlideA{ background-image: url(../images/preg/pregA_5.png); }
-#bienSlide_6 .bSlideA{ background-image: url(../images/preg/pregA_6.png); }
-#bienSlide_7 .bSlideA{ background-image: url(../images/preg/pregA_7.png); }
-#bienSlide_8 .bSlideA{ background-image: url(../images/preg/pregA_8.png); }
-#bienSlide_9 .bSlideA{ background-image: url(../images/preg/pregA_9.png); }
-#bienSlide_10 .bSlideA{ background-image: url(../images/preg/pregA_10.png); }
-#bienSlide_11 .bSlideA{ background-image: url(../images/preg/pregA_11.png); }
-.bSlideB{ left: 556px; padding-right: 20px;  }
-#bienSlide_1 .bSlideB{ background-image: url(../images/preg/pregB_1.png); }
-#bienSlide_2 .bSlideB{ background-image: url(../images/preg/pregB_2.png); }
-#bienSlide_3 .bSlideB{ background-image: url(../images/preg/pregB_3.png); }
-#bienSlide_4 .bSlideB{ background-image: url(../images/preg/pregB_4.png); }
-#bienSlide_5 .bSlideB{ background-image: url(../images/preg/pregB_5.png); }
-#bienSlide_6 .bSlideB{ background-image: url(../images/preg/pregB_6.png); }
-#bienSlide_7 .bSlideB{ background-image: url(../images/preg/pregB_7.png); }
-#bienSlide_8 .bSlideB{ background-image: url(../images/preg/pregB_8.png); }
-#bienSlide_9 .bSlideB{ background-image: url(../images/preg/pregB_9.png); }
-#bienSlide_10 .bSlideB{ background-image: url(../images/preg/pregB_10.png); }
-#bienSlide_11 .bSlideB{ background-image: url(../images/preg/pregB_11.png); }
-.bSlideC{ left: 781px; padding-left: 7px; }
-#bienSlide_1 .bSlideC{ background-image: url(../images/preg/pregC_1.png); }
-#bienSlide_2 .bSlideC{ background-image: url(../images/preg/pregC_2.png); }
-#bienSlide_3 .bSlideC{ background-image: url(../images/preg/pregC_3.png); }
-#bienSlide_4 .bSlideC{ background-image: url(../images/preg/pregC_4.png); }
-#bienSlide_5 .bSlideC{ background-image: url(../images/preg/pregC_5.png); }
-#bienSlide_6 .bSlideC{ background-image: url(../images/preg/pregC_6.png); }
-#bienSlide_7 .bSlideC{ background-image: url(../images/preg/pregC_7.png); }
-#bienSlide_8 .bSlideC{ background-image: url(../images/preg/pregC_8.png); }
-#bienSlide_9 .bSlideC{ background-image: url(../images/preg/pregC_9.png); }
-#bienSlide_10 .bSlideC{ background-image: url(../images/preg/pregC_10.png); }
-#bienSlide_11 .bSlideC{ background-image: url(../images/preg/pregC_11.png); }
-#btnListo{
+
+ #btnListo{
     position: absolute;
     width: 167px; height: 41px;
     top: 575px; left: 590px;
@@ -352,7 +313,7 @@ body{
     cursor: pointer;
 }
 /*******************************************************************************/
-#pregMal{ background-image: url(../img/BGerror.png); }
+#pregMal{ background-image: url(../images/game/BGerror.png); }
 #btnReintento{
     position: absolute;
     width: 167px; height: 41px;
@@ -374,6 +335,7 @@ body{
     color: #333745;
 }
 #bad_A1 span{
+        width: 260px;
     display: inline-block;
     vertical-align: middle;
     line-height: 16px;
@@ -394,6 +356,7 @@ body{
     display: inline-block;
     vertical-align: middle;
     line-height: 16px;
+    padding: 10px;
 }
 
 /****************************  ventana de resultados ****************************/
@@ -506,4 +469,49 @@ body{
     width:0px; height:0px;
     opacity:0;
 }
+/*****************************************  carros  *****************************************/
+
+.carsEnem{
+    position: absolute;
+    left: 0px; top: 0px;    
+}
+#enemy_1{
+    width: 222px; height: 123px; top: -40px;
+    background: url('../images/game/car1.png') no-repeat;
+}
+#enemy_2{
+    width: 227px; height: 107px; top: -29px;
+    background: url('../images/game/car2.png') no-repeat;
+}
+#enemy_3{
+    width: 224px; height: 106px; top: -28px;
+    background: url('../images/game/car3.png') no-repeat;
+}
+#enemy_4{
+    width: 222px; height: 133px; top: -41px;
+    background: url('../images/game/car4.png') no-repeat;
+}
+#enemy_5{
+    width: 224px; height: 106px; top: -28px;
+    background: url('../images/game/car5.png') no-repeat;
+}
+#enemy_6{
+    width: 225px; height: 109px; top: -28px;
+    background: url('../images/game/car6.png') no-repeat;
+}
+#enemy_7{
+    width: 222px; height: 123px; top: -42px;
+    background: url('../images/game/car7.png') no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
 /*******************************************************************************/

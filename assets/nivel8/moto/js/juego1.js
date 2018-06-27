@@ -9,8 +9,10 @@ $J[1].showJuego = function () {
     PlayerMov.id = $('#Player_1');
     PlayerMov.cargar();
     PlayerMov.areaPtje.stop().removeClass('animated rubberBand').fadeOut(300);
+    PlayerMov.warningMC.removeClass('show_warn');
+
     $J[$JAct].cargarParedes();
-     $.get(bdir + 'ajax/get_puntaje').done(function (data) {
+    $.get(bdir + 'ajax/get_puntaje').done(function (data) {
         console.log('puntos: ' + data);
         $puntos_minitest = data;
     });
@@ -19,21 +21,19 @@ $J[1].showJuego = function () {
        console.log("Intentos: " + $p_intentos);
        if ($p_intentos >= 2) {
             $('#btnReinicio,#resumenOportunidad').css('background', 'none').hide();
-            $('#resumenMensaje').html('Sigue adelante');
+            // $('#resumenMensaje').html('Sigue adelante');
        }else{
-            $('#resumenMensaje').html('¡Vuelve a intentarlo!');
+            // $('#resumenMensaje').html('¡Vuelve a intentarlo!');
         }
     });
-    
 };
 $J[1].inicioJuego = function () {
-    playBGMusic(window.BGJuego);
+    playBGMusic(window.race);
     $('#fondoOPC1').show();
     inicioPtos1();
     initObjetos1();
     IntervaloMovimiento();
     $('#gameArea1').addClass('pista_anim');
-    console.log($puntos_minitest);
 };
 $J[1].finJuego = function (valor) {
     stopBGMusic();

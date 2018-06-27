@@ -13,6 +13,13 @@ Dtecla[2] = false; //right
 Dtecla[3] = false; //down
 //variable del jugador
 var PlayerMov = new Lab_Player(); // jugador
+var $dtctPlayX = 0;
+var $dtctPlayY = 0;
+//variable del enemigo
+var EnemyMov = new Lab_Enemigo(); // jugador
+var $dtctEnemyX = 0;
+var $dtctEnemyY = 0;
+
 //si se esta moviendo
 var isPlaying = false;
 var isPaused = false;
@@ -102,21 +109,23 @@ function EjecucionMovimiento() {
         }
         PlayerMov.AnimaSprite();
     }else{ 
-        //PlayerMov.StopSprite(); 
         PlayerMov.AnimaSprite();
     }
-    //$J[$JAct].hitPowerUps();
 
-    if( $Enemigos.length ) 
-        $Enemigos.forEach(function(itm,i){
-            if(i == 6){
-
-            }else{
-                if( $JAct == 1 ) itm.moveRemolino();
-                else itm.Move();                
-            }
+    //if( $Enemigos.length ) 
+    $Enemigos.forEach(function(itm,i){
+        if(i == 7 || i == 8){
+            itm.veredaMC();
+        }else{
+            if( $JAct == 1 ) itm.moveRemolino();
+            else itm.Move();                
+        }
         if( itm.enPantalla() ){ itm.controlHit(); itm.draw(); }
+
     });  
+
+    if(PlayerMov.x + (PlayerMov.width/2) > 1350 || (PlayerMov.x + PlayerMov.width) < 0){ tiempo_Subs(); }
+
     $J[$JAct].hitEnemy();
 }
 function ControlIntervalo() {
@@ -147,10 +156,14 @@ function CronoPlay() {
     $J[$JAct].CTiempo--;
     MostrarTiempo();
     if ($J[$JAct].CTiempo <= 0) { $J[$JAct].finJuego(1); }
+    $J[$JAct].Vereda++;
+    $J[$JAct].BetwenCars++;
 }
 function CronoReset() {
     $J[$JAct].CTiempo = $J[$JAct].CTInicial;
     MostrarTiempo();
+    $J[$JAct].Vereda = 0;
+    $J[$JAct].BetwenCars = 0;
 }
 function finMovimiento() {
     Dtecla.forEach(function (itm, i) { Dtecla[i] = false; });
@@ -246,7 +259,6 @@ function initTouchControl() {
     $KC_Circulo = new Lab_Circulo($("#contKeyControls").width() / 2);
     $KC_Circulo.x = $("#contKeyControls").offset().left;
     $KC_Circulo.y = $("#contKeyControls").offset().top;
-
     $KC_boton = [];
     $("#contKeyControls .dirBtn").each(function (i, itm) {
         var x = $(itm).offset().left;

@@ -13,9 +13,9 @@ $J.showJuego = function () {
         //$s_intentos = data.charAt(2);
         if ($p_intentos >= 2) {
             $('#btnReinicio,#resumenOportunidad').css('background', 'none').hide();
-            $('#resumenMensaje').html('Sigue adelante');
+            // $('#resumenMensaje').html('Sigue adelante');
         }else{
-            $('#resumenMensaje').html('¡Vuelve a intentarlo!');
+            // $('#resumenMensaje').html('¡Vuelve a intentarlo!');
         }
     });
     setTimeout(function () {

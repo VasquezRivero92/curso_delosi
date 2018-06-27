@@ -10,21 +10,6 @@
     font-size: 0px;
 }
 .powerUp1.hit{ opacity:0; }
-/* #powerUp_1{ width:170px; height:120px; left:1290px; top:170px; }
-#powerUp_2{ width:250px; height:200px; left:2180px; top:650px; }
-#powerUp_3{ width:160px; height:105px; left:740px; top:380px; }
-#powerUp_4{ width:250px; height:60px; left:1580px; top:220px; }
-#powerUp_5{ width:180px; height:50px; left:2300px; top:210px; }
-#powerUp_6{ width:150px; height:330px; left:1340px; top:520px; }
-#powerUp_7{ width:137px; height:63px; left:550px; top:733px; }
-#powerUp_8{ width:110px; height:200px; left:1130px; top:445px; }
-#powerUp_9{ width:146px; height:73px; left:498px; top:408px; }
-#powerUp_10{ width:170px; height:100px; left:2040px; top:190px; }
-#powerUp_11{ width:120px; height:20px; left:1010px; top:190px; }
-#powerUp_12{ width:70px; height:130px; left:200px; top:240px; }
-#powerUp_13{ width:140px; height:130px; left:740px; top:560px; }
-#powerUp_14{ width:80px; height:130px; left:1850px; top:450px; }
-#powerUp_15{ width:250px; height:120px; left:1500px; top:500px; } */
 /*******************************************************************************/
 .icoPel{
     position:absolute;
@@ -32,18 +17,6 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }
-/* #icoPel_1{ width:155px; height:134px; left:1277px; top:47px; background-image:url(../images/pwrup/peligro1.png); }
-#icoPel_2{ width:220px; height:184px; left:2208px; top:709px; background-image:url(../images/pwrup/peligro2.png); }
-#icoPel_3{ width:81px; height:203px; left:774px; top:248px; background-image:url(../images/pwrup/peligro3.png); }
-#icoPel_4{ width:135px; height:74px; left:1574px; top:23px; background-image:url(../images/pwrup/peligro4.png); }
-#icoPel_5{ width:301px; height:93px; left:2231px; top:8px; background-image:url(../images/pwrup/peligro5.png); }
-#icoPel_6{ width:99px; height:227px; left:1370px; top:602px; background-image:url(../images/pwrup/peligro6.png); }
-#icoPel_7{ width:137px; height:63px; left:550px; top:733px; background-image:url(../images/pwrup/peligro7.png); }
-#icoPel_8{ width:135px; height:193px; left:1130px; top:450px; background-image:url(../images/pwrup/peligro8.png); }
-#icoPel_9{ width:146px; height:73px; left:498px; top:408px; background-image:url(../images/pwrup/peligro9.png); }
-#icoPel_10{ width:144px; height:150px; left:2060px; top:98px; background-image:url(../images/pwrup/peligro10.png); }
-#icoPel_11{ width:82px; height:105px; left:1031px; top:83px; background-image:url(../images/pwrup/peligro11.png); }
- */
 .icoPrev{
     position:absolute;
     background-color: rgba(0,255,0,0);
@@ -61,32 +34,57 @@
 /***********************************  Player  ***********************************/
 #Player_1{
     position:absolute;
-    width: 120px;
-    height: 30px;
+    width: 205px;
+    height: 107px;
+    border-radius: 50%;
     z-index:2;
-    background-color: rgba(132, 82, 82, 0.76);
+    background-color: rgba(132, 82, 82, 0);
 }
 #Player_1 .sprite{
     position:absolute;
-    width:332px; height:202px;
-    left: -108px;
-    bottom: -71px;
+    width: 332px;
+    height: 202px;
+    left: -64px;
+    bottom: -39px;
     background-position:0px 0px;
     background-color: rgba(250,0,0,0);
 }
+#warning_MC{
+    position: absolute;
+    top: -20px;
+    left: -24px;
+    width: 241px;
+    height: 160px;
+    opacity: 0;
+    background: url(../images/game/blur_mc.png) no-repeat center center;
+    -webkit-transition: all 4s ease-out;
+    -moz-transition: all 4s ease-out;
+    -o-transition: all 4s ease-out;
+    transition: all 4s ease-out;
+}
+.show_warn{opacity: 0.8 !important;}
+
 .playerF .sprite{ background-image: url(../images/sprite_F.png); }
-.playerM .sprite{ background-image: url(../img/moto-mc.png); }
+.playerM .sprite{ background-image: url(../images/sprite_M.png); }
 #Player_1 .ptje{
     position:absolute; display:none;
     width:99px; height:91px;
-    font-size: 40px;
+    font-family:"Bebas";
     line-height: 91px;
     font-weight: bolder;
+    font-size: 16px;
+    text-align: center;
     left: -58px;
     top: -129px;
     text-align: center;
     background: rgba(250,0,0,0) url(../images/alert.png) no-repeat 50% 50%;
     cursor: pointer;
+}
+#Player_1 .ptje span{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 18px;
+    padding: 10px;
 }
 /*****************************************  Enemigos *****************************************/
 .enemigo{
@@ -111,29 +109,38 @@
      to{ background-position:-1255px 0px; }
 }
 .enemigoD{
-    width:230px; height:100px;
+    width: 222px;
+    height: 80px;
     left:1200px; top:400px;
-    background-color:rgba(177, 42, 42, 0.81);
+    /* background-color:rgba(177, 42, 42, 0.81); */
     opacity:1;
     transition:opacity 2s linear;
 }
 .enemigoD.hide{ opacity:0; }
 .enemigoD div{
     position:absolute;
-    /* width:313px; height:437px;
-    left:-70px; */ bottom:0px;
-    background:;
-    /* animation:enemigoD 400ms steps(4) infinite; */
+    bottom:0px;
 }
 .acera_mc{
     position: absolute;
     top: 141px;
     left: 0px;
-    background: #ff00005e;
+    /* background: #ff00005e; */
     width: 1350px;
     height: 40px;
-    z-index: 100;
+    z-index: 10;
 }
+.acera_mc1{
+    position: absolute;
+    top: 660px;
+    left: 0px;
+    /* background: #ff00005e; */
+    width: 1350px;
+    height: 40px;
+    z-index: 10;
+}
+
+
 /*****************************************  Paredes  *****************************************/
 
 /*************************  Objetos por cada escenario  *************************/
@@ -171,11 +178,11 @@
 }
 
 .pista_anim{
-    -webkit-animation: slide 3s linear infinite; 
-    -ms-animation: slide 3s linear infinite;
-    -moz-animation: slide 3s linear infinite;
-    -o-animation: slide 3s linear infinite;
-    animation: slide 3s linear infinite;   
+    -webkit-animation: slide 4s linear infinite; 
+    -ms-animation: slide 4s linear infinite;
+    -moz-animation: slide 4s linear infinite;
+    -o-animation: slide 4s linear infinite;
+    animation: slide 4s linear infinite;   
 }
 
 @-webkit-keyframes slide {

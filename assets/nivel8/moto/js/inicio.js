@@ -13,9 +13,15 @@ var $delayTime = 20;
 // choque futuro con paredes
 var ChoqueFuturo = false;
 var $Enemigos = [];
+var $EnemiParachoke = [];
 var ContPreguntas = 0;
 var $TimeDie = false; 
 var $TDie = 0; 
+var $ValueEnd = 0;
+
+var $pasar_betwen = false;
+var $Val_betwen = 0;
+var IntentPT = 0;
 // intervalo del hit(momentaneo)
 //var $hitInterval = 0;
 //var $hitStartTime = 0;
@@ -25,42 +31,49 @@ var $PowerUps = [];
 var $PowerPE = [];
 var $PowerPR = [];
 var $ActPwrUp = 0;
-var $Preguntas = [null, 1, 1, 1, 1, 1];
+var $Preguntas = [null, 3, 3, 3, 3, 3];
 var $slA = [null,
-    'preguntas - 1',
-    'preguntas - 2',
-    'preguntas - 3',
-    'preguntas - 4',
-    'preguntas - 5',
+    '1. Todos los carriles están ocupados y solo hay espacio entre los automoviles ¿Qué deberia hacer?',
+    '2. Más adelante hay mucho tráfico ¿Qué deberia hacer?',
+    '3. Me acerco a un semaforo que esta en ambar ¿Qué deberia hacer?',
+    '4. El casco se empieza a mover mucho ¿Qué deberia hacer?',
+    '5. Hay tráfico por la luz roja, pero la vereda se ve despejada, ¿Qué deberia hacer?',
 ];
 var $slB = [null,
-    'opcion 1 - 1',
-    'opcion 1 - 2',
-    'opcion 1 - 3',
-    'opcion 1 - 4',
-    'opcion 1 - 5',
+    'Pasar entre ellos rápidamente',
+    'Aprovechar que están detenidos y serpentear entre los carros',
+    'Acelerar y pasar antes que cambie a rojo.',
+    'Lo acomodo hasta la mitad de mi rostro para que no apriete',
+    'Puedo aprovechar y subir por la vereda, rápido antes que alguien se cruze.',
 ];
 var $slC = [null,
-    'opcion 2 - 1',
-    'opcion 2 - 2',
-    'opcion 2 - 3',
-    'opcion 2 - 4',
-    'opcion 2 - 5',
+    'Tocarles el claxón para que me habran camino',
+    'Pasar por los extremos de la pista cerquita de los carros para adelantar.',
+    'Aunque cambia a rojo sigo nomas, rapidito.',
+    'Voy a desajustar el seguro para que no fastidie.',
+    'Me subo a la vereda y si hay alguién lo esquivo nomas.',
 ];
 var $slD = [null,
-    'opcion 3 - 1',
-    'opcion 3 - 2',
-    'opcion 3 - 3',
-    'opcion 3 - 4',
-    'opcion 3 - 5',
+    'Mantener mi carril y esperar a que se libere una ruta segura para continuar',
+    'Mantener el curso y no invadir espacios de riesgo para el peaton y los conductores',
+    'Debo desacelerar lentamente y hasta detenerme cuando vea la luz ambar.',
+    'Me detengo y reviso el ajuste del casco, este debe estar asegurado a mi cabeza.',
+    'Continuo en la pista, subir a la vereda con una moto es poner en riesgo a los peatones.',
 ];
 var $opc_TR = [null,
-    'porque esta mal opcion 3 - 1',
-    'porque esta mal opcion 3 - 2',
-    'porque esta mal opcion 3 - 3',
-    'porque esta mal opcion 3 - 4',
-    'porque esta mal opcion 3 - 5',
+    'Mantener mi carril y esperar a que se libere una ruta segura para continuar',
+    'Mantener el curso y no invadir espacios de riesgo para el peaton y los conductores',
+    'Debo desacelerar lentamente y hasta detenerme cuando vea la luz ambar.',
+    'Me detengo y reviso el ajuste del casco, este debe estar asegurado a mi cabeza.',
+    'Continuo en la pista, subir a la vereda con una moto es poner en riesgo a los peatones.',
 ];
+
+function getRandomSite(){
+   var sites = ["¡soy mas vivo!","Mas alla!","Piiiiiiiip","¡Estoy apurado!","Haste a un lado"];
+    var i = parseInt(Math.random()*(sites.length-1));
+    $('.ptje span').text(sites[i]);
+    return sites[i];
+};
 
 var $AnimacionCreada = 0;
 // variables de puntaje
@@ -69,17 +82,8 @@ var $KC_boton;
 var $ExisteTouch = 0;
 var $J = [];
 $J[1] = new Lab_Juego();
-//for (var i = 1; i <= 6; i++) { $J[i] = new Lab_Juego(); }
-//var $seleccionPlayer = 0;
-// MiniMap y su canvas
-/***
- var $MiniMap1 = new Lab_MiniMap(1); //paredes estaticas
- var $MiniMap2 = new Lab_MiniMap(2); //Player
- /***/
 var $scaleActual = 1;
-
 $.fn.reverse = [].reverse;
-
 $(document).ready(function (e) {
     initJuegos();
     $(".dirBtn, .circleExt, .touchElement, .btnPlayer").disableSelection();
@@ -137,11 +141,20 @@ function initBotones() {
         $J[1].showJuego();
         $('.caratula').stop().fadeOut(10);
     });
-    //botones del juego
+
     $('#btnReinicio').click(function () {
+        $TimeDie = false; 
+        $TDie = 0; 
+        $ValueEnd = 0;
+
+        $pasar_betwen = false;
+        $Val_betwen = 0;
+        
+        ContPreguntas = 0;
+        $ActPwrUp = 0;
         showInicio();
         $('.caratula, .game, #capaResumen').stop().fadeOut(500);
-    });
+    });    
     $('#pausaTouch').click(function () {
         if ($MuevePlayer) {
             if ($(this).hasClass("paused")) {
@@ -153,11 +166,13 @@ function initBotones() {
         }
     });
     $('#btnReanudar').click(function () {
+        playBGMusic(window.race);
         $('#pausaTouch').removeClass('paused');
         $('#PauseGame').fadeOut(200);
         $J[$JAct].CTiempo = $J[$JAct].CTiempo + 1;
         isPaused = false;
         $('#gameArea1').addClass('pista_anim');
+
     });
     $('.pregOpc').click(function () {
         $('.caratula').stop().fadeOut(300);
@@ -191,20 +206,47 @@ function initBotones() {
         } else {
             $J[$JAct].CTiempo = $J[$JAct].CTiempo + 1;
             isPaused = false;
+            if($TDie >= 5){
+                setTimeout(function () { $J[1].finJuego(2); }, 500);
+            }
         }
     });
+    $('#btnReset').click(function () {
+        if(IntentPT >= 3){
+            $('#reset_time').stop().fadeOut(500);
+            setTimeout(function () { $J[1].finJuego(2); }, 500);
+            IntentPT = 0;
+        }else{
+            $TimeDie = false; 
+            $TDie = 0; 
+            $ValueEnd = 0;
+
+            $pasar_betwen = false;
+            $Val_betwen = 0;
+            
+            ContPreguntas = 0;
+            $ActPwrUp = 0;
+
+            showInicio();
+            $('.caratula, .game, #capaResumen').stop().fadeOut(500);
+            $('#reset_time').stop().fadeOut(500);
+            $("#infoWindow").fadeOut(300);
+        }
+    });   
+
     $('#btnListo').click(function () {
         //$ActPwrUp = 0;
         $('#pregWindow').stop().fadeOut(400);
         $('.caratula').stop().delay(500).fadeOut(10);
         $('#gameArea1').addClass('pista_anim');
         if ($J[1].contAciertos >= 5) {
-            setTimeout(function () {
-                $J[1].finJuego(2);
-            }, 500);
+            setTimeout(function () { $J[1].finJuego(2); }, 500);
         } else {
             $J[$JAct].CTiempo = $J[$JAct].CTiempo + 1;
             isPaused = false;
+            if($TDie >= 5){
+                setTimeout(function () { $J[1].finJuego(2); }, 500);
+            }
         }
     });
     $("#Player_1 .ptje").click(function () {
@@ -225,7 +267,7 @@ function initJuegos() {
     });
 }
 function showInicio() {
-    playBGMusic(window.BGIntro);
+    playBGMusic(window.intro);
     playTexto(window.txti1);
     redimensionarJuego();
     $('.instrucciones').stop().hide();
@@ -234,7 +276,7 @@ function showInicio() {
         $(".instrucciones").stop().delay(300).fadeOut(100);
         $("#instrucciones_2").stop().fadeIn(500);
         playTexto(window.txti2);
-    }, 1000);
+    }, 4000);
 }
 function introJuego() {
     $(".caratula,.conteo").stop().fadeOut(10);
@@ -285,27 +327,40 @@ function MostrarTiempo() {
     $J[$JAct].CMin = parseInt($J[$JAct].CTiempo / 60);
     $("#CMin").html($J[$JAct].CMin);
     CCero = "";
-    //console.log(CSeg);
-    if ($J[$JAct].CSeg < 10) {
-        CCero = "0";
-    }
+    if ($J[$JAct].CSeg < 10) { CCero = "0"; }
     $("#CSeg").html(CCero + $J[$JAct].CSeg);
     ContPreguntas++;
-    //
     if (ContPreguntas == 20) {
         ContPreguntas = 0;
         $ActPwrUp++;
         muestraPregunta($ActPwrUp);
-    }
-    if($TimeDie === true){
         $TDie++;
-        console.log($TDie);
+    }
+    if($TimeDie){
+        $ValueEnd = $J[$JAct].Vereda;
+    }else{
+        $J[$JAct].Vereda = 0;
+    }
+    if($pasar_betwen){
+        $Val_betwen = $J[$JAct].BetwenCars;
+    }else{
+        $J[$JAct].BetwenCars = 0;
     }
 }
 function pausarJuego() {
     isPaused = true;
     $("#PauseGame").show();
     $('#gameArea1').removeClass('pista_anim');
+    stopBGMusic(window.termino_mal);
+}
+function tiempo_Subs() {
+    stopBGMusic(window.termino_mal);
+    playSound(window.termino_mal);
+    isPaused = true;
+    $("#reset_time").fadeIn(500);
+    $('#gameArea1').removeClass('pista_anim');
+    IntentPT++;
+    console.log(IntentPT);
 }
 function muestraPregunta(preg) {
     $('#gameArea1').removeClass('pista_anim');
@@ -320,8 +375,7 @@ function muestraPregunta(preg) {
     $('#preg_1 span').html($slB[$ActPwrUp]);
     $('#preg_2 span').html($slC[$ActPwrUp]);
     $('#preg_3 span').html($slD[$ActPwrUp]);
-
-    //$("#pregVista_" + preg).show();
+    $('.img_ask').attr('id', 'image_ref_'+$ActPwrUp);
     $("#pregMain").show();
     $("#pregWindow").fadeIn(400);
 }

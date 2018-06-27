@@ -4,11 +4,13 @@ function Lab_Juego() {
     // puntos
     this.ptsWinJuego = 0; //ptos generados por acierto en el juego
     this.intentos = 2;
-    this.puntajeAcierto = 10;
+    this.puntajeAcierto = 20;
     this.contAciertos = 0;
     // para el control de tiempo
     this.CTInicial = 120;
     this.CTiempo = 0;
+    this.Vereda = 0;
+    this.BetwenCars = 0;
     this.CMin = 0;
     this.CSeg = 0;
     //posicion de la escena del juego ( se carga en CalcularLimites )
@@ -105,6 +107,7 @@ function Lab_Player() {
     this.cargar = function () {
         this.spriteId = this.id.children(".sprite");
         this.areaPtje = this.id.children(".ptje");
+        this.warningMC = this.id.children("#warning_MC");
         if (this.defaultSprite[$JAct]) {
             this.spriteId.css("background-image", this.defaultSprite[$JAct]);
         } else {
@@ -153,7 +156,7 @@ function Lab_Player() {
             } else {
                 this.FPosX = this.FPosX + plus;
             }
-        } else if (this.FPosX + this.width >= 1150 && plus > 0) {
+        } else if (this.FPosX + this.width >= 1350 && plus > 0) {
             var cond = 0;
             if (cond > 1350) {
                 $J[$JAct].mueveAreaX(-1 * plus);
@@ -166,7 +169,7 @@ function Lab_Player() {
         this.x = this.x + plus;
         this.draw();
     };
-  this.cambiaY = function (plus) {
+    this.cambiaY = function (plus) {
         if (this.FPosY <= 350 && plus < 0) {
             if ($J[$JAct].posY < 0) {
                 $J[$JAct].mueveAreaY(-1 * plus);
@@ -187,7 +190,6 @@ function Lab_Player() {
         this.z = Math.floor(this.y / 10);
         this.draw();
     };
-
     this.hittest = function (elmB, plusX, plusY) {
         if (plusX === undefined) { plusX = 0; }
         if (plusY === undefined) { plusY = 0; }
@@ -304,7 +306,6 @@ function Lab_Enemigo(x, y, ancho, alto, direccion) {
             this.Anim_rate = Anim_rate;
         }
     }
-
     this.initMov = function (movX, movY, durAnim, delay) {
         this.movX = movX;
         this.movY = 0;
@@ -348,7 +349,7 @@ function Lab_Enemigo(x, y, ancho, alto, direccion) {
             this.hitTime = parseInt((tiempo / $delayTime), 10);
         }
         this.hit = true;
-        this.id.addClass("hit");
+        //this.id.addClass("hit");
     }
     this.Move = function () {
         // timer del hit 
@@ -357,7 +358,7 @@ function Lab_Enemigo(x, y, ancho, alto, direccion) {
                 this.hitTime--;
             if (this.hitTime == 1) {
                 this.hit = false;
-                this.id.removeClass("hit");
+                //this.id.removeClass("hit");  
             }
         }
         // animacion del sprite
@@ -389,8 +390,7 @@ function Lab_Enemigo(x, y, ancho, alto, direccion) {
                     this.direccion = 0;
             } else {
                 enMovimiento = false;
-            }
-
+            } c
         }
         if (enMovimiento) {
             this.x = this.x + (this.vKey * this.stepArray[this.dirMov].x);
@@ -398,106 +398,54 @@ function Lab_Enemigo(x, y, ancho, alto, direccion) {
             this.z = Math.floor(this.y / 10);
         }
     }
+    this.veredaMC = function(){
+        if (this.hit) {
+            if (this.hitTime > 0)
+                this.hitTime--;                
+            if (this.hitTime == 1) {
+                this.hit = false;
+                //this.id.removeClass("hit");
+            }
+        }
+    }
     this.moveRemolino = function () {
         // timer del hit 
-        //console.log(this.z);
         if (this.hit) {
             if (this.hitTime > 0)
                 this.hitTime--;
             if (this.hitTime == 1) {
                 this.hit = false;
-                this.id.removeClass("hit");
             }
         }
-        if (this.x > -20 && this.x < 0) {
-            this.id.addClass("hide");
-        }
-        if (this.x > 1490 && this.x <= 1500) {
+        if (this.x < -100 && this.x < 0) {
             this.id.removeClass("hide");
         }
-        if (this.x > -350) {
-            this.x = this.x - this.vel;
-            //this.y = this.y + (2 * this.vert);
-            //this.y = this.y + 1;
-            //this.z = Math.floor(this.y / 10);
-            // if (this.y < 100) {
-                //this.vert = 1;
-            // } else if (this.y > 600) {
-                //this.vert = -1;
-            // }
+        if (this.x < 1450 && this.x >= 1550) {
+            this.id.addClass("hide");
+        }
+        if (this.x < 1550) {
+            this.x = this.x + this.vel;
         } else {
-            //this.x = 1500 + (1 * 1);
-            //this.x = 2 + 1);
-            //this.y = 300 + Math.floor(Math.random() * 400);
-            //this.z = Math.floor(this.y / 10);
-            //this.vel = 3 + Math.floor(Math.random() * 3);
-            this.x = 2000 + Math.floor(Math.random() * 100);
-            this.vel = 2 + 1;
-            //this.vert = (Math.floor(Math.random() * 2) * 2) - 1;
-            this.vert = 2 + 1;                              
+            this.x = -1650 + Math.floor(Math.random() * 100);
+            this.vel = 1 + 1;
+            this.vert = 1 + 1;                              
             this.draw();
         }
     }
     this.controlHit = function () {
-        //$TimeDie = 0;
         if (PlayerMov.hittest(this) && !this.hit) {
             this.choque();
-            $(".ptje").addClass('animated rubberBand').fadeIn(100);
-            //PlayerMov.id.removeClass('animated flash');
-            restapuntos();
-            //$J[$JAct].quitaVidas();
+            $J[$JAct].quitaVidas();
             playSound(window.audioCrash);
-            setTimeout(function () {
-                $(".ptje").removeClass('animated rubberBand').fadeOut(300);
-                //PlayerMov.id.addClass('animated flash');
-            }, 500);
-        }else{
-            $TimeDie = false;
-            //$TDie = 0;
+            $TimeDie = true;
+            $pasar_betwen = true;
+            getRandomSite();
         }
     }
     this.draw = function () {
         this.id.css({"left": this.x + $J[$JAct].posX, "top": this.y + $J[$JAct].posY, "z-index": this.z});
     }
 }
-
-/**************************  nuevo objeto creado ***************************/
-
-// function object(x, y, width, height, color){
-//     this.width = width;
-//     this.height = height;
-//     this.x = x;
-//     this.y = y;
-//     this.color = color;
-
-//     this.update = function(){
-//         this.draw();
-//     }
-
-//     this.draw = function(){
-//         $ParedMask1.ctx.beginPath();
-//         //this.id.css({"left": this.x, "top": this.y, "z-index": this.y});
-//         $ParedMask1.ctx.rect(this.x, this.y, this.width, this.height);
-//         $ParedMask1.ctx.fillStyle = this.color;
-//         $ParedMask1.ctx.fill();
-//         $ParedMask1.ctx.closePath;
-//     }   
-// }
-// var pared_muerte = new object(0, 300, 100, 100, '#fff');
-// function animate(){
-//     requestAnimationFrame(animate);
-//     $ParedMask1.ctx.clearRect(0, 0, innerWidth, innerHeight);
-//     pared_muerte.update();
-// }
-// animate();
-// function collides(a, b){
-//     return a.x < b.x + b.width &&
-//            a.x + b.width > b.x &&
-//            a.y < b.y + b.height &&
-//            a.y + b.height > b.y;
-// }
-
-
 
 /**********************************************************/
 
