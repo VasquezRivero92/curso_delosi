@@ -24,7 +24,7 @@
         <script src="<?php echo base_url($own_dir . '/js/controlTiempo.js'); ?>"></script>
         <script src="<?php echo base_url($own_dir . '/js/juego1.js'); ?>"></script>
     </head>
-    <?php $avatar = 'av' . $this->session->avatar;?>
+    <?php $avatar = 'dr' . $this->session->avatar;?>
     <body class="<?php echo $avatar . ' g-' . $this->session->grupo; ?>">
         <!-- - - - - - - - - - - - - - - -  Loader  - - - - - - - - - - - - - - - -->
         <div id="qLoverlay" class="resizeWindow">
@@ -35,7 +35,12 @@
             <div id="instrucciones_2" class="instrucciones">
                 <div id="btnNext_2" class="btnNext"></div>
             </div>
-            <div id="instrucciones_5" class="instrucciones">
+            <div id="instrucciones_3" class="instrucciones">
+                <div id="btnPrev_3" class="btnPrev"></div>
+                <div id="btnNext_3" class="btnNext"></div>
+            </div>
+            <div id="instrucciones_4" class="instrucciones">
+                <div id="btnPrev_4" class="btnPrev"></div>
                 <div id="btnJugar"></div>
             </div>
             <!-- - - - - - - - - - - - - - - -  Juego  - - - - - - - - - - - - - - - -->

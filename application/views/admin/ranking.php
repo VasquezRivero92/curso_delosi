@@ -43,7 +43,7 @@
                                 <th>N&ordm;</th><th>Ap. paterno</th><th>Ap. materno</th><th>Nombres</th><th>Email</th>
                                 <?php
                                 foreach ($cursos as $cur) {
-                                    echo '<th>N. ' . $cur->id . '</th><!--<th>Visto</th>-->';
+                                    echo '<th>' . $cur->descrip . '</th><!--<th>Visto</th>-->';
                                 }
                                 ?>
                                 <th>Total</th><th>Fecha</th>

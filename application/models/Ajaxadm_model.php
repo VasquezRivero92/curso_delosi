@@ -86,7 +86,7 @@ class Ajaxadm_model extends CI_Model {
                     continue;
                 }
             }
-            $total = '';
+            $total = '0';
             $tUser = array(
                 'id' => $user->id,
                 'dni' => $user->dni,

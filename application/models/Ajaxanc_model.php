@@ -74,7 +74,7 @@ class Ajaxanc_model extends CI_Model {
                     continue;
                 }
             }
-            $total = '';
+            $total = '0';
             $tUser = array(
                 'id' => $user->id_user,
                 'dni' => $user->dni,

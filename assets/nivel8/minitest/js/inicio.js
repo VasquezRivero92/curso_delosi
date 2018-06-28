@@ -130,6 +130,22 @@ function initSonidos() {
 }
 
 function initBotones() {
+    $('.btnPrev').click(function () {
+        playSound(window.audioCatch);
+        var id = parseInt($(this).attr('id').split('_')[1], 10);
+        $('.instrucciones').stop().delay(10).fadeOut(500);
+        var j = id - 1;
+        $('#instrucciones_' + j).stop().fadeIn(10);
+        playTexto(window['txti' + j]);
+    });
+    $('.btnNext').click(function () {
+        playSound(window.audioCatch);
+        var id = parseInt($(this).attr('id').split('_')[1], 10);
+        $('.instrucciones').stop().delay(300).fadeOut(100);
+        var j = id + 1;
+        $('#instrucciones_' + j).stop().fadeIn(500);
+        playTexto(window['txti' + j]);
+    });
     //console.log($n_pregunta);
     $('.punt_anim').click(function(event) {
 
@@ -297,13 +313,15 @@ function initBotones() {
      });
     }
 function showInicio() {
-    playBGMusic(window.BGIntro);
+    playBGMusic(window.intro);
+    playTexto(window.txti1);
     redimensionarJuego();
     $('.instrucciones').stop().hide();
     $('#instrucciones_1').fadeIn(1000);
     setTimeout(function () {
-        $('.instrucciones').stop().delay(300).fadeOut(100);
-        $('#instrucciones_5').stop().fadeIn(500);
+        $(".instrucciones").stop().delay(300).fadeOut(100);
+        $("#instrucciones_2").stop().fadeIn(500);
+        playTexto(window.txti2);
     }, 4000);    
 }
 /*******************************************************************************/

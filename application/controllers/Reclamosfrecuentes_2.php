@@ -51,7 +51,7 @@ class Reclamosfrecuentes_2 extends Nivel_Controller {
             $this->data['jNum'] = 1;
             $this->load->view('nivel' . $this->cur . '/minitest', $this->data);
         } else {
-            redirect('drivers/', 'refresh');
+            redirect('reclamosfrecuentes_2/', 'refresh');
         }
     }
 

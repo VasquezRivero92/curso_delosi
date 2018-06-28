@@ -1,5 +1,6 @@
 <!doctype html>
-<html><head>
+<html>
+    <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title><?php echo $this->config->item('site_title', 'ion_auth'); ?></title>
@@ -27,8 +28,8 @@
         <script src="<?php echo base_url($own_dir . '/js/controlPuntos1.js'); ?>"></script>
         <script src="<?php echo base_url($own_dir . '/js/juego1.js'); ?>"></script>
     </head>    
-    <?php $avatar = 'av' . $this->session->avatar;?>
-    <body class="playerM <?php echo $avatar . ' g-' . $this->session->grupo; ?>" ><!-- la M determinar con php si es mujer o varon  -->
+    <?php $avatar = 'dr' . $this->session->avatar;?>
+    <body class="player<?php echo $this->session->avatar;?>" ><!-- la M determinar con php si es mujer o varon  -->
        <!-- - - - - - - - - - - - - - - -  Loader  - - - - - - - - - - - - - - - -->
         <div id="qLoverlay" class="resizeWindow">
             <div id="img_loader01"><div></div></div>
