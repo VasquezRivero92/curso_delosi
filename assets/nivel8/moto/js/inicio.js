@@ -227,10 +227,11 @@ function initBotones() {
             ContPreguntas = 0;
             $ActPwrUp = 0;
 
-            showInicio();
+            
             $('.caratula, .game, #capaResumen').stop().fadeOut(500);
             $('#reset_time').stop().fadeOut(500);
             $("#infoWindow").fadeOut(300);
+            volverintentar();
         }
     });   
 
@@ -277,6 +278,19 @@ function showInicio() {
         $("#instrucciones_2").stop().fadeIn(500);
         playTexto(window.txti2);
     }, 4000);
+}
+function volverintentar() { 
+    redimensionarJuego();   
+    $JAct = 1;
+    $('#escenaJuego1').fadeIn(1000);
+    introJuego();
+    CalcularLimites();
+    PlayerMov.id = $('#Player_1');
+    PlayerMov.cargar();
+    PlayerMov.areaPtje.stop().removeClass('animated rubberBand').fadeOut(300);
+    PlayerMov.warningMC.removeClass('show_warn');
+
+    $J[$JAct].cargarParedes();
 }
 function introJuego() {
     $(".caratula,.conteo").stop().fadeOut(10);

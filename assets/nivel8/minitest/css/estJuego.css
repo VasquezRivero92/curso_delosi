@@ -388,103 +388,82 @@
 #gPreg_1 .btn {
     line-height: 85px;
 }
+
 #btn_1_1 {
+    top: 430px;
     left: 320px;
-    top: 435px;
+    position: absolute;
+    width: 250px;
+    height: 131px;
+    border-radius:  10px;
+    /*top: 382px;*/
+    /*background: #ffbb2c;*/
+    text-align:center;
+    color:#333745;
+    font-family:"Catalogo";
+    font-size:14px;
+    line-height: 104px;
+    cursor: pointer;
 }
 #btn_1_2 {
-    left: 775px;
-    top: 435px;
+    top: 485px;
+    left: 545px;
+    position: absolute;
+    width: 250px;
+    height: 131px;
+    border-radius:  10px;
+    /*top: 382px;*/
+    /*background: #ffbb2c;*/
+    text-align:center;
+    color:#333745;
+    font-family:"Catalogo";
+    font-size:14px;
+    line-height: 104px;
+    cursor: pointer;
 }
 #btn_1_3 {
-    left: 545px;
-    top: 490px;
-}
-#btn_2_1 {
-    left: 320px;
-    top: 435px;
-}
-#btn_2_2 {
+    top: 430px;
     left: 775px;
-    top: 435px;
+    position: absolute;
+    width: 250px;
+    height: 131px;
+    border-radius:  10px;
+    /*top: 382px;*/
+    /*background: #ffbb2c;*/
+    text-align:center;
+    color:#333745;
+    font-family:"Catalogo";
+    font-size:14px;
+    line-height: 104px;
+    cursor: pointer;
 }
-#btn_2_3 {
-    left: 545px;
-    top: 490px;
+
+#btn_1_1 span{
+    padding: 5px;
+    margin-top: -5px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 16px;
+    width: 190px;
+    
 }
-#btn_3_1 {
-    left: 320px;
-    top: 435px;
+#btn_1_2 span{
+    padding: 5px;
+    margin-top: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 16px;
+    width: 190px;
 }
-#btn_3_2 {
-    left: 775px;
-    top: 435px;
+#btn_1_3 span{
+    padding: 5px;
+    margin-top: -5px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 16px;
+    width: 190px;
 }
-#btn_3_3 {
-    left: 545px;
-    top: 490px;
-}
-#btn_4_1 {
-    left: 320px;
-    top: 435px;
-}
-#btn_4_2 {
-    left: 775px;
-    top: 435px;
-}
-#btn_4_3 {
-    left: 545px;
-    top: 490px;
-}
-#btn_5_1 {
-        left: 320px;
-    top: 435px;
-}
-#btn_5_2 {
-    left: 775px;
-    top: 435px;
-}
-#btn_5_3 {
-    left: 545px;
-    top: 490px;
-}
-#btn_6_1 {
-    left: 320px;
-    top: 435px;
-}
-#btn_6_2 {
-    left: 775px;
-    top: 435px;
-}
-#btn_6_3 {
-    left: 545px;
-    top: 490px;
-}
-#gPreg_7 .btn {}
-#btn_7_1 {
-    left: 320px;
-    top: 435px;
-}
-#btn_7_2 {
-    left: 775px;
-    top: 435px;
-}
-#btn_7_3 {
-    left: 545px;
-    top: 490px;
-}
-#btn_8_1 {
-    left: 320px;
-    top: 435px;
-}
-#btn_8_2 {
-    left: 775px;
-    top: 435px;
-}
-#btn_8_3 {
-    left: 545px;
-    top: 490px;
-}
+
 .btn span {
     display: inline-block;
     vertical-align: middle;

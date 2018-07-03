@@ -13,9 +13,9 @@ $J.showJuego = function () {
         //$s_intentos = data.charAt(2);
         if ($p_intentos >= 2) {
             $('#btnReinicio,#resumenOportunidad').css('background', 'none').hide();
-            // $('#resumenMensaje').html('Sigue adelante');
+            //$('#resumenMensaje').html('Sigue adelante');
         }else{
-            // $('#resumenMensaje').html('¡Vuelve a intentarlo!');
+            //$('#resumenMensaje').html('¡Vuelve a intentarlo!');
         }
     });
     setTimeout(function () {
@@ -34,14 +34,11 @@ $J.finTiempo = function () {
     $('#pregTime').stop().delay(300).fadeIn(300);
     $('.preguntas').fadeOut(500);
     if($n_pregunta == "gPreg_1"){
-            setTimeout(function(){ $('#pregunta1_' + $pID).animateCss('bounceIn').hide(); }, 500);  
-                  
+            setTimeout(function(){ $('#pregunta1_' + $pID).animateCss('bounceIn').hide(); }, 500);
             }else if($n_pregunta == "gPreg_2"){
-            setTimeout(function(){ $('#pregunta2_' + $pID).animateCss('bounceIn').hide(); }, 500);         
-            
+            setTimeout(function(){ $('#pregunta2_' + $pID).animateCss('bounceIn').hide(); }, 500);
             }else if($n_pregunta == "gPreg_3"){
-            setTimeout(function(){ $('#pregunta3_' + $pID).animateCss('bounceIn').hide(); }, 500);         
-            
+            setTimeout(function(){ $('#pregunta3_' + $pID).animateCss('bounceIn').hide(); }, 500);
             }else if($n_pregunta == "gPreg_4"){
             setTimeout(function(){ $('#pregunta4_' + $pID).animateCss('bounceIn').hide(); }, 500);         
             }else if($n_pregunta == "gPreg_5"){

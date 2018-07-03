@@ -1,4 +1,4 @@
-$puntos_minitest = 0;
+$puntos_moto = 0;
 
 /*******************************************************************************/
 $J[1].showJuego = function () {
@@ -14,7 +14,7 @@ $J[1].showJuego = function () {
     $J[$JAct].cargarParedes();
     $.get(bdir + 'ajax/get_puntaje').done(function (data) {
         console.log('puntos: ' + data);
-        $puntos_minitest = data;
+        $puntos_moto = data;
     });
     $.post(bdir + 'ajax/set_intentos_drivers_2').done(function (data) {
         $p_intentos = data.charAt(2);
