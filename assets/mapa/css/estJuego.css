@@ -337,6 +337,324 @@
   z-index: 2;
   background-image:url(../images/people/pep16.svg); }
 
+#icoPrev_22{ 
+  left : 1914px;
+  top : 1004px;
+  width : 47px;
+  height : 44px; 
+  z-index: 2;
+  background:url(../images/gif/gatito2.gif) no-repeat 50% 50%;
+  background-size: contain;
+}
+#icoPrev_23{ 
+  left : 1581px;
+  top : 1344px;
+  width : 42px;
+  height : 30px;
+  z-index: 136;
+  background:url(../images/gif/dog1.gif) no-repeat 50% 50%;
+  background-size: contain;
+}
+#icoPrev_24{ 
+  left : 2041px;
+  top : 1730px;
+  width : 43px;
+  height : 40px;
+  z-index: 134;
+  background:url(../images/gif/dog2.gif) no-repeat 50% 50%;
+  background-size: contain;
+}
+#icoPrev_25{ 
+  left : 1833px;
+  top : 1206px;
+  width : 24px;
+  height : 27px;
+  z-index: 200;
+  background:url(../images/gif/gatito.gif) no-repeat 50% 50%;
+  background-size: contain;
+}
+#icoPrev_26{ 
+  left : 1232px;
+  top : 1005px;
+  width : 37px;
+  height : 35px;
+  z-index: 105;
+  background:url(../images/gif/sirena.gif) no-repeat 50% 50%;
+  background-size: contain;
+}
+#icoPrev_27{ 
+  left : 1402px;
+  top : 1035px;
+  width : 58px;
+  height : 135px;
+  z-index: 10;
+  opacity: 0.5;
+  background:url(../images/gif/signal.gif) no-repeat 50% 50%;
+  background-size: contain;
+}
+#icoPrev_28{ 
+  left : 1957px;
+  top : 1036px;
+  width : 58px;
+  height : 135px;
+  z-index: 10;
+  opacity: 0.5;
+  background:url(../images/gif/signal.gif) no-repeat 50% 50%;
+  background-size: contain;
+}
+#icoPrev_29{ 
+  left : 1068px;
+  top : 603px;
+  width : 37px;
+  height : 35px;
+  z-index: 10;
+  background:url(../images/gif/bird1.gif) no-repeat 50% 50%;
+  background-size: contain;
+}
+#icoPrev_30{ 
+  left : 1617px;
+  top : 1008px;
+  width : 33px;
+  height : 31px;
+  z-index: 10;
+  background:url(../images/gif/bird2.gif) no-repeat 50% 50%;
+  background-size: contain;
+}
+#icoPrev_31{ 
+  left : 1671px;
+  top : 1400px;
+  width : 27px;
+  height : 26px;
+  z-index: 142;
+  background:url(../images/gif/bird2.gif) no-repeat 50% 50%;
+  background-size: contain;
+}
+#icoPrev_32{ 
+  left : 1796px;
+  top : 1452px;
+  width : 37px;
+  height : 36px;
+  z-index: 142;
+  transform: rotateY(-180deg);
+  background:url(../images/gif/bird2.gif) no-repeat 50% 50%;
+  background-size: contain;
+}
+#icoPrev_33{ 
+  left : 180px;
+  top : 1021px;
+  width : 46px;
+  height : 42px;
+  z-index: 2;
+  background:url(../images/gif/dance.gif) no-repeat 50% 50%;
+  background-size: contain;
+}
+#icoPrev_34{ 
+  left : 620px;
+  top : 947px;
+  width : 60px;
+  height : 56px;
+  z-index: 2;
+  background:url(../images/gif/lucesconstruct.gif) no-repeat 50% 50%;
+  background-size: contain;
+}
+#icoPrev_35{ 
+  left : 1258px;
+  top : 1721px;
+  width : 60px;
+  height : 56px;
+  z-index: 202;
+  background:url(../images/gif/lucesconstruct.gif) no-repeat 50% 50%;
+  background-size: contain;
+}
+#icoPrev_36{ 
+  left : 1696px;
+  top : 2015px;
+  width : 60px;
+  height : 56px;
+  z-index: 222;
+  background:url(../images/gif/lucesconstruct.gif) no-repeat 50% 50%;
+  background-size: contain;
+}
+#icoPrev_37{ 
+  left : 2626px;
+  top : 949px;
+  width : 60px;
+  height : 56px;
+  z-index: 2;
+  background:url(../images/gif/lucesconstruct.gif) no-repeat 50% 50%;
+  background-size: contain;
+}
+#icoPrev_38{ 
+  left : 3192px;
+  top : 1373px;
+  width : 60px;
+  height : 56px;
+  z-index: 2;
+  background:url(../images/gif/lucesconstruct.gif) no-repeat 50% 50%;
+  background-size: contain;
+}
+#icoPrev_39{ 
+  left : 974px;
+  top : 1178px;
+  width : 33px;
+  height : 31px;
+  z-index: 105;
+  background:url(../images/gif/semafor.gif) no-repeat 50% 50%;
+  background-size: contain;
+}
+#icoPrev_40{ 
+    left: 809px;
+    top: 1715px;
+    width: 90px;
+    height: 221px;
+    opacity: 0.7;
+    z-index: 207;
+  background:url(../images/gif/firewor4.gif) no-repeat 50% 50%;
+  background-size: contain;
+}
+#icoPrev_41{ 
+  left : 472px;
+  top : 1690px;
+  width : 69px;
+  height : 71px;
+  z-index: 142;
+  opacity: 0.4;
+  background:url(../images/gif/humo.gif) no-repeat 50% 50%;
+  background-size: contain;
+}
+#icoPrev_42{ 
+  left : 1162px;
+  top : 1973px;
+  width : 69px;
+  height : 71px;
+  z-index: 142;
+  opacity: 0.4;
+  background:url(../images/gif/humo.gif) no-repeat 50% 50%;
+  background-size: contain;
+}
+#icoPrev_43{ 
+  left : 1668px;
+  top : 1500px;
+  width : 110px;
+  height : 34px;
+  z-index: 142;
+  background:url(../images/gif/patitos2.gif) no-repeat 50% 50%;
+  background-size: contain;
+}
+#icoPrev_44{ 
+  left : 1526px;
+  top : 1620px;
+  width: 130px;
+  height: 54px;
+  z-index: 162;
+  background:url(../images/gif/patitos.gif) no-repeat 50% 50%;
+  background-size: contain;
+}
+#icoPrev_45{ 
+  left : 157px;
+  top : 1520px;
+  width : 14px;
+  height : 15px;
+  z-index: 142;
+  background:url(../images/gif/faro2.gif) no-repeat 50% 50%;
+  background-size: contain;
+}
+#icoPrev_46{ 
+  left : 243px;
+  top : 1519px;
+  width : 14px;
+  height : 15px;
+  z-index: 142;
+  background:url(../images/gif/faro2.gif) no-repeat 50% 50%;
+  background-size: contain;
+}
+#icoPrev_47{ 
+  left : 421px;
+  top : 1292px;
+  width : 87px;
+  height : 93px;
+  z-index: 142;
+  background:url(../images/gif/farocarro.gif) no-repeat 50% 50%;
+  background-size: contain;
+}
+#icoPrev_48{ 
+  left : 368px;
+  top : 1573px;
+  width : 14px;
+  height : 15px;
+  z-index: 142;
+  background:url(../images/gif/faro2.gif) no-repeat 50% 50%;
+  background-size: contain;
+}
+#icoPrev_49{ 
+  left : 819px;
+  top : 1991px;
+  width : 70px;
+  height : 72px;
+  z-index: 210;
+  background:url(../images/gif/monst2.gif) no-repeat 50% 50%;
+  background-size: contain;
+}
+#icoPrev_50{ 
+  left : 3088px;
+  top : 1531px;
+  width : 69px;
+  height : 71px;
+  z-index: 200;
+  opacity: 0.4;
+  background:url(../images/gif/humo.gif) no-repeat 50% 50%;
+  background-size: contain;
+}
+#icoPrev_51{ 
+  left : 2588px;
+  top : 1881px;
+  width : 164px;
+  height : 199px;
+  z-index: 200;
+  background:url(../images/gif/stars.gif) no-repeat 50% 50%;
+  background-size: contain;
+}
+#icoPrev_52{ 
+  left : 2538px;
+  top : 1558px;
+  width : 43px;
+  height : 40px;
+  z-index: 200;
+  background:url(../images/gif/dogi5.gif) no-repeat 50% 50%;
+  background-size: contain;
+}
+#icoPrev_53{ 
+  left : 2405px;
+  top : 1244px;
+  width : 43px;
+  height : 40px;
+  z-index: 200;
+  background:url(../images/gif/palo2.gif) no-repeat 50% 50%;
+  background-size: contain;
+}
+#icoPrev_54{ 
+  left : 2066px;
+  top : 1511px;
+  width : 164px;
+  height : 152px;
+  z-index: 200;
+  background:url(../images/gif/stars.gif) no-repeat 50% 50%;
+  background-size: contain;
+}
+#icoPrev_55{ 
+  left : 2045px;
+  top : 918px;
+  width : 119px;
+  height : 111px;
+  z-index: 200;
+  background:url(../images/gif/stars.gif) no-repeat 50% 50%;
+  background-size: contain;
+}
+
+
+
+
+
 #icoPrev_19 {
   left : 1820px;
   top : 937px;
@@ -365,8 +683,8 @@
 }
 #Player_1 .sprite{
     position:absolute;
-    width:120px; height:120px;
-    left:-50px; bottom:0px;
+    width:102.4px; height:102.4px;
+    left:-40px; bottom:0px;
     background-position:0px 0px;
     background-color: rgba(250,0,0,0);
 }
@@ -384,10 +702,13 @@
 
 #Player_1 .ptje{
     position:absolute; display:none;
-    width:99px; height:91px;
-    left: -110px; top: -165px;
-    background: rgba(250,0,0,0) url(../images/alert.png) no-repeat 50% 50%;
+     width: 70px;
+    height: 80px;
+    left: -33px;
+    top: -145px;
+    background: rgba(250,0,0,0) url(http://localhost/cursodelosi-github/assets/mapa/css/../images/alert.gif) no-repeat 50% 50%;
     cursor: pointer;
+    background-size: cover;
     z-index: 200;
 }
 /*************************  Objetos por cada escenario  *************************/
