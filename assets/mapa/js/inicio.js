@@ -84,7 +84,7 @@ function initSonidos() {
 function initBotones() {
 
     $('.anim').click(function() {
-        if($( "#topBar" ).hasClass( "animPers" )){
+        if($( "#topBar" ).hasClass("animPers")){
             $('#topBar').removeClass('animPers');
         }else{
             $('#topBar').addClass('animPers');

@@ -30,6 +30,18 @@ function initObjetos1() {
    //$(".powerUp").removeClass("hit").show();
     $(".icoPel").show(); 
     $(".icoPrev").show();
+
+    $PowerPR = [];
+    $(".icoPrev").each(function (i, obj) {//para los Power-Ups
+        var TPUp = new Lab_PowerUp(parseInt($(obj).css('left'),10), parseInt($(obj).css('top'),10), $(obj).width(), $(obj).height());
+        TPUp.id = $(this).attr('id');
+        var id = parseInt(TPUp.id.split("_")[1], 10);
+        //var tmpPR = new Lab_PowerUp(parseInt($('#icoPrev_'+id).css('left'),10), parseInt($('#icoPrev_'+id).css('top'),10), $('#icoPrev_'+id).width(), $('#icoPrev_'+id).height());
+        //tmpPR.id = 'icoPrev_'+id;
+        TPUp.draw(i);
+        $PowerPR.push(TPUp);
+    });
+
     if ($AnimacionCreada == 1) {
         $PowerUps.forEach(function (val, i) {
             val.hit = false;
@@ -41,7 +53,7 @@ function initObjetos1() {
     }else{
         $PowerUps = [];
         $PowerPE = [];
-        $PowerPR = [];
+        //$PowerPR = [];
         $ActPwrUp = 0;
         $(".powerUp").each(function (i, obj) {//para los Power-Ups
             var TPUp = new Lab_PowerUp(parseInt($(obj).css('left'),10), parseInt($(obj).css('top'),10), $(obj).width(), $(obj).height());
@@ -54,12 +66,6 @@ function initObjetos1() {
                 tmpPE.id = 'icoPel_'+id;
                 tmpPE.draw(i);
                 $PowerPE[i] = tmpPE;
-            }
-            if($('#icoPrev_'+id).length){
-                var tmpPR = new Lab_PowerUp(parseInt($('#icoPrev_'+id).css('left'),10), parseInt($('#icoPrev_'+id).css('top'),10), $('#icoPrev_'+id).width(), $('#icoPrev_'+id).height());
-                tmpPR.id = 'icoPrev_'+id;
-                tmpPR.draw(i);
-                $PowerPR[i] = tmpPR;
             }
         });
     }

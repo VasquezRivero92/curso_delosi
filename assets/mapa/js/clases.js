@@ -187,6 +187,7 @@ function Lab_Player() {
         this.y = this.y + plus;
         this.z = Math.floor(this.y / 10);
         this.draw();
+        console.log(this.z);
     };
 
     // this.cambiaX = function (plus) {

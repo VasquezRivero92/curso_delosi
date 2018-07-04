@@ -39,9 +39,9 @@
 
             <div id="instrucciones_1" class="instrucciones"></div>
             <div id="instrucciones_2" class="instrucciones">
-                <div id="bg_2"></div>
+                <!-- <div id="bg_2"></div> -->
                 <div id="welcome_2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, vitae.</div>
-                <div id="alcalde_2"></div>
+                <!-- <div id="alcalde_2"></div> -->
                 <div id="btn_cont"></div>
             </div>
 
@@ -61,7 +61,7 @@
                     <div id="icoPel_2" class="icoPel"></div>
                     <div id="icoPel_3" class="icoPel"></div>
                     <div id="icoPel_4" class="icoPel"></div>
-                    <div id="icoPel_5" class="icoPel"></div>
+                    <div id="icoPel_5" class="icoPel"><div class="fuenteMC"></div></div>
                     <div id="icoPel_6" class="icoPel"></div>
                     <div id="icoPel_7" class="icoPel"></div>
                     <div id="icoPel_8" class="icoPel"></div>
@@ -82,6 +82,16 @@
                     <div id="icoPrev_9" class="icoPrev"></div>
                     <div id="icoPrev_10" class="icoPrev"></div>
                     <div id="icoPrev_11" class="icoPrev"></div>
+                    <div id="icoPrev_12" class="icoPrev"></div>
+                    <div id="icoPrev_13" class="icoPrev"></div>
+                    <div id="icoPrev_14" class="icoPrev"></div>
+                    <div id="icoPrev_15" class="icoPrev"></div>
+                    <div id="icoPrev_16" class="icoPrev"></div>
+                    <div id="icoPrev_17" class="icoPrev"></div>
+                    <div id="icoPrev_18" class="icoPrev"></div>
+                    <div id="icoPrev_19" class="icoPrev"></div>
+                    <div id="icoPrev_20" class="icoPrev"></div>
+                    <div id="icoPrev_21" class="icoPrev"></div>
 
                     <div id="fondoOPC1" class="fondoOPC">
                         <div id="powerUp_1" class="powerUp powerUp1">1</div>
@@ -102,7 +112,7 @@
             </div>
             <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
             <div id="marcador" class="gameEnv">
-                <div id="topBar" class="<?php echo $avatar_p; ?>">
+                <div id="topBar" class="animPers <?php echo $avatar_p; ?>">
                     <div id="i4avatar"></div>
                     <div id="i4Nombre"><?php echo strtoupper($user_login['nombre'] . ' ' . $user_login['apat'] . ' ' . $user_login['amat']); ?></div>
                     <?php echo anchor('login/logout', ' ', array('id' => 'i4Logout')); ?>
@@ -116,7 +126,7 @@
                 <div id="centerBar"></div>
             </div>
 
-            <div id="pausaTouch" class="gameEnv"><span>AYUDA</span></div>
+            <div id="pausaTouch" class="gameEnv"><!-- <span>AYUDA</span> --></div>
             <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
             <div id="pregWindow">
 
@@ -137,7 +147,7 @@
                             <div id="pop2txt1">Sabemos que es importante para ti, tener todos los conceptos claros de cada nivel, si tienes una duda o consulta detállala en el siguiente recuadro y te responderemos dentro de las 24 horas.</div>
                             <textarea id="pop2ta" maxlength="400"></textarea>
                             <div id="pop2txt2">(*) Los días miércoles las respuestas a tus dudas o consultas serán en tiempo real de 8:30 a.m. a 6:00 p.m.</div>
-                            <input id="pop2sub" class="clearfix" type="submit" value="ENVIAR">
+                            <input id="pop2sub" class="clearfix" type="submit" value=" ">
                             <div id="pop2close"></div>
                         </form>
                     </div>

@@ -32,7 +32,7 @@
 #powerUp_6{ width:20px; height:20px; left:0px; top:0px; }
 #powerUp_7{ 
   left : 2595px;
-  top : 1780px;
+  top : 1866px;
   width : 138px;
   height : 63px;
 }
@@ -81,7 +81,8 @@
   width : 136px;
   height : 226px;
   z-index: 101;
-  background-image:url(../images/mapa/preguntas.svg); }
+  background-image:url(../images/mapa/preguntas.svg); 
+}
 #icoPel_2{ 
   left : 1780px;
   top : 1100px;
@@ -91,9 +92,9 @@
     background-image:url(../images/mapa/arbolito.svg); }
 #icoPel_3{ 
   left : 1994px;
-  top : 882px;
+  top : 925px;
   width : 555px;
-  height : 577px;
+  height : 535px;
   z-index: 125;
     background-image:url(../images/mapa/twinbuild.svg); }
 #icoPel_4{ 
@@ -110,6 +111,18 @@
   height : 176px; 
   z-index: 141;   
     background-image:url(../images/mapa/fuente.svg); }
+
+.fuenteMC{
+  width: 230px; height: 204px;
+  position: absolute;
+  top: -25px; left: -15px;
+  background: url(../images/mapa/animacionesfuente.png) no-repeat;
+  animation: moveX 1s steps(16) infinite;
+}
+@keyframes moveX{
+  from{background-position-x:0px;}
+  to{background-position-x:-3680px;}
+}
 #icoPel_6{ 
   left : 1538px;
   top : 1583px;
@@ -140,23 +153,23 @@
     background-image:url(../images/mapa/not2.svg); }
 #icoPel_10{ 
   left : 91px;
-  top : 1310px;
+  top : 1171px;
   width : 437px;
-  height : 330px;    
+  height : 468px;    
   z-index: 100;  
     background-image:url(../images/mapa/bomber.svg); }
 #icoPel_11{ 
-  left : 2094px;
-  top : 1641px;
-  width : 378px;
-  height : 568px;
+  left : 2071px;
+  top : 1543px;
+  width : 400px;
+  height : 666px;
   z-index: 200; 
     background-image:url(../images/mapa/museo.svg); }
 #icoPel_12{ 
   left : 486px;
-  top : 1930px;
-  width : 469px;
-  height : 282px; 
+  top : 1835px;
+  width : 461px;
+  height : 377px;
   z-index: 199;   
     background-image:url(../images/mapa/cient.svg); }
 #icoPel_13{ 
@@ -177,11 +190,19 @@
     /* background-position: 50% 50%; */
 }
 #icoPrev_1{   
-  left : 1360px;
-  top : 834px;
-  width : 50px;
-  height : 70px;
-   background-image:url(../images/people/1.svg); }
+  left : 1350px;
+  top : 824px;
+  width : 69px;
+  height : 87px;
+  z-index: 4;
+   background-image:url(../images/people/mad1.png); 
+  animation: moveX_Mad1 3s steps(23) infinite;
+ }
+
+@keyframes moveX_Mad1{
+  from{background-position-x:0px;}
+  to{background-position-x:-1587px;}
+}
 #icoPrev_2{ 
   left : 1385px;
   top : 864px;
@@ -191,62 +212,145 @@
 #icoPrev_3{ 
   left : 1448px;
   top : 842px;
-  width : 34px;
-  height : 63px;
-  background-image:url(../images/people/3.svg); }
+  width : 52px;
+  height : 80px;
+  background-image:url(../images/people/mad2.png); 
+  animation: moveX_Mad2 3s steps(23) infinite;
+}
+@keyframes moveX_Mad2{
+  from{background-position-x:0px;}
+  to{background-position-x:-1196px;}
+}
 #icoPrev_4{ 
-  left : 2873px;
-  top : 1157px;
-  width : 30px;
+  left : 675px;
+  top : 778px;
+  width : 27px;
   height : 65px;
-  background-image:url(../images/people/4.svg); }
+  background-image:url(../images/people/pep1.svg); }
 #icoPrev_5{ 
-  left : 3178px;
-  top : 1091px;
+  left : 918px;
+  top : 973px;
   width : 29px;
-  height : 58px;
-  background-image:url(../images/people/5.svg); }
+  height : 62px;
+  background-image:url(../images/people/pep2.svg); }
 #icoPrev_6{ 
-  left : 201px;
-  top : 1057px;
-  width : 34px;
-  height : 65px;
-  background-image:url(../images/people/6.svg); }
+  left : 1331px;
+  top : 1029px;
+  width : 41px;
+  height : 82px;
+  background-image:url(../images/people/pep3.svg); }
 #icoPrev_7{ 
-  left : 349px;
-  top : 995px;
-  width : 35px;
-  height : 70px;
-  background-image:url(../images/people/7.svg); }
+  left : 1783px;
+  top : 2062px;
+  width : 29px;
+  height : 62px;
+  background-image:url(../images/people/pep4.svg); }
 #icoPrev_8{ 
-  left : 1363px;
-  top : 2013px;
-  width : 35px;
-  height : 70px;
-  background-image:url(../images/people/8.svg); }
+  left : 2644px;
+  top : 1015px;
+  width : 32px;
+  height : 77px;
+  background-image:url(../images/people/pep5.svg); }
 #icoPrev_9{ 
-  left : 1874px;
+  left : 1553px;
   top : 1309px;
   width : 29px;
   height : 58px;
   z-index: 135;
-  background-image:url(../images/people/9.svg); }
+  background-image:url(../images/people/pep6.svg); }
 #icoPrev_10{ 
-  left : 2605px;
-  top : 2150px;
+  left : 1833px;
+  top : 1307px;
+  width : 29px;
+  height : 59px;
+  z-index: 135;
+  background-image:url(../images/people/pep7.svg); }
+#icoPrev_11{ 
+  left : 1873px;
+  top : 1307px;
+  width : 30px;
+  height : 58px;
+  z-index: 135;
+  background-image:url(../images/people/pep8.svg); }
+#icoPrev_12{ 
+  left : 2027px;
+  top : 1240px;
+  width : 31px;
+  height : 59px;
+  z-index: 200;
+  background-image:url(../images/people/pep9.svg); }
+#icoPrev_13{ 
+  left : 2494px;
+  top : 1253px;
   width : 29px;
   height : 58px;
   z-index: 200;
-  background-image:url(../images/people/10.svg); }
+  background-image:url(../images/people/pep10.svg); }
+#icoPrev_14{ 
+  left : 2873px;
+  top : 1157px;
+  width : 30px;
+  height : 65px;
+  z-index: 200;
+  background-image:url(../images/people/pep11.svg); }
+#icoPrev_15{ 
+  left : 3178px;
+  top : 1092px;
+  width : 29px;
+  height : 57px;
+  z-index: 200;
+  background-image:url(../images/people/pep12.svg); }
+#icoPrev_16{ 
+  left : 1367px;
+  top : 2018px;
+  width : 31px;
+  height : 66px;
+  z-index: 200;
+  background-image:url(../images/people/pep13.svg); }
+#icoPrev_17{ 
+  left : 2600px;
+  top : 2112px;
+  width : 30px;
+  height : 59px;
+  z-index: 200;
+  background-image:url(../images/people/pep14.svg); }
+#icoPrev_18{ 
+  left : 2733px;
+  top : 2112px;
+  width : 30px;
+  height : 59px;
+  z-index: 200;
+  background-image:url(../images/people/pep15.svg); }
 
-#icoPrev_11 {
-  background-image:url(../images/people/Dayang.svg); 
+#icoPrev_20{ 
+  left : 1273px;
+  top : 1785px;
+  width : 29px;
+  height : 69px;
+  z-index: 200;
+  background-image:url(../images/people/pep16.svg); }
+#icoPrev_21{ 
+  left : 637px;
+  top : 1020px;
+  width : 29px;
+  height : 69px;  
+  z-index: 2;
+  background-image:url(../images/people/pep16.svg); }
+
+#icoPrev_19 {
   left : 1820px;
   top : 937px;
-  width : 57px;
-  height : 64px;
+  width : 59px;
+  height : 71px;
   display: inline-block;
   z-index: 102;
+  background-image:url(../images/people/Dayang.png); 
+  animation: moveX_Day1 3s steps(23) infinite;
+ }
+
+@keyframes moveX_Day1{
+  from{background-position-x:0px;}
+  to{background-position-x:-1357px;}
 }
 
 /**********************************  Paredes  **********************************/
@@ -437,65 +541,71 @@
     overflow-y: scroll;
 }
 .popup form{
-    position: relative;
-    max-width: 493px;
-    margin: 50px auto 50px;
-    padding: 40px 0 50px;
-    background: rgba(255,255,255,1);
-    border: 8px solid #00a2bb;
+    position: absolute;
+    left : 446px;
+    top : 109px;
+    width : 470px;
+    height : 487px;
+    background: rgba(0,0,0,0)  url(../images/formulario/formulario.png) no-repeat;
 }
 
 /*******************************  Popup Buzon  *******************************/
 #pop2txt1{
-    padding: 0 40px 30px;
+    padding: 50px 42px 30px;
     font-family: "Catalogo";
-    font-size: 17px;
-    line-height: 23px;
-    color: #333745;
+    font-size: 16px;
+    line-height: normal;
+    color: #ffffff;
     text-align: center;
 }
 #pop2ta{
     display: block;
-    width: 90%;
-    max-width: 385px;
-    min-height: 100px;
-    margin:0 auto 20px; padding:7px 10px;
-    font-family:"Catalogo";
-    font-size:17px;
-    line-height:20px;
-    color:#333745;
+    position: absolute;
+    top: 149px;
+    left: 37px;
+    width: 378px;
+    resize: none;
+    height: 204px;
+    padding: 19px 10px;
+    font-family: "Catalogo";
+    font-size: 17px;
+    line-height: 20px;
+    color: #333745;
     background-color: #ffffff;
-    border:3px solid #77c4d3;
-    outline:none;
+    border-radius: 35px;
+    outline: none;
 }
 #pop2ta.error{ border:2px solid #ff0000; color: #ff0000; }
 #pop2txt2{
+    position: absolute;
+    top: 436px;
     padding: 0 40px 20px;
     font-family: "Catalogo";
-    font-size: 17px;
-    line-height: 23px;
-    color: #333745;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
     text-align: center;
 }
 #pop2sub{
-    display:block;
-    width:238px; height:36px;
-    margin: 0 auto 0;
-    font-family:"Catalogo";
-    font-size:18px;
-    line-height:35px;
-    color:#ffffff;
-    background: #ff3650;
-    border:0 none;
-    cursor:pointer;
+    position: absolute;
+    left: 155px;
+    top: 378px;
+    width: 174px;
+    height: 45px;
+    outline: none;
+    border: none;
+  background: rgba(0,0,0,0)  url(../images/formulario/enviar.png) no-repeat 50% 50%;
+  cursor:pointer;
 }
 #pop2close{
-    position: absolute;
-    width: 40px; height: 40px;
-    right: 5px; top: 5px;
-    background: rgba(0,0,0,0)  url(../images/button_cancel.png) no-repeat 50% 50%;
-    background-size: contain;
-    cursor:pointer;
+  position: absolute;
+    left: 433px;
+    top: -15px;
+  width : 51px;
+  height : 51px;
+  background: rgba(0,0,0,0)  url(../images/formulario/cerrar.png) no-repeat 50% 50%;
+  background-size: contain;
+  cursor:pointer;
 }
 /*******************************  Nivel PopUp Content Prevencion  *********************************/
 

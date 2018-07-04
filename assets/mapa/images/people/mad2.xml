@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="mad2.png">
+	<!-- Created with Adobe Animate version 18.0.1.115 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Símbolo 2 instancia 10000" x="0" y="0" width="52" height="80" pivotX="8.7" pivotY="7.8"/>
+	<SubTexture name="Símbolo 2 instancia 10001" x="52" y="0" width="52" height="80"/>
+	<SubTexture name="Símbolo 2 instancia 10002" x="104" y="0" width="52" height="80"/>
+	<SubTexture name="Símbolo 2 instancia 10003" x="156" y="0" width="52" height="80"/>
+	<SubTexture name="Símbolo 2 instancia 10004" x="208" y="0" width="52" height="80"/>
+	<SubTexture name="Símbolo 2 instancia 10005" x="260" y="0" width="52" height="80"/>
+	<SubTexture name="Símbolo 2 instancia 10006" x="312" y="0" width="52" height="80"/>
+	<SubTexture name="Símbolo 2 instancia 10007" x="364" y="0" width="52" height="80"/>
+	<SubTexture name="Símbolo 2 instancia 10008" x="416" y="0" width="52" height="80"/>
+	<SubTexture name="Símbolo 2 instancia 10009" x="468" y="0" width="52" height="80"/>
+	<SubTexture name="Símbolo 2 instancia 10010" x="520" y="0" width="52" height="80"/>
+	<SubTexture name="Símbolo 2 instancia 10011" x="572" y="0" width="52" height="80"/>
+	<SubTexture name="Símbolo 2 instancia 10012" x="624" y="0" width="52" height="80"/>
+	<SubTexture name="Símbolo 2 instancia 10013" x="676" y="0" width="52" height="80"/>
+	<SubTexture name="Símbolo 2 instancia 10014" x="728" y="0" width="52" height="80"/>
+	<SubTexture name="Símbolo 2 instancia 10015" x="780" y="0" width="52" height="80"/>
+	<SubTexture name="Símbolo 2 instancia 10016" x="832" y="0" width="52" height="80"/>
+	<SubTexture name="Símbolo 2 instancia 10017" x="884" y="0" width="52" height="80"/>
+	<SubTexture name="Símbolo 2 instancia 10018" x="936" y="0" width="52" height="80"/>
+	<SubTexture name="Símbolo 2 instancia 10019" x="988" y="0" width="52" height="80"/>
+	<SubTexture name="Símbolo 2 instancia 10020" x="1040" y="0" width="52" height="80"/>
+	<SubTexture name="Símbolo 2 instancia 10021" x="1092" y="0" width="52" height="80"/>
+	<SubTexture name="Símbolo 2 instancia 10022" x="1144" y="0" width="52" height="80"/>
+	<SubTexture name="Símbolo 2 instancia 10023" x="1196" y="0" width="52" height="80"/>
+</TextureAtlas>
