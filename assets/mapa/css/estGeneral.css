@@ -576,8 +576,83 @@ body{
   100% {opacity:0; -ms-transform:  translate(0px,-200px)  scaleX(5.00) scaleY(5.00) ;}
 }
 
+.persona_mov1{
+  animation: peop_1 linear 1s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 100%;
+  -webkit-animation: peop_1 linear 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-transform-origin: 50% 100%;
+  -moz-animation: peop_1 linear 1s;
+  -moz-animation-iteration-count: infinite;
+  -moz-transform-origin: 50% 100%;
+  -o-animation: peop_1 linear 1s;
+  -o-animation-iteration-count: infinite;
+  -o-transform-origin: 50% 100%;
+  -ms-animation: peop_1 linear 1s;
+  -ms-animation-iteration-count: infinite;
+  -ms-transform-origin: 50% 100%;
+}
 
+@keyframes peop_1{
+  0% {
+    transform:  scaleY(1.00) ;
+  }
+  50% {
+    transform:  scaleY(1.04) ;
+  }
+  100% {
+    transform:  scaleY(1.00) ;
+  }
+}
 
+@-moz-keyframes peop_1{
+  0% {
+    -moz-transform:  scaleY(1.00) ;
+  }
+  50% {
+    -moz-transform:  scaleY(1.04) ;
+  }
+  100% {
+    -moz-transform:  scaleY(1.00) ;
+  }
+}
+
+@-webkit-keyframes peop_1 {
+  0% {
+    -webkit-transform:  scaleY(1.00) ;
+  }
+  50% {
+    -webkit-transform:  scaleY(1.04) ;
+  }
+  100% {
+    -webkit-transform:  scaleY(1.00) ;
+  }
+}
+
+@-o-keyframes peop_1 {
+  0% {
+    -o-transform:  scaleY(1.00) ;
+  }
+  50% {
+    -o-transform:  scaleY(1.04) ;
+  }
+  100% {
+    -o-transform:  scaleY(1.00) ;
+  }
+}
+
+@-ms-keyframes peop_1 {
+  0% {
+    -ms-transform:  scaleY(1.00) ;
+  }
+  50% {
+    -ms-transform:  scaleY(1.04) ;
+  }
+  100% {
+    -ms-transform:  scaleY(1.00) ;
+  }
+}
 
 
 

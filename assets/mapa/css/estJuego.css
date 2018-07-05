@@ -373,7 +373,7 @@
   background:url(../images/gif/gatito.gif) no-repeat 50% 50%;
   background-size: contain;
 }
-#icoPrev_26{ 
+/* #icoPrev_26{ 
   left : 1232px;
   top : 1005px;
   width : 37px;
@@ -381,7 +381,7 @@
   z-index: 105;
   background:url(../images/gif/sirena.gif) no-repeat 50% 50%;
   background-size: contain;
-}
+} 
 #icoPrev_27{ 
   left : 1402px;
   top : 1035px;
@@ -410,7 +410,7 @@
   z-index: 10;
   background:url(../images/gif/bird1.gif) no-repeat 50% 50%;
   background-size: contain;
-}
+} */
 #icoPrev_30{ 
   left : 1617px;
   top : 1008px;
@@ -439,7 +439,7 @@
   background:url(../images/gif/bird2.gif) no-repeat 50% 50%;
   background-size: contain;
 }
-#icoPrev_33{ 
+/* #icoPrev_33{ 
   left : 180px;
   top : 1021px;
   width : 46px;
@@ -447,7 +447,7 @@
   z-index: 2;
   background:url(../images/gif/dance.gif) no-repeat 50% 50%;
   background-size: contain;
-}
+} */
 #icoPrev_34{ 
   left : 620px;
   top : 947px;
@@ -502,7 +502,7 @@
   background:url(../images/gif/semafor.gif) no-repeat 50% 50%;
   background-size: contain;
 }
-#icoPrev_40{ 
+/* #icoPrev_40{ 
     left: 809px;
     top: 1715px;
     width: 90px;
@@ -531,7 +531,7 @@
   opacity: 0.4;
   background:url(../images/gif/humo.gif) no-repeat 50% 50%;
   background-size: contain;
-}
+} */
 #icoPrev_43{ 
   left : 1668px;
   top : 1500px;
@@ -541,7 +541,7 @@
   background:url(../images/gif/patitos2.gif) no-repeat 50% 50%;
   background-size: contain;
 }
-#icoPrev_44{ 
+/* #icoPrev_44{ 
   left : 1526px;
   top : 1620px;
   width: 130px;
@@ -549,7 +549,7 @@
   z-index: 162;
   background:url(../images/gif/patitos.gif) no-repeat 50% 50%;
   background-size: contain;
-}
+} */
 #icoPrev_45{ 
   left : 157px;
   top : 1520px;
@@ -595,7 +595,7 @@
   background:url(../images/gif/monst2.gif) no-repeat 50% 50%;
   background-size: contain;
 }
-#icoPrev_50{ 
+/* #icoPrev_50{ 
   left : 3088px;
   top : 1531px;
   width : 69px;
@@ -604,7 +604,7 @@
   opacity: 0.4;
   background:url(../images/gif/humo.gif) no-repeat 50% 50%;
   background-size: contain;
-}
+} 
 #icoPrev_51{ 
   left : 2588px;
   top : 1881px;
@@ -613,7 +613,7 @@
   z-index: 200;
   background:url(../images/gif/stars.gif) no-repeat 50% 50%;
   background-size: contain;
-}
+}*/
 #icoPrev_52{ 
   left : 2538px;
   top : 1558px;
@@ -632,7 +632,7 @@
   background:url(../images/gif/palo2.gif) no-repeat 50% 50%;
   background-size: contain;
 }
-#icoPrev_54{ 
+/* #icoPrev_54{ 
   left : 2066px;
   top : 1511px;
   width : 164px;
@@ -640,7 +640,7 @@
   z-index: 200;
   background:url(../images/gif/stars.gif) no-repeat 50% 50%;
   background-size: contain;
-}
+} 
 #icoPrev_55{ 
   left : 2045px;
   top : 918px;
@@ -649,7 +649,7 @@
   z-index: 200;
   background:url(../images/gif/stars.gif) no-repeat 50% 50%;
   background-size: contain;
-}
+} */
 
 
 
@@ -722,7 +722,7 @@
     position:absolute;
     width:3403px; height:2293px;
     left:0px; top:0px;
-    background:url(../images/mapa/city.svg) no-repeat;
+    background:url(../images/mapa/city.png) no-repeat;
     overflow:hidden;
 }
 /*******************************************************************************/
