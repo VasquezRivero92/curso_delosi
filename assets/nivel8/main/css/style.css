@@ -201,6 +201,7 @@ body{
     cursor: pointer;
 }
 .i3btn.disable{ opacity: 0.5; pointer-events: none; }
+.disable{ pointer-events: none; }
 /***.i3btn:hover{ background-position: 0px -210px; }/***/
 #i3btn_1{ position : absolute ;
   left : 250px;

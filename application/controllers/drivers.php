@@ -23,6 +23,7 @@ class Drivers extends Nivel_Controller {
       
         if(!$resul){            
             $this->session->win = 1;
+            $this->session->position = 1;
         }else{
             if ($resul && $resul->intentos == 100){
                 $this->session->position = 1;
@@ -49,7 +50,8 @@ class Drivers extends Nivel_Controller {
         }
         $this->data['checked'] = $this->base_model->check_curso_user($this->session->user_id, $this->cur);
         $this->load->view('nivel' . $this->cur . '/index', $this->data);
-        //echo ($this->session->win);
+        echo ($this->session->win);
+        echo ($this->session->position);
     }
 
     function minitest() {        

@@ -84,6 +84,7 @@ $(document).ready(function (e) {
         
     });
     $('.i3btn').click(function () {
+        $('.btnVolver').removeClass('disable');
         $('.owl-carousel').trigger('to.owl.carousel', 0)
         playSound(window.playBTN);
         sID = parseInt($(this).attr('id').split('_')[1], 10);
@@ -129,7 +130,6 @@ $(document).ready(function (e) {
         console.log(sID);
         $count_btn = 0;
         $('.owl-stage-outer').css("overflow","visible");
-        sID +=1;
         $('.btnVolver').addClass('disable');
         stopTexto();
         playSound(window.playBTN);
@@ -140,12 +140,11 @@ $(document).ready(function (e) {
         } else {
             $('#instruccion_3').stop().fadeIn(10);
         }
+        sID +=1;
         if(sID==3){
-            
             $('#btnJugar').css("display","block");
-            $('#i3btn_'+sID).removeClass('disable');
+            // $('#i3btn_'+sID).removeClass('disable');
         }else if(sID==5){
-            
             $('#btnJugar2').css("display","block");
         }else{
             $('#i3btn_'+sID).removeClass('disable');
@@ -252,9 +251,7 @@ $(document).ready(function (e) {
     });
 
 $('.punt_anim').click(function () {
-
     $count_btn++;
-
     if (sID == 1) {
         if($count_btn == 4){
         $('#sliderPage_' + sID + ' .btnVolver').show();
@@ -331,10 +328,10 @@ $('#s4t1').click(function(){
 
 });
 
-    $('#i3btn_2').click(function() {
-        $('#sliderPage_2').removeClass('cvhangeimg2');  
-        $('.owl-stage-outer').css("overflow","visible");  
-    });
+$('#i3btn_2').click(function() {
+    $('#sliderPage_2').removeClass('cvhangeimg2');  
+    $('.owl-stage-outer').css("overflow","visible");  
+});
 
 
 function sl_1(){
