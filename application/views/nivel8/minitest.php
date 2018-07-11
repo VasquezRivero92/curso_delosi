@@ -92,7 +92,7 @@
                             <div id="btn_1_3" class="btn" data-rspt="0"><span>Esta normal</span></div>                            
                         </div>
                     </div>
-                    <div id="btnpass_1" class="btn_pass"><img src="<?php echo base_url($own_dir . '/images/btn_pass.png'); ?>" alt=""/><span>Siguiente</br> driver</span></div>                    
+                    <div class="btn_pass_sombra" ><div id="btnpass_1" class="btn_pass"></div></div>                    
                 </div>
 
                 <div id="gPreg_2" class="gPreg">
@@ -141,7 +141,7 @@
                             <div id="btn_1_3" class="btn" data-rspt="0"><span>Esta normal</span></div>                            
                         </div>
                     </div>
-                    <div id="btnpass_2" class="btn_pass"><img src="<?php echo base_url($own_dir . '/images/btn_pass.png'); ?>" alt=""/><span>Siguiente</br> driver</span></div>                    
+                    <div class="btn_pass_sombra" ><div id="btnpass_2" class="btn_pass"></div></div>                    
                 </div>
 
                 <div id="gPreg_3" class="gPreg">
@@ -155,7 +155,7 @@
                     <div class="preguntas">
 
                         <div id="pregunta3_1">
-                            <div id="p_fondo3_3" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r10.png'); ?>" alt=""/>    
+                            <div id="p_fondo3_3" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r9.png'); ?>" alt=""/>    
                             </div>
                             <div id="tPreg_1" class="tPreg"><span>El faro frontal de la motocicleta esta roto  ¿Que se deberia hacer?</span></div>
                             <div id="btn_1_1" class="btn" data-rspt="0"><span>Una Motocicleta debe estar en optimas condiciones. Debe reemplazar ese faro lo antes posible.</span></div>
@@ -190,7 +190,7 @@
                             <div id="btn_1_3" class="btn" data-rspt="0"><span>Esta normal</span></div>                            
                         </div>
                     </div>
-                    <div id="btnpass_3" class="btn_pass"><img src="<?php echo base_url($own_dir . '/images/btn_pass.png'); ?>" alt=""/><span>Siguiente</br> driver</span></div>                    
+                    <div class="btn_pass_sombra" ><div id="btnpass_3" class="btn_pass"></div></div>                  
                 </div>
 
                 <div id="gPreg_4" class="gPreg">
@@ -239,7 +239,7 @@
                             <div id="btn_1_3" class="btn" data-rspt="0"><span>Esta normal</span></div>                            
                         </div>
                     </div>
-                    <div id="btnpass_4" class="btn_pass"><img src="<?php echo base_url($own_dir . '/images/btn_pass.png'); ?>" alt=""/><span>Siguiente</br> driver</span></div>                    
+                    <div class="btn_pass_sombra" ><div id="btnpass_4" class="btn_pass"></div></div>                  
                 </div>
 
                 <div id="gPreg_5" class="gPreg">
@@ -257,7 +257,7 @@
                             </div>
                             <div id="tPreg_1" class="tPreg"><span>La driver se ve preparada y antenta ¿Que deberia hacer?</span></div>
                             <div id="btn_1_1" class="btn" data-rspt="0"><span>Nada en particular</span></div>
-                            <div id="btn_1_2" class="btn" data-rspt="1"><span>Todo esta ok</span></div>
+                            <div id="btn_1_2" class="btn" data-rspt="0"><span>Todo esta ok</span></div>
                             <div id="btn_1_3" class="btn" data-rspt="0"><span>Esta normal</span></div>
                         </div>
 
@@ -266,7 +266,7 @@
                             </div>
                             <div id="tPreg1_2" class="tPreg"><span>El casco del driver esta visiblemente dañado ¿Que se deberia hacer?</span></div>
                             <div id="btn_1_1" class="btn" data-rspt="0"><span>Es una cosa menor, el visor no protege nada igual</span></div>
-                            <div id="btn_1_2" class="btn" data-rspt="0"><span>El casco debera ser reemplazado de inmediato.</span></div>
+                            <div id="btn_1_2" class="btn" data-rspt="1"><span>El casco debera ser reemplazado de inmediato.</span></div>
                             <div id="btn_1_3" class="btn" data-rspt="0"><span>Que conduzca sin casco hasta que repare el que tiene.</span></div>
                         </div>
 
@@ -288,7 +288,7 @@
                             <div id="btn_1_3" class="btn" data-rspt="0"><span>Esta normal</span></div>                            
                         </div>
                     </div>
-                    <div id="btnpass_5" class="btn_pass"><img src="<?php echo base_url($own_dir . '/images/btn_pass.png'); ?>" alt=""/><span>Siguiente</br> driver</span></div>                    
+                    <div class="btn_pass_sombra" ><div id="btnpass_5" class="btn_pass"></div></div>                    
                 </div>
             </div>
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->

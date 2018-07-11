@@ -37,30 +37,30 @@ function pausarJuego() {
     $("#PauseGame").show();
 }
 /*******************************************************************************/
-Array.prototype.shuffle = function () {
-    var i = this.length, j, temp;
-    if (i === 0)
-        return this;
-    while (--i) {
-        j = Math.floor(Math.random() * (i + 1));
-        temp = this[i];
-        this[i] = this[j];
-        this[j] = temp;
-    }
-    return this;
-};
-Array.prototype.rotate = function () {
-    var i = this.length, j, temp;
-    if (i === 0)
-        return this;
-    while (--i) {
-        j = i - 1;
-        temp = this[i];
-        this[i] = this[j];
-        this[j] = temp;
-    }
-    return this;
-};
+// Array.prototype.shuffle = function () {
+//     var i = this.length, j, temp;
+//     if (i === 0)
+//         return this;
+//     while (--i) {
+//         j = Math.floor(Math.random() * (i + 1));
+//         temp = this[i];
+//         this[i] = this[j];
+//         this[j] = temp;
+//     }
+//     return this;
+// };
+// Array.prototype.rotate = function () {
+//     var i = this.length, j, temp;
+//     if (i === 0)
+//         return this;
+//     while (--i) {
+//         j = i - 1;
+//         temp = this[i];
+//         this[i] = this[j];
+//         this[j] = temp;
+//     }
+//     return this;
+// };
 /*******************************************************************************/
 //intervalo de movimiento del player
 var $sigpregunta = 0;
@@ -75,6 +75,7 @@ var $n_pregunta;
 var $pID;
 var ptsWinJuego = 0;
 var puntajeAcierto= 10;
+var $rps_correcta=0;
 //variables de control del juego
 var $J = {
     numJ: 0,
@@ -147,7 +148,7 @@ function initBotones() {
     });
     //console.log($n_pregunta);
     $('.punt_anim').click(function(event) {
-
+        playSound(window.audioCrash);
         $n_pregunta = $(this).parent().parent().attr("id");
 
          $pID = parseInt($(this).attr('id').split('_')[1], 10);
@@ -158,14 +159,11 @@ function initBotones() {
             console.log($n_pregunta);
 
             if($n_pregunta == "gPreg_1"){
-            setTimeout(function(){ $('#pregunta1_' + $pID).animateCss('bounceIn').show(); }, 500); 
-                   
+            setTimeout(function(){ $('#pregunta1_' + $pID).animateCss('bounceIn').show(); }, 500);                   
             }else if($n_pregunta == "gPreg_2"){
-            setTimeout(function(){ $('#pregunta2_' + $pID).animateCss('bounceIn').show(); }, 500); 
-                   
+            setTimeout(function(){ $('#pregunta2_' + $pID).animateCss('bounceIn').show(); }, 500);                   
             }else if($n_pregunta == "gPreg_3"){
-            setTimeout(function(){ $('#pregunta3_' + $pID).animateCss('bounceIn').show(); }, 500); 
-                   
+            setTimeout(function(){ $('#pregunta3_' + $pID).animateCss('bounceIn').show(); }, 500);                   
             }else if($n_pregunta == "gPreg_4"){
             setTimeout(function(){ $('#pregunta4_' + $pID).animateCss('bounceIn').show(); }, 500);      
             }else if($n_pregunta == "gPreg_5"){
@@ -178,7 +176,6 @@ function initBotones() {
     //boton de la instruccion 5
     $('#btnJugar').click(function () {
         stopBGMusic();
-        stopTexto();
         playSound(window.audioCatch);
         $('.instrucciones').stop().fadeOut(1000);
         $J.showJuego();
@@ -201,11 +198,13 @@ function initBotones() {
                 $('#btnReanudar').click();
             } else {
                 $(this).addClass('paused');
+                stopBGMusic();
                 pausarJuego();
             }
         //}
     });
     $('#btnReanudar').click(function () {
+        playBGMusic(window.BGJuego);
         $('#pausaTouch').removeClass('paused');
         $('#PauseGame').fadeOut(200);
         $J.CTiempo = $J.CTiempo + 1;
@@ -224,52 +223,64 @@ function initBotones() {
     });
     
     $('.btn').click(function () {
+        playSound(window.audioCatch);
         var checkDiv = $('.driver').attr('id');
         $(this).css("pointer-events"," none");
         $sigpregunta++;
         isPaused = true;
         console.log(checkDiv);
         var id = parseInt($(this).data('rspt'));    
+
             if(id==1){
                 $r_correcta = true;
                 if($pID == 1){ 
+                    console.log($pID);
                     if ($n_pregunta == "gPreg_1") {                        
                         $('#driver_1').css("background-image", "url("+odir+"/images/driver_pass.png)");  
                     }else if($n_pregunta == "gPreg_2"){
                         $('#driver_2').css("background-image", "url("+odir+"/images/driver_pass2.png)");  
-                    }else if($n_pregunta == "gPreg_5"){
+                    }
+                }else if($pID == 2){
+                    if($n_pregunta == "gPreg_5"){
+                        console.log("5");
                         $('#driver_5').css("background-image", "url("+odir+"/images/driver_pass5.png)");  
                     }
                 }
                 console.log("correcto");
-            }else{
+                $rps_correcta = id;
+            }else{                
                 console.log("incorrecto");
             }
             if($n_pregunta == "gPreg_1"){
-            setTimeout(function(){ $('#pregunta1_' + $pID).animateCss('bounceIn').hide(); }, 500);  
-                  
+            setTimeout(function(){ $('#pregunta1_' + $pID).animateCss('bounceOut').fadeOut(800); }, );                  
             }else if($n_pregunta == "gPreg_2"){
-            setTimeout(function(){ $('#pregunta2_' + $pID).animateCss('bounceIn').hide(); }, 500);         
-            
+            setTimeout(function(){ $('#pregunta2_' + $pID).animateCss('bounceOut').fadeOut(800); }, ); 
             }else if($n_pregunta == "gPreg_3"){
-            setTimeout(function(){ $('#pregunta3_' + $pID).animateCss('bounceIn').hide(); }, 500);         
-            
+            setTimeout(function(){ $('#pregunta3_' + $pID).animateCss('bounceOut').fadeOut(800); }, ); 
             }else if($n_pregunta == "gPreg_4"){
-            setTimeout(function(){ $('#pregunta4_' + $pID).animateCss('bounceIn').hide(); }, 500);         
+            setTimeout(function(){ $('#pregunta4_' + $pID).animateCss('bounceOut').fadeOut(800); }, );          
             }else if($n_pregunta == "gPreg_5"){
-            setTimeout(function(){ $('#pregunta5_' + $pID).animateCss('bounceIn').hide(); }, 500);         
+            setTimeout(function(){ $('#pregunta5_' + $pID).animateCss('bounceOut').fadeOut(800); }, );          
             }
-        $('.preguntas').fadeOut(500);
+            if ($rps_correcta == 1){
+                $('.btn_pass').css("background-image", "url("+odir+"/images/BGacierto.png)");  
+            }else{
+                $('.btn_pass').css("background-image", "url("+odir+"/images/BGerror.png)");  
+            }
+            $('.preguntas').fadeOut(1500);
         
-        
-        
-        if($sigpregunta == 3){
-        
-        setTimeout(function(){ $('.btn_pass').animateCss('bounceIn').show(); }, 500);
+            if($sigpregunta == 3){
+        setTimeout(function(){ $('.btn_pass_sombra').show(); }, 1500);
+        setTimeout(function(){ $('.btn_pass').animateCss('bounceIn').show(); }, 1500);
+        // $('.btn_pass_sombra').css("display","block");
         }
     });
 
     $('.btn_pass').click(function() {
+        $('.btn_pass_sombra').css("display","none");
+         $('#CSeg').html("60");
+         $rps_correcta = 0;
+        $('.btn_pass').css("background-image", "url("+odir+"/images/BGacierto.png)");  
         $J.CTiempo = 60,
         $sigpregunta = 0;
          var id_p = parseInt($(this).attr('id').split('_')[1], 10);
@@ -280,7 +291,7 @@ function initBotones() {
 
         setTimeout(function(){ 
             $('#gPreg_' + id_p).animateCss('bounceOutLeft'); 
-            setTimeout(function(){ $('#gPreg_' + id_p).hide(); }, 800);
+            setTimeout(function(){ $('#gPreg_' + id_p).fadeOut(); }, 800);
         }, 1000);
 
         setTimeout(function(){ 
@@ -293,9 +304,21 @@ function initBotones() {
         if($r_correcta == true){
            aumentaPtos(); 
            $r_correcta = false;
+        }else{
+            if($n_pregunta=="gPreg_1"){
+             $('#icon_1').addClass('anim check');
+            }else if($n_pregunta=="gPreg_2"){
+                $('#icon_2').addClass('anim check');
+            }else if($n_pregunta=="gPreg_3"){
+                $('#icon_3').addClass('anim check');
+            }else if($n_pregunta=="gPreg_4"){
+                $('#icon_4').addClass('anim check');
+            }else if($n_pregunta=="gPreg_5"){
+                $('#icon_5').addClass('anim check');
+            }
         }
         if(id_p == 5){
-             setTimeout($J.finJuego, 500);
+             setTimeout($J.finJuego, 700);
         }
           
     });
@@ -313,7 +336,6 @@ function initBotones() {
     }
 function showInicio() {
     playBGMusic(window.intro);
-    playTexto(window.txti1);
     redimensionarJuego();
     $('.instrucciones').stop().hide();
     $('#instrucciones_1').fadeIn(1000);

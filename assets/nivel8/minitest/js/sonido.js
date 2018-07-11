@@ -18,6 +18,7 @@ var audios = [
     ['bien', bdir + 'assets/sounds/acierto2.mp3'],
     ['audioBlip', bdir + 'assets/sounds/blip.mp3'],
     ['audioCrash', bdir + 'assets/sounds/crash.mp3'],
+    ['intro', bdir +'assets/sounds/moto/intro.mp3'],
     ['audioCatch', bdir + 'assets/sounds/catch.mp3'],
     ['audioPower', bdir + 'assets/sounds/power.mp3']
 ];
