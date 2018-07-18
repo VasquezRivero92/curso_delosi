@@ -43,7 +43,8 @@ class Mapa extends Nivel_Controller {
         $this->data['empresa'] = $empresaUser ? $empresaUser->nombre : '-';
         $this->data['maxnivel'] = $empresaUser ? $this->base_model->get_max_curso() : 0;
         $this->data['niveles'] = $this->base_model->get_cursos()->result();
-        $this->data['certificado'] = $this->checkCertificado_prevencion() ? '' : 'disable';
+        $this->data['certificado_prevencion'] = $this->checkCertificado_prevencion() ? '' : 'disable';
+        $this->data['certificado_drivers'] = $this->checkCertificado_drivers() ? '' : 'disable';
 
         $this->load->view('mapa', $this->data);
     }
@@ -57,7 +58,18 @@ class Mapa extends Nivel_Controller {
             'empresa' => $this->base_model->get_empresas($this->session->user_id)->row()->nombre,
             'nombre' => $this->data['user_login']['apat'] . ' ' . $this->data['user_login']['amat'] . ', <br>' . $this->data['user_login']['nombre']
         );
-        $this->load->view('mail/pdfcertificado', $dataPDF);
+        $this->load->view('mail/pdfcertificado_prevencion', $dataPDF);
+    }
+    function certificado_drivers() {
+        if (!$this->checkCertificado_drivers()) {
+            redirect('/main', 'refresh');
+        }
+        $this->load->helper('pdf_helper');
+        $dataPDF = array(
+            'empresa' => $this->base_model->get_empresas($this->session->user_id)->row()->nombre,
+            'nombre' => $this->data['user_login']['apat'] . ' ' . $this->data['user_login']['amat'] . ', <br>' . $this->data['user_login']['nombre']
+        );
+        $this->load->view('mail/pdfcertificado_drivers', $dataPDF);
     }
 
     /*     * ************************************************************************ */
@@ -69,6 +81,15 @@ class Mapa extends Nivel_Controller {
                 return false;
             }
         }
+        return true;
+    }
+    protected function checkCertificado_drivers() {
+        
+            $resul = $this->base_model->get_puntaje($this->session->user_id, 8);
+            if (!$resul || !$resul->intentos || $resul->puntaje < 70) {
+                return false;
+            }
+        
         return true;
     }
 

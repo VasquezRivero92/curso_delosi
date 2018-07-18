@@ -34,15 +34,15 @@
         <div id="historia" class="resizeWindow">
             <!-- - - - - - - - - - - - - -  Instruccion 1  - - - - - - - - - - - - - -->
             <div id="instruccion_1" class="instrucciones">
-                <div id="i1tit_1">LOS</div>
+                <!-- <div id="i1tit_1">LOS</div>
                 <div id="i1tit_2">MEJORES</div>
-                <div id="i1tit_3">DRIVERS</div>
+                <div id="i1tit_3">DRIVERS</div> -->
             </div>
             <!-- - - - - - - - - - - - - -  Instruccion 2  - - - - - - - - - - - - - -->
             <div id="instruccion_2" class="instrucciones">
                 <div id="i2img_1"></div>
-                <div id="i2tit_1">felicitaciones</div>
-                <div id="i2tit_2">Driver</div>
+                <!-- <div id="i2tit_1">felicitaciones</div>
+                <div id="i2tit_2">Driver</div> -->
                 <div id="i2txt_1">Has sido seleccionado  para formar parte del grupo “Los mejores drivers”  
                     Recibiras información vital para tu desenvolverte en tu día a día y pondremos a prueba tu preparación para que formes parte de esta elite de conductores.
                     <br><br>Bienvenido a este curso especialmente diseñado para ti:</div>
@@ -89,9 +89,9 @@
                             <img id="s1i3_2_3" class="punt_anim" src="<?php echo base_url($own_dir . '/images/slider/s1i3_2.png'); ?>" alt=""/>
                             <img id="s1i3_2_4" class="punt_anim" src="<?php echo base_url($own_dir . '/images/slider/s1i3_2.png'); ?>" alt=""/>
 
-                            
-                            <img id="s1i3_1_1" src="<?php echo base_url($own_dir . '/images/slider/s1i3_1.png'); ?>" alt=""/>
-                            <img id="s1i3_1_2" src="<?php echo base_url($own_dir . '/images/slider/s1i3_1.png'); ?>" alt=""/>
+                            <img id="ayuda_1" class="ayuda" src="<?php echo base_url($own_dir . '/images/ayuda.png'); ?>" alt=""/>
+                            <img id="s1i3_1_1" class="slider_scale" src="<?php echo base_url($own_dir . '/images/slider/s1i3_1.png'); ?>" alt=""/>
+                            <img id="s1i3_1_2" class="slider_scale" src="<?php echo base_url($own_dir . '/images/slider/s1i3_1.png'); ?>" alt=""/>
                             <img id="s1i3_0_1" src="<?php echo base_url($own_dir . '/images/slider/s1i3_g1.png'); ?>" alt=""/>
                             <img id="s1i3_0_2" src="<?php echo base_url($own_dir . '/images/slider/s1i3_g2.png'); ?>" alt=""/>
                             <img id="s1i3_0_3" src="<?php echo base_url($own_dir . '/images/slider/s1i3_g3.png'); ?>" alt=""/>
@@ -115,7 +115,8 @@
                             <img id="s2i1_1_3" class="punt_anim" src="<?php echo base_url($own_dir . '/images/slider/s1i3_2.png'); ?>" alt=""/>
                             <img id="s2i1_1_4" class="punt_anim" src="<?php echo base_url($own_dir . '/images/slider/s1i3_2.png'); ?>" alt=""/>
 
-                            <img id="s2i1_2_1" src="<?php echo base_url($own_dir . '/images/slider/s1i3_1.png'); ?>" alt=""/>
+                            <img id="ayuda_2" class="ayuda" src="<?php echo base_url($own_dir . '/images/ayuda.png'); ?>" alt=""/>
+                            <img id="s2i1_2_1" class="slider_scale" src="<?php echo base_url($own_dir . '/images/slider/s1i3_1.png'); ?>" alt=""/>
                             <img id="s2i1_0_1"  src="<?php echo base_url($own_dir . '/images/slider/s2i1_g1.png'); ?>" alt=""/>
                             <img id="s2i1_0_2"  src="<?php echo base_url($own_dir . '/images/slider/s2i1_g2.png'); ?>" alt=""/>
                             <img id="s2i1_0_3"  src="<?php echo base_url($own_dir . '/images/slider/s2i1_g3.png'); ?>" alt=""/>
@@ -137,8 +138,9 @@
                             <img id="s2i4_2_8" class="punt_anim" src="<?php echo base_url($own_dir . '/images/slider/s1i3_2.png'); ?>" alt=""/>
                             <img id="s2i4_2_9" class="punt_anim" src="<?php echo base_url($own_dir . '/images/slider/s1i3_2.png'); ?>" alt=""/>
                                                         
-                            <img id="s2i4_1_1" src="<?php echo base_url($own_dir . '/images/slider/s1i3_1.png'); ?>" alt=""/>
-                            <img id="s2i4_1_2" src="<?php echo base_url($own_dir . '/images/slider/s1i3_1.png'); ?>" alt=""/>
+                            <img id="ayuda_3" class="ayuda" src="<?php echo base_url($own_dir . '/images/ayuda.png'); ?>" alt=""/>
+                            <img id="s2i4_1_1" class="slider_scale" src="<?php echo base_url($own_dir . '/images/slider/s1i3_1.png'); ?>" alt=""/>
+                            <img id="s2i4_1_2" class="slider_scale" src="<?php echo base_url($own_dir . '/images/slider/s1i3_1.png'); ?>" alt=""/>
                             <img id="s2i4_0_1"  src="<?php echo base_url($own_dir . '/images/slider/s2i3_g1.png'); ?>" alt=""/>
                             <img id="s2i4_0_2"  src="<?php echo base_url($own_dir . '/images/slider/s2i3_g2.png'); ?>" alt=""/>
                             <img id="s2i4_0_3"  src="<?php echo base_url($own_dir . '/images/slider/s2i3_g3.png'); ?>" alt=""/>

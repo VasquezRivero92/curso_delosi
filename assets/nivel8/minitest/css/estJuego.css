@@ -354,7 +354,7 @@
     top: 70px;
     left: 0px;
     display: none;
-    cursor: pointer;
+    /*cursor: pointer;*/
 }
 
 .btn_pass_sombra{
@@ -366,7 +366,21 @@
     top: 0px;
     left: 0px;
 }
-
+#btn_resp{
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    position: absolute;
+    width: 158px; height: 36px;
+    left: 474px;
+    top: 500px;
+    font-family: "Catalogo";
+    font-size: 18px;
+    line-height: 35px;
+    color: #ffffff;
+    text-align: center;
+    background: #ff3650;
+    cursor: pointer;
+}
 .btn_pass span {
     margin: -75px;
     display: inline-block;

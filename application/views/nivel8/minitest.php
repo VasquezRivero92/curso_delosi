@@ -32,6 +32,9 @@
         </div>
         <div id="historia" class="resizeWindow">
             <div id="instrucciones_1" class="instrucciones"></div>
+            <div id="instrucciones_1_2" class="instrucciones">
+                <div id="i2btn_1">Continuar</div>
+            </div>
             <div id="instrucciones_2" class="instrucciones">
                 <div id="btnNext_2" class="btnNext"></div>
             </div>
@@ -92,7 +95,7 @@
                             <div id="btn_1_3" class="btn" data-rspt="0"><span>Esta normal</span></div>                            
                         </div>
                     </div>
-                    <div class="btn_pass_sombra" ><div id="btnpass_1" class="btn_pass"></div></div>                    
+                    <div class="btn_pass_sombra" ><div id="btnpass_1" class="btn_pass"><div id="btn_resp">Continuar</div></div></div>                    
                 </div>
 
                 <div id="gPreg_2" class="gPreg">
@@ -141,7 +144,7 @@
                             <div id="btn_1_3" class="btn" data-rspt="0"><span>Esta normal</span></div>                            
                         </div>
                     </div>
-                    <div class="btn_pass_sombra" ><div id="btnpass_2" class="btn_pass"></div></div>                    
+                    <div class="btn_pass_sombra" ><div id="btnpass_2" class="btn_pass"><div id="btn_resp">Continuar</div></div></div>                    
                 </div>
 
                 <div id="gPreg_3" class="gPreg">
@@ -158,7 +161,7 @@
                             <div id="p_fondo3_3" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r9.png'); ?>" alt=""/>    
                             </div>
                             <div id="tPreg_1" class="tPreg"><span>El faro frontal de la motocicleta esta roto  ¿Que se deberia hacer?</span></div>
-                            <div id="btn_1_1" class="btn" data-rspt="0"><span>Una Motocicleta debe estar en optimas condiciones. Debe reemplazar ese faro lo antes posible.</span></div>
+                            <div id="btn_1_1" class="btn" data-rspt="1"><span>Una Motocicleta debe estar en optimas condiciones. Debe reemplazar ese faro lo antes posible.</span></div>
                             <div id="btn_1_2" class="btn" data-rspt="0"><span>Es una condición común, se puede dejar pasar. Ademas es turno de día no las necesita.</span></div>
                             <div id="btn_1_3" class="btn" data-rspt="0"><span>La moto funciona igual sin esa luz. Puedes apoyarte en la luz de calle.</span></div>
                         </div>
@@ -190,7 +193,7 @@
                             <div id="btn_1_3" class="btn" data-rspt="0"><span>Esta normal</span></div>                            
                         </div>
                     </div>
-                    <div class="btn_pass_sombra" ><div id="btnpass_3" class="btn_pass"></div></div>                  
+                    <div class="btn_pass_sombra" ><div id="btnpass_3" class="btn_pass"><div id="btn_resp">Continuar</div></div></div>                  
                 </div>
 
                 <div id="gPreg_4" class="gPreg">
@@ -209,7 +212,7 @@
                             <div id="tPreg_1" class="tPreg"><span>Tiene el casco adecuado ¿Que deberia hacer?</span></div>
                             <div id="btn_1_1" class="btn" data-rspt="0"><span>Nada en particular</span></div>
                             <div id="btn_1_2" class="btn" data-rspt="0"><span>Todo esta ok</span></div>
-                            <div id="btn_1_3" class="btn" data-rspt="1"><span>Esta normal</span></div>
+                            <div id="btn_1_3" class="btn" data-rspt="0"><span>Esta normal</span></div>
                         </div>
 
                         <div id="pregunta4_2">
@@ -218,7 +221,7 @@
                             <div id="tPreg1_2" class="tPreg"><span>Al driver le hace falta la revisión tecnica de la moto ¿Que deberia hacer?</span></div>
                             <div id="btn_1_1" class="btn" data-rspt="0"><span>No pasa nada, nadie se fija en eso. Ademas no hay tantos controles en su ruta.</span></div>
                             <div id="btn_1_2" class="btn" data-rspt="0"><span>Que se consiga la revisión tecnica de la  moto de alguien más y que incie su turno.</span></div>
-                            <div id="btn_1_3" class="btn" data-rspt="0"><span>Un driver debe contar con toda su documentación antes de iniciar su turno,  ¡Siempre!</span></div>
+                            <div id="btn_1_3" class="btn" data-rspt="1"><span>Un driver debe contar con toda su documentación antes de iniciar su turno,  ¡Siempre!</span></div>
                         </div>
 
                         <div id="pregunta4_3">
@@ -239,7 +242,7 @@
                             <div id="btn_1_3" class="btn" data-rspt="0"><span>Esta normal</span></div>                            
                         </div>
                     </div>
-                    <div class="btn_pass_sombra" ><div id="btnpass_4" class="btn_pass"></div></div>                  
+                    <div class="btn_pass_sombra" ><div id="btnpass_4" class="btn_pass"><div id="btn_resp">Continuar</div></div></div>                  
                 </div>
 
                 <div id="gPreg_5" class="gPreg">
@@ -288,7 +291,7 @@
                             <div id="btn_1_3" class="btn" data-rspt="0"><span>Esta normal</span></div>                            
                         </div>
                     </div>
-                    <div class="btn_pass_sombra" ><div id="btnpass_5" class="btn_pass"></div></div>                    
+                    <div class="btn_pass_sombra" ><div id="btnpass_5" class="btn_pass"><div id="btn_resp">Continuar</div></div></div>                    
                 </div>
             </div>
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -317,7 +320,6 @@
                     <div id="resumenAvatar"></div>
                     <div id="resumenMensaje"></div>
                     <div id="resumenPuntaje"></div>
-                    <div id="resumenEstrellas"></div>
                     <div id="resumenBtns">
                         <div id="btnReinicio">&nbsp;</div>
                         <?php echo anchor('drivers', '&nbsp;', array('id' => 'btnContinuar')); ?>
@@ -325,10 +327,18 @@
                     <div id="resumenOportunidad"></div>
                 </div>
             </div>
+            <div class="transparencia">
+                <div id="infoWindow">
+                    <div id="conteo3" class="conteo"></div>
+                    <div id="conteo2" class="conteo"></div>
+                    <div id="conteo1" class="conteo"></div>
+                </div>
+            </div>
             <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
             <div id="PauseGame"><div id="btnReanudar"></div></div>
             <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
             <div id="objetosOcultos"></div>
+        </div>
         </div>
     </body>
 </html>

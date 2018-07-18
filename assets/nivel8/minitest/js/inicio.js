@@ -175,10 +175,13 @@ function initBotones() {
      });
     //boton de la instruccion 5
     $('#btnJugar').click(function () {
+        // setTimeout(intervaloTiempo, 1000);
+        isPaused = true;
         stopBGMusic();
         playSound(window.audioCatch);
         $('.instrucciones').stop().fadeOut(1000);
         $J.showJuego();
+        introJuego();
         $('.caratula').stop().fadeOut(10);
         setTimeout(intervaloTiempo, 1000);
 
@@ -341,9 +344,41 @@ function showInicio() {
     $('#instrucciones_1').fadeIn(1000);
     setTimeout(function () {
         $(".instrucciones").stop().delay(300).fadeOut(100);
-        $("#instrucciones_2").stop().fadeIn(500);
+        $("#instrucciones_1_2").stop().fadeIn(500);
         playTexto(window.txti2);
-    }, 4000);    
+    }, 4000);    i2btn_1
+    $('#i2btn_1').click(function () {
+        $('#instrucciones_2').fadeIn(500);
+     });
+}
+
+function introJuego() {
+    // $(".caratula,.conteo").stop().fadeOut(10);
+    // $(".conteo").removeClass('anima bounceIn');
+    $(".transparencia").show();
+    setTimeout(function () {
+        $("#conteo3").addClass('anima bounceIn').show();
+        playSound(window.beep);
+    }, 1500);
+    setTimeout(function () {
+        $("#conteo2").addClass('anima bounceIn').show();
+        playSound(window.beep);
+    }, 2500);
+    setTimeout(function () {
+        $("#conteo1").addClass('anima bounceIn').show();
+        playSound(window.beep);
+    }, 3500);
+    setTimeout(function () {
+        
+    }, 4000);
+    setTimeout(function () {
+        $(".transparencia").fadeOut(300);
+        // $J[$JAct].inicioJuego();
+        // $(".gameEnv").show();
+    }, 4000);
+    setTimeout(function () {
+        playSound(window.beepXL);
+    }, 4500);
 }
 /*******************************************************************************/
 
