@@ -5,6 +5,7 @@ var $JAct = 0;
 //var $JMax = 1;
 // intervalo de movimiento del player
 var $MuevePlayer = 0;
+var $poposito = 0;
 var $startTime = 0;
 var $stopTimeIntervalo = 0;
 var $cronoStartTime = 0;
@@ -67,6 +68,10 @@ var $opc_TR = [null,
     'Me detengo y reviso el ajuste del casco, este debe estar asegurado a mi cabeza.',
     'Continuo en la pista, subir a la vereda con una moto es poner en riesgo a los peatones.',
 ];
+
+var CTpreg = 30;
+
+var clearintervalo;
 
 function getRandomSite(){
    var sites = ["¡soy mas vivo!","Mas alla!","Piiiiiiiip","¡Estoy apurado!","Haste a un lado"];
@@ -175,6 +180,7 @@ function initBotones() {
 
     });
     $('.pregOpc').click(function () {
+        clearInterval(clearintervalo);
         $('.caratula').stop().fadeOut(300);
         var idResp = parseInt($(this).attr('id').split("_")[1], 10);
         var x = $('#preg_' + idResp + ' span').text();
@@ -185,17 +191,21 @@ function initBotones() {
             $('#icoPel_' + $ActPwrUp).hide();
             $('#icoPrev_' + $ActPwrUp).show();
             aumentaPtos1();
-            $("#icon_" + $ActPwrUp).addClass("anim check");
+            $("#icon_" + $ActPwrUp).addClass("anim icon_correcto");
             // $("#bienResp").html($(this).children().html().replace("<br>", " "));
             $("#pregBien").stop().delay(300).fadeIn(300);
         } else {
+            $("#icon_" + $ActPwrUp).addClass("anim check");
             playSound(window.audioCrash);
             //$PowerUps[$ActPwrUp - 1].visible = 200;
             $('#pregMal').stop().delay(300).fadeIn(300);
             $('#bad_A2 span').html($opc_TR[$ActPwrUp]);
         }
+        // $poposito = 0;
     });
     $('#btnReintento').click(function () {
+        $("#icon_" + $ActPwrUp).addClass("anim check");
+        $("#vinetatiempo").fadeOut(400);
         $('#pregWindow').stop().fadeOut(400);
         $(".caratula").stop().delay(500).fadeOut(10);
         $('#gameArea1').addClass('pista_anim');
@@ -237,6 +247,8 @@ function initBotones() {
 
     $('#btnListo').click(function () {
         //$ActPwrUp = 0;
+
+        $("#vinetatiempo").fadeOut(400);
         $('#pregWindow').stop().fadeOut(400);
         $('.caratula').stop().delay(500).fadeOut(10);
         $('#gameArea1').addClass('pista_anim');
@@ -361,6 +373,31 @@ function MostrarTiempo() {
         $J[$JAct].BetwenCars = 0;
     }
 }
+function MostrarTiempoPregunta() {
+    $J[$JAct].CSeg = $J[$JAct].CTiempo % 60;
+    $J[$JAct].CMin = parseInt($J[$JAct].CTiempo / 60);
+    $("#CMin").html($J[$JAct].CMin);
+    CCero = "";
+    if ($J[$JAct].CSeg < 10) { CCero = "0"; }
+    $("#CSeg").html(CCero + $J[$JAct].CSeg);
+    
+    if (ContPreguntas == 20) {
+        ContPreguntas = 0;
+        $ActPwrUp++;
+        muestraPregunta($ActPwrUp);
+        $TDie++;
+    }
+    if($TimeDie){
+        $ValueEnd = $J[$JAct].Vereda;
+    }else{
+        $J[$JAct].Vereda = 0;
+    }
+    if($pasar_betwen){
+        $Val_betwen = $J[$JAct].BetwenCars;
+    }else{
+        $J[$JAct].BetwenCars = 0;
+    }
+}
 function pausarJuego() {
     isPaused = true;
     $("#PauseGame").show();
@@ -368,6 +405,7 @@ function pausarJuego() {
     stopBGMusic(window.termino_mal);
 }
 function tiempo_Subs() {
+    clearInterval(clearintervalo);
     stopBGMusic(window.termino_mal);
     playSound(window.termino_mal);
     isPaused = true;
@@ -377,6 +415,8 @@ function tiempo_Subs() {
     console.log(IntentPT);
 }
 function muestraPregunta(preg) {
+    ControlIntervaloPregunta();
+    $("#vinetatiempo").fadeIn(400);
     $('#gameArea1').removeClass('pista_anim');
     playSound(window.audioCatch);
     isPaused = true;
@@ -392,6 +432,7 @@ function muestraPregunta(preg) {
     $('.img_ask').attr('id', 'image_ref_'+$ActPwrUp);
     $("#pregMain").show();
     $("#pregWindow").fadeIn(400);
+    $("#vinetatiempo").fadeIn(400);
 }
 $.fn.extend({
     disableSelection: function () {

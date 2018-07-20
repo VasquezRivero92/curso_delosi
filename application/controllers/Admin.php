@@ -651,6 +651,16 @@ class Admin extends MY_Controller {
             $this->data['niv_data'] = $this->rel_array($this->base_model->get_cursos()->result(), '- TODOS LOS NIVELES -');
             $this->data['niv_value'] = 0;
             $this->data['niv_extra'] = array('id' => 'nivel');
+        }elseif ($param == 'calificacion') {
+            $url = 'calificacion';
+            if ($sendID) {
+                $this->data['areas'] = array_column($this->base_model->get_areas_emp($empresas->row()->id)->result_array(), 'nombre');
+            } else {
+                $this->data['areas'] = array_column($this->base_model->get_areas()->result_array(), 'nombre');
+            }
+            $this->data['niv_data'] = $this->rel_array($this->base_model->get_cursos()->result(), true);
+            $this->data['niv_value'] = 1;
+            $this->data['niv_extra'] = array('id' => 'nivel');
         } else {
             $this->data['visitas'] = $this->admin_model->get_visitas(7);
         }

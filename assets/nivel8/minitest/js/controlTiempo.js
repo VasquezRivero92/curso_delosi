@@ -56,7 +56,7 @@ function MostrarTiempo() {
     }
 }
 function intervaloTiempo() {
-    isPaused = false;
+    // isPaused = false;
     $startTime = performance.now();
     $cronoStartTime = performance.now();
     $MuevePlayer = window.requestAnimationFrame(ControlIntervalo);

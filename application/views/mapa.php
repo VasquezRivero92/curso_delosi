@@ -218,7 +218,7 @@
                     <a id="i4Nivel_4" class="i4Nivel disable" href="#"></a> -->
                     <?php
                 echo anchor('cuestionario', '&nbsp;', array('id' => 'i4Cuestionario'));
-                echo anchor('mapa/certificado_prevencion', '&nbsp;', array('id' => 'i4Certificado', 'class' => $certificado, 'target' => '_blank'));
+                echo anchor('mapa/certificado_prevencion', '&nbsp;', array('id' => 'i4Certificado', 'class' => $certificado_prevencion, 'target' => '_blank'));
                 for ($i = 4; $i > 0; $i--) {
                     $clases = 'i4Nivel disable';
                     if ($maxnivel >= $i) {

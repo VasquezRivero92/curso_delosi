@@ -103,15 +103,15 @@
 }
 #punto2_4 {
     position: absolute;
-    left: 402px;
-    top: 142;
+    left: 425px;
+    top: 165px;
     z-index: 2;
     cursor: pointer;
 }
 #punto3_1 {
-    position: absolute;
-    left: -38px;
-    top: -99px;
+    position: absolute;    
+    left: 62px;
+    top: 85px;
     z-index: 2;
     cursor: pointer;
 }
@@ -196,7 +196,7 @@
     background: rgba(0, 1, 19, 0.57);
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: none;
     top: 0px;
     left: 0px;
@@ -347,12 +347,38 @@
 }
 
 .btn_pass {
+    background: url("../images/BGacierto.png") no-repeat 50% 50%;
     position: absolute;
-    width: 93px;
-    height: 238px;
-    left: 560px;
-    top: 585px;
+    width: 100%;
+    height: 100%;
+    top: 70px;
+    left: 0px;
     display: none;
+    /*cursor: pointer;*/
+}
+
+.btn_pass_sombra{
+    background: rgba(0, 1, 19, 0.57);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    top: 0px;
+    left: 0px;
+}
+#btn_resp{
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    position: absolute;
+    width: 158px; height: 36px;
+    left: 474px;
+    top: 500px;
+    font-family: "Catalogo";
+    font-size: 18px;
+    line-height: 35px;
+    color: #ffffff;
+    text-align: center;
+    background: #ff3650;
     cursor: pointer;
 }
 .btn_pass span {

@@ -17,6 +17,7 @@ class Main extends MY_Controller {
         $this->load->library('form_validation');
         $this->data['own_dir'] = $this->data['assets_dir'] . '/main';
         $this->data['entraarecla'] = (int)$this->entraarecla();
+        $this->data['avatar'] = $this->session->avatar ? ' av' . strtoupper(substr($this->session->grupo, 0, 1)) . $this->session->avatar : 'av-' . $this->session->grupo;
         if ($this->session->old_last_login) {
             $this->base_model->add_visita();
                      
@@ -34,8 +35,7 @@ class Main extends MY_Controller {
             $this->data['firstWindow'] = 1;
             $this->session->old_last_login = time();
             $this->session->first_login = true;
-        }
-        $this->data['avatar'] = $this->session->avatar ? ' av' . strtoupper(substr($this->session->grupo, 0, 1)) . $this->session->avatar : 'av-' . $this->session->grupo;
+        }        
 
         $this->data['min_password_length'] = $this->config->item('min_password_length', 'ion_auth');
         $this->data['newPassword'] = array(

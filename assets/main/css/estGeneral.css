@@ -203,6 +203,8 @@ body{
 .av-planta #i4avatar_F{ background-image: url(../images/i4avPF.png); }
 .av-restaurante #i4avatar_M{ background-image: url(../images/i4avRM.png); }
 .av-restaurante #i4avatar_F{ background-image: url(../images/i4avRF.png); }
+.av-driver #i4avatar_M{ background-image: url(../images/i4avRM.png); }
+.av-driver #i4avatar_F{ background-image: url(../images/i4avRF.png); }
 /*******************************  Instruccion 5  *******************************/
 #instruccion_5{ background: url(../images/bginst5.png) no-repeat center center; }
 #i5txt1{

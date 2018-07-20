@@ -34,15 +34,15 @@ $J.finTiempo = function () {
     $('#pregTime').stop().delay(300).fadeIn(300);
     $('.preguntas').fadeOut(500);
     if($n_pregunta == "gPreg_1"){
-            setTimeout(function(){ $('#pregunta1_' + $pID).animateCss('bounceIn').hide(); }, 500);
+            setTimeout(function(){ $('#pregunta1_' + $pID).animateCss('bounceIn').hide(); }, 1000);
             }else if($n_pregunta == "gPreg_2"){
-            setTimeout(function(){ $('#pregunta2_' + $pID).animateCss('bounceIn').hide(); }, 500);
+            setTimeout(function(){ $('#pregunta2_' + $pID).animateCss('bounceIn').hide(); }, 1000);
             }else if($n_pregunta == "gPreg_3"){
-            setTimeout(function(){ $('#pregunta3_' + $pID).animateCss('bounceIn').hide(); }, 500);
+            setTimeout(function(){ $('#pregunta3_' + $pID).animateCss('bounceIn').hide(); }, 1000);
             }else if($n_pregunta == "gPreg_4"){
-            setTimeout(function(){ $('#pregunta4_' + $pID).animateCss('bounceIn').hide(); }, 500);         
+            setTimeout(function(){ $('#pregunta4_' + $pID).animateCss('bounceIn').hide(); }, 1000);         
             }else if($n_pregunta == "gPreg_5"){
-            setTimeout(function(){ $('#pregunta5_' + $pID).animateCss('bounceIn').hide(); }, 500);         
+            setTimeout(function(){ $('#pregunta5_' + $pID).animateCss('bounceIn').hide(); }, 1000);         
             }
     $('.punt_anim').css("display","block");
     $('.btn').css("pointer-events","auto");
@@ -87,15 +87,15 @@ function aumentaPtos() {
     ptsWinJuego = ptsWinJuego+puntajeAcierto;
     console.log(ptsWinJuego);
     if($n_pregunta=="gPreg_1"){
-     $('#icon_1').addClass('anim check');
+     $('#icon_1').addClass('anim icon_correcto');
     }else if($n_pregunta=="gPreg_2"){
-        $('#icon_2').addClass('anim check');
+        $('#icon_2').addClass('anim icon_correcto');
     }else if($n_pregunta=="gPreg_3"){
-        $('#icon_3').addClass('anim check');
+        $('#icon_3').addClass('anim icon_correcto');
     }else if($n_pregunta=="gPreg_4"){
-        $('#icon_4').addClass('anim check');
+        $('#icon_4').addClass('anim icon_correcto');
     }else if($n_pregunta=="gPreg_5"){
-        $('#icon_5').addClass('anim check');
+        $('#icon_5').addClass('anim icon_correcto');
     }
     console.log(ptsWinJuego);
 }
@@ -104,15 +104,15 @@ function resultadoPuntos() {
     var estrellas = 0;
     $('#resumenMensaje').html('¡Sigue adelante!');
     $('#resumenAvatar').removeClass();
-    if (ptsWinJuego >= 20 && ptsWinJuego < 60) {
+    if (ptsWinJuego >= 10 && ptsWinJuego < 30) {
         estrellas = 1;
         $('#resumenMensaje').html('¡Muy buen trabajo!');
         $('#resumenAvatar').addClass('pts2');
-    } else if (ptsWinJuego >= 60 && ptsWinJuego < 100) {
+    } else if (ptsWinJuego >= 30 && ptsWinJuego < 50) {
         estrellas = 2;
         $('#resumenMensaje').html('¡Muy buen trabajo!');
         $('#resumenAvatar').addClass('pts2');
-    } else if (ptsWinJuego >= 100) {
+    } else if (ptsWinJuego >= 50) {
         estrellas = 3;
         $('#resumenMensaje').html('¡Excelente!');
         $('#resumenAvatar').addClass('pts3');

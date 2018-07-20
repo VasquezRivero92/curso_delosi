@@ -126,6 +126,7 @@ body{
 #reset_time{
     background: url(../images/game/endTime.png) no-repeat center center;
     display: none;
+    top: 85px;
     z-index: 601;
 }
 #btnReset{
@@ -142,10 +143,25 @@ body{
     position: absolute;
     width: 116px; height: 95px;
     left: 1092px;
-    top: 20px;
+    top: 25px;
     background: rgba(0,0,0,0) url(../images/btnPausa.png) no-repeat 50% 50%;
+    z-index:999;
+    cursor: pointer;
+}
+
+#vinetatiempo{
+    position: absolute;
+    width: 406px; height: 96px;
+    left: 695px;
+    top: 25px;
+    background: rgba(0,0,0,0) url(../images/vinetatiempo.png) no-repeat 50% 50%;
     z-index:400;
     cursor: pointer;
+    font-family: "Bebas";
+    font-size: 64px;
+    color: #333745;
+    text-align: right;
+    display: none;
 }
 #PauseGame{
     position: absolute;
@@ -170,7 +186,7 @@ body{
     top:0px; left:0px;
     width:1350px; height:150px;
     background: url(../images/BGmarcador.png) no-repeat 100% 50%;
-    z-index:1;
+    z-index:999;
 }
 #CTimer{
     position:absolute;
@@ -187,15 +203,25 @@ body{
     float:left;
 }
 #CMin, #CSeg{ width:70px; color:#ff3650; }
+#CSeg1{position: absolute;
+    left: 290px;
+    color:#ff3650;}
 .iconCheck{
     position:absolute;
-    width:44px;
+    width:43px;
     height:44px;
     z-index:1;
     top: 48px;
     background-image:url(../images/icon_check.png);
     background-position:-44px 0px;
     display:none;
+    z-index: 999;
+}
+.icon_correcto{
+     position: absolute; /*display: none;*/
+    width: 43px; height: 43px;
+    background-image: url(../images/icon_correcto.png);
+    background-position: 0px 0px;*/
 }
 .iconCheck.anim{ animation:tada 1s; }
 .iconCheck.check{ background-position:0px 0px; }
@@ -291,10 +317,11 @@ position: absolute;
 
 
 /*******************************************************************************/
-#pregBien{ background-image: url(../images/game/BGacierto.png); }
+#pregBien{ background-image: url(../images/game/BGacierto.png); top:60px; }
 #bienResp{
     position: absolute;
-    width: 100%; height: 25px;
+    width: 100%; 
+    height: 25px;
     top: 200px;
     left: 0px; right: 0px;
     font-family: "CatalogoGruesa";
@@ -313,7 +340,7 @@ position: absolute;
     cursor: pointer;
 }
 /*******************************************************************************/
-#pregMal{ background-image: url(../images/game/BGerror.png); }
+#pregMal{ background-image: url(../images/game/BGerror.png); transform: scale(0.8); top: 70px;}
 #btnReintento{
     position: absolute;
     width: 167px; height: 41px;
@@ -381,6 +408,15 @@ position: absolute;
     color: #ff3650;
     text-align: center;
 }
+#resumenPuntajetotal{
+    position: absolute;
+    width: 164px;
+    top: 189px; left: 1020px;
+    font-family: "CatalogoGruesa";
+    font-size: 48px;
+    color: #ff3650;
+    text-align: center;
+}
 #resumenEstrellas{
     position: absolute;
     width: 243px; height: 116px;
@@ -396,13 +432,13 @@ position: absolute;
 #resumenBtns{
     position: absolute;
     width: 350px; height: 44px;
-    left: 743px; top: 510px;
+    left: 743px; top: 370px;
     text-align: center;
 }
 #resumenBtns *{
     position: relative;
     display: inline-block;
-    width: 136px; height: 44px;
+    width: 185px; height: 44px;
     font-size: 0;
     margin: 0 10px;
     vertical-align: top;
@@ -413,7 +449,7 @@ position: absolute;
 #resumenOportunidad{
     position: absolute;
     width: 172px; height: 11px;
-    left: 755px; top: 567px;
+    left: 755px; top: 437px;;
     background:url(../images/oportunidad.png) no-repeat 50% 50%;
 }
 /*****************************************  Key Controls  *****************************************/

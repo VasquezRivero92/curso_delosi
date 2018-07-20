@@ -56,11 +56,8 @@ class Ajax_model extends CI_Model {
     }
 
     public function init_curso_driver($id_user, $id_curso) {
-        $checkUserCurso = $this->checkUserCurso('vistas','intentos', $id_user, $id_curso);
-        $data = $this->dataUserCurso($id_user, $id_curso);
-
-       $data['intentos'] = (string) '100';
-
+        $checkUserCurso = $this->checkUserCurso('vistas', $id_user, $id_curso);
+        $data = $this->dataUserCurso($id_user, $id_curso);        
         if ($checkUserCurso) {
             $data['vistas'] = (int) $checkUserCurso->vistas + 1;            
             return $this->db->where('id_user', $id_user)
@@ -68,6 +65,7 @@ class Ajax_model extends CI_Model {
                             ->where('id_version', $this->id_version)
                             ->update('users_curso', $data);
         } else {
+            $data['intentos'] = (string) '100';
             return $this->db->insert('users_curso', $data);
         }
         echo $data['intentos'];

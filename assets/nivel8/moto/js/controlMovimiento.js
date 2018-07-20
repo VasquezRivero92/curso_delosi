@@ -24,6 +24,11 @@ var $dtctEnemyY = 0;
 var isPlaying = false;
 var isPaused = false;
 
+//pregunta cronometro
+var $cronopregunta = 0;
+
+
+
 function CalcularLimites() {
     // variables de control para la posicion del escenario
     $J[$JAct].posX = $J[$JAct].posInitX;
@@ -131,6 +136,8 @@ function EjecucionMovimiento() {
 function ControlIntervalo() {
     if (!isPaused) {
         now = performance.now();
+        // tiempito = now.toString().substr(0,2);
+        // console.log(tiempito);  
         cronoElapsed = now - $cronoStartTime;
         if (cronoElapsed > 1000) {
             $cronoStartTime = now - (cronoElapsed % 1000);
@@ -143,8 +150,39 @@ function ControlIntervalo() {
             if ($stopTimeIntervalo > 0){ $stopTimeIntervalo--; }
             else{ EjecucionMovimiento(); }
         }
+
     }
-    if ($MuevePlayer){ $MuevePlayer = window.requestAnimationFrame(ControlIntervalo); }
+    if ($MuevePlayer){ $MuevePlayer = window.requestAnimationFrame(ControlIntervalo);
+    }  
+    
+}
+function ControlIntervaloPregunta() { 
+        CTpreg = 30;
+        clearintervalo = setInterval(function(){
+        CTpreg--;
+        if(CTpreg == 0){
+            clearInterval(clearintervalo);
+            console.log("asdasdasdasdsadasdas");
+            playSound(window.audioCrash);
+            //$PowerUps[$ActPwrUp - 1].visible = 200;
+            $('#pregMal').stop().delay(300).fadeIn(300);            
+            $('#bad_A2 span').html($opc_TR[$ActPwrUp]);
+        }
+    $('#CSeg1').html(CTpreg);
+    console.log(CTpreg);
+    },1000);
+    
+
+    // now = performance.now();
+
+    // tiempito = now.subtring(0,2);
+
+    // if($poposito > 1000){
+    //     $cronopregunta++;
+    //     $poposito = 0;
+    // }
+    // $poposito =  window.requestAnimationFrame(ControlIntervaloPregunta);
+    // console.log(tiempito);
 }
 function IntervaloMovimiento() {
     isPaused = false;
@@ -153,11 +191,17 @@ function IntervaloMovimiento() {
     $MuevePlayer = window.requestAnimationFrame(ControlIntervalo);
 }
 function CronoPlay() {
-    $J[$JAct].CTiempo--;
+    $J[$JAct].CTiempo--;    
     MostrarTiempo();
     if ($J[$JAct].CTiempo <= 0) { $J[$JAct].finJuego(1); }
     $J[$JAct].Vereda++;
     $J[$JAct].BetwenCars++;
+}
+function CronoPlayPreg() {
+    $J[$JAct].CTpreg--;    
+    MostrarTiempoPregunta();
+    if ($J[$JAct].CTpreg <= 0) { $('#pregMal').stop().delay(300).fadeIn(300); }
+    console.log("asdasdsadasdasdasdasd"+$J[$JAct].CTpreg);    
 }
 function CronoReset() {
     $J[$JAct].CTiempo = $J[$JAct].CTInicial;
