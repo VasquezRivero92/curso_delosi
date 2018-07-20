@@ -164,7 +164,7 @@
   width : 405px;
   height : 680px;
   z-index: 200; 
-    background-image:url(../images/mapa/museo.museo); }
+    background-image:url(../images/mapa/museo.png); }
 #icoPel_12{ 
   left : 486px;
   top : 1835px;
@@ -931,8 +931,8 @@
 
 .i4Nivel{
     position: absolute;
-    width: 157px; height: 119px;
-    top: 564px;
+    top : 400px;
+    width : 95px; height : 76px;    
     text-decoration: none;
     background-color: rgba(0,0,0,0);
     background-repeat: no-repeat;
@@ -940,13 +940,13 @@
     cursor: pointer;
 }
 .i4Nivel.disable{
-    background-position: 0px -119px;
+    background-position: 0px -76px;
     pointer-events: none;
 }
 #i4Cuestionario{
     position: absolute;
     width: 190px; height: 77px;
-    left: 1140px; top: 250px;
+    left: 51px; top: 210px;
     text-decoration: none;
     background: rgba(0,0,0,0) url(../images/i4Cuestionario.png) no-repeat 50% 50%;
     cursor: pointer;
@@ -954,7 +954,7 @@
 #i4Certificado{
     position: absolute;
     width: 190px; height: 90px;
-    left: 50px; top: 40px;
+    left: 50px; top: 310px;
     text-decoration: none;
     background-color: rgba(0,0,0,0);
     background-image: url(../images/i4Certificado.png);
@@ -968,63 +968,49 @@
     opacity: 0.7;
 }
 
-#i4Nivel_1{ left: 22px; background-image: url(../images/i4nivel_1.png); }
-#i4Nivel_2{ left: 165px; background-image: url(../images/i4nivel_2.png); }
-#i4Nivel_3{ left: 309px; background-image: url(../images/i4nivel_3.png); }
-#i4Nivel_4{ left: 453px; background-image: url(../images/i4nivel_4.png); }
+#i4Nivel_1{ left: 480px; background-image: url(../images/i4nivel_1.png); }
+#i4Nivel_2{ left: 574px; background-image: url(../images/i4nivel_2.png); }
+#i4Nivel_3{ left: 667px; background-image: url(../images/i4nivel_3.png); }
+#i4Nivel_4{ left: 759px; background-image: url(../images/i4nivel_4.png); }
 
 
 /*******************************************************************************/
 /************  PopUp Genericos  ************/
-
-.CV_btn2{
-    background : -moz-linear-gradient(49.61% -50.26% -89.14deg,rgba(179, 179, 179, 1) 40.29%,rgba(51, 51, 51, 1) 93.48%);
-    background : -webkit-linear-gradient(-89.14deg, rgba(179, 179, 179, 1) 40.29%, rgba(51, 51, 51, 1) 93.48%);
-    background : -webkit-gradient(linear,49.61% -50.26% ,50.24% 111.19% ,color-stop(0.4029,rgba(179, 179, 179, 1) ),color-stop(0.9348,rgba(51, 51, 51, 1) ));
-    background : -o-linear-gradient(-89.14deg, rgba(179, 179, 179, 1) 40.29%, rgba(51, 51, 51, 1) 93.48%);
-    background : -ms-linear-gradient(-89.14deg, rgba(179, 179, 179, 1) 40.29%, rgba(51, 51, 51, 1) 93.48%);
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#B3B3B3', endColorstr='#333333' ,GradientType=0)";
-    background : linear-gradient(179.14deg, rgba(179, 179, 179, 1) 40.29%, rgba(51, 51, 51, 1) 93.48%);
+.CV_btn-1{
+    background : url(../images/popups/undertand.png);;
     position : absolute ;
-    left: 1130px;
-    top: 20px;
-    width : 191px;
-    height : 50px;
-    border-radius : 24px;
-    -moz-border-radius : 24px;
-    -webkit-border-radius : 24px;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#B3B3B3',endColorstr='#333333' , GradientType=1);
-    font-size: 27px;
-    line-height: 50px;
-    color: #ffffff;
-    text-align: center;
-    text-decoration: none;
-    font-family: 'CatalogoGruesa';
+  left : 569px;
+  top : 514px;
+    width : 169px;
+    height : 51px;
     cursor: pointer;
 }
-.CV_btn1{
-    background : -moz-linear-gradient(49.61% -50.26% -89.14deg,rgba(179, 179, 179, 1) 40.29%,rgba(51, 51, 51, 1) 93.48%);
-    background : -webkit-linear-gradient(-89.14deg, rgba(179, 179, 179, 1) 40.29%, rgba(51, 51, 51, 1) 93.48%);
-    background : -webkit-gradient(linear,49.61% -50.26% ,50.24% 111.19% ,color-stop(0.4029,rgba(179, 179, 179, 1) ),color-stop(0.9348,rgba(51, 51, 51, 1) ));
-    background : -o-linear-gradient(-89.14deg, rgba(179, 179, 179, 1) 40.29%, rgba(51, 51, 51, 1) 93.48%);
-    background : -ms-linear-gradient(-89.14deg, rgba(179, 179, 179, 1) 40.29%, rgba(51, 51, 51, 1) 93.48%);
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#B3B3B3', endColorstr='#333333' ,GradientType=0)";
-    background : linear-gradient(179.14deg, rgba(179, 179, 179, 1) 40.29%, rgba(51, 51, 51, 1) 93.48%);
+.CV_btn2{
+    background : url(../images/popups/return.png);;
     position : absolute ;
-    left: 570px;
-    top: 540px;
-    width : 191px;
-    height : 50px;
-    border-radius : 24px;
-    -moz-border-radius : 24px;
-    -webkit-border-radius : 24px;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#B3B3B3',endColorstr='#333333' , GradientType=1);
-    font-size: 27px;
-    line-height: 55px;
-    color: #ffffff;
-    text-align: center;
-    text-decoration: none;
-    font-family: 'CatalogoGruesa';
+  left : 705px;
+  top : 514px;
+    width : 169px;
+    height : 51px;
+    cursor: pointer;
+}
+.CV_btn_3{
+    background : url(../images/popups/return.png);;
+    position : absolute ;
+  left : 569px;
+  top : 514px;
+    width : 169px;
+    height : 51px;
+    cursor: pointer;
+}
+
+.CV_btn1{
+    background : url(../images/popups/start.png);;
+    position : absolute ;
+  left : 443px;
+  top : 514px;
+    width : 169px;
+    height : 51px;
     cursor: pointer;
 }
 .textCent{
@@ -1055,12 +1041,26 @@
 /**********  PopUp0  ************/
 
 .pop_restring{
-    background: url(../images/popups/restringido.svg) no-repeat;
+    background: url(../images/popups/restringido2.png) no-repeat;
     position : absolute ;
-    left : 222px;
-    top : 105px;
-    width : 970px;
-    height : 624px;
+    left : 0px;
+    top : 0px;
+    width : 1350px;
+    height : 700px;
+    font-size: 27px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'CatalogoGruesa';
+}
+
+.pop_restring-1{
+    background: url(../images/popups/driver_no_in.png) no-repeat;
+    position : absolute ;
+    left : 0px;
+    top : 0px;
+    width : 1350px;
+    height : 700px;
     font-size: 27px;
     color: #ffffff;
     text-align: center;
@@ -1073,10 +1073,10 @@
 .opcAyuda{
     background: url(../images/popups/restringido.svg) no-repeat;
     position : absolute ;
-    left : 222px;
-    top : 105px;
-    width : 970px;
-    height : 624px;
+    left : 0px;
+    top : 0px;
+    width : 1350px;
+    height : 700px;
     font-size: 27px;
     color: #ffffff;
     text-align: center;
@@ -1112,12 +1112,12 @@
 
 /**********  PopUp2  ************/
 .drivers{
-    background: url(../images/popups/driver.svg) no-repeat;
+    background: url(../images/popups/driver_ok.png) no-repeat;
     position : absolute ;
-    left : 222px;
-    top : 105px;
-    width : 970px;
-    height : 624px;
+    left : 0px;
+    top : 0px;
+    width : 1350px;
+    height : 700px;
     font-size: 27px;
     color: #ffffff;
     text-align: center;
@@ -1128,12 +1128,12 @@
 
 /**********  PopUp3  ************/
 .prevencion{
-    background: url(../images/popups/prevencion.svg) no-repeat;
+    background: url(../images/popups/expertos_prevenc.png) no-repeat;
     position : absolute ;
-    left : 222px;
-    top : 105px;
-    width : 970px;
-    height : 624px;
+    left : 0px;
+    top : 0px;
+    width : 1350px;
+    height : 700px;
     font-size: 27px;
     color: #ffffff;
     text-align: center;
@@ -1146,12 +1146,12 @@
 
 /**********  PopUp7  ************/
 .pausas{
-    background: url(../images/popups/pausas.svg) no-repeat;
+    background: url(../images/popups/pausas_activas.png) no-repeat;
     position : absolute ;
-    left : 222px;
-    top : 105px;
-    width : 970px;
-    height : 624px;
+    left : 0px;
+    top : 0px;
+    width : 1350px;
+    height : 700px;
     font-size: 27px;
     color: #ffffff;
     text-align: center;
@@ -1162,12 +1162,12 @@
 
 /**********  PopUp8  ************/
 .pop_restring1{
-    background: url(../images/popups/restringido.svg) no-repeat;
+    background: url(../images/popups/driver_no_in.png) no-repeat;
     position : absolute ;
-    left : 222px;
-    top : 105px;
-    width : 970px;
-    height : 624px;
+    left : 0px;
+    top : 0px;
+    width : 1350px;
+    height : 700px;
     font-size: 27px;
     color: #ffffff;
     text-align: center;
@@ -1181,10 +1181,10 @@
 .pop_restring2{
     background: url(../images/popups/restringido.svg) no-repeat;
     position : absolute ;
-    left : 222px;
-    top : 105px;
-    width : 970px;
-    height : 624px;
+    left : 0px;
+    top : 0px;
+    width : 1350px;
+    height : 700px;
     font-size: 27px;
     color: #ffffff;
     text-align: center;
@@ -1194,12 +1194,12 @@
 
 /**********  PopUp10  ************/
 .auxilio{
-    background: url(../images/popups/emergencia.svg) no-repeat;
+    background: url(../images/popups/emergencias.png) no-repeat;
     position : absolute ;
-    left : 222px;
-    top : 105px;
-    width : 970px;
-    height : 624px;
+    left : 0px;
+    top : 0px;
+    width : 1350px;
+    height : 700px;
     font-size: 27px;
     color: #ffffff;
     text-align: center;
@@ -1211,12 +1211,12 @@
 
 /**********  PopUp11  ************/
 .museo{
-    background: url(../images/popups/museo.svg ) no-repeat
+    background: url(../images/popups/museo.png ) no-repeat
     position : absolute ;
-    left : 222px;
-    top : 105px;
-    width : 970px;
-    height : 624px;
+    left : 0px;
+    top : 0px;
+    width : 1350px;
+    height : 700px;
     font-size: 27px;
     color: #ffffff;
     text-align: center;
@@ -1229,12 +1229,12 @@
 /**********  PopUp12  ************/
 
 .quimica{
-    background: url(../images/popups/quimicos.svg) no-repeat;
+    background: url(../images/popups/quimicos.png) no-repeat;
     position : absolute ;
-    left : 222px;
-    top : 105px;
-    width : 970px;
-    height : 624px;
+    left : 0px;
+    top : 0px;
+    width : 1350px;
+    height : 700px;
     font-size: 27px;
     color: #ffffff;
     text-align: center;

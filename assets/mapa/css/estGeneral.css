@@ -320,7 +320,7 @@ body{
     vertical-align: middle;
     line-height: 16px;
 }
-.pregOpc:hover{ background:#333745; color:#ffffff; }
+/* .pregOpc:hover{ background:#333745; color:#ffffff; } */
 #preg_1{ top:260px; }
 #preg_2{ top:315px; }
 #preg_3{ top:370px; }

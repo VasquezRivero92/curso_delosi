@@ -318,12 +318,18 @@ function muestraPregunta() {
     if($ActPwrUp == 2){
         if($drivers == 2){
             $("#popAct_" + $ActPwrUp).show();
-        }else{
-            $("#popAct_0").show();        
+        }else {
+            $("#popAct_-1").show();        
         }    
+    }else if($ActPwrUp == 12){
+         if($drivers == 2){
+            $("#popAct_0").show();
+        }else {
+            $("#popAct_" + $ActPwrUp).show();        
+        }       
     }else{
-        $("#popAct_" + $ActPwrUp).show();
-        }
+         $("#popAct_" + $ActPwrUp).show();        
+    }
 
 
     

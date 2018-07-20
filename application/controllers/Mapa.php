@@ -11,8 +11,9 @@ class Mapa extends Nivel_Controller {
         if ($this->entraadriver()) {
             $this->data['drivers'] = 2;
         } else {
-           $this->data['drivers'] = 0; 
+           $this->data['drivers'] = '-1'; 
         }
+
         if ($stats->num_rows()) {
                 $this->data['user_stats'] = $stats->result_array()[0];
         } else {

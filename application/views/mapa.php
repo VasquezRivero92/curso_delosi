@@ -172,11 +172,14 @@
             <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
             <div id="pregWindow">
 
+                <div id="popAct_-1" class="caratula">
+                    <div class="pop_restring-1"><p class="textCent"></p></div>
+                    <div id="preg_-1" class="CV_btn-1 pregOpc"> </div>
+                </div>
+
                 <div id="popAct_0" class="caratula">
-                    <div class="pop_restring"><p class="textCent">Por el moemnto no puedes ingresar a este curso.</p></div>
-                    
-                    <br>Vuelve pronto.
-                    <div id="preg_0" class="CV_btn2 pregOpc">VOLVER</div>
+                    <div class="pop_restring"><p class="textCent"></p></div>
+                    <div id="preg_0" class="CV_btn2 pregOpc"> </div>
                 </div>
 
                 <div id="popAct_1" class="caratula">
@@ -197,41 +200,31 @@
                 </div>
 
                 <div id="popAct_2" class="caratula"> 
-                    <div class="drivers"><p class="textCent">Escenario - drivers</p></div>
-                    
+                    <div class="drivers"></div>
                     <!-- <a id="preg_2_1" class="CV_btn1 disable" href="#">IR AL CURSO</a> -->
-                    <?php echo anchor('drivers', 'IR AL CURSO', array('id' => 'preg_2_1','class' => 'CV_btn1 disable')); ?>
+                    <?php echo anchor('drivers', ' ', array('id' => 'preg_2_1','class' => 'CV_btn1 disable')); ?>
                     <!-- <div id="preg_2_1" class="CV_btn1 pregOpc">IR AL CURSO</div> -->
-                    <div id="preg_2_0" class="CV_btn2 pregOpc">VOLVER</div>
+                    <div id="preg_2_0" class="CV_btn2 pregOpc"> </div>
                 </div>
 
-
                 <div id="popAct_3" class="caratula"> 
-                    <div class="prevencion">
-                        <p class="textCent">Escenario - Prevención en el trabajo</p>
-                    </div>                    
-
-                    <!-- <a href="#"  id="i4Certificado" class="disable"></a>
-                    <a id="i4Nivel_1" class="i4Nivel" href="#"></a>
-                    <a id="i4Nivel_2" class="i4Nivel disable" href="#"></a>
-                    <a id="i4Nivel_3" class="i4Nivel disable" href="#"></a>
-                    <a id="i4Nivel_4" class="i4Nivel disable" href="#"></a> -->
+                    <div class="prevencion"><p class="textCent"> </p></div>                    
                     <?php
-                echo anchor('cuestionario', '&nbsp;', array('id' => 'i4Cuestionario'));
-                echo anchor('mapa/certificado_prevencion', '&nbsp;', array('id' => 'i4Certificado', 'class' => $certificado_prevencion, 'target' => '_blank'));
-                for ($i = 4; $i > 0; $i--) {
-                    $clases = 'i4Nivel disable';
-                    if ($maxnivel >= $i) {
-                        foreach ($niveles as $niv) {
-                            if ($niv->id == $i && $niv->estado == 1) {
-                                $clases = 'i4Nivel';
+                        // echo anchor('cuestionario', '&nbsp;', array('id' => 'i4Cuestionario'));
+                        echo anchor('mapa/certificado_prevencion', '&nbsp;', array('id' => 'i4Certificado', 'class' => $certificado_prevencion, 'target' => '_blank'));
+                        for ($i = 4; $i > 0; $i--) {
+                            $clases = 'i4Nivel disable';
+                            if ($maxnivel >= $i) {
+                                foreach ($niveles as $niv) {
+                                    if ($niv->id == $i && $niv->estado == 1) {
+                                        $clases = 'i4Nivel';
+                                    }
+                                }
                             }
+                            echo anchor('nivel' . $i, '&nbsp;', array('id' => 'i4Nivel_' . $i, 'class' => $clases));
                         }
-                    }
-                    echo anchor('nivel' . $i, '&nbsp;', array('id' => 'i4Nivel_' . $i, 'class' => $clases));
-                }
-                ?>
-                    <div id="preg_3_0" class="CV_btn2 pregOpc">VOLVER</div>
+                    ?>
+                    <div id="preg_3_0" class="CV_btn2 CV_btn_3 pregOpc"> </div>
                 </div>
             <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
