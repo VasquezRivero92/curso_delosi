@@ -237,7 +237,8 @@ body{
 #btnJugar{
     position: absolute; display: none;
     width: 170px; height: 40px;
-    left: 590px; top: 545px;
+    left: 582px;
+    top: 522px;
     font-family: 'Catalogo';
     font-size: 17px;
     line-height: 40px;

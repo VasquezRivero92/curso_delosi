@@ -4,7 +4,7 @@ function Lab_Juego() {
     // puntos
     this.ptsWinJuego = 0; //ptos generados por acierto en el juego
     this.intentos = 2;
-    this.puntajeAcierto = 20;
+    this.puntajeAcierto = 10;
     this.contAciertos = 0;
     // para el control de tiempo
     this.CTInicial = 120;

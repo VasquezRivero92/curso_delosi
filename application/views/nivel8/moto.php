@@ -53,7 +53,8 @@
             </div>
             <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
             <div id="marcador" class="gameEnv">
-                <div id="CTimer"><div id="CMin">00</div><div>:</div><div id="CSeg">00</div></div>
+                <!-- <div id="CTimer"><div id="CMin">00</div><div>:</div><div id="CSeg">00</div></div> -->
+                <div id="vinetatiempo"><!-- <div id="CMin1">00</div><div>:</div> --><div id="CSeg1">00</div></div>
             </div>
             <div id="icon_1" class="iconCheck"></div>
             <div id="icon_2" class="iconCheck"></div>
@@ -130,9 +131,10 @@
                     <div id="resumenAvatar"></div>
                     <div id="resumenMensaje"></div>
                     <div id="resumenPuntaje"></div>
-                    <div id="resumenEstrellas"></div>
+                    <div id="resumenPuntajetotal"></div>
+                    <!-- <div id="resumenEstrellas"></div> -->
                     <div id="resumenBtns">
-                        <div id="btnReinicio">&nbsp;</div>
+                        <!-- <div id="btnReinicio">&nbsp;</div> -->
                         <?php echo anchor('drivers', '&nbsp;', array('id' => 'btnContinuar')); ?>
                     </div>
                     <div id="resumenOportunidad"></div>

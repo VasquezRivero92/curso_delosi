@@ -26,21 +26,18 @@ $.post(bdir + 'ajax/init_curso_driver').done(function (data) {
     }, 4000);
     $.get(bdir + 'ajax/get_intentos_drivers').done(function (data) {        
         //alert( "puntaje " + data);
-        console.log("data:" + data);
         $intentos_juego = data;    
         if(data == 110 || data == 121 || data == 120){
             $('#i3btn_4').addClass('disable');
-            console.log("1");
+            $('#i3btn_3').addClass('slider_scale');
         }else if(data == 122){            
             $('#btnJugar').css("display","block");
             $('#i3btn_3').removeClass('disable');
-            console.log("2");
         }else{
             $('#i3btn_1').addClass('slider_scale');
             $('#i3btn_2').addClass('disable');
             $('#i3btn_3').addClass('disable');
-            $('#i3btn_4').addClass('disable');
-            console.log("3");
+            $('#i3btn_4').addClass('disable');            
         }
 
     });

@@ -63,8 +63,8 @@ b{ font-weight: bold; }
 .touchIsOn #instrucciones_2{ background: url(../images/bginst2t.png) no-repeat center center; }
 #instrucciones_3{ background: url(../images/bginst3.png) no-repeat center center; }
 .touchIsOn #instrucciones_3{ background: url(../images/bginst3t.png) no-repeat center center; }
-#instrucciones_4{ background: url(../images/bginst4.png) no-repeat center center; }
-#instrucciones_5{ background: url(../images/bginst5.png) no-repeat center center; }
+#instrucciones_4{ background: url(../images/bginst5.png) no-repeat center center; }
+#instrucciones_5{ background: url(../images/bginst4.png) no-repeat center center; }
 .btnPrev{
     position: absolute;
     width: 33px; height: 80px;
@@ -364,7 +364,7 @@ b{ font-weight: bold; }
 #resumenBtns *{
     position: relative;
     display: inline-block;
-    width: 136px; height: 44px;
+    width: 185px; height: 44px;
     font-size: 0;
     margin: 0 10px;
     vertical-align: top;

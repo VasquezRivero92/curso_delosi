@@ -44,6 +44,10 @@
             </div>
             <div id="instrucciones_4" class="instrucciones">
                 <div id="btnPrev_4" class="btnPrev"></div>
+                <div id="btnNext_4" class="btnNext"></div>
+            </div>
+            <div id="instrucciones_5" class="instrucciones">
+                <div id="btnPrev_5" class="btnPrev"></div>
                 <div id="btnJugar"></div>
             </div>
             <!-- - - - - - - - - - - - - - - -  Juego  - - - - - - - - - - - - - - - -->
@@ -321,7 +325,7 @@
                     <div id="resumenMensaje"></div>
                     <div id="resumenPuntaje"></div>
                     <div id="resumenBtns">
-                        <div id="btnReinicio">&nbsp;</div>
+                        <!-- <div id="btnReinicio">&nbsp;</div> -->
                         <?php echo anchor('drivers', '&nbsp;', array('id' => 'btnContinuar')); ?>
                     </div>
                     <div id="resumenOportunidad"></div>
