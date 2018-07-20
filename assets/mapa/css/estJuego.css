@@ -96,7 +96,7 @@
   width : 555px;
   height : 535px;
   z-index: 125;
-    background-image:url(../images/mapa/twinbuild.svg); }
+    background-image:url(../images/mapa/twinbuild.png); }
 #icoPel_4{ 
   left : 1538px;
   top : 1279px;
@@ -132,11 +132,11 @@
     background-image:url(../images/mapa/asiento_front.svg); }
 #icoPel_7{ 
   left : 2553px;
-  top : 1840px;
+  top : 1910px;
   width : 243px;
-  height : 361px; 
+  height : 290px;
   z-index: 191;  
-    background-image:url(../images/mapa/gim.svg); }
+    background-image:url(../images/mapa/gim.png); }
 #icoPel_8{ 
   left : 1234px;
   top : 1751px;
@@ -159,12 +159,12 @@
   z-index: 100;  
     background-image:url(../images/mapa/bomber.svg); }
 #icoPel_11{ 
-  left : 2071px;
-  top : 1543px;
-  width : 400px;
-  height : 666px;
+  left : 2067px;
+  top : 1529px;
+  width : 405px;
+  height : 680px;
   z-index: 200; 
-    background-image:url(../images/mapa/museo.svg); }
+    background-image:url(../images/mapa/museo.museo); }
 #icoPel_12{ 
   left : 486px;
   top : 1835px;
@@ -660,7 +660,6 @@
   top : 937px;
   width : 59px;
   height : 71px;
-  display: inline-block;
   z-index: 102;
   background-image:url(../images/people/Dayang.png); 
   animation: moveX_Day1 3s steps(23) infinite;
@@ -702,11 +701,11 @@
 
 #Player_1 .ptje{
     position:absolute; display:none;
-     width: 70px;
+    width: 70px;
     height: 80px;
     left: -33px;
     top: -145px;
-    background: rgba(250,0,0,0) url(http://localhost/cursodelosi-github/assets/mapa/css/../images/alert.gif) no-repeat 50% 50%;
+    background: rgba(250,0,0,0) url(../images/alert.gif) no-repeat 50% 50%;
     cursor: pointer;
     background-size: cover;
     z-index: 200;
@@ -1212,7 +1211,7 @@
 
 /**********  PopUp11  ************/
 .museo{
-    background: url(../images/popups/museo.svg) no-repeat;
+    background: url(../images/popups/museo.svg ) no-repeat
     position : absolute ;
     left : 222px;
     top : 105px;

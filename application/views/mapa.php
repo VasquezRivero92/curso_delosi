@@ -69,7 +69,7 @@
                     <div id="icoPel_10" class="icoPel"></div>
                     <div id="icoPel_11" class="icoPel"></div>
                     <div id="icoPel_12" class="icoPel"></div>
-                    <div id="icoPel_13" class="icoPel"></div>
+                    <!-- <div id="icoPel_13" class="icoPel"></div> -->
 
                     <div id="icoPrev_1" class="icoPrev"></div>
                     <div id="icoPrev_2" class="icoPrev"></div>
@@ -119,7 +119,7 @@
                     <!-- <div id="icoPrev_44" class="icoPrev"></div> -->
                     <div id="icoPrev_45" class="icoPrev"></div>
                     <div id="icoPrev_46" class="icoPrev"></div>
-                    <div id="icoPrev_47" class="icoPrev"></div>
+                    <!-- <div id="icoPrev_47" class="icoPrev"></div> -->
                     <div id="icoPrev_48" class="icoPrev"></div>
                     <div id="icoPrev_49" class="icoPrev"></div>
                     <!-- <div id="icoPrev_50" class="icoPrev"></div>
