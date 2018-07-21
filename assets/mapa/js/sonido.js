@@ -32,7 +32,11 @@ var audios = [
     ['Hablar4', bdir + 'assets/sounds/effects/hablar4.mp3'],
     ['Hablar5', bdir + 'assets/sounds/effects/hablar5.mp3'],
     ['Hablar6', bdir + 'assets/sounds/effects/hablar6.mp3'],
-    ['Hablar7', bdir + 'assets/sounds/effects/hablar7.mp3']
+    ['Hablar7', bdir + 'assets/sounds/effects/hablar7.mp3'],
+    ['palta1', bdir + 'assets/sounds/effects/palta1.mp3'],
+    ['palta2', bdir + 'assets/sounds/effects/palta2.mp3'],
+    ['palta3', bdir + 'assets/sounds/effects/palta3.mp3'],
+    ['renegando', bdir + 'assets/sounds/effects/renegando.mp3']
 ];
 try {
     window.AudioContext = window.AudioContext || window.webkitAudioContext;

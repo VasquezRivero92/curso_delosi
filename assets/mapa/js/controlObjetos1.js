@@ -83,7 +83,14 @@ $J[1].hitPowerUps = function () {
                     $ActPwrUp = parseInt(itm.id.split("_")[1], 10);
                     //console.log($ActPwrUp);
                     snd_hablar($ActPwrUp);
-                    PlayerMov.areaPtje.stop().addClass('animated rubberBand').fadeIn(100);
+                    if($ActPwrUp == 15 || $ActPwrUp == 16 && hitPU){
+                        console.log(itm.id, $ActPwrUp);
+                        $ActPwrUp = 0;
+                        PlayerMov.areaPtje.stop().removeClass('animated rubberBand').fadeOut(300);                       
+                        //itm.hit = false;
+                    }else{
+                        PlayerMov.areaPtje.stop().addClass('animated rubberBand').fadeIn(100);
+                    }
                 }
             }else{
                 //if( itm.visible >= 0 ){ itm.hit = false; }

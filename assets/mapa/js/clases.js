@@ -189,51 +189,6 @@ function Lab_Player() {
         this.draw();
     };
 
-    // this.cambiaX = function (plus) {
-    //     if (this.FPosX <= 200 && plus < 0) {
-    //         if ($J[$JAct].posX < 0) {
-    //             $J[$JAct].mueveAreaX(-1 * plus);
-    //         } else {
-    //             this.FPosX = this.FPosX + plus;
-    //         }
-    //     } else if (this.FPosX + this.width >= 1150 && plus > 0) {
-    //         var cond = $J[$JAct].width + $J[$JAct].posX;
-    //         if (cond > 1350) {
-    //             $J[$JAct].mueveAreaX(-1 * plus);
-    //         } else {
-    //             this.FPosX = this.FPosX + plus;
-    //         }
-    //     } else {
-    //         this.FPosX = this.FPosX + plus;
-    //     }
-    //     this.x = this.x + plus;
-    //     this.draw();
-    // };
-    // this.cambiaY = function (plus) {
-    //     //if (this.FPosY <= 350 && plus < 0) {
-    //     if (this.FPosY <= 250 && plus < 0) {
-    //         //if ($J[$JAct].posY < 200) {
-    //         if ($J[$JAct].posY < 0) {
-    //             $J[$JAct].mueveAreaY(-1 * plus);
-    //         } else {
-    //             this.FPosY = this.FPosY + plus;
-    //         }
-    //     } else if (this.FPosY + this.height >= 250 && plus > 0) {
-    //     //} else if (this.FPosY + this.height >= 500 && plus > 0) {
-    //         var cond = $J[$JAct].height + $J[$JAct].posY;
-    //         if (cond > 700) {
-    //             $J[$JAct].mueveAreaY(-1 * plus);
-    //         } else {
-    //             this.FPosY = this.FPosY + plus;
-    //         }
-    //     } else {
-    //         this.FPosY = this.FPosY + plus;
-    //     }
-    //     this.y = this.y + plus;
-    //     this.z = Math.floor(this.y / 10);
-    //     this.draw();
-    // };
-
     this.hittest = function (elmB, plusX, plusY) {
         if (plusX === undefined) { plusX = 0; }
         if (plusY === undefined) { plusY = 0; }

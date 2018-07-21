@@ -150,16 +150,28 @@ function initBotones() {
         $('#powerUp_'+$ActPwrUp).addClass("hit");
         $PowerUps[$ActPwrUp - 1].hit = false;
         $('#pregWindow').stop().fadeOut(400);
-        if (idResp === $Preguntas[$ActPwrUp]) {
-            playSound(window.bien);
-        } else {
+        console.log($ActPwrUp);
+        // if (idResp === $Preguntas[$ActPwrUp]) {
+        //     playSound(window.bien);
+        // }else 
+        if (idResp === $Preguntas[1] || idResp === $Preguntas[13] || idResp === $Preguntas[14] ) {
+            console.log('A1');
             playSound(window.audioCrash);
             $ActPwrUp = 1;
             $('#pregWindow').stop().fadeOut(400);
             $('.caratula').stop().delay(500).fadeOut(10);
-            //$J[$JAct].CTiempo = $J[$JAct].CTiempo + 1;
             setTimeout(function () {
                 isPaused = false;
+            }, 1500);
+            $PowerUps[$ActPwrUp - 1].visible = 200;
+        }else{
+            console.log('A2');
+            playSound(window.audioCrash);
+            $ActPwrUp = 1;
+            $('#pregWindow').stop().fadeOut(400);
+            $('.caratula').stop().delay(500).fadeOut(10);
+            setTimeout(function () {
+                 isPaused = false;
             }, 1500);
             $PowerUps[$ActPwrUp - 1].visible = 200;
         }
@@ -314,7 +326,6 @@ function muestraPregunta() {
     //$("#bienFlechas").removeClass("animated bounceIn").hide();
     //$(".bienSlider div").removeClass("animated bounceInRight").hide();
     PlayerMov.areaPtje.stop().removeClass('animated rubberBand').fadeOut(300);
-
     if($ActPwrUp == 2){
         if($drivers == 2){
             $("#popAct_" + $ActPwrUp).show();
@@ -322,11 +333,13 @@ function muestraPregunta() {
             $("#popAct_-1").show();        
         }    
     }else if($ActPwrUp == 12){
-         if($drivers == 2){
+        if($drivers == 2){
             $("#popAct_0").show();
         }else {
-            $("#popAct_" + $ActPwrUp).show();        
+            $("#popAct_" + $ActPwrUp).show(); 
         }       
+    }else if($ActPwrUp == 13 || $ActPwrUp == 14){
+        $("#popAct_1").show();
     }else{
          $("#popAct_" + $ActPwrUp).show();        
     }
@@ -346,7 +359,19 @@ function snd_hablar(snd){
         break;  
         case 3:
             playSound(window.Hablar4);                      
+        break;
+        case 13:
+            playSound(window.Hablar2);                      
         break; 
+        case 14:
+            playSound(window.Hablar2);                      
+        break;        
+        case 15:
+            playSound(window.renegando);                      
+        break;        
+        case 16:
+            playSound(window.palta1);                      
+        break;        
         default:
             playSound(window.Hablar3); 
         break;

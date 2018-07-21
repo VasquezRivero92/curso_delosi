@@ -198,6 +198,7 @@ class Ajax extends MY_Controller {
         $this->email->to('aprendiendoaprevenir.sst@gmail.com');
         $this->email->to('aprendiendoaprevenir@franquiciasperu.com');
         $this->email->to('jvasquez@factoriamedia.com');
+        $this->email->to('igastelu@factoriamedia.com');
         $this->email->subject('Consulta en buzón - ' . $this->config->item('site_title', 'ion_auth'));
         $this->email->message($message);
         $this->email->send();

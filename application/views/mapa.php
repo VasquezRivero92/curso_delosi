@@ -69,7 +69,8 @@
                     <div id="icoPel_10" class="icoPel"></div>
                     <div id="icoPel_11" class="icoPel"></div>
                     <div id="icoPel_12" class="icoPel"></div>
-                    <!-- <div id="icoPel_13" class="icoPel"></div> -->
+                    <div id="icoPel_13" class="icoPel"></div>
+                    <div id="icoPel_14" class="icoPel"></div>
 
                     <div id="icoPrev_1" class="icoPrev"></div>
                     <div id="icoPrev_2" class="icoPrev"></div>
@@ -89,19 +90,19 @@
                     <div id="icoPrev_16" class="icoPrev persona_mov1"></div>
                     <div id="icoPrev_17" class="icoPrev persona_mov1"></div>
                     <div id="icoPrev_18" class="icoPrev persona_mov1"></div>
-                    <div id="icoPrev_19" class="icoPrev persona_mov1"></div>
+                    <div id="icoPrev_19" class="icoPrev"></div>
                     <div id="icoPrev_20" class="icoPrev persona_mov1"></div>
                     <div id="icoPrev_21" class="icoPrev persona_mov1"></div>
                     <div id="icoPrev_22" class="icoPrev"></div>
                     <div id="icoPrev_23" class="icoPrev"></div>
                     <div id="icoPrev_24" class="icoPrev"></div>
                     <div id="icoPrev_25" class="icoPrev"></div>
-                    <!-- <div id="icoPrev_26" class="icoPrev"></div>
+                    <div id="icoPrev_26" class="icoPrev"></div>
                     <div id="icoPrev_27" class="icoPrev"></div>
-                    <div id="icoPrev_28" class="icoPrev"></div>
-                    <div id="icoPrev_29" class="icoPrev"></div> -->
+                    <div id="icoPrev_28" class="icoPrev persona_mov1"></div>
+                    <div id="icoPrev_29" class="icoPrev persona_mov1"></div>
                     <div id="icoPrev_30" class="icoPrev"></div>
-                    <div id="icoPrev_31" class="icoPrev"></div>
+                    <!-- <div id="icoPrev_31" class="icoPrev"></div> -->
                     <div id="icoPrev_32" class="icoPrev"></div>
                     <!-- <div id="icoPrev_33" class="icoPrev"></div> -->
 
@@ -149,6 +150,9 @@
                         <div id="powerUp_11" class="powerUp powerUp1">11</div>
                         <div id="powerUp_12" class="powerUp powerUp1">12</div>
                         <div id="powerUp_13" class="powerUp powerUp1">13</div>
+                        <div id="powerUp_14" class="powerUp powerUp1">14</div>
+                        <div id="powerUp_15" class="powerUp powerUp1">15</div>
+                        <div id="powerUp_16" class="powerUp powerUp1">16</div>
                     </div>
                 </div>
             </div>
@@ -179,23 +183,21 @@
 
                 <div id="popAct_0" class="caratula">
                     <div class="pop_restring"><p class="textCent"></p></div>
-                    <div id="preg_0" class="CV_btn2 pregOpc"> </div>
+                    <div id="preg_0" class="CV_btn-1 pregOpc"> </div>
                 </div>
 
                 <div id="popAct_1" class="caratula">
-                    <div id="i4Buzon"></div>
-                    <div class="opcAyuda"><p class="ayuda_MC">PREGUNTAS  FRECUENTES</p></div>
-                    <div id="preg_1_1" class="aceptaCd pregOpc">Salir</div>
+                    <div class="opcAyuda"><p class="ayuda_MC"> </p></div>
+                    <!-- <div id="i4Buzon"></div> -->
+                    <div id="preg_1_1" class="aceptaCd pregOpc"> </div>
 
-                     <div id="popup2" class="popup">
-                        <form id="formBuzon" class="clearfix" method="post" action="#">
-                            <div id="pop2txt1">Sabemos que es importante para ti, tener todos los conceptos claros de cada nivel, si tienes una duda o consulta detállala en el siguiente recuadro y te responderemos dentro de las 24 horas.</div>
-                            <textarea id="pop2ta" maxlength="400"></textarea>
-                            <div id="pop2txt2">(*) Los días miércoles las respuestas a tus dudas o consultas serán en tiempo real de 8:30 a.m. a 6:00 p.m.</div>
-                            <input id="pop2sub" class="clearfix" type="submit" value=" ">
-                            <div id="pop2close"></div>
-                        </form>
-                    </div>
+                    <form id="formBuzon" class="clearfix" method="post" action="#">
+                        <!-- <div id="pop2txt1">Sabemos que es importante para ti, tener todos los conceptos claros de cada nivel, si tienes una duda o consulta detállala en el siguiente recuadro y te responderemos dentro de las 24 horas.</div> -->
+                        <textarea id="pop2ta" maxlength="400"></textarea>
+                        <!-- <div id="pop2txt2">(*) Los días miércoles las respuestas a tus dudas o consultas serán en tiempo real de 8:30 a.m. a 6:00 p.m.</div> -->
+                        <input id="pop2sub" class="clearfix" type="submit" value=" ">
+                        <!-- <div id="pop2close"></div> -->
+                    </form>
                    
                 </div>
 
@@ -229,43 +231,37 @@
             <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
                 <div id="popAct_7" class="caratula"> 
-                    <div class="pausas"><p class="textCent">Bienvenidos al Gimnasio, por el momento esta en construcción.<br>Vuelve pronto.</p></div>
-                    <?php echo anchor('pausasactivas', 'IR AL CURSO', array('id' => 'preg_2_1','class' => 'CV_btn1 disable')); ?>
-                    <div id="preg_7_0" class="CV_btn2 pregOpc">VOLVER</div>
+                    <div class="pausas"><p class="textCent"></p></div>
+                    <?php echo anchor('pausasactivas', ' ', array('id' => 'preg_2_1','class' => 'CV_btn1 disable')); ?>
+                    <div id="preg_7_0" class="CV_btn2 pregOpc"></div>
                 </div>
 
                 <div id="popAct_8" class="caratula"> 
-                    <div class="pop_restring1"><p class="textCent">Muy pronto habrá novedades1, por el momento esta en construcción.
-                    <br>Vuelve pronto.</p></div>
-                    
-                    <div id="preg_8_0" class="CV_btn2 pregOpc">VOLVER</div>
+                    <div class="pop_restring_constr"><p class="textCent"></p></div>
+                    <div id="preg_8_0" class="CV_btn-2 pregOpc"></div>
                 </div>
 
                 <div id="popAct_9" class="caratula"> 
-                     <div class="pop_restring2"><p class="textCent">Muy pronto habrá novedades2, por el momento esta en construcción.<br>Vuelve pronto.</p></div>
-                   
-                    <div id="preg_9_0" class="CV_btn2 pregOpc">VOLVER</div>
+                    <div class="pop_restring_constr"><p class="textCent"></p></div>
+                    <div id="preg_9_0" class="CV_btn-2 pregOpc"></div>
                 </div>
 
                 <div id="popAct_10" class="caratula"> 
-                    <div class="auxilio"><p class="textCent">Bienvenidos a Primeros Auxilios, por el momento esta en construcción.
-                    <br>Vuelve pronto.</p></div>
-                    
-                    <div id="preg_10_0" class="CV_btn2 pregOpc">VOLVER</div>
+                    <div class="auxilio"><p class="textCent"> </p></div>
+                    <a id="preg_10_1" class="CV_btn1 disable" href="#"> </a>
+                    <div id="preg_10_0" class="CV_btn2 pregOpc"> </div>
                 </div>
 
                 <div id="popAct_11" class="caratula"> 
-                     <div class="museo"><p class="textCent">Bienvenidos al Museo, por el momento esta en construcción.
-                    <br>Vuelve pronto.</p></div>
-                    
-                    <div id="preg_11_0" class="CV_btn2 pregOpc">VOLVER</div>
+                    <div class="museo"><p class="textCent"></p></div>
+                    <!-- <a id="preg_11_1" class="CV_btn1 disable" href="#"> </a> -->
+                    <div id="preg_11_0" class="CV_btn-1 pregOpc"></div>
                 </div>
 
                 <div id="popAct_12" class="caratula"> 
-                     <div class="quimica"><p class="textCent">Bienvenidos a la casa de la Ciencia, por el momento esta en construcción.</p></div>
-                    
-                    <br>Vuelve pronto.
-                    <div id="preg_12_0" class="CV_btn2 pregOpc">VOLVER</div>
+                    <div class="quimica"><p class="textCent"></p></div>
+                    <!-- <a id="preg_12_1" class="CV_btn1 disable" href="#"> </a> -->
+                    <div id="preg_12_0" class="CV_btn-1 pregOpc"></div>
                 </div>
 
             </div>
