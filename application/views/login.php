@@ -14,6 +14,7 @@
         <script type="text/javascript">
             var bdir = '<?php echo base_url(); ?>';
         </script>
+        <script src="<?php echo base_url($own_dir . '/js/parallax.min.js'); ?>"></script>
         <script src="<?php echo base_url($own_dir . '/js/main.js'); ?>"></script>
         <title>Login - <?php echo $this->config->item('site_title', 'ion_auth'); ?></title>
     </head>
@@ -23,13 +24,26 @@
                 <div class="row"><img src="<?php echo base_url($own_dir . '/images/opti.png'); ?>" alt=""/></div>
             </div>
             <div id="login-cont" class="container <?php echo $iewindow; ?>">
-                <header id="header" class="row"></header>
+                <!-- <header id="header" class="row"></header> -->
+                <div id="ctr_parallax">
+                    <div data-depth="0.02"><div id="nubes1_mc" class="nube_anim"></div></div>
+                    <div data-depth="0.03"><div id="nubes2_mc" class="nube_anim2"></div></div>
+                    <div data-depth="0.02" id="edificios_mc"></div>
+                    <div data-depth-x="-0.03" id="edif1_mc"></div>
+                    <div data-depth-x="0.04" id="edif2_mc"></div>
+                    <div data-depth-x="-0.05" id="edif3_mc"></div>
+                    <div data-depth-x="0.06" id="grass1_mc"></div>
+                    <div data-depth="-0.1" id="grass2_mc"></div>
+                    <div data-depth="0.2" id="grass3_mc"></div>
+                    <div data-depth="-0.1" id="personas_mc"></div>
+                </div>
+                <div id="logo_mc" class="row"></div>
                 <div class="row">
                     <?php echo form_open('/login', $form_open); ?>
                     <?php echo form_input($username); ?>
                     <?php echo form_input($password); ?>
-                    <?php echo form_submit($submit); ?>
                     <div id="openForgot">Olvidé mi contraseña</div>
+                    <?php echo form_submit($submit); ?>
                     <?php echo form_close(); ?>
                 </div>
                 <!--<p><?php echo $message; ?></p>-->

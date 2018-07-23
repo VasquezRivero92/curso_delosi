@@ -1,5 +1,7 @@
 /*******************************************************************************/
 $(document).ready(function () {
+    var parallaxInstance = new Parallax(ctr_parallax);
+    
     $("#opti-cont").click(function (e) {
         $("#opti-cont").removeClass('show');
         $("#login-cont").show();
