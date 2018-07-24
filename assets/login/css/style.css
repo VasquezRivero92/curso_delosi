@@ -111,14 +111,21 @@ margin-left: -17px;
     height : 605px;
     background:url(../images/face1.png) repeat-x  50% 0%;/***/
 }
-
-#personas_mc{
+#personas1_mc{
     position:absolute;
     margin-left : -3px;
     margin-top : 342px;
     width : 100%;
     height : 414px;
     background:url(../images/personajes.png) no-repeat  50% 0%;/***/
+}
+#personas2_mc{
+    position:absolute;
+    margin-left : -3px;
+    margin-top : 342px;
+    width : 100%;
+    height : 414px;
+    background:url(../images/personajes2.png) no-repeat  50% 0%;/***/
 }
 #nubes1_mc{
     margin-left : -282px;
@@ -288,19 +295,19 @@ margin-left: -17px;
 
 
 .nube_anim{
-  animation: ins_nubeanim linear 20s;
+  animation: ins_nubeanim linear 50s;
   animation-iteration-count: infinite;
   transform-origin: 50% 50%;
-  -webkit-animation: ins_nubeanim linear 20s;
+  -webkit-animation: ins_nubeanim linear 50s;
   -webkit-animation-iteration-count: infinite;
   -webkit-transform-origin: 50% 50%;
-  -moz-animation: ins_nubeanim linear 20s;
+  -moz-animation: ins_nubeanim linear 50s;
   -moz-animation-iteration-count: infinite;
   -moz-transform-origin: 50% 50%;
-  -o-animation: ins_nubeanim linear 20s;
+  -o-animation: ins_nubeanim linear 50s;
   -o-animation-iteration-count: infinite;
   -o-transform-origin: 50% 50%;
-  -ms-animation: ins_nubeanim linear 20s;
+  -ms-animation: ins_nubeanim linear 50s;
   -ms-animation-iteration-count: infinite;
   -ms-transform-origin: 50% 50%;
 }
@@ -352,65 +359,65 @@ margin-left: -17px;
 
 
 .nube_anim2{
-  animation: ins_nubeanim2 linear 30s;
+  animation: ins_nubeanim2 linear 50s;
   animation-iteration-count: infinite;
   transform-origin: 50% 50%;
-  -webkit-animation: ins_nubeanim2 linear 30s;
+  -webkit-animation: ins_nubeanim2 linear 50s;
   -webkit-animation-iteration-count: infinite;
   -webkit-transform-origin: 50% 50%;
-  -moz-animation: ins_nubeanim2 linear 30s;
+  -moz-animation: ins_nubeanim2 linear 50s;
   -moz-animation-iteration-count: infinite;
   -moz-transform-origin: 50% 50%;
-  -o-animation: ins_nubeanim2 linear 30s;
+  -o-animation: ins_nubeanim2 linear 50s;
   -o-animation-iteration-count: infinite;
   -o-transform-origin: 50% 50%;
-  -ms-animation: ins_nubeanim2 linear 30s;
+  -ms-animation: ins_nubeanim2 linear 50s;
   -ms-animation-iteration-count: infinite;
   -ms-transform-origin: 50% 50%;
 }
 
 @keyframes ins_nubeanim2{
   0% {
-    transform:  translate(1000px,0px)  ;
+    transform:  translate(2000px,0px)  ;
   }
   100% {
-    transform:  translate(-2000px,0px)  ;
+    transform:  translate(-4000px,0px)  ;
   }
 }
 
 @-moz-keyframes ins_nubeanim2{
   0% {
-    -moz-transform:  translate(1000px,0px)  ;
+    -moz-transform:  translate(2000px,0px)  ;
   }
   100% {
-    -moz-transform:  translate(-2000px,0px)  ;
+    -moz-transform:  translate(-4000px,0px)  ;
   }
 }
 
 @-webkit-keyframes ins_nubeanim2 {
   0% {
-    -webkit-transform:  translate(1000px,0px)  ;
+    -webkit-transform:  translate(2000px,0px)  ;
   }
   100% {
-    -webkit-transform:  translate(-2000px,0px)  ;
+    -webkit-transform:  translate(-4000px,0px)  ;
   }
 }
 
 @-o-keyframes ins_nubeanim2 {
   0% {
-    -o-transform:  translate(1000px,0px)  ;
+    -o-transform:  translate(2000px,0px)  ;
   }
   100% {
-    -o-transform:  translate(-2000px,0px)  ;
+    -o-transform:  translate(-4000px,0px)  ;
   }
 }
 
 @-ms-keyframes ins_nubeanim2 {
 
   0% {
-    -ms-transform:  translate(1000px,0px)  ;
+    -ms-transform:  translate(2000px,0px)  ;
   }
   100% {
-    -ms-transform:  translate(-2000px,0px)  ;
+    -ms-transform:  translate(-4000px,0px)  ;
   }
 }

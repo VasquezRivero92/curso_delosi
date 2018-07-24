@@ -35,7 +35,8 @@
                     <div data-depth-x="0.06" id="grass1_mc"></div>
                     <div data-depth="-0.1" id="grass2_mc"></div>
                     <div data-depth="0.2" id="grass3_mc"></div>
-                    <div data-depth="-0.1" id="personas_mc"></div>
+                    <div data-depth="-0.1" id="personas1_mc"></div>
+                    <div data-depth="0.1" id="personas2_mc"></div>
                 </div>
                 <div id="logo_mc" class="row"></div>
                 <div class="row">
