@@ -232,7 +232,7 @@
 
                 <div id="popAct_7" class="caratula"> 
                     <div class="pausas"><p class="textCent"></p></div>
-                    <?php echo anchor('pausasactivas', ' ', array('id' => 'preg_2_1','class' => 'CV_btn1 disable')); ?>
+                    <?php echo anchor('Pausasactivas', ' ', array('id' => 'preg_2_1','class' => 'CV_btn1 disable')); ?>
                     <div id="preg_7_0" class="CV_btn2 pregOpc"></div>
                 </div>
 
@@ -248,7 +248,7 @@
 
                 <div id="popAct_10" class="caratula"> 
                     <div class="auxilio"><p class="textCent"> </p></div>
-                    <a id="preg_10_1" class="CV_btn1 disable" href="#"> </a>
+                    <?php echo anchor('Prevencion', ' ', array('id' => 'preg_10_1','class' => 'CV_btn1 disable')); ?>                    
                     <div id="preg_10_0" class="CV_btn2 pregOpc"> </div>
                 </div>
 

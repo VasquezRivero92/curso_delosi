@@ -68,7 +68,49 @@ class Ajax_model extends CI_Model {
             $data['intentos'] = (string) '100';
             return $this->db->insert('users_curso', $data);
         }
-        echo $data['intentos'];
+    }
+
+    public function init_calificacion($id_user, $id_curso) {
+        $data = array(array(
+                            'id_user'=> $id_user,
+                            'id_curso'=> $id_curso,
+                            'id_pregunta'=> '1',
+                            ),
+                        array(
+                            'id_user'=> $id_user,
+                            'id_curso'=> $id_curso,
+                            'id_pregunta'=> '2',
+                            ),
+                        array(
+                            'id_user'=> $id_user,
+                            'id_curso'=> $id_curso,
+                            'id_pregunta'=> '3',
+                            ),
+                        array(
+                            'id_user'=> $id_user,
+                            'id_curso'=> $id_curso,
+                            'id_pregunta'=> '4',
+                            ),
+                        array(
+                            'id_user'=> $id_user,
+                            'id_curso'=> $id_curso,
+                            'id_pregunta'=> '5',
+                            ),
+                        array(
+                            'id_user'=> $id_user,
+                            'id_curso'=> $id_curso,
+                            'id_pregunta'=> '6',
+                            ),
+                    );
+        // if ($checkUserCali) {
+        //     // $data['vistas'] = (int) $checkUserCurso->vistas + 1;            
+        //     return $this->db->where('id_user', $id_user)
+        //                     ->where('id_curso', $id_curso)
+        //                     // ->where('id_version', $this->id_version)
+        //                     ->update('calificacion_curso', $data);
+        // } else {
+            return $this->db->insert_batch('calificacion_curso', $data);
+        // }
     }
 
 
@@ -259,6 +301,13 @@ class Ajax_model extends CI_Model {
                         ->get('users_curso')->row();
     }
 
+    protected function checkUserCali($id_user, $id_curso) {
+        return $this->db->select('id_pregunta')
+                        ->where('id_user', $id_user)
+                        ->where('id_curso', $id_curso)
+                        ->get('calificacion_curso')->row();
+    }
+
     //para no hacer lo mismo a cada rato en las funciones de insert
     protected function dataUserCurso($id_user, $id_curso) {
         $data = $this->db->select('id_empresa, id_area, id_departamento, id_cargo, id_planilla, sede')
@@ -279,6 +328,8 @@ class Ajax_model extends CI_Model {
             'id_grupo' => $this->session->id_grupo
         );
     }
+
+
 
     protected function update_user_curso($id_user, $id_curso) {
         $id_menu = $this->db->select('menu')->from('curso')->where('id', $id_curso)->limit(1)->get()->row()->menu;

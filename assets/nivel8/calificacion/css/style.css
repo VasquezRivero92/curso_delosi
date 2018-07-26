@@ -1,0 +1,20 @@
+form{ width:250px; margin:0 auto; padding:10px; border: 1px solid #d9d9d9;}
+form p, form input[type = "submit"]{text-align:center; font-size:20px;}
+
+
+input[type = "radio"]{ display:none;/*position: absolute;top: -1000em;*/}
+label{ color:grey;}
+
+.clasificacion{
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+
+label:hover,
+label:hover ~ label{color:orange;}
+input[type = "radio"]:checked ~ label{color:orange;}
+
+
+ .formulario3, .formulario4, .formulario5{
+	display: none;
+}

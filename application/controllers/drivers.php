@@ -8,12 +8,16 @@ class Drivers extends Nivel_Controller {
 
     function __construct() {
         parent::__construct();
-        if ($this->entraadriver()) {
-            $this->session->curso = $this->cur;
+        if ($this->base_model->get_max_curso() >= $this->cur || $this->session->userniv) {
+            if ($this->entraadriver()) {
+                $this->session->curso = $this->cur;
 
-        } else {
+            } else {
+                redirect('/main', 'refresh');
+            }
+        }else {
             redirect('/main', 'refresh');
-        }
+            }
     }
 
     function index() {        
@@ -98,6 +102,30 @@ class Drivers extends Nivel_Controller {
         } else {
             redirect('drivers/', 'refresh');
         }
-    }    
+    }   
+
+    // function calificacion() {        
+    //     $this->data['own_dir'] = $this->data['assets_dir'] . '/nivel' . $this->cur . '/calificacion'; 
+    //     $resul = $this->base_model->get_puntaje($this->session->user_id, $this->cur); 
+             
+
+    //     if($resul->intentos == 111){
+
+    //         $this->data['pregunta'] = $this->base_model->get_pregunta_calificacion(1)->nombre;           
+
+    //         if($this->input->post()){
+    //             $calificacion1 = $this->input->post('calificacion1');
+    //             $calificacion2 = $this->input->post('calificacion2');
+    //             echo $calificacion1,$calificacion2 ;
+    //         }
+            
+    //         $this->load->view('nivel' . $this->cur . '/calificacion', $this->data);
+            
+
+    //     }else{
+    //         redirect('mapa/', 'refresh');
+    //     }
+
+    // } 
 
 }

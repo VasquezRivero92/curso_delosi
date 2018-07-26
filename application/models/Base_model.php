@@ -349,6 +349,13 @@ class Base_model extends CI_Model {
     
     //funciones jose
     
+    public function get_pregunta_calificacion($id) {
+            return $this->db->select('nombre')
+                        ->where('id', $id)
+                        ->get('preguntas_calificacion')->row();
+    }
+
+
     public function get_puntajes1($id_user) {
         return $this->db->select('puntaje')
                         ->where('id_user', $id_user)

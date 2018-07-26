@@ -10,7 +10,7 @@ var $count_btn = 0;
 var $intentos_juego = 0;
 /*******************************************************************************/
 function showInicio() {
-$.post(bdir + 'ajax/init_curso_driver').done(function (data) {
+    $.post(bdir + 'ajax/init_curso_driver').done(function (data) {
             console.log("Init nivel: " + data);
         }); 
     redimensionarJuego();
