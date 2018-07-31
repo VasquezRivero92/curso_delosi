@@ -24,9 +24,9 @@
     </head>
     <?php
     $avatar = 'av' . strtoupper(substr($this->session->grupo, 0, 1)) . $this->session->avatar;
-    $owlgrupo = 'owl-' . $this->session->grupo;
+    $owlgrupo = $this->session->grupo;
     ?>
-    <body class="<?php echo $avatar . ' ' . $owlgrupo; ?>">
+    <body class="<?php echo $owlgrupo;?>">
         <!-- - - - - - - - - - - - - - - - -  Loader  - - - - - - - - - - - - - - - - -->
         <div id="qLoverlay" class="resizeWindow">
             <div id="img_loader01"><div></div></div>
@@ -56,7 +56,7 @@
                 <div id="i3btn_3" class="i3btn"></div>
                 <?php
                 if ($this->session->win < 2) {
-                    echo anchor('prevencion/evacuacion', 'Iniciar evacuación', array('id' => 'btnJugar'));
+                    echo anchor('prevencion/evacuacion', 'Iniciar Juego', array('id' => 'btnJugar'));
                 } else {
                     echo '<div id="i3txt_2">Ya completaste este reto</div>';
                     echo anchor('main', 'Volver al inicio', array('id' => 'btnJugar'));
@@ -80,9 +80,9 @@
                         </div>
                          <div class="item" data-id=3>
                             <div id="s1i5"></div>
-                        </div>
-                        <div class="item" data-id=4>
                             <div id="s1i6"></div>
+                        </div>
+                        <div class="item" data-id=4>                            
                             <div id="s1i7"></div>
                         </div>
                         <!-- <div class="item" data-id=3>
@@ -95,24 +95,28 @@
             <!-- - - - - - - - - - - - - - - -  Slider 2  - - - - - - - - - - - - - - - -->
             <div id="sliderPage_2" class="instrucciones">
                 <!-- <div id="s2tit_1" class="stit_1">RIESGOS Y MEDIDAS DE PREVENCIÓN</div>
-                <div id="s2tit_2" class="stit_2"></div>
-                <div id="s2txt_1" class="stxt_1">Mantén presionado el cursor sobre la imagen<br>para ver la manera de prevenir los peligros.</div> -->
+                <div id="s2tit_2" class="stit_2"></div>--> 
+                <div id="s2txt_1" class="stxt_1">CABEZA Y CUELLO</div>                
+                
                 <div class="cont-carousel">
-                    <div class="owl-carousel">
+                    <div class="owl-carousel">                        
                         <div class="item" data-id=1>
-                            <div id="s2i1"></div>
-                            <div id="s2i2"></div>
+                            <div id="s2i1"></div>                            
                         </div>
                         <div class="item" data-id=2>
-                            <div id="s2i3"></div>
-                            <div id="s2i4"></div>
+                            <div id="s2i2"></div>                            
                         </div>
                          <div class="item" data-id=3>
-                            <div id="s2i5"></div>
-                            <div id="s2i6"></div>
+                            <div id="s2i3"></div>                            
                         </div>
-                        <div class="item" data-id=4>                            
-                            <div id="s2i7"></div>
+                        <div class="item" data-id=4> 
+                            <div id="s2i4"></div>                            
+                        </div>
+                        <div class="item" data-id=5>                             
+                            <div id="s2i5"></div>
+                        </div>
+                        <div class="item" data-id=6>
+                            <div id="s2i6"></div>   
                         </div>
                         <!-- <div class="item" data-id=3>
                             <div id="s1i3"></div><div id="s1i3h"></div><div id="s1i3p"></div><div class="itmHand"></div><div class="itemLoader"></div>
@@ -120,6 +124,9 @@
                     </div>
                 </div>
                 <div class="btnVolver"></div>
+            </div>
+            <div id="sliderPage_2_1" class="instrucciones">
+                <div id="i2btn_2">Continuar</div>
             </div>
             <!-- - - - - - - - - - - - - - - -  Slider 3  - - - - - - - - - - - - - - - -->
             <div id="sliderPage_3" class="instrucciones">
@@ -129,16 +136,26 @@
                 <div class="cont-carousel">
                     <div class="owl-carousel">
                          <div class="item" data-id=1>
-                            <div id="s3i1"></div>
-                            <div id="s3i2"></div>
+                            <div id="s3i1"></div>                            
                         </div>
                         <div class="item" data-id=2>
+                            <div id="s3i2"></div>
+                        </div>
+                        <div class="item" data-id=3>
                             <div id="s3i3"></div>
+                        </div>
+                        <div class="item" data-id=4>
                             <div id="s3i4"></div>
+                        </div>
+                        <div class="item" data-id=5>
+                            <div id="s3i5"></div>
                         </div>
                     </div>
                 </div>
                 <div class="btnVolver"></div>
+            </div>
+            <div id="sliderPage_3_1" class="instrucciones">
+                <div id="i2btn_3">Continuar</div>
             </div>
             <!-- - - - - - - - - - - - - - - -  Slider 4  - - - - - - - - - - - - - - - -->
             <!-- <div id="sliderPage_4" class="instrucciones">

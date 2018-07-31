@@ -1,4 +1,5 @@
 /*******************************************************************************/
+var pausect = 0;
 // numero de juego actual
 var $JAct = 0;
 // Maximo nivel alcanzado
@@ -161,6 +162,7 @@ function initBotones() {
         $('.caratula, .game, #capaResumen').stop().fadeOut(500);
     });    
     $('#pausaTouch').click(function () {
+        pausect = CTpreg;
         if ($MuevePlayer) {
             if ($(this).hasClass("paused")) {
                 $("#btnReanudar").click();
@@ -171,15 +173,24 @@ function initBotones() {
         }
     });
     $('#btnReanudar').click(function () {
-        playBGMusic(window.race);
-        $('#pausaTouch').removeClass('paused');
-        $('#PauseGame').fadeOut(200);
-        $J[$JAct].CTiempo = $J[$JAct].CTiempo + 1;
-        isPaused = false;
-        $('#gameArea1').addClass('pista_anim');
+        if(CTpreg < 29){
+            isPaused = true;
+            ControlIntervaloPregunta();
+            $('#pausaTouch').removeClass('paused');            
+            $('#PauseGame').fadeOut(200);
+        }else{
+            isPaused = false;
+            playBGMusic(window.race);        
+            $('#pausaTouch').removeClass('paused');
+            $('#PauseGame').fadeOut(200);
+            $J[$JAct].CTiempo = $J[$JAct].CTiempo + 1;
+            $('#gameArea1').addClass('pista_anim');
+        }    
+        
 
     });
     $('.pregOpc').click(function () {
+        CTpreg = 30;
         clearInterval(clearintervalo);
         $('.caratula').stop().fadeOut(300);
         var idResp = parseInt($(this).attr('id').split("_")[1], 10);
@@ -203,7 +214,8 @@ function initBotones() {
         }
         // $poposito = 0;
     });
-    $('#btnReintento').click(function () {
+    $('#btnReintento').click(function () {        
+        isPaused = false;
         $("#icon_" + $ActPwrUp).addClass("anim check");
         $("#vinetatiempo").fadeOut(400);
         $('#pregWindow').stop().fadeOut(400);
@@ -247,7 +259,7 @@ function initBotones() {
 
     $('#btnListo').click(function () {
         //$ActPwrUp = 0;
-
+        isPaused = false;
         $("#vinetatiempo").fadeOut(400);
         $('#pregWindow').stop().fadeOut(400);
         $('.caratula').stop().delay(500).fadeOut(10);
@@ -403,6 +415,7 @@ function pausarJuego() {
     $("#PauseGame").show();
     $('#gameArea1').removeClass('pista_anim');
     stopBGMusic(window.termino_mal);
+    clearInterval(clearintervalo);
 }
 function tiempo_Subs() {
     clearInterval(clearintervalo);

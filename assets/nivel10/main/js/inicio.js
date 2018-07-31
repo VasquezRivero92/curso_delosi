@@ -68,14 +68,34 @@ $(document).ready(function (e) {
         $('#instruccion_3').stop().fadeIn(500);
         
     });
+    $('#i2btn_2').click(function () {
+        stopTexto();
+        playSound(window.playBTN);
+        $('#sliderPage_2_1').stop().fadeOut(100);
+        $('#sliderPage_' + sID).stop().fadeIn(500);
+        $('#s2txt_1').html('CABEZA Y CUELLO');
+    });
+    $('#i2btn_3').click(function () {
+        stopTexto();
+        playSound(window.playBTN);
+        $('#sliderPage_3_1').stop().fadeOut(100);
+        $('#sliderPage_' + sID).stop().fadeIn(500);
+    });
     $('.i3btn').click(function () {
-
+        id_sl = 0;
         $('.btnVolver').removeClass('disable');
         $('.owl-carousel').trigger('to.owl.carousel', 0)
         playSound(window.playBTN);
         sID = parseInt($(this).attr('id').split('_')[1], 10);
         $('.instrucciones').stop().delay(300).fadeOut(100);
-        $('#sliderPage_' + sID).stop().fadeIn(500);
+        console.log(sID);
+        if(sID == 2){
+            $('#sliderPage_2_1').stop().fadeIn(500);
+        }else if(sID == 3){
+            $('#sliderPage_3_1').stop().fadeIn(500);
+        }else{
+            $('#sliderPage_' + sID).stop().fadeIn(500);
+        }
         switch(sID) {
         case 1:
             sli_1 = true;
@@ -111,7 +131,12 @@ $(document).ready(function (e) {
             $('#s2i4_1_1').addClass('img_disabled');
             });   
     });
-    
+    $('.btnVolver2').click(function () {
+
+        $('#sliderPage_' + sID).stop().fadeIn(500);  
+
+    });
+
     $('.btnVolver').click(function () {
         $count_btn = 0;
         // $('.owl-stage-outer').css("overflow","visible");
@@ -149,7 +174,14 @@ $(document).ready(function (e) {
 
     }).on('translated.owl.carousel', function (e) {
         id_sl = e.item.index + 1;  
-           
+        console.log(id_sl);
+         if(id_sl == 3 || id_sl == 4){
+            $('#s2txt_1').html('BRAZOS Y TRONCO');
+         }else if(id_sl == 5 || id_sl == 6){
+            $('#s2txt_1').html('PIERNAS');
+         }else{
+            $('#s2txt_1').html('CABEZA Y CUELLO');
+        }
         if(sli_1 == true){
             sl_1();
         }else if(sli_2 == true){

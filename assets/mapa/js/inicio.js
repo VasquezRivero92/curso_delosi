@@ -150,12 +150,10 @@ function initBotones() {
         $('#powerUp_'+$ActPwrUp).addClass("hit");
         $PowerUps[$ActPwrUp - 1].hit = false;
         $('#pregWindow').stop().fadeOut(400);
-        console.log($ActPwrUp);
         // if (idResp === $Preguntas[$ActPwrUp]) {
         //     playSound(window.bien);
         // }else 
         if (idResp === $Preguntas[1] || idResp === $Preguntas[13] || idResp === $Preguntas[14] ) {
-            console.log('A1');
             playSound(window.audioCrash);
             $ActPwrUp = 1;
             $('#pregWindow').stop().fadeOut(400);
@@ -165,7 +163,6 @@ function initBotones() {
             }, 1500);
             $PowerUps[$ActPwrUp - 1].visible = 200;
         }else{
-            console.log('A2');
             playSound(window.audioCrash);
             $ActPwrUp = 1;
             $('#pregWindow').stop().fadeOut(400);
@@ -211,7 +208,9 @@ function initBotones() {
                 console.log("OK:");
                 console.log(data);
                 setTimeout(function () {
-                    $('#popup2').fadeOut(1000);
+                    $('#pregWindow').fadeOut(1000);
+                    $('#popAct_1').fadeOut(1000);
+                    isPaused = false; 
                 }, 1000);
             }).fail(function (jqXHR, textStatus, errorThrown) {
                 console.log("Fail:");
@@ -226,7 +225,7 @@ function initBotones() {
     });
     $('#pop2close').click(function () {
         playSound(window.playBTN);
-        $('#popup2').fadeOut(1000);
+        $('#popAct_1').fadeOut(1000);
     });
 
 
@@ -244,8 +243,6 @@ function initJuegos() {
         $J[i].init(i);
     });
     $drivers = parseInt($('body').data('drivers'), 10);   
-
-    console.log($drivers);    
 }
 function showInicio() {
     playBGMusic(window.BGIntro);
@@ -318,6 +315,9 @@ function pausarJuego() {
     $("#PauseGame").show();
 }
 function muestraPregunta() {
+    if($ActPwrUp == 1 || $ActPwrUp == 13 || $ActPwrUp == 14){
+        $('#pop2ta').val('');
+    }
     playSound(window.audioCatch);
     isPaused = true;
     $(".caratula").hide();
@@ -341,7 +341,7 @@ function muestraPregunta() {
     }else if($ActPwrUp == 13 || $ActPwrUp == 14){
         $("#popAct_1").show();
     }else{
-         $("#popAct_" + $ActPwrUp).show();        
+         $("#popAct_" + $ActPwrUp).show();   
     }
 
 

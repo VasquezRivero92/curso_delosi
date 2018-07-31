@@ -54,7 +54,7 @@
             <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
             <div id="marcador" class="gameEnv">
                 <!-- <div id="CTimer"><div id="CMin">00</div><div>:</div><div id="CSeg">00</div></div> -->
-                <div id="vinetatiempo"><!-- <div id="CMin1">00</div><div>:</div> --><div id="CSeg1">00</div></div>
+                <div id="vinetatiempo"><!-- <div id="CMin1">00</div><div>:</div> --><div id="CSeg1">30</div></div>
             </div>
             <div id="icon_1" class="iconCheck"></div>
             <div id="icon_2" class="iconCheck"></div>

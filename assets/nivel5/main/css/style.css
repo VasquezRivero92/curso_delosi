@@ -120,6 +120,8 @@ body{
 .avPM #i2img_1{ background-image: url(../images/i2avPM.png); }
 .avRF #i2img_1{ background-image: url(../images/i2avRF.png); }
 .avRM #i2img_1{ background-image: url(../images/i2avRM.png); }
+.avDF #i2img_1{ background-image: url(../images/i2avRF.png); }
+.avDM #i2img_1{ background-image: url(../images/i2avRM.png); }
 #i2tit_1{
     position: absolute;
     width: 410px; height: 110px;

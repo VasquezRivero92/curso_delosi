@@ -1,0 +1,334 @@
+@charset "utf-8";
+/*********************************  Power Ups  *********************************/
+.powerUp{}
+.powerUp1{
+    position:absolute; z-index:1; 
+    width:70px; height:70px;
+    background-color: rgba(132, 82, 82, 0.76);
+    opacity:1;
+    transition:opacity 500ms linear;
+    font-size: 0px;
+}
+.powerUp1.hit{ opacity:0; }
+#powerUp_1{ width:170px; height:120px; left:1290px; top:170px; }
+#powerUp_2{ width:250px; height:200px; left:2180px; top:650px; }
+#powerUp_3{ width:160px; height:105px; left:740px; top:380px; }
+#powerUp_4{ width:250px; height:60px; left:1580px; top:220px; }
+#powerUp_5{ width:180px; height:50px; left:2300px; top:210px; }
+#powerUp_6{ width:150px; height:330px; left:1340px; top:520px; }
+#powerUp_7{ width:137px; height:63px; left:550px; top:733px; }
+#powerUp_8{ width:110px; height:200px; left:1130px; top:445px; }
+#powerUp_9{ width:146px; height:73px; left:498px; top:408px; }
+#powerUp_10{ width:170px; height:100px; left:2040px; top:190px; }
+#powerUp_11{ width:120px; height:20px; left:1010px; top:190px; }
+#powerUp_12{ width:70px; height:130px; left:200px; top:240px; }
+#powerUp_13{ width:140px; height:130px; left:740px; top:560px; }
+#powerUp_14{ width:80px; height:130px; left:1850px; top:450px; }
+#powerUp_15{ width:250px; height:120px; left:1500px; top:500px; }
+/*******************************************************************************/
+.icoPel{
+    position:absolute;
+    background-color: rgba(255,0,0,0);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+#icoPel_1{ width:155px; height:134px; left:1277px; top:47px; background-image:url(../images/pwrup/peligro1.png); }
+#icoPel_2{ width:220px; height:184px; left:2208px; top:709px; background-image:url(../images/pwrup/peligro2.png); }
+#icoPel_3{ width:81px; height:203px; left:774px; top:248px; background-image:url(../images/pwrup/peligro3.png); }
+#icoPel_4{ width:135px; height:74px; left:1574px; top:23px; background-image:url(../images/pwrup/peligro4.png); }
+#icoPel_5{ width:301px; height:93px; left:2231px; top:8px; background-image:url(../images/pwrup/peligro5.png); }
+#icoPel_6{ width:99px; height:227px; left:1370px; top:602px; background-image:url(../images/pwrup/peligro6.png); }
+#icoPel_7{ width:137px; height:63px; left:550px; top:733px; background-image:url(../images/pwrup/peligro7.png); }
+#icoPel_8{ width:135px; height:193px; left:1130px; top:450px; background-image:url(../images/pwrup/peligro8.png); }
+#icoPel_9{ width:146px; height:73px; left:498px; top:408px; background-image:url(../images/pwrup/peligro9.png); }
+#icoPel_10{ width:144px; height:150px; left:2060px; top:98px; background-image:url(../images/pwrup/peligro10.png); }
+#icoPel_11{ width:82px; height:105px; left:1031px; top:83px; background-image:url(../images/pwrup/peligro11.png); }
+
+.icoPrev{
+    position:absolute;
+    background-color: rgba(0,255,0,0);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+#icoPrev_1{ width:114px; height:134px; left:1319px; top:46px; background-image:url(../images/pwrup/prevencion1.png); }
+#icoPrev_3{ width:71px; height:124px; left:765px; top:294px; background-image:url(../images/pwrup/prevencion3.png); }
+#icoPrev_4{ width:138px; height:69px; left:1573px; top:18px; background-image:url(../images/pwrup/prevencion4.png); }
+#icoPrev_5{ width:284px; height:72px; left:2242px; top:22px; background-image:url(../images/pwrup/prevencion5.png); }
+#icoPrev_6{ width:89px; height:244px; left:1371px; top:585px; background-image:url(../images/pwrup/prevencion6.png); }
+/**********************************  Paredes  **********************************/
+.ParedMask{ position:absolute; left:0px; top:0px; width:50px; height:50px; display:none; }
+.fondoOPC{ position:absolute; top:0px; left:0px; z-index:1; display:none; }
+/***********************************  Player  ***********************************/
+#Player_1{
+    position:absolute;
+    width: 53px;
+    height: 50px;
+    z-index:2;
+    background-color: rgba(132, 82, 82, 0);
+}
+#Player_1 .sprite{
+    position:absolute;
+    width:200px; height:200px;
+    left: -76px;
+    bottom: -6px;
+    background-position:0px 0px;
+    background-color: rgba(250,0,0,0);
+}
+
+.playerF .sprite{ background-image: url(../images/sprite_F.png); }
+.playerM .sprite{ background-image: url(../images/sprite_M.png); }
+
+#Player_1 .ptje{
+    position:absolute; display:none;
+    width:99px; height:91px;
+    left:-90px; top:-145px;
+    background: rgba(250,0,0,0) url(../images/alert.png) no-repeat 50% 50%;
+    cursor: pointer;
+}
+.Jvida .sprite{
+    position:absolute;
+    width:200px; height:200px;
+    left:-85px; bottom:0px;
+    background-position:0px 0px;
+}
+
+.Jvida .sprite{ background-color:rgba(250,0,0,0); }/**/
+.Jvida{
+    position:absolute;
+    width: 50px;
+    height: 60px;
+    /* left:-100px; top:44px; */
+    display:none;
+    z-index:1;
+}
+.Jvida.Filavidas{ display:block; }
+.player .ptje{
+    position:absolute; 
+    width:60px; height:31px;
+    left:-23px; top:-20px;
+    display:none;
+}
+.player .ptje20s{
+    position:absolute; 
+    width:75px; height:32px;
+    left:-30px; top:-20px;
+    background:url(../images/20seg.png) no-repeat center center;
+    display:none;
+}
+/*************************  Objetos por cada escenario  *************************/
+.conteo{
+    position:absolute;
+    background-repeat:no-repeat;
+    background-position:center center;
+    display: none;
+}
+#conteo1{
+    position:absolute; 
+    width:271px; height:181px;
+    left:759px; top:244px;
+    background-image:url(../images/conteo1.png);
+}
+#conteo2{
+    position:absolute; 
+    width:276px; height:181px;
+    left:536px; top:244px;
+    background-image:url(../images/conteo2.png);
+}
+#conteo3{
+    position:absolute; 
+    width:280px; height:181px;
+    left:315px; top:244px;
+    background-image:url(../images/conteo3.png);
+}
+#gameArea1{
+    position:absolute;
+    width:2548px; height:884px;
+    left:0px; top:0px;
+    background:url(../images/fondo1.jpg) no-repeat;
+    overflow:hidden;
+}
+/*******************************************************************************/
+
+/*****************************************  Power Ups  *****************************************/
+.powerUp{ position:absolute; z-index:1; }
+/***************  amigos del nivel 3, 4 y 6  ***************/
+.powerUp1{
+    width:70px; height:70px;
+    background:rgba(250,0,0,0);
+    opacity:1;
+    transition:opacity 1s linear;
+}
+.powerUp1.hit{ opacity:0; }
+.powerUp1.aCristina{ width:75px; height:166px; background:url(../images/E3_Cristina.png) no-repeat center center; }
+.powerUp1.aJose{ width:76px; height:132px; background:url(../images/E3_Jose.png) no-repeat center center; }
+.powerUp1.aPaulo{ width:73px; height:128px; background:url(../images/E3_Paulo.png) no-repeat center center; }
+.powerUp1.aRoberto{ width:75px; height:157px; background:url(../images/E3_Roberto.png) no-repeat center center; }
+.powerUp1.aFinal{ width:93px; height:78px; background:rgba(250,0,0,0.5); }
+/***************  piezas del nivel 6  ***************/
+.powerUp2{
+    width:50px; height:51px;
+    background:url(../images/powerUp2.png) no-repeat center center;
+}
+.powerUp2.hit{ animation:bounceOut 1s forwards; }
+/***************  aumenta tiempo  ***************/
+@keyframes powerUp3{
+   from{ background-position:0px 0px; }
+     to{ background-position:-294px 0px; }
+}
+.powerUp3{
+    width:49px; height:51px;
+    /* background:url(../images/powerUp3.png); */  
+    /* animation:powerUp3 600ms steps(6) infinite; 
+    background-size: contain;*/
+}
+#linterna{ 
+    background:url(../images/linterna.png); 
+    width: 78px;
+    height: 47px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#mochila{  
+    background:url(../images/mochila.png); 
+    width: 71px;
+    height: 86px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#puerta{  
+    width:155px; height:118px;  background: rgba(250,0,0,0); 
+}
+
+.powerUp3.hit{ animation:bounceOut 1s forwards; }
+
+/*****************************************  Enemigos *****************************************/
+.enemigo{
+    position:absolute;
+    background-position:0px 0px;
+    z-index:1;
+}
+.enemigoA{
+    width:2549px; height:885px;
+    background-image:url(../images/fondoMC2.png);
+    z-index: 40;
+}
+.enemigoB{
+    width:2549px; height:885px;
+    background-image:url(../images/fondoMC3.png);
+    z-index: 58;
+}
+.enemigoC{
+    width:2549px; height:885px;
+    background-image:url(../images/fondoMC4.png);
+    z-index: 62;
+}
+@keyframes enemigoD{
+   from{ background-position:0px 0px; }
+     to{ background-position:-1255px 0px; }
+}
+.enemigoD{
+    width:180px; height:100px;
+    left:1200px; top:400px;
+    background-color:rgba(0,0,0,0);
+    opacity:1;
+    transition:opacity 2s linear;
+}
+.enemigoD.hide{ opacity:0; }
+.enemigoD div{
+    position:absolute;
+    width:313px; height:437px;
+    left:-70px; bottom:0px;
+/*     background:url(../images/enemigoD.png); */
+    animation:enemigoD 400ms steps(4) infinite;
+}
+
+
+.persona_mov1{
+  animation: peop_1 linear 1s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 100%;
+  -webkit-animation: peop_1 linear 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-transform-origin: 50% 100%;
+  -moz-animation: peop_1 linear 1s;
+  -moz-animation-iteration-count: infinite;
+  -moz-transform-origin: 50% 100%;
+  -o-animation: peop_1 linear 1s;
+  -o-animation-iteration-count: infinite;
+  -o-transform-origin: 50% 100%;
+  -ms-animation: peop_1 linear 1s;
+  -ms-animation-iteration-count: infinite;
+  -ms-transform-origin: 50% 100%;
+}
+
+@keyframes peop_1{
+  0% {
+    transform:  scaleY(1.00) ;
+  }
+  50% {
+    transform:  scaleY(1.04) ;
+  }
+  100% {
+    transform:  scaleY(1.00) ;
+  }
+}
+
+@-moz-keyframes peop_1{
+  0% {
+    -moz-transform:  scaleY(1.00) ;
+  }
+  50% {
+    -moz-transform:  scaleY(1.04) ;
+  }
+  100% {
+    -moz-transform:  scaleY(1.00) ;
+  }
+}
+
+@-webkit-keyframes peop_1 {
+  0% {
+    -webkit-transform:  scaleY(1.00) ;
+  }
+  50% {
+    -webkit-transform:  scaleY(1.04) ;
+  }
+  100% {
+    -webkit-transform:  scaleY(1.00) ;
+  }
+}
+
+@-o-keyframes peop_1 {
+  0% {
+    -o-transform:  scaleY(1.00) ;
+  }
+  50% {
+    -o-transform:  scaleY(1.04) ;
+  }
+  100% {
+    -o-transform:  scaleY(1.00) ;
+  }
+}
+
+@-ms-keyframes peop_1 {
+  0% {
+    -ms-transform:  scaleY(1.00) ;
+  }
+  50% {
+    -ms-transform:  scaleY(1.04) ;
+  }
+  100% {
+    -ms-transform:  scaleY(1.00) ;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

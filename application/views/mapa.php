@@ -204,7 +204,10 @@
                 <div id="popAct_2" class="caratula"> 
                     <div class="drivers"></div>
                     <!-- <a id="preg_2_1" class="CV_btn1 disable" href="#">IR AL CURSO</a> -->
-                    <?php echo anchor('drivers', ' ', array('id' => 'preg_2_1','class' => 'CV_btn1 disable')); ?>
+                    <?php echo anchor('drivers', ' ', array('id' => 'preg_2_1','class' => 'CV_btn1 disable'));
+                    echo anchor('mapa/certificado_drivers', '&nbsp;', array('id' => 'i4Certificado', 'class' => $certificado_drivers, 'target' => '_blank'));
+                     ?>
+
                     <!-- <div id="preg_2_1" class="CV_btn1 pregOpc">IR AL CURSO</div> -->
                     <div id="preg_2_0" class="CV_btn2 pregOpc"> </div>
                 </div>
@@ -232,7 +235,7 @@
 
                 <div id="popAct_7" class="caratula"> 
                     <div class="pausas"><p class="textCent"></p></div>
-                    <?php echo anchor('Pausasactivas', ' ', array('id' => 'preg_2_1','class' => 'CV_btn1 disable')); ?>
+                    <?php echo anchor('Pausasactivas', ' ', array('id' => 'preg_7_1  ','class' => 'CV_btn1 disable')); ?>
                     <div id="preg_7_0" class="CV_btn2 pregOpc"></div>
                 </div>
 

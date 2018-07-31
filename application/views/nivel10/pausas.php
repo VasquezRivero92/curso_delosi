@@ -4,345 +4,104 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title><?php echo $this->config->item('site_title', 'ion_auth'); ?></title>
-        <link rel="stylesheet" href="<?php echo base_url($assets_dir . '/css/animate.css'); ?>">
-        <link rel="stylesheet" href="<?php echo base_url($assets_dir . '/fonts/style.css'); ?>">
-        <link rel="stylesheet" href="<?php echo base_url($own_dir . '/css/estGeneral.css'); ?>">
-        <link rel="stylesheet" href="<?php echo base_url($own_dir . '/css/estJuego.css'); ?>">
-        <script src="<?php echo base_url($assets_dir . '/js/prefixfree.min.js'); ?>"></script>
-        <script src="<?php echo base_url($assets_dir . '/js/jquery-1.11.0.min.js'); ?>"></script>
-        <script src="<?php echo base_url($assets_dir . '/js/jquery-ui.js'); ?>"></script>
-        <script src="<?php echo base_url($assets_dir . '/js/jquery.ui.touch-punch.min.js'); ?>"></script>
-        <script src="<?php echo base_url($own_dir . '/js/libs/panicoLoader.js'); ?>"></script>
-        <script src="<?php echo base_url($own_dir . '/js/libs/utils.js'); ?>"></script>
-        <script type="text/javascript">
+        <script>
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+function init() {
+    canvas = document.getElementById("canvas");
+    anim_container = document.getElementById("animation_container");
+    dom_overlay_container = document.getElementById("dom_overlay_container");
+    var comp=AdobeAn.getComposition("4BBD3DAD411B4E3185F410FBD46734F1");
+    var lib=comp.getLibrary();
+    var loader = new createjs.LoadQueue(false);
+    loader.installPlugin(createjs.Sound);
+    loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+    var lib=comp.getLibrary();
+    loader.loadManifest(lib.properties.manifest);
+}
+function handleComplete(evt,comp) {
+    //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+    var lib=comp.getLibrary();
+    var ss=comp.getSpriteSheet();
+    var queue = evt.target;
+    var ssMetadata = lib.ssMetadata;
+    for(i=0; i<ssMetadata.length; i++) {
+        ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+    }
+    exportRoot = new lib.drag_DropPausas();
+    stage = new lib.Stage(canvas);  
+    //Registers the "tick" event listener.
+    fnStartAnimation = function() {
+        stage.addChild(exportRoot);
+        createjs.Ticker.setFPS(lib.properties.fps);
+        createjs.Ticker.addEventListener("tick", stage);
+    }       
+    //Code to support hidpi screens and responsive scaling.
+    function makeResponsive(isResp, respDim, isScale, scaleType) {      
+        var lastW, lastH, lastS=1;      
+        window.addEventListener('resize', resizeCanvas);        
+        resizeCanvas();     
+        function resizeCanvas() {           
+            var w = lib.properties.width, h = lib.properties.height;            
+            var iw = window.innerWidth, ih=window.innerHeight;          
+            var pRatio = window.devicePixelRatio || 1, xRatio=iw/w, yRatio=ih/h, sRatio=1;          
+            if(isResp) {                
+                if((respDim=='width'&&lastW==iw) || (respDim=='height'&&lastH==ih)) {                    
+                    sRatio = lastS;                
+                }               
+                else if(!isScale) {                 
+                    if(iw<w || ih<h)                        
+                        sRatio = Math.min(xRatio, yRatio);              
+                }               
+                else if(scaleType==1) {                 
+                    sRatio = Math.min(xRatio, yRatio);              
+                }               
+                else if(scaleType==2) {                 
+                    sRatio = Math.max(xRatio, yRatio);              
+                }           
+            }           
+            canvas.width = w*pRatio*sRatio;         
+            canvas.height = h*pRatio*sRatio;
+            canvas.style.width = dom_overlay_container.style.width = anim_container.style.width =  w*sRatio+'px';               
+            canvas.style.height = anim_container.style.height = dom_overlay_container.style.height = h*sRatio+'px';
+            stage.scaleX = pRatio*sRatio;           
+            stage.scaleY = pRatio*sRatio;           
+            lastW = iw; lastH = ih; lastS = sRatio;            
+            stage.tickOnUpdate = false;            
+            stage.update();            
+            stage.tickOnUpdate = true;      
+        }
+    }
+    makeResponsive(true,'both',true,1); 
+    AdobeAn.compositionLoaded(lib.properties.id);
+    fnStartAnimation();
+}
+function playSound(id, loop) {
+    return createjs.Sound.play(id, createjs.Sound.INTERRUPT_EARLY, 0, 0, loop);
+}
+</script>
+ <script type="text/javascript">
             var bdir = '<?php echo base_url(); ?>';
             var odir = '<?php echo base_url($own_dir); ?>';
-            var grupo = '<?php echo $this->session->grupo; ?>'
-        </script>
-        <script src="<?php echo base_url($own_dir . '/js/sonido.js'); ?>"></script>
-        <script src="<?php echo base_url($own_dir . '/js/inicio.js'); ?>"></script>
-        <script src="<?php echo base_url($own_dir . '/js/controlTiempo.js'); ?>"></script>
-        <script src="<?php echo base_url($own_dir . '/js/juego1.js'); ?>"></script>
+            var grup = '<?php echo strtoupper(substr($this->session->grupo, 0, 1)); ?>';
+            var win = <?php echo $this->session->win; ?>;
+</script>
+ <script src="<?php echo base_url($own_dir . '/createjs-2015.11.26.min.js'); ?>"></script>
+        <script src="<?php echo base_url($own_dir . '/drag_Drop_Pausas.js?1532028448341'); ?>"></script>
+        
     </head>
-    <?php $avatar = 'dr' . $this->session->avatar;?>
-    <body class="<?php echo $avatar . ' g-' . $this->session->grupo; ?>">
-        <!-- - - - - - - - - - - - - - - -  Loader  - - - - - - - - - - - - - - - -->
-        <div id="qLoverlay" class="resizeWindow">
-            <div id="img_loader01"><div></div></div>
+    <style>
+  #animation_container {
+    position:absolute;
+    margin:auto;
+    left:0;right:0;
+  }
+</style>
+    
+    <body onload="init();" style="margin:0px;">
+        <div id="animation_container" style="background-color:rgba(255, 255, 204, 1.00); width:1350px; height:700px">
+        <canvas id="canvas" width="1350" height="700" style="position: absolute; display: block; background-color:rgba(255, 255, 204, 1.00);"></canvas>
+        <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1350px; height:700px; position: absolute; left: 0px; top: 0px; display: block;">
         </div>
-        <div id="historia" class="resizeWindow">
-            <div id="instrucciones_1" class="instrucciones"></div>
-            <div id="instrucciones_1_2" class="instrucciones">
-                <div id="i2btn_1">Continuar</div>
-            </div>
-            <div id="instrucciones_2" class="instrucciones">
-                <div id="btnNext_2" class="btnNext"></div>
-            </div>
-            <div id="instrucciones_3" class="instrucciones">
-                <div id="btnPrev_3" class="btnPrev"></div>
-                <div id="btnNext_3" class="btnNext"></div>
-            </div>
-            <div id="instrucciones_4" class="instrucciones">
-                <div id="btnPrev_4" class="btnPrev"></div>
-                <div id="btnNext_4" class="btnNext"></div>
-            </div>
-            <div id="instrucciones_5" class="instrucciones">
-                <div id="btnPrev_5" class="btnPrev"></div>
-                <div id="btnJugar"></div>
-            </div>
-            <!-- - - - - - - - - - - - - - - -  Juego  - - - - - - - - - - - - - - - -->
-
-            <div id="gamePreg" class="game">
-                <div id="gPreg_1" class="gPreg">
-                    <div class="driver" id="driver_1"></div>
-                    <div class="moto">
-                        <img id="punto_1" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/>
-                        <img id="punto_2" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/>
-                        <!-- <img id="punto_3" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/> -->
-                        <img id="punto_4" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/>
-                    </div>
-                    <div class="preguntas">
-
-                        <div id="pregunta1_1">
-                            <div id="p_fondo1_1" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r2.png'); ?>" alt=""/>   
-                            </div>
-                            <div id="tPreg_1" class="tPreg"><span>El driver se encuentra visiblemente con una molestia. ¿Que deberia hacer?</span></div>
-                            <div id="btn_1_1" class="btn" data-rspt="0"><span>No pasa nada, nadie se fija en eso.</span></div>
-                            <div id="btn_1_2" class="btn" data-rspt="1"><span>El driver debe estar en condiciones aptas para iniciar su turno. Debe  recuperarse.</span></div>
-                            <div id="btn_1_3" class="btn" data-rspt="0"><span>Es una condición común, se puede dejar pasar.</span></div>
-                        </div>
-
-                        <div id="pregunta1_2">
-                            <div id="p_fondo1_1" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r3.png'); ?>" alt=""/>    
-                            </div>
-                            <div id="tPreg1_2" class="tPreg"><span>Es la llanta trasera de la moto ¿Que deberia hacer?</span></div>
-                            <div id="btn_1_1" class="btn" data-rspt="0"><span>Nada en particular</span></div>
-                            <div id="btn_1_2" class="btn" data-rspt="0"><span>Todo esta ok</span></div>
-                            <div id="btn_1_3" class="btn" data-rspt="0"><span>Esta normal</span></div>
-                        </div>
-
-                        <div id="pregunta1_3">
-                            <div id="p_fondo1_1" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r6.png'); ?>" alt=""/>   
-                            </div>
-                            <div id="tPreg_3" class="tPreg"><span>Si un cliente sufre el hurto de su cartera por un tercero</span></div>
-                            <div id="btn_1_1" class="btn" data-rspt="0"><span>a) Le explicas que debe poner su</span></div>
-                            <div id="btn_1_2" class="btn" data-rspt="0"><span>b) Le dices que no puedes, pero le permites</span></div>
-                            <div id="btn_1_3" class="btn" data-rspt="0"><span>c) Le dices que sí puedes, y que se lo harás</span></div>
-                        </div>
-
-                        <div id="pregunta1_4">
-                            <div id="p_fondo1_1" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r1.png'); ?>" alt=""/>  
-                            </div>
-                            <div id="tPreg_4" class="tPreg"><span>Es la luz delantera de la moto ¿Que deberia hacer?</span></div>
-                            <div id="btn_1_1" class="btn" data-rspt="0"><span>Nada en particular</span></div>
-                            <div id="btn_1_2" class="btn" data-rspt="0"><span>Todo esta ok</span></div>
-                            <div id="btn_1_3" class="btn" data-rspt="0"><span>Esta normal</span></div>                            
-                        </div>
-                    </div>
-                    <div class="btn_pass_sombra" ><div id="btnpass_1" class="btn_pass"><div id="btn_resp">Continuar</div></div></div>                    
-                </div>
-
-                <div id="gPreg_2" class="gPreg">
-                    <div class="driver" id="driver_2"></div>
-                    <div class="moto">
-                        <img id="punto2_1" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/>
-                        <img id="punto2_2" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/>
-                        <!-- <img id="punto2_3" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/> -->
-                        <img id="punto2_4" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/>
-                    </div>
-                    <div class="preguntas">
-
-                        <div id="pregunta2_1">
-                           <div id="p_fondo2_1" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r7.png'); ?>" alt=""/>
-                            </div>
-                            <div id="tPreg_1" class="tPreg"><span>El driver NO esta vistiendo la casaca negra distintiva  ¿Que deberia hacer?</span></div>
-                            <div id="btn_1_1" class="btn" data-rspt="1"><span>La casaca es parte integral de su uniforme, debe usarla obligatoriamente.</span></div>
-                            <div id="btn_1_2" class="btn" data-rspt="0"><span>No pasa nada, nadie se fija en eso.</span></div>
-                            <div id="btn_1_3" class="btn" data-rspt="0"><span>¿Quien se fija en la casaca de todos modos? Puede manejar con otra prenda encima.</span></div>
-                        </div>
-
-                        <div id="pregunta2_2">
-                            <div id="p_fondo2_2" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r4.png'); ?>" alt=""/>
-                            </div>
-                            <div id="tPreg1_2" class="tPreg"><span>Usa el calzado correcto ¿Que deberia hacer?</span></div>
-                            <div id="btn_1_1" class="btn" data-rspt="0"><span>Nada en particular</span></div>
-                            <div id="btn_1_2" class="btn" data-rspt="0"><span>Todo esta ok</span></div>
-                            <div id="btn_1_3" class="btn" data-rspt="0"><span>Esta normal</span></div>
-                        </div>
-
-                        <div id="pregunta2_3">
-                            <div id="p_fondo2_3" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r8.png'); ?>" alt=""/>
-                            </div>
-                            <div id="tPreg_3" class="tPreg"><span>Si un cliente sufre el hurto de su cartera por un tercero</span></div>
-                            <div id="btn_1_1" class="btn" data-rspt="0"><span>a) Le explicas que debe poner su denuncia en la Comisaría más</span></div>
-                            <div id="btn_1_2" class="btn" data-rspt="0"><span>b) Le dices que no puedes, pero le permites</span></div>
-                            <div id="btn_1_3" class="btn" data-rspt="0"><span>c) Le dices que sí puedes, y que se lo harás</span></div>
-                        </div>
-
-                        <div id="pregunta2_4">
-                            <div id="p_fondo2_4" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r5.png'); ?>" alt=""/>
-                            </div>
-                            <div id="tPreg_4" class="tPreg"><span>Las luz trasera  y direccionales funcionan ¿Que deberia hacer?</span></div>
-                            <div id="btn_1_1" class="btn" data-rspt="0"><span>Nada en particular</span></div>
-                            <div id="btn_1_2" class="btn" data-rspt="0"><span>Todo esta ok</span></div>
-                            <div id="btn_1_3" class="btn" data-rspt="0"><span>Esta normal</span></div>                            
-                        </div>
-                    </div>
-                    <div class="btn_pass_sombra" ><div id="btnpass_2" class="btn_pass"><div id="btn_resp">Continuar</div></div></div>                    
-                </div>
-
-                <div id="gPreg_3" class="gPreg">
-                    <div class="driver" id="driver_3"></div>
-                    <div class="moto">
-                        <img id="punto3_1" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/>
-                        <img id="punto3_2" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/>
-                        <!-- <img id="punto3_3" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/> -->
-                        <img id="punto3_4" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/>
-                    </div>
-                    <div class="preguntas">
-
-                        <div id="pregunta3_1">
-                            <div id="p_fondo3_3" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r9.png'); ?>" alt=""/>    
-                            </div>
-                            <div id="tPreg_1" class="tPreg"><span>El faro frontal de la motocicleta esta roto  ¿Que se deberia hacer?</span></div>
-                            <div id="btn_1_1" class="btn" data-rspt="1"><span>Una Motocicleta debe estar en optimas condiciones. Debe reemplazar ese faro lo antes posible.</span></div>
-                            <div id="btn_1_2" class="btn" data-rspt="0"><span>Es una condición común, se puede dejar pasar. Ademas es turno de día no las necesita.</span></div>
-                            <div id="btn_1_3" class="btn" data-rspt="0"><span>La moto funciona igual sin esa luz. Puedes apoyarte en la luz de calle.</span></div>
-                        </div>
-
-                        <div id="pregunta3_2">
-                           <div id="p_fondo3_2" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r6.png'); ?>" alt=""/>
-                            </div>
-                            <div id="tPreg1_2" class="tPreg"><span>Tiene el casco adecuado ¿Que deberia hacer?</span></div>
-                            <div id="btn_1_1" class="btn" data-rspt="0"><span>Nada en particular</span></div>
-                            <div id="btn_1_2" class="btn" data-rspt="0"><span>Todo esta ok</span></div>
-                            <div id="btn_1_3" class="btn" data-rspt="0"><span>Esta normal</span></div>
-                        </div>
-
-                        <div id="pregunta3_3">
-                            <div id="p_fondo3_1" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r9.png'); ?>" alt=""/>
-                            </div>
-                            <div id="tPreg_3" class="tPreg"><span>El faro frontal de la motocicleta esta roto  ¿Que se deberia hacer?</span></div>
-                            <div id="btn_1_1" class="btn" data-rspt="1"><span>Una Motocicleta debe estar en optimas condiciones. Debe reemplazar ese faro lo antes posible.</span></div>
-                            <div id="btn_1_2" class="btn" data-rspt="0"><span>Es una condición común, se puede dejar pasar. Ademas es turno de día no las necesita.</span></div>
-                            <div id="btn_1_3" class="btn" data-rspt="0"><span>La moto funciona igual sin esa luz. Puedes apoyarte en la luz de calle.</span></div>
-                        </div>
-
-                        <div id="pregunta3_4">
-                            <div id="p_fondo3_4" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r8.png'); ?>" alt=""/>
-                            </div>
-                            <div id="tPreg_4" class="tPreg"><span>El motor esta completo y funcionando ¿Que deberia hacer?</span></div>
-                            <div id="btn_1_1" class="btn" data-rspt="0"><span>Nada en particular</span></div>
-                            <div id="btn_1_2" class="btn" data-rspt="0"><span>Todo esta ok</span></div>
-                            <div id="btn_1_3" class="btn" data-rspt="0"><span>Esta normal</span></div>                            
-                        </div>
-                    </div>
-                    <div class="btn_pass_sombra" ><div id="btnpass_3" class="btn_pass"><div id="btn_resp">Continuar</div></div></div>                  
-                </div>
-
-                <div id="gPreg_4" class="gPreg">
-                    <div class="driver" id="driver_4"></div>
-                    <div class="moto">
-                        <img id="punto4_1" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/>
-                        <img id="punto4_2" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/>
-                        <!-- <img id="punto4_3" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/> -->
-                        <img id="punto4_4" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/>
-                    </div>
-                    <div class="preguntas">
-
-                        <div id="pregunta4_1">
-                            <div id="p_fondo4_1" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r12.png'); ?>" alt=""/>
-                            </div>
-                            <div id="tPreg_1" class="tPreg"><span>Tiene el casco adecuado ¿Que deberia hacer?</span></div>
-                            <div id="btn_1_1" class="btn" data-rspt="0"><span>Nada en particular</span></div>
-                            <div id="btn_1_2" class="btn" data-rspt="0"><span>Todo esta ok</span></div>
-                            <div id="btn_1_3" class="btn" data-rspt="0"><span>Esta normal</span></div>
-                        </div>
-
-                        <div id="pregunta4_2">
-                            <div id="p_fondo4_2" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r11.png'); ?>" alt=""/>
-                            </div>
-                            <div id="tPreg1_2" class="tPreg"><span>Al driver le hace falta la revisión tecnica de la moto ¿Que deberia hacer?</span></div>
-                            <div id="btn_1_1" class="btn" data-rspt="0"><span>No pasa nada, nadie se fija en eso. Ademas no hay tantos controles en su ruta.</span></div>
-                            <div id="btn_1_2" class="btn" data-rspt="0"><span>Que se consiga la revisión tecnica de la  moto de alguien más y que incie su turno.</span></div>
-                            <div id="btn_1_3" class="btn" data-rspt="1"><span>Un driver debe contar con toda su documentación antes de iniciar su turno,  ¡Siempre!</span></div>
-                        </div>
-
-                        <div id="pregunta4_3">
-                            <div id="p_fondo4_3" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r13.png'); ?>" alt=""/>
-                            </div>
-                            <div id="tPreg_3" class="tPreg"><span>Si un cliente sufre el hurto de su cartera por un tercero</span></div>
-                            <div id="btn_1_1" class="btn" data-rspt="0"><span>a) Le explicas que debe poner su denuncia en la Comisaría más</span></div>
-                            <div id="btn_1_2" class="btn" data-rspt="0"><span>b) Le dices que no puedes, pero le permites</span></div>
-                            <div id="btn_1_3" class="btn" data-rspt="0"><span>c) Le dices que sí puedes, y que se lo harás</span></div>
-                        </div>
-
-                        <div id="pregunta4_4">
-                            <div id="p_fondo4_4" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r3.png'); ?>" alt=""/>
-                            </div>
-                            <div id="tPreg_4" class="tPreg"><span>Es la llanta trasera de la moto ¿Que deberia hacer?</span></div>
-                            <div id="btn_1_1" class="btn" data-rspt="0"><span>Nada en particular</span></div>
-                            <div id="btn_1_2" class="btn" data-rspt="0"><span>Todo esta ok</span></div>
-                            <div id="btn_1_3" class="btn" data-rspt="0"><span>Esta normal</span></div>                            
-                        </div>
-                    </div>
-                    <div class="btn_pass_sombra" ><div id="btnpass_4" class="btn_pass"><div id="btn_resp">Continuar</div></div></div>                  
-                </div>
-
-                <div id="gPreg_5" class="gPreg">
-                    <div class="driver" id="driver_5"></div>
-                    <div class="moto">
-                        <img id="punto5_1" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/>
-                        <img id="punto5_2" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/>
-                        <!-- <img id="punto5_3" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/> -->
-                        <img id="punto5_4" class="punt_anim" src="<?php echo base_url($own_dir . '/images/punt_rojo.png'); ?>" alt=""/>
-                    </div>
-                    <div class="preguntas">
-
-                        <div id="pregunta5_1">
-                            <div id="p_fondo5_1" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r16.png'); ?>" alt=""/>
-                            </div>
-                            <div id="tPreg_1" class="tPreg"><span>La driver se ve preparada y antenta ¿Que deberia hacer?</span></div>
-                            <div id="btn_1_1" class="btn" data-rspt="0"><span>Nada en particular</span></div>
-                            <div id="btn_1_2" class="btn" data-rspt="0"><span>Todo esta ok</span></div>
-                            <div id="btn_1_3" class="btn" data-rspt="0"><span>Esta normal</span></div>
-                        </div>
-
-                        <div id="pregunta5_2">
-                            <div id="p_fondo5_2" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r15.png'); ?>" alt=""/>
-                            </div>
-                            <div id="tPreg1_2" class="tPreg"><span>El casco del driver esta visiblemente dañado ¿Que se deberia hacer?</span></div>
-                            <div id="btn_1_1" class="btn" data-rspt="0"><span>Es una cosa menor, el visor no protege nada igual</span></div>
-                            <div id="btn_1_2" class="btn" data-rspt="1"><span>El casco debera ser reemplazado de inmediato.</span></div>
-                            <div id="btn_1_3" class="btn" data-rspt="0"><span>Que conduzca sin casco hasta que repare el que tiene.</span></div>
-                        </div>
-
-                        <div id="pregunta5_3">
-                            <div id="p_fondo5_3" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r14.png'); ?>" alt=""/>
-                            </div>
-                            <div id="tPreg_3" class="tPreg"><span>Si un cliente sufre el hurto de su cartera por un tercero</span></div>
-                            <div id="btn_1_1" class="btn" data-rspt="0"><span>a) Le explicas que debe poner su denuncia en la Comisaría más</span></div>
-                            <div id="btn_1_2" class="btn" data-rspt="0"><span>b) Le dices que no puedes, pero le permites</span></div>
-                            <div id="btn_1_3" class="btn" data-rspt="0"><span>c) Le dices que sí puedes, y que se lo harás</span></div>
-                        </div>
-
-                        <div id="pregunta5_4">
-                            <div id="p_fondo5_4" class="p_fondo"><img src="<?php echo base_url($own_dir . '/images/pregs/p_r8.png'); ?>" alt=""/>
-                            </div>
-                            <div id="tPreg_4" class="tPreg"><span>El motor esta completo y funcionando ¿Que deberia hacer?</span></div>
-                            <div id="btn_1_1" class="btn" data-rspt="0"><span>Nada en particular</span></div>
-                            <div id="btn_1_2" class="btn" data-rspt="0"><span>Todo esta ok</span></div>
-                            <div id="btn_1_3" class="btn" data-rspt="0"><span>Esta normal</span></div>                            
-                        </div>
-                    </div>
-                    <div class="btn_pass_sombra" ><div id="btnpass_5" class="btn_pass"><div id="btn_resp">Continuar</div></div></div>                    
-                </div>
-            </div>
-        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-            <div id="marcador">
-                <div id="CTimer"><div id="CMin">00</div><div>:</div><div id="CSeg">00</div></div>
-                <div id="icon_1" class="iconCheck"></div>
-                <div id="icon_2" class="iconCheck"></div>
-                <div id="icon_3" class="iconCheck"></div>
-                <div id="icon_4" class="iconCheck"></div>
-                <div id="icon_5" class="iconCheck"></div>
-                <div id="pausaTouch"></div>
-            </div>
-            <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-            <div id="pregWindow">
-                <div id="pregBien" class="caratula"><div id="btnPBien"></div></div>
-                <div id="pregTime" class="caratula"><div id="btnPTime"></div></div>
-                <div id="pregMal" class="caratula">
-                    <div id="txtPM_1"><span>- la pregunta seleccionada va aquí -</span></div>
-                    <div id="txtPM_2"><span>- la explicación va aquí -</span></div>
-                    <div id="btnPMal"></div>
-                </div>
-            </div>
-            <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-            <div id="capaResumen">
-                <div id="caratulaFin1" class="caratula">
-                    <div id="resumenAvatar"></div>
-                    <div id="resumenMensaje"></div>
-                    <div id="resumenPuntaje"></div>
-                    <div id="resumenBtns">
-                        <!-- <div id="btnReinicio">&nbsp;</div> -->
-                        <?php echo anchor('drivers', '&nbsp;', array('id' => 'btnContinuar')); ?>
-                    </div>
-                    <div id="resumenOportunidad"></div>
-                </div>
-            </div>
-            <div class="transparencia">
-                <div id="infoWindow">
-                    <div id="conteo3" class="conteo"></div>
-                    <div id="conteo2" class="conteo"></div>
-                    <div id="conteo1" class="conteo"></div>
-                </div>
-            </div>
-            <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-            <div id="PauseGame"><div id="btnReanudar"></div></div>
-            <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-            <div id="objetosOcultos"></div>
-        </div>
-        </div>
+    </div>
     </body>
 </html>

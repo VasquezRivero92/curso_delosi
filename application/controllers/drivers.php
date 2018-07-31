@@ -8,16 +8,17 @@ class Drivers extends Nivel_Controller {
 
     function __construct() {
         parent::__construct();
-        if ($this->base_model->get_max_curso() >= $this->cur || $this->session->userniv) {
+        $cur8 = $this->base_model->get_curso($this->cur);
+        if ($cur8 && $cur8->estado  || $this->session->userniv) {
             if ($this->entraadriver()) {
                 $this->session->curso = $this->cur;
 
             } else {
                 redirect('/main', 'refresh');
             }
-        }else {
+        }else{
             redirect('/main', 'refresh');
-            }
+             }
     }
 
     function index() {        

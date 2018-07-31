@@ -149,15 +149,14 @@ function ControlIntervalo() {
             $startTime = now - (elapsed % $delayTime);
             if ($stopTimeIntervalo > 0){ $stopTimeIntervalo--; }
             else{ EjecucionMovimiento(); }
-        }
-
+        }        
+    }else{
+        pausect
     }
     if ($MuevePlayer){ $MuevePlayer = window.requestAnimationFrame(ControlIntervalo);
-    }  
-    
+    } 
 }
-function ControlIntervaloPregunta() { 
-        CTpreg = 30;
+function ControlIntervaloPregunta() {
         clearintervalo = setInterval(function(){
         CTpreg--;
         if(CTpreg == 0){
@@ -171,19 +170,9 @@ function ControlIntervaloPregunta() {
     $('#CSeg1').html(CTpreg);
     console.log(CTpreg);
     },1000);
-    
-
-    // now = performance.now();
-
-    // tiempito = now.subtring(0,2);
-
-    // if($poposito > 1000){
-    //     $cronopregunta++;
-    //     $poposito = 0;
-    // }
-    // $poposito =  window.requestAnimationFrame(ControlIntervaloPregunta);
-    // console.log(tiempito);
 }
+
+
 function IntervaloMovimiento() {
     isPaused = false;
     $startTime = performance.now();

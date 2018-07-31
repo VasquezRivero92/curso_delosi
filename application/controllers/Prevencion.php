@@ -8,7 +8,8 @@ class Prevencion extends Nivel_Controller {
 
     function __construct() {
         parent::__construct();
-        if ($this->base_model->get_max_curso() >= $this->cur || $this->session->userniv) {
+        $cur9 = $this->base_model->get_curso($this->cur);
+        if ($cur9 && $cur9->estado  || $this->session->userniv) {
             $this->session->curso = $this->cur;
         } else {
             redirect('/main', 'refresh');
@@ -34,16 +35,17 @@ class Prevencion extends Nivel_Controller {
             $this->session->position = 2;
             $resul = $this->base_model->get_puntaje($this->session->user_id, $this->cur);
             if ($resul && $resul->intentos > 1) {
-                redirect('evacuacion/', 'refresh');
+                redirect('Prevencion/', 'refresh');
             } elseif ($resul) {
                 $this->data['intentos'] = (int) $resul->intentos;
             } else {
                 $this->data['intentos'] = 0;
             }
-            $this->data['own_dir'] = $this->data['assets_dir'] . '/nivel' . $this->cur . '/evacuacion';
+            $this->data['own_dir'] = $this->data['assets_dir'] . '/nivel' . $this->cur . '/evacuacion-' . $this->session->grupo;
             $this->data['juego'] = 1;
             $this->data['jNum'] = 1;
-            $this->load->view('nivel' . $this->cur . '/evacuacion', $this->data);
+
+            $this->load->view('nivel' . $this->cur . '/evacuacion-' . $this->session->grupo, $this->data);
         } else {
             redirect('prevencion/', 'refresh');
         }
