@@ -67,7 +67,7 @@
                     </div>
                     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
                     <div id="fondoOPC3" class="fondoOPC">
-                        <div id="mochila" class="powerUp powerUp3" data-time=20 data-nombre="mochila" style="left:831px; top:150px;"></div>
+                        <div id="mochila" class="powerUp powerUp3" data-time=20 data-nombre="mochila" style="left:771px; top:150px;"></div>
                         <div id="linterna" class="powerUp powerUp3" data-time=20 data-nombre="linterna" style="left:1814px; top:178px;"></div>
 
                         <div id="puerta" class="powerUp powerUp3" data-time=20 data-id="puerta" data-nombre="puerta_fin" style="left:290px; top:80px;"></div>
@@ -128,7 +128,7 @@
                     <!-- <div id="resumenEstrellas"></div> -->
                     <div id="resumenBtns">
                         <div id="btnReinicio">&nbsp;</div>
-                        <!-- <?php echo anchor('nivel1/resultados', '&nbsp;', array('id' => 'btnContinuar')); ?> --><!--<a id="btnContinuar" href="#"></a>-->
+                        <?php echo anchor('mapa', '&nbsp;', array('id' => 'btnContinuar')); ?><!-- <a id="btnContinuar" href="#"></a> -->
                     </div>
                     <div id="resumenOportunidad"></div>
                 </div>

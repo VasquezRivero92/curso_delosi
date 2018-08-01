@@ -64,7 +64,7 @@
                     echo anchor('drivers/moto', 'Iniciar Juego', array('id' => 'btnJugar2'));
                 }else {
                     echo '<div id="i3txt_2">Ya completaste este juego</div>';
-                    echo anchor('main', 'Juegos completados', array('id' => 'btnJugar','id' => 'btnJugar','style' => 'pointer-events:none'));
+                    echo anchor('mapa', 'Juegos completados', array('id' => 'btnJugar','id' => 'btnJugar','style' => 'pointer-events:none'));
                 }
                 ?>
             </div

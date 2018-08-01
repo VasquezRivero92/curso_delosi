@@ -59,7 +59,7 @@
                     echo anchor('prevencion/evacuacion', 'Iniciar evacuación', array('id' => 'btnJugar'));
                 } else {
                     echo '<div id="i3txt_2">Ya completaste este reto</div>';
-                    echo anchor('main', 'Volver al inicio', array('id' => 'btnJugar'));
+                    echo anchor('mapa', 'Volver al inicio', array('id' => 'btnJugar'));
                 }
                 ?>
             </div>

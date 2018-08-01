@@ -128,8 +128,7 @@
                     <!-- <div id="resumenEstrellas"></div> -->
                     <div id="resumenBtns">
                         <div id="btnReinicio">&nbsp;</div>
-                        <!-- <?php echo anchor('nivel1/resultados', '&nbsp;', array('id' => 'btnContinuar')); ?> --><!--<a id="btnContinuar" href="#"></a>-->
-                    </div>
+                        <?php echo anchor('mapa', '&nbsp;', array('id' => 'btnContinuar')); ?><!-- <a id="btnContinuar" href="#"></a> -->
                     <div id="resumenOportunidad"></div>
                 </div>
             </div>

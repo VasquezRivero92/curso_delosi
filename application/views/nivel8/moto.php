@@ -135,7 +135,7 @@
                     <!-- <div id="resumenEstrellas"></div> -->
                     <div id="resumenBtns">
                         <!-- <div id="btnReinicio">&nbsp;</div> -->
-                        <?php echo anchor('drivers', '&nbsp;', array('id' => 'btnContinuar')); ?>
+                        <?php echo anchor('mapa', '&nbsp;', array('id' => 'btnContinuar')); ?>
                     </div>
                     <div id="resumenOportunidad"></div>
                 </div>
