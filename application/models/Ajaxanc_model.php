@@ -25,7 +25,6 @@ class Ajaxanc_model extends CI_Model {
     public function consulta_usuarios($data) {
         $this->load->model('base_model');
         $CCursos = $this->base_model->get_cursos(true, $data['menu'])->result();
-        //$user_a = $this->base_model->num_players_est()->result();
         $this->db->select('DISTINCT(ua.id_user),u.apat,u.amat,u.nombre,u.email,u.dni,u.sexo,u.id_grupo,u.active,u.last_login')
                 ->from('users u')
                 ->join('users_anc ua', 'u.id = ua.id_user');

@@ -78,7 +78,7 @@ $(document).ready(function (e) {
          console.log(lAudio[sID]);
          } else {   
           if(sID == 3){
-              playTexto(window.txti2); 
+            // playTexto(window.txti2); 
             console.log("asdgasjdgasdg");
         }else { playTexto(window['s' + sID + 'i1']);};        
         

@@ -93,6 +93,9 @@ function crearTablaConsulta(porPtj) {
         tabla += '<th>Visto</th>';
     });
     tabla += '<th>Total</th>';
+    // if (adminNivel > 1) {
+    //     tabla += '<th></th>';
+    // }
     tabla += '</tr>';
     array.forEach(function (itm) {
         var autoriz = (itm.last_login) ? 'SI' : 'NO';
@@ -108,6 +111,10 @@ function crearTablaConsulta(porPtj) {
             tabla += '<td>' + itm['r' + cur.id] + '</td>';
         });
         tabla += '<td>' + itm.total + '</td>';
+        // if (adminNivel > 1) {
+        //     var random = Math.floor(100 + (Math.random() * 899));
+        //     tabla += '<td><input id="edit-' + random + '-' + itm.id + '" type="button" value="" /></td>';
+        // }
         tabla += '</tr>';
     });
     tabla += '</table>';
@@ -187,6 +194,7 @@ $(document).ready(function () {
                 $('#q-orden').hide();
             }
             console.log("OK usuarios");
+            console.log(data);
         }).fail(function (jqXHR, textStatus, errorThrown) {
             $('#q-submit').removeClass('disable');
             $('#load-consul').hide();
