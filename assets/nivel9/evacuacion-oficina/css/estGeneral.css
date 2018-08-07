@@ -369,7 +369,7 @@ body{
 #resumenBtns{
     position: absolute;
     width: 350px; height: 44px;
-    left: 743px; top: 510px;
+    left: 805px; top: 380px;
     text-align: center;
 }
 #resumenBtns *{
@@ -377,6 +377,8 @@ body{
     display: inline-block;
     width: 136px; height: 44px;
     font-size: 0;
+    top: -100px;
+    left: 50px;
     margin: 0 10px;
     vertical-align: top;
     cursor: pointer;
@@ -386,7 +388,7 @@ body{
 #resumenOportunidad{
     position: absolute;
     width: 172px; height: 11px;
-    left: 755px; top: 567px;
+    left: 885px; top: 447px;
     background:url(../images/oportunidad.png) no-repeat 50% 50%;
 }
 /*****************************************  Key Controls  *****************************************/

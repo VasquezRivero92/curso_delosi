@@ -70,47 +70,19 @@ class Ajax_model extends CI_Model {
         }
     }
 
-    public function init_calificacion($id_user, $id_curso) {
-        $data = array(array(
-                            'id_user'=> $id_user,
-                            'id_curso'=> $id_curso,
-                            'id_pregunta'=> '1',
-                            ),
-                        array(
-                            'id_user'=> $id_user,
-                            'id_curso'=> $id_curso,
-                            'id_pregunta'=> '2',
-                            ),
-                        array(
-                            'id_user'=> $id_user,
-                            'id_curso'=> $id_curso,
-                            'id_pregunta'=> '3',
-                            ),
-                        array(
-                            'id_user'=> $id_user,
-                            'id_curso'=> $id_curso,
-                            'id_pregunta'=> '4',
-                            ),
-                        array(
-                            'id_user'=> $id_user,
-                            'id_curso'=> $id_curso,
-                            'id_pregunta'=> '5',
-                            ),
-                        array(
-                            'id_user'=> $id_user,
-                            'id_curso'=> $id_curso,
-                            'id_pregunta'=> '6',
-                            ),
-                    );
-        // if ($checkUserCali) {
-        //     // $data['vistas'] = (int) $checkUserCurso->vistas + 1;            
-        //     return $this->db->where('id_user', $id_user)
-        //                     ->where('id_curso', $id_curso)
-        //                     // ->where('id_version', $this->id_version)
-        //                     ->update('calificacion_curso', $data);
-        // } else {
-            return $this->db->insert_batch('calificacion_curso', $data);
-        // }
+    public function update_calificacion($id_user, $id_curso, $calificacion) {
+        $checkUserCurso = $this->checkUserCurso('id_user,calificacion', $id_user, $id_curso);
+        if ($checkUserCurso) {
+            $data = array(
+                'calificacion' => $calificacion
+            );
+            $resul = $this->db->where('id_user', $id_user)
+                    ->where('id_curso', $id_curso)
+                    ->where('id_version', $this->id_version)
+                    ->update('users_curso', $data);
+        }
+        $this->update_user_curso($id_user, $id_curso);
+        return $resul;
     }
 
 

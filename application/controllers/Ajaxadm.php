@@ -535,6 +535,44 @@ class Ajaxadm extends MY_Controller {
     }
 
     /*     * *******************************  estadisticas  ******************************** */
+    function est_estatus_cali() {
+        $tipo = (int) $this->input->post('tipo');
+        if ($tipo == 0) {
+            echo 'manakax';
+            return false;
+        }
+        $nivel = (int) $this->input->post('nivel');
+
+        if ($this->has_access('adm03')) {
+            $areas = $this->base_model->get_areas();
+        } else {
+            $empresa = $this->base_model->get_cali($this->session->user_id)->row();
+            $areas = $this->base_model->get_areas_emp($empresa->id);
+        }
+        $resultado = [];
+        foreach ($areas->result() as $itm) {
+            $numPlayers = $this->ajaxadm_model->cali_est(false, $nivel, $itm->id, false); //Usuarios que jugaron
+            if ($tipo == 1) {
+                $item = $numPlayers;
+            } else if ($tipo == 2) {
+                if ($numPlayers > 0) {
+                    $numUsers = $this->ajaxadm_model->num_users_est(false, $itm->id, false); //Numero total de usuarios
+                    $item = 100 * round($numPlayers / $numUsers, 4);
+                } else {
+                    $item = 0;
+                }
+            } else if ($tipo == 3) {
+                if ($numPlayers > 0) {
+                    $puntaje = $this->ajaxadm_model->sum_puntos_est($itm->id, $nivel); //Puntaje total obtenido
+                    $item = round($puntaje / $numPlayers, 1);
+                } else {
+                    $item = 0;
+                }
+            }
+            $resultado[] = $item;
+        }
+        echo json_encode($resultado);
+    }
 
     function est_estatus() {
         $tipo = (int) $this->input->post('tipo');

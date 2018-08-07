@@ -354,10 +354,13 @@ class Admin extends MY_Controller {
             foreach ($CCursos as $curso) {
                 if ($user['c' . $curso->id] === 0) {
                     $temp[] = '0';
+                    $temp[] = '0';
                 } elseif ($user['c' . $curso->id]) {
                     $temp[] = $user['c' . $curso->id];
+                    $temp[] = $user['calificacion' . $curso->id];
                 } else {
                     $temp[] = '';
+                    $temp[] = '0';
                 }
             }
             $temp[] = '' . $user['total'];
@@ -376,9 +379,13 @@ class Admin extends MY_Controller {
         $this->excel->getActiveSheet()->setCellValue('J1', 'Estado');
         $this->excel->getActiveSheet()->setCellValue('K1', 'Datos autorizados');
         $c = 10;
+        $x = 0;
         foreach ($CCursos as $curso) {
             $c++;
+            $x = $c + 1;
             $this->excel->getActiveSheet()->setCellValueByColumnAndRow($c, 1, $curso->nombre);
+            $this->excel->getActiveSheet()->setCellValueByColumnAndRow($x, 1, 'Calificación ' . $curso->descrip);
+            $c = $c + 1;
         }
         $this->excel->getActiveSheet()->setCellValueByColumnAndRow($c + 1, 1, 'Total');
         $lCol = PHPExcel_Cell::stringFromColumnIndex($c + 1);
@@ -660,7 +667,7 @@ class Admin extends MY_Controller {
             }
             $this->data['niv_data'] = $this->rel_array($this->base_model->get_cursos()->result(), true);
             $this->data['niv_value'] = 1;
-            $this->data['niv_extra'] = array('id' => 'nivel');
+            $this->data['niv_extra'] = array('id' => 'nivel'); 
         } else {
             $this->data['visitas'] = $this->admin_model->get_visitas(7);
         }

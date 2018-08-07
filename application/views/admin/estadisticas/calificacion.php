@@ -18,7 +18,7 @@
             var bdir = '<?php echo base_url(); ?>';
             var labels = <?php echo "['" . implode("','", $areas) . "']"; ?>;
         </script>
-        <script src="<?php echo base_url($own_dir . '/js/estadisticas-estatus.js'); ?>"></script>
+        <script src="<?php echo base_url($own_dir . '/js/estadisticas-calificacion.js'); ?>"></script>
     </head>
     <body style="zoom:1;">
         <div id="fullcont" class="clearfix">

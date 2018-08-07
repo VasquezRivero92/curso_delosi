@@ -31,7 +31,7 @@
     $avatar = 'av' . strtoupper(substr($this->session->grupo, 0, 1)) . $this->session->avatar;
     $owlgrupo = 'owl-' . $this->session->grupo;
     ?>
-    <body class="player<?php echo $this->session->avatar . ' ' . $owlgrupo; ?>"><!--"><!-- la M determinar con php si es mujer o varon  -->
+    <body class="player<?php echo $this->session->avatar . ' ' . $owlgrupo; ?>"><!-- la M determinar con php si es mujer o varon  -->
         <!-- - - - - - - - - - - - - - - -  Loader  - - - - - - - - - - - - - - - -->
         <div id="qLoverlay" class="resizeWindow">
             <div id="img_loader01"><div></div></div>
@@ -67,7 +67,7 @@
                     </div>
                     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
                     <div id="fondoOPC3" class="fondoOPC">
-                        <div id="mochila" class="powerUp powerUp3" data-time=20 data-nombre="mochila" style="left:831px; top:150px;"></div>
+                        <div id="mochila" class="powerUp powerUp3" data-time=20 data-nombre="mochila" style="left:890px; top:150px;"></div>
                         <div id="linterna" class="powerUp powerUp3" data-time=20 data-nombre="linterna" style="left:1814px; top:178px;"></div>
 
                         <div id="puerta" class="powerUp powerUp3" data-time=20 data-id="puerta" data-nombre="puerta_fin" style="left:290px; top:80px;"></div>
@@ -129,6 +129,7 @@
                     <div id="resumenBtns">
                         <div id="btnReinicio">&nbsp;</div>
                         <?php echo anchor('mapa', '&nbsp;', array('id' => 'btnContinuar')); ?><!-- <a id="btnContinuar" href="#"></a> -->
+                    </div>
                     <div id="resumenOportunidad"></div>
                 </div>
             </div>

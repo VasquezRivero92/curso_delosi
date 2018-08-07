@@ -20,7 +20,7 @@ var generarGrafico = function () {
         data: parametros,
         type: 'POST',
         dataType: 'json',
-        url: bdir + 'ajaxadm/est_estatus'
+        url: bdir + 'ajaxadm/est_estatus_cali'
     }).done(function (data, textStatus, jqXHR) {
         console.log('Get estatus OK');
         barChartData.datasets[0].data = data;

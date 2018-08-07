@@ -212,6 +212,24 @@ class Base_model extends CI_Model {
                             ->get('empresa');
         }
     }
+    public function get_cali($id_user = false) {
+        //las tiendas envian el usuario2, que es el campo sede en la tabla users_empresa
+        if ($id_user) {
+            $this->db->select('c.id,c.nombre')
+                    ->from('calificacion c')
+                    ->join('users_empresa ue', 'c.id = ue.id_calificacion');
+            if ($this->session->tipo == 'user') {//comparamos por id
+                $this->db->where('ue.id_user', $id_user);
+            } else {//comparamos por sede
+                $this->db->where('ue.sede', $id_user);
+            }
+            return $this->db->group_by('c.id')->order_by('c.nombre')->get();
+        } else {
+            return $this->db->select('id,nombre')
+                            ->order_by('nombre')
+                            ->get('calificacion');
+        }
+    }
     public function get_empresas_anc($id_user = false) {
         //las tiendas envian el usuario2, que es el campo sede en la tabla users_empresa
         if ($id_user) {
@@ -283,6 +301,15 @@ class Base_model extends CI_Model {
                         ->order_by('a.nombre')
                         ->get();
     }
+
+    // public function get_cali($id_calificacion) {
+    //     return $this->db->select('DISTINCT(cc.id), cc.nombre')
+    //                     ->from('calificacion cc')
+    //                     ->join('users_curso uc', 'cc.id = uc.id_calificacion')
+    //                     ->where('uc.id_calificacion', $id_calificacion)
+    //                     // ->order_by('cc.nombre')
+    //                     ->get();
+    // }
 
     public function get_dep_fltrd($id_empresa, $id_area) {
         $this->db->select('id_departamento')->from('users_empresa');

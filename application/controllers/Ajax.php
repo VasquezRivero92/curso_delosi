@@ -346,6 +346,19 @@ class Ajax extends MY_Controller {
         }
     }
 
+     function set_calificacion() {
+        $calificacion = $this->input->post('calificacion');
+        // $check = $this->input->post('check');
+        if ($this->session->user_id && $this->session->curso) {
+            $user_id = (int) $this->session->user_id;
+            $id_curso = (int) $this->session->curso;
+            $calificacion = (int) $calificacion;
+            echo $this->ajax_model->update_calificacion($user_id, $id_curso, $calificacion);
+        } else {
+            echo 'manakax';
+        }
+    }
+
     function set_constancia() {
         if ($this->session->user_id && $this->session->curso) {
             $user_id = (int) $this->session->user_id;

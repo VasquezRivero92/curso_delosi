@@ -21,11 +21,19 @@
         </script>
         <script src="<?php echo base_url($own_dir . '/js/sonido.js'); ?>"></script>
         <script src="<?php echo base_url($own_dir . '/js/inicio.js'); ?>"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123369182-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-123369182-1');
+        </script>
     </head>
-    <?php
-    $avatar = 'av' . strtoupper(substr($this->session->grupo, 0, 1)) . $this->session->avatar;
-    $owlgrupo = 'owl-' . $this->session->grupo;
-    ?>
+        <?php
+        $avatar = 'av' . strtoupper(substr($this->session->grupo, 0, 1)) . $this->session->avatar;
+        $owlgrupo = 'owl-' . $this->session->grupo;
+        ?>
     <body class="<?php echo $avatar . ' ' . $owlgrupo; ?>">
         <!-- - - - - - - - - - - - - - - - -  Loader  - - - - - - - - - - - - - - - - -->
         <div id="qLoverlay" class="resizeWindow">

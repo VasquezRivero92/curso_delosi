@@ -90,7 +90,20 @@ var $J = [];
 $J[1] = new Lab_Juego();
 var $scaleActual = 1;
 $.fn.reverse = [].reverse;
-$(document).ready(function (e) {
+
+$(function() {
+    $(".aceptar").click(function() {
+      // validate and process form here
+        var x = $("input[type=radio]:checked").val();
+        var data = {calificacion: x};
+        $.post(bdir + 'ajax/set_calificacion', data).done(function (data) {
+        console.log("resultado: " + data);
+        });
+    });
+  });
+
+$(document).ready(function (e) {  
+      
     initJuegos();
     $(".dirBtn, .circleExt, .touchElement, .btnPlayer").disableSelection();
     initSonidos();
@@ -122,6 +135,7 @@ function initSonidos() {
         loadSound(itm[0], itm[1]);
     });
 }
+
 function initBotones() {
     $('.btnPrev').click(function () {
         playSound(window.audioCatch);
@@ -458,4 +472,9 @@ $.fn.extend({
         });
     }
 });
+        
+$('#btnContinuar').click(function () {
+    console.log("texto");
+    });
+
 /*******************************************************************************/

@@ -90,8 +90,9 @@ function crearTablaConsulta(porPtj) {
     cursos.forEach(function (cur) {
         tabla += '<th>' + cur.descrip + '</th>';
         tabla += '<th>Visto</th>';
-    });
-    tabla += '<th>Total</th>';
+        tabla += '<th>Calificación ' + cur.descrip +'</th>';
+    });    
+    tabla += '<th>Total</th>';    
     if (adminNivel > 1) {
         tabla += '<th></th>';
     }
@@ -108,8 +109,9 @@ function crearTablaConsulta(porPtj) {
         cursos.forEach(function (cur) {
             tabla += '<td>' + itm['c' + cur.id] + '</td>';
             tabla += '<td>' + itm['r' + cur.id] + '</td>';
+            tabla += '<td>' + itm['calificacion' + cur.id] + '</td>';
         });
-        tabla += '<td>' + itm.total + '</td>';
+        tabla += '<td>' + itm.total + '</td>';        
         if (adminNivel > 1) {
             var random = Math.floor(100 + (Math.random() * 899));
             tabla += '<td><input id="edit-' + random + '-' + itm.id + '" type="button" value="" /></td>';

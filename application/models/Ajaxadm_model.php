@@ -100,7 +100,7 @@ class Ajaxadm_model extends CI_Model {
                 'last_login' => $user->last_login ? $user->last_login : 0
             );
             foreach ($CCursos as $curso) {
-                $query = $this->db->select('puntaje, intentos')
+                $query = $this->db->select('puntaje, intentos, calificacion')
                                 ->from('users_curso')
                                 ->where('id_user', $user->id)
                                 ->where('id_curso', $curso->id)
@@ -110,10 +110,12 @@ class Ajaxadm_model extends CI_Model {
                 if ($query) {
                     $tUser['c' . $curso->id] = (int) $query->puntaje;
                     $tUser['r' . $curso->id] = (int) $query->intentos;
+                    $tUser['calificacion' . $curso->id] = (int) $query->calificacion;
                     $total = (int) $total + (int) $query->puntaje;
                 } else {
                     $tUser['c' . $curso->id] = '0';
                     $tUser['r' . $curso->id] = '0';
+                    $tUser['calificacion' . $curso->id] = '0';
                 }
             }
             $tUser['total'] = $total;
@@ -492,6 +494,23 @@ class Ajaxadm_model extends CI_Model {
     }
 
     /*     * *******************************  estadisticas  ******************************** */
+    public function cali_est($id_empresa, $id_area, $id_departamento) {
+        $this->db->select('DISTINCT(id_user)')
+                ->from('users_empresa ue')
+                ->join('users u', 'ue.id_user = u.id');
+        if ($id_empresa) {
+            $this->db->where('ue.id_empresa', $id_empresa);
+        }
+        if ($id_area) {
+            $this->db->where('ue.id_area', $id_area);
+        }
+        if ($id_departamento) {
+            $this->db->where('ue.id_departamento', $id_departamento);
+        }
+        return $this->db->where('sede IS NOT NULL', null, false)
+                        ->where('u.active', 1)
+                        ->get()->num_rows();
+    }
 
     public function num_players_est($id_empresa, $curso, $id_area, $id_departamento) {
         $this->db->select('DISTINCT(ue.id_user)')
