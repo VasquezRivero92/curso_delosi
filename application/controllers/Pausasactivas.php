@@ -35,18 +35,18 @@ class Pausasactivas extends Nivel_Controller {
             $this->session->position = 2;
             $resul = $this->base_model->get_puntaje($this->session->user_id, $this->cur);
             if ($resul && $resul->intentos > 1) {
-                redirect('pausas/', 'refresh');
+                redirect('pausasactivas/', 'refresh');
             } elseif ($resul) {
                 $this->data['intentos'] = (int) $resul->intentos;
             } else {
                 $this->data['intentos'] = 0;
             }
-            $this->data['own_dir'] = $this->data['assets_dir'] . '/nivel' . $this->cur . '/pausas';
+            $this->data['own_dir'] = $this->data['assets_dir'] . '/nivel' . $this->cur . '/pausas-' . $this->session->grupo;
             $this->data['juego'] = 1;
             $this->data['jNum'] = 1;
-            $this->load->view('nivel' . $this->cur . '/pausas', $this->data);
+            $this->load->view('nivel' . $this->cur . '/pausas-' . $this->session->grupo, $this->data);
         } else {
-            redirect('prevencion/', 'refresh');
+            redirect('pausasactivas/', 'refresh');
         }
     }
 

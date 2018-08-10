@@ -35,7 +35,7 @@ function Lab_Juego() {
     };
     this.mueveGameArea = function () {
         this.gameArea.css({"left": this.posX, "top": this.posY});
-    };
+    };    
 }
 /*******************************************************************************/
 function Lab_Objeto(x, y, ancho, alto) {

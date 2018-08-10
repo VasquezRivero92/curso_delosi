@@ -39,6 +39,17 @@ class Mapa extends Nivel_Controller {
         }else {
             redirect('main', 'refresh');
         }
+
+        for ($i = 1; $i <= 4; $i++) {
+            $resul = $this->base_model->get_puntaje($this->session->user_id, $i);
+            if (!$resul || !$resul->intentos) {
+                $this->data['pared'] = 0;
+            }else{
+                $this->data['pared'] = 1;
+            }
+        }
+        
+
     	$this->data['own_dir'] = $this->data['assets_dir'] . '/mapa';
         $empresaUser = $this->base_model->get_empresas($this->session->user_id)->row();
         $this->data['empresa'] = $empresaUser ? $empresaUser->nombre : '-';

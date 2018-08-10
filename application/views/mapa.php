@@ -30,7 +30,7 @@
         <script src="<?php echo base_url($own_dir . '/js/controlPuntos1.js'); ?>"></script>
         <script src="<?php echo base_url($own_dir . '/js/juego1.js'); ?>"></script>
     </head>
-    <body class="<?php echo $avatar; ?>" data-firstwindow="<?php echo $firstWindow; ?>" data-drivers="<?php echo $drivers; ?>">
+    <body class="<?php echo $avatar; ?>" data-firstwindow="<?php echo $firstWindow; ?>" data-drivers="<?php echo $drivers; ?>" data-pared="<?php echo $pared; ?>">
         <!-- - - - - - - - - - - - - - - - -  Loader  - - - - - - - - - - - - - - - - -->
         <div id="qLoverlay" class="resizeWindow">
             <div id="img_loader01"><div></div></div>
@@ -216,7 +216,7 @@
                     <div class="prevencion"><p class="textCent"> </p></div>                    
                     <?php
                         // echo anchor('cuestionario', '&nbsp;', array('id' => 'i4Cuestionario'));
-                        echo anchor('mapa/certificado_prevencion', '&nbsp;', array('id' => 'i4Certificado', 'class' => $certificado_prevencion, 'target' => '_blank'));
+                        echo anchor('mapa/certificado_prevencion', '&nbsp;', array('id' => 'i4Certificado_p', 'class' => $certificado_prevencion, 'target' => '_blank'));
                         for ($i = 4; $i > 0; $i--) {
                             $clases = 'i4Nivel disable';
                             if ($maxnivel >= $i) {

@@ -1,4 +1,5 @@
 var $drivers = 0;
+var $pared = 0;
 // numero de juego actual
 var $JAct = 0;
 // Maximo nivel alcanzado
@@ -242,7 +243,8 @@ function initJuegos() {
     $J.forEach(function (itm, i) {
         $J[i].init(i);
     });
-    $drivers = parseInt($('body').data('drivers'), 10);   
+    $drivers = parseInt($('body').data('drivers'), 10);
+    $pared = $('body').data('pared');    
 }
 function showInicio() {
     playBGMusic(window.BGIntro);
@@ -271,7 +273,11 @@ function showInicio() {
     //     playTexto(window.txti2);
     // }, 3000);
 
-
+    if($pared == 1){
+        console.log("abierto");
+    }else{
+        console.log("cerrado");
+    }
 }
 function introJuego() {
     $(".caratula,.conteo").stop().fadeOut(10);

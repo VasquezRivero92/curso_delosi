@@ -1,0 +1,499 @@
+@charset "utf-8";
+*{ -webkit-transform:translateZ(0); }
+/*****************************************  estilos base  *****************************************/
+html{ overflow:hidden; }
+body{
+    margin:0px; padding:0px;
+    background-color:#333333;
+    overflow:hidden;
+}
+.resizeWindow{
+    position: absolute;
+    width: 1350px; height: 700px;
+    left: 0px; top: 0px;
+    margin: 0;
+    overflow: hidden;
+    transform-origin: 0% 0%;
+}
+#qLoverlay{ display: none; z-index: 999; }
+#historia{ display: block; background-color: #434343; }
+.showNewPassword{}
+/*****************************************  loader  *****************************************/
+#qLoverlay{
+    display: none;
+    background:url(../images/fondoLoader.png) no-repeat center center;
+    z-index: 999;
+}
+#qLpercentage{
+    position:absolute;
+    width: 250px; height: 120px;
+    left: 550px; bottom: 330px;
+    font-family:"Bebas";
+    font-size: 111px;
+    line-height: 120px;
+    color:#ffffff;
+    text-align: center;
+}
+#img_loader01{
+    position: absolute;
+    width: 215px; height: 126px;
+    left: 567px; bottom: 175px;
+    background:url(../images/loadG.png) no-repeat 50% 100%;
+    overflow: hidden;
+}
+#img_loader01 div{
+    position: absolute; display: block;
+    width: 100%;
+    left: 0; right: 0;
+    bottom: 0;
+    background:url(../images/load.png) no-repeat 50% 100%;
+    overflow: hidden;
+}
+#qLoverlay img{ visibility:hidden; }
+/*****************************************  pantallas iniciales  *****************************************/
+.instrucciones{
+    position:absolute;
+    width:1350px; height:700px;
+    left:0px; top:0px;
+    z-index:600;
+    display:none;
+}
+#instrucciones_1{ background: url(../images/bginst1.png) no-repeat center center; }
+#instrucciones_2{ background: url(../images/bginst2.png) no-repeat center center; }
+.touchIsOn #instrucciones_2{ background: url(../images/bginst2t.png) no-repeat center center; }
+#instrucciones_3{ background: url(../images/bginst3.png) no-repeat center center; }
+.touchIsOn #instrucciones_3{ background: url(../images/bginst3t.png) no-repeat center center; }
+#instrucciones_4{ background: url(../images/bginst4.png) no-repeat center center; }
+#instrucciones_5{ background: url(../images/bginst5.png) no-repeat center center; }
+.btnPrev{
+    position: absolute;
+    width: 33px; height: 80px;
+    background: url(../images/btnPrev.png) no-repeat 0px 0px;
+    cursor: pointer;
+}
+#btnPrev_2{ left: 160px; top: 310px; }
+#btnPrev_3{ left: 160px; top: 310px; }
+#btnPrev_4{ left: 160px; top: 310px; }
+#btnPrev_5{ left: 160px; top: 310px; }
+.btnNext{
+    position: absolute;
+    width: 33px; height: 80px;
+    background: url(../images/btnNext.png) no-repeat 0px 0px;
+    cursor: pointer;
+}
+#btnNext_1{ right: 160px; top: 310px; }
+#btnNext_2{ right: 160px; top: 310px; }
+#btnNext_3{ right: 160px; top: 310px; }
+#btnNext_4{ right: 160px; top: 310px; }
+#btnJugar{
+    position:absolute;
+    width:167px; height:71px;
+    left:597px; top:527px;
+    background: url(../images/btnJugar.png) no-repeat center center;
+    cursor:pointer;
+}
+/*****************************************  pantallas del juego  *****************************************/
+.game{
+    position:absolute;
+    width:1350px; height:700px;
+    left:0px; top:0px;
+    overflow:hidden;
+    display:none;
+}
+.gameFrame{
+    position:absolute;
+    width:1350px; height:700px;
+    left:0px; top:0px;
+    overflow:hidden;
+}
+#infoWindow,#pregWindow,#capaResumen{
+    position:absolute;
+    width:1351px; height:700px;	
+    background-color:rgba(0,0,0,0.8);
+    overflow:hidden;
+    display:none;
+    z-index:600;
+}
+.caratula{
+    position:absolute;
+    width:1350px; height:700px;
+    left:0px; top:0px;
+    background-repeat:no-repeat;
+    background-position:center center;
+}
+/*****************************************  Ventana pausa  *****************************************/
+#pausaTouch{
+    position: absolute;
+    width: 116px; height: 95px;
+    left: 1112px; top: 23px; 
+    background: rgba(0,0,0,0) url(../images/btnPausa.png) no-repeat 50% 50%;
+    z-index:560;
+    cursor: pointer;
+}
+#PauseGame{
+    position: absolute;
+    width: 1351px; height: 700px;
+    left: 0px; top: 0px;
+    background: rgba(0,0,0,0.8) url(../images/fondoPausa.png) no-repeat 50% 50%;
+    display: none;
+    z-index: 630;
+}
+#btnReanudar{
+    position: absolute;
+    width: 158px; height: 35px;
+    left: 579px; top: 409px; 
+    background: url(../images/btnReanudar.png) no-repeat 50% 50%;
+    cursor: pointer;
+}
+/*****************************************  Entorno del juego  *****************************************/
+
+#TerminoTiempo{
+    position: absolute;
+    width: 1351px; height: 700px;
+    left: 0px; top: 0px;
+    background: rgba(0,0,0,0.8) url(../images/tiempo.png) no-repeat 50% 50%;
+    display: none;
+    z-index: 630;
+}
+#btnReiniciar{
+    position: absolute;
+    width: 160px;
+    height: 36px;
+    left: 480px;
+    top: 496px;
+    background: #0000ff00;
+    cursor: pointer;
+}
+
+
+.gameEnv{ display:none; }
+/*****************************************  marcador (parte superior) *****************************************/
+#marcador{
+    position:absolute;
+    top:0px; left:0px;
+    width:1350px; height:150px;
+    background: url(../images/BGmarcador.png) no-repeat 100% 50%;
+    z-index:560;
+}
+#CTimer{
+    position:absolute;
+    top:22px; left:911px;
+    font-family:"Bebas";
+    font-size:64px;
+    color:#333745;
+    text-align:right;
+    width:160px;
+}
+#CTimer div{
+    position:relative;
+    display:block;
+    float:left;
+}
+#CMin, #CSeg{ width:70px; color:#ff3650; }
+.iconCheck{
+    position:absolute;
+    width:35px; height:35px;
+    z-index:560;
+    background-image:url(../images/icon_check.png);
+    background-position:-35px 0px;
+    display:none;
+}
+.iconCheck.anim{ animation:tada 1s; }
+.iconCheck.check{ background-position:0px 0px; }
+#icon_1{ left:425px; top:38px; }
+#icon_2{ left:450px; top:72px; }
+#icon_3{ left:475px; top:38px; }
+#icon_4{ left:500px; top:72px; }
+#icon_5{ left:525px; top:38px; }
+#icon_6{ left:550px; top:72px; }
+#icon_7{ left:575px; top:38px; }
+#icon_8{ left:600px; top:72px; }
+#icon_9{ left:625px; top:38px; }
+#icon_10{ left:650px; top:72px; }
+#icon_11{ left:675px; top:38px; }
+/*****************************************  minimap (canvas)  *****************************************
+.miniMap{
+    position: absolute;
+    bottom: 0px; right: 0px;
+    height: 100px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+#miniMap1{ z-index:560; }
+#miniMap2{ z-index:561; }
+/*********************************  ventana de preguntas *********************************/
+#pregMain{ background-image: url(../images/BGpregMain.png); }
+#pregTXT{
+    position: absolute;
+    width: 250px;
+    left: 376px; top: 500px;
+    font-family: 'CatalogoSG';
+    font-size: 16px;
+    line-height: 17px;
+    text-align: center;
+    color: #333745;
+}
+.pregVista{
+    position: absolute;
+    width: 238px; height: 205px;
+    left: 400px; top: 274px;
+    background-color: rgba(0,0,0,0);
+    background-repeat: no-repeat;
+    background-position:50% 50%;
+}
+#pregVista_1{ background-image: url(../images/preg/pregA_1.png); }
+#pregVista_2{ background-image: url(../images/preg/pregA_2.png); }
+#pregVista_3{ background-image: url(../images/preg/pregA_3.png); }
+#pregVista_4{ background-image: url(../images/preg/pregA_4.png); }
+#pregVista_5{ background-image: url(../images/preg/pregA_5.png); }
+#pregVista_6{ background-image: url(../images/preg/pregA_6.png); }
+#pregVista_7{ background-image: url(../images/preg/pregA_7.png); }
+#pregVista_8{ background-image: url(../images/preg/pregA_8.png); }
+#pregVista_9{ background-image: url(../images/preg/pregA_9.png); }
+#pregVista_10{ background-image: url(../images/preg/pregA_10.png); }
+#pregVista_11{ background-image: url(../images/preg/pregA_11.png); }
+#pregVista_12{ background-image: url(../images/preg/pregA_12.png); }
+#pregVista_13{ background-image: url(../images/preg/pregA_13.png); }
+#pregVista_14{ background-image: url(../images/preg/pregA_14.png); }
+#pregVista_15{ background-image: url(../images/preg/pregA_15.png); }
+.pregOpc{
+    position: absolute;
+    width: 263px; height: 42px;
+    left: 725px;
+    background:#77c4d3;
+    text-align:center;
+    color:#333745;
+    font-family:"Catalogo";
+    font-size:15px;
+    line-height: 37px;
+    cursor: pointer;
+}
+.pregOpc span{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 16px;
+}
+.pregOpc:hover{ background:#333745; color:#ffffff; }
+#preg_1{ top:260px; }
+#preg_2{ top:315px; }
+#preg_3{ top:370px; }
+#preg_4{ top:425px; }
+#preg_5{ top:480px; }
+/*******************************************************************************/
+#pregBien{ background-image: url(../images/BGpregBien.png); }
+#bienResp{
+    position: absolute;
+    width: 100%; height: 25px;
+    top: 200px;
+    left: 0px; right: 0px;
+    font-family: "CatalogoGruesa";
+    font-size: 22px;
+    line-height: 25px;
+    text-align:center;
+    color:#333745;
+    text-transform: uppercase;
+}
+#bienFlechas{
+    position: absolute;
+    width: 585px; height: 171px;
+    left: 388px; top: 259px;
+    background: url(../images/bienFlechas.png) no-repeat 50% 50%;
+}
+.bienSlider{ position: absolute; left: 0px; top: 0px; }
+.bienSlider div{
+    position: absolute; display: none;
+    width: 238px; height: 300px;
+    top: 290px;
+    padding-top: 214px;
+    font-family: 'CatalogoSG';
+    font-size: 16px;
+    line-height: 17px;
+    text-align: center;
+    color: #333745;
+    background-color: rgba(0,0,0,0);
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+    box-sizing: border-box;
+}
+#btnListo{
+    position: absolute;
+    width: 167px; height: 41px;
+    top: 575px; left: 590px;
+    background: url(../images/btnListo.png) no-repeat 50% 50%;
+    cursor: pointer;
+}
+/*******************************************************************************/
+#pregMal{ background-image: url(../images/BGpregMal.png); }
+#btnReintento{
+    position: absolute;
+    width: 167px; height: 41px;
+    top: 485px; left: 490px;
+    background: url(../images/btnReintento.png) no-repeat 50% 50%;
+    cursor: pointer;
+}
+/****************************  ventana de resultados ****************************/
+#caratulaFin1{ background:url(../images/fondoFin.png); }
+/***#caratulaFin2{ background:url(../images/fondoGanaste.png); }/***/
+#resumenAvatar{
+    position: absolute;
+    width: 268px; height: 341px;
+    top: 204px;
+    left: 394px;
+    background-color: rgba(0,0,0,0);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+}
+.playerF #resumenAvatar{ background-image: url(../images/avrsF.png); }
+.playerM #resumenAvatar{ background-image: url(../images/avrsM.png); }
+#resumenPuntaje{
+    position: absolute;
+    width: 164px;
+    top: 189px;
+    left: 836px;
+    font-family: "CatalogoGruesa";
+    font-size: 48px;
+    color: #ff3650;
+    text-align: center;
+}
+#resumenEstrellas{
+    position: absolute;
+    width: 243px; height: 116px;
+    top: 358px; left: 797px;
+    background-color: rgba(0,0,0,0);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+#resumenEstrellas.st0{ background-image: url(../images/st0.png); }
+#resumenEstrellas.st1{ background-image: url(../images/st1.png); }
+#resumenEstrellas.st2{ background-image: url(../images/st2.png); }
+#resumenEstrellas.st3{ background-image: url(../images/st3.png); }
+#resumenBtns{
+    position: absolute;
+    width: 350px; height: 44px;
+    left: 742px;
+    top: 339px;
+    text-align: center;
+}
+#resumenBtns *{
+    position: relative;
+    display: inline-block;
+    width: 136px; height: 44px;
+    font-size: 0;
+        margin: 0px 10px
+    vertical-align: top;
+    cursor: pointer;
+}
+#btnReinicio{ background: url(../images/btnReintentar.png) no-repeat 50% 50%; }
+#btnContinuar{ background:url(../images/btnContinuar.png) no-repeat 50% 50%; }
+#resumenOportunidad{
+    position: absolute;
+    width: 172px; height: 11px;
+    left: 829px;
+    top: 417px;
+    background:url(../images/oportunidad.png) no-repeat 50% 50%;
+}
+/*****************************************  Key Controls  *****************************************/
+.touchElement{
+    display: block; opacity: 0;
+    transition: opacity 1s linear;
+    pointer-events: none;
+}
+.touchElement.show{
+    opacity: 1;
+    transition: opacity 0.5s linear;
+    pointer-events: auto;
+}
+#contKeyControls{
+    position:absolute;
+    width:200px; height:200px;
+    top:490px; left:20px;
+    z-index:650;
+    overflow:hidden;
+}
+#circleExt{
+    position:absolute;
+    width:200px; height:200px;
+    top:0px; left:0px;
+    opacity:0.3;
+    background: url(../images/pad.png) no-repeat 0px 0px;
+}
+#circleExt .dirBtn{
+    width:66px; height:66px;
+    position:absolute; 
+    background-color:rgba(255,255,255,0);
+    border-radius:40%;
+    cursor:pointer;
+}
+#circleExt .dirBtn.on{
+    background-color:rgba(255,255,255,0.5);
+}
+#DBtn_0{ top:67px; left:0px; }
+#DBtn_1{ top:0px; left:67px; }
+#DBtn_2{ top:67px; right:0px; }
+#DBtn_3{ bottom:0px; right:67px; }
+/*****************************************  objetos ocultos  *****************************************/
+#objetosOcultos{
+    position:absolute;
+    left:0px; top:0px;
+    width:0px; height:0px;
+    visibility:hidden;
+    overflow:hidden;
+    opacity:0;
+}
+#objetosOcultos div, #objetosOcultos img{
+    position:absolute;
+    width:0px; height:0px;
+    opacity:0;
+}
+/*******************************************************************************/
+
+/*****************************************  marcador (parte superior) *****************************************/
+.iconPersonaje{
+    position:absolute;
+    width:78px; height:78px;
+    top: 30px;
+    opacity:1;
+    z-index:599;
+    background-position:0px 0px;
+    background-repeat: no-repeat;
+    display:none;
+}
+.iconPersonaje.anim{ animation:tada 1s; }
+.iconPersonaje.anim2{ animation:bounceIn 1s; }
+.iconPersonaje.check{ background-position:-78px 0px; opacity:0.9; }
+
+#icon_mochila{ left:457px; background-image:url(../images/icon_mochila.png); }
+#icon_Jose{ left:362px; background-image:url(../images/icon_Jose.png); }
+#icon_Cristina{ left: 269px; background-image:url(../images/icon_Cristina.png); }
+#icon_linterna{ left:550px; background-image:url(../images/icon_linterna.png); }
+#icon_Roberto{  left: 178px; background-image:url(../images/icon_Roberto.png); }
+
+
+@keyframes celebracion{
+    0%{ opacity:0; visibility:visible; }
+    10%{ opacity:1; visibility:visible; }
+    90%{ opacity:1; visibility:visible; }
+    100%{ opacity:0; visibility:visible; }
+}
+.celebracion{
+    position:absolute;
+    width:1350px; height:700px;
+    left:0px; top:0px;
+    z-index:600;
+    opacity:0; visibility:hidden;
+}
+.celebracion.anim{ animation:celebracion 4s linear; }
+
+
+#celeb1_Cristina{ background:url(../images/celeb3_Cristina.png) no-repeat center center; }
+#celeb1_Jose{ background:url(../images/celeb3_Jose.png) no-repeat center center; }
+#celeb1_Roberto{ background:url(../images/celeb3_Roberto.png) no-repeat center center; }
+/* #celeb1_Paulo{ background:url(../images/celeb3_Paulo.png) no-repeat center center; }*/
+ #celeb1_puerta_fin{ background:url(../images/celeb3_puerta_fin.png) no-repeat center center; }
+#celeb1_mochila{ background:url(../images/celeb3_mochila.png) no-repeat center center; }
+#celeb1_linterna{ background:url(../images/celeb3_linterna.png) no-repeat center center; }
+#celeb1_falta_items{ background:url(../images/celeb3_falta_items.png) no-repeat center center; }
+
+
+
+

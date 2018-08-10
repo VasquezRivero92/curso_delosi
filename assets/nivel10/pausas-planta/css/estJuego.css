@@ -1,0 +1,63 @@
+@charset "utf-8";
+/*********************************  total  *********************************/
+
+
+  #animation_container, #_preload_div_ {
+  position:absolute;
+  margin:auto;
+  left:0;right:0;
+  }
+
+  #animation_container{
+    background-color:rgba(51, 51, 51, 1.00); width:1350px; height:700px;
+    display: none;
+  }
+
+#canvas{position: absolute; display: block; background-color:rgba(51, 51, 51, 1.00);}
+
+#dom_overlay_container{ pointer-events:none; overflow:hidden; width:1350px; height:700px; position: absolute; left: 0px; top: 0px; display: block;  }
+
+
+#carag-atlas{
+    display: none;
+    background:url(../images/planta_atlas_P_.png) no-repeat center center;
+}
+
+/*************************  Objetos por cada escenario  *************************/
+.conteo{
+    position:absolute;
+    background-repeat:no-repeat;
+    background-position:center center;
+    display: none;
+}
+#conteo1{
+    position:absolute; 
+    width:271px; height:181px;
+    left:759px; top:244px;
+    background-image:url(../images/conteo1.png);
+}
+#conteo2{
+    position:absolute; 
+    width:276px; height:181px;
+    left:536px; top:244px;
+    background-image:url(../images/conteo2.png);
+}
+#conteo3{
+    position:absolute; 
+    width:280px; height:181px;
+    left:315px; top:244px;
+    background-image:url(../images/conteo3.png);
+}
+#gameArea1{
+    position:absolute;
+    width:2548px; height:884px;
+    left:0px; top:0px;
+    background:url(../images/fondo1.jpg) no-repeat;
+    overflow:hidden;
+}
+/*******************************************************************************/
+
+
+
+
+
