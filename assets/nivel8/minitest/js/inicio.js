@@ -232,8 +232,7 @@ function initBotones() {
         $sigpregunta++;
         isPaused = true;
         console.log(checkDiv);
-        var id = parseInt($(this).data('rspt'));    
-
+        var id = parseInt($(this).data('rspt'));
             if(id==1){
                 $r_correcta = true;
                 if($pID == 1){ 
@@ -253,17 +252,53 @@ function initBotones() {
                 $rps_correcta = id;
             }else{                
                 console.log("incorrecto");
-            }
+            }            
             if($n_pregunta == "gPreg_1"){
-            setTimeout(function(){ $('#pregunta1_' + $pID).animateCss('bounceOut').fadeOut(800); }, );                  
+            setTimeout(function(){ $('#pregunta1_' + $pID).animateCss('bounceOut').fadeOut(800);
+             }, );
+            if($sigpregunta == 1){                
+                $('#icon_1').css('background-image', 'url('+odir+'/images/icon1.png)');             
+            }else if($sigpregunta == 2){
+                $('#icon_1').css('background-image', 'url('+odir+'/images/icon2.png)'); 
+            }else{
+                $('#icon_1').css('background-image', 'url('+odir+'/images/icon3.png)'); 
+            }            
             }else if($n_pregunta == "gPreg_2"){
-            setTimeout(function(){ $('#pregunta2_' + $pID).animateCss('bounceOut').fadeOut(800); }, ); 
+            setTimeout(function(){ $('#pregunta2_' + $pID).animateCss('bounceOut').fadeOut(800); }, );
+            if($sigpregunta == 1){                
+                $('#icon_2').css('background-image', 'url('+odir+'/images/icon1.png)');             
+            }else if($sigpregunta == 2){
+                $('#icon_2').css('background-image', 'url('+odir+'/images/icon2.png)'); 
+            }else{
+                $('#icon_2').css('background-image', 'url('+odir+'/images/icon3.png)'); 
+            }  
             }else if($n_pregunta == "gPreg_3"){
-            setTimeout(function(){ $('#pregunta3_' + $pID).animateCss('bounceOut').fadeOut(800); }, ); 
+            setTimeout(function(){ $('#pregunta3_' + $pID).animateCss('bounceOut').fadeOut(800); }, );
+            if($sigpregunta == 1){                
+                $('#icon_3').css('background-image', 'url('+odir+'/images/icon1.png)');              
+            }else if($sigpregunta == 2){
+                $('#icon_3').css('background-image', 'url('+odir+'/images/icon2.png)'); 
+            }else{
+                $('#icon_3').css('background-image', 'url('+odir+'/images/icon3.png)'); 
+            } 
             }else if($n_pregunta == "gPreg_4"){
-            setTimeout(function(){ $('#pregunta4_' + $pID).animateCss('bounceOut').fadeOut(800); }, );          
+            setTimeout(function(){ $('#pregunta4_' + $pID).animateCss('bounceOut').fadeOut(800); }, );
+            if($sigpregunta == 1){                
+                $('#icon_4').css('background-image', 'url('+odir+'/images/icon1.png)');              
+            }else if($sigpregunta == 2){
+                $('#icon_4').css('background-image', 'url('+odir+'/images/icon2.png)'); 
+            }else{
+                $('#icon_4').css('background-image', 'url('+odir+'/images/icon3.png)'); 
+            }          
             }else if($n_pregunta == "gPreg_5"){
-            setTimeout(function(){ $('#pregunta5_' + $pID).animateCss('bounceOut').fadeOut(800); }, );          
+            setTimeout(function(){ $('#pregunta5_' + $pID).animateCss('bounceOut').fadeOut(800); }, );
+            if($sigpregunta == 1){                
+                $('#icon_5').css('background-image', 'url('+odir+'/images/icon1.png)');             
+            }else if($sigpregunta == 2){
+                $('#icon_5').css('background-image', 'url('+odir+'/images/icon2.png)'); 
+            }else{
+                $('#icon_5').css('background-image', 'url('+odir+'/images/icon3.png)'); 
+            }           
             }
             if ($rps_correcta == 1){
                 $('.btn_pass').css("background-image", "url("+odir+"/images/BGacierto.png)");  
@@ -309,15 +344,15 @@ function initBotones() {
            $r_correcta = false;
         }else{
             if($n_pregunta=="gPreg_1"){
-             $('#icon_1').addClass('anim check');
+                $('#icon_1').addClass('anim check icon_incorrecto');
             }else if($n_pregunta=="gPreg_2"){
-                $('#icon_2').addClass('anim check');
+                $('#icon_2').addClass('anim check icon_incorrecto');
             }else if($n_pregunta=="gPreg_3"){
-                $('#icon_3').addClass('anim check');
+                $('#icon_3').addClass('anim check icon_incorrecto');
             }else if($n_pregunta=="gPreg_4"){
-                $('#icon_4').addClass('anim check');
+                $('#icon_4').addClass('anim check icon_incorrecto');
             }else if($n_pregunta=="gPreg_5"){
-                $('#icon_5').addClass('anim check');
+                $('#icon_5').addClass('anim check icon_incorrecto');
             }
         }
         if(id_p == 5){

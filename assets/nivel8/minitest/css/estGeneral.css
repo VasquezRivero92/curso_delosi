@@ -223,27 +223,55 @@ b{ font-weight: bold; }
 #CMin, #CSeg{ width:70px; color:#ff3650; }
 .iconCheck{
     position: absolute; /*display: none;*/
-    width: 43px; height: 43px;
-    background-image: url(../images/icon_check.png);
-    background-position: -43px 0px;
+    width: 48px; height: 78px;
+    background-image: url(../images/icon_check_d.png);
+    /*background-position: -43px 0px;*/
 }
-
+.icon_incorrecto{
+     position: absolute; /*display: none;*/
+    width: 48px; height: 78px;
+    background-image: url(../images/icon_incorrecto.png)!important;
+    background-position: 0px 0px
+    z-index: 4;
+}
 .icon_correcto{
      position: absolute; /*display: none;*/
-    width: 43px; height: 43px;
-    background-image: url(../images/icon_correcto.png);
-    background-position: 0px 0px;*/
+    width: 48px; height: 78px;
+    background-image: url(../images/icon_correcto.png)!important;
+    background-position: 0px 0px;
+    z-index: 4;
+}
+.icon_1p{
+     position: absolute; /*display: none;*/
+    width: 48px; height: 78px;
+    background-image: url(../images/icon1.png);
+    background-position: 0px 0px;
+    z-index: 1;
+}
+.icon_2p{
+     position: absolute; /*display: none;*/
+    width: 48px; height: 78px;
+    background-image: url(../images/icon2.png);
+    background-position: 0px 0px;
+    z-index: 2;
+}
+.icon_3p{
+     position: absolute; /*display: none;*/
+    width: 48px; height: 78px;
+    background-image: url(../images/icon3.png);
+    background-position: 0px 0px;
+    z-index: 3;
 }
 .iconCheck.anim{ animation:tada 1s; }
 .iconCheck.check{ background-position:0px 0px; }
-#icon_1{ left : 287px; top: 50px; }
-#icon_2{ left : 350px; top: 50px; }
-#icon_3{ left : 415px; top: 50px; }
-#icon_4{ left : 478px; top: 50px; }
-#icon_5{ left : 541px; top: 50px; }
-#icon_6{ left: 480px; top: 50px; }
-#icon_7{ left: 540px; top: 50px; }
-#icon_8{ left: 600px; top: 50px; }
+#icon_1{ left : 287px; top: 35px; }
+#icon_2{ left : 350px; top: 35px; }
+#icon_3{ left : 415px; top: 35px; }
+#icon_4{ left : 478px; top: 35px; }
+#icon_5{ left : 541px; top: 35px; }
+#icon_6{ left: 480px; top: 35px; }
+#icon_7{ left: 540px; top: 35px; }
+#icon_8{ left: 600px; top: 35px; }
 /*******************************************************************************/
 #pregBien{ background-image: url(../images/BGpregBien.png); }
 #btnPBien{
