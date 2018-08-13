@@ -66,23 +66,36 @@
   width : 134px;
   height : 65px;
 }
-#powerUp_13{   left : 2734px;
+#powerUp_13{   
+  left : 2734px;
   top : 1394px;
   width : 121px;
-  height : 67px;}
-#powerUp_14{   left : 732px;
+  height : 67px;
+}
+#powerUp_14{   
+  left : 732px;
   top : 1394px;
   width : 121px;
-  height : 67px; }
-#powerUp_15{     left : 2440px;
+  height : 67px; 
+}
+#powerUp_15{     
+  left : 2440px;
   top : 1443px;
   width : 38px;
-  height : 19px; }
-#powerUp_16{     left : 1138px;
+  height : 19px; 
+}
+#powerUp_16{     
+  left : 1138px;
   top : 1443px;
   width : 38px;
-  height : 19px; }
-
+  height : 19px; 
+}
+#powerUp_17{     
+  left : 1663px;
+  top : 1165px;
+  width : 127px;
+  height : 42px; 
+}
 /*******************************************************************************/
 .icoPel{
     position:absolute;
@@ -203,6 +216,13 @@
   z-index: 101;
   background-image:url(../images/mapa/preguntas.svg); }
 
+#icoPel_15{ 
+  left : 1671px;
+  top : 1127px;
+  width : 104px;
+  height : 80px;
+  z-index: 120;
+  background-image:url(../images/mapa/not1.svg); }
 /* #icoPel_11{ 
     background-image:url(../images/mapa/peligro11.png); } */
 

@@ -71,6 +71,7 @@
                     <div id="icoPel_12" class="icoPel"></div>
                     <div id="icoPel_13" class="icoPel"></div>
                     <div id="icoPel_14" class="icoPel"></div>
+                    <!-- <div id="icoPel_15" class="icoPel"></div> -->
 
                     <div id="icoPrev_1" class="icoPrev"></div>
                     <div id="icoPrev_2" class="icoPrev"></div>
@@ -153,6 +154,7 @@
                         <div id="powerUp_14" class="powerUp powerUp1">14</div>
                         <div id="powerUp_15" class="powerUp powerUp1">15</div>
                         <div id="powerUp_16" class="powerUp powerUp1">16</div>
+                        <!-- <div id="powerUp_17" class="powerUp powerUp1">17</div> -->
                     </div>
                 </div>
             </div>

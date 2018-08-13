@@ -244,7 +244,8 @@ function initJuegos() {
         $J[i].init(i);
     });
     $drivers = parseInt($('body').data('drivers'), 10);
-    $pared = $('body').data('pared');    
+    $pared = $('body').data('pared');   
+    console.log($drivers); 
 }
 function showInicio() {
     playBGMusic(window.BGIntro);
@@ -274,9 +275,13 @@ function showInicio() {
     // }, 3000);
 
     if($pared == 1){
-        console.log("abierto");
+        //console.log("abierto");
+        $("#powerUp_17").remove();
+        $("#icoPel_15").remove();
     }else{
-        console.log("cerrado");
+        //console.log("cerrado");
+        $("#fondoOPC1").append('<div id="powerUp_17" class="powerUp powerUp1">17</div>');
+        $(".gameFrame").append('<div id="icoPel_15" class="icoPel"></div>');
     }
 }
 function introJuego() {
@@ -377,7 +382,10 @@ function snd_hablar(snd){
         break;        
         case 16:
             playSound(window.palta1);                      
-        break;        
+        break; 
+        case 17:
+            playSound(window.palta1);                      
+        break;               
         default:
             playSound(window.Hablar3); 
         break;
