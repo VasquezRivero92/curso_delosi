@@ -19,9 +19,9 @@
             var odir = '<?php echo base_url($own_dir); ?>';
             var grupo = '<?php echo $this->session->grupo; ?>'
         </script>
-        <script src="<?php echo base_url($own_dir . './js/createjs-2015.11.26.min.js'); ?>"></script>
-        <script src="<?php echo base_url($own_dir . './js/planta.js'); ?>"></script>
-        <script src="<?php echo base_url($own_dir . './js/home_sc.js'); ?>"></script>
+        <script src="<?php echo base_url($own_dir . '/js/createjs-2015.11.26.min.js'); ?>"></script>
+        <script src="<?php echo base_url($own_dir . '/js/planta.js'); ?>"></script>
+        <script src="<?php echo base_url($own_dir . '/js/home_sc.js'); ?>"></script>
         <script src="<?php echo base_url($own_dir . '/js/sonido.js'); ?>"></script>
         <script src="<?php echo base_url($own_dir . '/js/inicio.js'); ?>"></script>
         <script src="<?php echo base_url($own_dir . '/js/controlPuntos1.js'); ?>"></script>
