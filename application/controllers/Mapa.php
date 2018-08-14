@@ -8,7 +8,7 @@ class Mapa extends Nivel_Controller {
         parent::__construct();
         $this->data['user_login'] = $this->base_model->user_info_login();
         $stats = $this->base_model->user_stats(1);
-        if ($this->base_model->entraadriver()) {
+        if ($this->base_model->entraadriver()||$this->base_model->entraarepartidor()) {
             $this->data['drivers'] = 2;
         } else {
            $this->data['drivers'] = '-1'; 
