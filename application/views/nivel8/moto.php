@@ -153,7 +153,6 @@
                     <label for="radio5">★</label>
                     </p>
                     <p><input type="submit" value="submit" name="submit" class="aceptar"></p>
-                    <?echo  ?>
                     </form>
                 </div>
                 </div>

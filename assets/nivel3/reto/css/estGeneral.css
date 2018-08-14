@@ -71,6 +71,11 @@ body{
 .g-restaurante #instrucciones_4{ background: url(../images/bginst4R.png) no-repeat center center; }
 .g-restaurante #instrucciones_5{ background: url(../images/bginst5R.png) no-repeat center center; }
 
+.g-driver #instrucciones_2{ background: url(../images/bginst2R.png) no-repeat center center; }
+.g-driver #instrucciones_3{ background: url(../images/bginst3R.png) no-repeat center center; }
+.g-driver #instrucciones_4{ background: url(../images/bginst4R.png) no-repeat center center; }
+.g-driver #instrucciones_5{ background: url(../images/bginst5R.png) no-repeat center center; }
+
 .btnPrev{
     position: absolute;
     width: 33px; height: 80px;
@@ -212,6 +217,9 @@ body{
 .avPM #resumenAvatar{ background-image: url(../images/avrsPM.png); }
 .avRF #resumenAvatar{ background-image: url(../images/avrsRF.png); }
 .avRM #resumenAvatar{ background-image: url(../images/avrsRM.png); }
+
+.avDF #resumenAvatar{ background-image: url(../images/avrsRF.png); }
+.avDM #resumenAvatar{ background-image: url(../images/avrsRM.png); }
 
 #resumenPuntaje{
     position: absolute;

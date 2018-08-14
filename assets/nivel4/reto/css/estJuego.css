@@ -76,6 +76,13 @@
 .g-restaurante #imgPreg_5{ background-image: url(../images/r-restaurante/q5.png); }
 .g-restaurante #imgPreg_6{ background-image: url(../images/r-restaurante/q6.png); }
 
+.g-driver #imgPreg_1{ background-image: url(../images/r-restaurante/q1.png); }
+.g-driver #imgPreg_2{ background-image: url(../images/r-restaurante/q2.png); }
+.g-driver #imgPreg_3{ background-image: url(../images/r-restaurante/q3.png); }
+.g-driver #imgPreg_4{ background-image: url(../images/r-restaurante/q4.png); }
+.g-driver #imgPreg_5{ background-image: url(../images/r-restaurante/q5.png); }
+.g-driver #imgPreg_6{ background-image: url(../images/r-restaurante/q6.png); }
+
 .btnPlay{
     position: absolute;
     width: 90px; height: 124px;

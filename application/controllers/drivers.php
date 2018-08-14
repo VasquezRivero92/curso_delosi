@@ -10,7 +10,7 @@ class Drivers extends Nivel_Controller {
         parent::__construct();
         $cur8 = $this->base_model->get_curso($this->cur);
         if ($cur8 && $cur8->estado  || $this->session->userniv) {
-            if ($this->base_model->entraadriver()) {
+            if ($this->base_model->entraadriver()||$this->base_model->entraarepartidor()) {
                 $this->session->curso = $this->cur;
 
             } else {

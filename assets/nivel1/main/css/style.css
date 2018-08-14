@@ -430,6 +430,15 @@ body{
 .owl-restaurante #s1i1p{ background: url(../images/slider/sliderRes1Ap.png) no-repeat 50% 0%; }
 .owl-restaurante #s1i2p{ background: url(../images/slider/sliderRes1Bp.png) no-repeat 50% 0%; }
 .owl-restaurante #s1i3p{ background: url(../images/slider/sliderRes1Cp.png) no-repeat 50% 0%; }
+.owl-driver #s1i1{ background: url(../images/slider/sliderRes1A.png) no-repeat 50% 0%; }
+.owl-driver #s1i2{ background: url(../images/slider/sliderRes1B.png) no-repeat 50% 0%; }
+.owl-driver #s1i3{ background: url(../images/slider/sliderRes1C.png) no-repeat 50% 0%; }
+.owl-driver #s1i1h{ background: url(../images/slider/sliderRes1Ah.png) no-repeat 50% 0%; }
+.owl-driver #s1i2h{ background: url(../images/slider/sliderRes1Bh.png) no-repeat 50% 0%; }
+.owl-driver #s1i3h{ background: url(../images/slider/sliderRes1Ch.png) no-repeat 50% 0%; }
+.owl-driver #s1i1p{ background: url(../images/slider/sliderRes1Ap.png) no-repeat 50% 0%; }
+.owl-driver #s1i2p{ background: url(../images/slider/sliderRes1Bp.png) no-repeat 50% 0%; }
+.owl-driver #s1i3p{ background: url(../images/slider/sliderRes1Cp.png) no-repeat 50% 0%; }
 /*******************************  Slider Page 2  *******************************/
 #sliderPage_2{ background: url(../images/bgspg1.png) no-repeat center center; }
 #s2tit_2{ background: url(../images/s2tit2.png) no-repeat 50% 50%; }
@@ -451,6 +460,12 @@ body{
 .owl-restaurante #s2i2h{ background: url(../images/slider/sliderRes2Bh.png) no-repeat 50% 0%; }
 .owl-restaurante #s2i1p{ background: url(../images/slider/sliderRes2Ap.png) no-repeat 50% 0%; }
 .owl-restaurante #s2i2p{ background: url(../images/slider/sliderRes2Bp.png) no-repeat 50% 0%; }
+.owl-driver #s2i1{ background: url(../images/slider/sliderRes2A.png) no-repeat 50% 0%; }
+.owl-driver #s2i2{ background: url(../images/slider/sliderRes2B.png) no-repeat 50% 0%; }
+.owl-driver #s2i1h{ background: url(../images/slider/sliderRes2Ah.png) no-repeat 50% 0%; }
+.owl-driver #s2i2h{ background: url(../images/slider/sliderRes2Bh.png) no-repeat 50% 0%; }
+.owl-driver #s2i1p{ background: url(../images/slider/sliderRes2Ap.png) no-repeat 50% 0%; }
+.owl-driver #s2i2p{ background: url(../images/slider/sliderRes2Bp.png) no-repeat 50% 0%; }
 /*******************************  Slider Page 3  *******************************/
 #sliderPage_3{ background: url(../images/bgspg1.png) no-repeat center center; }
 #s3tit_2{ background: url(../images/s3tit2.png) no-repeat 50% 50%; }
@@ -490,6 +505,18 @@ body{
 .owl-restaurante #s3i2p{ background: url(../images/slider/sliderRes3Bp.png) no-repeat 50% 0%; }
 .owl-restaurante #s3i3p{ background: url(../images/slider/sliderRes3Cp.png) no-repeat 50% 0%; }
 .owl-restaurante #s3i4p{ background: url(../images/slider/sliderRes3Dp.png) no-repeat 50% 0%; }
+.owl-driver #s3i1{ background: url(../images/slider/sliderRes3A.png) no-repeat 50% 0%; }
+.owl-driver #s3i2{ background: url(../images/slider/sliderRes3B.png) no-repeat 50% 0%; }
+.owl-driver #s3i3{ background: url(../images/slider/sliderRes3C.png) no-repeat 50% 0%; }
+.owl-driver #s3i4{ background: url(../images/slider/sliderRes3D.png) no-repeat 50% 0%; }
+.owl-driver #s3i1h{ background: url(../images/slider/sliderRes3Ah.png) no-repeat 50% 0%; }
+.owl-driver #s3i2h{ background: url(../images/slider/sliderRes3Bh.png) no-repeat 50% 0%; }
+.owl-driver #s3i3h{ background: url(../images/slider/sliderRes3Ch.png) no-repeat 50% 0%; }
+.owl-driver #s3i4h{ background: url(../images/slider/sliderRes3Dh.png) no-repeat 50% 0%; }
+.owl-driver #s3i1p{ background: url(../images/slider/sliderRes3Ap.png) no-repeat 50% 0%; }
+.owl-driver #s3i2p{ background: url(../images/slider/sliderRes3Bp.png) no-repeat 50% 0%; }
+.owl-driver #s3i3p{ background: url(../images/slider/sliderRes3Cp.png) no-repeat 50% 0%; }
+.owl-driver #s3i4p{ background: url(../images/slider/sliderRes3Dp.png) no-repeat 50% 0%; }
 /*******************************  Slider Page 4  *******************************/
 #sliderPage_4{ background: url(../images/bgspg1.png) no-repeat center center; }
 #s4tit_2{ background: url(../images/s4tit2.png) no-repeat 50% 50%; }
@@ -511,6 +538,12 @@ body{
 .owl-restaurante #s4i2h{ background: url(../images/slider/sliderRes4Bh.png) no-repeat 50% 0%; }
 .owl-restaurante #s4i1p{ background: url(../images/slider/sliderRes4Ap.png) no-repeat 50% 0%; }
 .owl-restaurante #s4i2p{ background: url(../images/slider/sliderRes4Bp.png) no-repeat 50% 0%; }
+.owl-driver #s4i1{ background: url(../images/slider/sliderRes4A.png) no-repeat 50% 0%; }
+.owl-driver #s4i2{ background: url(../images/slider/sliderRes4B.png) no-repeat 50% 0%; }
+.owl-driver #s4i1h{ background: url(../images/slider/sliderRes4Ah.png) no-repeat 50% 0%; }
+.owl-driver #s4i2h{ background: url(../images/slider/sliderRes4Bh.png) no-repeat 50% 0%; }
+.owl-driver #s4i1p{ background: url(../images/slider/sliderRes4Ap.png) no-repeat 50% 0%; }
+.owl-driver #s4i2p{ background: url(../images/slider/sliderRes4Bp.png) no-repeat 50% 0%; }
 
 .btnVolver{
     position: absolute; display: none;

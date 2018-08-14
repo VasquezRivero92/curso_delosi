@@ -76,6 +76,23 @@
 .g-restaurante #tragamonedas .slot:nth-child(4) .rlItm3{ background-image: url(../images/r-restaurante/s4_3.png); }
 .g-restaurante #tragamonedas .slot:nth-child(4) .rlItm4{ background-image: url(../images/r-restaurante/s4_4.png); }
 
+.g-driver #tragamonedas .slot:nth-child(1) .rlItm1{ background-image: url(../images/r-restaurante/s1_1.png); }
+.g-driver #tragamonedas .slot:nth-child(1) .rlItm2{ background-image: url(../images/r-restaurante/s1_2.png); }
+.g-driver #tragamonedas .slot:nth-child(1) .rlItm3{ background-image: url(../images/r-restaurante/s1_3.png); }
+.g-driver #tragamonedas .slot:nth-child(1) .rlItm4{ background-image: url(../images/r-restaurante/s1_4.png); }
+.g-driver #tragamonedas .slot:nth-child(2) .rlItm1{ background-image: url(../images/r-restaurante/s2_1.png); }
+.g-driver #tragamonedas .slot:nth-child(2) .rlItm2{ background-image: url(../images/r-restaurante/s2_2.png); }
+.g-driver #tragamonedas .slot:nth-child(2) .rlItm3{ background-image: url(../images/r-restaurante/s2_3.png); }
+.g-driver #tragamonedas .slot:nth-child(2) .rlItm4{ background-image: url(../images/r-restaurante/s2_4.png); }
+.g-driver #tragamonedas .slot:nth-child(3) .rlItm1{ background-image: url(../images/r-restaurante/s3_1.png); }
+.g-driver #tragamonedas .slot:nth-child(3) .rlItm2{ background-image: url(../images/r-restaurante/s3_2.png); }
+.g-driver #tragamonedas .slot:nth-child(3) .rlItm3{ background-image: url(../images/r-restaurante/s3_3.png); }
+.g-driver #tragamonedas .slot:nth-child(3) .rlItm4{ background-image: url(../images/r-restaurante/s3_4.png); }
+.g-driver #tragamonedas .slot:nth-child(4) .rlItm1{ background-image: url(../images/r-restaurante/s4_1.png); }
+.g-driver #tragamonedas .slot:nth-child(4) .rlItm2{ background-image: url(../images/r-restaurante/s4_2.png); }
+.g-driver #tragamonedas .slot:nth-child(4) .rlItm3{ background-image: url(../images/r-restaurante/s4_3.png); }
+.g-driver #tragamonedas .slot:nth-child(4) .rlItm4{ background-image: url(../images/r-restaurante/s4_4.png); }
+
 @keyframes flashBtn{
     0%,100% { opacity: 1; }
     50% { opacity: 0; }

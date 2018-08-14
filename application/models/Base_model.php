@@ -113,6 +113,16 @@ class Base_model extends CI_Model {
                         ->num_rows();
     }
 
+    public function entraatest() {
+        return (bool) $this->db->select('id_user')
+                        ->from('users_empresa')
+                        ->where('id_cargo', '16')
+                        ->where('id_user', $this->session->user_id)
+                        ->limit(1)
+                        ->get()
+                        ->num_rows();
+    }
+
     public function usuarios_cocina() {
         return (bool) $this->db->select('id_user')
                         ->from('users_empresa')

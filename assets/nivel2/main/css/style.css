@@ -453,6 +453,10 @@ body{
 .owl-restaurante #s1i1h{ background: url(../images/slider/rest2_G-B/sliderRes5Ah.png) no-repeat 50% 0%; }
 .owl-restaurante #s1i1p{ background: url(../images/slider/rest2_G-B/sliderRes5Ap.png) no-repeat 50% 0%; }
 
+.owl-driver #s1i1{ background: url(../images/slider/rest2_G-B/sliderRes5A.png) no-repeat 50% 0%; }
+.owl-driver #s1i1h{ background: url(../images/slider/rest2_G-B/sliderRes5Ah.png) no-repeat 50% 0%; }
+.owl-driver #s1i1p{ background: url(../images/slider/rest2_G-B/sliderRes5Ap.png) no-repeat 50% 0%; }
+
 
 /*******************************  Slider Page 2  *******************************/
 #sliderPage_2{ background: url(../images/bgspg1.png) no-repeat center center; }
@@ -491,6 +495,21 @@ body{
 .owl-restaurante #s2i2p{ background: url(../images/slider/rest2_G-B/sliderRes5Cp.png) no-repeat 50% 0%; }
 .owl-restaurante #s2i3p{ background: url(../images/slider/rest2_G-B/sliderRes5Dp.png) no-repeat 50% 0%; }
 
+
+
+
+.owl-driver #s2i1{ background: url(../images/slider/rest2_G-B/sliderRes5B.png) no-repeat 50% 0%; }
+.owl-driver #s2i2{ background: url(../images/slider/rest2_G-B/sliderRes5C.png) no-repeat 50% 0%; }
+.owl-driver #s2i3{ background: url(../images/slider/rest2_G-B/sliderRes5D.png) no-repeat 50% 0%; }
+
+.owl-driver #s2i1h{ background: url(../images/slider/rest2_G-B/sliderRes5Bh.png) no-repeat 50% 0%; }
+.owl-driver #s2i2h{ background: url(../images/slider/rest2_G-B/sliderRes5Ch.png) no-repeat 50% 0%; }
+.owl-driver #s2i3h{ background: url(../images/slider/rest2_G-B/sliderRes5Dh.png) no-repeat 50% 0%; }
+
+.owl-driver #s2i1p{ background: url(../images/slider/rest2_G-B/sliderRes5Bp.png) no-repeat 50% 0%; }
+.owl-driver #s2i2p{ background: url(../images/slider/rest2_G-B/sliderRes5Cp.png) no-repeat 50% 0%; }
+.owl-driver #s2i3p{ background: url(../images/slider/rest2_G-B/sliderRes5Dp.png) no-repeat 50% 0%; }
+
 /*******************************  Slider Page 3  *******************************/
 #sliderPage_3{ background: url(../images/bgspg1.png) no-repeat center center; }
 #s3tit_2{ background: url(../images/s3tit2.png) no-repeat 50% 50%; }
@@ -523,6 +542,16 @@ body{
 .owl-restaurante #s3i1p{ background: url(../images/slider/rest2_G-B/sliderRes5Ep.png) no-repeat 50% 0%; }
 .owl-restaurante #s3i2p{ background: url(../images/slider/rest2_G-B/sliderRes5Fp.png) no-repeat 50% 0%; }
 
+
+.owl-driver #s3i1{ background: url(../images/slider/rest2_G-B/sliderRes5E.png) no-repeat 50% 0%; }
+.owl-driver #s3i2{ background: url(../images/slider/rest2_G-B/sliderRes5F.png) no-repeat 50% 0%; }
+
+.owl-driver #s3i1h{ background: url(../images/slider/rest2_G-B/sliderRes5Eh.png) no-repeat 50% 0%; }
+.owl-driver #s3i2h{ background: url(../images/slider/rest2_G-B/sliderRes5Fh.png) no-repeat 50% 0%; }
+
+.owl-driver #s3i1p{ background: url(../images/slider/rest2_G-B/sliderRes5Ep.png) no-repeat 50% 0%; }
+.owl-driver #s3i2p{ background: url(../images/slider/rest2_G-B/sliderRes5Fp.png) no-repeat 50% 0%; }
+
 /*******************************  Slider Page 4  *******************************/
 #sliderPage_4{ background: url(../images/bgspg1.png) no-repeat center center; }
 #s4tit_2{ background: url(../images/s4tit2.png) no-repeat 50% 50%; }
@@ -546,6 +575,14 @@ body{
 .owl-restaurante #s4i2h{ background: url(../images/slider/rest2_G-B/sliderRes5Hh.png) no-repeat 50% 0%; }
 .owl-restaurante #s4i1p{ background: url(../images/slider/rest2_G-B/sliderRes5Gp.png) no-repeat 50% 0%; }
 .owl-restaurante #s4i2p{ background: url(../images/slider/rest2_G-B/sliderRes5Hp.png) no-repeat 50% 0%; }
+
+
+.owl-driver #s4i1{ background: url(../images/slider/rest2_G-B/sliderRes5G.png) no-repeat 50% 0%; }
+.owl-driver #s4i2{ background: url(../images/slider/rest2_G-B/sliderRes5H.png) no-repeat 50% 0%; }
+.owl-driver #s4i1h{ background: url(../images/slider/rest2_G-B/sliderRes5Gh.png) no-repeat 50% 0%; }
+.owl-driver #s4i2h{ background: url(../images/slider/rest2_G-B/sliderRes5Hh.png) no-repeat 50% 0%; }
+.owl-driver #s4i1p{ background: url(../images/slider/rest2_G-B/sliderRes5Gp.png) no-repeat 50% 0%; }
+.owl-driver #s4i2p{ background: url(../images/slider/rest2_G-B/sliderRes5Hp.png) no-repeat 50% 0%; }
 /*******************************  Slider Page 5  *******************************/
 #sliderPage_5{ background: url(../images/bgspg1.png) no-repeat center center; }
 #s5tit_2{ background: url(../images/s5tit2.png) no-repeat 50% 50%; }
@@ -571,6 +608,13 @@ body{
 .owl-restaurante #s5i1p{ background: url(../images/slider/rest2_G-B/sliderRes5Ip.png) no-repeat 50% 0%; }
 .owl-restaurante #s5i2p{ background: url(../images/slider/rest2_G-B/sliderRes5Jp.png) no-repeat 50% 0%; }
 
+.owl-driver #s5i1{ background: url(../images/slider/rest2_G-B/sliderRes5I.png) no-repeat 50% 0%; }
+.owl-driver #s5i2{ background: url(../images/slider/rest2_G-B/sliderRes5J.png) no-repeat 50% 0%; }
+.owl-driver #s5i1h{ background: url(../images/slider/rest2_G-B/sliderRes5Ih.png) no-repeat 50% 0%; }
+.owl-driver #s5i2h{ background: url(../images/slider/rest2_G-B/sliderRes5Jh.png) no-repeat 50% 0%; }
+.owl-driver #s5i1p{ background: url(../images/slider/rest2_G-B/sliderRes5Ip.png) no-repeat 50% 0%; }
+.owl-driver #s5i2p{ background: url(../images/slider/rest2_G-B/sliderRes5Jp.png) no-repeat 50% 0%; }
+
 /*******************************  Slider Page 6  *******************************/
 #sliderPage_6{ background: url(../images/bgspg1.png) no-repeat center center; }
 #s6tit_2{ background: url(../images/s6tit2.png) no-repeat 50% 50%; }
@@ -585,6 +629,10 @@ body{
 .owl-restaurante #s6i1{ background: url(../images/slider/rest2_G-B/sliderRes5K.png) no-repeat 50% 0%; }
 .owl-restaurante #s6i1h{ background: url(../images/slider/rest2_G-B/sliderRes5Kh.png) no-repeat 50% 0%; }
 .owl-restaurante #s6i1p{ background: url(../images/slider/rest2_G-B/sliderRes5Kp.png) no-repeat 50% 0%; }
+
+.owl-driver #s6i1{ background: url(../images/slider/rest2_G-B/sliderRes5K.png) no-repeat 50% 0%; }
+.owl-driver #s6i1h{ background: url(../images/slider/rest2_G-B/sliderRes5Kh.png) no-repeat 50% 0%; }
+.owl-driver #s6i1p{ background: url(../images/slider/rest2_G-B/sliderRes5Kp.png) no-repeat 50% 0%; }
 
 .btnVolver{
     position: absolute; display: none;
