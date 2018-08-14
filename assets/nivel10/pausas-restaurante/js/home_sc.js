@@ -4,10 +4,10 @@ var sumaPuntos, estrellas;
 function resultadoPuntos(punts) {
 	puntos = punts;
 	$('#resumenPuntaje').html(puntos);
-	var data = {puntaje: sumaPuntos, estrellas: estrellas, check : true};
-    // $.post(bdir + 'ajax/set_puntaje', data).done(function (data) {
-    //     console.log("resultado: " + data);
-    // });
+	var data = {puntaje: puntos, estrellas: estrellas, check : true};
+    $.post(bdir + 'ajax/set_puntaje', data).done(function (data) {
+        console.log("resultado: " + data);
+    });
     /***
      $('#resumenPuntaje').html('Puntos: '+ $J[1].ptsWinJuego + '<br>'
      +'Bonus por tiempo: '+ $J[1].CTiempo + '<br>'

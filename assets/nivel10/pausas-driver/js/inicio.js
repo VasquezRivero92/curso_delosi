@@ -55,11 +55,13 @@ function initBotones() {
     $('#btnReiniciar').click(function () {
         playFX(window.audioCatch);
         showInicio();
+        init();
         $('.caratula, .game, #capaResumen, #TerminoTiempo').stop().fadeOut(500);
     });
     $('#btnReinicio').click(function () {
         playFX(window.audioCatch);
         showInicio();
+        init();
         $('.caratula, .game, #capaResumen').stop().fadeOut(500);
     });
 

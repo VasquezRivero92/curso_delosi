@@ -173,7 +173,7 @@ function initBotones() {
         ContPreguntas = 0;
         $ActPwrUp = 0;
         showInicio();
-        $('.caratula, .game, #capaResumen').stop().fadeOut(500);
+        $('.caratula, .game, #capaResumen, #pregWindow').stop().fadeOut(500);
     });    
     $('#pausaTouch').click(function () {
         pausect = CTpreg;
