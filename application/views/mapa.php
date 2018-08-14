@@ -100,8 +100,12 @@
                     <div id="icoPrev_25" class="icoPrev"></div>
                     <div id="icoPrev_26" class="icoPrev"></div>
                     <div id="icoPrev_27" class="icoPrev"></div>
-                    <div id="icoPrev_28" class="icoPrev persona_mov1"></div>
-                    <div id="icoPrev_29" class="icoPrev persona_mov1"></div>
+                    <div id="icoPrev_28" class="icoPrev persona_mov1">
+                        <div id="popAl_16" class="pop_alcalde"><span class="consejitos">!Auxilio¡</span></div>
+                    </div>
+                    <div id="icoPrev_29" class="icoPrev persona_mov1">
+                        <div id="popAl_15" class="pop_alcalde"><span class="consejitos">!Auxilio¡</span></div>                    
+                    </div>
                     <div id="icoPrev_30" class="icoPrev"></div>
                     <!-- <div id="icoPrev_31" class="icoPrev"></div> -->
                     <div id="icoPrev_32" class="icoPrev"></div>

@@ -327,7 +327,7 @@
   top : 1253px;
   width : 29px;
   height : 58px;
-  z-index: 200;
+  z-index: 130;
   background-image:url(../images/people/pep10.svg); }
 #icoPrev_14{ 
   left : 2873px;
@@ -441,15 +441,37 @@
   top : 1381px;
   width : 36px;
   height : 72px;
-  z-index: 102;
+  z-index: 143;
   background:url(../images/people/alcaldesa.svg);
 }
+.pop_alcalde
+{
+  background : url(../images/mapa/pop_alcaldesa.png);
+  background-repeat : no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: -70px;
+  top: -141px;
+  width: 180px;
+  height: 142px;
+  font-family: 'CatalogoSG';
+  font-size: 16px;
+  line-height: 15px;
+  opacity: 0;
+}
+.consejitos {
+    position: absolute;
+    padding: 10px;
+    text-align: center;
+}
+.visibleALcalde{opacity: 1 !important;}
+
 #icoPrev_29{ 
   left : 2442px;
   top : 1380px;
   width : 36px;
   height : 72px;
-  z-index: 102;
+  z-index: 143;
   background:url(../images/people/alcaldesa.svg);
 }
 #icoPrev_30{ 
@@ -669,7 +691,7 @@
   top : 1244px;
   width : 43px;
   height : 40px;
-  z-index: 200;
+  z-index: 130;
   background:url(../images/gif/palo2.gif) no-repeat 50% 50%;
   background-size: contain;
 }
@@ -743,11 +765,11 @@
 
 #Player_1 .ptje{
     position:absolute; display:none;
-    width: 70px;
-    height: 80px;
-    left: -33px;
-    top: -145px;
-    background: rgba(250,0,0,0) url(../images/alert.gif) no-repeat 50% 50%;
+    width: 162px;
+    height: 159px;
+    left: -73px;
+    top: -220px;
+    background: rgba(250,0,0,0) url(../images/alert.png) no-repeat 50% 50%;
     cursor: pointer;
     background-size: cover;
     z-index: 200;

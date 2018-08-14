@@ -206,16 +206,16 @@ function initBotones() {
                 url: bdir + 'ajax/send_buzon'
             }).done(function (data, textStatus, jqXHR) {
                 $('#pop2txt1').show().html(data);
-                console.log("OK:");
-                console.log(data);
+                // console.log("OK:");
+                // console.log(data);
                 setTimeout(function () {
                     $('#pregWindow').fadeOut(1000);
                     $('#popAct_1').fadeOut(1000);
                     isPaused = false; 
                 }, 1000);
             }).fail(function (jqXHR, textStatus, errorThrown) {
-                console.log("Fail:");
-                console.log(jqXHR);
+                // console.log("Fail:");
+                // console.log(jqXHR);
             }).always(function () {
                 $('#pop2ta').removeClass('disable');
                 $('#pop2sub').removeClass('disable');
@@ -245,7 +245,7 @@ function initJuegos() {
     });
     $drivers = parseInt($('body').data('drivers'), 10);
     $pared = $('body').data('pared');   
-    console.log($drivers); 
+    //console.log($drivers); 
 }
 function showInicio() {
     playBGMusic(window.BGIntro);
@@ -297,6 +297,15 @@ function introJuego() {
         $(".gameEnv").show();
     }, 500);
 }
+
+function alcaldeza(){
+    var x = Math.floor((Math.random() * 3) + 1);
+    var consejos = [ 'Hola, espero que estés disfrutando de los cursos!, recuerda siempre mantener el orden y limpieza en tu área de trabajo.',
+                     'Qué bueno volver a verte nuevamente, recuerda no correr dentro de las instalaciones, así evitaremos caídas.',
+                     'Hola, aplica todo lo que aprendes en nuestra Ciudad de la Prevención, juntos podemos Prevenir Accidentes!'];
+    $('.consejitos').html(consejos[x - 1]);
+}
+
 /*******************************************************************************/
 function redimensionarJuego() {
     scale1 = (window.innerWidth / 1350);

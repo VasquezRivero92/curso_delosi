@@ -79,37 +79,41 @@ $J[1].hitPowerUps = function () {
             if( PlayerMov.hittest(itm) ){
                 hitPU = true;
                 $ActPwrUp = parseInt(itm.id.split("_")[1], 10);
-
-                //console.log(itm.id, $ActPwrUp);
                 if($ActPwrUp == 17){
                     PlayerMov.cambiaY(-4); 
                 }
-
                 if( !itm.hit /*&& itm.visible === 0*/ ){
                     itm.hit = true;
-                    
-                    //console.log($ActPwrUp);
-                    snd_hablar($ActPwrUp);
+                    snd_hablar($ActPwrUp);  
+                    if($ActPwrUp == 15 || $ActPwrUp == 16){
+                        $('#popAl_'+ $ActPwrUp).addClass('visibleALcalde');
+                        alcaldeza();
+                        setTimeout(function () {
+                            $('.pop_alcalde').stop().removeClass('visibleALcalde');
+                        }, 6000); 
+                        //$stopTimeCrono = 5;
+                        //$stopTimeIntervalo = 5000 / $delayTime;                       
+                    }
                     if($ActPwrUp == 17){
                         //console.log('no muestra el signo');
                     }else{
                         if($ActPwrUp == 15 || $ActPwrUp == 16 && hitPU){
-                            
-                            $ActPwrUp = 0;
                             PlayerMov.areaPtje.stop().removeClass('animated rubberBand').fadeOut(300);                       
-                            //itm.hit = false;
+                            $ActPwrUp = 0;
+                           //itm.hit = false;
                         }else{
                             PlayerMov.areaPtje.stop().addClass('animated rubberBand').fadeIn(100);
                         }
                     }
-                    
                 }
             }else{
-                //if( itm.visible >= 0 ){ itm.hit = false; }
+                //if( itm.visible >= 1 ){ itm.hit = false; }
                 itm.hit = false;
+                //$('.pop_alcalde').stop().removeClass('visibleALcalde');
             }
             itm.draw(i);
         }
+
         if( itm.visible > 0 ){
             itm.visible--;
         }
