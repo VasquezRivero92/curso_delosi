@@ -100,7 +100,7 @@ class Ajaxadm_model extends CI_Model {
                 'last_login' => $user->last_login ? $user->last_login : 0
             );
             foreach ($CCursos as $curso) {
-                $query = $this->db->select('puntaje, intentos, calificacion')
+                $query = $this->db->select('fecha, puntaje, vistas, calificacion')
                                 ->from('users_curso')
                                 ->where('id_user', $user->id)
                                 ->where('id_curso', $curso->id)
@@ -109,13 +109,15 @@ class Ajaxadm_model extends CI_Model {
                                 ->get()->row();
                 if ($query) {
                     $tUser['c' . $curso->id] = (int) $query->puntaje;
-                    $tUser['r' . $curso->id] = (int) $query->intentos;
+                    $tUser['r' . $curso->id] = (int) $query->vistas;
                     $tUser['calificacion' . $curso->id] = (int) $query->calificacion;
+                    $tUser['fecha' . $curso->id] = (int) $query->fecha;
                     $total = (int) $total + (int) $query->puntaje;
                 } else {
-                    $tUser['c' . $curso->id] = '0';
-                    $tUser['r' . $curso->id] = '0';
-                    $tUser['calificacion' . $curso->id] = '0';
+                    $tUser['c' . $curso->id] = '';
+                    $tUser['r' . $curso->id] = '';
+                    $tUser['calificacion' . $curso->id] = '';
+                    // $tUser['fecha' . $curso->id] = '';
                 }
             }
             $tUser['total'] = $total;
@@ -494,21 +496,133 @@ class Ajaxadm_model extends CI_Model {
     }
 
     /*     * *******************************  estadisticas  ******************************** */
-    public function cali_est($id_empresa, $id_area, $id_departamento) {
-        $this->db->select('DISTINCT(id_user)')
-                ->from('users_empresa ue')
+    public function num_players_cali_1($id_empresa, $curso, $id_area, $id_departamento) {
+        $this->db->select('DISTINCT(ue.id_user)')
+                ->from('users_curso uc')
+                ->join('users_empresa ue', 'uc.id_user = ue.id_user')
+                ->join('curso c', 'uc.id_curso = c.id')
                 ->join('users u', 'ue.id_user = u.id');
         if ($id_empresa) {
             $this->db->where('ue.id_empresa', $id_empresa);
+        }
+        if ($curso) {
+            $this->db->where('uc.id_curso', $curso);
         }
         if ($id_area) {
             $this->db->where('ue.id_area', $id_area);
         }
         if ($id_departamento) {
             $this->db->where('ue.id_departamento', $id_departamento);
+        }        
+        return $this->db->where('uc.puntaje IS NOT NULL', null, false)
+                        ->where('ue.sede IS NOT NULL', null, false)
+                        ->where('uc.id_version', $this->id_version)
+                        ->where('uc.calificacion', 1)
+                        ->where('c.menu', 1)
+                        ->get()->num_rows();
+    }
+
+    public function num_players_cali_2($id_empresa, $curso, $id_area, $id_departamento) {
+        $this->db->select('DISTINCT(ue.id_user)')
+                ->from('users_curso uc')
+                ->join('users_empresa ue', 'uc.id_user = ue.id_user')
+                ->join('curso c', 'uc.id_curso = c.id')
+                ->join('users u', 'ue.id_user = u.id');
+        if ($id_empresa) {
+            $this->db->where('ue.id_empresa', $id_empresa);
         }
-        return $this->db->where('sede IS NOT NULL', null, false)
-                        ->where('u.active', 1)
+        if ($curso) {
+            $this->db->where('uc.id_curso', $curso);
+        }
+        if ($id_area) {
+            $this->db->where('ue.id_area', $id_area);
+        }
+        if ($id_departamento) {
+            $this->db->where('ue.id_departamento', $id_departamento);
+        }        
+        return $this->db->where('uc.puntaje IS NOT NULL', null, false)
+                        ->where('ue.sede IS NOT NULL', null, false)
+                        ->where('uc.id_version', $this->id_version)
+                        ->where('uc.calificacion', 2)
+                        ->where('c.menu', 1)
+                        ->get()->num_rows();
+    }
+
+    public function num_players_cali_3($id_empresa, $curso, $id_area, $id_departamento) {
+        $this->db->select('DISTINCT(ue.id_user)')
+                ->from('users_curso uc')
+                ->join('users_empresa ue', 'uc.id_user = ue.id_user')
+                ->join('curso c', 'uc.id_curso = c.id')
+                ->join('users u', 'ue.id_user = u.id');
+        if ($id_empresa) {
+            $this->db->where('ue.id_empresa', $id_empresa);
+        }
+        if ($curso) {
+            $this->db->where('uc.id_curso', $curso);
+        }
+        if ($id_area) {
+            $this->db->where('ue.id_area', $id_area);
+        }
+        if ($id_departamento) {
+            $this->db->where('ue.id_departamento', $id_departamento);
+        }        
+        return $this->db->where('uc.puntaje IS NOT NULL', null, false)
+                        ->where('ue.sede IS NOT NULL', null, false)
+                        ->where('uc.id_version', $this->id_version)
+                        ->where('uc.calificacion', 3)
+                        ->where('c.menu', 1)
+                        ->get()->num_rows();
+    }
+
+    public function num_players_cali_4($id_empresa, $curso, $id_area, $id_departamento) {
+        $this->db->select('DISTINCT(ue.id_user)')
+                ->from('users_curso uc')
+                ->join('users_empresa ue', 'uc.id_user = ue.id_user')
+                ->join('curso c', 'uc.id_curso = c.id')
+                ->join('users u', 'ue.id_user = u.id');
+        if ($id_empresa) {
+            $this->db->where('ue.id_empresa', $id_empresa);
+        }
+        if ($curso) {
+            $this->db->where('uc.id_curso', $curso);
+        }
+        if ($id_area) {
+            $this->db->where('ue.id_area', $id_area);
+        }
+        if ($id_departamento) {
+            $this->db->where('ue.id_departamento', $id_departamento);
+        }        
+        return $this->db->where('uc.puntaje IS NOT NULL', null, false)
+                        ->where('ue.sede IS NOT NULL', null, false)
+                        ->where('uc.id_version', $this->id_version)
+                        ->where('uc.calificacion', 4)
+                        ->where('c.menu', 1)
+                        ->get()->num_rows();
+    }
+
+    public function num_players_cali_5($id_empresa, $curso, $id_area, $id_departamento) {
+        $this->db->select('DISTINCT(ue.id_user)')
+                ->from('users_curso uc')
+                ->join('users_empresa ue', 'uc.id_user = ue.id_user')
+                ->join('curso c', 'uc.id_curso = c.id')
+                ->join('users u', 'ue.id_user = u.id');
+        if ($id_empresa) {
+            $this->db->where('ue.id_empresa', $id_empresa);
+        }
+        if ($curso) {
+            $this->db->where('uc.id_curso', $curso);
+        }
+        if ($id_area) {
+            $this->db->where('ue.id_area', $id_area);
+        }
+        if ($id_departamento) {
+            $this->db->where('ue.id_departamento', $id_departamento);
+        }        
+        return $this->db->where('uc.puntaje IS NOT NULL', null, false)
+                        ->where('ue.sede IS NOT NULL', null, false)
+                        ->where('uc.id_version', $this->id_version)
+                        ->where('uc.calificacion', 5)
+                        ->where('c.menu', 1)
                         ->get()->num_rows();
     }
 
@@ -558,7 +672,23 @@ class Ajaxadm_model extends CI_Model {
                         ->get()->result_array();
         return array_sum(array_column($array, 'puntaje'));
     }
-
+    public function num_users_cali($id_empresa, $id_area, $id_departamento) {
+         $this->db->select('DISTINCT(id_user)')
+                ->from('users_empresa ue')
+                ->join('users u', 'ue.id_user = u.id');
+        if ($id_empresa) {
+            $this->db->where('ue.id_empresa', $id_empresa);
+        }
+        if ($id_area) {
+            $this->db->where('ue.id_area', $id_area);
+        }
+        if ($id_departamento) {
+            $this->db->where('ue.id_departamento', $id_departamento);
+        }
+        return $this->db->where('sede IS NOT NULL', null, false)
+                        ->where('u.active', 1)
+                        ->get()->num_rows();
+    }
     public function num_users_est($id_empresa, $id_area, $id_departamento) {
         $this->db->select('DISTINCT(id_user)')
                 ->from('users_empresa ue')

@@ -230,25 +230,7 @@ class Base_model extends CI_Model {
                             ->order_by('nombre')
                             ->get('empresa');
         }
-    }
-    public function get_cali($id_user = false) {
-        //las tiendas envian el usuario2, que es el campo sede en la tabla users_empresa
-        if ($id_user) {
-            $this->db->select('c.id,c.nombre')
-                    ->from('calificacion c')
-                    ->join('users_empresa ue', 'c.id = ue.id_calificacion');
-            if ($this->session->tipo == 'user') {//comparamos por id
-                $this->db->where('ue.id_user', $id_user);
-            } else {//comparamos por sede
-                $this->db->where('ue.sede', $id_user);
-            }
-            return $this->db->group_by('c.id')->order_by('c.nombre')->get();
-        } else {
-            return $this->db->select('id,nombre')
-                            ->order_by('nombre')
-                            ->get('calificacion');
-        }
-    }
+    }    
     public function get_empresas_anc($id_user = false) {
         //las tiendas envian el usuario2, que es el campo sede en la tabla users_empresa
         if ($id_user) {
@@ -303,6 +285,25 @@ class Base_model extends CI_Model {
                             ->get('departamento');
         }
     }
+
+    // public function get_cali($id_user = false) {
+    //     //las tiendas envian el usuario2, que es el campo sede en la tabla users_empresa
+    //     if ($id_user) {
+    //         $this->db->select('c.id,c.nombre')
+    //                 ->from('calificacion c')
+    //                 ->join('users_empresa ue', 'c.id = ue.id_calificacion');
+    //         if ($this->session->tipo == 'user') {//comparamos por id
+    //             $this->db->where('ue.id_user', $id_user);
+    //         } else {//comparamos por sede
+    //             $this->db->where('ue.sede', $id_user);
+    //         }
+    //         return $this->db->group_by('c.id')->order_by('c.nombre')->get();
+    //     } else {
+    //         return $this->db->select('id,nombre')
+    //                         ->order_by('nombre')
+    //                         ->get('calificacion');
+    //     }
+    // }
 
     public function get_area_fltrd($id_empresa) {
         $this->db->select('id_area')->from('users_empresa');

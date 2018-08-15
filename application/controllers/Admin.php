@@ -353,14 +353,18 @@ class Admin extends MY_Controller {
             $temp[] = ($user['last_login']) ? 'SI' : 'NO';
             foreach ($CCursos as $curso) {
                 if ($user['c' . $curso->id] === 0) {
-                    $temp[] = '0';
-                    $temp[] = '0';
+                    $temp[] = '';
+                    $temp[] = '';
+                    $temp[] = '';
                 } elseif ($user['c' . $curso->id]) {
                     $temp[] = $user['c' . $curso->id];
                     $temp[] = $user['calificacion' . $curso->id];
+                    $temp[] = date('d-m-Y', $user['fecha' . $curso->id]);
+
                 } else {
                     $temp[] = '';
-                    $temp[] = '0';
+                    $temp[] = '';
+                    $temp[] = '';
                 }
             }
             $temp[] = '' . $user['total'];
@@ -380,12 +384,15 @@ class Admin extends MY_Controller {
         $this->excel->getActiveSheet()->setCellValue('K1', 'Datos autorizados');
         $c = 10;
         $x = 0;
+        $d = 0;
         foreach ($CCursos as $curso) {
             $c++;
             $x = $c + 1;
+            $d = $c + 2;
             $this->excel->getActiveSheet()->setCellValueByColumnAndRow($c, 1, $curso->nombre);
             $this->excel->getActiveSheet()->setCellValueByColumnAndRow($x, 1, 'Calificación ' . $curso->descrip);
-            $c = $c + 1;
+            $this->excel->getActiveSheet()->setCellValueByColumnAndRow($d, 1, 'fecha ' . $curso->descrip);
+            $c = $c + 2;
         }
         $this->excel->getActiveSheet()->setCellValueByColumnAndRow($c + 1, 1, 'Total');
         $lCol = PHPExcel_Cell::stringFromColumnIndex($c + 1);
@@ -660,14 +667,27 @@ class Admin extends MY_Controller {
             $this->data['niv_extra'] = array('id' => 'nivel');
         }elseif ($param == 'calificacion') {
             $url = 'calificacion';
-            if ($sendID) {
-                $this->data['areas'] = array_column($this->base_model->get_areas_emp($empresas->row()->id)->result_array(), 'nombre');
-            } else {
-                $this->data['areas'] = array_column($this->base_model->get_areas()->result_array(), 'nombre');
-            }
-            $this->data['niv_data'] = $this->rel_array($this->base_model->get_cursos()->result(), true);
-            $this->data['niv_value'] = 1;
-            $this->data['niv_extra'] = array('id' => 'nivel'); 
+
+            $this->data['emp_data'] = $this->rel_array($empresas->result(), '- TODAS LAS EMPRESAS -');
+            $this->data['emp_value'] = 0;
+            $this->data['emp_extra'] = array('id' => 'empresa');
+
+            $this->data['are_data'] = $this->rel_array($this->base_model->get_areas()->result(), '- TODAS LAS ÁREAS -');
+            $this->data['are_value'] = 0;
+            $this->data['are_extra'] = array('id' => 'area');
+
+            $this->data['dep_data'] = $this->rel_array($this->base_model->get_departamentos()->result(), '- TODOS LOS DEPARTAMENTOS -');
+            $this->data['dep_value'] = 0;
+            $this->data['dep_extra'] = array('id' => 'departamento');
+
+            $this->data['niv_data'] = $this->rel_array($this->base_model->get_cursos()->result(), '- TODOS LOS NIVELES -');
+            $this->data['niv_value'] = 0;
+            $this->data['niv_extra'] = array('id' => 'nivel');
+
+            // $this->data['cali_data'] = $this->rel_array($this->base_model->get_cali()->result(), '- TODAS LAS CALIFICACIONES -');
+            // $this->data['cali_value'] = 1;
+            // $this->data['cali_extra'] = array('id' => 'calificacion');
+
         } else {
             $this->data['visitas'] = $this->admin_model->get_visitas(7);
         }

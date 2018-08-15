@@ -536,42 +536,21 @@ class Ajaxadm extends MY_Controller {
 
     /*     * *******************************  estadisticas  ******************************** */
     function est_estatus_cali() {
-        $tipo = (int) $this->input->post('tipo');
-        if ($tipo == 0) {
-            echo 'manakax';
-            return false;
-        }
-        $nivel = (int) $this->input->post('nivel');
-
-        if ($this->has_access('adm03')) {
-            $areas = $this->base_model->get_areas();
+        if ($this->session->user_id) {
+            $empresa = (int) $this->input->post('empresa');
+            $area = (int) $this->input->post('area');
+            $departamento = (int) $this->input->post('departamento');
+            $nivel = (int) $this->input->post('nivel');
+            $id_calificacion = (int) $this->input->post('calificacion');
+            $numPlayers1 = $this->ajaxadm_model->num_players_cali_1($empresa, $nivel, $area, $departamento); //Usuarios que jugaron
+            $numPlayers2 = $this->ajaxadm_model->num_players_cali_2($empresa, $nivel, $area, $departamento); //Usuarios que jugaron
+            $numPlayers3 = $this->ajaxadm_model->num_players_cali_3($empresa, $nivel, $area, $departamento); //Usuarios que jugaron
+            $numPlayers4 = $this->ajaxadm_model->num_players_cali_4($empresa, $nivel, $area, $departamento); //Usuarios que jugaron
+            $numPlayers5 = $this->ajaxadm_model->num_players_cali_5($empresa, $nivel, $area, $departamento); //Usuarios que jugaron
+            echo json_encode([$numPlayers1,$numPlayers2,$numPlayers3,$numPlayers4,$numPlayers5]);
         } else {
-            $empresa = $this->base_model->get_cali($this->session->user_id)->row();
-            $areas = $this->base_model->get_areas_emp($empresa->id);
+            echo 'manakax';
         }
-        $resultado = [];
-        foreach ($areas->result() as $itm) {
-            $numPlayers = $this->ajaxadm_model->cali_est(false, $nivel, $itm->id, false); //Usuarios que jugaron
-            if ($tipo == 1) {
-                $item = $numPlayers;
-            } else if ($tipo == 2) {
-                if ($numPlayers > 0) {
-                    $numUsers = $this->ajaxadm_model->num_users_est(false, $itm->id, false); //Numero total de usuarios
-                    $item = 100 * round($numPlayers / $numUsers, 4);
-                } else {
-                    $item = 0;
-                }
-            } else if ($tipo == 3) {
-                if ($numPlayers > 0) {
-                    $puntaje = $this->ajaxadm_model->sum_puntos_est($itm->id, $nivel); //Puntaje total obtenido
-                    $item = round($puntaje / $numPlayers, 1);
-                } else {
-                    $item = 0;
-                }
-            }
-            $resultado[] = $item;
-        }
-        echo json_encode($resultado);
     }
 
     function est_estatus() {

@@ -16,40 +16,39 @@
         <script src="<?php echo base_url($own_dir . '/js/Chart.bundle.min.js'); ?>"></script>
         <script type="text/javascript">
             var bdir = '<?php echo base_url(); ?>';
-            var labels = <?php echo "['" . implode("','", $areas) . "']"; ?>;
         </script>
         <script src="<?php echo base_url($own_dir . '/js/estadisticas-calificacion.js'); ?>"></script>
     </head>
     <body style="zoom:1;">
         <div id="fullcont" class="clearfix">
             <?php echo $admin_menu; ?>
-            <section id="estad-estatus" class="container">
+            <section id="estad-avance" class="container">
                 <div class="row">
                     <?php echo $estadisticas_menu; ?>
-                    <h2>Cuadro de estatus</h2>
+                    <h2>Cuadro de avance detallado</h2>
                     <br><br>
-                    <div id="cont-tipo-estadistica">
-                        <div id="tipo-estadistica-1" class="tipo-estadistica">Cantidad de participación</div>
-                        <div id="tipo-estadistica-2" class="tipo-estadistica">Porcentaje de participación</div>
-                        <div id="tipo-estadistica-3" class="tipo-estadistica">Promedio de puntaje</div>
-                    </div>
-                    <br><br><br>
                     <div id="cont-select">
-                        <div>
-                            <label for="nivel">Nivel: </label> 
-                            <?php echo form_dropdown('nivel', $niv_data, $niv_value, $niv_extra); ?>
-                        </div>
+                        <?php echo form_dropdown('empresa', $emp_data, $emp_value, $emp_extra); ?>
+                        <?php echo form_dropdown('area', $are_data, $are_value, $are_extra); ?>
+                        <?php echo form_dropdown('departamento', $dep_data, $dep_value, $dep_extra); ?>
+                        <?php echo form_dropdown('nivel', $niv_data, $niv_value, $niv_extra); ?>
+                        <!-- <?php echo form_dropdown('calificacion', $cali_data, $cali_value, $cali_extra); ?> -->
                     </div>
                     <br>
-                    <div class="perc-txt">
-                        <div id="perc-total" class="perc-txt"></div><br>
-                        <div id="perc-fin" class="perc-txt"></div><br>
-                        <div id="perc-falta" class="perc-txt"></div><br>
-                        <?php echo anchor('admin/reporte_est', 'Descargar reporte de participación', array('id' => 'rep-est', 'target' => '_blank')); ?>
-                    </div>
-                    <div id="canvas-estatus">
-                        <canvas id="promedio" width="400" height="800"></canvas>
-                    </div>
+                    <canvas id="promedio"></canvas>
+                    <br>
+                    <table>
+                        <tr>
+                            <td>Universo de usuarios seleccionado:</td><td id="perc-total"></td>
+                        </tr>
+                        <tr>
+                            <td>Usuarios que participaron:</td><td id="perc-fin"></td>
+                        </tr>
+                        <tr>
+                            <td>Usuarios que falta participar:</td><td id="perc-falta"></td>
+                        </tr>
+                    </table>
+                    <br><br>
                 </div>
             </section>
         </div>
