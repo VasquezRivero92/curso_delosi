@@ -138,23 +138,70 @@
                         <?php echo anchor('mapa', '&nbsp;', array('id' => 'btnContinuar')); ?>
                     </div>
                     <div id="resumenOportunidad"></div>
-                    <div id="wrapper" class="formulario">
-                    <form id="cali" action="" method="post" target="request">
-                    <p class="clasificacion">
-                    <input id="radio1" type="radio" name="calificacion" value="5">
-                    <label for="radio1">★</label>
-                    <input id="radio2" type="radio" name="calificacion" value="4">
-                    <label for="radio2">★</label>
-                    <input id="radio3" type="radio" name="calificacion" value="3">
-                    <label for="radio3">★</label>
-                    <input id="radio4" type="radio" name="calificacion" value="2">
-                    <label for="radio4">★</label>
-                    <input id="radio5" type="radio" name="calificacion" value="1">
-                    <label for="radio5">★</label>
-                    </p>
-                    <p><input type="submit" value="submit" name="submit" class="aceptar"></p>
-                    </form>
-                </div>
+                    <!--  -->
+                    <div id="calificacion" class="formulario">
+                        <div id="inst_1" class="instr">
+                            <div class="instA1"></div>
+                            <div id="nextInt_1" class="btnNX"></div>
+                        </div>
+                        <div id="inst_2" class="instr">
+                            <div class="sintruct_ask">Tras terminar este curso, siento que he aprendido algo nuevo respecto al  tema desarrollado</div>
+                            <div id="calfA_1" class="A_1 btn_ar btn_CAL_A"></div>
+                            <div id="calfA_2" class="A_2 btn_ar btn_CAL_A"></div>
+                            <div id="calfA_3" class="A_3 btn_ar btn_CAL_A"></div>
+                            <div id="calfA_4" class="A_4 btn_ar btn_CAL_A"></div>
+                            <div id="calfA_5" class="A_5 btn_ar btn_CAL_A"></div>
+                        </div>
+                        <div id="inst_3" class="instr">
+                            <div class="sintruct_ask">El curso ha aumentado mi interés sobre la prevención de riesgos laborales.</div>
+                            <div id="calfB_1" class="A_1 btn_ar btn_CAL_B"></div>
+                            <div id="calfB_2" class="A_2 btn_ar btn_CAL_B"></div>
+                            <div id="calfB_3" class="A_3 btn_ar btn_CAL_B"></div>
+                            <div id="calfB_4" class="A_4 btn_ar btn_CAL_B"></div>
+                            <div id="calfB_5" class="A_5 btn_ar btn_CAL_B"></div>
+                        </div>
+                        <div id="inst_4" class="instr">
+                            <div class="sintruct_ask">En general, la dinámica del curso y web ha sido sencilla.</div>
+                            <div id="calfC_1" class="A_1 btn_ar btn_CAL_C"></div>
+                            <div id="calfC_2" class="A_2 btn_ar btn_CAL_C"></div>
+                            <div id="calfC_3" class="A_3 btn_ar btn_CAL_C"></div>
+                            <div id="calfC_4" class="A_4 btn_ar btn_CAL_C"></div>
+                            <div id="calfC_5" class="A_5 btn_ar btn_CAL_C"></div>
+                        </div>
+                        <div id="inst_5" class="instr">
+                            <div class="sintruct_ask">Recomendarías a tus compañeros ingresar a los cursos.</div>
+                            <div id="calfD_1" class="A_1 btn_ar btn_CAL_D"></div>
+                            <div id="calfD_2" class="A_2 btn_ar btn_CAL_D"></div>
+                            <div id="calfD_3" class="A_3 btn_ar btn_CAL_D"></div>
+                            <div id="calfD_4" class="A_4 btn_ar btn_CAL_D"></div>
+                            <div id="calfD_5" class="A_5 btn_ar btn_CAL_D"></div>
+                        </div>
+                        <div id="inst_6" class="instr">
+                            <div class="sintruct_ask">En general, los cursos cubren tus expectativas.</div>
+                            <div id="calfE_1" class="A_1 btn_ar btn_CAL_E"></div>
+                            <div id="calfE_2" class="A_2 btn_ar btn_CAL_E"></div>
+                            <div id="calfE_3" class="A_3 btn_ar btn_CAL_E"></div>
+                            <div id="calfE_4" class="A_4 btn_ar btn_CAL_E"></div>
+                            <div id="calfE_5" class="A_5 btn_ar btn_CAL_E"></div>
+                            <!-- <div id="enviar_calif"></div> -->
+                        </div>
+                        <!-- <form id="cali" action="" method="post" target="request">
+                            <p class="clasificacion">
+                            <input id="radio1" type="radio" name="calificacion" value="5">
+                            <label for="radio1">★</label>
+                            <input id="radio2" type="radio" name="calificacion" value="4">
+                            <label for="radio2">★</label>
+                            <input id="radio3" type="radio" name="calificacion" value="3">
+                            <label for="radio3">★</label>
+                            <input id="radio4" type="radio" name="calificacion" value="2">
+                            <label for="radio4">★</label>
+                            <input id="radio5" type="radio" name="calificacion" value="1">
+                            <label for="radio5">★</label>
+                            </p>
+                            <p><input type="submit" value="submit" name="submit" class="aceptar"></p>
+                        </form> -->
+                    </div>
+                    <!--  -->
                 </div>
 
             </div>

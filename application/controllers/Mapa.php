@@ -132,7 +132,7 @@ class Mapa extends Nivel_Controller {
 
     protected function checkCertificado_pausas() {
         
-            $resul = $this->base_model->get_puntaje($this->session->user_id, 9);
+            $resul = $this->base_model->get_puntaje($this->session->user_id, 10);
             if (!$resul || !$resul->intentos || $resul->puntaje < 70) {
                 return false;
             }
@@ -142,7 +142,7 @@ class Mapa extends Nivel_Controller {
 
     protected function checkCertificado_emergencias() {
         
-            $resul = $this->base_model->get_puntaje($this->session->user_id, 10);
+            $resul = $this->base_model->get_puntaje($this->session->user_id, 9);
             if (!$resul || !$resul->intentos || $resul->puntaje < 70) {
                 return false;
             }

@@ -1,4 +1,4 @@
-/*******************************************************************************/
+/******************************************************************************/
 var pausect = 0;
 // numero de juego actual
 var $JAct = 0;
@@ -24,6 +24,7 @@ var $ValueEnd = 0;
 var $pasar_betwen = false;
 var $Val_betwen = 0;
 var IntentPT = 0;
+var calif1, calif2, calif3, calif4, calif5, CalifTot;
 // intervalo del hit(momentaneo)
 //var $hitInterval = 0;
 //var $hitStartTime = 0;
@@ -92,7 +93,7 @@ var $scaleActual = 1;
 $.fn.reverse = [].reverse;
 
 $(function() {
-    $(".aceptar").click(function() {
+    $(".enviar_calif").click(function() {
       // validate and process form here
         var x = $("input[type=radio]:checked").val();
         var data = {calificacion: x};
@@ -137,6 +138,63 @@ function initSonidos() {
 }
 
 function initBotones() {
+
+    $('#nextInt_1').click(function () {
+        playSound(window.audioCatch);
+        $('.instr').stop().fadeOut(100);
+        $('#inst_2').stop().fadeIn(100);
+    });
+    $('.btn_CAL_A').click(function () {
+        playSound(window.audioCatch);
+        var id = String($(this).attr('id').split('_')[1], 10);
+        $('.instr').stop().fadeOut(100);
+        $('#inst_3').stop().fadeIn(100);
+        calif1 = id;
+        console.log(calif1);
+    });
+    $('.btn_CAL_B').click(function () {
+        playSound(window.audioCatch);
+        var id = String($(this).attr('id').split('_')[1], 10);
+        $('.instr').stop().fadeOut(100);
+        $('#inst_4').stop().fadeIn(100);
+        calif2 = id;
+        console.log(calif2);
+    });
+    $('.btn_CAL_C').click(function () {
+        playSound(window.audioCatch);
+        var id = String($(this).attr('id').split('_')[1], 10);
+        $('.instr').stop().fadeOut(100);
+        $('#inst_5').stop().fadeIn(100);
+        calif3 = id;
+        console.log(calif3);
+    });
+    $('.btn_CAL_D').click(function () {
+        playSound(window.audioCatch);
+        var id = String($(this).attr('id').split('_')[1], 10);
+        $('.instr').stop().fadeOut(100);
+        $('#inst_6').stop().fadeIn(100);
+        calif4 = id;
+        console.log(calif4);
+    });
+    $('.btn_CAL_E').click(function () {
+        playSound(window.audioCatch);
+        var id = String($(this).attr('id').split('_')[1], 10);
+        $('.instr').stop().fadeOut(100);
+        $('#calificacion').stop().fadeOut(1000);
+        calif5 = id;
+         console.log(calif5);
+        CalifTot = String(calif1 + calif2 + calif3 + calif4 + calif5);
+// convertir el concatenado en valor numerico
+        var x = parseInt(CalifTot);
+        console.log(CalifTot);
+        var data = {calificacion: x};
+        $.post(bdir + 'ajax/set_calificacion', data).done(function (data) {
+        console.log("resultado: " + data);
+        });
+    });
+
+
+
     $('.btnPrev').click(function () {
         playSound(window.audioCatch);
         var id = parseInt($(this).attr('id').split('_')[1], 10);
@@ -264,7 +322,7 @@ function initBotones() {
             $ActPwrUp = 0;
 
             
-            $('.caratula, .game, #capaResumen').stop().fadeOut(500);
+            $('.caratula, .game, #capaResumen, #pregWindow').stop().fadeOut(500);
             $('#reset_time').stop().fadeOut(500);
             $("#infoWindow").fadeOut(300);
             volverintentar();
@@ -477,4 +535,4 @@ $('#btnContinuar').click(function () {
     console.log("texto");
     });
 
-/*******************************************************************************/
+/******************************************************************************/

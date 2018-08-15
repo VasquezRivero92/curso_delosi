@@ -213,6 +213,9 @@ body{
 .avPM #i4avatar{ background-image: url(../images/i3avPM.png); }
 .avRF #i4avatar{ background-image: url(../images/i3avRF.png); }
 .avRM #i4avatar{ background-image: url(../images/i3avRM.png); }
+.avDF #i4avatar{ background-image: url(../images/i3avRF.png); }
+.avDM #i4avatar{ background-image: url(../images/i3avRM.png); }
+
 .i4txt{
     position: absolute;
     width: 160px;

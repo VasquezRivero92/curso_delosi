@@ -8,7 +8,7 @@ class MYPDF extends TCPDF {
         $bMargin = $this->getBreakMargin();
         $auto_page_break = $this->AutoPageBreak;
         $this->SetAutoPageBreak(false, 0);
-        $this->Image(base_url('/assets/main/images/BGCertificadoDRIVERS.png'), 0, 0, 297, 210, '', '', '', false, 300, '', false, false, 0);
+        $this->Image(base_url('/assets/main/images/BGCertificadoPAUSAS.png'), 0, 0, 297, 210, '', '', '', false, 300, '', false, false, 0);
         $this->SetAutoPageBreak($auto_page_break, $bMargin);
         $this->setPageMark();
     }
@@ -29,7 +29,7 @@ $html = '<div><br><br><br>'
         . '<div style="font-size:48px; font-weight:bold; color:#0075bc;">CONSTANCIA</div>'
         . '<div>LA EMPRESA <b style="font-weight:bold;">' . $empresa . '</b> DEJA CONSTANCIA QUE:</div>'
         . '<div style="font-weight:bold;">' . $nombre . '</div>'
-        . '<div>HA COMPLETADO EL CURSO DE "RAPIDOS Y SEGUROS", <br>REALIZADO DURANTE EL AÑO 2018';
+        . '<div>HA COMPLETADO EL CURSO DE "PAUSAS ACTIVAS", <br>REALIZADO DURANTE EL AÑO 2018';
 $obj_pdf->writeHTML($html, true, false, true, false, 'C');
 //En esta parte, la variable final cambia segun:
 //I para verlo online
