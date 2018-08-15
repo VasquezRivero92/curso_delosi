@@ -74,7 +74,7 @@ $(document).ready(function (e) {
                 } else {
                     console.log('OK:');
                     $('.instrucciones').stop().delay(1300).fadeOut(100);
-                    $('#instruccion_2').stop().delay(1000).fadeIn(500);
+                    $('#instruccion_3').stop().delay(1000).fadeIn(500);
                 }
             }).fail(function (jqXHR, textStatus, errorThrown) {
                 console.log('Fail:');
