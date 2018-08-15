@@ -136,6 +136,22 @@
                         <?php echo anchor('nivel2/resultados', '&nbsp;', array('id' => 'btnContinuar')); ?><!--<a id="btnContinuar" href="#"></a>-->
                     </div>
                     <div id="resumenOportunidad"></div>
+                    <!--  -->
+                    <div id="calificacion" class="formulario">
+                        <div id="inst_1" class="instr">
+                            <div class="instA1"></div>
+                            <div id="nextInt_1" class="btnNX"></div>
+                        </div>
+                        <div id="inst_2" class="instr">
+                            <div class="sintruct_ask">Tras terminar este curso, siento que he aprendido algo nuevo respecto al tema desarrollado</div>
+                            <div id="calfA_1" class="A_1 btn_ar btn_CAL_A"></div>
+                            <div id="calfA_2" class="A_2 btn_ar btn_CAL_A"></div>
+                            <div id="calfA_3" class="A_3 btn_ar btn_CAL_A"></div>
+                            <div id="calfA_4" class="A_4 btn_ar btn_CAL_A"></div>
+                            <div id="calfA_5" class="A_5 btn_ar btn_CAL_A"></div>
+                        </div>
+                    </div>
+                    <!--  -->
                 </div>
             </div>
             <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->

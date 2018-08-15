@@ -260,7 +260,7 @@
                 <div id="popAct_10" class="caratula"> 
                     <div class="auxilio"><p class="textCent"> </p></div>
                     <?php 
-                        echo anchor('auxilio', ' ', array('id' => 'preg_10_1','class' => 'CV_btn1 disable')); 
+                        echo anchor('Prevencion', ' ', array('id' => 'preg_10_1','class' => 'CV_btn1 disable')); 
                         echo anchor('mapa/certificado_emergencias', '&nbsp;', array('id' => 'i4Certificado', 'class' => $certificado_emergencias, 'target' => '_blank'));?>                    
                     <div id="preg_10_0" class="CV_btn2 pregOpc"> </div>
                 </div>

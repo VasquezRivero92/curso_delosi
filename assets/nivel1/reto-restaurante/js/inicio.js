@@ -113,6 +113,27 @@ function initSonidos() {
     });
 }
 function initBotones() {
+
+    $('#nextInt_1').click(function () {
+        playSound(window.audioCatch);
+        $('.instr').stop().fadeOut(100);
+        $('#inst_2').stop().fadeIn(100);
+    });
+    $('.btn_CAL_A').click(function () {
+        playSound(window.audioCatch);
+        var id = String($(this).attr('id').split('_')[1], 10);
+        $('.instr').stop().fadeOut(100);
+        $('#calificacion').stop().fadeOut(1000);
+        calif1 = id;
+        // convertir el concatenado en valor numerico
+        var x = parseInt(calif1);
+        var data = {calificacion: x};
+        $.post(bdir + 'ajax/set_calificacion', data).done(function (data) {
+        console.log("resultado: " + data);
+        });
+    });
+
+
     $('.btnPrev').click(function () {
         playSound(window.audioCatch);
         var id = parseInt($(this).attr('id').split('_')[1], 10);

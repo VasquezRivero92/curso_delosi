@@ -280,3 +280,90 @@ body{
     opacity:0;
 }
 /*******************************************************************************/
+
+
+/*******************************************************************************/
+#calificacion{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 1351px;
+    height: 701px;
+    background: rgba(0,0,0,0.8) url(../images/calificacion/califipop.png) center center no-repeat;
+    z-index: 999;
+    display: block;
+}
+.instr{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 1350px;
+    height: 700px;
+    display: none;
+}
+#inst_1{ display: block; }
+.instA1{
+    position : absolute ;
+  left : 399px;
+  top : 216px;
+    width : 468px;
+    height : 275px;  
+    background: url(../images/calificacion/instruct.png); 
+}
+.btnNX{
+    position: absolute;
+  left : 938px;
+  top : 301px;
+    cursor: pointer;
+    width: 48px;
+    height: 108px; 
+    background: url(../images/calificacion/next.png); 
+}
+.sintruct_ask{
+  position: absolute;
+  left : 437px;
+  top : 228px;
+  width : 455px;
+  height : 138px;
+  font-family : 'Catalogo';
+  font-weight : bold;
+  font-size : 30px;
+  color : #FF3350;
+  text-align: center;
+}
+.btn_ar{ position : absolute ; cursor: pointer; }
+.A_1{
+  left : 428px; top : 394px;
+  width : 91px; height : 84px;
+  background: url(../images/calificacion/1.png) no-repeat; 
+}
+.A_2{
+  left : 506px;
+  top : 394px;
+  width : 110px;
+  height : 85px;
+  background: url(../images/calificacion/2.png) no-repeat; 
+}
+.A_3{
+  left : 603px;
+  top : 394px;
+  width : 110px;
+  height : 84px;
+  background: url(../images/calificacion/3.png) no-repeat; 
+}
+.A_4{
+  left : 696px;
+  top : 394px;
+  width : 110px;
+  height : 84px;
+  background: url(../images/calificacion/4.png) no-repeat; 
+}
+.A_5{
+  left : 793px;
+  top : 394px;
+  width : 110px;
+  height : 84px;
+  background: url(../images/calificacion/5.png) no-repeat; 
+}
+
+
