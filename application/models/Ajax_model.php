@@ -122,7 +122,7 @@ class Ajax_model extends CI_Model {
     }
 
 
-    public function set_calificacion($id_user, $id_curso) {
+    public function rev_calificacion($id_user, $id_curso) {
         $checkInt = $this->checkUserCurso('calificacion', $id_user, $id_curso);
         if ($checkInt) {
             $calificacion = $checkInt->calificacion ? (int) $checkInt->calificacion : 1;
