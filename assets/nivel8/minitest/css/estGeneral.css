@@ -386,7 +386,8 @@ b{ font-weight: bold; }
 #resumenBtns{
     position: absolute;
     width: 350px; height: 44px;
-    left: 743px; top: 410px;;
+    left: 747px;
+    top: 330px;
     text-align: center;
 }
 #resumenBtns *{
@@ -403,7 +404,8 @@ b{ font-weight: bold; }
 #resumenOportunidad{
     position: absolute;
     width: 172px; height: 11px;
-    left: 755px; top: 475px;
+    left: 836px;
+    top: 405px;
     background:url(../images/oportunidad.png) no-repeat 50% 50%;
 }
 /*****************************************  objetos ocultos  *****************************************/

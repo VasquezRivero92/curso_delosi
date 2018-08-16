@@ -67,15 +67,15 @@ body{
   background: url(../images/presentacion/back.svg)  no-repeat center center;
 }
 #welcome_2{
-    font-family:"Bebas";
-  font-size : 17px;
-  line-height : 17.01px;
-  color : #FFFFFF;
-  position : absolute ;
-  left : 479px;
-  top : 322px;
-  width : 362px;
-  height : 220px;
+    font-family: "Catalogo";
+    font-size: 17px;
+    line-height: 19px;
+    color: #FFFFFF;
+    position: absolute;
+    left: 349px;
+    top: 310px;
+    width: 512px;
+    height: 220px;
 }
 #alcalde_2{
   position : absolute ;
@@ -89,10 +89,10 @@ body{
   position : absolute ;
   left : 577px;
   top : 515px;
-  width : 191px;
-  height : 50px;
+  width : 204px;
+  height : 51px;
   cursor: pointer;
-   background: url(../images/presentacion/btn.svg)  no-repeat center center; 
+   background: url(../images/presentacion/btn_continuar.png)  no-repeat center center; 
 }
 
 #instrucciones_1{ background: url(../images/presentacion/welcome.png)  no-repeat center center;}
@@ -134,7 +134,7 @@ body{
     position:absolute;
     width:3403px; height:2293px;
     left:-1036px; top:0px;
-    background:url(../images/mapa/city.svg) no-repeat;
+    background:url(../images/mapa/city.jpg) no-repeat;
     overflow:hidden;  
     -webkit-transition: all 5s ease-in-out;
     -moz-transition: all 5s ease-in-out;
