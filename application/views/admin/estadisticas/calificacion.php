@@ -35,7 +35,7 @@
                         <!-- <?php echo form_dropdown('calificacion', $cali_data, $cali_value, $cali_extra); ?> -->
                     </div>
                     <br>
-                    <canvas id="promedio"></canvas>
+                    <!-- <canvas id="promedio"></canvas>
                     <br>
                     <table>
                         <tr>
@@ -48,7 +48,7 @@
                             <td>Usuarios que falta participar:</td><td id="perc-falta"></td>
                         </tr>
                     </table>
-                    <br><br>
+                    <br><br> -->
                 </div>
             </section>
         </div>
