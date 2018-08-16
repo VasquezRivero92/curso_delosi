@@ -225,10 +225,19 @@
                         echo anchor('mapa/certificado_prevencion', '&nbsp;', array('id' => 'i4Certificado_p', 'class' => $certificado_prevencion, 'target' => '_blank'));
                         for ($i = 4; $i > 0; $i--) {
                             $clases = 'i4Nivel disable';
+                            // echo $cursocheck;                            
                             if ($maxnivel >= $i) {
                                 foreach ($niveles as $niv) {
                                     if ($niv->id == $i && $niv->estado == 1) {
-                                        $clases = 'i4Nivel';
+                                        if($i == 1){
+                                            $clases = 'i4Nivel'. $cursocheck1 . '';
+                                        }else if($i == 2){
+                                            $clases = 'i4Nivel'. $cursocheck2 . '';
+                                        }else if($i == 3){
+                                            $clases = 'i4Nivel'. $cursocheck3 . '';
+                                        }else{
+                                            $clases = 'i4Nivel'. $cursocheck4 . '';
+                                        }                                        
                                     }
                                 }
                             }
