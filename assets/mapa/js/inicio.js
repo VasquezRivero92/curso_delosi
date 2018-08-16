@@ -103,20 +103,14 @@ function initBotones() {
 
         setTimeout(function () {
             $( ".mapa_anim" ).addClass('mapa_animation');
+            setTimeout(function () { $J[1].showJuego(); }, 4000);
             setTimeout(function () {
                 $('.instrucciones').stop().fadeOut(1000);
-                $J[1].showJuego();
                 $('.caratula').stop().fadeOut(10);
                 $( ".mapa_anim" ).removeClass('mapa_animation');
                 $(".mapa_anim").delay(2500).fadeOut(1500);
             }, 5000);
         }, 1000);
-
-        // $( ".mapa_anim" ).delay(1000).stop().animate({
-        //     top: "-497px",
-        // }, 5000, function() { });
-
-
     });
 
     function InitMap() {
@@ -181,7 +175,6 @@ function initBotones() {
         }
     });
 
-
     $('#i4Buzon').click(function () {
         playSound(window.playBTN);
         $('#pop2txt1').show().html(pop2txt1);
@@ -245,7 +238,6 @@ function initJuegos() {
     });
     $drivers = parseInt($('body').data('drivers'), 10);
     $pared = $('body').data('pared');   
-    //console.log($drivers); 
 }
 function showInicio() {
     playBGMusic(window.BGIntro);
@@ -254,7 +246,7 @@ function showInicio() {
     $('.instrucciones').stop().hide();
 
     var fw = parseInt($('body').data('firstwindow'), 10);
-    //$('.instrucciones').stop().hide();
+
     playBGMusic(window.menuBG);    
     if (fw == 4) {
        $J[1].showJuego();
@@ -266,13 +258,6 @@ function showInicio() {
         playTexto(window.txti2);
     }, 3000);
     }
-
-    // $('#instrucciones_1').fadeIn(1000);
-    // setTimeout(function () {
-    //     $(".instrucciones").stop().delay(300).fadeOut(100);
-    //     $("#instrucciones_2").stop().fadeIn(500);
-    //     playTexto(window.txti2);
-    // }, 3000);
 
     if($pared == 1){
         //console.log("abierto");
