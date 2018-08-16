@@ -44,8 +44,26 @@ class Mapa extends Nivel_Controller {
             $resul = $this->base_model->get_puntaje($this->session->user_id, $i);
             if (!$resul || !$resul->intentos) {
                 $this->data['pared'] = 0;
+                if($i == 1){
+                    $this->data['cursocheck1'] =  '';
+                }else if($i == 2){
+                    $this->data['cursocheck2'] =  '';
+                }else if($i == 3){
+                    $this->data['cursocheck3'] =  '';
+                }else{
+                    $this->data['cursocheck4'] =  '';
+                }                           
             }else{
                 $this->data['pared'] = 1;
+                if($i == 1){
+                    $this->data['cursocheck1'] =  ' anim1';
+                }else if($i == 2){
+                    $this->data['cursocheck2'] =  ' anim2';
+                }else if($i == 3){
+                    $this->data['cursocheck3'] =  ' anim3';
+                }else{
+                    $this->data['cursocheck4'] =  ' 0anim4';
+                }              
             }
         }
         
