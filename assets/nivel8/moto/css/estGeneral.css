@@ -552,7 +552,7 @@ position: absolute;
     height: 701px;
     background: rgba(0,0,0,0.8) url(../images/calificacion/califipop.png) center center no-repeat;
     z-index: 999;
-    display: block;
+    display: none;
 }
 .instr{
     position: absolute;
