@@ -271,6 +271,7 @@ class Ajax extends MY_Controller {
     }
 
     function init_calificacion() {
+        //cuando abres el curso, crea el registro o aumenta las vistas
         if ($this->session->user_id && $this->session->curso) {
             $user_id = (int) $this->session->user_id;
             $id_curso = (int) $this->session->curso;

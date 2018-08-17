@@ -40,9 +40,9 @@
             <div id="instrucciones_1" class="instrucciones"></div>
             <div id="instrucciones_2" class="instrucciones">
                 <!-- <div id="bg_2"></div> -->
-                <div id="welcome_2">Hola soy Zoila Prevención, te doy la bienvenida a Prevencity, nuestra ciudad segura donde aprenderás como prevenir accidentes de trabajo, estaré acompañándote durante tu recorrido en la ciudad dándote algunos TIPS!.
+                <div id="welcome_2">Hola soy Zoila Prevención, te doy la bienvenida a Prevencity, nuestra ciudad segura donde aprenderás como prevenir accidentes de trabajo, estaré acompañándote durante tu recorrido en la ciudad dándote algunos TIPS!.<br>
 
-En Prevencity encontrarás diversos lugares donde podrás ingresar, aprender y al finalizar cada curso o misión pondrás a prueba todo lo aprendido pasando un reto.
+En Prevencity encontrarás diversos lugares donde podrás ingresar, aprender y al finalizar cada curso o misión pondrás a prueba todo lo aprendido pasando un reto.<br>
 
 No te pierdas ninguno de las misiones, ya que muchas de ellos podrán llevarte a formar parte del <strong>Programa de Certificación de Prevención de riesgos de acuerdo a tu puesto de trabajo.</strong>
 </div>
@@ -178,7 +178,7 @@ No te pierdas ninguno de las misiones, ya que muchas de ellos podrán llevarte a
                 <div id="botBar">
                     <div id="i4RazonSocial" class="i4txt"><?php echo $empresa; ?></div>
                     <div id="i4Puntaje" class="i4txt"><?php echo $user_stats['puntaje']; ?></div>
-                    <div id="i4Estrellas" class="i4txt"><?php echo $user_stats['estrellas']; ?></div>                    
+                    <!-- <div id="i4Estrellas" class="i4txt"><?php echo $user_stats['estrellas']; ?></div> -->                    
                 </div>
                 <div id="centerBar"></div>
             </div>
@@ -224,7 +224,11 @@ No te pierdas ninguno de las misiones, ya que muchas de ellos podrán llevarte a
                 </div>
 
                 <div id="popAct_3" class="caratula"> 
-                    <div class="prevencion"><p class="textCent"> </p></div>                    
+                    <div class="prevencion"><p class="textCent"> </p></div> 
+                    <div class="<?php echo $cursocheck1?>"></div>
+                    <div class="<?php echo $cursocheck2?>"></div>
+                    <div class="<?php echo $cursocheck3?>"></div>
+                    <div class="<?php echo $cursocheck4?>"></div>                   
                     <?php
                         // echo anchor('cuestionario', '&nbsp;', array('id' => 'i4Cuestionario'));
                         echo anchor('mapa/certificado_prevencion', '&nbsp;', array('id' => 'i4Certificado_p', 'class' => $certificado_prevencion, 'target' => '_blank'));
@@ -233,22 +237,16 @@ No te pierdas ninguno de las misiones, ya que muchas de ellos podrán llevarte a
                             // echo $cursocheck;                            
                             if ($maxnivel >= $i) {
                                 foreach ($niveles as $niv) {
-                                    if ($niv->id == $i && $niv->estado == 1) {
-                                        if($i == 1){
-                                            $clases = 'i4Nivel'. $cursocheck1 . '';
-                                        }else if($i == 2){
-                                            $clases = 'i4Nivel'. $cursocheck2 . '';
-                                        }else if($i == 3){
-                                            $clases = 'i4Nivel'. $cursocheck3 . '';
-                                        }else{
-                                            $clases = 'i4Nivel'. $cursocheck4 . '';
-                                        }                                        
+                                    if ($niv->id == $i && $niv->estado == 1){ 
+                                        $clases = 'i4Nivel';
                                     }
                                 }
                             }
                             echo anchor('nivel' . $i, '&nbsp;', array('id' => 'i4Nivel_' . $i, 'class' => $clases));
                         }
                     ?>
+                    
+
                     <div id="preg_3_0" class="CV_btn2 CV_btn_3 pregOpc"> </div>
                 </div>
             <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->

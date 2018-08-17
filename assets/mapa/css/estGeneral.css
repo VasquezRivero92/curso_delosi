@@ -73,7 +73,8 @@ body{
     color: #FFFFFF;
     position: absolute;
     left: 349px;
-    top: 310px;
+    top: 297px;
+    text-align: center;
     width: 512px;
     height: 220px;
 }
