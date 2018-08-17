@@ -340,26 +340,26 @@ position: absolute;
     cursor: pointer;
 }
 /*******************************************************************************/
-#pregMal{ background-image: url(../images/game/BGerror.png); transform: scale(0.8); top: 70px;}
+#pregMal{ background-image: url(../images/game/BGerror.png);  top: 70px;}
 #btnReintento{
     position: absolute;
     width: 167px; height: 41px;
-    top: 557px;
+    top: 527px;
     left: 596px;
     background: url(../images/btnReintento.png) no-repeat 50% 50%;
     cursor: pointer;
 }
 #bad_A1{
     position: absolute;
-    width: 298px;
+    width: 261px;
     height: 60px;
-    left: 533px;
+    left: 552px;
     top: 290px;
     font-family: 'CatalogoSG';
     font-size: 16px;
     line-height: 60px;
     text-align: center;
-    color: #333745;
+    color: #ffffff;
 }
 #bad_A1 span{
         width: 260px;
@@ -369,15 +369,15 @@ position: absolute;
 }
 #bad_A2{
     position: absolute;
-    width: 383px;
+    width: 320px;
     height: 136px;
-    left: 490px;
-    top: 401px;
+    left: 521px;
+    top: 383px;
     font-family: 'CatalogoSG';
     font-size: 16px;
     line-height: 136px;
     text-align: center;
-    color: #333745;
+    color: #ffffff;
 }
 #bad_A2 span{
     display: inline-block;

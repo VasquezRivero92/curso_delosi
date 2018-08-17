@@ -186,7 +186,7 @@
                         </div>
                         <div class="item">                            
                             <img id="s3i6" src="<?php echo base_url($own_dir . '/images/slider/s3i6.png'); ?>" alt=""/>
-                            <div id="s3t6" class="stxt"><span>Siempre debes de comunicar tus intensiones mediante<br>el uso de las luces direccionales y la luz del freno.</span></div>
+                            <div id="s3t6" class="stxt"><span>No subir a las aceras y respetar la via peatonal.</span></div>
                         </div>
                         <div class="item">                            
                             <img id="s3i7" src="<?php echo base_url($own_dir . '/images/slider/s3i7.png'); ?>" alt=""/>

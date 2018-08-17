@@ -76,6 +76,40 @@ var $pID;
 var ptsWinJuego = 0;
 var puntajeAcierto= 10;
 var $rps_correcta=0;
+
+var $pg = [null,
+    'El driver se encuentra visiblemente con una molestia. ¿Que deberia hacer?',
+    'El driver NO esta vistiendo la casaca negra distintiva  ¿Que deberia hacer?',
+    'El faro frontal de la motocicleta esta roto  ¿Que se deberia hacer?',
+    'Al driver le hace falta la revisión tecnica de la moto ¿Que deberia hacer?',
+    'El casco del driver esta visiblemente dañado ¿Que se deberia hacer?',
+];
+var $r1 = [null,
+    'No pasa nada, nadie se fija en eso.',
+    'El driver debe estar en condiciones aptas para iniciar su turno. Debe  recuperarse.',
+    'Es una condición común, se puede dejar pasar.',
+];
+var $r2 = [null,
+    'La casaca es parte integral de su uniforme, debe usarla obligatoriamente.',
+    'No pasa nada, nadie se fija en eso.',
+    '¿Quien se fija en la casaca de todos modos? Puede manejar con otra prenda encima.',
+];
+var $r3 = [null,
+    'Una Motocicleta debe estar en optimas condiciones. Debe reemplazar ese faro lo antes posible.',
+    'Es una condición común, se puede dejar pasar. Ademas es turno de día no las necesita.',
+    'La moto funciona igual sin esa luz. Puedes apoyarte en la luz de calle.',
+];
+var $r4 = [null,
+    'No pasa nada, nadie se fija en eso. Ademas no hay tantos controles en su ruta.',
+    'Que se consiga la revisión tecnica de la  moto de alguien más y que incie su turno.',
+    'Un driver debe contar con toda su documentación antes de iniciar su turno,  ¡Siempre!',
+];
+var $r5 = [null,
+    'Es una cosa menor, el visor no protege nada igual',
+    'El casco debera ser reemplazado de inmediato.',
+    'Que conduzca sin casco hasta que repare el que tiene.',
+];
+
 //variables de control del juego
 var $J = {
     numJ: 0,
@@ -150,6 +184,7 @@ function initBotones() {
     $('.punt_anim').click(function(event) {
         playSound(window.audioCrash);
         $n_pregunta = $(this).parent().parent().attr("id");
+
 
          $pID = parseInt($(this).attr('id').split('_')[1], 10);
 
@@ -231,8 +266,13 @@ function initBotones() {
         $(this).css("pointer-events"," none");
         $sigpregunta++;
         isPaused = true;
-        console.log(checkDiv);
+        var resp1 = parseInt($(this).attr('id').split('_')[1], 10);       
+        var resp2 = parseInt($(this).attr('id').split('_')[2], 10);
+        
+        console.log(resp1);
+        
         var id = parseInt($(this).data('rspt'));
+        var id_correc = parseInt($(this).attr('id').split('_')[1], 10);        
             if(id==1){
                 $r_correcta = true;
                 if($pID == 1){ 
@@ -250,7 +290,25 @@ function initBotones() {
                 }
                 console.log("correcto");
                 $rps_correcta = id;
-            }else{                
+             
+            }else{
+
+                if(resp1 == 1){
+                    $('#preg'+resp1+' span').html($r1[resp2]);
+                    $('#resp'+resp1+' span').html($r1[2]);   
+                }else if(resp1 == 2){
+                    $('#preg'+resp1+' span').html($r2[resp2]);
+                    $('#resp'+resp1+' span').html($r2[1]);   
+                }else if(resp1 == 3){
+                    $('#preg'+resp1+' span').html($r3[resp2]);
+                    $('#resp'+resp1+' span').html($r3[1]);   
+                }else if(resp1 == 4){
+                    $('#preg'+resp1+' span').html($r4[resp2]);
+                    $('#resp'+resp1+' span').html($r4[3]);   
+                }else if(resp1 == 5){
+                    $('#preg'+resp1+' span').html($r5[resp2]);
+                    $('#resp'+resp1+' span').html($r5[2]);   
+                }
                 console.log("incorrecto");
             }            
             if($n_pregunta == "gPreg_1"){
@@ -301,13 +359,17 @@ function initBotones() {
             }           
             }
             if ($rps_correcta == 1){
-                $('.btn_pass').css("background-image", "url("+odir+"/images/BGacierto.png)");  
+                $('.btn_pass').css("background-image", "url("+odir+"/images/BGacierto.png)");
+                $('.texto1,.texto2').css('display', 'none');
+                
             }else{
-                $('.btn_pass').css("background-image", "url("+odir+"/images/BGerror.png)");  
+                $('.btn_pass').css("background-image", "url("+odir+"/images/BGerror.png)");
+                setTimeout(function(){ $('.texto1,.texto2').fadeIn(800); }, );     
             }
             $('.preguntas').fadeOut(1500);
         
             if($sigpregunta == 3){
+
         setTimeout(function(){ $('.btn_pass_sombra').show(); }, 1500);
         setTimeout(function(){ $('.btn_pass').animateCss('bounceIn').show(); }, 1500);
         // $('.btn_pass_sombra').css("display","block");
@@ -318,7 +380,8 @@ function initBotones() {
         $('.btn_pass_sombra').css("display","none");
          $('#CSeg').html("60");
          $rps_correcta = 0;
-        $('.btn_pass').css("background-image", "url("+odir+"/images/BGacierto.png)");  
+        $('.btn_pass').css("background-image", "url("+odir+"/images/BGacierto.png)");
+        $('.texto1,.texto2').css('display', 'none');  
         $J.CTiempo = 60,
         $sigpregunta = 0;
          var id_p = parseInt($(this).attr('id').split('_')[1], 10);
@@ -381,7 +444,7 @@ function showInicio() {
         $(".instrucciones").stop().delay(300).fadeOut(100);
         $("#instrucciones_1_2").stop().fadeIn(500);
         playTexto(window.txti2);
-    }, 4000);    i2btn_1
+    }, 4000);
     $('#i2btn_1').click(function () {
         $('#instrucciones_2').fadeIn(500);
      });
