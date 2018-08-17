@@ -92,16 +92,16 @@ $J[1] = new Lab_Juego();
 var $scaleActual = 1;
 $.fn.reverse = [].reverse;
 
-$(function() {
-    $(".enviar_calif").click(function() {
-      // validate and process form here
-        var x = $("input[type=radio]:checked").val();
-        var data = {calificacion: x};
-        $.post(bdir + 'ajax/set_calificacion', data).done(function (data) {
-        console.log("resultado: " + data);
-        });
-    });
-  });
+// $(function() {
+//     $(".enviar_calif").click(function() {
+//       // validate and process form here
+//         var x = $("input[type=radio]:checked").val();
+//         var data = {calificacion: x};
+//         $.post(bdir + 'ajax/set_calificacion', data).done(function (data) {
+//         console.log("resultado: " + data);
+//         });
+//     });
+//   });
 
 $(document).ready(function (e) {  
       
