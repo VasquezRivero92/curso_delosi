@@ -39,7 +39,7 @@
                 <div id="i1tit_2">PREVENCIÓN</div>
                 <div id="i1tit_3">DE</div>
                 <div id="i1tit_4">CAIDAS</div>
-                <div id="base2"></div>
+                <!-- <div id="base2"></div> -->
             </div>
             <!-- - - - - - - - - - - - - -  Instruccion 2  - - - - - - - - - - - - - -->
             <div id="instruccion_2" class="instrucciones">

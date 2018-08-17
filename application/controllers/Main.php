@@ -28,7 +28,7 @@ class Main extends MY_Controller {
                     redirect('/mapa', 'refresh');
                 }
             } else {
-                $this->data['firstWindow'] = 3;
+                $this->data['firstWindow'] = 4;
             }
             
         } else {

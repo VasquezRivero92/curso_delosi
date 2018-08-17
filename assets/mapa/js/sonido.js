@@ -1,3 +1,29 @@
+
+
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
+
+//if( isMobile.any() ) alert('Mobile');
+//if( isMobile.iOS() ) alert('iOS');
+
 /*******************************************************************************/
 var context;
 var gainNode;
@@ -36,6 +62,7 @@ var audios = [
     ['palta1', bdir + 'assets/sounds/effects/palta1.mp3'],
     ['palta2', bdir + 'assets/sounds/effects/palta2.mp3'],
     ['palta3', bdir + 'assets/sounds/effects/palta3.mp3'],
+    ['piso', bdir + 'assets/sounds/effects/piso.mp3'],
     ['renegando', bdir + 'assets/sounds/effects/renegando.mp3']
 ];
 try {
@@ -75,6 +102,7 @@ function loadSound(obj, url) {
         request.send();
     }
 }
+
 function playSound(buffer) {
     if (webaudio) {
         var source = context.createBufferSource();
@@ -93,11 +121,6 @@ function playBGMusic(buffer) {
         musica.start(0);
     }
 }
-function stopBGMusic() {
-    if (webaudio && musica) {
-        musica.stop(0);
-    }
-}
 function playTexto(buffer) {
     stopTexto();
     if (webaudio) {
@@ -107,11 +130,22 @@ function playTexto(buffer) {
         textoAudio.start(0);
     }
 }
-function stopTexto() {
-    if (webaudio && textoAudio) {
-        textoAudio.stop(0);
+
+if( isMobile.iOS() ) {
+    function stopBGMusic() { console.log('es iOS'); };
+    function stopTexto() { console.log('es iOS'); };
+}else{
+    function stopBGMusic() {
+        if (webaudio && musica) {
+            musica.stop(0);
+        }
     }
-}
+    function stopTexto() {
+        if (webaudio && textoAudio) {
+            textoAudio.stop(0);
+        }
+    }
+};
 
 
 /*! jqueryanimatesprite - v1.3.5 - 2014-10-17

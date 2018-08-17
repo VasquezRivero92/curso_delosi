@@ -72,8 +72,8 @@ body{
     line-height: 19px;
     color: #FFFFFF;
     position: absolute;
-    left: 349px;
-    top: 297px;
+    left: 408px;
+    top: 275px;
     text-align: center;
     width: 512px;
     height: 220px;
@@ -89,7 +89,7 @@ body{
 #btn_cont{
   position : absolute ;
   left : 577px;
-  top : 515px;
+  top : 560px;
   width : 204px;
   height : 51px;
   cursor: pointer;

@@ -107,8 +107,8 @@ function initBotones() {
             setTimeout(function () {
                 $('.instrucciones').stop().fadeOut(1000);
                 $('.caratula').stop().fadeOut(10);
-                $( ".mapa_anim" ).removeClass('mapa_animation');
                 $(".mapa_anim").delay(2500).fadeOut(1500);
+                setTimeout(function () { $( ".mapa_anim" ).removeClass('mapa_animation'); }, 2000);
             }, 5000);
         }, 1000);
     });
@@ -356,15 +356,16 @@ function muestraPregunta() {
     
 }
 function snd_hablar(snd){
+    console.log(snd);
     switch (snd) {
         case 1:
             playSound(window.Hablar2);                      
         break; 
         case 2:
-            playSound(window.Hablar4);                      
+            playSound(window.piso);                      
         break;  
         case 3:
-            playSound(window.Hablar4);                      
+            playSound(window.piso);                      
         break;
         case 13:
             playSound(window.Hablar2);                      
@@ -373,16 +374,16 @@ function snd_hablar(snd){
             playSound(window.Hablar2);                      
         break;        
         case 15:
-            playSound(window.renegando);                      
+            playSound(window.Hablar4);                      
         break;        
         case 16:
-            playSound(window.palta1);                      
+            playSound(window.Hablar4);                      
         break; 
         case 17:
             playSound(window.palta1);                      
         break;               
         default:
-            playSound(window.Hablar3); 
+            playSound(window.piso); 
         break;
     }           
    }
