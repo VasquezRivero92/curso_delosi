@@ -1,9 +1,9 @@
 /*******************************************************************************/
 var barChartData = {
-    labels: ['Calificacion 1', 'Calificacion 2', 'Calificacion 3', 'Calificacion 4', 'Calificacion 5'],
+    labels: ['Calificacion 0', 'Calificacion 1', 'Calificacion 2', 'Calificacion 3', 'Calificacion 4', 'Calificacion 5'],
     datasets: [{
-            backgroundColor: ['rgba(100,250,250,1)', 'rgba(255,0,0,1)','rgba(255,255,0,1)', 'rgba(0,0,102,1)', 'rgba(255,102,255,1)'],
-            data: [0, 0]
+            backgroundColor: ['rgba(102,0,204,1)','rgba(100,250,250,1)', 'rgba(255,0,0,1)','rgba(255,255,0,1)', 'rgba(0,0,102,1)', 'rgba(255,102,255,1)'],
+            data: [0, 0, 0, 0, 0, 0]
         }]
 };
 var xhrCC, xhrCC2;
@@ -94,9 +94,10 @@ function generarGrafico() {
         console.log(data);
         console.log('Get avance OK');
         barChartData.datasets[0].data = data;
+        console.log(barChartData.datasets[0].data);
         window.myBar.update();
         var fin = parseInt(data[0], 10);
-        var falta = parseInt(data[1], 10);
+        var falta = parseInt(data[0], 10);
         var total = fin + falta;
         var pfin = 0;
         if (fin > 0) {
@@ -113,8 +114,8 @@ function generarGrafico() {
     });
 };
 /*******************************************************************************/
-$(document).ready(function () {
-    var ctx = document.getElementById('promedio').getContext('2d');
+$(document).ready(function () {    
+var ctx = document.getElementById('promedio').getContext('2d');
     Chart.defaults.global.defaultFontColor = '#000000';
     window.myBar = new Chart(ctx, {
         type: 'pie',

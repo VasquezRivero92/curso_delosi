@@ -114,9 +114,9 @@ class Ajaxadm_model extends CI_Model {
                     $tUser['fecha' . $curso->id] = (int) $query->fecha;
                     $total = (int) $total + (int) $query->puntaje;
                 } else {
-                    $tUser['c' . $curso->id] = '';
-                    $tUser['r' . $curso->id] = '';
-                    $tUser['calificacion' . $curso->id] = '';
+                    $tUser['c' . $curso->id] = '0';
+                    $tUser['r' . $curso->id] = '0';
+                    $tUser['calificacion' . $curso->id] = '0';
                     // $tUser['fecha' . $curso->id] = '';
                 }
             }
@@ -496,6 +496,32 @@ class Ajaxadm_model extends CI_Model {
     }
 
     /*     * *******************************  estadisticas  ******************************** */
+    public function num_players_cali_0($id_empresa, $curso, $id_area, $id_departamento) {
+            $this->db->select('DISTINCT(ue.id_user)')
+                    ->from('users_curso uc')
+                    ->join('users_empresa ue', 'uc.id_user = ue.id_user')
+                    ->join('curso c', 'uc.id_curso = c.id')
+                    ->join('users u', 'ue.id_user = u.id');
+            if ($id_empresa) {
+                $this->db->where('ue.id_empresa', $id_empresa);
+            }
+            if ($curso) {
+                $this->db->where('uc.id_curso', $curso);
+            }
+            if ($id_area) {
+                $this->db->where('ue.id_area', $id_area);
+            }
+            if ($id_departamento) {
+                $this->db->where('ue.id_departamento', $id_departamento);
+            }        
+            return $this->db->where('uc.puntaje IS NOT NULL', null, false)
+                            ->where('ue.sede IS NOT NULL', null, false)
+                            ->where('uc.id_version', $this->id_version)
+                            ->where('uc.calificacion', 0)
+                            ->where('c.menu', 1)
+                            ->get()->num_rows();
+        }
+
     public function num_players_cali_1($id_empresa, $curso, $id_area, $id_departamento) {
         $this->db->select('DISTINCT(ue.id_user)')
                 ->from('users_curso uc')

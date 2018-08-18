@@ -542,12 +542,13 @@ class Ajaxadm extends MY_Controller {
             $departamento = (int) $this->input->post('departamento');
             $nivel = (int) $this->input->post('nivel');
             $id_calificacion = (int) $this->input->post('calificacion');
+            $numPlayers0 = $this->ajaxadm_model->num_players_cali_0($empresa, $nivel, $area, $departamento); //Usuarios que jugaron
             $numPlayers1 = $this->ajaxadm_model->num_players_cali_1($empresa, $nivel, $area, $departamento); //Usuarios que jugaron
             $numPlayers2 = $this->ajaxadm_model->num_players_cali_2($empresa, $nivel, $area, $departamento); //Usuarios que jugaron
             $numPlayers3 = $this->ajaxadm_model->num_players_cali_3($empresa, $nivel, $area, $departamento); //Usuarios que jugaron
             $numPlayers4 = $this->ajaxadm_model->num_players_cali_4($empresa, $nivel, $area, $departamento); //Usuarios que jugaron
             $numPlayers5 = $this->ajaxadm_model->num_players_cali_5($empresa, $nivel, $area, $departamento); //Usuarios que jugaron
-            echo json_encode([$numPlayers1,$numPlayers2,$numPlayers3,$numPlayers4,$numPlayers5]);
+            echo json_encode([$numPlayers0,$numPlayers1,$numPlayers2,$numPlayers3,$numPlayers4,$numPlayers5]);
         } else {
             echo 'manakax';
         }
