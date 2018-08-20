@@ -601,6 +601,16 @@ body{
     background: url(../images/btnVolver.png) no-repeat 50% 50%;
     cursor: pointer;
 }
+#btnciudad{
+    position: absolute; display: none;
+    width: 215px;
+    height : 41px;
+    left: 1113px;
+    top: 20px;
+    display: block;
+    background: url(../images/volverciudad.png) no-repeat 50% 50%;
+    cursor: pointer;
+}
 /*******************************  Slider Page 4  *******************************/
 #sliderPage_4{ background: url(../images/bgspg4.png) no-repeat center center; }
 

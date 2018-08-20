@@ -74,7 +74,9 @@
                     echo '<div id="i3txt_2">Ya completaste este juego</div>';
                     echo anchor('mapa', 'Juegos completados', array('id' => 'btnJugar','id' => 'btnJugar','style' => 'pointer-events:none'));
                 }
+                echo anchor('mapa', ' ', array('id' => 'btnciudad'));
                 ?>
+                <!-- <div class="btnciudad"></div> -->
             </div
 
             <!-- - - - - - - - - - - - - - - -  Slider 1  - - - - - - - - - - - - - - - -->

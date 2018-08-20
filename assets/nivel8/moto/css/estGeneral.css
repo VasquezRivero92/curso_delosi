@@ -335,7 +335,7 @@ position: absolute;
  #btnListo{
     position: absolute;
     width: 167px; height: 41px;
-    top: 575px; left: 590px;
+    top: 535px; left: 590px;
     background: url(../images/btnListo.png) no-repeat 50% 50%;
     cursor: pointer;
 }
