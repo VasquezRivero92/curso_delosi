@@ -190,7 +190,7 @@
                         </div>
                         <div class="item">                            
                             <img id="s3i7" src="<?php echo base_url($own_dir . '/images/slider/s3i7.png'); ?>" alt=""/>
-                            <div id="s3t7" class="stxt"><span>Y recuerda que el peatón y los ciclistas  tienen la preferencia.<br>¡Cuídalos!</span></div>
+                            <div id="s3t7" class="stxt"><span>Y recuerda que el peatón y los ciclistas <br>tienen la preferencia.<br>¡Cuídalos!</span></div>
                         </div>
                     </div>
                 </div>

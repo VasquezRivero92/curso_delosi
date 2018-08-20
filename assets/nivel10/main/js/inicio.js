@@ -21,8 +21,8 @@ function showInicio() {
     setTimeout(function () {
         $(".instrucciones").stop().delay(300).fadeOut(100);
         $("#instruccion_2").stop().fadeIn(500);
-        playBGMusic(window.menuBG);
-        playTexto(window.txti2);
+        playBGMusic(window.fndPausas);
+        //playTexto(window.txti2);
     }, 4000);
     $('#i3btn_1').addClass('slider_scale');
     $('#i3btn_2').addClass('disable');
@@ -114,13 +114,13 @@ $(document).ready(function (e) {
             break;
         }
         if (lAudio[sID]) {
-         playTexto(window[lAudio[sID]]);
-         console.log(lAudio[sID]);
+         //playTexto(window[lAudio[sID]]);
          } else {   
-          if(sID == 3){
-              playTexto(window.txti2); 
-        }else { playTexto(window['s' + sID + 'i1']);};        
-           
+            if(sID == 3){
+              //playTexto(window.txti2); 
+            }else { 
+                //playTexto(window['s' + sID + 'i1']);
+            };        
          }         
         $('.s3btn').removeClass('checked');     
         $('#s2i1_2_1').click(function () {

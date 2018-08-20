@@ -774,6 +774,18 @@
     background-size: cover;
     z-index: 200;
 }
+
+.touchIsOn #Player_1 .ptje{
+    position:absolute; display:none;
+    width: 162px;
+    height: 159px;
+    left: -73px;
+    top: -220px;
+    background: rgba(250,0,0,0) url(../images/alertM.png) no-repeat 50% 50%;
+    cursor: pointer;
+    background-size: cover;
+    z-index: 200;
+}
 /*************************  Objetos por cada escenario  *************************/
 .conteo{
     position:absolute;

@@ -40,6 +40,7 @@ var audios = [
     ['s4i3', odir + '/sounds/sP4i3.mp3'],
     ['s4i4', odir + '/sounds/sP4i4.mp3'],
     ['s4i5', odir + '/sounds/sP4i5.mp3'],
+    ['fndPausas', bdir + 'assets/sounds/fnd_pausas.mp3'],
     ['s4i6', odir + '/sounds/sP4i6.mp3']
 ];
 

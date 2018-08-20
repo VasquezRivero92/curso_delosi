@@ -21,8 +21,8 @@ function showInicio() {
     setTimeout(function () {
         $(".instrucciones").stop().delay(300).fadeOut(100);
         $("#instruccion_2").stop().fadeIn(500);
-        playBGMusic(window.menuBG);
-        playTexto(window.txti2);
+        playBGMusic(window.driversBG);
+        //playTexto(window.txti2);
     }, 4000);
     $.get(bdir + 'ajax/get_intentos_drivers').done(function (data) {        
         //alert( "puntaje " + data);
@@ -107,12 +107,14 @@ $(document).ready(function (e) {
             break;
         }
         if (lAudio[sID]) {
-         playTexto(window[lAudio[sID]]);
+         //playTexto(window[lAudio[sID]]);
          console.log(lAudio[sID]);
          } else {   
           if(sID == 3){
-              playTexto(window.txti2); 
-        }else { playTexto(window['s' + sID + 'i1']);};        
+              //playTexto(window.txti2); 
+        }else { 
+            //playTexto(window['s' + sID + 'i1']);
+        };        
            
          }         
         $('.s3btn').removeClass('checked');     
@@ -264,7 +266,6 @@ $('.punt_anim').click(function () {
     }else if (sID == 2) {        
         if($count_btn == 4){        
         $('.owl-next').removeClass('disabled');
-        console.log("holiii");
         $count_btn = 4;
         }else if($count_btn == 5){
             $('#ayuda_3').addClass('img_disabled');
@@ -426,11 +427,9 @@ function sl_2(){
         if(act_desc == false){
               act_desc = true;
               //playTexto(window.txti2);
-               playTexto(window['s2i'+$sIDL]);
-               console.log("s2i"+$sIDL);
+               //playTexto(window['s2i'+$sIDL]);
           }else{
               stopTexto();
-              console.log("stop audio");
               act_desc = false;
           }  
         if ($(this).hasClass('detail')) {
@@ -446,7 +445,7 @@ function sl_2(){
 
             if (fullS3) {//aqui va lo mismo que en el carrusel
                 $('#popup_1').stop().fadeIn(1000);
-                playTexto(window.sP2ipop);
+                //playTexto(window.sP2ipop);
                 $('#sliderPage_' + sID + ' .btnVolver').show();
                 $('#i3btn_' + sID).addClass('disable');
                 sClick[sID] = true;

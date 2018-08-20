@@ -389,6 +389,7 @@
     line-height: 25px;
     position: absolute;
     font-size: 20px;
+        text-align: center;
 }
 .btnPlay.disable {
     pointer-events: none;
@@ -934,9 +935,12 @@
 
 .texto1{
     position: absolute;
-    top: 375px;
-    left: 540px;
-    width: 285px;
+    top: 303px;
+    left: 560px;
+    width: 244px;
+    height: 41px;
+    line-height: 41px;
+    text-align: center;
     color: #ffffff;
 }
 
@@ -949,16 +953,19 @@
 }
 .texto2{
     position: absolute;
-    top: 515px;
-    left: 525px;
+    top: 398px;
+    left: 520px;
     width: 320px;
+    height: 108px;
+    line-height: 108px;
     color: #ffffff;
 }
 
 .texto2 span{
-     display: inline-block;
+    display: inline-block;
     vertical-align: middle;
     line-height: 15px;
     font-family: "Catalogo";
     font-size: 16px;
+    text-align: center;
 }

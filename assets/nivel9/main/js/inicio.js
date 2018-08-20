@@ -22,7 +22,7 @@ function showInicio() {
         $(".instrucciones").stop().delay(300).fadeOut(100);
         $("#instruccion_2").stop().fadeIn(500);
         playBGMusic(window.menuBG);
-        playTexto(window.txti2);
+        //playTexto(window.txti2);
     }, 4000);
     $('#i3btn_1').addClass('slider_scale');
     $('#i3btn_2').addClass('disable');
@@ -94,14 +94,15 @@ $(document).ready(function (e) {
             break;
         }
         if (lAudio[sID]) {
-         playTexto(window[lAudio[sID]]);
-         console.log(lAudio[sID]);
-         } else {   
-          if(sID == 3){
-              playTexto(window.txti2); 
-        }else { playTexto(window['s' + sID + 'i1']);};        
-           
-         }         
+         //playTexto(window[lAudio[sID]]);
+         //console.log(lAudio[sID]);
+        } else {   
+            if(sID == 3){
+              //playTexto(window.txti2); 
+            }else { 
+                //playTexto(window['s' + sID + 'i1']);
+            };        
+        }         
         $('.s3btn').removeClass('checked');     
         $('#s2i1_2_1').click(function () {
             $('#s2i1_2_1').addClass('img_disabled');
@@ -411,7 +412,7 @@ function sl_2(){
         if(act_desc == false){
               act_desc = true;
               //playTexto(window.txti2);
-               playTexto(window['s2i'+$sIDL]);
+               //playTexto(window['s2i'+$sIDL]);
                console.log("s2i"+$sIDL);
           }else{
               stopTexto();
@@ -431,7 +432,7 @@ function sl_2(){
 
             if (fullS3) {//aqui va lo mismo que en el carrusel
                 $('#popup_1').stop().fadeIn(1000);
-                playTexto(window.sP2ipop);
+                //playTexto(window.sP2ipop);
                 $('#sliderPage_' + sID + ' .btnVolver').show();
                 $('#i3btn_' + sID).addClass('disable');
                 sClick[sID] = true;
