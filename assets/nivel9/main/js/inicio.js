@@ -21,7 +21,7 @@ function showInicio() {
     setTimeout(function () {
         $(".instrucciones").stop().delay(300).fadeOut(100);
         $("#instruccion_2").stop().fadeIn(500);
-        playBGMusic(window.menuBG);
+        playBGMusic(window.emergencia);
         //playTexto(window.txti2);
     }, 4000);
     $('#i3btn_1').addClass('slider_scale');

@@ -32,7 +32,7 @@
     </head>
         <?php
         $avatar = 'av' . strtoupper(substr($this->session->grupo, 0, 1)) . $this->session->avatar;
-        $owlgrupo = 'owl-' . $this->session->grupo;
+        $owlgrupo = $this->session->grupo;
         ?>
     <body class="<?php echo $avatar . ' ' . $owlgrupo; ?>">
         <!-- - - - - - - - - - - - - - - - -  Loader  - - - - - - - - - - - - - - - - -->
@@ -119,10 +119,10 @@
                             <div id="s2i5"></div>
                             <div id="s2i6"></div>
                         </div>
-                        <div class="item" data-id=4>                            
+                        <!-- <div class="item" data-id=4>                            
                             <div id="s2i7"></div>
                         </div>
-                        <!-- <div class="item" data-id=3>
+                        <div class="item" data-id=3>
                             <div id="s1i3"></div><div id="s1i3h"></div><div id="s1i3p"></div><div class="itmHand"></div><div class="itemLoader"></div>
                         </div> -->
                     </div>

@@ -482,115 +482,165 @@ body{
     top: -40px;
 }
 
-#s1i1{     position: absolute;
-    background: url(../images/slider/sl1_1.png) no-repeat center center;
-    left: -200px;
-    top: -10px;}
+.oficina #s1i1{ position: absolute; left: -200px; top: -10px;
+    background: url(../images/slider/oficina/sl1_1.png) no-repeat center center;}
+.oficina #s1i2{ position: absolute;    left: 260px; top: -10px; 
+    background: url(../images/slider/oficina/sl1_2.png) no-repeat center center;}
+.oficina #s1i3{ position: absolute; left: -200px; top: -10px;
+    background: url(../images/slider/oficina/sl1_3.png) no-repeat center center;}
+.oficina #s1i4{ position: absolute; left: 260px; top: -10px;
+    background: url(../images/slider/oficina/sl1_4.png) no-repeat center center;}
+.oficina #s1i5{ position: absolute; left: 20px; top: -10px;
+    background: url(../images/slider/oficina/sl1_5.png) no-repeat center center;}
+.oficina #s1i6{ position: absolute; left: -200px; top: -10px;
+    background: url(../images/slider/oficina/sl1_6.png) no-repeat center center;}
+.oficina #s1i7{ position: absolute; left: 260px; top: -10px;
+    background: url(../images/slider/oficina/sl1_7.png) no-repeat center center;}
 
+.planta #s1i1{ position: absolute; left: -200px; top: -10px;
+    background: url(../images/slider/planta/sl1_1.png) no-repeat center center;}
+.planta #s1i2{ position: absolute;    left: 260px; top: -10px; 
+    background: url(../images/slider/planta/sl1_2.png) no-repeat center center;}
+.planta #s1i3{ position: absolute; left: -200px; top: -10px;
+    background: url(../images/slider/planta/sl1_3.png) no-repeat center center;}
+.planta #s1i4{ position: absolute; left: 260px; top: -10px;
+    background: url(../images/slider/planta/sl1_4.png) no-repeat center center;}
+.planta #s1i5{ position: absolute; left: 20px; top: -10px;
+    background: url(../images/slider/planta/sl1_5.png) no-repeat center center;}
+.planta #s1i6{ position: absolute; left: -200px; top: -10px;
+    background: url(../images/slider/planta/sl1_6.png) no-repeat center center;}
+.planta #s1i7{ position: absolute; left: 260px; top: -10px;
+    background: url(../images/slider/planta/sl1_7.png) no-repeat center center;}
 
-#s1i2{     position: absolute;
-    background: url(../images/slider/sl1_2.png) no-repeat center center;
-    left: 260px;
-    top: -10px; }
+.restaurante #s1i1{ position: absolute; left: -200px; top: -10px;
+    background: url(../images/slider/restaurante/sl1_1.png) no-repeat center center;}
+.restaurante #s1i2{ position: absolute;    left: 260px; top: -10px; 
+    background: url(../images/slider/restaurante/sl1_2.png) no-repeat center center;}
+.restaurante #s1i3{ position: absolute; left: -200px; top: -10px;
+    background: url(../images/slider/restaurante/sl1_3.png) no-repeat center center;}
+.restaurante #s1i4{ position: absolute; left: 260px; top: -10px;
+    background: url(../images/slider/restaurante/sl1_4.png) no-repeat center center;}
+.restaurante #s1i5{ position: absolute; left: 20px; top: -10px;
+    background: url(../images/slider/restaurante/sl1_5.png) no-repeat center center;}
+.restaurante #s1i6{ position: absolute; left: -200px; top: -10px;
+    background: url(../images/slider/restaurante/sl1_6.png) no-repeat center center;}
+.restaurante #s1i7{ position: absolute; left: 260px; top: -10px;
+    background: url(../images/slider/restaurante/sl1_7.png) no-repeat center center;}
 
-#s1i3{     position: absolute;
-    background: url(../images/slider/sl1_3.png) no-repeat center center;
-    left: -200px;
-    top: -10px;}
-
-#s1i4{     position: absolute;
-    background: url(../images/slider/sl1_4.png) no-repeat center center;
-    left: 260px;
-    top: -10px; }
-
-#s1i5{     position: absolute;
-    background: url(../images/slider/sl1_5.png) no-repeat center center;
-    left: 20px;
-    top: -10px; }
-
-#s1i6{     position: absolute;
-    background: url(../images/slider/sl1_6.png) no-repeat center center;
-   left: -200px;
-    top: -10px; }
-
-#s1i7{     position: absolute;
-    background: url(../images/slider/sl1_7.png) no-repeat center center;
-    left: 260px;
-    top: -10px }
-
+.driver #s1i1{ position: absolute; left: -200px; top: -10px;
+    background: url(../images/slider/restaurante/sl1_1.png) no-repeat center center;}
+.driver #s1i2{ position: absolute;    left: 260px; top: -10px; 
+    background: url(../images/slider/restaurante/sl1_2.png) no-repeat center center;}
+.driver #s1i3{ position: absolute; left: -200px; top: -10px;
+    background: url(../images/slider/restaurante/sl1_3.png) no-repeat center center;}
+.driver #s1i4{ position: absolute; left: 260px; top: -10px;
+    background: url(../images/slider/restaurante/sl1_4.png) no-repeat center center;}
+.driver #s1i5{ position: absolute; left: 20px; top: -10px;
+    background: url(../images/slider/restaurante/sl1_5.png) no-repeat center center;}
+.driver #s1i6{ position: absolute; left: -200px; top: -10px;
+    background: url(../images/slider/restaurante/sl1_6.png) no-repeat center center;}
+.driver #s1i7{ position: absolute; left: 260px; top: -10px;
+    background: url(../images/slider/restaurante/sl1_7.png) no-repeat center center;}
 
 /*******************************  Slider Page 2  *******************************/
-#sliderPage_2{ background: url(../images/bgspg2.png) no-repeat center center; }
-    
-.cvhangeimg2{
-       background: url(../images/bgspg2_1.png) no-repeat center center !important;; 
-    }
+#sliderPage_2{ background: url(../images/bgspg2.png) no-repeat center center; }  
+.cvhangeimg2{background: url(../images/bgspg2_1.png) no-repeat center center !important;; }
+.cvhangeimg3{background: url(../images/bgspg2_2.png) no-repeat center center !important;; }
+.img_disabled{ display: none;}
 
-.cvhangeimg3{
-       background: url(../images/bgspg2_2.png) no-repeat center center !important;; 
-    }
+.oficina #s2i1{ position: absolute; left: -200px; top: -10px;
+    background: url(../images/slider/oficina/sl2_1.png) no-repeat center center;}
+.oficina #s2i2{ position: absolute; left: 260px; top: -10px;
+    background: url(../images/slider/oficina/sl2_2.png) no-repeat center center;}
+.oficina #s2i3{ position: absolute; left: -200px; top: -10px;
+    background: url(../images/slider/oficina/sl2_3.png) no-repeat center center;}
+.oficina #s2i4{ position: absolute; left: 260px; top: -10px;
+    background: url(../images/slider/oficina/sl2_4.png) no-repeat center center;}
+.oficina #s2i5{ position: absolute; left: -200px; top: -10px;
+    background: url(../images/slider/oficina/sl2_5.png) no-repeat center center;}
+.oficina #s2i6{ position: absolute; left: 260px; top: -10px;
+    background: url(../images/slider/oficina/sl2_6.png) no-repeat center center;}
 
-.img_disabled{
-        display: none;
-    }
-#s2i1{     position: absolute;
-    background: url(../images/slider/sl2_1.png) no-repeat center center;
-    left: -200px;
-    top: -10px;}
 
-#s2i2{     position: absolute;
-    background: url(../images/slider/sl2_2.png) no-repeat center center;
-    left: 260px;
-    top: -10px; }
+.planta #s2i1{ position: absolute; left: -200px; top: -10px;
+    background: url(../images/slider/planta/sl2_1.png) no-repeat center center;}
+.planta #s2i2{ position: absolute; left: 260px; top: -10px;
+    background: url(../images/slider/planta/sl2_2.png) no-repeat center center;}
+.planta #s2i3{ position: absolute; left: -200px; top: -10px;
+    background: url(../images/slider/planta/sl2_3.png) no-repeat center center;}
+.planta #s2i4{ position: absolute; left: 260px; top: -10px;
+    background: url(../images/slider/planta/sl2_4.png) no-repeat center center;}
+.planta #s2i5{ position: absolute; left: 0px; top: -10px;
+    background: url(../images/slider/planta/sl2_5.png) no-repeat center center;}
+.planta #s2i6{ position: absolute; left: 260px; top: -10px;
+    background: no-repeat center center;}
 
-#s2i3{     position: absolute;
-    background: url(../images/slider/sl2_3.png) no-repeat center center;
-    left: -200px;
-    top: -10px;}
+.restaurante #s2i1{ position: absolute; left: -200px; top: -10px;
+    background: url(../images/slider/restaurante/sl2_1.png) no-repeat center center;}
+.restaurante #s2i2{ position: absolute; left: 260px; top: -10px;
+    background: url(../images/slider/restaurante/sl2_2.png) no-repeat center center;}
+.restaurante #s2i3{ position: absolute; left: -200px; top: -10px;
+    background: url(../images/slider/restaurante/sl2_3.png) no-repeat center center;}
+.restaurante #s2i4{ position: absolute; left: 260px; top: -10px;
+    background: url(../images/slider/restaurante/sl2_4.png) no-repeat center center;}
+.restaurante #s2i5{ position: absolute; left: -200px; top: -10px;
+    background: url(../images/slider/restaurante/sl2_5.png) no-repeat center center;}
+.restaurante #s2i6{ position: absolute; left: 260px; top: -10px;
+    background: url(../images/slider/restaurante/sl2_6.png) no-repeat center center;}
 
-#s2i4{     position: absolute;
-    background: url(../images/slider/sl2_4.png) no-repeat center center;
-    left: 260px;
-    top: -10px; }
+.driver #s2i1{ position: absolute; left: -200px; top: -10px;
+    background: url(../images/slider/restaurante/sl2_1.png) no-repeat center center;}
+.driver #s2i2{ position: absolute; left: 260px; top: -10px;
+    background: url(../images/slider/restaurante/sl2_2.png) no-repeat center center;}
+.driver #s2i3{ position: absolute; left: -200px; top: -10px;
+    background: url(../images/slider/restaurante/sl2_3.png) no-repeat center center;}
+.driver #s2i4{ position: absolute; left: 260px; top: -10px;
+    background: url(../images/slider/restaurante/sl2_4.png) no-repeat center center;}
+.driver #s2i5{ position: absolute; left: -200px; top: -10px;
+    background: url(../images/slider/restaurante/sl2_5.png) no-repeat center center;}
+.driver #s2i6{ position: absolute; left: 260px; top: -10px;
+    background: url(../images/slider/restaurante/sl2_6.png) no-repeat center center;}
 
-#s2i5{     position: absolute;
-    background: url(../images/slider/sl2_5.png) no-repeat center center;
-    left: -200px;
-    top: -10px }
-
-#s2i6{     position: absolute;
-    background: url(../images/slider/sl2_6.png) no-repeat center center;
-    left: 260px;
-    top: -10px; }
-
-#s2i7{     position: absolute;
-    background: url(../images/slider/sl2_7.png) no-repeat center center;
-    left: 20px;
-    top: -10px; }
 
 /*******************************  Slider Page 3  *******************************/
 #sliderPage_3{ background: url(../images/bgspg1.png) no-repeat center center; }
 
-#s3i1{     position: absolute;
-    background: url(../images/slider/sl3_1.png) no-repeat center center;
-    left: -200px;
-    top: -10px;}
+.oficina #s3i1{ position: absolute; left: -200px; top: -10px;
+    background: url(../images/slider/oficina/sl3_1.png) no-repeat center center;}
+.oficina #s3i2{ position: absolute; left: 260px; top: -10px; 
+    background: url(../images/slider/oficina/sl3_2.png) no-repeat center center;}
+.oficina #s3i3{ position: absolute; left: -200px; top: -10px;
+    background: url(../images/slider/oficina/sl3_3.png) no-repeat center center;}
+.oficina #s3i4{ position: absolute; left: 260px; top: -10px;
+    background: url(../images/slider/oficina/sl3_4.png) no-repeat center center;}
 
+.planta #s3i1{ position: absolute; left: -200px; top: -10px;
+    background: url(../images/slider/planta/sl3_1.png) no-repeat center center;}
+.planta #s3i2{ position: absolute; left: 260px; top: -10px; 
+    background: url(../images/slider/planta/sl3_2.png) no-repeat center center;}
+.planta #s3i3{ position: absolute; left: -200px; top: -10px;
+    background: url(../images/slider/planta/sl3_3.png) no-repeat center center;}
+.planta #s3i4{ position: absolute; left: 260px; top: -10px;
+    background: url(../images/slider/planta/sl3_4.png) no-repeat center center;}
 
-#s3i2{     position: absolute;
-    background: url(../images/slider/sl3_2.png) no-repeat center center;
-    left: 260px;
-    top: -10px; }
+.restaurante #s3i1{ position: absolute; left: -200px; top: -10px;
+    background: url(../images/slider/restaurante/sl3_1.png) no-repeat center center;}
+.restaurante #s3i2{ position: absolute; left: 260px; top: -10px; 
+    background: url(../images/slider/restaurante/sl3_2.png) no-repeat center center;}
+.restaurante #s3i3{ position: absolute; left: -200px; top: -10px;
+    background: url(../images/slider/restaurante/sl3_3.png) no-repeat center center;}
+.restaurante #s3i4{ position: absolute; left: 260px; top: -10px;
+    background: url(../images/slider/restaurante/sl3_4.png) no-repeat center center;}
 
-#s3i3{     position: absolute;
-    background: url(../images/slider/sl3_3.png) no-repeat center center;
-    left: -200px;
-    top: -10px;}
+.driver #s3i1{ position: absolute; left: -200px; top: -10px;
+    background: url(../images/slider/restaurante/sl3_1.png) no-repeat center center;}
+.driver #s3i2{ position: absolute; left: 260px; top: -10px; 
+    background: url(../images/slider/restaurante/sl3_2.png) no-repeat center center;}
+.driver #s3i3{ position: absolute; left: -200px; top: -10px;
+    background: url(../images/slider/restaurante/sl3_3.png) no-repeat center center;}
+.driver #s3i4{ position: absolute; left: 260px; top: -10px;
+    background: url(../images/slider/restaurante/sl3_4.png) no-repeat center center;}
 
-#s3i4{     position: absolute;
-    background: url(../images/slider/sl3_4.png) no-repeat center center;
-    left: 260px;
-    top: -10px; }
 
 .btnVolver{
     position: absolute; display: none;
@@ -603,7 +653,6 @@ body{
 }
 /*******************************  Slider Page 4  *******************************/
 #sliderPage_4{ background: url(../images/bgspg4.png) no-repeat center center; }
-
 
 #s4t1{
     position: absolute;

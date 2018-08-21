@@ -13,6 +13,7 @@ var audios = [
     ['nivelBG', odir + '/sounds/capitulo.mp3'],
     ['menuBG', bdir + 'assets/sounds/menu.mp3'],
     ['playBTN', bdir + 'assets/sounds/catch.mp3'],
+    ['emergencia', bdir + 'assets/sounds/drivers.mp3'],
     ['test', odir + '/sounds/test.mp3'],
     ['txti2', odir + '/sounds/txti2.mp3'],
     ['s1i1', odir + '/sounds/sP1i1.mp3'],
