@@ -58,6 +58,50 @@ body{
     z-index:600;
     display:none;
 }
+/*******************************  Instruccion 0  *******************************/
+#instruccion_0{ background: url(../images/bginst0.png) no-repeat 50% 50%; }
+#i0tit_1{
+    position: absolute;
+    width: 327px; height: 110px;
+    left: 511px; top: 38px;
+    background: url(../images/i3tit1.png) no-repeat 50% 50%;
+}
+#i0txt_1{
+    position: absolute;
+    width: 800px;
+    left: 275px; top: 212px;
+    font-family:"Catalogo";
+    font-size: 17px;
+    line-height: 23px;
+    color:#ff3650;
+    text-align: center;
+}
+#i0txt_1 span{ font-family:"CatalogoGruesa"; }
+#i0txt_2{
+    position: absolute;
+    width: 440px;
+    left: 461px; top: 259px;
+    font-family:"Catalogo";
+    font-size: 16px;
+    line-height: 23px;
+    color:#333745;
+    text-align: left;
+    background: rgba(0,0,0,0);
+}
+#i0txt_2 span{ font-family:"CatalogoGruesa"; }
+#i0btn_1{
+    position: absolute;
+    width: 158px; height: 35px;
+    left: 595px; top: 539px;
+    font-family:"Catalogo";
+    font-size: 17px;
+    line-height: 34px;
+    color:#ffffff;
+    text-align: center;
+    background: #ff3650;
+    cursor: pointer;
+}
+
 /*******************************  Instruccion 1  *******************************/
 #instruccion_1{ background: url(../images/bginst1.png) no-repeat center center; }
 #i1tit_1{
@@ -570,6 +614,16 @@ body{
     text-align: center;
     background: #ff3650;
     box-shadow: 0px 0px 0px 4px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+#btnciudad{
+    position: absolute; display: none;
+    width: 215px;
+    height : 41px;
+    left: 1122px;
+    top: 14px;
+    display: block;
+    background: url(../images/volverciudad.png) no-repeat 50% 50%;
     cursor: pointer;
 }
 /*******************************************************************************/

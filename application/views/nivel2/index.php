@@ -68,6 +68,7 @@
                     echo anchor('main', 'Volver al inicio', array('id' => 'btnJugar'));
                 }
                 ?>
+                <div id="btnciudad"></div>
             </div>
             <!-- - - - - - - - - - - - - - - -  Slider 1  - - - - - - - - - - - - - - - -->
             <div id="sliderPage_1" class="instrucciones">

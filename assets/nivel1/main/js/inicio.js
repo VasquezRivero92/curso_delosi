@@ -12,8 +12,13 @@ var completo = false;
 function showInicio() {
     redimensionarJuego();
     $('.instrucciones').stop().hide();
-    $('#instruccion_1').fadeIn(1000);
+    $('#instruccion_0').fadeIn(1000);
     playSound(window.nivelBG);
+}
+function inicio_2() {
+    $('#instruccion_0').stop().fadeOut(1000);
+    $('#instruccion_1').fadeIn(1000);
+    //playSound(window.nivelBG);
     //playTexto(window.txti1);
     setTimeout(function () {
         $(".instrucciones").stop().delay(300).fadeOut(100);
@@ -54,6 +59,11 @@ $(document).ready(function (e) {
         barHeight: 0,
         onComplete: showInicio
     });
+
+    $('#i0btn_1').click(function () {
+        inicio_2();
+    });
+
     $('#i2btn_1').click(function () {
         stopTexto();
         playSound(window.playBTN);
@@ -156,5 +166,11 @@ $(document).ready(function (e) {
         mouseDrag: false,
         touchDrag: false
     });
+
+    $('#btnciudad').click(function (e) {
+        playSound(window.playBTN);
+        window.location.href = bdir + 'mapa';
+    });
+
 });
 /*******************************************************************************/

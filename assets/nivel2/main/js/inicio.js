@@ -180,5 +180,12 @@ $(document).ready(function (e) {
         mouseDrag: false,
         touchDrag: false
     });
+
+    $('#btnciudad').click(function (e) {
+        playSound(window.playBTN);
+        window.location.href = bdir + 'mapa';
+    });
+
+
 });
 /*******************************************************************************/

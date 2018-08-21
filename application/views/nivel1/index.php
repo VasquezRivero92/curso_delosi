@@ -32,6 +32,15 @@
             <div id="img_loader01"><div></div></div>
         </div>
         <div id="historia" class="resizeWindow">
+            <!-- - - - - - - - - - - - - -  Instruccion 0  - - - - - - - - - - - - - -->
+            <div id="instruccion_0" class="instrucciones">
+                <!-- <div id="i0tit_1"></div> -->
+                <div id="i0txt_1">¡Hola, y Bienvenido a <span>APRENDIENDO A PREVENIR!</span></div>
+                <div id="i0txt_2">Has sido seleccionado a este programa por tu potencial para prevenir accidentes y el cuidado que tienes en resguardar la seguridad y salud en el trabajo.
+                    <br><br>Queremos que seas nuestro próximo <span>EXPERTO DE LA PREVENCIÓN</span>, y para ello deberás pasar por los7 capítulos de este programa.
+                    <br><br>Al final de cada nivel se te presentarán una serie de <span>DESAFÍOS DE PREVENCIÓN</span> en los que pondrás a prueba lo aprendido en cada nivel del programa.</div>
+                <div id="i0btn_1">Continuar</div>
+            </div>
             <!-- - - - - - - - - - - - - -  Instruccion 1  - - - - - - - - - - - - - -->
             <div id="instruccion_1" class="instrucciones">
                 <div id="i1tit_1">NIVEL UNO</div>
@@ -64,6 +73,7 @@
                     echo anchor('main', 'Volver al inicio', array('id' => 'btnJugar'));
                 }
                 ?>
+                <div id="btnciudad"></div>
             </div>
             <!-- - - - - - - - - - - - - - - -  Slider 1  - - - - - - - - - - - - - - - -->
             <div id="sliderPage_1" class="instrucciones">

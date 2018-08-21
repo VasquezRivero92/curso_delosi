@@ -639,4 +639,15 @@ body{
     background: url(../images/btnVolver.svg) no-repeat 50% 50%;
     cursor: pointer;
 }
+
+#btnciudad{
+    position: absolute; display: none;
+    width: 215px;
+    height : 41px;
+    left: 1122px;
+    top: 14px;
+    display: block;
+    background: url(../images/volverciudad.png) no-repeat 50% 50%;
+    cursor: pointer;
+}
 /*******************************************************************************/

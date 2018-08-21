@@ -92,17 +92,18 @@ body{
     outline:none;
 }
 .formInput.error{ border:2px solid #ff0000; color: #ff0000; }
-#i1submit{
-    display:block;
-    width:238px; height:36px;
+#i1submit {
+    display: block;
+    width: 238px;
+    height: 36px;
     margin: 40px auto 0;
-    font-family:"Catalogo";
-    font-size:18px;
-    line-height:35px;
-    color:#ffffff;
+    font-family: "Catalogo";
+    font-size: 18px;
+    line-height: 35px;
+    color: #ffffff;
     background: #ff3650;
-    border:0 none;
-    cursor:pointer;
+    border: 0 none;
+    cursor: pointer;
 }
 /*******************************  Instruccion 2  *******************************/
 #instruccion_2{ background: url(../images/bginst2.png) no-repeat 50% 50%; }
@@ -234,14 +235,14 @@ body{
 .ok_ctn{
     width: 95%;
     max-width: 620px;
-    margin: 50px auto 0;
-    padding: 20px 20px 40px;
+    margin: 20px auto 0;
+    padding: 20px 20px 20px;
     font-family: "Catalogo";
     font-size: 17px;
     line-height: 23px;
-    color: #333745;
+    color: #000000;
     background: #ffffff;
-    border: 8px solid #00a2bb;
+    border: 5px solid #F44336;
     box-sizing: border-box;
 }
 /*******************************  Instruccion 6  *******************************/
