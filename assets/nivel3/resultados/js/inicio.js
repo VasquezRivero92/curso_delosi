@@ -50,7 +50,7 @@ $(document).ready(function (e) {
         playSound(window.playBTN);
         $('#instruccion_6').fadeIn(1000);
         setTimeout(function () {
-            window.location.href = bdir + 'main';
+            window.location.href = bdir + 'mapa';
         }, 4000);
     });
 });

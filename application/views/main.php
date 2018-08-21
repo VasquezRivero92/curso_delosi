@@ -64,6 +64,9 @@
             <!-- - - - - - - - - - - - - -  Instruccion 5  - - - - - - - - - - - - - -->
             <div id="instruccion_5" class="instrucciones">
                 <div id="i5txt1">Por medio de la presente, se le informa que el tratamiento de sus datos personales en esta plataforma se realizará para las siguientes finalidades: (i) Llevar un registro de las presentes capacitaciones, cursos, seminarios, entre otros similares; (ii) verificar mis datos personales; y, (iii) verificar el haber completado los cursos y/o capacitaciones. La empresa que se encontrará a cargo de la plataforma web es FACTORIA MEDIA ESTUDIO E.I.R.L, con domicilio en Calle La Carabella 105 Dpto 202 Urb. Ingenieros La Castellana - Santiago de Surco. Podré ejercer los Derechos de Acceso, Rectificación, Cancelación y Oposición respecto de aquellos datos que no sean necesarios para mi relación laboral mediante el envío gratuito de una comunicación escrita al email: datostrabajadores@franquiciasperu.com.</div>
+
+                <p class="ok_ctn">La capacitación debe ser realizada dentro del horario de trabajo, si se realiza fuera de este no será valida ni autorizada por la Empresa.</p>
+
                 <div id="i5btn">Aceptar</div>
             </div>
             <!-- - - - - - - - - - - - - -  Instruccion 6  - - - - - - - - - - - - - -->

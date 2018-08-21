@@ -42,7 +42,7 @@
                     <br>en práctica todo lo aprendido y así crear 
                     <br>Ambientes Seguros en tu lugar de trabajo</div>
                 <div id="i4txt_2">¡Contamos Contigo!</div>
-                <?php echo anchor('main', 'Volver a status', array('id' => 'i4btn_1')); ?>
+                <?php echo anchor('mapa', 'Volver a status', array('id' => 'i4btn_1')); ?>
             </div>
             <!-- - - - - - - - - - - - - -  Instruccion 5 (constancia)  - - - - - - - - - - - - - -->
             <div id="instruccion_5" class="instrucciones">

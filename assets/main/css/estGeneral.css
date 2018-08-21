@@ -231,6 +231,19 @@ body{
     background: #ff3350;
     cursor:pointer;
 }
+.ok_ctn{
+    width: 95%;
+    max-width: 620px;
+    margin: 50px auto 0;
+    padding: 20px 20px 40px;
+    font-family: "Catalogo";
+    font-size: 17px;
+    line-height: 23px;
+    color: #333745;
+    background: #ffffff;
+    border: 8px solid #00a2bb;
+    box-sizing: border-box;
+}
 /*******************************  Instruccion 6  *******************************/
 #instruccion_6{ background: url(../images/bginst6.png) no-repeat center center; }
 #i6tit_1{
