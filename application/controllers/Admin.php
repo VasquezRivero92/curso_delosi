@@ -359,7 +359,7 @@ class Admin extends MY_Controller {
                 } elseif ($user['c' . $curso->id]) {
                     $temp[] = $user['c' . $curso->id];
                     $temp[] = $user['calificacion' . $curso->id];
-                    $temp[] = date('d-m-Y', $user['fecha' . $curso->id]);
+                    $temp[] = date('d-m-Y H:i:s', $user['fecha' . $curso->id]);
 
                 } else {
                     $temp[] = '';
