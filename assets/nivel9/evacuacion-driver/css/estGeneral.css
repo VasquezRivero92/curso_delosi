@@ -383,8 +383,9 @@ body{
     vertical-align: top;
     cursor: pointer;
 }
-#btnReinicio{ background: url(../images/btnReintentar.png) no-repeat 50% 50%; }
-#btnContinuar{ background:url(../images/btnContinuar.png) no-repeat 50% 50%; }
+#btnReinicio{ background: url(../images/btnReintentar.png) no-repeat 50% 50%;left: -100px; }
+#btnContinuar{ background:url(../images/btnContinuar.png) no-repeat 50% 50%;left: 80px;
+    top: -45px; }
 #resumenOportunidad{
     position: absolute;
     width: 172px; height: 11px;

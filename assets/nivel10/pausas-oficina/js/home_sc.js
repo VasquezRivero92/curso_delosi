@@ -19,6 +19,14 @@ function pantallafinal(){
 	//stopBGMusic();
 	//playFX(window["BGWin"]);
 	$("#capaResumen, #caratulaFin1").fadeIn(500);
+    $.post(bdir + 'ajax/init_calificacion').done(function (data) {
+       console.log("calificacion: " + data);
+       if(data == 0){
+        $('#calificacion').stop().fadeIn(1000);
+       }else{
+        $('#calificacion').stop().fadeOut(1000);
+       }
+    });
 }
 
 function finalSound(){

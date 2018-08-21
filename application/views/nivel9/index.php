@@ -69,6 +69,7 @@
                     echo '<div id="i3txt_2">Ya completaste este reto</div>';
                     echo anchor('mapa', 'Volver al inicio', array('id' => 'btnJugar'));
                 }
+                echo anchor('mapa', ' ', array('id' => 'btnciudad'));
                 ?>
             </div>
             <!-- - - - - - - - - - - - - - - -  Slider 1  - - - - - - - - - - - - - - - -->

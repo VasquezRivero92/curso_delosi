@@ -862,6 +862,16 @@ body{
     background: url(../images/btnVolver.png) no-repeat 50% 50%;
     cursor: pointer;
 }
+#btnciudad{
+    position: absolute; display: none;
+    width: 215px;
+    height : 41px;
+    left: 1113px;
+    top: 20px;
+    display: block;
+    background: url(../images/volverciudad.png) no-repeat 50% 50%;
+    cursor: pointer;
+}
 #i2btn_3{
         -webkit-border-radius: 1em;
     -moz-border-radius: 1em;

@@ -60,7 +60,7 @@ $J[1].finJuego = function (valor) {
     }, 2500);
     $.post(bdir + 'ajax/init_calificacion').done(function (data) {
        console.log("calificacion: " + data);
-       if(data != 0){
+       if(data == 0){
         $('#calificacion').stop().fadeIn(1000);
        }else{
         $('#calificacion').stop().fadeOut(1000);
