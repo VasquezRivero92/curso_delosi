@@ -199,17 +199,58 @@ No te pierdas ninguno de las misiones, ya que muchas de ellos podrán llevarte a
                 </div>
 
                 <div id="popAct_1" class="caratula">
-                    <div class="opcAyuda"><p class="ayuda_MC"> </p></div>
                     <!-- <div id="i4Buzon"></div> -->
-                    <div id="preg_1_1" class="aceptaCd pregOpc"> </div>
+
+                    <div id="accordion">
+                        <div class="maestra"></div>
+                        <div class="cont_accord">
+                            <button id="acord_1" class="accordionMC">¿No puedo ingresar a algunos cursos?</button>
+                            <div id="pan_acord_1" class="panel">
+                                <p>Aqui va la respuesta de las preguntas correspondiente.</p>
+                            </div>
+
+                            <button id="acord_2" class="accordionMC">Si tengo una duda respecto a uno de los cursos </button>
+                            <div id="pan_acord_2" class="panel">
+                                <p>Aqui va la respuesta de las preguntas correspondiente.</p>
+                            </div>
+
+                            <button id="acord_3" class="accordionMC">¿Con quién puedo comunicarme?</button>
+                            <div id="pan_acord_3" class="panel">
+                                <p>Aqui va la respuesta de las preguntas correspondiente.</p>
+                            </div>                            
+
+                            <button id="acord_4" class="accordionMC">¿Qué pasa si se cuelga el sistema y estoy realizando el reto?</button>
+                            <div id="pan_acord_4" class="panel">
+                                <p>Aqui va la respuesta de las preguntas correspondiente.</p>
+                            </div>                            
+
+                            <button id="acord_5" class="accordionMC">¿Cuánto es el puntaje mínimo para aprobar los cursos?</button>
+                            <div id="pan_acord_5" class="panel">
+                                <p>El puntaje mínimo para cada curso es de 70 puntos, recuerda que tienes 3 intentos por cada reto; en caso de agotarlos deberás escribir a “Asistencia de prevención” indicado el motivo.</p>
+                            </div>                            
+
+                            <button id="acord_6" class="accordionMC">No puedo descargar mi certificado ¿Qué puedo hacer?</button>
+                            <div id="pan_acord_6" class="panel">
+                                <p>Aqui va la respuesta de las preguntas correspondiente.</p>
+                            </div>                            
+
+                            <button id="acord_7" class="accordionMC">¿Puedo volver a revisar los contenidos de los cursos?</button>
+                            <div id="pan_acord_7" class="panel">
+                                <p>Aqui va la respuesta de las preguntas correspondiente.</p>
+                            </div>                            
+                        </div>
+                        <div id="correo_mc"></div>
+                    </div>
 
                     <form id="formBuzon" class="clearfix" method="post" action="#">
-                        <!-- <div id="pop2txt1">Sabemos que es importante para ti, tener todos los conceptos claros de cada nivel, si tienes una duda o consulta detállala en el siguiente recuadro y te responderemos dentro de las 24 horas.</div> -->
+                        <div class="opcAyuda"><p class="ayuda_MC"> </p></div>
+                        <div id="pop2txt1">Si tienes alguna duda puedes escribir en la casilla de abajo y te responderemos lo antes posible.</div>
                         <textarea id="pop2ta" maxlength="400"></textarea>
                         <!-- <div id="pop2txt2">(*) Los días miércoles las respuestas a tus dudas o consultas serán en tiempo real de 8:30 a.m. a 6:00 p.m.</div> -->
                         <input id="pop2sub" class="clearfix" type="submit" value=" ">
                         <!-- <div id="pop2close"></div> -->
-                    </form>
+                    </form> 
+                    <div id="preg_1_1" class="aceptaCd pregOpc"> </div>
                    
                 </div>
 

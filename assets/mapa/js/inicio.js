@@ -47,6 +47,7 @@ var $J = [];
 $J[1] = new Lab_Juego();
 
 var $scaleActual = 1;
+var buzon_chart = 'Si tienes alguna duda puedes escribir en la casilla de abajo y te responderemos lo antes posible.';
 
 $.fn.reverse = [].reverse;
 
@@ -84,13 +85,34 @@ function initSonidos() {
 }
 function initBotones() {
 
+    $('.accordionMC').click(function () {
+        var idResp = $(this).attr('id').split("_")[1];
+        if($(this).hasClass('active')){
+            $(this).removeClass('active');
+            $('#pan_acord_'+idResp).hide();
+        } else{
+            $('.accordionMC').removeClass("active");
+            $(".panel").hide();
+            $(this).addClass('active');
+            $('#pan_acord_'+idResp).show();
+        }
+    });
+
+    $("#pop2ta").focus(function() {
+        $('#pop2txt1').html(buzon_chart);
+    });
+
+    $('#correo_mc').click(function() {
+        $('#accordion').fadeOut(500);
+        $('#formBuzon').fadeIn(500);
+    });
+
     $('.anim').click(function() {
         if($( "#topBar" ).hasClass("animPers")){
             $('#topBar').removeClass('animPers');
         }else{
             $('#topBar').addClass('animPers');
         }
-        
     });
 
     $('#btn_cont').click(function () {
@@ -139,7 +161,9 @@ function initBotones() {
         //$J[$JAct].CTiempo = $J[$JAct].CTiempo + 1;
         isPaused = false;
     });
+
     $('.pregOpc').click(function () {
+        playSound(window.playBTN);
         $('.caratula').stop().fadeOut(300);
         var idResp = parseInt($(this).attr('id').split("_")[2], 10);
         $('#powerUp_'+$ActPwrUp).addClass("hit");
@@ -157,6 +181,12 @@ function initBotones() {
                 isPaused = false;
             }, 1500);
             $PowerUps[$ActPwrUp - 1].visible = 200;
+            $('#accordion').fadeIn(500);
+            $('#formBuzon').fadeOut(500);
+
+            $('#pop2txt1').html(buzon_chart);
+            $('#pop2ta').val('');
+                
         }else{
             playSound(window.audioCrash);
             $ActPwrUp = 1;
@@ -177,13 +207,13 @@ function initBotones() {
 
     $('#i4Buzon').click(function () {
         playSound(window.playBTN);
-        $('#pop2txt1').show().html(pop2txt1);
+        $('#pop2txt1').show().html(buzon_chart);
         $('#pop2ta').val('');
         $('#popup2').fadeIn(1000);
     });
 
     //Envío de buzón
-    pop2txt1 = $('#pop2txt1').html();
+    //pop2txt1 = $('#pop2txt1').html();
     $('#pop2sub').click(function (e) {
         playSound(window.playBTN);
         e.preventDefault();
@@ -199,31 +229,29 @@ function initBotones() {
                 url: bdir + 'ajax/send_buzon'
             }).done(function (data, textStatus, jqXHR) {
                 $('#pop2txt1').show().html(data);
-                // console.log("OK:");
-                // console.log(data);
                 setTimeout(function () {
+                    $('#accordion').fadeIn(500);
+                    $('#formBuzon').fadeOut(500);
                     $('#pregWindow').fadeOut(1000);
                     $('#popAct_1').fadeOut(1000);
                     isPaused = false; 
                 }, 1000);
             }).fail(function (jqXHR, textStatus, errorThrown) {
-                // console.log("Fail:");
+                $('#pop2ta').addClass('error');
+                //console.log("Falló el envio de consulta");
                 // console.log(jqXHR);
             }).always(function () {
                 $('#pop2ta').removeClass('disable');
                 $('#pop2sub').removeClass('disable');
             });
         } else {
-            $('#pop2txt1').html('Complete el campo');
+            $('#pop2txt1').html('Completar el campo de consulta.');
         }
     });
     $('#pop2close').click(function () {
         playSound(window.playBTN);
         $('#popAct_1').fadeOut(1000);
     });
-
-
-
 }
 
 function initJuegos() {
@@ -328,9 +356,6 @@ function muestraPregunta() {
     isPaused = true;
     $(".caratula").hide();
     $("#pregWindow").show();
-    //$(".pregVista").hide();
-    //$("#bienFlechas").removeClass("animated bounceIn").hide();
-    //$(".bienSlider div").removeClass("animated bounceInRight").hide();
     PlayerMov.areaPtje.stop().removeClass('animated rubberBand').fadeOut(300);
     if($ActPwrUp == 2){
         if($drivers == 2){
@@ -348,15 +373,11 @@ function muestraPregunta() {
         $("#popAct_1").show();
     }else{
          $("#popAct_" + $ActPwrUp).show();   
-    }
-
-
-    
-    //$('#pregTXT').html($slA[$ActPwrUp]);
-    
+    }    
 }
+
 function snd_hablar(snd){
-    console.log(snd);
+    //console.log(snd);
     switch (snd) {
         case 1:
             playSound(window.Hablar2);                      

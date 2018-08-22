@@ -1017,14 +1017,94 @@
 }
 
 /*******************************  Popup Buzon  *******************************/
-/* #pop2txt1{
-    padding: 50px 42px 30px;
-    font-family: "Catalogo";
-    font-size: 16px;
-    line-height: normal;
+#formBuzon{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: none;
+}
+#accordion{
+  background: url(../images/formulario/back_pop.png) no-repeat center center;
+  width: 749px;
+  height: 412px;
+  position: absolute;
+  left : 293px;
+  top : 136px;
+}
+.maestra{
+  background : url(../images/formulario/maestra.png) no-repeat;
+  position : absolute ;
+  left: 632px;
+  top: -32px;
+  width : 299px;
+  height : 593px;
+}
+.cont_accord
+{
+  position : absolute ;
+  left: 99px;
+  top: 141px;
+  width : 536px;
+  height : 196px;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-scrolling: touch;
+  -moz-overflow-scrolling: touch;
+  -o-overflow-scrolling: touch;
+}
+
+.accordionMC {
+  background-color: rgba(73, 46, 153, 0);
+  font-family: "Catalogo";
+  color: #fff;
+  cursor: pointer;
+  padding: 8px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 13px;
+  transition: 0.4s;
+}
+
+.active, .accordionMC:hover {
+  background-color: #482E99; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: #4A35A5;
+  overflow: hidden;
+  color: #ffffff;
+  font-family: "Catalogo";
+  font-size: 13px;
+}
+
+.accordionMC:after {
+    content: '\25b6';
     color: #ffffff;
-    text-align: center;
-} */
+    font-weight: bold;
+    float: left;
+    margin-left: 5px;
+    margin-right: 7px;
+    margin-top: -3px;
+}
+
+.active:after {
+    content: "\25bc";
+}
+#pop2txt1{
+  font-family: "Catalogo";
+  font-size: 16px;
+  line-height: normal;
+  color: #ffffff;
+  text-align: center;
+  position: absolute;
+  width: 420px;
+  top: 283px;
+  left: 442px;
+}
 #pop2ta{
     display: block;
     position: absolute;
@@ -1075,16 +1155,15 @@
     cursor: pointer;
 }
 
-/* #pop2close{
+#correo_mc{
   position: absolute;
-    left: 433px;
-    top: -15px;
-  width : 51px;
-  height : 51px;
-  background: rgba(0,0,0,0)  url(../images/formulario/cerrar.png) no-repeat 50% 50%;
-  background-size: contain;
+  left: 133px;
+  top: 378px;
+  width: 204px;
+  height: 51px;
+  background:url(../images/formulario/consultas.png) no-repeat;
   cursor:pointer;
-} */
+}
 /*******************************  Nivel PopUp Content Prevencion  *********************************/
 
 .i4Nivel{
