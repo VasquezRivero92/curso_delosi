@@ -135,12 +135,22 @@ class Ajaxadm_model extends CI_Model {
     }
 
     public function limpiar_puntos_curso($id_user, $id_curso) {
+
+        if($id_curso == 8){
+            $data = array(
+                'fecha' => null,
+                'puntaje' => null,
+                'estrellas' => null,
+                'intentos' => 100
+            );
+        }
+            else{
         $data = array(
             'fecha' => null,
             'puntaje' => null,
             'estrellas' => null,
             'intentos' => 0
-        );
+        );}
         $resul = $this->db->where('id_user', $id_user)
                 ->where('id_curso', $id_curso)
                 ->where('id_version', $this->id_version)
