@@ -1046,7 +1046,7 @@
   top: 141px;
   width : 536px;
   height : 196px;
-  overflow: scroll;
+  overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-scrolling: touch;
   -moz-overflow-scrolling: touch;

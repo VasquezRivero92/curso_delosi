@@ -381,7 +381,7 @@
     background: #ff3650;
     cursor: pointer;
 }
-.btn_pass span {
+/* .btn_pass span {
     margin: -75px;
     display: inline-block;
     vertical-align: middle;
@@ -390,7 +390,7 @@
     position: absolute;
     font-size: 20px;
         text-align: center;
-}
+} */
 .btnPlay.disable {
     pointer-events: none;
     transition: opacity 500ms;

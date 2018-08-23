@@ -1580,3 +1580,85 @@
 .slideOutUp {
   animation-name: slideOutUp;
 }
+
+
+
+
+
+.btn_aceptAnim{
+  animation: AceptAnimBTN ease 1s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+  -webkit-animation: AceptAnimBTN ease 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-transform-origin: 50% 50%;
+  -moz-animation: AceptAnimBTN ease 1s;
+  -moz-animation-iteration-count: infinite;
+  -moz-transform-origin: 50% 50%;
+  -o-animation: AceptAnimBTN ease 1s;
+  -o-animation-iteration-count: infinite;
+  -o-transform-origin: 50% 50%;
+  -ms-animation: AceptAnimBTN ease 1s;
+  -ms-animation-iteration-count: infinite;
+  -ms-transform-origin: 50% 50%;
+}
+
+@keyframes AceptAnimBTN{
+  0% {
+    transform:  scaleX(1.00) scaleY(1.00) ;
+  }
+  50% {
+    transform:  scaleX(1.04) scaleY(1.04) ;
+  }
+  100% {
+    transform:  scaleX(1.00) scaleY(1.00) ;
+  }
+}
+
+@-moz-keyframes AceptAnimBTN{
+  0% {
+    -moz-transform:  scaleX(1.00) scaleY(1.00) ;
+  }
+  50% {
+    -moz-transform:  scaleX(1.04) scaleY(1.04) ;
+  }
+  100% {
+    -moz-transform:  scaleX(1.00) scaleY(1.00) ;
+  }
+}
+
+@-webkit-keyframes AceptAnimBTN {
+  0% {
+    -webkit-transform:  scaleX(1.00) scaleY(1.00) ;
+  }
+  50% {
+    -webkit-transform:  scaleX(1.04) scaleY(1.04) ;
+  }
+  100% {
+    -webkit-transform:  scaleX(1.00) scaleY(1.00) ;
+  }
+}
+
+@-o-keyframes AceptAnimBTN {
+  0% {
+    -o-transform:  scaleX(1.00) scaleY(1.00) ;
+  }
+  50% {
+    -o-transform:  scaleX(1.04) scaleY(1.04) ;
+  }
+  100% {
+    -o-transform:  scaleX(1.00) scaleY(1.00) ;
+  }
+}
+
+@-ms-keyframes AceptAnimBTN {
+  0% {
+    -ms-transform:  scaleX(1.00) scaleY(1.00) ;
+  }
+  50% {
+    -ms-transform:  scaleX(1.04) scaleY(1.04) ;
+  }
+  100% {
+    -ms-transform:  scaleX(1.00) scaleY(1.00) ;
+  }
+}

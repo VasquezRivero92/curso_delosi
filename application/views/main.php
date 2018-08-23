@@ -67,7 +67,7 @@
 
                 <p class="ok_ctn">La capacitación debe ser realizada dentro del horario de trabajo, si se realiza fuera de este no será valida ni autorizada por la Empresa.</p>
 
-                <div id="i5btn">Aceptar</div>
+                <div id="i5btn" class="btn_aceptAnim">Aceptar</div>
             </div>
             <!-- - - - - - - - - - - - - -  Instruccion 6  - - - - - - - - - - - - - -->
             <div id="instruccion_6" class="instrucciones">
