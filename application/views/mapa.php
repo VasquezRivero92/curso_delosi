@@ -206,22 +206,17 @@ No te pierdas ninguno de las misiones, ya que muchas de ellos podrán llevarte a
                         <div class="cont_accord">
                             <button id="acord_1" class="accordionMC">¿No puedo ingresar a algunos cursos?</button>
                             <div id="pan_acord_1" class="panel">
-                                <p>Aqui va la respuesta de las preguntas correspondiente.</p>
+                                <p>Esto lo determina el sistema dependiendo del tipo de usuario que tengas: por ejemplo si eres usuario de planta u oficina no tendrás el acceso al curso de ‘CONDUCTORES SEGUROS’, si el curso no carga por completo o se queda cargando debido a la lentitud de la linea deberas precionar F5 del teclado ó el botón actualizar del navegador.</p>
                             </div>
 
-                            <button id="acord_2" class="accordionMC">Si tengo una duda respecto a uno de los cursos </button>
+                            <button id="acord_2" class="accordionMC"><span style="margin-left: 23px">Si tengo una duda respecto a uno de los cursos</span><br>¿Con quién puedo comunicarme?</button>
                             <div id="pan_acord_2" class="panel">
-                                <p>Aqui va la respuesta de las preguntas correspondiente.</p>
+                                <p>Regresa al menú principal de “Asistencia de prevención”, escribe tu consulta y dale click en “enviar consulta”, te responderán en un plazo máximo de 48 horas.</p>
                             </div>
-
-                            <button id="acord_3" class="accordionMC">¿Con quién puedo comunicarme?</button>
-                            <div id="pan_acord_3" class="panel">
-                                <p>Aqui va la respuesta de las preguntas correspondiente.</p>
-                            </div>                            
 
                             <button id="acord_4" class="accordionMC">¿Qué pasa si se cuelga el sistema y estoy realizando el reto?</button>
                             <div id="pan_acord_4" class="panel">
-                                <p>Aqui va la respuesta de las preguntas correspondiente.</p>
+                                <p>El sistema esta diseñado para darte 2 oportunidades de realizar el reto (tener presente que toda oportunidad se cuenta desde el momento que ingresaste al reto, este programa esta adaptado para realizarse en las distintas plataformas ya sea PC o Dispositivos mobiles, las únicas formas que podrías tener problemas: es que estes usando una versión de navegador muy antigua o una PC con hardware de bajos recursos, o la linea de internet se corte y el sistema dejará de obtener los datos de la nube.</p>
                             </div>                            
 
                             <button id="acord_5" class="accordionMC">¿Cuánto es el puntaje mínimo para aprobar los cursos?</button>
@@ -231,12 +226,12 @@ No te pierdas ninguno de las misiones, ya que muchas de ellos podrán llevarte a
 
                             <button id="acord_6" class="accordionMC">No puedo descargar mi certificado ¿Qué puedo hacer?</button>
                             <div id="pan_acord_6" class="panel">
-                                <p>Aqui va la respuesta de las preguntas correspondiente.</p>
+                                <p>Pueden ser por 2 motivos que no hayas terminado el curso o no tengas acceso a internet.</p>
                             </div>                            
 
                             <button id="acord_7" class="accordionMC">¿Puedo volver a revisar los contenidos de los cursos?</button>
                             <div id="pan_acord_7" class="panel">
-                                <p>Aqui va la respuesta de las preguntas correspondiente.</p>
+                                <p>Si puedes revisar el contenido del curso, mas no podrás realizar el reto nuevamente, Si es que ya usaste tus 2 oportunidades, tendrías que solicitar a tu supervisor a cargo que reinicien tu cuenta para ese curso, justificando el problema que tuviste al realizarlo.</p>
                             </div>                            
                         </div>
                         <div id="correo_mc"></div>

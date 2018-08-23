@@ -1043,9 +1043,9 @@
 {
   position : absolute ;
   left: 99px;
-  top: 141px;
-  width : 536px;
-  height : 196px;
+  top: 159px;
+  width: 536px;
+  height: 206px;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-scrolling: touch;
@@ -1079,6 +1079,7 @@
   color: #ffffff;
   font-family: "Catalogo";
   font-size: 13px;
+  line-height: 18px;
 }
 
 .accordionMC:after {

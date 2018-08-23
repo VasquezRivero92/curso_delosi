@@ -185,19 +185,19 @@ function initBotones() {
         $('.caratula').stop().fadeOut(10);
     });
 
-    $('#btnReinicio').click(function () {
-        $TimeDie = false; 
-        $TDie = 0; 
-        $ValueEnd = 0;
+    // $('#btnReinicio').click(function () {
+    //     $TimeDie = false; 
+    //     $TDie = 0; 
+    //     $ValueEnd = 0;
 
-        $pasar_betwen = false;
-        $Val_betwen = 0;
+    //     $pasar_betwen = false;
+    //     $Val_betwen = 0;
         
-        ContPreguntas = 0;
-        $ActPwrUp = 0;
-        showInicio();
-        $('.caratula, .game, #capaResumen, #pregWindow').stop().fadeOut(500);
-    });    
+    //     ContPreguntas = 0;
+    //     $ActPwrUp = 0;
+    //     showInicio();
+    //     $('.caratula, .game, #capaResumen, #pregWindow').stop().fadeOut(500);
+    // });    
     $('#pausaTouch').click(function () {
         pausect = CTpreg;
         if ($MuevePlayer) {
