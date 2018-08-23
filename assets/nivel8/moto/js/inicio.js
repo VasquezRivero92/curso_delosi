@@ -76,7 +76,7 @@ var CTpreg = 30;
 var clearintervalo;
 
 function getRandomSite(){
-   var sites = ["¡soy mas vivo!","Mas alla!","Piiiiiiiip","¡Estoy apurado!","Haste a un lado"];
+   var sites = ["!","!","!","!","!"];
     var i = parseInt(Math.random()*(sites.length-1));
     $('.ptje span').text(sites[i]);
     return sites[i];
