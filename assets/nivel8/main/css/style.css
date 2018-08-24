@@ -171,16 +171,15 @@ body{
 #instruccion_3{ background: url(../images/bginst3.png) no-repeat center center; }
 #i3tit_1{
     position : absolute ;
-  left : 452px;
-  top : 76px;
-  width : 470px;
-  height : 44px;
+    left : 452px;
+    top : 76px;
+    /* width : 470px; */
+    height : 44px;
     font-family: "Bebas";
     font-size : 40px;
     letter-spacing : 5.84px;
     color : #FFFFFF;
     text-align: center;
-   
 }
 #i3txt_1{
     position: absolute;

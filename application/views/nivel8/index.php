@@ -51,14 +51,14 @@
                 <div id="i2img_1"></div>
                 <!-- <div id="i2tit_1">felicitaciones</div>
                 <div id="i2tit_2">Driver</div> -->
-                <div id="i2txt_1">Has sido seleccionado  para formar parte del grupo “Los mejores drivers”  
+                <div id="i2txt_1">Has sido seleccionado para formar parte del grupo “CONDUCTORES SEGUROS”  
                     Recibiras información vital para tu desenvolverte en tu día a día y pondremos a prueba tu preparación para que formes parte de esta elite de conductores.
                     <br><br>Bienvenido a este curso especialmente diseñado para ti:</div>
                 <div id="i2btn_1">Continuar</div>
             </div>
             <!-- - - - - - - - - - - - - -  Instruccion 3  - - - - - - - - - - - - - -->
             <div id="instruccion_3" class="instrucciones">
-                <div id="i3tit_1">LOS MEJORES DRIVERS</div>
+                <div id="i3tit_1">CONDUCTORES SEGUROS</div>
                 <div id="i3btn_1" class="i3btn"></div>
                 <div id="i3btn_2" class="i3btn"></div>
                 <div id="i3btn_3" class="i3btn"></div>
@@ -77,7 +77,7 @@
                 echo anchor('mapa', ' ', array('id' => 'btnciudad'));
                 ?>
                 <!-- <div class="btnciudad"></div> -->
-            </div
+            </div>
 
             <!-- - - - - - - - - - - - - - - -  Slider 1  - - - - - - - - - - - - - - - -->
             <div id="sliderPage_1" class="instrucciones">

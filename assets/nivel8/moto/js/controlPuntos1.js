@@ -28,6 +28,7 @@ function restapuntos(){
      $(".iconCheck").removeClass("anim icon_correcto").show();
  }
 function resultadoPuntos1() {
+    $('#resumenMinitest').html($puntos_minitest);
     //var sumaPuntos = $J[1].ptsWinJuego + $J[1].CTiempo;
     var sumaPuntos = $J[1].ptsWinJuego - $J[1].pts_restant;
     var estrellas = 0;

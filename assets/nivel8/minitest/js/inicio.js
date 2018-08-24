@@ -189,6 +189,7 @@ function initBotones() {
          $pID = parseInt($(this).attr('id').split('_')[1], 10);
 
          $(this).css("display","none");
+         $('#CTimer').css('display','block');
 
          $('.preguntas').fadeIn(500);
             console.log($n_pregunta);
@@ -261,6 +262,7 @@ function initBotones() {
     });
     
     $('.btn').click(function () {
+        $('#CTimer').css('display','none');
         playSound(window.audioCatch);
         var checkDiv = $('.driver').attr('id');
         $(this).css("pointer-events"," none");

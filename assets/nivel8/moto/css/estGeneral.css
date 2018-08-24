@@ -392,7 +392,7 @@ position: absolute;
 #resumenAvatar{
     position: absolute;
     width: 268px; height: 341px;
-    top: 203px; left: 394px;
+    top: 203px; left: 296px;
     background-color: rgba(0,0,0,0);
     background-repeat: no-repeat;
     background-position: 0px 0px;
@@ -402,7 +402,18 @@ position: absolute;
 #resumenPuntaje{
     position: absolute;
     width: 164px;
-    top: 189px; left: 836px;
+    top: 219px;
+    left: 866px;
+    font-family: "CatalogoGruesa";
+    font-size: 48px;
+    color: #ff3650;
+    text-align: center;
+}
+#resumenMinitest{
+    position: absolute;
+    width: 164px;
+    top: 219px;
+    left: 692px;
     font-family: "CatalogoGruesa";
     font-size: 48px;
     color: #ff3650;
@@ -411,7 +422,8 @@ position: absolute;
 #resumenPuntajetotal{
     position: absolute;
     width: 164px;
-    top: 189px; left: 1020px;
+    top: 219px;
+    left: 1040px;
     font-family: "CatalogoGruesa";
     font-size: 48px;
     color: #ff3650;
@@ -432,8 +444,8 @@ position: absolute;
 #resumenBtns{
     position: absolute;
     width: 350px; height: 44px;
-    left: 833px;
-    top: 340px;
+    left: 780px;
+    top: 371px;
     text-align: center;
 }
 #resumenBtns *{
@@ -441,7 +453,7 @@ position: absolute;
     display: inline-block;
     width: 185px; height: 44px;
     font-size: 0;
-    margin: 0 10px;
+    margin: 6px 10px;
     vertical-align: top;
     cursor: pointer;
 }
@@ -450,8 +462,8 @@ position: absolute;
 #resumenOportunidad{
     position: absolute;
     width: 172px; height: 11px;
-    left: 923px;
-    top: 408px;
+    left: 870px;
+    top: 344px;
     background:url(../images/oportunidad.png) no-repeat 50% 50%;
 }
 /*****************************************  Key Controls  *****************************************/

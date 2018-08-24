@@ -129,7 +129,7 @@
             <div id="capaResumen">
                 <div id="caratulaFin1" class="caratula">
                     <div id="resumenAvatar"></div>
-                    <div id="resumenMensaje"></div>
+                    <div id="resumenMinitest"></div>
                     <div id="resumenPuntaje"></div>
                     <div id="resumenPuntajetotal"></div>
                     <!-- <div id="resumenEstrellas"></div> -->
