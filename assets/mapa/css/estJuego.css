@@ -270,12 +270,12 @@
   width : 27px;
   height : 65px;
   background-image:url(../images/people/pep1.svg); }
-#icoPrev_5{ 
+/* #icoPrev_5{ 
   left : 918px;
   top : 973px;
   width : 29px;
   height : 62px;
-  background-image:url(../images/people/pep2.svg); }
+  background-image:url(../images/people/pep2.svg); } */
 #icoPrev_6{ 
   left : 1331px;
   top : 1029px;
@@ -399,8 +399,8 @@
   background-size: contain;
 }
 #icoPrev_24{ 
-  left : 2041px;
-  top : 1730px;
+  left : 1497px;
+  top : 2047px;
   width : 43px;
   height : 40px;
   z-index: 134;
@@ -408,11 +408,11 @@
   background-size: contain;
 }
 #icoPrev_25{ 
-  left : 1833px;
-  top : 1206px;
+  left : 2409px;
+  top : 1419px;
   width : 24px;
   height : 27px;
-  z-index: 200;
+  z-index: 140;
   background:url(../images/gif/gatito.gif) no-repeat 50% 50%;
   background-size: contain;
 }
@@ -483,7 +483,7 @@
   background:url(../images/gif/bird2.gif) no-repeat 50% 50%;
   background-size: contain;
 }
-#icoPrev_31{ 
+/* #icoPrev_31{ 
   left : 1671px;
   top : 1400px;
   width : 27px;
@@ -491,7 +491,7 @@
   z-index: 142;
   background:url(../images/gif/bird2.gif) no-repeat 50% 50%;
   background-size: contain;
-}
+} */
 #icoPrev_32{ 
   left : 1796px;
   top : 1452px;
@@ -511,7 +511,7 @@
   background:url(../images/gif/dance.gif) no-repeat 50% 50%;
   background-size: contain;
 } */
-#icoPrev_34{ 
+/* #icoPrev_34{ 
   left : 620px;
   top : 947px;
   width : 60px;
@@ -519,7 +519,7 @@
   z-index: 2;
   background:url(../images/gif/lucesconstruct.gif) no-repeat 50% 50%;
   background-size: contain;
-}
+} */
 #icoPrev_35{ 
   left : 1258px;
   top : 1721px;
@@ -538,7 +538,7 @@
   background:url(../images/gif/lucesconstruct.gif) no-repeat 50% 50%;
   background-size: contain;
 }
-#icoPrev_37{ 
+/* #icoPrev_37{ 
   left : 2626px;
   top : 949px;
   width : 60px;
@@ -546,7 +546,7 @@
   z-index: 2;
   background:url(../images/gif/lucesconstruct.gif) no-repeat 50% 50%;
   background-size: contain;
-}
+} */
 #icoPrev_38{ 
   left : 3192px;
   top : 1373px;
@@ -556,7 +556,7 @@
   background:url(../images/gif/lucesconstruct.gif) no-repeat 50% 50%;
   background-size: contain;
 }
-#icoPrev_39{ 
+/* #icoPrev_39{ 
   left : 974px;
   top : 1178px;
   width : 33px;
@@ -564,7 +564,7 @@
   z-index: 105;
   background:url(../images/gif/semafor.gif) no-repeat 50% 50%;
   background-size: contain;
-}
+} */
 /* #icoPrev_40{ 
     left: 809px;
     top: 1715px;
@@ -613,7 +613,7 @@
   background:url(../images/gif/patitos.gif) no-repeat 50% 50%;
   background-size: contain;
 } */
-#icoPrev_45{ 
+/* #icoPrev_45{ 
   left : 157px;
   top : 1520px;
   width : 14px;
@@ -630,8 +630,8 @@
   z-index: 142;
   background:url(../images/gif/faro2.gif) no-repeat 50% 50%;
   background-size: contain;
-}
-#icoPrev_47{ 
+} */
+/* #icoPrev_47{ 
   left : 421px;
   top : 1292px;
   width : 87px;
@@ -639,7 +639,7 @@
   z-index: 142;
   background:url(../images/gif/farocarro.gif) no-repeat 50% 50%;
   background-size: contain;
-}
+} */
 #icoPrev_48{ 
   left : 368px;
   top : 1573px;
@@ -651,11 +651,12 @@
 }
 #icoPrev_49{ 
   left : 819px;
-  top : 1991px;
+  top : 1896px;
   width : 70px;
-  height : 72px;
+  height : 62px;
   z-index: 210;
-  background:url(../images/gif/monst2.gif) no-repeat 50% 50%;
+  opacity: 0.3;
+  background:url(../images/gif/humo.gif) no-repeat 50% 50%;
   background-size: contain;
 }
 /* #icoPrev_50{ 
@@ -686,7 +687,7 @@
   background:url(../images/gif/dogi5.gif) no-repeat 50% 50%;
   background-size: contain;
 }
-#icoPrev_53{ 
+/* #icoPrev_53{ 
   left : 2405px;
   top : 1244px;
   width : 43px;
@@ -694,7 +695,7 @@
   z-index: 130;
   background:url(../images/gif/palo2.gif) no-repeat 50% 50%;
   background-size: contain;
-}
+} */
 /* #icoPrev_54{ 
   left : 2066px;
   top : 1511px;
@@ -713,10 +714,6 @@
   background:url(../images/gif/stars.gif) no-repeat 50% 50%;
   background-size: contain;
 } */
-
-
-
-
 
 #icoPrev_19 {
   left : 1820px;
@@ -1047,10 +1044,6 @@
   width: 536px;
   height: 206px;
   overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  -ms-overflow-scrolling: touch;
-  -moz-overflow-scrolling: touch;
-  -o-overflow-scrolling: touch;
 }
 
 .accordionMC {

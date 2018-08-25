@@ -16,7 +16,7 @@ function resultadoPuntos(punts) {
 }
 
 function pantallafinal(){
-	//stopBGMusic();
+	stopBGMusic();
 	//playFX(window["BGWin"]);
 	$("#capaResumen, #caratulaFin1").fadeIn(500);
     $.post(bdir + 'ajax/init_calificacion').done(function (data) {

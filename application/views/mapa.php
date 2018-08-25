@@ -81,7 +81,7 @@
                     <div id="icoPrev_2" class="icoPrev"></div>
                     <div id="icoPrev_3" class="icoPrev"></div>
                     <div id="icoPrev_4" class="icoPrev persona_mov1"></div>
-                    <div id="icoPrev_5" class="icoPrev persona_mov1"></div>
+                    <!-- <div id="icoPrev_5" class="icoPrev persona_mov1"></div> -->
                     <div id="icoPrev_6" class="icoPrev persona_mov1"></div>
                     <div id="icoPrev_7" class="icoPrev persona_mov1"></div>
                     <div id="icoPrev_8" class="icoPrev persona_mov1"></div>
@@ -114,29 +114,28 @@
                     <!-- <div id="icoPrev_31" class="icoPrev"></div> -->
                     <div id="icoPrev_32" class="icoPrev"></div>
                     <!-- <div id="icoPrev_33" class="icoPrev"></div> -->
-
-                    <div id="icoPrev_34" class="icoPrev"></div>
+                    <!-- <div id="icoPrev_34" class="icoPrev"></div> -->
                     <div id="icoPrev_35" class="icoPrev"></div>
                     <div id="icoPrev_36" class="icoPrev"></div>
-                    <div id="icoPrev_37" class="icoPrev"></div>
+                    <!-- <div id="icoPrev_37" class="icoPrev"></div> -->
                     <div id="icoPrev_38" class="icoPrev"></div>
-                    <div id="icoPrev_39" class="icoPrev"></div>
-                    <!-- <div id="icoPrev_40" class="icoPrev"></div>
+                    <!-- <div id="icoPrev_39" class="icoPrev"></div>
+                    <div id="icoPrev_40" class="icoPrev"></div>
 
                     <div id="icoPrev_41" class="icoPrev"></div>
                     <div id="icoPrev_42" class="icoPrev"></div> -->
                     <div id="icoPrev_43" class="icoPrev"></div>
-                    <!-- <div id="icoPrev_44" class="icoPrev"></div> -->
+                    <!-- <div id="icoPrev_44" class="icoPrev"></div>
                     <div id="icoPrev_45" class="icoPrev"></div>
-                    <div id="icoPrev_46" class="icoPrev"></div>
+                    <div id="icoPrev_46" class="icoPrev"></div> -->
                     <!-- <div id="icoPrev_47" class="icoPrev"></div> -->
                     <div id="icoPrev_48" class="icoPrev"></div>
                     <div id="icoPrev_49" class="icoPrev"></div>
                     <!-- <div id="icoPrev_50" class="icoPrev"></div>
 
-                    <div id="icoPrev_51" class="icoPrev"></div> -->
+                    <div id="icoPrev_51" class="icoPrev"></div> 
                     <div id="icoPrev_52" class="icoPrev"></div>
-                    <div id="icoPrev_53" class="icoPrev"></div>
+                    <div id="icoPrev_53" class="icoPrev"></div>-->
                     <!-- <div id="icoPrev_54" class="icoPrev"></div>
                     <div id="icoPrev_55" class="icoPrev"></div> -->
                     <div id="icoPrev_56" class="icoPrev"></div>

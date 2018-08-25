@@ -60,7 +60,7 @@ body{
 }
 #instrucciones_1{ background: url(../images/bginst1.png) no-repeat center center; }
 #instrucciones_2{ background: url(../images/bginst2.png) no-repeat center center; }
-.touchIsOn #instrucciones_2{ background: url(../images/bginst2t.png) no-repeat center center; }
+.touchIsOn #instrucciones_2{ background: url(../images/bginst2.png) no-repeat center center; }
 #instrucciones_3{ background: url(../images/bginst3.png) no-repeat center center; }
 .touchIsOn #instrucciones_3{ background: url(../images/bginst3t.png) no-repeat center center; }
 #instrucciones_4{ background: url(../images/bginst4.png) no-repeat center center; }
