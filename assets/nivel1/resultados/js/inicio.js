@@ -86,11 +86,11 @@ $(document).ready(function (e) {
     });
     $('#i4btn_1').click(function (e) {
         playSound(window.playBTN);
-        $('#instruccion_6').fadeIn(1000);
+        //$('#instruccion_6').fadeIn(1000);
         setTimeout(function () {
             window.location.href = bdir + 'mapa';
             //console.log(bdir + 'main');
-        }, 4000);
+        }, 1000);
     });
     //para probar el campo de nombre en la constancia
     /***

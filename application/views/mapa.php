@@ -111,10 +111,10 @@
                         <div id="popAl_15" class="pop_alcalde"><span class="consejitos">!Auxilio¡</span></div>                    
                     </div>
                     <div id="icoPrev_30" class="icoPrev"></div>
-                    <!-- <div id="icoPrev_31" class="icoPrev"></div> -->
+                    <div id="icoPrev_31" class="icoPrev"></div>
                     <div id="icoPrev_32" class="icoPrev"></div>
-                    <!-- <div id="icoPrev_33" class="icoPrev"></div> -->
-                    <!-- <div id="icoPrev_34" class="icoPrev"></div> -->
+                    <div id="icoPrev_33" class="icoPrev"></div>
+                    <div id="icoPrev_34" class="icoPrev"></div>
                     <div id="icoPrev_35" class="icoPrev"></div>
                     <div id="icoPrev_36" class="icoPrev"></div>
                     <!-- <div id="icoPrev_37" class="icoPrev"></div> -->
@@ -196,11 +196,15 @@
                 </div>
 
                 <div id="popAct_1" class="caratula">
-                    <!-- <div id="i4Buzon"></div> -->
-
                     <div id="accordion">
                         <div class="maestra"></div>
                         <div class="cont_accord">
+
+                            <button id="acord_3" class="accordionMC">¿Porqué esta bloqueado el camino y no puedo continuar?</button>
+                            <div id="pan_acord_3" class="panel">
+                                <p>Esta barra bloquea tu camino si es que no terminaste de realizar los 4 cursos de "EXPERTOS EN LA PREVENCIÓN" que estan en el edificio de la prevención.</p>
+                            </div>
+
                             <button id="acord_1" class="accordionMC">¿No puedo ingresar a algunos cursos?</button>
                             <div id="pan_acord_1" class="panel">
                                 <p>Esto lo determina el sistema dependiendo del tipo de usuario que tengas: por ejemplo si eres usuario de planta u oficina no tendrás el acceso al curso de ‘CONDUCTORES SEGUROS’, si el curso no carga por completo o se queda cargando debido a la lentitud de la linea deberas precionar F5 del teclado ó el botón actualizar del navegador.</p>
@@ -229,31 +233,31 @@
                             <button id="acord_7" class="accordionMC">¿Puedo volver a revisar los contenidos de los cursos?</button>
                             <div id="pan_acord_7" class="panel">
                                 <p>Si puedes revisar el contenido del curso, mas no podrás realizar el reto nuevamente, Si es que ya usaste tus 2 oportunidades, tendrías que solicitar a tu supervisor a cargo que reinicien tu cuenta para ese curso, justificando el problema que tuviste al realizarlo.</p>
-                            </div>                            
+                            </div>   
+
+                            <button id="acord_8" class="accordionMC">Mi pantalla se queda en negro cuando entro al curso</button>
+                            <div id="pan_acord_8" class="panel">
+                                <p>Podria ocurrir si es que el computador o dispositivo no llegara a descargar todo el contenido del curso, para esto es necesario actualizar el navegador con el teclado F5 si no se corrige, verificar tu linea de internet.</p>
+                            </div>  
+
                         </div>
                         <div id="correo_mc"></div>
                     </div>
-
                     <form id="formBuzon" class="clearfix" method="post" action="#">
                         <div class="opcAyuda"><p class="ayuda_MC"> </p></div>
                         <div id="pop2txt1">Si tienes alguna duda puedes escribir en la casilla de abajo y te responderemos lo antes posible.</div>
                         <textarea id="pop2ta" maxlength="400"></textarea>
-                        <!-- <div id="pop2txt2">(*) Los días miércoles las respuestas a tus dudas o consultas serán en tiempo real de 8:30 a.m. a 6:00 p.m.</div> -->
                         <input id="pop2sub" class="clearfix" type="submit" value=" ">
-                        <!-- <div id="pop2close"></div> -->
                     </form> 
                     <div id="preg_1_1" class="aceptaCd pregOpc"> </div>
-                   
                 </div>
 
                 <div id="popAct_2" class="caratula"> 
                     <div class="drivers"></div>
-                    <!-- <a id="preg_2_1" class="CV_btn1 disable" href="#">IR AL CURSO</a> -->
                     <?php echo anchor('drivers', ' ', array('id' => 'preg_2_1','class' => 'CV_btn1 disable'));
-                    echo anchor('mapa/certificado_drivers', '&nbsp;', array('id' => 'i4Certificado', 'class' => $certificado_drivers, 'target' => '_blank'));
+                    echo anchor('mapa/certificado_drivers', '&nbsp;', array('id' => 'i4Certificado', 'class' => $certificado_drivers, 'target' => '_blank', 'style' => 'left: 552px;
+                    top: 402px;'));
                      ?>
-
-                    <!-- <div id="preg_2_1" class="CV_btn1 pregOpc">IR AL CURSO</div> -->
                     <div id="preg_2_0" class="CV_btn2 pregOpc"> </div>
                 </div>
 
@@ -287,8 +291,10 @@
 
                 <div id="popAct_7" class="caratula"> 
                     <div class="pausas"><p class="textCent"></p></div>
-                    <?php echo anchor('Pausasactivas', ' ', array('id' => 'preg_7_1  ','class' => 'CV_btn1 disable')); 
-                    echo anchor('mapa/certificado_pausas', '&nbsp;', array('id' => 'i4Certificado', 'class' => $certificado_pausas, 'target' => '_blank'));
+                    <?php 
+                    echo anchor('Pausasactivas', ' ', array('id' => 'preg_7_1  ','class' => 'CV_btn1 disable')); 
+                    echo anchor('mapa/certificado_pausas', '&nbsp;', array('id' => 'i4Certificado', 'class' => $certificado_pausas, 'target' => '_blank', 'style' => 'left: 552px;
+                    top: 402px;'));
                     ?>
                     <div id="preg_7_0" class="CV_btn2 pregOpc"></div>
                 </div>
@@ -307,7 +313,8 @@
                     <div class="auxilio"><p class="textCent"> </p></div>
                     <?php 
                         echo anchor('Prevencion', ' ', array('id' => 'preg_10_1','class' => 'CV_btn1 disable')); 
-                        echo anchor('mapa/certificado_emergencias', '&nbsp;', array('id' => 'i4Certificado', 'class' => $certificado_emergencias, 'target' => '_blank'));?>                    
+                        echo anchor('mapa/certificado_emergencias', '&nbsp;', array('id' => 'i4Certificado', 'class' => $certificado_emergencias, 'target' => '_blank', 'style' => 'left: 552px;
+                        top: 402px;'));?>                    
                     <div id="preg_10_0" class="CV_btn2 pregOpc"> </div>
                 </div>
 

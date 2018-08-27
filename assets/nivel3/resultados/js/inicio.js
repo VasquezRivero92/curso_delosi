@@ -48,10 +48,10 @@ $(document).ready(function (e) {
     });
     $('#i4btn_1').click(function (e) {
         playSound(window.playBTN);
-        $('#instruccion_6').fadeIn(1000);
+        //$('#instruccion_6').fadeIn(1000);
         setTimeout(function () {
             window.location.href = bdir + 'mapa';
-        }, 4000);
+        }, 1000);
     });
 });
 /*******************************************************************************/

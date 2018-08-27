@@ -33,7 +33,7 @@ foreach ($arrayUser as $sUser) {
             . '<div style="font-size:48px; font-weight:bold; color:#0075bc;">CONSTANCIA</div>'
             . '<div>LA EMPRESA <b style="font-weight:bold;">' . $sUser['empresa'] . '</b> DEJA CONSTANCIA QUE:</div>'
             . '<div style="font-weight:bold;">' . $sUser['nombre'] . '</div>'
-            . '<div>HA COMPLETADO LOS (4) CURSOS DE "EXPERTOS EN LA PREVENCIÓN", <br>REALIZADO DURANTE EL AÑO 2017';
+            . '<div>HA COMPLETADO LOS (4) CURSOS DE "EXPERTOS EN LA PREVENCIÓN", <br>REALIZADO DURANTE EL AÑO 2018';
     $obj_pdf->writeHTML($html, true, false, true, false, 'C');
 }
 

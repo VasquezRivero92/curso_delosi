@@ -483,15 +483,14 @@
   background:url(../images/gif/bird2.gif) no-repeat 50% 50%;
   background-size: contain;
 }
-/* #icoPrev_31{ 
-  left : 1671px;
-  top : 1400px;
-  width : 27px;
-  height : 26px;
+#icoPrev_31{ 
+  left : 1537px;
+  top : 1082px;
+  width : 117px;
+  height : 102px;
   z-index: 142;
-  background:url(../images/gif/bird2.gif) no-repeat 50% 50%;
-  background-size: contain;
-} */
+  background:url(../images/mapa/drivers.png) no-repeat 50% 50%;
+}
 #icoPrev_32{ 
   left : 1796px;
   top : 1452px;
@@ -502,24 +501,22 @@
   background:url(../images/gif/bird2.gif) no-repeat 50% 50%;
   background-size: contain;
 }
-/* #icoPrev_33{ 
-  left : 180px;
-  top : 1021px;
-  width : 46px;
-  height : 42px;
-  z-index: 2;
-  background:url(../images/gif/dance.gif) no-repeat 50% 50%;
-  background-size: contain;
-} */
-/* #icoPrev_34{ 
-  left : 620px;
-  top : 947px;
-  width : 60px;
-  height : 56px;
-  z-index: 2;
-  background:url(../images/gif/lucesconstruct.gif) no-repeat 50% 50%;
-  background-size: contain;
-} */
+#icoPrev_33{ 
+  left : 1277px;
+  top : 1482px;
+  width : 108px;
+  height : 102px;
+  z-index: 160;
+  background:url(../images/mapa/evancuando.png) no-repeat 50% 50%;
+} 
+#icoPrev_34{ 
+  left : 2272px;
+  top : 1482px;
+  width : 106px;
+  height : 102px;
+  z-index: 160;
+  background:url(../images/mapa/pausasactivas.png) no-repeat 50% 50%;
+}
 #icoPrev_35{ 
   left : 1258px;
   top : 1721px;

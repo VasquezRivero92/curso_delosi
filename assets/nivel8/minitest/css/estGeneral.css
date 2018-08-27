@@ -339,7 +339,8 @@ b{ font-weight: bold; }
 #resumenAvatar{
     position: absolute;
     width: 268px; height: 341px;
-    top: 203px; left: 394px;
+    top: 192px;
+    left: 383px;
     background-color: rgba(0,0,0,0);
     background-repeat: no-repeat;
     background-position: 0px 0px;
