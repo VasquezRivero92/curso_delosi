@@ -269,7 +269,7 @@
                     <div class="<?php echo $cursocheck4?>"></div>                   
                     <?php
                         // echo anchor('cuestionario', '&nbsp;', array('id' => 'i4Cuestionario'));
-                        echo anchor('mapa/certificado_prevencion', '&nbsp;', array('id' => 'i4Certificado_p', 'class' => $certificado_prevencion, 'target' => '_blank'));
+                        echo anchor('mapa/certificado_prevencion', '&nbsp;', array('id' => 'i4Certificado_p', 'class' => $certificado_prevencion, 'target' => '_blank','style' => 'top: 402px; left: 720px;'));
                         for ($i = 4; $i > 0; $i--) {
                             $clases = 'i4Nivel disable';
                             // echo $cursocheck;                            

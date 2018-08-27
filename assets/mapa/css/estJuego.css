@@ -217,12 +217,12 @@
   background-image:url(../images/mapa/preguntas.svg); }
 
 #icoPel_15{ 
-  left : 1671px;
-  top : 1127px;
-  width : 104px;
-  height : 80px;
+  left : 1673px;
+  top : 1082px;
+  width : 106px;
+  height : 102px;
   z-index: 120;
-  background-image:url(../images/mapa/not1.svg); }
+  background-image:url(../images/mapa/detenflechas.png); }
 /* #icoPel_11{ 
     background-image:url(../images/mapa/peligro11.png); } */
 
@@ -869,8 +869,8 @@
 }
 .anim1{
   position : absolute ;
-  left : 480px;
-  top : 397px;
+  left: 330px;
+  top: 397px;
   width: 100px;
   height: 80px;
   background:url(../images/UI/a1.png) no-repeat;
@@ -881,7 +881,7 @@
 }
 .anim2{
    position : absolute ;
-    left: 574px;
+    left: 424px;
     top: 398px;
   width: 100px;
   height: 80px; 
@@ -893,7 +893,7 @@
 }
 .anim3{
    position : absolute ;
-    left: 666px;
+    left: 516px;
     top: 398px;
   width: 100px;
   height: 80px; 
@@ -905,7 +905,7 @@
 }
 .anim4{
    position : absolute ;
-    left: 758px;
+    left: 608px;
     top: 397px;
   width: 100px;
   height: 80px;
@@ -1214,10 +1214,10 @@
     opacity: 0.7;
 }
 
-#i4Nivel_1{ left: 480px; background-image: url(../images/i4nivel_1.png); }
-#i4Nivel_2{ left: 574px; background-image: url(../images/i4nivel_2.png); }
-#i4Nivel_3{ left: 667px; background-image: url(../images/i4nivel_3.png); }
-#i4Nivel_4{ left: 759px; background-image: url(../images/i4nivel_4.png); }
+#i4Nivel_1{ left: 330px; background-image: url(../images/i4nivel_1.png); }
+#i4Nivel_2{ left: 424px; background-image: url(../images/i4nivel_2.png); }
+#i4Nivel_3{ left: 517px; background-image: url(../images/i4nivel_3.png); }
+#i4Nivel_4{ left: 609px; background-image: url(../images/i4nivel_4.png); }
 
 
 /*******************************************************************************/
