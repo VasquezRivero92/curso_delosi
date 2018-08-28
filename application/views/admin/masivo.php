@@ -38,7 +38,7 @@
                             <input class="subBTN" type="submit" value="Subir Archivo" /><br><br>
                             <input id="eduser-run" class="runBTN" type="button" value="Actualizar" />
                             <!--<input id="eduser-mail" class="runBTN" type="button" value="Enviar mail masivo" />-->
-                        </form>
+                        </form>                        
                     </div>
                     <div id="eduemp-c" class="reg-multi">
                         <form id="eduemp-form" action="" enctype="multipart/form-data">
@@ -65,7 +65,23 @@
                         </form>
                     </div>
                     <br><br>S.C. = sin cambios<br>
-                    <div id="exc-tabla"></div>
+                    <div id="exc-tabla">                                        
+                    </div>
+                    <table id="info">
+                            <tr>
+                                <th>Nuevos</th>
+                                <th>Existentes</th> 
+                                <th>Recibidos</th> 
+                                <!-- <th>Faltantes</th>  -->
+                            </tr>
+                            <tr>
+                                <td id="nuevos">0</td>
+                                <td id="existentes">0</td>
+                                <td id="recibidos">0</td>
+                                <!-- <td id="faltantes">0</td> -->
+                            </tr>
+                    </table>
+                    
                 </div>
             </section>
         </div>
