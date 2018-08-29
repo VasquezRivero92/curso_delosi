@@ -76,7 +76,7 @@
             <div id="sliderPage_1" class="instrucciones">
                 <!-- <div id="s1tit_1" class="stit_1"></div>
                 <div id="s1tit_2" class="stit_2"></div> -->
-                <!-- <div id="s1txt_1" class="stxt_1">Mantén presionado el cursor sobre la imagen<br>para ver la manera de prevenir los peligros.</div> -->
+                <div id="s1txt_1" class="stxt_1">Antes de realizar la Pausas Activas, revisemos<br>algunos consejos para tener una buena postura:</div>
                 <div class="cont-carousel">
                     <div class="owl-carousel">
                         <div class="item" data-id=1>
@@ -91,15 +91,18 @@
                             <div id="s1i5"></div>
                             <div id="s1i6"></div>
                         </div>
-                        <div class="item" data-id=4>                            
+                        <!-- <div class="item" data-id=4>                            
                             <div id="s1i7"></div>
-                        </div>
+                        </div> -->
                         <!-- <div class="item" data-id=3>
                             <div id="s1i3"></div><div id="s1i3h"></div><div id="s1i3p"></div><div class="itmHand"></div><div class="itemLoader"></div>
                         </div> -->
                     </div>
                 </div>
                 <div class="btnVolver"></div>
+            </div>
+            <div id="sliderPage_4_1" class="instrucciones">
+                <div id="i2btn_1_1">Continuar</div>
             </div>
             <!-- - - - - - - - - - - - - - - -  Slider 2  - - - - - - - - - - - - - - - -->
             <div id="sliderPage_2" class="instrucciones">
@@ -108,7 +111,7 @@
                 <div id="s2txt_1" class="stxt_1">CABEZA Y CUELLO</div>                
                 
                 <div class="cont-carousel">
-                    <div class="owl-carousel">                        
+                    <div class="owl-carousel">      
                         <div class="item" data-id=1>
                             <div id="s2i1"></div>                            
                         </div>

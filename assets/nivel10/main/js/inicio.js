@@ -61,6 +61,13 @@ $(document).ready(function (e) {
         barHeight: 0,
         onComplete: showInicio
     });
+    $('#i2btn_1_1').click(function () {
+        stopTexto();
+        playSound(window.playBTN);
+        $('#sliderPage_4_1').stop().delay(300).fadeOut(100);
+        $('#sliderPage_1').stop().fadeIn(500);
+        $('#s1txt_1').html('Antes de realizar la Pausas Activas, revisemos<br>algunos consejos para tener una buena postura:');
+    });
     $('#i2btn_1').click(function () {
         stopTexto();
         playSound(window.playBTN);
@@ -94,7 +101,7 @@ $(document).ready(function (e) {
         }else if(sID == 3){
             $('#sliderPage_3_1').stop().fadeIn(500);
         }else{
-            $('#sliderPage_' + sID).stop().fadeIn(500);
+            $('#sliderPage_4_1').stop().fadeIn(500);
         }
         switch(sID) {
         case 1:
@@ -176,10 +183,12 @@ $(document).ready(function (e) {
         id_sl = e.item.index + 1;  
         console.log(id_sl);
          if(id_sl == 3 || id_sl == 4){
+            $('#s1txt_1').html('Mantener  posiciones neutrales en:');
             $('#s2txt_1').html('BRAZOS Y TRONCO');
          }else if(id_sl == 5 || id_sl == 6){
             $('#s2txt_1').html('PIERNAS');
          }else{
+            $('#s1txt_1').html('Antes de realizar la Pausas Activas, revisemos algunos consejos para tener una buena postura:');
             $('#s2txt_1').html('CABEZA Y CUELLO');
         }
         if(sli_1 == true){

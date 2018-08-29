@@ -95,7 +95,22 @@ body{
     color : #FFFFFF;
     text-align: center;
 }
-
+#i2btn_1_1{
+    -webkit-border-radius: 1em;
+-moz-border-radius: 1em;
+position: absolute;
+width: 188px;    
+height: 43px;
+left: 475px;
+top: 525px;
+font-family: "Catalogo";
+font-size: 18px;
+line-height: 35px;
+color: #ffffff;
+text-align: center;
+background: url(../images/btn.png) no-repeat center center;
+cursor: pointer;
+}
 /*******************************  Instruccion 2  *******************************/
 #instruccion_2{ background: url(../images/bginst2.png) no-repeat center center; }
 #i2img_1{
@@ -103,7 +118,7 @@ body{
     width: 544px;
     height: 597px;
     left: 690px;
-    top: 32px;
+    top: 35px;
     background-color: rgba(0,0,0,0);
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -469,6 +484,8 @@ body{
 
 /*******************************  Slider Page 1  *******************************/
 #sliderPage_1{ background: url(../images/bgspg1.png) no-repeat center center; }
+#sliderPage_4_1{ background: url(../images/bginst4_1.png) no-repeat center center; }
+
 .cvhangeimg{
    background: url(../images/bgspg1_1.png) no-repeat center center !important;; 
 }
@@ -532,7 +549,7 @@ body{
     top: -10px;}
 .planta #s1i3{     position: absolute;
     background: url(../images/slider/planta/sl1_3.png) no-repeat center center;
-    left: -200px;
+    left: 0px;
     top: -10px;}
 
 .restaurante #s1i4{     position: absolute;
@@ -547,10 +564,10 @@ body{
     background: url(../images/slider/restaurante/sl1_4.png) no-repeat center center;
     left: 260px;
     top: -10px; }
-.planta #s1i4{     position: absolute;
+/* .planta #s1i4{     position: absolute;
     background: url(../images/slider/planta/sl1_4.png) no-repeat center center;
     left: 260px;
-    top: -10px; }
+    top: -10px; } */
 
 .restaurante #s1i5{     position: absolute;
     background: url(../images/slider/restaurante/sl1_5.png) no-repeat center center;
@@ -602,7 +619,17 @@ body{
     background: url(../images/slider/planta/sl1_7.png) no-repeat center center;
     left: 0px;
     top: -10px }
-
+#s1txt_1{
+    font-family:"Catalogo Gruesa";
+    font-size : 17px;
+    text-align: center;
+    color : #000000;
+    position : absolute ;
+    left : 500px;
+    top : 150px;
+    width : 400px;
+    height : 43px;
+}
 
 /*******************************  Slider Page 2  *******************************/
 #sliderPage_2{ background: url(../images/bgspg2.png) no-repeat center center; }
@@ -655,19 +682,19 @@ body{
 
 .restaurante #s2i3{     position: absolute;
     background: url(../images/slider/restaurante/sl2_3.png) no-repeat center center;
-    left: --5px;
+    left: -5px;
     top: -10px;}
 .planta #s2i3{     position: absolute;
     background: url(../images/slider/planta/sl2_3.png) no-repeat center center;
-    left: --5px;
+    left: -5px;
     top: -10px;}
 .oficina #s2i3{     position: absolute;
     background: url(../images/slider/oficina/sl2_3.png) no-repeat center center;
-    left: --5px;
+    left: -5px;
     top: -10px;}
 .driver #s2i3{     position: absolute;
     background: url(../images/slider/restaurante/sl2_3.png) no-repeat center center;
-    left: --5px;
+    left: -5px;
     top: -10px;}
 
 .restaurante #s2i4{     position: absolute;
