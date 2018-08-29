@@ -455,3 +455,10 @@ table{
 }
 #rep-descarga:hover{ background-color:#000; }
 /********************************************************************************/
+
+#info{
+    position: absolute;
+    left: 980px;
+    top: 140px;
+    width: 250px;
+}

@@ -19,6 +19,8 @@ var tTienda = [];
 var regIdx = 0;
 var suma = 0;
 var total = 0;
+var nuevo = 0;
+var existe = 0;
 var userLimit = 50;
 
 var newArea = [];
@@ -36,8 +38,7 @@ function rel_array(array) {
 /*******************************************************************************/
 function creaTablaEdUser() {
     var tabla = '<table><tr><td>DNI</td><td colspan=3>APELLIDOS Y NOMBRES</td><td>EMAIL</td><td>GRUPO</td><td>TIPO</td></tr>';
-    var nuevo = 0;
-    var existe = 0;
+    
     packEdUser.forEach(function (itm) {
         var colB = itm[1] ? itm[1].toUpperCase() : 'S.C.';
         var colC = itm[2] ? itm[2].toUpperCase() : 'S.C.';
@@ -60,13 +61,17 @@ function creaTablaEdUser() {
         }
     });
     tabla += '</table>';
-    $('#exc-tabla').show().html(tabla);
+    $('#exc-tabla').show().html(tabla);    
+    $('#nuevos').html(nuevo); 
+    $('#existentes').html(existe); 
+
     console.log('nuevos: ' + nuevo);
     console.log('existentes: ' + existe);
 }
 
 function creaTablaEdUEmp() {
     var tabla = '<table><tr><td>DNI</td><td>APELLIDOS Y NOMBRES</td><td>EMPRESA</td><td>AREA</td><td>DEPARTAMENTO</td><td>SEDE</td><td>TIPO</td></tr>';
+    
     packEdUEmp.forEach(function (itm) {
         var colD = itm[4] ? itm[4].toUpperCase() : 'S.C.';
         var colE = itm[5] ? itm[5].toUpperCase() : 'S.C.';
@@ -80,9 +85,16 @@ function creaTablaEdUEmp() {
         tabla += '<td>' + colF + '</td>';
         tabla += '<td>' + itm[11] + '</td>';
         tabla += '</tr>';
+        if (itm[11] == 'nuevo') {
+            nuevo++
+        } else {
+            existe++;
+        }
     });
     tabla += '</table>';
     $('#exc-tabla').show().html(tabla);
+    $('#nuevos').html(nuevo); 
+    $('#existentes').html(existe); 
 }
 
 function creaTablaDelUEmp() {
@@ -282,6 +294,7 @@ function runEdUser() {
         $('.runBTN').removeAttr('disabled');
         $('#infoMessage').html('Actualización de usuarios completada');
         console.log('Registros: ' + suma);
+        // $('#faltantes').html(suma); 
         return;
     }
     $.post(bdir + 'ajaxadm/run_ed_user', {data: tData}).done(function (data) {
@@ -388,6 +401,10 @@ function runTienda() {
 $(document).ready(function () {
     $('.runBTN').hide();
     $('#masivo-menu > div').click(function () {
+        $('#nuevos').html(0); 
+        $('#existentes').html(0);
+        $('#recibidos').html(0);
+        // $('#faltantes').html(0); 
         $('#exc-tabla').show().html('');
         $('#masivo-menu > div').removeClass('active');
         $('.reg-multi').removeClass('active');
@@ -396,6 +413,14 @@ $(document).ready(function () {
         $('#' + id).addClass('active');
     });
     $('#eduser-form').submit(function () {
+        suma = 0;
+        total = 0;
+        nuevo = 0;
+        existe = 0;
+        $('#nuevos').html(0); 
+        $('#existentes').html(0);
+        $('#recibidos').html(0); 
+        // $('#faltantes').html(0); 
         $('.subBTN').attr('disabled', 'disabled');
         var formData = new FormData($(this)[0]);
         $.ajax({
@@ -411,7 +436,8 @@ $(document).ready(function () {
             $('.runBTN').attr('disabled', 'disabled');
             $('#eduser-run,#eduser-mail').removeAttr('disabled').show();
             $('.subBTN').removeAttr('disabled');
-            console.log('edUser recibido: ' + data.length);
+            console.log('edUser recibido: ' + data.length);            
+            $('#recibidos').html(data.length); 
             //console.log(data);
             creaTablaEdUser();
         }).fail(function (jqXHR, textStatus, errorThrown) {
@@ -423,6 +449,14 @@ $(document).ready(function () {
     });
 
     $('#eduemp-form').submit(function () {
+        suma = 0;
+        total = 0;
+        nuevo = 0;
+        existe = 0;
+        $('#nuevos').html(0); 
+        $('#existentes').html(0);
+        $('#recibidos').html(0); 
+        // $('#faltantes').html(0); 
         $('.subBTN').attr('disabled', 'disabled');
         var formData = new FormData($(this)[0]);
         $.ajax({
@@ -439,6 +473,7 @@ $(document).ready(function () {
             $('#eduemp-run').removeAttr('disabled').show();
             $('.subBTN').removeAttr('disabled');
             console.log('edUEmp recibido: ' + data.length);
+            $('#recibidos').html(data.length); 
             //console.log(data);
             creaTablaEdUEmp();
         }).fail(function (jqXHR, textStatus, errorThrown) {

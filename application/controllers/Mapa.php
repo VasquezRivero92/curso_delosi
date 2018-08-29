@@ -37,35 +37,9 @@ class Mapa extends Nivel_Controller {
                 $this->data['firstWindow'] = 4;
             }
         }else {
-            redirect('main', 'refresh');
-        }
+            redirect('main', 'refresh');        }
 
-        for ($i = 1; $i <= 4; $i++) {
-            $resul = $this->base_model->get_puntaje($this->session->user_id, $i);
-            if (!$resul || !$resul->intentos) {
-                $this->data['pared'] = 0;
-                if($i == 1){
-                    $this->data['cursocheck1'] =  'anim1';
-                }else if($i == 2){
-                    $this->data['cursocheck2'] =  'anim2';
-                }else if($i == 3){
-                    $this->data['cursocheck3'] =  'anim3';
-                }else{
-                    $this->data['cursocheck4'] =  'anim4';
-                }                           
-            }else{
-                $this->data['pared'] = 1;
-                if($i == 1){
-                    $this->data['cursocheck1'] =  '';
-                }else if($i == 2){
-                    $this->data['cursocheck2'] =  '';
-                }else if($i == 3){
-                    $this->data['cursocheck3'] =  '';
-                }else{
-                    $this->data['cursocheck4'] =  '';
-                }              
-            }
-        }
+        
         
 
     	$this->data['own_dir'] = $this->data['assets_dir'] . '/mapa';
@@ -78,6 +52,37 @@ class Mapa extends Nivel_Controller {
         $this->data['certificado_pausas'] = $this->checkCertificado_pausas() ? '' : 'disable';
         $this->data['certificado_emergencias'] = $this->checkCertificado_emergencias() ? '' : 'disable';
 
+        
+        for ($i = 1; $i <= 4; $i++) {
+            $resul = $this->base_model->get_puntaje($this->session->user_id, $i);            
+            if (!$resul || !$resul->intentos) {
+                $this->data['pared'] = 0;
+                if($i == 1){
+                    $this->data['cursocheck1'] =  'anim1';
+                }else if($i == 2){
+                    $this->data['cursocheck2'] =  'anim2';
+                }else if($i == 3){
+                    $this->data['cursocheck3'] =  'anim3';
+                }else{
+                    $this->data['cursocheck4'] =  'anim4';
+                }                    
+            }else{
+                if($this->data['certificado_prevencion'] == 'disable'){
+                    $this->data['pared'] = 0;
+                }else{
+                    $this->data['pared'] = 1;
+                }
+                if($i == 1){
+                    $this->data['cursocheck1'] =  '';
+                }else if($i == 2){
+                    $this->data['cursocheck2'] =  '';
+                }else if($i == 3){
+                    $this->data['cursocheck3'] =  '';
+                }else{
+                    $this->data['cursocheck4'] =  '';
+                }              
+            }
+        }
 
         $this->load->view('mapa', $this->data);
     }
