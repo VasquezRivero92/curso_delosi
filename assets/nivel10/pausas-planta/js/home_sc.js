@@ -8,11 +8,6 @@ function resultadoPuntos(punts) {
     $.post(bdir + 'ajax/set_puntaje', data).done(function (data) {
         console.log("resultado: " + data);
     });
-    /***
-     $('#resumenPuntaje').html('Puntos: '+ $J[1].ptsWinJuego + '<br>'
-     +'Bonus por tiempo: '+ $J[1].CTiempo + '<br>'
-     +'Total: '+ sumaPuntos + '<br>'
-     +'Estrellas: '+ estrellas);/***/
 }
 
 function pantallafinal(){
@@ -50,6 +45,9 @@ function radioPop(){
 
 function detenerSonido(){
 	stopBGMusic();
+}
+function btnTouch() {
+    playFX(window.audioCatch);
 }
 
 

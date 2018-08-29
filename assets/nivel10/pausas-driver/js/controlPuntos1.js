@@ -33,7 +33,7 @@ function handleComplete(evt,comp) {
     for(i=0; i<ssMetadata.length; i++) {
         ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
     }
-    exportRoot = new lib.pausasactivas();
+    exportRoot = new lib.restaurante();
     stage = new lib.Stage(canvas);
     stage.enableMouseOver();    
     //Registers the "tick" event listener.

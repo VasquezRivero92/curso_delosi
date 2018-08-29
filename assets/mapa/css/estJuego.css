@@ -389,6 +389,9 @@
   background:url(../images/gif/gatito2.gif) no-repeat 50% 50%;
   background-size: contain;
 }
+.touchIsOn #icoPrev_22{  background:url() no-repeat 50% 50%; }
+
+
 #icoPrev_23{ 
   left : 1581px;
   top : 1344px;
@@ -398,6 +401,8 @@
   background:url(../images/gif/dog1.gif) no-repeat 50% 50%;
   background-size: contain;
 }
+.touchIsOn #icoPrev_23{  background:url() no-repeat 50% 50%; }
+
 #icoPrev_24{ 
   left : 1497px;
   top : 2047px;
@@ -407,6 +412,8 @@
   background:url(../images/gif/dog2.gif) no-repeat 50% 50%;
   background-size: contain;
 }
+.touchIsOn #icoPrev_24{  background:url() no-repeat 50% 50%; }
+
 #icoPrev_25{ 
   left : 2409px;
   top : 1419px;
@@ -416,6 +423,8 @@
   background:url(../images/gif/gatito.gif) no-repeat 50% 50%;
   background-size: contain;
 }
+.touchIsOn #icoPrev_25{  background:url() no-repeat 50% 50%; }
+
 #icoPrev_26{ 
   left : 2770px;
   top : 1328px;
@@ -483,6 +492,8 @@
   background:url(../images/gif/bird2.gif) no-repeat 50% 50%;
   background-size: contain;
 }
+.touchIsOn #icoPrev_30{  background:url() no-repeat 50% 50%; }
+
 #icoPrev_31{ 
   left : 1537px;
   top : 1082px;
@@ -501,6 +512,8 @@
   background:url(../images/gif/bird2.gif) no-repeat 50% 50%;
   background-size: contain;
 }
+.touchIsOn #icoPrev_32{  background:url() no-repeat 50% 50%; }
+
 #icoPrev_33{ 
   left : 1277px;
   top : 1482px;
@@ -526,6 +539,8 @@
   background:url(../images/gif/lucesconstruct.gif) no-repeat 50% 50%;
   background-size: contain;
 }
+.touchIsOn #icoPrev_35{  background:url() no-repeat 50% 50%; }
+
 #icoPrev_36{ 
   left : 1696px;
   top : 2015px;
@@ -535,6 +550,8 @@
   background:url(../images/gif/lucesconstruct.gif) no-repeat 50% 50%;
   background-size: contain;
 }
+.touchIsOn #icoPrev_36{  background:url() no-repeat 50% 50%; }
+
 /* #icoPrev_37{ 
   left : 2626px;
   top : 949px;
@@ -553,6 +570,8 @@
   background:url(../images/gif/lucesconstruct.gif) no-repeat 50% 50%;
   background-size: contain;
 }
+.touchIsOn #icoPrev_38{  background:url() no-repeat 50% 50%; }
+
 /* #icoPrev_39{ 
   left : 974px;
   top : 1178px;
@@ -646,6 +665,8 @@
   background:url(../images/gif/faro2.gif) no-repeat 50% 50%;
   background-size: contain;
 }
+.touchIsOn #icoPrev_48{  background:url() no-repeat 50% 50%; }
+
 #icoPrev_49{ 
   left : 819px;
   top : 1896px;
@@ -656,6 +677,8 @@
   background:url(../images/gif/humo.gif) no-repeat 50% 50%;
   background-size: contain;
 }
+.touchIsOn #icoPrev_49{  background:url() no-repeat 50% 50%; }
+
 /* #icoPrev_50{ 
   left : 3088px;
   top : 1531px;
@@ -684,6 +707,8 @@
   background:url(../images/gif/dogi5.gif) no-repeat 50% 50%;
   background-size: contain;
 }
+.touchIsOn #icoPrev_52{  background:url() no-repeat 50% 50%; }
+
 /* #icoPrev_53{ 
   left : 2405px;
   top : 1244px;

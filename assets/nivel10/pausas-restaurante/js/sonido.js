@@ -28,11 +28,13 @@ var audios = [
     ['terminobien', bdir + 'assets/sounds/termino_bien.mp3'],
     ['terminomal', bdir + 'assets/sounds/termino_mal.mp3'],
     ['audioPower', bdir + 'assets/sounds/power.mp3'],
+    ['nivelBG', odir + 'assets/sounds/capitulo.mp3'],
     // sonidos propios del juego
     ['back1', odir + '/sounds/back1.mp3'],
     ['back2', odir + '/sounds/back2.mp3'],
     ['back3', odir + '/sounds/back3.mp3'],
     ['conteo', odir + '/sounds/cont_down.mp3'],
+    ['fndPausas', bdir + 'assets/sounds/fnd_pausas.mp3'],
     ['lost', odir + '/sounds/lost.mp3'],
     ['win', odir + '/sounds/win.mp3']
 

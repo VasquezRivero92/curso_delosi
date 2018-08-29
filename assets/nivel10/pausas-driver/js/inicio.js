@@ -100,15 +100,16 @@ function initBotones() {
 }
 
 function showInicio() {
-    playBGMusic(window.BGIntro);
-    playTexto(window.txti1);
+    playFX(window.nivelBG);
+    //playTexto(window.txti1);
     redimensionarJuego();
     $('.instrucciones').stop().hide();
     $('#instrucciones_1').fadeIn(1000);
     setTimeout(function () {
+        playBGMusic(window.fndPausas);
         $(".instrucciones").stop().delay(300).fadeOut(100);
         $("#instrucciones_2").stop().fadeIn(500);
-        playTexto(window.txti2);
+        //playTexto(window.txti2);
     }, 4000);
 }
 function introJuego() {

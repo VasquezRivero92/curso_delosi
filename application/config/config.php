@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   | 192.168.1.210/delodemo
  */
 
-$config['base_url'] = 'http://localhost/cursodelosi-github/';//'http://192.168.0.210/cursodelosi/';
+$config['base_url'] = 'http://192.168.1.111/cursodelosi-github/';//'http://192.168.0.210/cursodelosi/';
 
 /*
   |--------------------------------------------------------------------------

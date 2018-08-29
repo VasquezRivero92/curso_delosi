@@ -99,14 +99,14 @@ function initBotones() {
 }
 
 function showInicio() {
-    playBGMusic(window.BGIntro);
-    playTexto(window.txti1);
+    playFX(window.nivelBG);
     redimensionarJuego();
     $('.instrucciones').stop().hide();
     $('#instrucciones_1').fadeIn(1000);
     setTimeout(function () {
         $(".instrucciones").stop().delay(300).fadeOut(100);
         $("#instrucciones_2").stop().fadeIn(500);
+        playBGMusic(window.fndPausas);
         playTexto(window.txti2);
     }, 4000);
 }

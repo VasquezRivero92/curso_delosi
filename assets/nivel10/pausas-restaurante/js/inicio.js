@@ -97,8 +97,7 @@ function initBotones() {
 }
 
 function showInicio() {
-    playBGMusic(window.BGIntro);
-    playTexto(window.txti1);
+    playFX(window.nivelBG);
     redimensionarJuego();
     $('.instrucciones').stop().hide();
     $('#instrucciones_1').fadeIn(1000);
@@ -106,6 +105,7 @@ function showInicio() {
         $(".instrucciones").stop().delay(300).fadeOut(100);
         $("#instrucciones_2").stop().fadeIn(500);
         playTexto(window.txti2);
+        playBGMusic(window.fndPausas);
     }, 4000);
 }
 function introJuego() {
