@@ -1,6 +1,5 @@
 
 $(document).ready(function (e) {
-    init();
     initSonidos();
     redimensionarJuego();
     initBotones();
@@ -60,6 +59,7 @@ function initBotones() {
         var j = id + 1;
         $('#instrucciones_' + j).stop().fadeIn(500);
         playTexto(window['txti' + j]);
+        if(id==2){ init(); }
     });
     $('#btnJugar').click(function () {
         stopBGMusic();
@@ -68,9 +68,15 @@ function initBotones() {
         $('.instrucciones').stop().fadeOut(1000);
         introJuego();
         $('.caratula').stop().fadeOut(10);
-        
         $('#animation_container').stop().fadeIn(500);
-        
+        // cargar el juego createJS
+        $.post(bdir + 'ajax/set_intentos').done(function (data) {
+            console.log("Intentos: " + data);
+            if (data >= 2) {
+                $('#btnReinicio,#resumenOportunidad').css('background', 'none').hide();
+            }
+        });
+        /**************/
     });
     //botones del juego
     $('#btnReiniciar').click(function () {
@@ -102,14 +108,6 @@ function showInicio() {
         $("#instrucciones_2").stop().fadeIn(500);
         playTexto(window.txti2);
     }, 4000);
-    // cargar el juego createJS
-    $.post(bdir + 'ajax/set_intentos').done(function (data) {
-       console.log("Intentos: " + data);
-       if (data >= 2) {
-            $('#btnReinicio,#resumenOportunidad').css('background', 'none').hide();
-       }
-    });
-    /**************/
 }
 function introJuego() {
     $(".caratula,.conteo").stop().fadeOut(10);

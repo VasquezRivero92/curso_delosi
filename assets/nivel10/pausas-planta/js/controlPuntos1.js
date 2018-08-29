@@ -4,6 +4,7 @@
 
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 function init() {
+    console.log('A1 init');
     canvas = document.getElementById("canvas");
     anim_container = document.getElementById("animation_container");
     dom_overlay_container = document.getElementById("dom_overlay_container");
@@ -19,9 +20,11 @@ function init() {
 }
 function handleFileLoad(evt, comp) {
     var images=comp.getImages();    
+    console.log('A2 init function', images);  
     if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }    
 }
 function handleComplete(evt,comp) {
+    console.log('A3 handleComplete', evt, comp); 
     //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
     var lib=comp.getLibrary();
     var ss=comp.getSpriteSheet();
