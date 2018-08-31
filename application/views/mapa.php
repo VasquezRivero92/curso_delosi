@@ -314,7 +314,7 @@
                     <?php 
                         echo anchor('Prevencion', ' ', array('id' => 'preg_10_1','class' => 'CV_btn1 disable')); 
                         echo anchor('mapa/certificado_emergencias', '&nbsp;', array('id' => 'i4Certificado', 'class' => $certificado_emergencias, 'target' => '_blank', 'style' => 'left: 552px;
-                        top: 402px;'));?>                    
+                        top: 424px;'));?>                    
                     <div id="preg_10_0" class="CV_btn2 pregOpc"> </div>
                 </div>
 
