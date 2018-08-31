@@ -103,7 +103,41 @@ var audios = [
     ['sR3i4h', odir + '/sounds/sP3i4h.mp3'],
     ['sR4i1h', odir + '/sounds/sO4i1h.mp3'],
     ['sR4i2h', odir + '/sounds/sO4i2h.mp3'],
-    ['sR4i3h', odir + '/sounds/sP4i3h.mp3']
+    ['sR4i3h', odir + '/sounds/sP4i3h.mp3'],
+
+    ['sD1i1', odir + '/sounds/sP1i1.mp3'],
+    ['sD1i2', odir + '/sounds/sP1i2.mp3'],
+    ['sD1i3', odir + '/sounds/sO1i1.mp3'],
+    ['sD1i4', odir + '/sounds/sP1i4.mp3'],
+    ['sD1i5', odir + '/sounds/sO1i2.mp3'],
+    ['sD2i1', odir + '/sounds/sP2i1.mp3'],
+    ['sD2i2', odir + '/sounds/sP2i2.mp3'],
+    ['sD2i3', odir + '/sounds/sO2i2.mp3'],
+    ['sD2i4', odir + '/sounds/sO2i3.mp3'],
+    ['sD3i1', odir + '/sounds/sP3i1.mp3'],
+    ['sD3i2', odir + '/sounds/sO3i2.mp3'],
+    ['sD3i3', odir + '/sounds/sO3i3.mp3'],
+    ['sD3i4', odir + '/sounds/sP3i4.mp3'],
+    ['sD4i1', odir + '/sounds/sO4i1.mp3'],
+    ['sD4i2', odir + '/sounds/sO4i2.mp3'],
+    ['sD4i3', odir + '/sounds/sO4i3.mp3'],  
+
+    ['sD1i1h', odir + '/sounds/sP1i1h.mp3'],
+    ['sD1i2h', odir + '/sounds/sP1i2h.mp3'],
+    ['sD1i3h', odir + '/sounds/sP1i3h.mp3'],
+    ['sD1i4h', odir + '/sounds/sP1i4h.mp3'],
+    ['sD1i5h', odir + '/sounds/sO1i2h.mp3'],
+    ['sD2i1h', odir + '/sounds/sP2i1h.mp3'],
+    ['sD2i2h', odir + '/sounds/sP2i2h.mp3'],
+    ['sD2i3h', odir + '/sounds/sO2i2h.mp3'],
+    ['sD2i4h', odir + '/sounds/sO2i3h.mp3'],
+    ['sD3i1h', odir + '/sounds/sO3i1h.mp3'],
+    ['sD3i2h', odir + '/sounds/sO3i2h.mp3'],
+    ['sD3i3h', odir + '/sounds/sO3i3h.mp3'],
+    ['sD3i4h', odir + '/sounds/sP3i4h.mp3'],
+    ['sD4i1h', odir + '/sounds/sO4i1h.mp3'],
+    ['sD4i2h', odir + '/sounds/sO4i2h.mp3'],
+    ['sD4i3h', odir + '/sounds/sP4i3h.mp3']
 ];
 try {
     window.AudioContext = window.AudioContext || window.webkitAudioContext;
