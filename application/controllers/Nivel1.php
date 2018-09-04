@@ -85,7 +85,7 @@ class Nivel1 extends Nivel_Controller {
         $meses = array("ENERO","FEBRERO","MARZO","ABRIL","MAYO","JUNIO","JULIO","AGOSTO","SEPTIEMBRE","OCTUBRE","NOVIEMBRE","DICIEMBRE");
         $dataPDF = array(
             'empresa' => $this->base_model->get_empresas($this->session->user_id)->row()->nombre,
-            'nombre' => $this->data['user_login']['apat'] . ' ' . $this->data['user_login']['amat'] . ',' . $this->data['user_login']['nombre'],
+            'nombre' => $this->data['user_login']['apat'] . ' ' . $this->data['user_login']['amat'] . ', ' . $this->data['user_login']['nombre'],
             'año' => ''. date('Y', $fecha),
             'dia' => ''. date('d', $fecha),
             'mes' => ''. $meses[date('n',$fecha)-1]
