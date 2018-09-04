@@ -28,6 +28,8 @@ class Prevencion extends Nivel_Controller {
         }
         $this->data['checked'] = $this->base_model->check_curso_user($this->session->user_id, $this->cur);
         $this->load->view('nivel' . $this->cur . '/index', $this->data);
+
+        
     }
 
     function evacuacion() {        
@@ -44,13 +46,24 @@ class Prevencion extends Nivel_Controller {
             $this->data['own_dir'] = $this->data['assets_dir'] . '/nivel' . $this->cur . '/evacuacion-' . $this->session->grupo;
             $this->data['juego'] = 1;
             $this->data['jNum'] = 1;
-
             $this->load->view('nivel' . $this->cur . '/evacuacion-' . $this->session->grupo, $this->data);
         } else {
             redirect('prevencion/', 'refresh');
         }
+        
     }
 
-
+    function certificado_emergencias() {
+        $resul = $this->base_model->get_puntaje($this->session->user_id, $this->session->curso);
+        if ($resul->puntaje < 70) {
+            redirect('prevencion/', 'refresh');
+        }
+        $this->load->helper('pdf_helper');
+        $dataPDF = array(
+            'empresa' => $this->base_model->get_empresas($this->session->user_id)->row()->nombre,
+            'nombre' => $this->data['user_login']['apat'] . ' ' . $this->data['user_login']['amat'] . ', <br>' . $this->data['user_login']['nombre']
+        );
+        $this->load->view('mail/pdfcertificado_emergencias', $dataPDF);
+    }
 
 }

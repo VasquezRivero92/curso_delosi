@@ -28,7 +28,7 @@ var audios = [
     ['terminobien', bdir + 'assets/sounds/termino_bien.mp3'],
     ['terminomal', bdir + 'assets/sounds/termino_mal.mp3'],
     ['audioPower', bdir + 'assets/sounds/power.mp3'],
-    ['nivelBG', odir + 'assets/sounds/capitulo.mp3'],
+    ['nivelBG', bdir + 'assets/sounds/capitulo.mp3'],
     // sonidos propios del juego
     ['back1', odir + '/sounds/back1.mp3'],
     ['back2', odir + '/sounds/back2.mp3'],

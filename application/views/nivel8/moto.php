@@ -138,6 +138,11 @@
                         <?php echo anchor('mapa', '&nbsp;', array('id' => 'btnContinuar')); ?>
                     </div>
                     <div id="resumenOportunidad"></div>
+                    <?php
+                        echo anchor('drivers/certificado_drivers', '&nbsp;', array('id' => 'i4Certificado', 'class' => 'disabled', 'target' => '_blank', 'style' => 'left: 860px;
+                        top: 492px;'));
+                    ?>    
+
                     <!--  -->
                     <div id="calificacion" class="formulario">
                         <div id="inst_1" class="instr">

@@ -43,7 +43,9 @@
                 <div id="welcome_2">
                     <!-- <strong>¡Bienvenido a la Ciudad de la Prevención!</strong><br> -->
                     <p>Hola soy Zoila Prevención, te doy la bienvenida a Prevencity, nuestra ciudad segura donde aprenderás como prevenir accidentes de trabajo, estaré acompañándote durante tu recorrido en la ciudad dándote algunos TIPS.<p>
-                    <p>En Prevencity encontrarás diversos lugares donde podrás ingresar, aprender y al finalizar cada curso o misión pondrás a prueba todo lo aprendido pasando un reto.<br> No te pierdas ninguno de las misiones, ya que muchas de ellos podrán llevarte a formar parte del <strong>Programa de Certificación de Prevención de riesgos de acuerdo a tu puesto de trabajo.</strong></p>
+                    <p>En Prevencity encontrarás diversos lugares donde podrás ingresar, aprender y al finalizar cada curso pondrás a prueba todo lo aprendido pasando un reto.
+                        <!-- <br> No te pierdas ninguno de las misiones, ya que muchas de ellos podrán llevarte a formar parte del <strong>Programa de Certificación de Prevención de riesgos de acuerdo a tu puesto de trabajo.</strong> -->
+                    </p>
                 </div>
                 <!-- <div id="alcalde_2"></div> -->
                 <div id="btn_cont"></div>
@@ -117,7 +119,7 @@
                     <div id="icoPrev_34" class="icoPrev"></div>
                     <div id="icoPrev_35" class="icoPrev"></div>
                     <div id="icoPrev_36" class="icoPrev"></div>
-                    <!-- <div id="icoPrev_37" class="icoPrev"></div> -->
+                    <div id="icoPrev_37" class="icoPrev"></div>
                     <div id="icoPrev_38" class="icoPrev"></div>
                     <!-- <div id="icoPrev_39" class="icoPrev"></div>
                     <div id="icoPrev_40" class="icoPrev"></div>
@@ -128,8 +130,8 @@
                     <!-- <div id="icoPrev_44" class="icoPrev"></div>
                     <div id="icoPrev_45" class="icoPrev"></div>
                     <div id="icoPrev_46" class="icoPrev"></div> -->
-                    <!-- <div id="icoPrev_47" class="icoPrev"></div> -->
-                    <div id="icoPrev_48" class="icoPrev"></div>
+                    <!-- <div id="icoPrev_47" class="icoPrev"></div> 
+                    <div id="icoPrev_48" class="icoPrev"></div>-->
                     <div id="icoPrev_49" class="icoPrev"></div>
                     <!-- <div id="icoPrev_50" class="icoPrev"></div>
 
@@ -222,7 +224,7 @@
 
                             <button id="acord_5" class="accordionMC">¿Cuánto es el puntaje mínimo para aprobar los cursos?</button>
                             <div id="pan_acord_5" class="panel">
-                                <p>El puntaje mínimo para cada curso es de 70 puntos, recuerda que tienes 3 intentos por cada reto; en caso de agotarlos deberás escribir a “Asistencia de prevención” indicado el motivo.</p>
+                                <p>El puntaje mínimo para cada curso es de 70 puntos, recuerda que tienes 2 intentos por cada reto; en caso de agotarlos deberás escribir a “Asistencia de prevención” indicado el motivo.</p>
                             </div>                            
 
                             <button id="acord_6" class="accordionMC">No puedo descargar mi certificado ¿Qué puedo hacer?</button>
@@ -232,7 +234,7 @@
 
                             <button id="acord_7" class="accordionMC">¿Puedo volver a revisar los contenidos de los cursos?</button>
                             <div id="pan_acord_7" class="panel">
-                                <p>Si puedes revisar el contenido del curso, mas no podrás realizar el reto nuevamente, Si es que ya usaste tus 2 oportunidades, tendrías que solicitar a tu supervisor a cargo que reinicien tu cuenta para ese curso, justificando el problema que tuviste al realizarlo.</p>
+                                <p>Si puedes revisar el contenido del curso, si en caso utilizaste tus 2 oportunidades en el reto no podrás realizarlo nuevamente. En caso hayas utilizado tus 2 oportunidades y obtuviste menos de 70 puntos, comunícalo a tu jefe directo o escribe en el buzón de consultas indicando el motivo y así pueda solicitar la activación de un intento adicional.</p>
                             </div>   
 
                             <button id="acord_8" class="accordionMC">Mi pantalla se queda en negro cuando entro al curso</button>

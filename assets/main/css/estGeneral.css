@@ -296,3 +296,21 @@ body{
     overflow-y: scroll;
 }
 /*******************************************************************************/
+
+#i4Logout{
+    position: absolute;
+    width: 95px;
+    height: 35px;
+    left: 636px;
+    bottom: 38px;
+    font-family: 'Catalogo';
+    font-size: 17px;
+    line-height: 33px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    background: url(../images/closeSetion.png) no-repeat 0px 0px;
+}
+#i4Logout:hover{    
+  background: url(../images/closeSetion.png) no-repeat -97px 0px; 
+}

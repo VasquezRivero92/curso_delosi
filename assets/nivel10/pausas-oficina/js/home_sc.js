@@ -8,6 +8,10 @@ function resultadoPuntos(punts) {
     $.post(bdir + 'ajax/set_puntaje', data).done(function (data) {
         console.log("resultado: " + data);
     });
+    if(sumaPuntos > 70){
+        $('#i4Certificado').removeClass('disabled');
+    }
+
 }
 
 function pantallafinal(){

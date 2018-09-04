@@ -113,7 +113,7 @@
 }
 #icoPel_2{ 
   left : 1780px;
-  top : 1100px;
+  top : 1150px;
   width : 129px;
   height : 130px;
   z-index: 122;
@@ -180,10 +180,15 @@
   z-index: 220;   
     background-image:url(../images/mapa/not2.svg); }
 #icoPel_10{ 
-  left : 91px;
+
+  left : 60px;
+  top : 1174px;
+  width : 421px;
+  height : 455px;
+  /* left : 91px;
   top : 1171px;
   width : 437px;
-  height : 468px;    
+  height : 468px;     */
   z-index: 100;  
     background-image:url(../images/mapa/bomber.svg); }
 #icoPel_11{ 
@@ -552,15 +557,14 @@
 }
 .touchIsOn #icoPrev_36{  background:url() no-repeat 50% 50%; }
 
-/* #icoPrev_37{ 
-  left : 2626px;
-  top : 949px;
-  width : 60px;
-  height : 56px;
-  z-index: 2;
-  background:url(../images/gif/lucesconstruct.gif) no-repeat 50% 50%;
-  background-size: contain;
-} */
+#icoPrev_37{ 
+  left : 1790px;
+  top : 1082px;
+  width : 108px;
+  height : 102px;
+  z-index: 119;
+  background:url(../images/mapa/expertos.png) no-repeat 50% 50%;
+} 
 #icoPrev_38{ 
   left : 3192px;
   top : 1373px;
@@ -656,7 +660,7 @@
   background:url(../images/gif/farocarro.gif) no-repeat 50% 50%;
   background-size: contain;
 } */
-#icoPrev_48{ 
+/* #icoPrev_48{ 
   left : 368px;
   top : 1573px;
   width : 14px;
@@ -664,7 +668,7 @@
   z-index: 142;
   background:url(../images/gif/faro2.gif) no-repeat 50% 50%;
   background-size: contain;
-}
+} */
 .touchIsOn #icoPrev_48{  background:url() no-repeat 50% 50%; }
 
 #icoPrev_49{ 

@@ -41,14 +41,24 @@
                     <br>tus actividades para evitar accidentes de trabajo y contribuir 
                     <br>a la generación de una Cultura Preventiva.</div>
                 <div id="i4txt_2">¡Sumemos acciones seguras y evitemos accidentes!</div>
-                <div id="i4btn_1">Volver a status</div>
+                <div id="i4btn_1">Volver a la ciudad</div>
                 <?php //echo anchor('main/', 'Volver a status', array('id' => 'i4btn_1')); ?>
             </div>
             <!-- - - - - - - - - - - - - -  Instruccion 5 (constancia)  - - - - - - - - - - - - - -->
             <div id="instruccion_5" class="instrucciones">
                 <div id="i5tit_1">CONSTANCIA NIVEL 1</div>
-                <div id="i5txt_1">Yo, <span><?php echo strtoupper($apenombres); ?></span>, declaro haber completado el curso de Prevención por Falta de orden y limpieza de manera satisfactoria y, asimismo, de haber realizado la prueba sobre el curso de Prevención por Falta de orden y limpieza (reto).</div>
+                <div id="i5txt_1">
+                    Yo, <span><?php echo strtoupper($apenombres); ?></span>, declaro haber completado el curso de Prevención por Falta de orden y limpieza de manera satisfactoria y, asimismo, de haber realizado la prueba sobre el curso de Prevención por Falta de orden y limpieza (reto).
+                    <br>
+                    <p style="text-align: center; font-size: 18px; color: red;" >Al final los 4 cursos podrás descargar<br>tu certificado.</p>
+                </div>
                 <div id="i5btn_1">Aceptar</div>
+
+                <?php
+                    echo anchor('nivel1/certificado_prevencion', '&nbsp;', 
+                    array('id' => 'i4Certificado', 'class' => $certificado_prevencion, 'target' => '_blank', 'style' => 'left: 580px; top: 503px;'));
+                ?>    
+
             </div>
             <div id="instruccion_6" class="instrucciones"></div>
         </div>

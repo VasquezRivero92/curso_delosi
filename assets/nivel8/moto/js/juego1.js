@@ -57,7 +57,7 @@ $J[1].finJuego = function (valor) {
     }, 500);
     setTimeout(function () {
         $('#resumenBtns,#resumenOportunidad').fadeIn(1000);
-    }, 2500);
+    }, 2000);
     $.post(bdir + 'ajax/init_calificacion').done(function (data) {
        console.log("calificacion: " + data);
        if(data == 0){

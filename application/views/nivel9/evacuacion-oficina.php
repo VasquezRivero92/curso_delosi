@@ -131,12 +131,17 @@
                         <?php echo anchor('mapa', '&nbsp;', array('id' => 'btnContinuar')); ?><!-- <a id="btnContinuar" href="#"></a> -->
                     </div>
                     <div id="resumenOportunidad"></div>
+                    <?php
+                        echo anchor('prevencion/certificado_emergencias', '&nbsp;', array('id' => 'i4Certificado', 'class'=>'disabled', 'target' => '_blank', 'style' => 'left: 874px;
+                        top: 474px;'));
+                    ?>    
                     <!--  -->
                     <div id="calificacion" class="formulario">
                         <div id="inst_1" class="instr">
                             <div class="instA1"></div>
                             <div id="nextInt_1" class="btnNX"></div>
                         </div>
+
                         <div id="inst_2" class="instr">
                             <div class="sintruct_ask">En general, los cursos cubren tus expectativas.</div>
                             <div id="calfA_1" class="A_1 btn_ar btn_CAL_A"></div>

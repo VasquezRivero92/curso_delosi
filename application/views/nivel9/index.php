@@ -167,8 +167,8 @@
             <!-- - - - - - - - - - - - - -  Instruccion 4 (video)  - - - - - - - - - - - - - -->
             <!-- <div id="instruccion_4" class="instrucciones">
                 <video id="i4_video" controls preload="auto">
-                    <source src="<?php echo base_url($own_dir . '/videos/videoi4.mp4'); ?>" type="video/mp4"/>
-                    <source src="<?php echo base_url($own_dir . '/videos/videoi4.webm'); ?>" type="video/webm"/>
+                    <source src="<?php //echo base_url($own_dir . '/videos/videoi4.mp4'); ?>" type="video/mp4"/>
+                    <source src="<?php //echo base_url($own_dir . '/videos/videoi4.webm'); ?>" type="video/webm"/>
                 </video>
                 <div id="i4btn_1">Continuar</div>
             </div> -->

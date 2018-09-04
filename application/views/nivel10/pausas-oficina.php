@@ -71,6 +71,10 @@
                         <?php echo anchor('mapa', '&nbsp;', array('id' => 'btnContinuar')); ?> <!--<a id="btnContinuar" href="#"></a>-->
                     </div>
                     <div id="resumenOportunidad"></div>
+                    <?php
+                        echo anchor('pausasactivas/certificado_pausas', '&nbsp;', array('id' => 'i4Certificado', 'class' => 'disabled', 'target' => '_blank', 'style' => 'left: 823px;
+                        top: 452px;'));
+                    ?>    
                     <!--  -->
                     <div id="calificacion" class="formulario">
                         <div id="inst_1" class="instr">

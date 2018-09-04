@@ -103,7 +103,20 @@ class Drivers extends Nivel_Controller {
         } else {
             redirect('drivers/', 'refresh');
         }
-    }   
+    } 
+    
+    function certificado_drivers() {
+        $resul = $this->base_model->get_puntaje($this->session->user_id, $this->session->curso);
+        if ($resul->puntaje < 70) {
+            redirect('/drivers', 'refresh');
+        }
+        $this->load->helper('pdf_helper');
+        $dataPDF = array(
+            'empresa' => $this->base_model->get_empresas($this->session->user_id)->row()->nombre,
+            'nombre' => $this->data['user_login']['apat'] . ' ' . $this->data['user_login']['amat'] . ', <br>' . $this->data['user_login']['nombre']
+        );
+        $this->load->view('mail/pdfcertificado_drivers', $dataPDF);
+    }
 
     // function calificacion() {        
     //     $this->data['own_dir'] = $this->data['assets_dir'] . '/nivel' . $this->cur . '/calificacion'; 

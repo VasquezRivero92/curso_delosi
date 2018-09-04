@@ -62,6 +62,10 @@ function resultadoPuntos1() {
     $.post(bdir + 'ajax/set_puntaje', data).done(function (data) {
         console.log("resultado: " + data);
     });
+
+    if(sumaPuntos > 70){
+        $('#i4Certificado').removeClass('disabled');
+    } 
     /***
      $('#resumenPuntaje').html('Puntos: '+ $J[1].ptsWinJuego + '<br>'
      +'Bonus por tiempo: '+ $J[1].CTiempo + '<br>'

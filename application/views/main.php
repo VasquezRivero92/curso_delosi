@@ -75,6 +75,8 @@
                 <div id="i6tit_1">ELIGE A QUE MODULO QUIERES IR:</div>                
                 <?php echo anchor('mapa', '&nbsp;', array('id' => 'i6btn_1', 'class' => 'i6btn')); ?>
                 <?php echo anchor('menu2', '&nbsp;', array('id' => 'i6btn_2', 'class' => 'i6btn')); ?>
+
+                <?php echo anchor('login/logout', ' ', array('id' => 'i4Logout')); ?>
             </div>
         </div>
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->

@@ -50,6 +50,19 @@ class Pausasactivas extends Nivel_Controller {
         }
     }
 
+    function certificado_pausas() {
+        $resul = $this->base_model->get_puntaje($this->session->user_id, $this->session->curso);
+        if ($resul->puntaje < 70) {
+            redirect('/pausasactivas', 'refresh');
+        }
+        $this->load->helper('pdf_helper');
+        $dataPDF = array(
+            'empresa' => $this->base_model->get_empresas($this->session->user_id)->row()->nombre,
+            'nombre' => $this->data['user_login']['apat'] . ' ' . $this->data['user_login']['amat'] . ', <br>' . $this->data['user_login']['nombre']
+        );
+        $this->load->view('mail/pdfcertificado_pausas', $dataPDF);
+    }
+
 
 
 }

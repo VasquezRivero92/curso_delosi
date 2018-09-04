@@ -1662,3 +1662,27 @@
     -ms-transform:  scaleX(1.00) scaleY(1.00) ;
   }
 }
+
+/* css certificado general */
+
+
+#i4Certificado{
+  position: absolute;
+  width: 190px; height: 90px;
+  left: 50px; top: 310px;
+  text-decoration: none;
+  background-color: rgba(0,0,0,0);
+  background-image: url(./images/i4Certificado.png);
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  cursor: pointer;
+}
+
+#i4Certificado.disabled{
+  background-position: 0px -90px;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+
+

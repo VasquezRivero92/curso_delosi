@@ -131,6 +131,10 @@
                         <?php echo anchor('mapa', '&nbsp;', array('id' => 'btnContinuar')); ?><!-- <a id="btnContinuar" href="#"></a> -->
                     </div>
                     <div id="resumenOportunidad"></div>
+                    <?php
+                        echo anchor('prevencion/certificado_emergencias', '&nbsp;', array('id' => 'i4Certificado', 'class'=>'disabled', 'target' => '_blank', 'style' => 'left: 874px;
+                        top: 474px;'));
+                    ?>    
                     <!--  -->
                     <div id="calificacion" class="formulario">
                         <div id="inst_1" class="instr">

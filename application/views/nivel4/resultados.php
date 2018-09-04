@@ -42,14 +42,23 @@
                     <br>en práctica todo lo aprendido y así crear 
                     <br>Ambientes Seguros en tu lugar de trabajo</div>
                 <div id="i4txt_2">¡Contamos Contigo!</div>
-                <?php echo anchor('mapa', 'Volver a status', array('id' => 'i4btn_1')); ?>
+                <?php echo anchor('mapa', 'Volver a la ciudad', array('id' => 'i4btn_1')); ?>
             </div>
             <!-- - - - - - - - - - - - - -  Instruccion 5 (constancia)  - - - - - - - - - - - - - -->
             <div id="instruccion_5" class="instrucciones">
                 <div id="i5tit_1">CONSTANCIA NIVEL 4</div>
-                <div id="i5txt_1">Yo, <span><?php echo strtoupper($apenombres); ?></span>, declaro haber completado el curso de Prevención al manipular cargas y actividades de posición de pie o sentado de manera satisfactoria y, asimismo, de haber realizado la prueba sobre el curso de Prevención al manipular cargas y actividades de posición de pie o sentado (reto).</div>
+                <div id="i5txt_1">Yo, <span><?php echo strtoupper($apenombres); ?></span>, declaro haber completado el curso de Prevención al manipular cargas y actividades de posición de pie o sentado de manera satisfactoria y, asimismo, de haber realizado la prueba sobre el curso de Prevención al manipular cargas y actividades de posición de pie o sentado (reto).
+                <br>
+                    <p style="text-align: center; font-size: 18px; color: red;" >Al final los 4 cursos podrás descargar<br>tu certificado.</p>
+            </div>
                 <div id="i5btn_1">Aceptar</div>
                 <?php echo anchor('nivel4/constancia', 'Descargar contancia', array('id' => 'i5btn_2')); ?>
+
+                <?php
+                    echo anchor('drivers/certificado_drivers', '&nbsp;', 
+                    array('id' => 'i4Certificado', 'class' => $certificado_prevencion, 'target' => '_blank', 'style' => 'left: 580px; top: 503px;'));
+                ?>    
+
             </div>
         </div>
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->

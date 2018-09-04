@@ -37,7 +37,7 @@
                 <!-- <div id="i0tit_1"></div> -->
                 <div id="i0txt_1">¡Hola, y Bienvenido a <span>APRENDIENDO A PREVENIR!</span></div>
                 <div id="i0txt_2">Has sido seleccionado a este programa por tu potencial para prevenir accidentes y el cuidado que tienes en resguardar la seguridad y salud en el trabajo.
-                    <br><br>Queremos que seas nuestro próximo <span>EXPERTO DE LA PREVENCIÓN</span>, y para ello deberás pasar por los7 capítulos de este programa.
+                    <br><br>Queremos que seas nuestro próximo <span>EXPERTO DE LA PREVENCIÓN</span>, y para ello deberás pasar por los 4 cursos de este programa.
                     <br><br>Al final de cada nivel se te presentarán una serie de <span>DESAFÍOS DE PREVENCIÓN</span> en los que pondrás a prueba lo aprendido en cada nivel del programa.</div>
                 <div id="i0btn_1">Continuar</div>
             </div>

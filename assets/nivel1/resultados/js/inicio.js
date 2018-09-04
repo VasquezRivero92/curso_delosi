@@ -42,6 +42,21 @@ function showInicio() {
     $('.instrucciones').stop().hide();
     $('#instruccion_5').fadeIn(1000);
     playBGMusic(window.BGresul);
+
+    // var puntitos, intentitos;
+    // $.get(bdir + 'ajax/get_puntaje').done(function (data) {
+    //     console.log('Set Puntaje: ' + data);
+    //     puntitos = data;
+    // });
+    // $.get(bdir + 'ajax/get_intentos_drivers').done(function (data) {
+    //     console.log('Set Puntaje: ' + data);
+    //     intentitos = data;
+    // });
+    // if(puntitos > 70){
+    //     $('#i4Certificado').removeClass('disabled'); 
+    // }
+    
+
 }
 function redimensionarJuego() {
     scale1 = (window.innerWidth / 1350);
@@ -76,6 +91,7 @@ $(document).ready(function (e) {
         onComplete: showInicio
     });
     $('#i5btn_1').click(function () {
+
         playSound(window.playBTN);
         playTexto(window.txti4);
         $('.instrucciones').stop().delay(10).fadeOut(500);
@@ -83,7 +99,9 @@ $(document).ready(function (e) {
         $.post(bdir + 'ajax/set_constancia').done(function (data) {
             console.log('Set constancia: ' + data);
         });
+
     });
+
     $('#i4btn_1').click(function (e) {
         playSound(window.playBTN);
         //$('#instruccion_6').fadeIn(1000);
