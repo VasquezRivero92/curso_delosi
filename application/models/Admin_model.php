@@ -101,7 +101,7 @@ class Admin_model extends CI_Model {
                 ->where('u.active', 1)
                 ->where('um.id_menu', 1)
                 //->order_by('um.curso', 'desc')
-                ->order_by('um.puntaje', 'desc')
+                    
                 ->order_by('um.fecha', 'asc')
                 ->limit($limit)
                 ->get();

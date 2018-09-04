@@ -25,11 +25,15 @@ $obj_pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
 $obj_pdf->setFontSubsetting(false);
 $obj_pdf->SetFont('dejavusans', '', 16);
 $obj_pdf->AddPage();
-$html = '<div><br><br><br>'
-        . '<div style="font-size:48px; font-weight:bold; color:#0075bc;">CONSTANCIA</div>'
-        . '<div>LA EMPRESA <b style="font-weight:bold;">' . $empresa . '</b> DEJA CONSTANCIA QUE:</div>'
-        . '<div style="font-weight:bold;">' . $nombre . '</div>'
-        . '<div>HA COMPLETADO LOS (4) CURSOS DE "EXPERTOS EN LA PREVENCIÓN", <br>REALIZADO DURANTE EL AÑO 2018';
+$html = '<div>'
+        . '<br><br><br><br>'
+        . '<div style="color:#424243; font-size: 12px;"> La empresa <b style="font-weight:bold; color:#000000;">' . $empresa . '</b> otorga la</div>'
+        . '<div style="color:#19AAE8; font-weight:bold; font-size: 30px;" >CONSTANCIA</div>'
+        . '<span style="color:#424243; font-size: 12px;">a<br></span>'
+        . '<div style="font-weight:bold; ">' . $nombre . '</div>'
+        . '<div style="color:#424243; font-size: 12px;">ha completado los (4) cursos de </div>'
+        . '<div style="font-weight:bold;">"EXPERTOS EN LA PREVENCIÓN"</div>'
+        . '<div style="top:20px; color:#424243; font-size: 12px;"> realizado el <b style="font-weight:bold; color:#000000;">' . $dia .'</b> de <b style="font-weight:bold; color:#000000;">' . $mes .'</b> del <b style="font-weight:bold; color:#000000;">' . $año .'</b></div></div>';
 $obj_pdf->writeHTML($html, true, false, true, false, 'C');
 //En esta parte, la variable final cambia segun:
 //I para verlo online

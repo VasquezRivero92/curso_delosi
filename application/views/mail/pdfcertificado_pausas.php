@@ -27,13 +27,13 @@ $obj_pdf->SetFont('dejavusans', '', 16);
 $obj_pdf->AddPage();
 $html = '<div>'
         . '<br><br><br><br>'
-        . '<div><b style="font-weight:bold;"> &nbsp; &nbsp;' . $empresa . '</b></div>'
-        . '<div></div>'
-        . '<br><br>'
-        . '<div style="font-weight:bold;">' . $nombre . '</div>'
-        . '<div></div>'
-        . '<div>"AL RITMO DE PAUSAS ACTIVAS"</div>'
-        . '<div style="top:20px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' . $dia .' &nbsp; &nbsp; &nbsp; &nbsp;' . $mes .' &nbsp; &nbsp; &nbsp; &nbsp;' . $año .'</div></div>';
+        . '<div style="color:#424243; font-size: 12px;"> La empresa <b style="font-weight:bold; color:#000000;">' . $empresa . '</b> otorga la</div>'
+        . '<div style="color:#19AAE8; font-weight:bold; font-size: 30px;" >CONSTANCIA</div>'
+        . '<span style="color:#424243; font-size: 12px;">a<br></span>'
+        . '<div style="font-weight:bold; ">' . $nombre . '</div>'
+        . '<div style="color:#424243; font-size: 12px;">Por completa y aprobar el curso</div>'
+        . '<div style="font-weight:bold;">"AL RITMO DE PAUSAS ACTIVAS"</div>'
+        . '<div style="top:20px; color:#424243; font-size: 12px;"> realizado el <b style="font-weight:bold; color:#000000;">' . $dia .'</b> de <b style="font-weight:bold; color:#000000;">' . $mes .'</b> del <b style="font-weight:bold; color:#000000;">' . $año .'</b></div></div>';
 $obj_pdf->writeHTML($html, true, false, true, false, 'C');
 //En esta parte, la variable final cambia segun:
 //I para verlo online

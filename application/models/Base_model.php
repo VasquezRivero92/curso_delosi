@@ -428,7 +428,25 @@ class Base_model extends CI_Model {
                         ->where('id_version', $this->id_version)
                         ->get('users_curso')->row();
     }
-        
+
+    public function get_fecha_cursos($id_user, $id_curso) {
+        return $this->db->select ('fecha')
+                        ->where('id_user', $id_user)
+                        ->where('id_curso', $id_curso)
+                        //->where('id_curso', '6')
+                        ->where('id_version', $this->id_version)
+                        ->get('users_curso')->row();
+    }
+     
+    public function get_fecha_prevencion($id_user) {
+        $status_array = array('1','2','3','4');
+        return $this->db->select ('fecha')
+                    ->where('id_user', $id_user)
+                    ->where_in('id_curso', $status_array)
+                    ->where('id_version', $this->id_version)
+                    ->order_by('fecha', 'desc')
+                    ->get('users_curso')->row();
+    }
   
     
     public function get_update_user_curso($id_cargo) {       

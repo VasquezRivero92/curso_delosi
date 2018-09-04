@@ -92,9 +92,14 @@ class Mapa extends Nivel_Controller {
             redirect('/main', 'refresh');
         }
         $this->load->helper('pdf_helper');
+        $fecha = $this->base_model->get_fecha_prevencion($this->session->user_id)->fecha;
+        $meses = array("ENERO","FEBRERO","MARZO","ABRIL","MAYO","JUNIO","JULIO","AGOSTO","SEPTIEMBRE","OCTUBRE","NOVIEMBRE","DICIEMBRE");
         $dataPDF = array(
             'empresa' => $this->base_model->get_empresas($this->session->user_id)->row()->nombre,
-            'nombre' => $this->data['user_login']['apat'] . ' ' . $this->data['user_login']['amat'] . ',' . $this->data['user_login']['nombre']
+            'nombre' => $this->data['user_login']['apat'] . ' ' . $this->data['user_login']['amat'] . ',' . $this->data['user_login']['nombre'],
+            'año' => ''. date('Y', $fecha),
+            'dia' => ''. date('d', $fecha),
+            'mes' => ''. $meses[date('n',$fecha)-1]
         );
         $this->load->view('mail/pdfcertificado_prevencion', $dataPDF);
     }
@@ -103,7 +108,7 @@ class Mapa extends Nivel_Controller {
             redirect('/main', 'refresh');
         }
         $this->load->helper('pdf_helper');
-        $fecha = $this->base_model->get_fecha($this->session->user_id)->fecha;
+        $fecha = $this->base_model->get_fecha_cursos($this->session->user_id,8)->fecha;
         $meses = array("ENERO","FEBRERO","MARZO","ABRIL","MAYO","JUNIO","JULIO","AGOSTO","SEPTIEMBRE","OCTUBRE","NOVIEMBRE","DICIEMBRE");
         $dataPDF = array(
             'empresa' => $this->base_model->get_empresas($this->session->user_id)->row()->nombre,
@@ -119,7 +124,7 @@ class Mapa extends Nivel_Controller {
             redirect('/main', 'refresh');
         }
         $this->load->helper('pdf_helper');
-        $fecha = $this->base_model->get_fecha($this->session->user_id)->fecha;
+        $fecha = $this->base_model->get_fecha_cursos($this->session->user_id,10)->fecha;
         $meses = array("ENERO","FEBRERO","MARZO","ABRIL","MAYO","JUNIO","JULIO","AGOSTO","SEPTIEMBRE","OCTUBRE","NOVIEMBRE","DICIEMBRE");
         $dataPDF = array(
             'empresa' => $this->base_model->get_empresas($this->session->user_id)->row()->nombre,
@@ -135,7 +140,7 @@ class Mapa extends Nivel_Controller {
             redirect('/main', 'refresh');
         }
         $this->load->helper('pdf_helper');
-        $fecha = $this->base_model->get_fecha($this->session->user_id)->fecha;
+        $fecha = $this->base_model->get_fecha_cursos($this->session->user_id,9)->fecha;
         $meses = array("ENERO","FEBRERO","MARZO","ABRIL","MAYO","JUNIO","JULIO","AGOSTO","SEPTIEMBRE","OCTUBRE","NOVIEMBRE","DICIEMBRE");
         $dataPDF = array(
             'empresa' => $this->base_model->get_empresas($this->session->user_id)->row()->nombre,
