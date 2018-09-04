@@ -886,7 +886,7 @@ class Admin extends MY_Controller {
             $users[$i]['id'] = $i + 1;
             $users[$i]['seccion'] = $rData['seccion'];
             unset($users[$i]['puntaje']);
-            unset($users[$i]['fecha']);
+            $users[$i]['fecha'] = date('d-m-Y', $users[$i]['fecha']);
         }
         //creacion del titulo
         $this->excel->getActiveSheet()->getStyle('B2:E2')->applyFromArray(array('alignment' => array('horizontal' => PHPExcel_Style_Alignment::HORIZONTAL_CENTER)));
@@ -925,13 +925,14 @@ class Admin extends MY_Controller {
         $this->excel->getActiveSheet()->setCellValue('C14', 'APELLIDOS');
         $this->excel->getActiveSheet()->setCellValue('E14', 'NOMBRES');
         $this->excel->getActiveSheet()->setCellValue('F14', 'DNI');
-        $this->excel->getActiveSheet()->setCellValue('G14', 'SECCIÓN');
-        $this->excel->getActiveSheet()->setCellValue('H14', 'FIRMA');
+        $this->excel->getActiveSheet()->setCellValue('G14', 'FECHA DE EJECUCION');
+        $this->excel->getActiveSheet()->setCellValue('H14', 'SECCIÓN');
+        $this->excel->getActiveSheet()->setCellValue('I14', 'FIRMA');
         $this->excel->getActiveSheet()->fromArray($users, null, 'B15');
         //estilos
         $this->excel->getActiveSheet()->getStyle('B4:B10')->getFont()->setBold(true);
         $this->excel->getActiveSheet()->getStyle('D4:D9')->getFont()->setBold(true);
-        $this->excel->getActiveSheet()->getStyle('B14:H14')->getFont()->setBold(true);
+        $this->excel->getActiveSheet()->getStyle('B14:I14')->getFont()->setBold(true);
         $this->excel->getActiveSheet()->getStyle('C' . $foot1 . ':C' . $foot4)->getFont()->setBold(true);
         $bordes0 = array(
             'borders' => array('outline' => array('style' => PHPExcel_Style_Border::BORDER_THIN)),
@@ -962,6 +963,7 @@ class Admin extends MY_Controller {
         $this->excel->getActiveSheet()->getStyle('F15:F' . $finData)->applyFromArray($bordes0);
         $this->excel->getActiveSheet()->getStyle('G15:G' . $finData)->applyFromArray($bordes0);
         $this->excel->getActiveSheet()->getStyle('H15:H' . $finData)->applyFromArray($bordes0);
+        $this->excel->getActiveSheet()->getStyle('I15:I' . $finData)->applyFromArray($bordes0);
         $this->excel->getActiveSheet()->getStyle('C' . $foot1 . ':E' . $foot4)->applyFromArray($bordes0);
 
         foreach (range('B', 'G') as $columnID) {

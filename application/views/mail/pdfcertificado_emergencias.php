@@ -25,11 +25,15 @@ $obj_pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
 $obj_pdf->setFontSubsetting(false);
 $obj_pdf->SetFont('dejavusans', '', 16);
 $obj_pdf->AddPage();
-$html = '<div><br><br><br>'
-        . '<div style="font-size:48px; font-weight:bold; color:#0075bc;">CONSTANCIA</div>'
-        . '<div>LA EMPRESA <b style="font-weight:bold;">' . $empresa . '</b> DEJA CONSTANCIA QUE:</div>'
+$html = '<div>'
+        . '<br><br><br><br>'
+        . '<div><b style="font-weight:bold;"> &nbsp; &nbsp;' . $empresa . '</b></div>'
+        . '<div></div>'
+        . '<br><br>'
         . '<div style="font-weight:bold;">' . $nombre . '</div>'
-        . '<div>HA COMPLETADO EL CURSO DE "EVACUACIÓN EN CASO DE EMERGENCIAS", <br>REALIZADO DURANTE EL AÑO 2018';
+        . '<div></div>'
+        . '<div>"EVACUACIÓN EN CASO DE EMERGENCIAS"</div>'
+        . '<div style="top:20px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' . $dia .' &nbsp; &nbsp; &nbsp; &nbsp;' . $mes .' &nbsp; &nbsp; &nbsp; &nbsp;' . $año .'</div></div>';
 $obj_pdf->writeHTML($html, true, false, true, false, 'C');
 //En esta parte, la variable final cambia segun:
 //I para verlo online
