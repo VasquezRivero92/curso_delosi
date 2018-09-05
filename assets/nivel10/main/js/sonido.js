@@ -14,34 +14,87 @@ var audios = [
     ['menuBG', bdir + 'assets/sounds/menu.mp3'],
     ['playBTN', bdir + 'assets/sounds/catch.mp3'],
     ['test', odir + '/sounds/test.mp3'],
+
+    ['txti1', odir + '/sounds/txti1.mp3'],
     ['txti2', odir + '/sounds/txti2.mp3'],
-    ['s1i1', odir + '/sounds/sP1i1.mp3'],
-    ['s1i2', odir + '/sounds/sP1i2.mp3'],
-    ['s1i3', odir + '/sounds/sP1i3.mp3'],
-    ['s1i4', odir + '/sounds/sP1i4.mp3'],
-    ['s2text', odir + '/sounds/txti3.mp3'],
-    ['s2i1', odir + '/sounds/sP2i1.mp3'],
-    ['s2i2', odir + '/sounds/sP2i2.mp3'],
-    ['s2i3', odir + '/sounds/sP2i3.mp3'],
-    ['s2i4', odir + '/sounds/sP2i4.mp3'],
-    ['s2i5', odir + '/sounds/sP2i5.mp3'],
-    ['s2i6', odir + '/sounds/sP2i6.mp3'],
-    ['s2i7', odir + '/sounds/sP2i7.mp3'],
-    ['s2i8', odir + '/sounds/sP2i8.mp3'],
-    ['s2i9', odir + '/sounds/sP2i9.mp3'],
-    ['s2i10', odir + '/sounds/sP2i10.mp3'],
-    ['s2i11', odir + '/sounds/sP2i11.mp3'],
-    ['s2i12', odir + '/sounds/sP2i12.mp3'],
-    ['s2i13', odir + '/sounds/sP2i13.mp3'],
-    ['s2i14', odir + '/sounds/sP2i14.mp3'],
-    ['sP2ipop', odir + '/sounds/sP2ipop.mp3'],
-    ['s4i1', odir + '/sounds/sP4i1.mp3'],
-    ['s4i2', odir + '/sounds/sP4i2.mp3'],
-    ['s4i3', odir + '/sounds/sP4i3.mp3'],
-    ['s4i4', odir + '/sounds/sP4i4.mp3'],
-    ['s4i5', odir + '/sounds/sP4i5.mp3'],
-    ['fndPausas', bdir + 'assets/sounds/fnd_pausas.mp3'],
-    ['s4i6', odir + '/sounds/sP4i6.mp3']
+    ['txti3', odir + '/sounds/txti3.mp3'],
+    ['txti4', odir + '/sounds/txti4.mp3'],
+
+    ['sO1i1', odir + '/sounds/sO1i1.mp3'],
+    ['sO1i2', odir + '/sounds/sO1i2.mp3'],
+    ['sO1i3', odir + '/sounds/sO1i3.mp3'],
+
+    ['sO2i1', odir + '/sounds/sO2i1.mp3'],
+    ['sO2i2', odir + '/sounds/sO2i2.mp3'],
+    ['sO2i3', odir + '/sounds/sO2i3.mp3'],
+    ['sO2i4', odir + '/sounds/sO2i4.mp3'],
+    ['sO2i5', odir + '/sounds/sO2i5.mp3'],
+    ['sO2i6', odir + '/sounds/sO2i6.mp3'],
+
+    ['sO3i1', odir + '/sounds/sO3i1.mp3'],
+    ['sO3i2', odir + '/sounds/sO3i2.mp3'],
+    ['sO3i3', odir + '/sounds/sO3i3.mp3'],
+    ['sO3i4', odir + '/sounds/sO3i4.mp3'],
+    ['sO3i5', odir + '/sounds/sO3i5.mp3'],
+
+    
+    ['sP1i1', odir + '/sounds/sP1i1.mp3'],
+    ['sP1i2', odir + '/sounds/sP1i2.mp3'],
+    ['sP1i3', odir + '/sounds/sP1i3.mp3'],
+
+    ['sP2i1', odir + '/sounds/sP2i1.mp3'],
+    ['sP2i2', odir + '/sounds/sP2i2.mp3'],
+    ['sP2i3', odir + '/sounds/sP2i3.mp3'],
+    ['sP2i4', odir + '/sounds/sP2i4.mp3'],
+    ['sP2i5', odir + '/sounds/sP2i5.mp3'],
+    ['sP2i6', odir + '/sounds/sP2i6.mp3'],
+
+    ['sP3i1', odir + '/sounds/sP3i1.mp3'],
+    ['sP3i2', odir + '/sounds/sP3i2.mp3'],
+    ['sP3i3', odir + '/sounds/sP3i3.mp3'],
+    ['sP3i4', odir + '/sounds/sP3i4.mp3'],
+    ['sP3i5', odir + '/sounds/sP3i5.mp3'],
+
+
+    ['sR1i1', odir + '/sounds/sR1i1.mp3'],
+    ['sR1i2', odir + '/sounds/sR1i2.mp3'],
+    ['sR1i3', odir + '/sounds/sR1i3.mp3'],
+
+    ['sR2i1', odir + '/sounds/sR2i1.mp3'],
+    ['sR2i2', odir + '/sounds/sR2i2.mp3'],
+    ['sR2i3', odir + '/sounds/sR2i3.mp3'],
+    ['sR2i4', odir + '/sounds/sR2i4.mp3'],
+    ['sR2i5', odir + '/sounds/sR2i5.mp3'],
+    ['sR2i6', odir + '/sounds/sR2i6.mp3'],
+
+    ['sR3i1', odir + '/sounds/sR3i1.mp3'],
+    ['sR3i2', odir + '/sounds/sR3i2.mp3'],
+    ['sR3i3', odir + '/sounds/sR3i3.mp3'],
+    ['sR3i4', odir + '/sounds/sR3i4.mp3'],
+    ['sR3i5', odir + '/sounds/sR3i5.mp3'],
+
+
+    ['sD1i1', odir + '/sounds/sR1i1.mp3'],
+    ['sD1i2', odir + '/sounds/sR1i2.mp3'],
+    ['sD1i3', odir + '/sounds/sR1i3.mp3'],
+
+    ['sD2i1', odir + '/sounds/sR2i1.mp3'],
+    ['sD2i2', odir + '/sounds/sR2i2.mp3'],
+    ['sD2i3', odir + '/sounds/sR2i3.mp3'],
+    ['sD2i4', odir + '/sounds/sR2i4.mp3'],
+    ['sD2i5', odir + '/sounds/sR2i5.mp3'],
+    ['sD2i6', odir + '/sounds/sR2i6.mp3'],
+
+    ['sD3i1', odir + '/sounds/sR3i1.mp3'],
+    ['sD3i2', odir + '/sounds/sR3i2.mp3'],
+    ['sD3i3', odir + '/sounds/sR3i3.mp3'],
+    ['sD3i4', odir + '/sounds/sR3i4.mp3'],
+    ['sD3i5', odir + '/sounds/sR3i5.mp3'],
+
+
+
+
+    ['fndPausas', bdir + 'assets/sounds/fnd_pausas.mp3']
 ];
 
 audios = audios.concat();

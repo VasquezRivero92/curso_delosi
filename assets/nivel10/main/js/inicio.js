@@ -22,7 +22,7 @@ function showInicio() {
         $(".instrucciones").stop().delay(300).fadeOut(100);
         $("#instruccion_2").stop().fadeIn(500);
         playBGMusic(window.fndPausas);
-        //playTexto(window.txti2);
+        playTexto(window.txti1);
     }, 4000);
     $('#i3btn_1').addClass('slider_scale');
     $('#i3btn_2').addClass('disable');
@@ -67,6 +67,7 @@ $(document).ready(function (e) {
         $('#sliderPage_4_1').stop().delay(300).fadeOut(100);
         $('#sliderPage_1').stop().fadeIn(500);
         $('#s1txt_1').html('Antes de realizar la Pausas Activas, revisemos<br>algunos consejos para tener una buena postura:');
+        playTexto(window.window['s' + grup + sID + 'i' + 1]);
     });
     $('#i2btn_1').click(function () {
         stopTexto();
@@ -81,12 +82,14 @@ $(document).ready(function (e) {
         $('#sliderPage_2_1').stop().fadeOut(100);
         $('#sliderPage_' + sID).stop().fadeIn(500);
         $('#s2txt_1').html('CABEZA Y CUELLO');
+        playTexto(window.window['s' + grup + sID + 'i' + 1]);
     });
     $('#i2btn_3').click(function () {
         stopTexto();
         playSound(window.playBTN);
         $('#sliderPage_3_1').stop().fadeOut(100);
         $('#sliderPage_' + sID).stop().fadeIn(500);
+        playTexto(window.window['s' + grup + sID + 'i' + 1]);
     });
     $('.i3btn').click(function () {
         id_sl = 0;
@@ -108,16 +111,19 @@ $(document).ready(function (e) {
             sli_1 = true;
             sli_2 = false;
             sli_3 = false;
+            playTexto(window.txti2);
             break;
         case 2:
             sli_1 = false;
             sli_2 = true;
             sli_3 = false;
+            playTexto(window.txti3);
             break;
         case 3:
             sli_1 = false;
             sli_2 = false;
             sli_3 = true;
+            playTexto(window.txti4);
             break;
         }
         if (lAudio[sID]) {
@@ -197,65 +203,8 @@ $(document).ready(function (e) {
             sl_2();
         }
 
-        if(id_sl == 1){
-            $('.s4_1').removeClass('img_disabled');
-            $('.s4_2').addClass('img_disabled');
-            $('.s4_3').addClass('img_disabled');  
-            $('.s4_4').addClass('img_disabled');
-            $('.s4_5').addClass('img_disabled');
-            $('.s4s1').removeClass('op');
-            $('.s4s2').addClass('op');
-            $('.s4s3').addClass('op');
-            $('.s4s4').addClass('op');
-            $('.s4s5').addClass('op');
-        }else if(id_sl == 2){
-            $('.s4_1').addClass('img_disabled');
-            $('.s4_2').removeClass('img_disabled');
-            $('.s4_3').addClass('img_disabled');  
-            $('.s4_4').addClass('img_disabled');
-            $('.s4_5').addClass('img_disabled');
-            $('.s4s1').addClass('op');
-            $('.s4s2').removeClass('op');
-            $('.s4s3').addClass('op');
-            $('.s4s4').addClass('op');
-            $('.s4s5').addClass('op');
-        }else if(id_sl == 3){
-            $('.s4_1').addClass('img_disabled');
-            $('.s4_2').addClass('img_disabled');
-            $('.s4_3').removeClass('img_disabled');  
-            $('.s4_4').addClass('img_disabled');
-            $('.s4_5').addClass('img_disabled');
-            $('.s4s1').addClass('op');
-            $('.s4s2').addClass('op');
-            $('.s4s3').removeClass('op');
-            $('.s4s4').addClass('op');
-            $('.s4s5').addClass('op');
-        }else if(id_sl == 4){
-            $('.s4_1').addClass('img_disabled');
-            $('.s4_2').addClass('img_disabled');
-            $('.s4_3').addClass('img_disabled');  
-            $('.s4_4').removeClass('img_disabled');
-            $('.s4_5').addClass('img_disabled');
-            $('.s4s1').addClass('op');
-            $('.s4s2').addClass('op');
-            $('.s4s3').addClass('op');
-            $('.s4s4').removeClass('op');
-            $('.s4s5').addClass('op');
-        }else if(id_sl == 5){
-            $('.s4_1').addClass('img_disabled');
-            $('.s4_2').addClass('img_disabled');
-            $('.s4_3').addClass('img_disabled');  
-            $('.s4_4').addClass('img_disabled');
-            $('.s4_5').removeClass('img_disabled');
-            $('.s4s1').addClass('op');
-            $('.s4s2').addClass('op');
-            $('.s4s3').addClass('op');
-            $('.s4s4').addClass('op');
-            $('.s4s5').removeClass('op');
-        }
-        // lAudio[sID] = 's' + sID + 'i' + id_sl;
-        // playTexto(window[lAudio[sID]]);
-
+        playTexto(window.window['s' + grup + sID + 'i' + id_sl]);
+        console.log(grup, sID);
         //$('#sliderPage_1').addClass('cvhangeimg');
         if (!completo && id_sl === e.item.count) {
             

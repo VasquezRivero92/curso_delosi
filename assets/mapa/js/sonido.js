@@ -38,6 +38,7 @@ loader.imageCounter = 0;
 var audios = [
     ['BGIntro', bdir + 'assets/sounds/intromapa.mp3'],
     ['BGJuego', bdir + 'assets/sounds/mapa.mp3'],
+    ['Welcome', bdir + 'assets/sounds/bienvenido.mp3'],
     ['BGWin', bdir + 'assets/sounds/ganaste.mp3'],
     ['txti1', bdir + 'assets/sounds/r1/ab1.mp3'],
     ['txti2', bdir + 'assets/sounds/r1/ab1.mp3'],

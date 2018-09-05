@@ -42,7 +42,7 @@
                 <!-- <div id="bg_2"></div> -->
                 <div id="welcome_2">
                     <!-- <strong>¡Bienvenido a la Ciudad de la Prevención!</strong><br> -->
-                    <p>Hola soy Zoila Prevención, te doy la bienvenida a Prevencity, nuestra ciudad segura donde aprenderás como prevenir accidentes de trabajo, estaré acompañándote durante tu recorrido en la ciudad dándote algunos TIPS.<p>
+                    <p>¡Hola! soy Zoila Prevención, te doy la bienvenida a Prevencity, nuestra ciudad segura donde aprenderás como prevenir accidentes de trabajo, estaré acompañándote durante tu recorrido en la ciudad dándote algunos TIPS.<p>
                     <p>En Prevencity encontrarás diversos lugares donde podrás ingresar, aprender y al finalizar cada curso pondrás a prueba todo lo aprendido pasando un Reto de prevención”.
                         <!-- <br> No te pierdas ninguno de las misiones, ya que muchas de ellos podrán llevarte a formar parte del <strong>Programa de Certificación de Prevención de riesgos de acuerdo a tu puesto de trabajo.</strong> -->
                     </p>
