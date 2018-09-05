@@ -3,7 +3,7 @@
 	var p; // shortcut to reference prototypes
 	var lib={};var ss={};var img={};
 	lib.ssMetadata = [
-			{name:"planta_atlas_P_", frames: [[7724,521,227,58],[7437,0,525,519],[527,3270,525,519],[2454,521,525,519],[6324,3126,525,519],[1054,3444,525,519],[2981,521,525,519],[6383,0,525,519],[3162,3647,525,519],[5797,3126,525,519],[7197,521,525,519],[1581,3618,525,519],[5616,521,525,519],[0,3270,525,519],[6143,521,525,519],[4743,1042,525,519],[5270,1042,525,519],[5797,1042,525,519],[6324,1042,525,519],[7378,1042,525,519],[0,1186,525,519],[3162,1563,525,519],[3689,1563,525,519],[4216,1563,525,519],[6851,1042,525,519],[1054,1360,525,519],[1581,1534,525,519],[2108,1563,525,519],[527,1186,525,519],[4743,1563,525,519],[5270,1563,525,519],[5797,1563,525,519],[6324,1563,525,519],[6851,1563,525,519],[7378,1563,525,519],[0,1707,525,519],[527,1707,525,519],[1054,1881,525,519],[1581,2055,525,519],[2108,2084,525,519],[2635,2084,525,519],[3162,2084,525,519],[3689,2084,525,519],[4216,2084,525,519],[4743,2084,525,519],[5270,2084,525,519],[5797,2084,525,519],[5329,0,525,519],[6324,2084,525,519],[6851,2084,525,519],[7378,2084,525,519],[0,2228,525,519],[527,2228,525,519],[1054,2402,525,519],[1581,2576,525,519],[2108,2605,525,519],[4802,0,525,519],[2635,2605,525,519],[3162,2605,525,519],[3689,2605,525,519],[4216,2605,525,519],[4743,2605,525,519],[5270,2605,525,519],[5797,2605,525,519],[6324,2605,525,519],[6851,2605,525,519],[4562,521,525,519],[5089,521,525,519],[4275,0,525,519],[3748,0,525,519],[7378,2605,525,519],[0,2749,525,519],[527,2749,525,519],[1054,2923,525,519],[2108,3647,525,519],[3221,0,525,519],[1581,3097,525,519],[2108,3126,525,519],[2635,3647,525,519],[2635,3126,525,519],[3162,3126,525,519],[3689,3126,525,519],[4216,3126,525,519],[4743,3126,525,519],[5270,3126,525,519],[527,665,525,519],[5856,0,525,519],[6910,0,525,519],[1054,839,525,519],[2694,0,525,519],[1581,1013,525,519],[2108,1042,525,519],[2635,1042,525,519],[3508,521,525,519],[4035,521,525,519],[7378,3126,525,519],[0,665,525,519],[6851,3126,525,519],[4216,1042,525,519],[3689,3647,525,519],[2635,1563,525,519],[3162,1042,525,519],[3689,1042,525,519],[6670,521,525,519],[1927,492,525,519],[0,0,1083,663],[1927,0,765,490],[1085,0,840,837]]}
+			{name:"planta_atlas_P_", frames: [[7677,0,227,58],[2108,2055,525,519],[6851,1563,525,519],[3689,1563,525,519],[5616,521,525,519],[2108,2576,525,519],[3988,0,525,519],[2635,2605,525,519],[3162,2605,525,519],[3689,2605,525,519],[4216,2605,525,519],[4743,2605,525,519],[5270,2605,525,519],[527,1707,525,519],[5797,2605,525,519],[2635,2084,525,519],[3162,2084,525,519],[7378,1563,525,519],[3689,2084,525,519],[4216,2084,525,519],[6324,2084,525,519],[0,1707,525,519],[6851,2084,525,519],[7378,2084,525,519],[1581,2055,525,519],[0,2228,525,519],[527,2228,525,519],[1054,2402,525,519],[1581,2576,525,519],[5042,0,525,519],[4035,521,525,519],[2981,521,525,519],[3508,521,525,519],[3461,0,525,519],[4216,1563,525,519],[6623,0,525,519],[7150,0,525,519],[1927,492,525,519],[2454,492,525,519],[6096,0,525,519],[4562,521,525,519],[5089,521,525,519],[4515,0,525,519],[6143,521,525,519],[6670,521,525,519],[4743,2084,525,519],[7197,521,525,519],[0,665,525,519],[527,665,525,519],[1054,839,525,519],[1581,1013,525,519],[2108,1013,525,519],[2635,1042,525,519],[4743,1563,525,519],[3162,1042,525,519],[3689,1042,525,519],[4216,1042,525,519],[4743,1042,525,519],[6324,1563,525,519],[5270,1042,525,519],[5797,1042,525,519],[6324,1042,525,519],[5569,0,525,519],[6851,1042,525,519],[7378,1042,525,519],[0,1186,525,519],[527,1186,525,519],[1054,1360,525,519],[1581,1534,525,519],[2108,1534,525,519],[2635,1563,525,519],[6324,2605,525,519],[5270,2084,525,519],[6851,2605,525,519],[7378,2605,525,519],[0,2749,525,519],[527,2749,525,519],[5270,1563,525,519],[1054,2923,525,519],[1581,3097,525,519],[2108,3097,525,519],[2635,3126,525,519],[3162,3126,525,519],[3689,3126,525,519],[4216,3126,525,519],[1054,1881,525,519],[4743,3126,525,519],[5797,1563,525,519],[5270,3126,525,519],[5797,3126,525,519],[6324,3126,525,519],[6851,3126,525,519],[7378,3126,525,519],[0,3270,525,519],[527,3270,525,519],[1054,3444,525,519],[5797,2084,525,519],[1581,3618,525,519],[2108,3618,525,519],[2635,3647,525,519],[3162,3647,525,519],[3162,1563,525,519],[3689,3647,525,519],[4216,3647,525,519],[4743,3647,525,519],[1927,0,765,490],[0,0,1083,663],[2694,0,765,490],[1085,0,840,837]]}
 	];
 	
 	
@@ -746,23 +746,30 @@
 	
 	
 	
-	(lib.popUp = function() {
+	(lib.okPop1 = function() {
 		this.spriteSheet = ss["planta_atlas_P_"];
 		this.gotoAndStop(105);
 	}).prototype = p = new cjs.Sprite();
 	
 	
 	
-	(lib.timePop = function() {
+	(lib.popUp1 = function() {
 		this.spriteSheet = ss["planta_atlas_P_"];
 		this.gotoAndStop(106);
 	}).prototype = p = new cjs.Sprite();
 	
 	
 	
-	(lib.UnnamedPattern = function() {
+	(lib.timePop = function() {
 		this.spriteSheet = ss["planta_atlas_P_"];
 		this.gotoAndStop(107);
+	}).prototype = p = new cjs.Sprite();
+	
+	
+	
+	(lib.UnnamedPattern = function() {
+		this.spriteSheet = ss["planta_atlas_P_"];
+		this.gotoAndStop(108);
 	}).prototype = p = new cjs.Sprite();
 	// helper functions:
 	
@@ -1207,7 +1214,7 @@
 	
 		// Capa_1
 		this.shape_1 = new cjs.Shape();
-		this.shape_1.graphics.bf(cjs.SpriteSheetUtils.extractFrame(ss["planta_atlas_P_"],107), null, new cjs.Matrix2D(1.001,0,0,1.001,1457.3,706.2)).s().p("Ehp2ALVICC2pMDRrAAAIAAWpg");
+		this.shape_1.graphics.bf(cjs.SpriteSheetUtils.extractFrame(ss["planta_atlas_P_"],108), null, new cjs.Matrix2D(1.001,0,0,1.001,1457.3,706.2)).s().p("Ehp2ALVICC2pMDRrAAAIAAWpg");
 		this.shape_1.setTransform(677.5,72.5);
 	
 		this.timeline.addTween(cjs.Tween.get(this.shape_1).wait(1));
@@ -14398,57 +14405,33 @@
 	
 	
 	(lib.Anim_repete = function(mode,startPosition,loop) {
-		this.initialize(mode,startPosition,loop,{escena1:1,escena2:25,escena3:49,escena4:73,escena5:97,escena6:121,escena7:145,escena8:169,escena9:193,escena10:217,escena11:240,escena12:264,escena13:288,escena14:337});
+		this.initialize(mode,startPosition,loop,{escena1:1,escena2:109,escena3:220,escena4:348,escena5:478,escena6:620});
 	
 		// timeline functions:
 		this.frame_0 = function() {
 			this.stop();
 		}
-		this.frame_24 = function() {
+		this.frame_108 = function() {
 			this.gotoAndPlay('escena1');
 		}
-		this.frame_48 = function() {
+		this.frame_219 = function() {
 			this.gotoAndPlay('escena2');
 		}
-		this.frame_72 = function() {
+		this.frame_347 = function() {
 			this.gotoAndPlay('escena3');
 		}
-		this.frame_96 = function() {
+		this.frame_477 = function() {
 			this.gotoAndPlay('escena4');
 		}
-		this.frame_120 = function() {
+		this.frame_619 = function() {
 			this.gotoAndPlay('escena5');
 		}
-		this.frame_144 = function() {
+		this.frame_756 = function() {
 			this.gotoAndPlay('escena6');
-		}
-		this.frame_168 = function() {
-			this.gotoAndPlay('escena7');
-		}
-		this.frame_192 = function() {
-			this.gotoAndPlay('escena8');
-		}
-		this.frame_216 = function() {
-			this.gotoAndPlay('escena9');
-		}
-		this.frame_239 = function() {
-			this.gotoAndPlay('escena10');
-		}
-		this.frame_263 = function() {
-			this.gotoAndPlay('escena11');
-		}
-		this.frame_287 = function() {
-			this.gotoAndPlay('escena12');
-		}
-		this.frame_336 = function() {
-			this.gotoAndPlay('escena13');
-		}
-		this.frame_380 = function() {
-			this.gotoAndPlay('escena14');
 		}
 	
 		// actions tween:
-		this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(24).call(this.frame_24).wait(24).call(this.frame_48).wait(24).call(this.frame_72).wait(24).call(this.frame_96).wait(24).call(this.frame_120).wait(24).call(this.frame_144).wait(24).call(this.frame_168).wait(24).call(this.frame_192).wait(24).call(this.frame_216).wait(23).call(this.frame_239).wait(24).call(this.frame_263).wait(24).call(this.frame_287).wait(49).call(this.frame_336).wait(44).call(this.frame_380).wait(1));
+		this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(108).call(this.frame_108).wait(111).call(this.frame_219).wait(128).call(this.frame_347).wait(130).call(this.frame_477).wait(142).call(this.frame_619).wait(137).call(this.frame_756).wait(1));
 	
 		// Capa_1
 		this.shape = new cjs.Shape();
@@ -14557,28 +14540,28 @@
 		this.instance_33 = new lib.EX03_fem_pla_A_09();
 		this.instance_33.parent = this;
 	
-		this.instance_34 = new lib.EX03_fem_pla_A_10();
+		this.instance_34 = new lib.EX03_fem_pla_B_15();
 		this.instance_34.parent = this;
 	
-		this.instance_35 = new lib.EX03_fem_pla_B_15();
+		this.instance_35 = new lib.EX03_fem_pla_B_16();
 		this.instance_35.parent = this;
 	
-		this.instance_36 = new lib.EX03_fem_pla_B_16();
+		this.instance_36 = new lib.EX03_fem_pla_B_17();
 		this.instance_36.parent = this;
 	
-		this.instance_37 = new lib.EX03_fem_pla_B_17();
+		this.instance_37 = new lib.EX03_fem_pla_B_18();
 		this.instance_37.parent = this;
 	
-		this.instance_38 = new lib.EX03_fem_pla_B_18();
+		this.instance_38 = new lib.EX03_fem_pla_B_19();
 		this.instance_38.parent = this;
 	
-		this.instance_39 = new lib.EX03_fem_pla_B_19();
+		this.instance_39 = new lib.EX03_fem_pla_B_20();
 		this.instance_39.parent = this;
 	
-		this.instance_40 = new lib.EX03_fem_pla_B_20();
+		this.instance_40 = new lib.EX03_fem_pla_B_21();
 		this.instance_40.parent = this;
 	
-		this.instance_41 = new lib.EX03_fem_pla_B_21();
+		this.instance_41 = new lib.EX03_fem_pla_A_10();
 		this.instance_41.parent = this;
 	
 		this.instance_42 = new lib.EX04_masc_pla_A_00();
@@ -14725,7 +14708,7 @@
 		this.instance_89 = new lib.EX07_fem_pla_B_10();
 		this.instance_89.parent = this;
 	
-		this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape}]}).to({state:[{t:this.instance}]},1).to({state:[{t:this.instance_1}]},2).to({state:[{t:this.instance_2}]},2).to({state:[{t:this.instance_3}]},2).to({state:[{t:this.instance_4}]},2).to({state:[{t:this.instance_5}]},2).to({state:[{t:this.instance_6}]},2).to({state:[{t:this.instance_5}]},2).to({state:[{t:this.instance_4}]},2).to({state:[{t:this.instance_3}]},2).to({state:[{t:this.instance_2}]},2).to({state:[{t:this.instance_1}]},2).to({state:[{t:this.instance_7}]},2).to({state:[{t:this.instance_8}]},2).to({state:[{t:this.instance_9}]},2).to({state:[{t:this.instance_10}]},2).to({state:[{t:this.instance_11}]},2).to({state:[{t:this.instance_12}]},2).to({state:[{t:this.instance_13}]},2).to({state:[{t:this.instance_12}]},2).to({state:[{t:this.instance_11}]},2).to({state:[{t:this.instance_10}]},2).to({state:[{t:this.instance_9}]},2).to({state:[{t:this.instance_8}]},2).to({state:[{t:this.instance_14}]},2).to({state:[{t:this.instance_15}]},2).to({state:[{t:this.instance_16}]},2).to({state:[{t:this.instance_17}]},2).to({state:[{t:this.instance_18}]},2).to({state:[{t:this.instance_19}]},2).to({state:[{t:this.instance_20}]},2).to({state:[{t:this.instance_19}]},2).to({state:[{t:this.instance_18}]},2).to({state:[{t:this.instance_17}]},2).to({state:[{t:this.instance_16}]},2).to({state:[{t:this.instance_15}]},2).to({state:[{t:this.instance_21}]},2).to({state:[{t:this.instance_22}]},2).to({state:[{t:this.instance_23}]},2).to({state:[{t:this.instance_24}]},2).to({state:[{t:this.instance_25}]},2).to({state:[{t:this.instance_26}]},2).to({state:[{t:this.instance_27}]},2).to({state:[{t:this.instance_26}]},2).to({state:[{t:this.instance_25}]},2).to({state:[{t:this.instance_24}]},2).to({state:[{t:this.instance_23}]},2).to({state:[{t:this.instance_22}]},2).to({state:[{t:this.instance_28}]},2).to({state:[{t:this.instance_29}]},2).to({state:[{t:this.instance_30}]},2).to({state:[{t:this.instance_31}]},2).to({state:[{t:this.instance_32}]},2).to({state:[{t:this.instance_33}]},2).to({state:[{t:this.instance_34}]},2).to({state:[{t:this.instance_33}]},2).to({state:[{t:this.instance_32}]},2).to({state:[{t:this.instance_31}]},2).to({state:[{t:this.instance_30}]},2).to({state:[{t:this.instance_29}]},2).to({state:[{t:this.instance_35}]},2).to({state:[{t:this.instance_36}]},2).to({state:[{t:this.instance_37}]},2).to({state:[{t:this.instance_38}]},2).to({state:[{t:this.instance_39}]},2).to({state:[{t:this.instance_40}]},2).to({state:[{t:this.instance_41}]},2).to({state:[{t:this.instance_40}]},2).to({state:[{t:this.instance_39}]},2).to({state:[{t:this.instance_38}]},2).to({state:[{t:this.instance_37}]},2).to({state:[{t:this.instance_36}]},2).to({state:[{t:this.instance_42}]},2).to({state:[{t:this.instance_43}]},2).to({state:[{t:this.instance_44}]},2).to({state:[{t:this.instance_45}]},2).to({state:[{t:this.instance_46}]},2).to({state:[{t:this.instance_47}]},2).to({state:[{t:this.instance_48}]},2).to({state:[{t:this.instance_47}]},2).to({state:[{t:this.instance_46}]},2).to({state:[{t:this.instance_45}]},2).to({state:[{t:this.instance_44}]},2).to({state:[{t:this.instance_43}]},2).to({state:[{t:this.instance_49}]},2).to({state:[{t:this.instance_50}]},2).to({state:[{t:this.instance_51}]},2).to({state:[{t:this.instance_52}]},2).to({state:[{t:this.instance_53}]},2).to({state:[{t:this.instance_54}]},2).to({state:[{t:this.instance_55}]},2).to({state:[{t:this.instance_54}]},2).to({state:[{t:this.instance_53}]},2).to({state:[{t:this.instance_52}]},2).to({state:[{t:this.instance_51}]},2).to({state:[{t:this.instance_50}]},2).to({state:[{t:this.instance_56}]},2).to({state:[{t:this.instance_57}]},2).to({state:[{t:this.instance_58}]},2).to({state:[{t:this.instance_59}]},2).to({state:[{t:this.instance_60}]},2).to({state:[{t:this.instance_61}]},2).to({state:[{t:this.instance_62}]},2).to({state:[{t:this.instance_61}]},2).to({state:[{t:this.instance_60}]},2).to({state:[{t:this.instance_59}]},2).to({state:[{t:this.instance_58}]},2).to({state:[{t:this.instance_57}]},2).to({state:[{t:this.instance_62}]},2).to({state:[{t:this.instance_61}]},2).to({state:[{t:this.instance_60}]},2).to({state:[{t:this.instance_59}]},2).to({state:[{t:this.instance_58}]},1).to({state:[{t:this.instance_57}]},2).to({state:[{t:this.instance_56}]},2).to({state:[{t:this.instance_57}]},2).to({state:[{t:this.instance_58}]},2).to({state:[{t:this.instance_59}]},2).to({state:[{t:this.instance_60}]},2).to({state:[{t:this.instance_61}]},2).to({state:[{t:this.instance_63}]},2).to({state:[{t:this.instance_64}]},2).to({state:[{t:this.instance_65}]},2).to({state:[{t:this.instance_66}]},2).to({state:[{t:this.instance_67}]},2).to({state:[{t:this.instance_68}]},2).to({state:[{t:this.instance_69}]},2).to({state:[{t:this.instance_68}]},2).to({state:[{t:this.instance_67}]},2).to({state:[{t:this.instance_66}]},2).to({state:[{t:this.instance_65}]},2).to({state:[{t:this.instance_64}]},2).to({state:[{t:this.instance_69}]},2).to({state:[{t:this.instance_68}]},2).to({state:[{t:this.instance_67}]},2).to({state:[{t:this.instance_66}]},2).to({state:[{t:this.instance_65}]},2).to({state:[{t:this.instance_64}]},2).to({state:[{t:this.instance_63}]},2).to({state:[{t:this.instance_64}]},2).to({state:[{t:this.instance_65}]},2).to({state:[{t:this.instance_66}]},2).to({state:[{t:this.instance_67}]},2).to({state:[{t:this.instance_68}]},2).to({state:[{t:this.instance_70}]},2).to({state:[{t:this.instance_71}]},4).to({state:[{t:this.instance_72}]},4).to({state:[{t:this.instance_73}]},4).to({state:[{t:this.instance_74}]},4).to({state:[{t:this.instance_75}]},4).to({state:[{t:this.instance_76}]},8).to({state:[{t:this.instance_77}]},4).to({state:[{t:this.instance_78}]},4).to({state:[{t:this.instance_79}]},4).to({state:[{t:this.instance_70}]},5).to({state:[{t:this.instance_80}]},4).to({state:[{t:this.instance_81}]},4).to({state:[{t:this.instance_82}]},4).to({state:[{t:this.instance_83}]},4).to({state:[{t:this.instance_84}]},4).to({state:[{t:this.instance_85}]},4).to({state:[{t:this.instance_86}]},8).to({state:[{t:this.instance_87}]},4).to({state:[{t:this.instance_88}]},4).to({state:[{t:this.instance_89}]},4).wait(4));
+		this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape}]}).to({state:[{t:this.instance}]},1).to({state:[{t:this.instance_1}]},3).to({state:[{t:this.instance_2}]},3).to({state:[{t:this.instance_3}]},3).to({state:[{t:this.instance_4}]},3).to({state:[{t:this.instance_5}]},3).to({state:[{t:this.instance_6}]},3).to({state:[{t:this.instance_5}]},3).to({state:[{t:this.instance_4}]},3).to({state:[{t:this.instance_3}]},3).to({state:[{t:this.instance_2}]},3).to({state:[{t:this.instance_1}]},3).to({state:[{t:this.instance_7}]},3).to({state:[{t:this.instance_8}]},21).to({state:[{t:this.instance_9}]},3).to({state:[{t:this.instance_10}]},3).to({state:[{t:this.instance_11}]},3).to({state:[{t:this.instance_12}]},3).to({state:[{t:this.instance_13}]},3).to({state:[{t:this.instance_12}]},3).to({state:[{t:this.instance_11}]},3).to({state:[{t:this.instance_10}]},3).to({state:[{t:this.instance_9}]},3).to({state:[{t:this.instance_8}]},3).to({state:[{t:this.instance_14}]},21).to({state:[{t:this.instance_15}]},3).to({state:[{t:this.instance_16}]},3).to({state:[{t:this.instance_17}]},3).to({state:[{t:this.instance_18}]},3).to({state:[{t:this.instance_19}]},3).to({state:[{t:this.instance_20}]},3).to({state:[{t:this.instance_19}]},3).to({state:[{t:this.instance_18}]},3).to({state:[{t:this.instance_17}]},3).to({state:[{t:this.instance_16}]},3).to({state:[{t:this.instance_15}]},3).to({state:[{t:this.instance_21}]},3).to({state:[{t:this.instance_22}]},22).to({state:[{t:this.instance_23}]},3).to({state:[{t:this.instance_24}]},3).to({state:[{t:this.instance_25}]},3).to({state:[{t:this.instance_26}]},3).to({state:[{t:this.instance_27}]},3).to({state:[{t:this.instance_26}]},3).to({state:[{t:this.instance_25}]},3).to({state:[{t:this.instance_24}]},3).to({state:[{t:this.instance_23}]},3).to({state:[{t:this.instance_22}]},3).to({state:[{t:this.instance_28}]},23).to({state:[{t:this.instance_29}]},3).to({state:[{t:this.instance_30}]},3).to({state:[{t:this.instance_31}]},3).to({state:[{t:this.instance_32}]},3).to({state:[{t:this.instance_33}]},3).to({state:[{t:this.instance_34}]},3).to({state:[{t:this.instance_35}]},24).to({state:[{t:this.instance_36}]},3).to({state:[{t:this.instance_37}]},3).to({state:[{t:this.instance_38}]},3).to({state:[{t:this.instance_39}]},3).to({state:[{t:this.instance_40}]},3).to({state:[{t:this.instance_39}]},3).to({state:[{t:this.instance_38}]},17).to({state:[{t:this.instance_37}]},3).to({state:[{t:this.instance_36}]},3).to({state:[{t:this.instance_35}]},3).to({state:[{t:this.instance_41}]},3).to({state:[{t:this.instance_33}]},3).to({state:[{t:this.instance_32}]},3).to({state:[{t:this.instance_31}]},3).to({state:[{t:this.instance_30}]},3).to({state:[{t:this.instance_29}]},3).to({state:[{t:this.instance_42}]},24).to({state:[{t:this.instance_43}]},3).to({state:[{t:this.instance_44}]},3).to({state:[{t:this.instance_45}]},3).to({state:[{t:this.instance_46}]},3).to({state:[{t:this.instance_47}]},3).to({state:[{t:this.instance_48}]},3).to({state:[{t:this.instance_49}]},3).to({state:[{t:this.instance_50}]},3).to({state:[{t:this.instance_51}]},17).to({state:[{t:this.instance_52}]},3).to({state:[{t:this.instance_53}]},3).to({state:[{t:this.instance_54}]},3).to({state:[{t:this.instance_55}]},3).to({state:[{t:this.instance_54}]},3).to({state:[{t:this.instance_53}]},23).to({state:[{t:this.instance_52}]},3).to({state:[{t:this.instance_51}]},3).to({state:[{t:this.instance_50}]},3).to({state:[{t:this.instance_47}]},3).to({state:[{t:this.instance_46}]},3).to({state:[{t:this.instance_45}]},3).to({state:[{t:this.instance_44}]},3).to({state:[{t:this.instance_43}]},3).to({state:[{t:this.instance_42}]},3).to({state:[{t:this.instance_56}]},24).to({state:[{t:this.instance_57}]},3).to({state:[{t:this.instance_58}]},3).to({state:[{t:this.instance_59}]},3).to({state:[{t:this.instance_60}]},3).to({state:[{t:this.instance_61}]},3).to({state:[{t:this.instance_62}]},3).to({state:[{t:this.instance_61}]},3).to({state:[{t:this.instance_61}]},16).to({state:[{t:this.instance_60}]},3).to({state:[{t:this.instance_59}]},3).to({state:[{t:this.instance_58}]},3).to({state:[{t:this.instance_57}]},3).to({state:[{t:this.instance_56}]},3).to({state:[{t:this.instance_63}]},16).to({state:[{t:this.instance_64}]},3).to({state:[{t:this.instance_65}]},3).to({state:[{t:this.instance_66}]},3).to({state:[{t:this.instance_67}]},3).to({state:[{t:this.instance_68}]},3).to({state:[{t:this.instance_69}]},3).to({state:[{t:this.instance_68}]},20).to({state:[{t:this.instance_67}]},3).to({state:[{t:this.instance_66}]},3).to({state:[{t:this.instance_65}]},3).to({state:[{t:this.instance_64}]},3).to({state:[{t:this.instance_70}]},3).to({state:[{t:this.instance_70}]},21).to({state:[{t:this.instance_71}]},3).to({state:[{t:this.instance_72}]},4).to({state:[{t:this.instance_73}]},4).to({state:[{t:this.instance_74}]},4).to({state:[{t:this.instance_75}]},4).to({state:[{t:this.instance_76}]},12).to({state:[{t:this.instance_77}]},4).to({state:[{t:this.instance_78}]},4).to({state:[{t:this.instance_79}]},4).to({state:[{t:this.instance_70}]},5).to({state:[{t:this.instance_80}]},16).to({state:[{t:this.instance_81}]},4).to({state:[{t:this.instance_82}]},4).to({state:[{t:this.instance_83}]},4).to({state:[{t:this.instance_84}]},4).to({state:[{t:this.instance_85}]},4).to({state:[{t:this.instance_86}]},19).to({state:[{t:this.instance_87}]},4).to({state:[{t:this.instance_88}]},4).to({state:[{t:this.instance_89}]},4).wait(22));
 	
 	}).prototype = p = new cjs.MovieClip();
 	p.nominalBounds = new cjs.Rectangle(0,0,112,142);
@@ -14743,9 +14726,9 @@
 				this.gotoAndStop(0);
 				this.parent.PassEscena();
 				if(this.parent.termino){
-					pantallafinal();
-					finalSound();	
-					//aqui va el final de la funcion
+				//aqui va el final de la funcion
+							pantallafinal();
+							finalSound();
 				}
 			}
 			this.stop();
@@ -14784,7 +14767,7 @@
 	
 	
 	(lib.bien_echo = function(mode,startPosition,loop) {
-		this.initialize(mode,startPosition,loop,{});
+		this.initialize(mode,startPosition,loop,{detener:0,muybien:1,bien_movimiento:2});
 	
 		// timeline functions:
 		this.frame_0 = function() {
@@ -14795,9 +14778,9 @@
 				this.gotoAndStop(0);
 				this.parent.PassEscena();
 				if(this.parent.termino){
-					pantallafinal();
-					finalSound();	
-					//aqui va el final de la funcion
+				//aqui va el final de la funcion
+							pantallafinal();
+							finalSound();	
 				}
 			}
 			this.stop();
@@ -14805,9 +14788,12 @@
 		this.frame_1 = function() {
 			this.stop();
 		}
+		this.frame_2 = function() {
+			this.stop();
+		}
 	
 		// actions tween:
-		this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(1));
+		this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(1).call(this.frame_2).wait(1));
 	
 		// Capa_4
 		this.repetir_animacion = new lib.Anim_repete();
@@ -14816,36 +14802,48 @@
 		this.repetir_animacion.setTransform(792.9,142.7,1,1,0,0,0,56,71);
 		this.repetir_animacion._off = true;
 	
-		this.timeline.addTween(cjs.Tween.get(this.repetir_animacion).wait(1).to({_off:false},0).wait(1));
+		this.timeline.addTween(cjs.Tween.get(this.repetir_animacion).wait(2).to({_off:false},0).wait(1));
 	
-		// Capa_3
+		// continuar_BTN
 		this.continuar_BTN = new lib.continuar_fin();
 		this.continuar_BTN.name = "continuar_BTN";
 		this.continuar_BTN.parent = this;
-		this.continuar_BTN.setTransform(402,566.5,0.736,0.736,0,0,0,113.5,29);
+		this.continuar_BTN.setTransform(682.4,621.4,0.889,0.889,0,0,0,113.6,29.1);
+		this.continuar_BTN._off = true;
 		new cjs.ButtonHelper(this.continuar_BTN, 0, 1, 2, false, new lib.continuar_fin(), 3);
 	
-		this.instance = new lib.popUp();
+		this.timeline.addTween(cjs.Tween.get(this.continuar_BTN).wait(1).to({_off:false},0).wait(2));
+	
+		// Capa_3
+		this.instance = new lib.okPop1();
 		this.instance.parent = this;
-		this.instance.setTransform(139,25);
+		this.instance.setTransform(322,134);
 	
-		this.instance_1 = new lib.btn();
+		this.instance_1 = new lib.popUp1();
 		this.instance_1.parent = this;
-		this.instance_1.setTransform(567,328);
+		this.instance_1.setTransform(139,25);
 	
-		this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance_1},{t:this.instance},{t:this.continuar_BTN}]},1).wait(1));
+		this.instance_2 = new lib.btn();
+		this.instance_2.parent = this;
+		this.instance_2.setTransform(567,328);
+	
+		this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance}]},1).to({state:[{t:this.instance_2},{t:this.instance_1}]},1).wait(1));
 	
 		// Capa_1
 		this.shape = new cjs.Shape();
 		this.shape.graphics.f("#00CC00").s().p("AiBC9IAAl5IEDAAIAAF5g");
 		this.shape.setTransform(156,-85.3);
 	
-		this.instance_2 = new lib.backok();
-		this.instance_2.parent = this;
-		this.instance_2.setTransform(684.3,358.7,1,1,0,0,0,684.3,358.7);
-		new cjs.ButtonHelper(this.instance_2, 0, 1, 1);
+		this.timeline.addTween(cjs.Tween.get(this.shape).to({_off:true},1).wait(2));
 	
-		this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape}]}).to({state:[{t:this.instance_2}]},1).wait(1));
+		// backok
+		this.instance_3 = new lib.backok();
+		this.instance_3.parent = this;
+		this.instance_3.setTransform(684.3,358.7,1,1,0,0,0,684.3,358.7);
+		this.instance_3._off = true;
+		new cjs.ButtonHelper(this.instance_3, 0, 1, 1);
+	
+		this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(1).to({_off:false},0).wait(2));
 	
 	}).prototype = p = new cjs.MovieClip();
 	p.nominalBounds = new cjs.Rectangle(143.1,-104.2,25.9,37.8);
@@ -15857,7 +15855,7 @@
 	}).prototype = getMCSymbolPrototype(lib.Group_2_1, new cjs.Rectangle(0,0,1431.9,726.2), null);
 	
 	
-	(lib.popUp_1 = function(mode,startPosition,loop) {
+	(lib.popUp = function(mode,startPosition,loop) {
 		this.initialize(mode,startPosition,loop,{});
 	
 		// timeline functions:
@@ -15987,8 +15985,8 @@
 			
 			this.radio_actv.addEventListener("click", clickRadio.bind(this));
 			function clickRadio(){
+			// aqui va la funcion externa
 				radioPop();
-				// aqui va la funcion externa
 			}
 			
 			this.vover.on("mousedown", returnGame.bind(this));
@@ -16075,75 +16073,91 @@
 							 break;
 				}                  
 				EscenaGM++;		
-				resultadoPuntos(PuntajeFinal);
-
 			} // fin de verificación
 			
 			this.GoodEscena = function(){
 				clearTimeout(timerId);
-				this.Good_MC.gotoAndStop(1);
 				switch (EscenaGM) {
-					case 0:  this.PS_A_1.gotoAndStop('bien_rp');
-							 PuntajeFinal = PuntajeFinal + sumaPunto2; acerta_MC = true;
-							 this.Good_MC.repetir_animacion.gotoAndPlay('escena1');
-							 break;
-					case 1:  this.PS_A_2.gotoAndStop('bien_rp');
-							 PuntajeFinal = PuntajeFinal + sumaPunto2; acerta_MC = true;
-							 this.Good_MC.repetir_animacion.gotoAndPlay('escena2');
-							 break;
-					case 2:  this.PS_A_3.gotoAndStop('bien_rp');
-							 PuntajeFinal = PuntajeFinal + sumaPunto2; acerta_MC = true;
-							 this.Good_MC.repetir_animacion.gotoAndPlay('escena3');
-							 break;
-					case 3:  this.PS_A_4.gotoAndStop('bien_rp');
-							 PuntajeFinal = PuntajeFinal + sumaPunto2; acerta_MC = true;
-							 this.Good_MC.repetir_animacion.gotoAndPlay('escena4');
-							 break;
-					case 4:  this.PS_A_5.gotoAndStop('bien_rp');
-							 PuntajeFinal = PuntajeFinal + sumaPunto1; acerta_MC = true;
-							 this.Good_MC.repetir_animacion.gotoAndPlay('escena5');
-							 break;
-					case 5:  this.PS_A_6.gotoAndStop('bien_rp');
-							 PuntajeFinal = PuntajeFinal + sumaPunto1; acerta_MC = true;
-							 this.Good_MC.repetir_animacion.gotoAndPlay('escena6');
-							 break;
-					case 6:  this.PS_A_7.gotoAndStop('bien_rp');
-							 PuntajeFinal = PuntajeFinal + sumaPunto1; acerta_MC = true;
-							 this.Good_MC.repetir_animacion.gotoAndPlay('escena7');
-							 break;
-					case 7:  this.PS_A_8.gotoAndStop('bien_rp');
-							 PuntajeFinal = PuntajeFinal + sumaPunto1; acerta_MC = true;
-							 this.Good_MC.repetir_animacion.gotoAndPlay('escena8');
-							 break;
-					case 8:  //this.PS_A_9.gotoAndStop('bien_rp');
-							 PuntajeFinal = PuntajeFinal + sumaPunto2; acerta_MC = true;
-							 this.Good_MC.repetir_animacion.gotoAndPlay('escena9');
-							 break;
-					case 9:  this.PS_A_9.gotoAndStop('bien_rp');
-							 PuntajeFinal = PuntajeFinal + sumaPunto2; acerta_MC = true;
-							 this.Good_MC.repetir_animacion.gotoAndPlay('escena10');
-							 break;
-					case 10: //this.PS_A_11.gotoAndStop('bien_rp');
-							 PuntajeFinal = PuntajeFinal + sumaPunto2; acerta_MC = true;
-							 this.Good_MC.repetir_animacion.gotoAndPlay('escena11');
-							 break;
-					case 11: this.PS_A_10.gotoAndStop('bien_rp');
-							 PuntajeFinal = PuntajeFinal + sumaPunto2; acerta_MC = true;
-							 this.Good_MC.repetir_animacion.gotoAndPlay('escena12');
-							 break;
-					case 12: this.PS_A_11.gotoAndStop('bien_rp');
-							 PuntajeFinal = PuntajeFinal + sumaPunto1; acerta_MC = true;
-							 this.Good_MC.repetir_animacion.gotoAndPlay('escena13');
-							 break;
-					case 13: this.PS_A_12.gotoAndStop('bien_rp');
-							 PuntajeFinal = PuntajeFinal + sumaPunto1; acerta_MC = true;
-							 this.Good_MC.repetir_animacion.gotoAndPlay('escena14');
-							 break;
+					case 0: 
+						this.Good_MC.gotoAndStop('muybien');
+						this.PS_A_1.gotoAndStop('bien_rp');
+						PuntajeFinal = PuntajeFinal + sumaPunto2; acerta_MC = true;
+						break;
+					case 1: 
+						this.Good_MC.gotoAndStop('bien_movimiento');
+						this.PS_A_2.gotoAndStop('bien_rp');
+						PuntajeFinal = PuntajeFinal + sumaPunto2; acerta_MC = true;
+						this.Good_MC.repetir_animacion.gotoAndPlay('escena1');
+						break;
+					case 2: 
+						this.Good_MC.gotoAndStop('muybien');
+						this.PS_A_3.gotoAndStop('bien_rp');
+						PuntajeFinal = PuntajeFinal + sumaPunto2; acerta_MC = true;
+						break;
+					case 3:  
+						this.Good_MC.gotoAndStop('bien_movimiento');
+						this.PS_A_4.gotoAndStop('bien_rp');
+						PuntajeFinal = PuntajeFinal + sumaPunto2; acerta_MC = true;
+						this.Good_MC.repetir_animacion.gotoAndPlay('escena2');
+						break;
+					case 4: 
+						this.Good_MC.gotoAndStop('muybien');
+						this.PS_A_5.gotoAndStop('bien_rp');
+						PuntajeFinal = PuntajeFinal + sumaPunto1; acerta_MC = true;
+						break;
+					case 5:  
+						this.Good_MC.gotoAndStop('bien_movimiento');
+						this.PS_A_6.gotoAndStop('bien_rp');
+						PuntajeFinal = PuntajeFinal + sumaPunto1; acerta_MC = true;
+						this.Good_MC.repetir_animacion.gotoAndPlay('escena3');
+						break;
+					case 6:  
+						this.Good_MC.gotoAndStop('muybien');
+						this.PS_A_7.gotoAndStop('bien_rp');
+						PuntajeFinal = PuntajeFinal + sumaPunto1; acerta_MC = true;
+						break;
+					case 7:  
+						this.Good_MC.gotoAndStop('bien_movimiento');
+						this.PS_A_8.gotoAndStop('bien_rp');
+						PuntajeFinal = PuntajeFinal + sumaPunto1; acerta_MC = true;
+						this.Good_MC.repetir_animacion.gotoAndPlay('escena4');
+						break;
+					case 8:  
+						this.Good_MC.gotoAndStop('muybien');
+						PuntajeFinal = PuntajeFinal + sumaPunto2; acerta_MC = true;
+						break;
+					case 9:
+						this.Good_MC.gotoAndStop('muybien');
+						this.PS_A_9.gotoAndStop('bien_rp');
+						PuntajeFinal = PuntajeFinal + sumaPunto2; acerta_MC = true;
+						break;
+					case 10: 
+						this.Good_MC.gotoAndStop('muybien');
+						PuntajeFinal = PuntajeFinal + sumaPunto2; acerta_MC = true;
+						break;
+					case 11: 
+						this.Good_MC.gotoAndStop('bien_movimiento');
+						this.PS_A_10.gotoAndStop('bien_rp');
+						PuntajeFinal = PuntajeFinal + sumaPunto2; acerta_MC = true;
+						this.Good_MC.repetir_animacion.gotoAndPlay('escena5');
+						break;
+					case 12:
+						this.Good_MC.gotoAndStop('muybien');
+						this.PS_A_11.gotoAndStop('bien_rp');
+						PuntajeFinal = PuntajeFinal + sumaPunto1; acerta_MC = true;
+						break;
+					case 13: 
+						this.Good_MC.gotoAndStop('bien_movimiento');
+						this.PS_A_12.gotoAndStop('bien_rp');
+						PuntajeFinal = PuntajeFinal + sumaPunto1; acerta_MC = true;
+						this.Good_MC.repetir_animacion.gotoAndPlay('escena6');
+						break;
 				}                  
 				EscenaGM++;	
 				resultadoPuntos(PuntajeFinal);
 				//this.cont_Line.text = PuntajeFinal;
 			} // fin de verificación
+			
 			
 			
 			this.PassEscena = function(){
@@ -16774,7 +16788,7 @@
 		this.Bad_MC.parent = this;
 		this.Bad_MC.setTransform(658.1,363.2,1,1,0,0,0,274.8,159.2);
 	
-		this.popup_pause = new lib.popUp_1();
+		this.popup_pause = new lib.popUp();
 		this.popup_pause.name = "popup_pause";
 		this.popup_pause.parent = this;
 		this.popup_pause.setTransform(675,351.2,1,1,0,0,0,677.1,351.2);
