@@ -72,7 +72,7 @@
                     echo anchor('drivers/moto', 'Iniciar Reto', array('id' => 'btnJugar2'));
                 }else {
                     echo '<div id="i3txt_2">Ya completaste este reto</div>';
-                    echo anchor('mapa', 'Juegos completados', array('id' => 'btnJugar','id' => 'btnJugar','style' => 'pointer-events:none'));
+                    echo anchor('mapa', 'Retos completados', array('id' => 'btnJugar','id' => 'btnJugar','style' => 'pointer-events:none'));
                 }
                 echo anchor('mapa', ' ', array('id' => 'btnciudad'));
                 ?>
