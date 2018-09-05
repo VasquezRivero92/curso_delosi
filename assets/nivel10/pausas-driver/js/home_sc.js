@@ -53,7 +53,6 @@ function detenerSonido(){
 	stopBGMusic();
 }
 function btnTouch() {
-    console.log('clickCN');
     playFX(window.audioCatch);
 }
 

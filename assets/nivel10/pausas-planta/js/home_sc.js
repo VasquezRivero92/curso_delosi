@@ -30,7 +30,7 @@ function pantallafinal(){
 
 function finalSound(){
 	//stopTexto();
-	//playTexto(window["BGWin"]);
+	playTexto(window["BGWin"]);
 	$("#animation_container").fadeOut(500);
 }
 
