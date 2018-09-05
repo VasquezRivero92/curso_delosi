@@ -64,7 +64,7 @@
                 <div id="i3btn_3" class="i3btn"></div>
                 <?php
                 if ($this->session->win < 2) {
-                    echo anchor('pausasactivas/pausas', 'Iniciar Juego', array('id' => 'btnJugar'));
+                    echo anchor('pausasactivas/pausas', 'Iniciar Reto', array('id' => 'btnJugar'));
                 } else {
                     echo '<div id="i3txt_2">Ya completaste este reto</div>';
                     echo anchor('mapa', 'Volver al inicio', array('id' => 'btnJugar'));

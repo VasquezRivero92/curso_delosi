@@ -65,13 +65,13 @@
                 <div id="i3btn_4" class="i3btn"></div>
                 <?php
                 if ($this->session->win == 1) {
-                    echo '<div id="i3txt_2" >Haz clic para iniciar el juego</div>';
-                    echo anchor('drivers/minitest', 'Iniciar Juego', array('id' => 'btnJugar'));
+                    echo '<div id="i3txt_2" >Haz clic para iniciar el reto</div>';
+                    echo anchor('drivers/minitest', 'Iniciar Reto', array('id' => 'btnJugar'));
                 }elseif ($this->session->win == 3) {
-                    echo '<div id="i3txt_2" >Haz clic para iniciar el juego</div>';
-                    echo anchor('drivers/moto', 'Iniciar Juego', array('id' => 'btnJugar2'));
+                    echo '<div id="i3txt_2" >Haz clic para iniciar el reto</div>';
+                    echo anchor('drivers/moto', 'Iniciar Reto', array('id' => 'btnJugar2'));
                 }else {
-                    echo '<div id="i3txt_2">Ya completaste este juego</div>';
+                    echo '<div id="i3txt_2">Ya completaste este reto</div>';
                     echo anchor('mapa', 'Juegos completados', array('id' => 'btnJugar','id' => 'btnJugar','style' => 'pointer-events:none'));
                 }
                 echo anchor('mapa', ' ', array('id' => 'btnciudad'));
