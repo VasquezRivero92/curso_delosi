@@ -52,7 +52,7 @@
                 <!-- <div id="i2tit_1">felicitaciones</div>
                 <div id="i2tit_2">Driver</div> -->
                 <div id="i2txt_1">Has sido seleccionado para formar parte del grupo “CONDUCTORES SEGUROS”  
-                    Recibiras información vital para tu desenvolverte en tu día a día y pondremos a prueba tu preparación para que formes parte de esta elite de conductores.
+                    Recibiras información vital para desenvolverte en tu día a día y pondremos a prueba tu preparación para que formes parte de esta elite de conductores.
                     <br><br>Bienvenido a este curso especialmente diseñado para ti:</div>
                 <div id="i2btn_1">Continuar</div>
             </div>
@@ -168,7 +168,7 @@
                     <div class="owl-carousel" id="owl-3">
                         <div class="item">                            
                             <img id="s3i1" src="<?php echo base_url($own_dir . '/images/slider/s3i1.png'); ?>" alt=""/>
-                            <div id="s3t1" class="stxt"><span>Conduce a una velocidad moderada, y siendo consiente de la<br>velocidad máxima permitida.</span></div>
+                            <div id="s3t1" class="stxt"><span>Conduce a una velocidad moderada, y siendo consciente de la<br>velocidad máxima permitida.</span></div>
                         </div>
                         <div class="item">                            
                             <img id="s3i2" src="<?php echo base_url($own_dir . '/images/slider/s3i2.png'); ?>" alt=""/>

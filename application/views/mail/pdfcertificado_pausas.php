@@ -31,7 +31,7 @@ $html = '<div>'
         . '<div style="color:#19AAE8; font-weight:bold; font-size: 30px;" >CONSTANCIA</div>'
         . '<span style="color:#424243; font-size: 12px;">a<br></span>'
         . '<div style="font-weight:bold; ">' . $nombre . '</div>'
-        . '<div style="color:#424243; font-size: 12px;">Por completa y aprobar el curso</div>'
+        . '<div style="color:#424243; font-size: 12px;">Por haber completado de manera satisfactoria el curso</div>'
         . '<div style="font-weight:bold;">"AL RITMO DE PAUSAS ACTIVAS"</div>'
         . '<div style="top:20px; color:#424243; font-size: 12px;"> realizado el <b style="font-weight:bold; color:#000000;">' . $dia .'</b> de <b style="font-weight:bold; color:#000000;">' . $mes .'</b> del <b style="font-weight:bold; color:#000000;">' . $año .'</b></div></div>';
 $obj_pdf->writeHTML($html, true, false, true, false, 'C');
