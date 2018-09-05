@@ -9,7 +9,7 @@ function resultadoPuntos(punts) {
         console.log("resultado: " + data);
     });
 
-    if(sumaPuntos > 70){
+    if(puntos > 70){
         $('#i4Certificado').removeClass('disabled');
     }
 
