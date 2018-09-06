@@ -468,9 +468,9 @@
   top: -141px;
   width: 180px;
   height: 142px;
-  font-family: 'CatalogoSG';
+  font-family: 'Catalogo';
   font-size: 16px;
-  line-height: 15px;
+  line-height: 16px;
   opacity: 0;
 }
 .consejitos {
@@ -809,6 +809,34 @@
     background-size: cover;
     z-index: 200;
 }
+
+#icoPel_15 .objt{
+  position:absolute; 
+  opacity: 0;
+  width: 207px;
+  height: 105px;
+  left: -53px;
+  top: -89px;
+  background: rgba(250,0,0,0) url(../images/aviso_limp.png) no-repeat 50% 50%;
+  background-size: cover;
+  z-index: 200;
+}
+#objt_17{
+  line-height: 159px;
+  font-family: 'Catalogo';
+  text-align: center;
+  font-size: 14.5px;
+}
+
+#objt_17 span{
+  margin-top: -68px;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1em;
+  width: 190px;
+}
+
+.opacityMC{opacity: 0.3;}
 /*************************  Objetos por cada escenario  *************************/
 .conteo{
     position:absolute;

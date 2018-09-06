@@ -61,7 +61,8 @@
                 <div class="gameFrame">
                     <div id="gameArea1"></div>
                     <div id="Player_1">
-                        <div class="sprite"></div><div class="ptje"></div>
+                        <div class="sprite"></div>
+                        <div class="ptje"></div>
                     </div>
                     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
                     <div id="icoPel_1" class="icoPel"></div>

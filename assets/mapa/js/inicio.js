@@ -295,7 +295,7 @@ function showInicio() {
     }else{
         //console.log("cerrado");
         $("#fondoOPC1").append('<div id="powerUp_17" class="powerUp powerUp1">17</div>');
-        $(".gameFrame").append('<div id="icoPel_15" class="icoPel"></div>');
+        $(".gameFrame").append('<div id="icoPel_15" class="icoPel"><div id="objt_17" class="objt"><span>"Esta barrera aparecerá solo si no has terminado alguno de los cursos de Expertos de la prevención"</span></div></div>');
     }
 }
 function introJuego() {

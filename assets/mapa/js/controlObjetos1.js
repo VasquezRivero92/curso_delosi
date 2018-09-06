@@ -17,6 +17,8 @@ $J[1].cargarParedes = function () {
     $MiniMap1.ctx.drawImage(img, 0, 0, $MiniMap1.width, $MiniMap1.height);
     /***/
 };
+
+var time;
 /******************************  Objetos juego 1  ******************************/
 function initObjetos1() {
     // $("#icoPrev_11").animateSprite({
@@ -83,33 +85,29 @@ $J[1].hitPowerUps = function () {
                     PlayerMov.cambiaY(-4); 
                 }
                 if( !itm.hit /*&& itm.visible === 0*/ ){
+                    console.log(!itm.hit);
                     itm.hit = true;
                     snd_hablar($ActPwrUp);  
                     if($ActPwrUp == 15 || $ActPwrUp == 16){
                         $('#popAl_'+ $ActPwrUp).addClass('visibleALcalde');
                         alcaldeza();
-                        setTimeout(function () {
-                            $('.pop_alcalde').stop().removeClass('visibleALcalde');
-                        }, 6000); 
-                        //$stopTimeCrono = 5;
-                        //$stopTimeIntervalo = 5000 / $delayTime;                       
                     }
                     if($ActPwrUp == 17){
-                        //console.log('no muestra el signo');
-                    }else{
+                        $('#objt_'+ $ActPwrUp).addClass('visibleALcalde');
+                        setTimeout(function () {
+                            $('.objt').stop().removeClass('visibleALcalde');
+                        }, 6000); 
+                    }else{ 
                         if($ActPwrUp == 15 || $ActPwrUp == 16 && hitPU){
                             PlayerMov.areaPtje.stop().removeClass('animated rubberBand').fadeOut(300);                       
                             $ActPwrUp = 0;
-                           //itm.hit = false;
                         }else{
                             PlayerMov.areaPtje.stop().addClass('animated rubberBand').fadeIn(100);
                         }
                     }
                 }
             }else{
-                //if( itm.visible >= 1 ){ itm.hit = false; }
                 itm.hit = false;
-                //$('.pop_alcalde').stop().removeClass('visibleALcalde');
             }
             itm.draw(i);
         }
@@ -121,8 +119,12 @@ $J[1].hitPowerUps = function () {
     $PowerPE.forEach(function (itm, i) { if(itm && itm.enPantalla()){ itm.draw(i); } });
     $PowerPR.forEach(function (itm, i) { if(itm && itm.enPantalla()){ itm.draw(i); } });
     if( !hitPU && PlayerMov.areaPtje.hasClass('animated') ){
+        
         $ActPwrUp = 0;
         PlayerMov.areaPtje.stop().removeClass('animated rubberBand').fadeOut(300);
+    }
+    if( !hitPU ){
+        $('.pop_alcalde').stop().removeClass('visibleALcalde');
     }
 };
 function finObjetos1() {
