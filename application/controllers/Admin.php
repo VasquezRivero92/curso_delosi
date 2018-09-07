@@ -925,8 +925,8 @@ class Admin extends MY_Controller {
         $this->excel->getActiveSheet()->setCellValue('C14', 'APELLIDOS');
         $this->excel->getActiveSheet()->setCellValue('E14', 'NOMBRES');
         $this->excel->getActiveSheet()->setCellValue('F14', 'DNI');
-        $this->excel->getActiveSheet()->setCellValue('G14', 'FECHA DE EJECUCION');
-        $this->excel->getActiveSheet()->setCellValue('H14', 'SECCIÓN');
+        $this->excel->getActiveSheet()->setCellValue('G14', 'SECCIÓN');
+        $this->excel->getActiveSheet()->setCellValue('H14', 'FECHA DE EJECUCION');
         $this->excel->getActiveSheet()->setCellValue('I14', 'FIRMA');
         $this->excel->getActiveSheet()->fromArray($users, null, 'B15');
         //estilos
