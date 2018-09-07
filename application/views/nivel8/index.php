@@ -168,7 +168,7 @@
                     <div class="owl-carousel" id="owl-3">
                         <div class="item">                            
                             <img id="s3i1" src="<?php echo base_url($own_dir . '/images/slider/s3i1.png'); ?>" alt=""/>
-                            <div id="s3t1" class="stxt"><span>Conduce a una velocidad moderada, y siendo consciente de la<br>velocidad máxima permitida.</span></div>
+                            <div id="s3t1" class="stxt"><span>Conduce a una velocidad moderada, y siendo consciente<br> de la velocidad máxima permitida.</span></div>
                         </div>
                         <div class="item">                            
                             <img id="s3i2" src="<?php echo base_url($own_dir . '/images/slider/s3i2.png'); ?>" alt=""/>
