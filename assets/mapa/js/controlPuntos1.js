@@ -8,7 +8,7 @@ function aumentaPtos1() {
     $J[1].contAciertos++;
     $J[1].ptsWinJuego = $J[1].ptsWinJuego + $J[1].puntajeAcierto;
     $("#icon_" + $J[1].contAciertos).addClass("anim check");
-    console.log($J[1].ptsWinJuego);
+    //console.log($J[1].ptsWinJuego);
 }
 /***
  function reinicioPuntos1() {

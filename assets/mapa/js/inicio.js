@@ -60,7 +60,7 @@ $.fn.reverse = [].reverse;
 $(document).ready(function (e) {
     
     for (var i = 1; i < cursos.length; i++) { 
-        console.log(cursos[i]);
+        //console.log(cursos[i]);
         if(i <= 4 &&  cursos[i] >= 0 && cur_intento[i] >= 1 ){
             $("#CA_"+i).addClass('aprobado');
         }else if(cursos[i] >= 70){
@@ -69,13 +69,13 @@ $(document).ready(function (e) {
     }
 
     $.get(bdir + 'ajax/get_mapa').done(function (data) {
-        console.log("mapa: " + data);
+        //console.log("mapa: " + data);
         DBValue = data;
         $posGen_Saved = parseInt(DBValue);
         initJuegos();
     });  
     setTimeout(function () {
-        console.log(DBValue, $ActPwrUp);
+        //console.log(DBValue, $ActPwrUp);
         if($posGen_Saved != 1){
             $ActPwrUp = parseInt($('#powerUp_'+DBValue).attr('id').split("_")[1], 10);
             muestraPregunta();
@@ -400,7 +400,7 @@ function muestraPregunta() {
     var curso_value = $("#powerUp_" + $ActPwrUp).data('curso');
     var data = { mapa: curso_value };
     $.post(bdir + 'ajax/set_mapa', data).done(function (data) { 
-        console.log("mapa:" + curso_value);
+        //console.log("mapa:" + curso_value);
     }); 
     if($ActPwrUp == 1 || $ActPwrUp == 13 || $ActPwrUp == 14){
         $('#pop2ta').val('');

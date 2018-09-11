@@ -164,7 +164,7 @@ $J[1].hitPowerUps = function () {
                             PlayerMov.areaPtje.stop().addClass('animated rubberBand').fadeIn(100);
                         }
                     }
-                    console.log($ActPwrUp);
+                    //console.log($ActPwrUp);
                 }
             }else{
                 itm.hit = false;
