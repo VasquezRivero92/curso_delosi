@@ -877,14 +877,85 @@
  left: 1064px !important; 
 }
 
+#pop_stat_curs{
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+}
+
+.content_curs{
+  width: 575px;
+  height: 374px;
+  top: 163px;
+  left: 388px;
+  position: absolute;
+  background: url(../images/status_curso/contenido.png) no-repeat center center;
+}
+
 #botBar{
   position : absolute ;
   left : 1175px;
   top : 270px;
-  width : 178px;
-  height : 205px; 
+  width : 179px;
+  height : 238px; 
   background:url(../images/UI/statusPlayer.png) no-repeat;
 }
+
+#btn_curs{
+  position : absolute ;
+  left: 48px;
+  top: 190px;
+  width : 90px;
+  height : 21px;
+  background:url(../images/status_curso/curs_btn.svg) no-repeat;
+  cursor: pointer;
+}
+
+.btn_Salir{
+  position : absolute ;
+  left: 220px;
+  top: 333px;
+  width : 131px;
+  height : 43px;
+  background:url(../images/status_curso/salir_curs.png) no-repeat;
+  cursor: pointer;
+}
+#curso_activ{
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+.cur_esp{
+  background: url(../images/status_curso/checks.png) no-repeat;
+  background-position-y: bottom;
+  width: 420px;
+  height: 17px;
+  position: relative;
+  text-indent: 26px;
+  line-height: 1em;
+  font-family: 'catalogo';
+  font-size: 18px;
+  color: #515151;
+  list-style: none;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.aprobado{
+  background-position-y: top !important;
+}
+
+.tit_curs{
+  font-family: 'CatalogoGruesa';
+  color: #ff3650;
+  font-size: 26px;
+  position: absolute;
+  top: 24px;
+  left: 180px;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+/* linea de estilos para popup de estatus de curso */
+
 #i4avatar{
     position: absolute;
     width: 114px; height: 107px;

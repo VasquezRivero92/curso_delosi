@@ -2,13 +2,73 @@
 $J[1].init = function () {
     $J[1].gameArea = $("#gameArea1");
     $J[1].canvasWall = document.getElementById("canvasWall_1");
-    $J[1].posInitX = -1036;
-    $J[1].posInitY = -497;
+    var A1val, A2val, A3val, A4val;
+    switch ($posGen_Saved) {
+        case 1: // inicio
+            A1val = $pos_1[0];
+            A2val = $pos_1[1];
+            A3val = $pos_1[2];
+            A4val = $pos_1[3];
+            break;
+        case 2: // drivers
+            A1val = $pos_2[0];
+            A2val = $pos_2[1];
+            A3val = $pos_2[2];
+            A4val = $pos_2[3];
+            break;
+        case 3: // universidad
+            A1val = $pos_3[0];
+            A2val = $pos_3[1];
+            A3val = $pos_3[2];
+            A4val = $pos_3[3];
+            break;
+        case 10: // evacuando
+            A1val = $pos_4[0];
+            A2val = $pos_4[1];
+            A3val = $pos_4[2];
+            A4val = $pos_4[3];
+            break;
+        case 12: // quimicos
+            A1val = $pos_5[0];
+            A2val = $pos_5[1];
+            A3val = $pos_5[2];
+            A4val = $pos_5[3];
+            break;
+        case 11: // museo
+            A1val = $pos_6[0];
+            A2val = $pos_6[1];
+            A3val = $pos_6[2];
+            A4val = $pos_6[3];
+            break;
+        case 7: // pausas activas
+            A1val = $pos_7[0];
+            A2val = $pos_7[1];
+            A3val = $pos_7[2];
+            A4val = $pos_7[3];
+            break;
+        case 8: // construccion 1
+            A1val = $pos_8[0];
+            A2val = $pos_8[1];
+            A3val = $pos_8[2];
+            A4val = $pos_8[3];
+            break;
+        case 9: // construccion 2
+            A1val = $pos_9[0];
+            A2val = $pos_9[1];
+            A3val = $pos_9[2];
+            A4val = $pos_9[3];
+            break;   
+        
+    }
+
+    $J[1].posInitX = A1val;
+    $J[1].posInitY = A2val;
+    $J[1].posPlayerX = A3val;
+    $J[1].posPlayerY = A4val;
     $J[1].width = 3403;
     $J[1].height = 2293;
-    $J[1].posPlayerX = 1718;
-    $J[1].posPlayerY = 950;
 };
+
 $J[1].cargarParedes = function () {
     /***
     var img = document.getElementById("fondoStage_1");//fondoStage_1//canvasWall_1
@@ -85,7 +145,6 @@ $J[1].hitPowerUps = function () {
                     PlayerMov.cambiaY(-4); 
                 }
                 if( !itm.hit /*&& itm.visible === 0*/ ){
-                    console.log(!itm.hit);
                     itm.hit = true;
                     snd_hablar($ActPwrUp);  
                     if($ActPwrUp == 15 || $ActPwrUp == 16){
@@ -105,6 +164,7 @@ $J[1].hitPowerUps = function () {
                             PlayerMov.areaPtje.stop().addClass('animated rubberBand').fadeIn(100);
                         }
                     }
+                    console.log($ActPwrUp);
                 }
             }else{
                 itm.hit = false;

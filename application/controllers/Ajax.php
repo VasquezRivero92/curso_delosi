@@ -341,6 +341,27 @@ class Ajax extends MY_Controller {
         }
     }
     
+    function get_mapa() {
+        if ($this->session->user_id) {
+            $user_id = (int) $this->session->user_id;
+            echo $this->ajax_model->get_mapa($user_id);
+        } else {
+            echo "manakax";
+        }
+    }
+
+    function set_mapa() {
+        $mapa = $this->input->post('mapa');
+        if ($this->session->user_id) {
+            $user_id = (int) $this->session->user_id;
+            $mapa = (int) $mapa;
+            echo $this->ajax_model->set_mapa($user_id, $mapa);
+
+        } else {
+            echo "manakax";
+        }
+    }
+
     function set_puntaje() {
         $puntaje = $this->input->post('puntaje');
         $estrellas = $this->input->post('estrellas');

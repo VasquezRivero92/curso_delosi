@@ -24,20 +24,24 @@ var $PowerPE = [];
 var $PowerPR = [];
 var $ActPwrUp = 0;
 //var $CasasActv = [0,1,2,3,4,5,6,7,8,9,10,11,12];
-var $CasasActv = [null,true,false,false,true,true,true,false,true,true,false,false,false];
+// var $CasasActv = [null,true,false,false,true,true,true,false,true,true,false,false,false];
 var $Preguntas = [null, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
-var $slA = [null,
-    'ttttt',  
-    'yyyyy',
-];
-var $slB = [null,
-    'ttttt',  
-    'yyyyy',
-];
-var $slC = [null,
-    'ttttt',  
-    'yyyyy',
-];
+//posiciones guardadas del mapa, jugador y pops;
+
+/* posiciones   MapaX  MapaY PlrX  PlrY */
+var $pos_1 =  [ -1036, -497, 1718, 950];        // inicio
+var $pos_2 =  [ -734, -719, 1420, 1093];        // drivers
+var $pos_3 =  [ -1283, -717, 1976, 1088];       // universidad
+var $pos_4 =  [ -17, -1131, 544, 1498];         // evacuando
+var $pos_5 =  [ -17, -1583, 644, 1938];         // quimicos
+var $pos_6 =  [ -1414, -1528, 2053, 1825];      // museo
+var $pos_7 =  [ -1997, -1573, 2649, 1884];      // pausas activas
+var $pos_8 =  [ -742, -1488, 1405, 1829];      // construccion1
+var $pos_9 =  [ -1055, -1585, 1714, 2034];      // construccion2
+
+/*esta variable se obtendra de la base de datos.*/
+var DBValue;
+var $posGen_Saved;
 var $AnimacionCreada = 0;
 // variables de puntaje
 //var $puntajeAcumulado = 0;
@@ -46,13 +50,38 @@ var $ExisteTouch = 0;
 var $J = [];
 $J[1] = new Lab_Juego();
 
+var toggle = false;
+
 var $scaleActual = 1;
 var buzon_chart = 'Si tienes alguna duda puedes escribir en la casilla de abajo y te responderemos lo antes posible.';
 
 $.fn.reverse = [].reverse;
 
 $(document).ready(function (e) {
-    initJuegos();
+    
+    for (var i = 1; i < cursos.length; i++) { 
+        console.log(cursos[i]);
+        if(i <= 4 &&  cursos[i] >= 0 && cur_intento[i] >= 1 ){
+            $("#CA_"+i).addClass('aprobado');
+        }else if(cursos[i] >= 70){
+            $("#CA_"+i).addClass('aprobado');
+        }
+    }
+
+    $.get(bdir + 'ajax/get_mapa').done(function (data) {
+        console.log("mapa: " + data);
+        DBValue = data;
+        $posGen_Saved = parseInt(DBValue);
+        initJuegos();
+    });  
+    setTimeout(function () {
+        console.log(DBValue, $ActPwrUp);
+        if($posGen_Saved != 1){
+            $ActPwrUp = parseInt($('#powerUp_'+DBValue).attr('id').split("_")[1], 10);
+            muestraPregunta();
+        }
+    }, 2000);
+
     $(".dirBtn, .circleExt, .touchElement, .btnPlayer").disableSelection();
     initSonidos();
     $ExisteTouch = 'ontouchend' in document;
@@ -84,6 +113,25 @@ function initSonidos() {
     });
 }
 function initBotones() {
+
+
+    $('.btn_Salir').click(function () {
+        toggle = false;
+        $('.content_curs').removeClass('animated fadeInDown').addClass('animated fadeOutDown');
+        setTimeout(function(){  $('#pop_stat_curs').fadeOut(500); }, 500);
+    });
+
+    $( "#btn_curs" ).click(function () {
+        if(!toggle){
+            $('#pop_stat_curs').fadeIn(500);
+            $('.content_curs').removeClass('animated fadeOutDown').addClass('animated fadeInDown').fadeIn(10);
+            toggle = true;
+        }else{
+            $('.content_curs').removeClass('animated fadeInDown').addClass('animated fadeOutDown');
+            setTimeout(function(){  $('#pop_stat_curs, .content_curs').fadeOut(500); }, 500);
+            toggle = false;
+        }
+    });
 
     $('.accordionMC').click(function () {
         var idResp = $(this).attr('id').split("_")[1];
@@ -238,8 +286,6 @@ function initBotones() {
                 }, 1000);
             }).fail(function (jqXHR, textStatus, errorThrown) {
                 $('#pop2ta').addClass('error');
-                //console.log("Falló el envio de consulta");
-                // console.log(jqXHR);
             }).always(function () {
                 $('#pop2ta').removeClass('disable');
                 $('#pop2sub').removeClass('disable');
@@ -248,6 +294,7 @@ function initBotones() {
             $('#pop2txt1').html('Completar el campo de consulta.');
         }
     });
+
     $('#pop2close').click(function () {
         playSound(window.playBTN);
         $('#popAct_1').fadeOut(1000);
@@ -265,8 +312,9 @@ function initJuegos() {
         $J[i].init(i);
     });
     $drivers = parseInt($('body').data('drivers'), 10);
-    $pared = $('body').data('pared');   
+    $pared = $('body').data('pared'); 
 }
+
 function showInicio() {
     //playBGMusic(window.BGIntro);
     //playTexto(window.txti1);
@@ -277,7 +325,7 @@ function showInicio() {
 
     if (fw == 4) {
         playBGMusic(window.BGJuego);    
-       $J[1].showJuego();
+        $J[1].showJuego();
     }else{
         playBGMusic(window.BGIntro);
         $('#instrucciones_1').fadeIn(1000);
@@ -349,35 +397,38 @@ function pausarJuego() {
     $("#PauseGame").show();
 }
 function muestraPregunta() {
+    var curso_value = $("#powerUp_" + $ActPwrUp).data('curso');
+    var data = { mapa: curso_value };
+    $.post(bdir + 'ajax/set_mapa', data).done(function (data) { 
+        console.log("mapa:" + curso_value);
+    }); 
     if($ActPwrUp == 1 || $ActPwrUp == 13 || $ActPwrUp == 14){
         $('#pop2ta').val('');
     }
     playSound(window.audioCatch);
     isPaused = true;
     $(".caratula").hide();
-    $("#pregWindow").show();
+    $("#pregWindow").fadeIn(1000);
     PlayerMov.areaPtje.stop().removeClass('animated rubberBand').fadeOut(300);
     if($ActPwrUp == 2){
         if($drivers == 2){
-            $("#popAct_" + $ActPwrUp).show();
+            $("#popAct_" + $ActPwrUp).fadeIn(1000);
         }else {
-            $("#popAct_-1").show();        
+            $("#popAct_-1").fadeIn(1000);        
         }    
     }else if($ActPwrUp == 12){
         if($drivers == 2){
-            $("#popAct_0").show();
+            $("#popAct_0").fadeIn(1000);
         }else {
-            $("#popAct_" + $ActPwrUp).show(); 
+            $("#popAct_" + $ActPwrUp).fadeIn(1000); 
         }       
     }else if($ActPwrUp == 13 || $ActPwrUp == 14){
-        $("#popAct_1").show();
+        $("#popAct_1").fadeIn(1000);
     }else{
-         $("#popAct_" + $ActPwrUp).show();   
+        $("#popAct_" + $ActPwrUp).fadeIn(1000);   
     }    
 }
-
 function snd_hablar(snd){
-    //console.log(snd);
     switch (snd) {
         case 1:
             playSound(window.Hablar2);                      
@@ -407,7 +458,7 @@ function snd_hablar(snd){
             playSound(window.piso); 
         break;
     }           
-   }
+}
 $.fn.extend({
     disableSelection: function () {
         this.each(function () {

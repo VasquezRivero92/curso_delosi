@@ -232,6 +232,22 @@ class Ajax_model extends CI_Model {
         
     }
 
+    public function get_mapa($id_user) {
+        return  $this->db->select('mapa')
+                    ->where('id', $id_user)
+                    ->limit(1)
+                    ->get('users')
+                    ->row()->mapa;
+    }
+
+    public function set_mapa($id_user, $mapa) {
+        $data = array(
+                'mapa' => $mapa
+            );
+        $this->db->where('id', $id_user)
+                ->update('users', $data);
+    }
+
     public function update_puntaje($id_user, $id_curso, $puntaje, $estrellas) {
         $checkUserCurso = $this->checkUserCurso('id_user,puntaje,estrellas', $id_user, $id_curso);
         if ($checkUserCurso) {

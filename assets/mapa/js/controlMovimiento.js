@@ -274,7 +274,10 @@ function initKeyControl() {
             }else if (code == 27){
                 pausarJuego();
             }else if (code == 88 && $ActPwrUp || code == 32 && $ActPwrUp) {
-                muestraPregunta();
+                console.log($ActPwrUp);
+                if($ActPwrUp != 15 && $ActPwrUp != 16){
+                    muestraPregunta();
+                }
             }
         }
     });

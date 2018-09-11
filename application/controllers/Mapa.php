@@ -30,17 +30,77 @@ class Mapa extends Nivel_Controller {
             //echo $this->data['avatar'];
         }
         if ($this->ion_auth->logged_in()){
-            if ($this->data['user_login']['mapa'] == 1) {
+            if ($this->data['user_login']['mapa'] == 0) {
                 $this->data['firstWindow'] = 1;
-                $this->db->where('id',$this->session->user_id)->update('users', array('mapa' => 0));                    
+                $this->db->where('id',$this->session->user_id)->update('users', array('mapa' => 1));                    
             } else {
                 $this->data['firstWindow'] = 4;
             }
         }else {
-            redirect('main', 'refresh');        }
+            redirect('main', 'refresh');     
+        }
+        
+// obtener los resultados de la BD users
 
+        $result1 = $this->base_model->get_puntaje($this->session->user_id,1);
+        if(!$result1){
+            $this->data['curso1'] = 0;
+            $this->data['curso1_i'] = 0;
+        }else{
+            $this->data['curso1'] = $this->base_model->get_puntaje($this->session->user_id,1)->puntaje;
+            $this->data['curso1_i'] = $this->base_model->get_puntaje($this->session->user_id,1)->intentos;
+        }
+
+        $result2 = $this->base_model->get_puntaje($this->session->user_id,2);
+        if(!$result2){
+            $this->data['curso2'] = 0;
+            $this->data['curso2_i'] = 0;
+        }else{
+            $this->data['curso2'] = $this->base_model->get_puntaje($this->session->user_id,2)->puntaje;
+            $this->data['curso2_i'] = $this->base_model->get_puntaje($this->session->user_id,2)->intentos;
+        }
+
+        $result3 = $this->base_model->get_puntaje($this->session->user_id,3);
+        if(!$result3){
+            $this->data['curso3'] = 0;
+            $this->data['curso3_i'] = 0;
+        }else{
+            $this->data['curso3'] = $this->base_model->get_puntaje($this->session->user_id,3)->puntaje;
+            $this->data['curso3_i'] = $this->base_model->get_puntaje($this->session->user_id,3)->intentos;
+        }
+
+        $result4 = $this->base_model->get_puntaje($this->session->user_id,4);
+        if(!$result4){
+            $this->data['curso4_i'] = 0;
+            $this->data['curso4'] = 0;
+        }else{
+            $this->data['curso4'] = $this->base_model->get_puntaje($this->session->user_id,4)->puntaje;
+            $this->data['curso4_i'] = $this->base_model->get_puntaje($this->session->user_id,4)->intentos;
+        }
+
+        $result8 = $this->base_model->get_puntaje($this->session->user_id,8);
         
-        
+        if(!$result8){
+            $this->data['curso8'] = 0;
+        }else{
+            $this->data['curso8'] = $this->base_model->get_puntaje($this->session->user_id,8)->puntaje;
+        }
+
+        $result9 = $this->base_model->get_puntaje($this->session->user_id,9);
+        if(!$result9){
+            $this->data['curso9'] = 0;
+        }else{
+            $this->data['curso9'] = $this->base_model->get_puntaje($this->session->user_id,9)->puntaje;
+        }
+
+        $result10 = $this->base_model->get_puntaje($this->session->user_id,10);
+        if(!$result10){
+            $this->data['curso10'] = 0;
+        }else{
+            $this->data['curso10'] = $this->base_model->get_puntaje($this->session->user_id,10)->puntaje;
+        }
+
+        // fin de validaciones del curso
 
     	$this->data['own_dir'] = $this->data['assets_dir'] . '/mapa';
         $empresaUser = $this->base_model->get_empresas($this->session->user_id)->row();

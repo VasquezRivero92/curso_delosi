@@ -52,7 +52,7 @@ class Nivel4 extends Nivel_Controller {
     function resultados() {
         for ($i = 1; $i <= 4; $i++) {
             $resul = $this->base_model->get_puntaje($this->session->user_id, $i);
-            if (!$resul || !$resul->intentos || $resul->puntaje < 70) {
+            if (!$resul || !$resul->intentos /*|| $resul->puntaje < 70*/) {
                 $this->data['certificado_prevencion'] = 'disabled';
                 break;
             }else{
