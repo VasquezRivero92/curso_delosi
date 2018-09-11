@@ -55,7 +55,7 @@
                 <?php echo anchor('nivel4/constancia', 'Descargar contancia', array('id' => 'i5btn_2')); ?>
 
                 <?php
-                    echo anchor('drivers/certificado_drivers', '&nbsp;', 
+                    echo anchor('nivel4/certificado_prevencion', '&nbsp;', 
                     array('id' => 'i4Certificado', 'class' => $certificado_prevencion, 'target' => '_blank', 'style' => 'left: 580px; top: 503px;'));
                 ?>    
 

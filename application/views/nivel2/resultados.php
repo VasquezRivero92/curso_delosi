@@ -54,7 +54,7 @@
                 <div id="i5btn_1">Aceptar</div>
 
                 <?php
-                    echo anchor('drivers/certificado_drivers', '&nbsp;', 
+                    echo anchor('nivel2/certificado_prevencion', '&nbsp;', 
                     array('id' => 'i4Certificado', 'class' => $certificado_prevencion, 'target' => '_blank', 'style' => 'left: 580px; top: 503px;'));
                 ?>    
 

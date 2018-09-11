@@ -58,12 +58,21 @@ var buzon_chart = 'Si tienes alguna duda puedes escribir en la casilla de abajo 
 $.fn.reverse = [].reverse;
 
 $(document).ready(function (e) {
+
+    $drivers = parseInt($('body').data('drivers'), 10);
+    $pared = $('body').data('pared'); 
+
     
     for (var i = 1; i < cursos.length; i++) { 
-        //console.log(cursos[i]);
+        console.log(cursos[i]);
         if(i <= 4 &&  cursos[i] >= 0 && cur_intento[i] >= 1 ){
             $("#CA_"+i).addClass('aprobado');
         }else if(cursos[i] >= 70){
+            if($drivers == 2){
+                $("#CA_5").fadeIn(100);
+            }else{
+                $("#CA_5").fadeOut(100);
+            }
             $("#CA_"+i).addClass('aprobado');
         }
     }
@@ -311,8 +320,6 @@ function initJuegos() {
     $J.forEach(function (itm, i) {
         $J[i].init(i);
     });
-    $drivers = parseInt($('body').data('drivers'), 10);
-    $pared = $('body').data('pared'); 
 }
 
 function showInicio() {
