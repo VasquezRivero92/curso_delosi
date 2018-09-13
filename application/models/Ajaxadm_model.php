@@ -141,7 +141,8 @@ class Ajaxadm_model extends CI_Model {
                 'fecha' => null,
                 'puntaje' => null,
                 'estrellas' => null,
-                'intentos' => 100
+                'intentos' => 100,
+                'calificacion' => 0
             );
         }
             else{
@@ -149,13 +150,13 @@ class Ajaxadm_model extends CI_Model {
             'fecha' => null,
             'puntaje' => null,
             'estrellas' => null,
-            'intentos' => 0
+            'intentos' => 0,
+            'calificacion' => 0
         );}
         $resul = $this->db->where('id_user', $id_user)
                 ->where('id_curso', $id_curso)
                 ->where('id_version', $this->id_version)
                 ->update('users_curso', $data);
-        $this->update_user_curso($id_user, $id_curso);
         return $resul;
     }
 
