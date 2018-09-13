@@ -84,7 +84,7 @@ class Nivel4 extends Nivel_Controller {
         $this->load->helper('pdf_helper');
         for ($i = 1; $i <= 4; $i++) {
             $resul = $this->base_model->get_puntaje($this->session->user_id, $i);
-            if (!$resul || !$resul->intentos || $resul->puntaje < 70) {
+            if (!$resul || !$resul->intentos ) {
                 redirect('/nivel4', 'refresh');
             }
         }

@@ -40,7 +40,7 @@ var $pos_8 =  [ -742, -1488, 1405, 1829];      // construccion1
 var $pos_9 =  [ -1055, -1585, 1714, 2034];      // construccion2
 
 /*esta variable se obtendra de la base de datos.*/
-var DBValue;
+var DBValue = 1;
 var $posGen_Saved;
 var $AnimacionCreada = 0;
 // variables de puntaje
@@ -61,10 +61,9 @@ $(document).ready(function (e) {
 
     $drivers = parseInt($('body').data('drivers'), 10);
     $pared = $('body').data('pared'); 
-
     
     for (var i = 1; i < cursos.length; i++) { 
-        console.log(cursos[i]);
+        //console.log(cursos[i]);
         if(i <= 4 &&  cursos[i] >= 0 && cur_intento[i] >= 1 ){
             $("#CA_"+i).addClass('aprobado');
         }else if(cursos[i] >= 70){
@@ -89,7 +88,7 @@ $(document).ready(function (e) {
             $ActPwrUp = parseInt($('#powerUp_'+DBValue).attr('id').split("_")[1], 10);
             muestraPregunta();
         }
-    }, 2000);
+    }, 2500);
 
     $(".dirBtn, .circleExt, .touchElement, .btnPlayer").disableSelection();
     initSonidos();
@@ -416,7 +415,7 @@ function muestraPregunta() {
     isPaused = true;
     $(".caratula").hide();
     $("#pregWindow").fadeIn(1000);
-    PlayerMov.areaPtje.stop().removeClass('animated rubberBand').fadeOut(300);
+    PlayerMov.areaPtje.removeClass('animated rubberBand').fadeOut(300);
     if($ActPwrUp == 2){
         if($drivers == 2){
             $("#popAct_" + $ActPwrUp).fadeIn(1000);

@@ -4,6 +4,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- <link rel="icon" href="images/favicon.ico" /> -->
+        <link rel="icon" href="<?php echo base_url(); ?>favicon.ico" type="image/gif">
+        
         <link rel="stylesheet" href="<?php echo base_url($assets_dir . '/fonts/style.css'); ?>">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url($assets_dir . '/css/reset.css'); ?>"/>
         <link rel="stylesheet" type="text/css" href="<?php echo base_url($own_dir . '/css/style.css'); ?>">
