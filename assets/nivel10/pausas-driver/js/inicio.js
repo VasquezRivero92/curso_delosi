@@ -64,6 +64,7 @@ function initBotones() {
         if(id==2){ init(); }
     });
     $('#btnJugar').click(function () {
+        $(this).addClass('btn_desabilita');
         stopBGMusic();
         stopTexto();
         playFX(window.audioCatch);

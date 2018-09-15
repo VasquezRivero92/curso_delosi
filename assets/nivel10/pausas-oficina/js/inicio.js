@@ -23,7 +23,6 @@ function initSonidos() {
     });
 }
 function initBotones() {
-
     $('#nextInt_1').click(function () {
         playSound(window.audioCatch);
         $('.instr').stop().fadeOut(100);
@@ -62,6 +61,7 @@ function initBotones() {
         if(id==2){ init(); }
     });
     $('#btnJugar').click(function () {
+        $(this).addClass('btn_desabilita');
         stopBGMusic();
         stopTexto();
         playFX(window.audioCatch);

@@ -415,7 +415,7 @@ function muestraPregunta() {
     isPaused = true;
     $(".caratula").hide();
     $("#pregWindow").fadeIn(1000);
-    PlayerMov.areaPtje.removeClass('animated rubberBand').fadeOut(300);
+    //PlayerMov.areaPtje.removeClass('animated rubberBand').fadeOut(300);
     if($ActPwrUp == 2){
         if($drivers == 2){
             $("#popAct_" + $ActPwrUp).fadeIn(1000);

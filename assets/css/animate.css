@@ -1686,3 +1686,10 @@
 
 
 
+.btn_desabilita{
+  pointer-events: none;
+  -webkit-pointer-events: none;
+  -moz-pointer-events: none;
+  -o-pointer-events: none;
+  -ms-pointer-events: none;
+}
