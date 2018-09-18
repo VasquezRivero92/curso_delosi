@@ -83,7 +83,7 @@ $(document).ready(function (e) {
         initJuegos();
     });  
     setTimeout(function () {
-        //console.log(DBValue, $ActPwrUp);
+        
         if($posGen_Saved != 1){
             $ActPwrUp = parseInt($('#powerUp_'+DBValue).attr('id').split("_")[1], 10);
             muestraPregunta();

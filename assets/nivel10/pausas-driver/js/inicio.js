@@ -24,6 +24,8 @@ function initSonidos() {
     });
 }
 function initBotones() {
+    
+    init();
 
     $('#nextInt_1').click(function () {
         playSound(window.audioCatch);
@@ -61,7 +63,7 @@ function initBotones() {
         $('#instrucciones_' + j).stop().fadeIn(500);
         playTexto(window['txti' + j]);
         console.log(id);
-        if(id==2){ init(); }
+        //if(id==2){ init(); }
     });
     $('#btnJugar').click(function () {
         $(this).addClass('btn_desabilita');

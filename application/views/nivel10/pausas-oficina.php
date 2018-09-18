@@ -50,6 +50,10 @@
             </div>
             <div id="instrucciones_5" class="instrucciones">
                 <div id="btnPrev_5" class="btnPrev"></div>
+                <div id="btnNext_5" class="btnNext"></div>
+            </div>
+            <div id="instrucciones_6" class="instrucciones">
+                <div id="btnPrev_6" class="btnPrev"></div>
                 <div id="btnJugar"></div>
             </div>
 

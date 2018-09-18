@@ -65,6 +65,7 @@ body{
 .touchIsOn #instrucciones_3{ background: url(../images/bginst3.png) no-repeat center center; }
 #instrucciones_4{ background: url(../images/bginst4.png) no-repeat center center; }
 #instrucciones_5{ background: url(../images/bginst5.png) no-repeat center center; }
+#instrucciones_6{ background: url(../images/precaucion.jpg) no-repeat center center; }
 .btnPrev{
     position: absolute;
     width: 33px; height: 80px;
@@ -75,6 +76,7 @@ body{
 #btnPrev_3{ left: 160px; top: 310px; }
 #btnPrev_4{ left: 160px; top: 310px; }
 #btnPrev_5{ left: 160px; top: 310px; }
+#btnPrev_6{ left: 160px; top: 310px; }
 .btnNext{
     position: absolute;
     width: 33px; height: 80px;
@@ -85,6 +87,7 @@ body{
 #btnNext_2{ right: 160px; top: 310px; }
 #btnNext_3{ right: 160px; top: 310px; }
 #btnNext_4{ right: 160px; top: 310px; }
+#btnNext_5{ right: 160px; top: 310px; }
 #btnJugar{
     position:absolute;
     width:167px; height:71px;

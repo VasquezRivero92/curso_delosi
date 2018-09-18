@@ -209,7 +209,7 @@ body{
 #btnReanudar{
     position: absolute;
     width: 158px; height: 35px;
-    left: 579px; top: 397px; 
+    left: 598px; top: 489px;
     background: url(../images/btnReanudar.png) no-repeat 50% 50%;
     cursor: pointer;
 }

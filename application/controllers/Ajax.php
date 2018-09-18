@@ -196,7 +196,7 @@ class Ajax extends MY_Controller {
         $message = $this->load->view('mail/buzon', $datamail, true);
         $this->email->from('no-reply@aprendiendoaprevenir.com', $this->config->item('site_title', 'ion_auth'));
         // $this->email->to('dsoto@franquiciasperu.com');
-        $this->email->to(array('aprendiendoaprevenir.sst@gmail.com','aprendiendoaprevenir@franquiciasperu.com','igastelu@factoriamedia.com','jvasquez@factoriamedia.com','dsoto@franquiciasperu.com'));
+        $this->email->to(array('aprendiendoaprevenir.sst@gmail.com','aprendiendoaprevenir@franquiciasperu.com','igastelu@factoriamedia.com','dsoto@franquiciasperu.com')); /*,'jvasquez@factoriamedia.com'*/
         // $this->email->to('aprendiendoaprevenir@franquiciasperu.com');
         // $this->email->to('igastelu@factoriamedia.com');
         // $this->email->to('jvasquez@factoriamedia.com');

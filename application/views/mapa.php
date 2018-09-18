@@ -358,7 +358,7 @@
                 </div>
             </div>
             <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-            <div id="PauseGame"><div id="btnReanudar"></div></div>
+            <div id="PauseGame"><div id="btnReanudar" class="btn_aceptAnim"></div></div>
             <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
             <div id="objetosOcultos">                
                 <img id="fondoStage_1" src="<?php echo base_url($own_dir . '/images/mapa/city.png'); ?>" alt=""/>
