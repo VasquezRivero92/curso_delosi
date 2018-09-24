@@ -202,7 +202,7 @@
             <div id="popup_1" class="instrucciones">
                 <div id="pop1tit_1">Recuerda:</div>
                 <ul id="pop1txt_1">
-                    <li>El Gerente de Tienda o Turno debe enviar la foto y transcripción al Gerente de Área dentro de las 24 horas de interpuesto el reclamo.</li>
+                    <li>El Gerente de Tienda o Turno debe enviar la foto y transcripción al Gerente de Área dentro de las 48 horas de interpuesto el reclamo.</li>
                     <li>El Gerente de Área debe ingresar los reclamos a la Plataforma SIREC siguiendo el flujo establecido.</li>
                     <li>El plazo legal máximo para dar respuesta a los reclamos es de 30 días calendario, prorrogable por 30 días más previo aviso al consumidor y siempre que haya sustento de la prórroga.</li>
                     <li>Si el cliente no te permite llenar tu descargo, no insistas, y repórtaselo de inmediato a tu Gerente de Área para que brinde una respuesta por Servicio al Cliente.</li>
