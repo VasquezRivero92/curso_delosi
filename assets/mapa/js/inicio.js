@@ -86,9 +86,9 @@ $(document).ready(function (e) {
         
         if($posGen_Saved != 1){
             $ActPwrUp = parseInt($('#powerUp_'+DBValue).attr('id').split("_")[1], 10);
-            muestraPregunta();
+            //muestraPregunta();
         }
-    }, 2500);
+    }, 2000);
 
     $(".dirBtn, .circleExt, .touchElement, .btnPlayer").disableSelection();
     initSonidos();
