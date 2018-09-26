@@ -17,7 +17,11 @@
             var bdir = '<?php echo base_url(); ?>';
             var odir = '<?php echo base_url($own_dir); ?>';
             var grup = '<?php echo strtoupper(substr($this->session->grupo, 0, 1)); ?>';
-            var win = <?php echo $this->session->win; ?>;
+            var win = <?php echo $this->session->win; ?>;  
+            var intentos = $.post(bdir + 'ajax/get_intentos_pausas').done(function (data) {
+                console.log("intentos: " + data);
+            });         
+            console.log(win);
         </script>
         <script src="<?php echo base_url($own_dir . '/js/sonido.js'); ?>"></script>
         <script src="<?php echo base_url($own_dir . '/js/inicio.js'); ?>"></script>
@@ -26,7 +30,6 @@
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-
           gtag('config', 'UA-123369182-1');
         </script>
     </head>
@@ -63,11 +66,24 @@
                 <div id="i3btn_2" class="i3btn"></div>
                 <div id="i3btn_3" class="i3btn"></div>
                 <?php
+                
                 if ($this->session->win < 2) {
                     echo anchor('pausasactivas/pausas', 'Iniciar Reto', array('id' => 'btnJugar'));
                 } else {
+                    //$this->session->win = 4;
                     echo '<div id="i3txt_2">Ya completaste este reto</div>';
                     echo anchor('mapa', 'Volver al inicio', array('id' => 'btnJugar'));
+                }
+                if ($this->session->win == 2) {
+                    // if (intentos == 4) {
+                    //     echo '<div id="i3txt_2">Ya completaste este reto</div>';
+                    //     echo anchor('mapa', 'Volver al inicio', array('id' => 'btnJugar2'));
+                    // }else{
+                        echo anchor('pausasactivasOpcional/pausasOpcional', 'Reto opcional', array('id' => 'btnJugar2'));
+                    // }
+                } else {
+                    echo '<div id="i3txt_2">Ya completaste este reto</div>';
+                    echo anchor('mapa', 'Volver al inicio', array('id' => 'btnJugar2'));
                 }
                 echo anchor('mapa', ' ', array('id' => 'btnciudad'));
                 ?>

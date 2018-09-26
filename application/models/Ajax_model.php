@@ -121,6 +121,42 @@ class Ajax_model extends CI_Model {
         }
     }
 
+    public function set_intentos_pausas($id_user, $id_curso) {
+        $checkInt = $this->checkUserCurso('intentos,puntaje,estrellas', $id_user, $id_curso);
+        if ($checkInt) {
+            $intentos = $checkInt->intentos ? ((int) $checkInt->intentos + 1) : 1;
+            if ($intentos >= 4) {
+                $puntaje = $checkInt->puntaje ? (int) $checkInt->puntaje : 0;
+                $estrellas = $checkInt->estrellas ? (int) $checkInt->estrellas : 0;
+                $data = array(
+                    'intentos' => $intentos,
+                    'puntaje' => $puntaje,
+                    'estrellas' => $estrellas
+                );
+                $this->session->win = $this->session->position;
+            } else {
+                $data = array('intentos' => $intentos);
+            }
+            $resul = $this->db->where('id_user', $id_user)
+                    ->where('id_curso', $id_curso)
+                    ->where('id_version', $this->id_version)
+                    ->update('users_curso', $data);
+            if ($intentos >= 4) {
+                $this->update_user_curso($id_user, $id_curso);
+            }
+            return $intentos;
+        } else {
+            $data = $this->dataUserCurso($id_user, $id_curso);
+            $data['fecha'] = time();
+            $data['puntaje'] = 0;
+            $data['estrellas'] = 0;
+            $data['intentos'] = 1;
+            $resul = $this->db->insert('users_curso', $data);
+            return 1;
+        }
+    }
+
+
 
     public function init_calificacion($id_user, $id_curso) {
         $checkInt = $this->checkUserCurso('calificacion', $id_user, $id_curso);
@@ -222,6 +258,7 @@ class Ajax_model extends CI_Model {
             return $intentos;
         
     }
+
 
     public function get_puntaje($id_user, $id_curso) {
         $checkInt = $this->checkUserCurso('intentos,puntaje,estrellas', $id_user, $id_curso);

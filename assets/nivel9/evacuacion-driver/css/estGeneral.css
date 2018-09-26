@@ -166,7 +166,7 @@ body{
 }
 
 
-.gameEnv{ display:none; }
+/* .gameEnv{ display:none; } */
 /*****************************************  marcador (parte superior) *****************************************/
 #marcador{
     position:absolute;

@@ -2,9 +2,10 @@ var puntos = 0;
 var sumaPuntos, estrellas;
 
 function resultadoPuntos(punts) {
-	puntos = punts;
+    puntos = punts;
+    console.log(puntos,'prueba de funcionamiento');
 	$('#resumenPuntaje').html(puntos);
-	var data = {puntaje: sumaPuntos, estrellas: estrellas, check : true};
+	var data = {puntaje: puntos, estrellas: estrellas, check : true};
     $.post(bdir + 'ajax/set_puntaje', data).done(function (data) {
         console.log("resultado: " + data);
     });

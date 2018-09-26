@@ -281,21 +281,31 @@ class Ajax extends MY_Controller {
         }
     }
 
-    // function rev_calificacion() {
-    //     if ($this->session->user_id && $this->session->curso) {
-    //         $user_id = (int) $this->session->user_id;
-    //         $id_curso = (int) $this->session->curso;
-    //         echo $this->ajax_model->rev_calificacion($user_id, $id_curso);
-    //     } else {
-    //         echo "manakax";
-    //     }
-    // }
+    function get_intentos_pausas() {
+        if ($this->session->user_id && $this->session->curso) {
+            $user_id = (int) $this->session->user_id;
+            $id_curso = (int) $this->session->curso;
+            echo $this->ajax_model->get_intentos($user_id, $id_curso);
+        } else {
+            echo "manakax";
+        }
+    }
 
     function set_intentos() {
         if ($this->session->user_id && $this->session->curso) {
             $user_id = (int) $this->session->user_id;
             $id_curso = (int) $this->session->curso;
             echo $this->ajax_model->set_intentos($user_id, $id_curso);
+        } else {
+            echo "manakax";
+        }
+    }
+
+    function set_intentos_pausas() {
+        if ($this->session->user_id && $this->session->curso) {
+            $user_id = (int) $this->session->user_id;
+            $id_curso = (int) $this->session->curso;
+            echo $this->ajax_model->set_intentos_pausas($user_id, $id_curso);
         } else {
             echo "manakax";
         }

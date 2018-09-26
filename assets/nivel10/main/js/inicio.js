@@ -159,14 +159,13 @@ $(document).ready(function (e) {
         $('.instrucciones').stop().delay(10).fadeOut(500);
         if (completo && win < 2) {
             stopBGMusic();
-            //$('#instruccion_4').stop().fadeIn(10);
         } else {
             $('#instruccion_3').stop().fadeIn(10);
         }
         sID +=1;
         if(sID==4){
-            $('#btnJugar').css("display","block");
-            $('#btnJugar').addClass('slider_scale');
+            $('#btnJugar, #btnJugar2').css("display","block");
+            $('#btnJugar, #btnJugar2').addClass('slider_scale');
             // $('#i3btn_'+sID).removeClass('disable');
         }else{
             $('#i3btn_'+sID).removeClass('disable');

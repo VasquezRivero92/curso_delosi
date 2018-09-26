@@ -253,7 +253,7 @@ cursor: pointer;
 #btnJugar{
     position: absolute; display: none;
     width: 170px; height: 40px;
-    left: 582px;
+    left: 478px;
     top: 542px;
     font-family: 'Catalogo';
     font-size: 17px;
@@ -268,7 +268,7 @@ cursor: pointer;
 #btnJugar2{
     position: absolute; display: none;
     width: 170px; height: 40px;
-    left: 590px; top: 545px;
+    left: 694px; top: 542px;
     font-family: 'Catalogo';
     font-size: 17px;
     line-height: 40px;

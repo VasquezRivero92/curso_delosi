@@ -9,6 +9,7 @@ class Pausasactivas extends Nivel_Controller {
     function __construct() {
         parent::__construct();
         $cur10 = $this->base_model->get_curso($this->cur);
+        
         if ($cur10 && $cur10->estado || $this->session->userniv) {
             $this->session->curso = $this->cur;
         } else {
@@ -28,6 +29,10 @@ class Pausasactivas extends Nivel_Controller {
         }
         $this->data['checked'] = $this->base_model->check_curso_user($this->session->user_id, $this->cur);
         $this->load->view('nivel' . $this->cur . '/index', $this->data);
+
+        // $intent = $this->ajax_model->get_intentos($this->session->user_id)->row();
+        // $this->data['intentos'] = $intent;
+
     }
 
     function pausas() {        
@@ -52,9 +57,9 @@ class Pausasactivas extends Nivel_Controller {
 
     function certificado_pausas() {
         $resul = $this->base_model->get_puntaje($this->session->user_id, $this->session->curso);
-        if ($resul->puntaje < 70) {
-            redirect('/pausasactivas', 'refresh');
-        }
+        // if ($resul->puntaje < 70) {
+        //     redirect('/pausasactivas', 'refresh');
+        // }
         $this->load->helper('pdf_helper');
         $fecha = $this->base_model->get_fecha_cursos($this->session->user_id,$this->session->curso)->fecha;
         $meses = array("ENERO","FEBRERO","MARZO","ABRIL","MAYO","JUNIO","JULIO","AGOSTO","SEPTIEMBRE","OCTUBRE","NOVIEMBRE","DICIEMBRE");

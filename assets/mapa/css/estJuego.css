@@ -1396,6 +1396,17 @@
     height : 51px;
     cursor: pointer;
 }
+
+#opcion2{
+  background : url(../images/popups/opcion2.png);;
+  position : absolute ;
+  left: 363px;
+  top: 414px;
+  width : 132px;
+  height : 43px;
+  cursor: pointer;
+}
+
 .textCent{
     width: 541px;
     top: 210px;

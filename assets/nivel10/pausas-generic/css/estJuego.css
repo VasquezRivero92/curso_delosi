@@ -1,0 +1,298 @@
+@charset "utf-8";
+/*********************************  total  *********************************/
+
+
+  #animation_container, #_preload_div_ {
+  position:absolute;
+  margin:auto;
+  left:0;right:0;
+  }
+
+  #animation_container{
+    background-color:rgba(51, 51, 51, 1.00); width:1350px; height:700px;
+    display: none;
+  }
+
+#canvas{position: absolute; display: block; background-color:rgba(51, 51, 51, 1.00);}
+
+#dom_overlay_container{ pointer-events:none; overflow:hidden; width:1350px; height:700px; position: absolute; left: 0px; top: 0px; display: block;  }
+
+
+/* #carag-atlas{
+    display: none;
+    background:url(../images/restaurante_atlas_P_.png) no-repeat center center;
+} */
+
+/*************************  Objetos por cada escenario  *************************/
+.conteo{
+    position:absolute;
+    background-repeat:no-repeat;
+    background-position:center center;
+    display: none;
+}
+#conteo1{
+    position:absolute; 
+    width:271px; height:181px;
+    left:759px; top:244px;
+    background-image:url(../images/conteo1.png);
+}
+#conteo2{
+    position:absolute; 
+    width:276px; height:181px;
+    left:536px; top:244px;
+    background-image:url(../images/conteo2.png);
+}
+#conteo3{
+    position:absolute; 
+    width:280px; height:181px;
+    left:315px; top:244px;
+    background-image:url(../images/conteo3.png);
+}
+#gameArea1{
+    position:absolute;
+    width:1350px; height:700px;
+    left:0px; top:0px;
+    background:url(../images/fondo_activ.jpg) no-repeat;
+    overflow:hidden;
+}
+.txt_abst{
+    position: absolute;
+    font-family: "Catalogo";
+    font-size: 17px;
+    line-height: 24.01px;
+    color: #FFFFFF;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    left: 319px;
+    top: 634px;
+    width: 709px;
+  }
+
+  #CTimer{
+    position:absolute;
+    top: 17px; left: 913px;
+    font-family: "Bebas";
+    font-size: 64px;
+    color: #333745;
+    text-align: right;
+    width: 160px;
+}
+#CTimer div{
+    position:relative;
+    display:block;
+    float:left;
+}
+#CMin, #CSeg{ width:70px; color:#ff3650; }
+.iconCheck{
+    position: absolute; /*display: none;*/
+    width: 44px; height: 44px;
+    background-image: url(../images/icon_check.png);
+    background-position: -44px 0px;
+}
+.iconCheck.anim{ animation:tada 1s; }
+.iconCheck.check{ background-position:0px 0px; }
+.iconCheck.ok{ background-image: url(../images/icon_correcto.png) }
+#icon_1{ left: 258px; top: 52px; }
+#icon_2{ left: 322px; top: 52px; }
+#icon_3{ left: 386px; top: 52px; }
+#icon_4{ left: 450px; top: 52px; }
+#icon_5{ left: 514px; top: 52px; }
+#icon_6{ left: 578px; top: 52px; }
+
+.caratula{
+    position:absolute;
+    width:1350px; height:700px;
+    left:0px; top:0px;
+    background-repeat:no-repeat;
+    background-position:center center;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#pregBien{ background: url(../images/BGpregBien.png) no-repeat center center; }
+#btnPBien{
+    position: absolute;
+    width: 167px; height: 41px;
+    top: 500px; left: 450px;
+    background: url(../images/btnListo.png) no-repeat 50% 50%;
+    cursor: pointer;
+}
+
+#pregMal{ background: url(../images/BGpregMal.png) no-repeat center center; }
+#pregMal.EndTime{ background: url(../images/tiempo.png) no-repeat center center !important; }
+
+#btnPMal{
+    position: absolute;
+    width: 167px; height: 41px;
+    top: 500px; left: 450px;
+    background: url(../images/btnContinuar.png) no-repeat 50% 50%;
+    cursor: pointer;
+}
+/*******************************************************************************/
+
+.Actividad{
+    position: absolute;
+    width: 1350px; height: 700px;
+    left: 0px; top: 0px;
+    margin: 0;
+    background:url(../images/fondogreen.jpg) no-repeat;
+    overflow: hidden;
+    display: none;
+}
+
+#content {
+    position: absolute;
+    margin: 0px 0px;
+    text-align: center;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+   
+  /* Header/footer boxes */
+   
+  .cardPile{ position:absolute; left:0px; top:0px; }
+  .dato1, .dato2, .dato3, .dato4, .dato5, .dato6{
+      position:absolute;
+      width : 239px;
+      height : 71px;
+      top: 550px;
+      font-family:"Catalogo";
+      text-align:center;
+      font-size:16px;
+      line-height:71px;
+      color:#ffffff;
+      cursor:pointer;
+      background : #FF3350;
+      background : rgba(255, 51, 80, 1);
+      box-shadow: 0px 4px 0px 1px rgba(0, 0, 5, .2);
+      -webkit-box-shadow: 0px 4px 0px 1px rgba(0, 0, 5, .2);
+      -moz-box-shadow: 0px 4px 0px 1px rgba(0, 0, 5, .2);
+      -ms-box-shadow: 0px 4px 0px 1px rgba(0, 0, 5, .2);
+  }
+
+    .dato1.correct{ transition:left 1s,top 1s; }
+    .dato2.correct{ transition:left 1s,top 1s; }
+    .dato3.correct{ transition:left 1s,top 1s; }
+    .dato4.correct{ transition:left 1s,top 1s; }
+    .dato5.correct{ transition:left 1s,top 1s; }
+    .dato6.correct{ transition:left 1s,top 1s; }
+
+    .dato1 span{
+        padding:0px 5px 0px 0px;
+        display:inline-block;
+        vertical-align:middle;
+        line-height:22px;
+    }
+    .dato2 span{
+        padding:0px 5px 0px 0px;
+        display:inline-block;
+        vertical-align:middle;
+        line-height:22px;
+    }
+    .dato3 span{
+        padding:0px 5px 0px 0px;
+        display:inline-block;
+        vertical-align:middle;
+        line-height:22px;
+    }
+    .dato4 span{
+        padding:0px 5px 0px 0px;
+        display:inline-block;
+        vertical-align:middle;
+        line-height:22px;
+    }
+    .dato5 span{
+        padding:0px 5px 0px 0px;
+        display:inline-block;
+        vertical-align:middle;
+        line-height:22px;
+    }
+    .dato6 span{
+        padding:0px 5px 0px 0px;
+        display:inline-block;
+        vertical-align:middle;
+        line-height:22px;
+    }
+  .dato1 span>strong{ font-family:"CatalogoSG"; }
+  .dato2 span>strong{ font-family:"CatalogoSG"; }
+  .dato3 span>strong{ font-family:"CatalogoSG"; }
+  .dato4 span>strong{ font-family:"CatalogoSG"; }
+  .dato5 span>strong{ font-family:"CatalogoSG"; }
+  .dato6 span>strong{ font-family:"CatalogoSG"; }
+  
+  #dato1_1, #dato2_1, #dato3_1, #dato4_1, #dato5_1, #dato6_1{ left:256px; }
+  #dato1_2, #dato2_2, #dato3_2, #dato4_2, #dato5_2, #dato6_2{ left:553px; }
+  #dato1_3, #dato2_3, #dato3_3, #dato4_3, #dato5_3, #dato6_3{ left:850px; }
+  
+  .cardSlots{ position:absolute; left:0px; top:0px; }
+    .cTiempo1, .cTiempo2, .cTiempo3, .cTiempo4, .cTiempo5, .cTiempo6{
+        position:absolute;
+        width:858px; height:308px;
+        opacity:1;
+        transition:opacity 1s linear;
+    }
+    .owl-planta #cTiempo1_1{ background:url(../images/activ/actvP1.png) no-repeat center center; }
+    .owl-planta #cTiempo2_1{ background:url(../images/activ/actvP2.png) no-repeat center center; }
+    .owl-planta #cTiempo3_1{ background:url(../images/activ/actvP3.png) no-repeat center center; }
+    .owl-planta #cTiempo4_1{ background:url(../images/activ/actvP4.png) no-repeat center center; }
+    .owl-planta #cTiempo5_1{ background:url(../images/activ/actvP5.png) no-repeat center center; }
+    .owl-planta #cTiempo6_1{ background:url(../images/activ/actvP6.png) no-repeat center center; }
+
+    .owl-driver #cTiempo1_1{ background:url(../images/activ/actvR1.png) no-repeat center center; }
+    .owl-driver #cTiempo2_1{ background:url(../images/activ/actvR2.png) no-repeat center center; }
+    .owl-driver #cTiempo3_1{ background:url(../images/activ/actvR3.png) no-repeat center center; }
+    .owl-driver #cTiempo4_1{ background:url(../images/activ/actvR4.png) no-repeat center center; }
+    .owl-driver #cTiempo5_1{ background:url(../images/activ/actvR5.png) no-repeat center center; }
+    .owl-driver #cTiempo6_1{ background:url(../images/activ/actvR6.png) no-repeat center center; }
+
+    .owl-restaurante #cTiempo1_1{ background:url(../images/activ/actvR1.png) no-repeat center center; }
+    .owl-restaurante #cTiempo2_1{ background:url(../images/activ/actvR2.png) no-repeat center center; }
+    .owl-restaurante #cTiempo3_1{ background:url(../images/activ/actvR3.png) no-repeat center center; }
+    .owl-restaurante #cTiempo4_1{ background:url(../images/activ/actvR4.png) no-repeat center center; }
+    .owl-restaurante #cTiempo5_1{ background:url(../images/activ/actvR5.png) no-repeat center center; }
+    .owl-restaurante #cTiempo6_1{ background:url(../images/activ/actvR6.png) no-repeat center center; }
+    
+    .owl-oficina #cTiempo1_1{ background:url(../images/activ/actvO1.png) no-repeat center center; }
+    .owl-oficina #cTiempo2_1{ background:url(../images/activ/actvO2.png) no-repeat center center; }
+    .owl-oficina #cTiempo3_1{ background:url(../images/activ/actvO3.png) no-repeat center center; }
+    .owl-oficina #cTiempo4_1{ background:url(../images/activ/actvO4.png) no-repeat center center; }
+    .owl-oficina #cTiempo5_1{ background:url(../images/activ/actvO5.png) no-repeat center center; }
+    .owl-oficina #cTiempo6_1{ background:url(../images/activ/actvO6.png) no-repeat center center; }
+
+    .cTiempo1.correct{ opacity:0; }
+    .cTiempo2.correct{ opacity:0; }
+    .cTiempo3.correct{ opacity:0; }
+    .cTiempo4.correct{ opacity:0; }
+    .cTiempo5.correct{ opacity:0; }
+    .cTiempo6.correct{ opacity:0; }
+
+    #cTiempo1_1{   left : 241px; top : 175px; }
+    #cTiempo2_1{   left : 241px; top : 175px; }
+    #cTiempo3_1{   left : 241px; top : 175px; }
+    #cTiempo4_1{   left : 241px; top : 175px; }
+    #cTiempo5_1{   left : 241px; top : 175px; }
+    #cTiempo6_1{   left : 241px; top : 175px; }
+    
+    .blockBtn{
+        pointer-events: none;
+        -webkit-pointer-events: none;
+        -moz-pointer-events: none;
+        -ms-pointer-events: none;
+    }
+
+    #CTimer{
+        position:absolute;
+        top:22px; left:911px;
+        font-family:"Bebas";
+        font-size:64px;
+        color:#333745;
+        text-align:right;
+        width:160px;
+    }
+    #CTimer div{
+        position:relative;
+        display:block;
+        float:left;
+    }
+    #CMin, #CSeg{ width:70px; color:#ff3650; }

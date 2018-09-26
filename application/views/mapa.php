@@ -325,8 +325,10 @@
                 </div>
                 <div id="popAct_7" class="caratula"> <!-- pausas -->
                     <div class="pausas"><p class="textCent"></p></div>
+                    <div id="CartelWarng"><p class="textCent"></p></div>
                     <?php 
-                    echo anchor('Pausasactivas', ' ', array('id' => 'preg_7_1  ','class' => 'CV_btn1 disable')); 
+                    // echo anchor('Pausasactivas2', ' ', array('id' => 'opcion2','class' => 'disabled')); 
+                    echo anchor('Pausasactivas', ' ', array('id' => 'preg_7_1','class' => 'CV_btn1 disable')); 
                     echo anchor('mapa/certificado_pausas', '&nbsp;', array('id' => 'i4Certificado', 'class' => $certificado_pausas, 'target' => '_blank', 'style' => 'left: 552px;
                     top: 402px;'));
                     ?>

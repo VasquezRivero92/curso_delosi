@@ -1,0 +1,295 @@
+var $scaleActual = 1;
+var $NA = 1;
+var $Actividades = new Actividades();
+var sumA1 = 20;
+var sumA2 = 10;
+var puntos_acumulados = 0;
+var passBR = false;
+
+var myCounter = new Countdown({  
+    seconds:20,  // number of seconds to count down
+    onUpdateStatus: function(sec){
+        
+    }, // callback for each second
+    onCounterEnd: function(){ 
+        //alert('counter ended!');
+        $("#pregWindow").fadeIn(500);
+        $('#pregMal').addClass('EndTime');
+        $("#pregMal").fadeIn(500);
+        $("#icon_"+$NA).addClass("check");
+    } // final action
+});
+
+
+$(document).ready(function (e) {
+    //init();
+    initSonidos();
+    redimensionarJuego();
+    initBotones();
+    $(window).resize(function () {
+        redimensionarJuego();
+
+    });
+    $("#qLoverlay").show();
+    $("#historia").queryLoader2({
+        barColor: "#000000",
+        backgroundColor: "#333333",
+        percentage: true,
+        minimumTime: 100,
+        barHeight: 0,
+        onComplete: showInicio
+    });
+});
+function initSonidos() {
+    audios.forEach(function (itm, i) {
+        loadSound(itm[0], itm[1]);
+    });
+}
+function initBotones() {
+
+    $Actividades.init();
+
+    $('#nextInt_1').click(function () {
+        playFX(window.audioCatch);
+        $('.instr').stop().fadeOut(100);
+        $('#inst_2').stop().fadeIn(100);
+    });
+    $('.btn_CAL_A').click(function () {
+        playFX(window.audioCatch);
+        var id = String($(this).attr('id').split('_')[1], 10);
+        $('.instr').stop().fadeOut(100);
+        $('#calificacion').stop().fadeOut(1000);
+        calif1 = id;
+        // convertir el concatenado en valor numerico
+        var x = parseInt(calif1);
+        var data = {calificacion: x};
+        $.post(bdir + 'ajax/set_calificacion', data).done(function (data) {
+        console.log("resultado: " + data);
+        });
+    });
+
+    
+    $('.btnPrev').click(function () {
+        playFX(window.audioCatch);
+        var id = parseInt($(this).attr('id').split('_')[1], 10);
+        $('.instrucciones').stop().delay(10).fadeOut(500);
+        var j = id - 1;
+        $('#instrucciones_' + j).stop().fadeIn(10);
+        playTexto(window['txti' + j]);
+    });
+    $('.btnNext').click(function () {
+        playFX(window.audioCatch);
+        var id = parseInt($(this).attr('id').split('_')[1], 10);
+        $('.instrucciones').stop().delay(300).fadeOut(100);
+        var j = id + 1;
+        $('#instrucciones_' + j).stop().fadeIn(500);
+        playTexto(window['txti' + j]);
+        //if(id==2){ init(); }
+    });
+    $('#btnJugar').click(function () {
+        $(this).addClass('btn_desabilita');
+        stopBGMusic();
+        stopTexto();
+        playFX(window.audioCatch);
+        $('.instrucciones').stop().fadeOut(1000);
+        introJuego();
+        $('#content').fadeIn(500);
+        $('#Actividad1').fadeIn(500);
+        $('.caratula').stop().fadeOut(10);        
+        //$('#animation_container').stop().fadeIn(500);
+        //$Actividades.ReiniciarActividad();
+        //$Actividades.show($NA);
+        // cargar el juego createJS
+        $.post(bdir + 'ajax/set_intentos_pausas').done(function (data) {
+            console.log("Intentos: " + data);
+            if (data >= 4) {
+                $('#btnReinicio,#resumenOportunidad').css('background', 'none').hide();
+            }
+        });    
+        /**************/         
+    });
+
+    //botones del juego
+    $('#btnReiniciar').click(function () {
+        playFX(window.audioCatch);
+        showInicio();
+        $('.caratula, .game, #capaResumen, #TerminoTiempo').stop().fadeOut(500);
+        $("#pregWindow").fadeOut(500);
+    });
+    $('#btnReinicio').click(function () {
+        playFX(window.audioCatch);
+
+        $NA = 1;
+        puntos_acumulados = 0;
+        passBR = false;
+
+        showInicio();
+        $Actividades.ResetActividad($NA);
+        $('.caratula, .game, #capaResumen').stop().fadeOut(500);
+        $('#btnJugar').removeClass('btn_desabilita');
+        $("#pregWindow").fadeOut(500);
+    });
+
+    $('#btnPBien').click(function () {
+        $(this).addClass('blockBtn');
+        $('#pregWindow, .caratula').stop().fadeOut(500);
+        passBR = true;
+        iniciarJuego();       
+    });
+
+    $('#btnPMal').click(function () {
+        $(this).addClass('blockBtn');
+        $('#pregWindow, .caratula').stop().fadeOut(500);
+        passBR = false;
+        iniciarJuego();
+    });
+
+}
+
+function showInicio() {
+    playFX(window.nivelBG);
+    //playTexto(window.txti1);
+    redimensionarJuego();
+    $('.instrucciones').stop().hide();
+    $('#instrucciones_1').fadeIn(1000);
+    setTimeout(function () {
+        playBGMusic(window.fndPausas);
+        $(".instrucciones").stop().delay(300).fadeOut(100);
+        $("#instrucciones_2").stop().fadeIn(500);
+        //playTexto(window.txti2);
+    }, 4000);
+}
+function introJuego() {
+    $(".caratula,.conteo").stop().fadeOut(10);
+    $(".conteo").removeClass('anima bounceIn');
+    $("#infoWindow").show();
+    setTimeout(function () {
+        $("#conteo3").addClass('anima bounceIn').show();
+        playFX(window.beep);
+    }, 1500);
+    setTimeout(function () {
+        $("#conteo2").addClass('anima bounceIn').show();
+        playFX(window.beep);
+    }, 2500);
+    setTimeout(function () {
+        $("#conteo1").addClass('anima bounceIn').show();
+        playFX(window.beep);
+    }, 3500);
+    setTimeout(function () {
+        $("#infoWindow").fadeOut(300);
+        playFX(window.beepXL);
+        radioPop();
+        $Actividades.show($NA);
+        myCounter.start();
+    }, 4500);
+}
+
+function pantallafinal(){
+	stopBGMusic();
+	//playFX(window["BGWin"]);
+	$("#capaResumen, #caratulaFin1").fadeIn(500);
+    $.post(bdir + 'ajax/init_calificacion').done(function (data) {
+       console.log("calificacion: " + data);
+       if(data == 0){
+        $('#calificacion').stop().fadeIn(1000);
+       }else{
+        $('#calificacion').stop().fadeOut(1000);
+       }
+    });
+}
+
+function resultadoPuntos(punts) {
+    var puntos = punts;
+	$('#resumenPuntaje').html(puntos);
+	var data = {puntaje: puntos, estrellas: estrellas, check : true};
+    $.post(bdir + 'ajax/set_puntaje', data).done(function (data) {
+        console.log("resultado: " + data);
+    });
+    if(puntos >= 70){
+        $('#i4Certificado').removeClass('disabled');
+    }
+}
+
+function finalSound(){
+    myCounter.stop();
+    stopBGMusic();
+	playTexto(window["BGWin"]);
+    $(".Actividad").fadeOut(500);
+    $('#content').fadeOut(500);
+    $('#capaResumen').fadeIn(500);
+	$("#capaResumen, #caratulaFin1").fadeIn(500);
+    $.post(bdir + 'ajax/init_calificacion').done(function (data) {
+       console.log("calificacion: " + data);
+       if(data == 0){
+        $('#calificacion').stop().fadeIn(1000);
+       }else{
+        $('#calificacion').stop().fadeOut(1000);
+       }
+    });
+
+}
+
+function iniciarJuego(){
+    if(passBR){
+        switch ($NA) {
+            case 1: puntos_acumulados = puntos_acumulados + sumA1; break;
+            case 2: puntos_acumulados = puntos_acumulados + sumA1; break;
+            case 3: puntos_acumulados = puntos_acumulados + sumA2; break;
+            case 4: puntos_acumulados = puntos_acumulados + sumA2; break;
+            case 5: puntos_acumulados = puntos_acumulados + sumA1; break;
+            case 6: puntos_acumulados = puntos_acumulados + sumA1; finalSound(); break;
+        } 
+    }else{
+        switch ($NA) {
+            case 1:  break;
+            case 2:  break;
+            case 3:  break;
+            case 4:  break;
+            case 5:  break;
+            case 6:  finalSound(); break;
+        } 
+    }
+    passBR = false;
+    console.log($NA, puntos_acumulados);
+    resultadoPuntos(puntos_acumulados);
+    $("#Actividad"+$NA).fadeOut(500);
+    $NA++;
+    $Actividades.show($NA);
+    $('#btnPBien, #btnPMal').removeClass('blockBtn');
+    myCounter.start();
+}
+
+function radioPop(){
+    setTimeout(function(){
+        var ops = Math.floor(Math.random()*3)+1;
+        playBGMusic(window["back"+ops]);
+    },500);
+};
+/*******************************************************************************/
+function redimensionarJuego() {
+    scale1 = (window.innerWidth / 1350);
+    scale2 = (window.innerHeight / 700);
+    if (scale1 <= scale2) {// cuando sobra height
+        $('.resizeWindow').css({'left': '0px', 'transform': 'scale(' + scale1 + ')'});
+        $scaleActual = scale1;
+    } else {//cuando sobra width
+        var left = (window.innerWidth - (1350 * scale2)) / 2;
+        $('.resizeWindow').css({'left': left + 'px', 'transform': 'scale(' + scale2 + ')'});
+        $scaleActual = scale2;
+    }
+    $('body, html').css("height", window.innerHeight);
+}
+
+$.fn.extend({
+    disableSelection: function () {
+        this.each(function () {
+            this.onselectstart = function () {
+                return false;
+            };
+            this.unselectable = "on";
+            $(this).css({'-webkit-user-select': 'none', '-moz-user-select': 'none', 'user-select': 'none'});
+        });
+    }
+});
+/*******************************************************************************/
+
