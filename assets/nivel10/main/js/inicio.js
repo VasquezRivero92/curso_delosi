@@ -145,9 +145,7 @@ $(document).ready(function (e) {
             });   
     });
     $('.btnVolver2').click(function () {
-
         $('#sliderPage_' + sID).stop().fadeIn(500);  
-
     });
 
     $('.btnVolver').click(function () {
@@ -164,6 +162,8 @@ $(document).ready(function (e) {
         }
         sID +=1;
         if(sID==4){
+            console.log('muestra los botones');
+            $('#warning').css('display','block');
             $('#btnJugar, #btnJugar2').css("display","block");
             $('#btnJugar, #btnJugar2').addClass('slider_scale');
             // $('#i3btn_'+sID).removeClass('disable');

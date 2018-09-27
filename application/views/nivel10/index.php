@@ -65,24 +65,22 @@
                 <div id="i3btn_1" class="i3btn"></div>
                 <div id="i3btn_2" class="i3btn"></div>
                 <div id="i3btn_3" class="i3btn"></div>
+
+                <p id="warning">"Recuerda que si tienes una computadora o dispositivo móvil de gama baja ingresa a la <span>"opción 2"</span>, pero si tienes una computadora o dispositivo móvil de gama media o alta puedes ingresas a la <span>"opción 1"</span>.
+                    <br>¡Con esto podrás llevar tu curso de la mejor manera!
+                    <br><span>Importante:</span> Si ingresas a la <span>opción 1</span> y el reto no carga o la pantalla aparece oscurecida, deberás ingresar a la <span>opción 2</span>.
+                </p>
+
                 <?php
                 
                 if ($this->session->win < 2) {
-                    echo anchor('pausasactivas/pausas', 'Iniciar Reto', array('id' => 'btnJugar'));
+                    echo anchor('pausasactivas/pausas', 'Opción 1', array('id' => 'btnJugar'));
                 } else {
-                    //$this->session->win = 4;
-                    echo '<div id="i3txt_2">Ya completaste este reto</div>';
                     echo anchor('mapa', 'Volver al inicio', array('id' => 'btnJugar'));
                 }
                 if ($this->session->win == 1 || $this->session->win == 2) {
-                    // if (intentos == 4) {
-                    //     echo '<div id="i3txt_2">Ya completaste este reto</div>';
-                    //     echo anchor('mapa', 'Volver al inicio', array('id' => 'btnJugar2'));
-                    // }else{
-                        echo anchor('pausasactivasOpcional/pausasOpcional', 'Reto opcional', array('id' => 'btnJugar2'));
-                    // }
+                    echo anchor('pausasactivasOpcional/pausasOpcional', 'Opción 2', array('id' => 'btnJugar2'));
                 } else {
-                    echo '<div id="i3txt_2">Ya completaste este reto</div>';
                     echo anchor('mapa', 'Volver al inicio', array('id' => 'btnJugar2'));
                 }
                 echo anchor('mapa', ' ', array('id' => 'btnciudad'));

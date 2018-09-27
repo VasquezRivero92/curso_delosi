@@ -208,10 +208,26 @@ cursor: pointer;
     color: #333745;
     text-align: center;
 }
+#warning{
+    position: absolute;
+    width: 1010px;
+    left: 163px;
+    top: 445px;
+    font-family: "Catalogo";
+    font-size: 17px;
+    line-height: 20px;
+    color: #000000;
+    text-align: center;
+    display: none;
+}
+#warning span{ 
+    color: #ff3650;
+    font-weight: bold;
+}
 .i3btn{
     position: absolute;
     width: 225px; height: 274px;
-    top: 220px;
+    top: 200px;
     background-repeat: no-repeat;
     background-position: 0px 0px;
     cursor: pointer;
@@ -221,22 +237,22 @@ cursor: pointer;
 /***.i3btn:hover{ background-position: 0px -210px; }/***/
 #i3btn_1{ position : absolute ;
   left: 365px;
-  top : 253px;
+  top : 181px;
   width : 195px;
   height : 271px; background-image: url(../images/i3btn1.png); }
 #i3btn_2{ position : absolute ;
   left : 570px;
-  top : 253px;
+  top : 181px;
   width : 195px;
   height : 271px; background-image: url(../images/i3btn2.png); }
 #i3btn_3{ position : absolute ;
   left : 780px;
-  top : 253px;
+  top : 181px;
   width : 195px;
   height : 271px; background-image: url(../images/i3btn3.png); }
 #i3btn_4{ position : absolute ;
   left : 885px;
-  top : 253px;
+  top : 181px;
   width : 195px;
   height : 271px; background-image: url(../images/i3btn4.png); }
 
@@ -254,7 +270,7 @@ cursor: pointer;
     position: absolute; display: none;
     width: 170px; height: 40px;
     left: 478px;
-    top: 542px;
+    top: 559px;
     font-family: 'Catalogo';
     font-size: 17px;
     line-height: 40px;
@@ -268,7 +284,7 @@ cursor: pointer;
 #btnJugar2{
     position: absolute; display: none;
     width: 170px; height: 40px;
-    left: 694px; top: 542px;
+    left: 694px; top: 559px;
     font-family: 'Catalogo';
     font-size: 17px;
     line-height: 40px;
