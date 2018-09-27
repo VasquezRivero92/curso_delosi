@@ -105,7 +105,7 @@
                         <div id="cTiempo5_1" class="cTiempo5 ui-droppable"></div>
                     </div>
                     <div id="cardPile5">
-                        <div id="dato5_1" class="dato5 ui-draggable"><span>PAUSAS ACTIVAS PARA<br><strong>PARA PIERNAS</strong></span></div>
+                        <div id="dato5_1" class="dato5 ui-draggable"><span>PAUSAS ACTIVAS PARA<br><strong>PIERNAS Y TOBILLOS</strong></span></div>
                         <div id="dato5_2" class="dato5 ui-draggable"><span>PAUSAS ACTIVAS PARA<br><strong>BRAZOS Y TRONCO</strong></span></div>
                         <div id="dato5_3" class="dato5 ui-draggable"><span>PAUSAS ACTIVAS PARA<br><strong>PARA OJOS</strong></span></div>
                     </div>

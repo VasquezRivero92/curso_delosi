@@ -74,7 +74,7 @@
                     echo '<div id="i3txt_2">Ya completaste este reto</div>';
                     echo anchor('mapa', 'Volver al inicio', array('id' => 'btnJugar'));
                 }
-                if ($this->session->win == 2) {
+                if ($this->session->win == 1 || $this->session->win == 2) {
                     // if (intentos == 4) {
                     //     echo '<div id="i3txt_2">Ya completaste este reto</div>';
                     //     echo anchor('mapa', 'Volver al inicio', array('id' => 'btnJugar2'));

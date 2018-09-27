@@ -33,7 +33,7 @@ class PausasactivasOpcional extends Nivel_Controller {
     function pausasOpcional() {  
         // echo $this->session->position;
         // echo $this->session->win;
-        if ($this->session->win == 2) {
+        if ($this->session->win == 2 || $this->session->win == 1) {
             $this->session->position = 4;
             $this->session->win = 3;
             $resul = $this->base_model->get_puntaje($this->session->user_id, $this->cur);
