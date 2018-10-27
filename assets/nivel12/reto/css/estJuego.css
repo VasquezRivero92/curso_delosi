@@ -1,0 +1,303 @@
+@charset "utf-8";
+/*********************************  Power Ups  *********************************/
+.powerUp{}
+.powerUp1{
+    position:absolute; z-index:1; 
+    width:70px; height:70px;
+    background-color: rgba(0,0,0,0);
+    opacity:1;
+    transition:opacity 500ms linear;
+    font-size: 0px;
+}
+.powerUp1.hit{ opacity:0; }
+#powerUp_1{ 
+    left : 1098px;
+    top : 135px;
+    width : 91px;
+    height : 77px;
+}
+#powerUp_2{ 
+    left : 2230px;
+    top : 559px;
+    width : 91px;
+    height : 77px;
+}
+#powerUp_3{ 
+    left : 1764px;
+    top : 247px;
+    width : 91px;
+    height : 77px;
+}
+#powerUp_4{ 
+    left : 1528px;
+    top : 735px;
+    width : 91px;
+    height : 77px;
+}
+#powerUp_5{ 
+    left : 2422px;
+    top : 189px;
+    width : 91px;
+    height : 77px;
+}
+#powerUp_6{ 
+    left : 1264px;
+    top : 743px;
+    width : 91px;
+    height : 77px;
+}
+#powerUp_7{ 
+    left : 2048px;
+    top : 185px;
+    width : 91px;
+    height : 77px;
+}
+#powerUp_8{ 
+    left : 570px;
+    top : 187px;
+    width : 91px;
+    height : 77px;
+}
+/*******************************************************************************/
+
+.icoPel{
+    width:68px; height:139px;
+    position:absolute;
+    background-color: rgba(255,0,0,0);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.owl-planta #icoPel_1{ 
+    left : 1116px;top : 61px;
+    background:url(../images/enfermos/Manmal_pl.png) no-repeat; 
+}.owl-planta #icoPel_2{ 
+    left : 2248px;top : 486px;
+    background:url(../images/enfermos/Manmal_pl.png) no-repeat; 
+}.owl-planta #icoPel_3{ 
+    left : 1781px;top : 157px; 
+    background:url(../images/enfermos/Manmal_pl.png) no-repeat; 
+}.owl-planta #icoPel_4{ 
+    left : 1539px;top : 647px;
+    background:url(../images/enfermos/Manmal_pl.png) no-repeat; 
+}.owl-planta #icoPel_5{ 
+    left : 2432px;top : 96px;
+    background:url(../images/enfermos/Manmal_pl.png) no-repeat; 
+}.owl-planta #icoPel_6{ 
+    left : 1278px;top : 659px;    
+    background:url(../images/enfermos/Manbien_pl.png) no-repeat; 
+}.owl-planta #icoPel_7{ 
+    left : 2057px;top : 87px;
+    background:url(../images/enfermos/Manbien_pl.png) no-repeat; 
+}.owl-planta #icoPel_8{ 
+    left : 591px;top : 90px;
+    background:url(../images/enfermos/Manbien_pl.png) no-repeat; 
+}
+
+.owl-oficina #icoPel_1{ 
+    left : 1116px;top : 71px;
+    background:url(../images/enfermos/man_of_bad.png) no-repeat; 
+}.owl-oficina #icoPel_2{ 
+    left : 2248px;top : 486px;
+    background:url(../images/enfermos/woma_of_bad.png) no-repeat; 
+}.owl-oficina #icoPel_3{ 
+    left : 1781px;top : 157px; 
+    background:url(../images/enfermos/man_of_bad.png) no-repeat; 
+}.owl-oficina #icoPel_4{ 
+    left : 1539px;top : 647px;
+    background:url(../images/enfermos/woma_of_bad.png) no-repeat; 
+}.owl-oficina #icoPel_5{ 
+    left : 2432px;top : 96px;
+    background:url(../images/enfermos/man_of_bad.png) no-repeat; 
+}.owl-oficina #icoPel_6{ 
+    left : 1278px;top : 659px;    
+    background:url(../images/enfermos/woma_of_good.png) no-repeat; 
+}.owl-oficina #icoPel_7{ 
+    left : 2057px;top : 87px;
+    background:url(../images/enfermos/man_of_good.png) no-repeat; 
+}.owl-oficina #icoPel_8{ 
+    left : 591px;top : 90px;
+    background:url(../images/enfermos/woma_of_good.png) no-repeat; 
+}
+
+.owl-restaurante #icoPel_1{ 
+    left : 1116px;top : 71px;
+    background:url(../images/enfermos/man_rt_bad.png) no-repeat; 
+}.owl-restaurante #icoPel_2{ 
+    left : 2248px;top : 486px;
+    background:url(../images/enfermos/woma_rt_bad.png) no-repeat; 
+}.owl-restaurante #icoPel_3{ 
+    left : 1781px;top : 157px; 
+    background:url(../images/enfermos/man_rt_bad.png) no-repeat; 
+}.owl-restaurante #icoPel_4{ 
+    left : 1539px;top : 647px;
+    background:url(../images/enfermos/woma_rt_bad.png) no-repeat; 
+}.owl-restaurante #icoPel_5{ 
+    left : 2432px;top : 96px;
+    background:url(../images/enfermos/man_rt_bad.png) no-repeat; 
+}.owl-restaurante #icoPel_6{ 
+    left : 1278px;top : 659px;    
+    background:url(../images/enfermos/woma_rt_good.png) no-repeat; 
+}.owl-restaurante #icoPel_7{ 
+    left : 2057px;top : 87px;
+    background:url(../images/enfermos/man_rt_good.png) no-repeat; 
+}.owl-restaurante #icoPel_8{ 
+    left : 591px;top : 90px;
+    background:url(../images/enfermos/woma_rt_good.png) no-repeat; 
+}
+
+.owl-driver #icoPel_1{ 
+    left : 1116px;top : 71px;
+    background:url(../images/enfermos/man_rt_bad.png) no-repeat; 
+}.owl-driver #icoPel_2{ 
+    left : 2248px;top : 486px;
+    background:url(../images/enfermos/woma_rt_bad.png) no-repeat; 
+}.owl-driver #icoPel_3{ 
+    left : 1781px;top : 157px; 
+    background:url(../images/enfermos/man_rt_bad.png) no-repeat; 
+}.owl-driver #icoPel_4{ 
+    left : 1539px;top : 647px;
+    background:url(../images/enfermos/woma_rt_bad.png) no-repeat; 
+}.owl-driver #icoPel_5{ 
+    left : 2432px;top : 96px;
+    background:url(../images/enfermos/man_rt_bad.png) no-repeat; 
+}.owl-driver #icoPel_6{ 
+    left : 1278px;top : 659px;    
+    background:url(../images/enfermos/woma_rt_good.png) no-repeat; 
+}.owl-driver #icoPel_7{ 
+    left : 2057px;top : 87px;
+    background:url(../images/enfermos/man_rt_good.png) no-repeat; 
+}.owl-driver #icoPel_8{ 
+    left : 591px;top : 90px;
+    background:url(../images/enfermos/woma_rt_good.png) no-repeat; 
+}
+/*******************************************************************************/
+.anima_person{ 
+    -webkit-animation: extract .3s steps(2,end) infinite;
+    animation: extract .3s steps(2,end) infinite;
+}
+@-webkit-keyframes extract { 
+    from { background-position: -1px -1px; } to { background-position: -626px -1px }
+}
+@keyframes extract {
+    from { background-position: -1px -1px; } to { background-position: -626px -1px }
+}
+
+.icoPrev{
+    width:68px; height:139px;
+    position:absolute;
+    background-color: rgba(0,255,0,0);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.owl-planta #icoPrev_1{ left : 1116px;top : 61px; background:url(../images/enfermos/Manbien_pl.png) no-repeat;}
+.owl-planta #icoPrev_2{ left : 2248px;top : 486px; background:url(../images/enfermos/Manbien_pl.png) no-repeat;}
+.owl-planta #icoPrev_3{ left : 1781px;top : 157px; background:url(../images/enfermos/Manbien_pl.png) no-repeat;}
+.owl-planta #icoPrev_4{ left : 1539px;top : 647px; background:url(../images/enfermos/Manbien_pl.png) no-repeat;}
+.owl-planta #icoPrev_5{ left : 2432px;top : 96px; background:url(../images/enfermos/Manbien_pl.png) no-repeat;}
+
+.owl-oficina #icoPrev_1{ left : 1116px;top : 71px; background:url(../images/enfermos/man_of_good.png) no-repeat;}
+.owl-oficina #icoPrev_2{ left : 2248px;top : 486px; background:url(../images/enfermos/woma_of_good.png) no-repeat;}
+.owl-oficina #icoPrev_3{ left : 1781px;top : 157px; background:url(../images/enfermos/man_of_good.png) no-repeat;}
+.owl-oficina #icoPrev_4{ left : 1539px;top : 647px; background:url(../images/enfermos/woma_of_good.png) no-repeat;}
+.owl-oficina #icoPrev_5{ left : 2432px;top : 96px; background:url(../images/enfermos/man_of_good.png) no-repeat;}
+
+.owl-restaurante #icoPrev_1{ left : 1116px;top : 71px; background:url(../images/enfermos/man_rt_good.png) no-repeat;}
+.owl-restaurante #icoPrev_2{ left : 2248px;top : 486px; background:url(../images/enfermos/woma_rt_good.png) no-repeat;}
+.owl-restaurante #icoPrev_3{ left : 1781px;top : 157px; background:url(../images/enfermos/man_rt_good.png) no-repeat;}
+.owl-restaurante #icoPrev_4{ left : 1539px;top : 647px; background:url(../images/enfermos/woma_rt_good.png) no-repeat;}
+.owl-restaurante #icoPrev_5{ left : 2432px;top : 96px; background:url(../images/enfermos/man_rt_good.png) no-repeat;}
+
+.owl-driver #icoPrev_1{ left : 1116px;top : 71px; background:url(../images/enfermos/man_rt_good.png) no-repeat;}
+.owl-driver #icoPrev_2{ left : 2248px;top : 486px; background:url(../images/enfermos/woma_rt_good.png) no-repeat;}
+.owl-driver #icoPrev_3{ left : 1781px;top : 157px; background:url(../images/enfermos/man_rt_good.png) no-repeat;}
+.owl-driver #icoPrev_4{ left : 1539px;top : 647px; background:url(../images/enfermos/woma_rt_good.png) no-repeat;}
+.owl-driver #icoPrev_5{ left : 2432px;top : 96px; background:url(../images/enfermos/man_rt_good.png) no-repeat;}
+
+
+/**********************************  Paredes  **********************************/
+.ParedMask{ position:absolute; left:0px; top:0px; width:50px; height:50px; display:none; }
+.fondoOPC{ position:absolute; top:0px; left:0px; z-index:1; display:none; }
+/***********************************  Player  ***********************************/
+#Player_1{
+    position:absolute;
+    width: 67px;
+    height: 36px;
+    z-index:2;
+    background-color: rgba(0,0,0,0);
+}
+#Player_1 .sprite{
+    position:absolute;
+    width:200px; height:200px;
+    left:-60px; bottom:-4px;
+    background-position:0px 0px;
+    background-color: rgba(250,0,0,0);
+}
+.playerP.owl-planta .sprite{ background-image: url(../images/plt_sprite_F.png); }
+.playerP.owl-oficina .sprite{ background-image: url(../images/of_sprite_F.png); }
+.playerP.owl-restaurante .sprite{ background-image: url(../images/rest_sprite_F.png); }
+.playerP.owl-driver .sprite{ background-image: url(../images/rest_sprite_F.png); }
+
+.playerM.owl-planta .sprite{ background-image: url(../images/plt_sprite_M.png); }
+.playerM.owl-oficina .sprite{ background-image: url(../images/of_sprite_M.png); }
+.playerM.owl-restaurante .sprite{ background-image: url(../images/rest_sprite_M.png); }
+.playerM.owl-driver .sprite{ background-image: url(../images/rest_sprite_M.png); }
+
+#Player_1 .ptje{
+    position:absolute; display:none;
+    width:99px; height:91px;
+    left: -70px;
+    top: -205px;
+    background: rgba(250,0,0,0) url(../images/alert.png) no-repeat 50% 50%;
+    cursor: pointer;
+}
+/*************************  Objetos por cada escenario  *************************/
+.conteo{
+    position:absolute;
+    background-repeat:no-repeat;
+    background-position:center center;
+    display: none;
+}
+#conteo1{
+    position:absolute; 
+    width:271px; height:181px;
+    left:759px; top:244px;
+    background-image:url(../images/conteo1.png);
+}
+#conteo2{
+    position:absolute; 
+    width:276px; height:181px;
+    left:536px; top:244px;
+    background-image:url(../images/conteo2.png);
+}
+#conteo3{
+    position:absolute; 
+    width:280px; height:181px;
+    left:315px; top:244px;
+    background-image:url(../images/conteo3.png);
+}
+.areaJuego{
+    position:absolute;
+    width:2548px; height:884px;
+    left:0px; top:0px;
+    overflow:hidden;
+}
+.owl-planta #gameArea1{  background:url(../images/fondos/planta/fondo1.jpg) no-repeat; }
+.owl-restaurante #gameArea1{  background:url(../images/fondos/restaurante/fondo1.jpg) no-repeat; }
+.owl-oficina #gameArea1{  background:url(../images/fondos/oficina/fondo1.jpg) no-repeat; }
+.owl-driver #gameArea1{  background:url(../images/fondos/driver/fondo1.jpg) no-repeat; }
+
+/*******************************************************************************/
+
+#pop_up{
+    width: 1350px;
+    height: 700px;
+    background: url(../images/mesatest.png);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+#canvasextintor{
+    width: 100%;
+    height: 100%;
+}

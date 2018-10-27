@@ -1,0 +1,16 @@
+/* -----------------------------------------------------
+   created with https://www.codeandweb.com/texturepacker 
+   -----------------------------------------------------
+   $TexturePacker:SmartUpdate:4b84ec022f1f9fc81ddb9d2113cb16f7:9813e65389f7b73b48feb168c96e0eb5:303c0d6cd09418e8f4e6ad3dc06b66d4$
+   -----------------------------------------------------
+
+   usage: <span class="{-spritename-} sprite"></span>
+
+   replace {-spritename-} with the sprite you like to use
+
+*/
+
+.sprite {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(laptop.png);}
+
+.2a {width:186px; height:215px; background-position: -1px -1px}
+.2b {width:186px; height:215px; background-position: -189px -1px}

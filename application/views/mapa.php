@@ -19,6 +19,7 @@
             var bdir = '<?php echo base_url(); ?>';
             var odir = '<?php echo base_url($own_dir); ?>';
             var grup = '<?php echo strtoupper(substr($this->session->grupo, 0, 1)); ?>';
+            var result = '<?php echo $resultado; ?>';
             var cursos = [null, 
                          '<?php echo $curso1; ?>', 
                          '<?php echo $curso2; ?>',
@@ -26,7 +27,9 @@
                          '<?php echo $curso4; ?>', 
                          '<?php echo $curso8; ?>', 
                          '<?php echo $curso9; ?>', 
-                         '<?php echo $curso10; ?>'];
+                         '<?php echo $curso10; ?>',
+                         '<?php echo $curso11; ?>',
+                         '<?php echo $curso12; ?>'];
             var cur_intento = [null, 
                          '<?php echo $curso1_i; ?>', 
                          '<?php echo $curso2_i; ?>',
@@ -49,12 +52,10 @@
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-
           gtag('config', 'UA-123369182-1');
         </script>
     </head>
-    <body class="
-        <?php echo $avatar; ?>" data-firstwindow="<?php echo $firstWindow; ?>" data-drivers="<?php echo $drivers; ?>" data-pared="<?php echo $pared; ?>">
+    <body class=" <?php echo $avatar; ?>" data-firstwindow="<?php echo $firstWindow; ?>" data-drivers="<?php echo $drivers; ?>" data-pared="<?php echo $pared; ?>">
         <!-- - - - - - - - - - - - - - - - -  Loader  - - - - - - - - - - - - - - - - -->
         <div id="qLoverlay" class="resizeWindow">
             <div id="img_loader01"><div></div></div>
@@ -75,7 +76,6 @@
                 <!-- <div id="alcalde_2"></div> -->
                 <div id="btn_cont"></div>
             </div>
-
             <div id="instrucciones_3" class="instrucciones">
                 <div class="mapa_anim"></div>
                 <div class="fug_artif fuegosArtif"></div>
@@ -103,14 +103,15 @@
                     <div id="icoPel_12" class="icoPel"></div>
                     <div id="icoPel_13" class="icoPel"></div>
                     <div id="icoPel_14" class="icoPel"></div>
-                    <!-- <div id="icoPel_15" class="icoPel"></div> -->
+                    <div id="icoPel_16" class="icoPel"></div>
+
                     <div id="icoPrev_1" class="icoPrev"></div>
                     <div id="icoPrev_2" class="icoPrev"></div>
                     <div id="icoPrev_3" class="icoPrev"></div>
                     <div id="icoPrev_4" class="icoPrev persona_mov1"></div>
-                    <!-- <div id="icoPrev_5" class="icoPrev persona_mov1"></div> -->
+                    <div id="icoPrev_5" class="icoPrev"></div>
                     <div id="icoPrev_6" class="icoPrev persona_mov1"></div>
-                    <div id="icoPrev_7" class="icoPrev persona_mov1"></div>
+                    <!-- <div id="icoPrev_7" class="icoPrev persona_mov1"></div> -->
                     <div id="icoPrev_8" class="icoPrev persona_mov1"></div>
                     <div id="icoPrev_9" class="icoPrev persona_mov1"></div>
                     <div id="icoPrev_10" class="icoPrev persona_mov1"></div>
@@ -119,7 +120,7 @@
                     <div id="icoPrev_13" class="icoPrev persona_mov1"></div>
                     <div id="icoPrev_14" class="icoPrev persona_mov1"></div>
                     <div id="icoPrev_15" class="icoPrev persona_mov1"></div>
-                    <div id="icoPrev_16" class="icoPrev persona_mov1"></div>
+                    <!-- <div id="icoPrev_16" class="icoPrev persona_mov1"></div> -->
                     <div id="icoPrev_17" class="icoPrev persona_mov1"></div>
                     <div id="icoPrev_18" class="icoPrev persona_mov1"></div>
                     <div id="icoPrev_19" class="icoPrev"></div>
@@ -143,7 +144,7 @@
                     <div id="icoPrev_33" class="icoPrev"></div>
                     <div id="icoPrev_34" class="icoPrev"></div>
                     <div id="icoPrev_35" class="icoPrev"></div>
-                    <div id="icoPrev_36" class="icoPrev"></div>
+                    <!-- <div id="icoPrev_36" class="icoPrev"></div> -->
                     <div id="icoPrev_37" class="icoPrev"></div>
                     <div id="icoPrev_38" class="icoPrev"></div>
                     <!-- <div id="icoPrev_39" class="icoPrev"></div>
@@ -200,7 +201,8 @@
                 </div>
                 <div id="botBar">
                     <div id="i4RazonSocial" class="i4txt"><?php echo $empresa; ?></div>
-                    <div id="i4Puntaje" class="i4txt"><?php echo $user_stats['puntaje']; ?></div>
+                    <div id="i4Puntaje" class="i4txt"><?php echo $resultado; ?></div>
+                    <!-- <div id="i4Puntaje" class="i4txt"><?php //echo $user_stats['puntaje']; ?></div> -->
                     <!-- <div id="i4Estrellas" class="i4txt"><?php //echo ¥$user_stats['estrellas']; ?></div> -->                    
                     <div id="btn_curs"></div>
                 </div>
@@ -212,13 +214,15 @@
                 <div class="content_curs">
                     <h1 class="tit_curs">lista de cursos</h1>
                     <ul id="curso_activ">
-                        <li id="CA_1" class="cur_esp">Nivel 1</li>
-                        <li id="CA_2" class="cur_esp">Nivel 2</li>
-                        <li id="CA_3" class="cur_esp">Nivel 3</li>
-                        <li id="CA_4" class="cur_esp">Nivel 4</li>
-                        <li id="CA_5" class="cur_esp">Drivers</li>
-                        <li id="CA_6" class="cur_esp">Evacuación en caso de Emergencias</li>
-                        <li id="CA_7" class="cur_esp">Pausas Activas</li>
+                        <li id="CA_1" class="cur_esp">Nivel 1 <span><?php echo $curso1 . ' Puntos'; ?></span></li>
+                        <li id="CA_2" class="cur_esp">Nivel 2 <span><?php echo $curso2 . ' Puntos'; ?></span></li>
+                        <li id="CA_3" class="cur_esp">Nivel 3 <span><?php echo $curso3 . ' Puntos'; ?></span></li>
+                        <li id="CA_4" class="cur_esp">Nivel 4 <span><?php echo $curso4 . ' Puntos'; ?></span></li>
+                        <li id="CA_5" class="cur_esp">Drivers <span><?php echo $curso8 . ' Puntos'; ?></span></li>
+                        <li id="CA_6" class="cur_esp">Evacuación en caso de Emergencias <span><?php echo $curso9 . ' Puntos'; ?></span></li>
+                        <li id="CA_7" class="cur_esp">Pausas Activas <span><?php echo $curso10 . ' Puntos'; ?></span></li>
+                        <li id="CA_8" class="cur_esp">Uso de extintores <span><?php echo $curso11 . ' Puntos'; ?></span></li>
+                        <li id="CA_9" class="cur_esp">Emergencias <span><?php echo $curso12 . ' Puntos'; ?></span></li>
                     </ul>
                     <div class="btn_Salir"></div>
                 </div>
@@ -291,7 +295,10 @@
                 </div>
                 <div id="popAct_2" class="caratula"> <!-- drivers -->
                     <div class="drivers"></div>
-                    <?php echo anchor('drivers', ' ', array('id' => 'preg_2_1','class' => 'CV_btn1 disable'));
+                    <?php 
+                    if ($cur_activ8 == 1){ 
+                        echo anchor('drivers', ' ', array('id' => 'preg_2_1','class' => 'CV_btn1'));
+                    }
                     echo anchor('mapa/certificado_drivers', '&nbsp;', array('id' => 'i4Certificado', 'class' => $certificado_drivers, 'target' => '_blank', 'style' => 'left: 552px;
                     top: 402px;'));
                      ?>
@@ -319,7 +326,6 @@
                             echo anchor('nivel' . $i, '&nbsp;', array('id' => 'i4Nivel_' . $i, 'class' => $clases));
                         }
                     ?>
-                    
 
                     <div id="preg_3_0" class="CV_btn2 CV_btn_3 pregOpc"> </div>
                 </div>
@@ -327,27 +333,43 @@
                     <div class="pausas"><p class="textCent"></p></div>
                     <div id="CartelWarng"><p class="textCent"></p></div>
                     <?php 
-                    // echo anchor('Pausasactivas2', ' ', array('id' => 'opcion2','class' => 'disabled')); 
-                    echo anchor('Pausasactivas', ' ', array('id' => 'preg_7_1','class' => 'CV_btn1 disable')); 
+                    if ($cur_activ10 == 1){ 
+                        echo anchor('Pausasactivas', ' ', array('id' => 'preg_7_1','class' => 'CV_btn1')); 
+                    }
                     echo anchor('mapa/certificado_pausas', '&nbsp;', array('id' => 'i4Certificado', 'class' => $certificado_pausas, 'target' => '_blank', 'style' => 'left: 552px;
                     top: 402px;'));
                     ?>
                     <div id="preg_7_0" class="CV_btn2 pregOpc"></div>
                 </div>
-                <div id="popAct_8" class="caratula"> <!-- en construccion 1 -->
-                    <div class="pop_restring_constr"><p class="textCent"></p></div>
-                    <div id="preg_8_0" class="CV_btn-2 pregOpc"></div>
+                <div id="popAct_8" class="caratula"> <!-- extintores -->
+                    <div class="pop_extintor"><p class="textCent"></p></div>
+                    <div id="preg_8_0" class="CV_btn2 pregOpc"></div>
+                    <?php 
+                    if ($cur_activ11 == 1){ 
+                        echo anchor('Nivel11', ' ', array('id' => 'preg_7_1','class' => 'CV_btn1')); 
+                    }
+                    echo anchor('mapa/certificado_extintores', '&nbsp;', array('id' => 'i4Certificado', 'class' => $certificado_extintores, 'target' => '_blank', 'style' => 'left: 564px;
+                    top: 418px;'));
+                    ?>
                 </div>
-                <div id="popAct_9" class="caratula"> <!-- en construccion 2 -->
-                    <div class="pop_restring_constr"><p class="textCent"></p></div>
-                    <div id="preg_9_0" class="CV_btn-2 pregOpc"></div>
+                <div id="popAct_9" class="caratula"> <!-- Emergencias -->
+                    <div class="pop_emergencia"><p class="textCent"></p></div>
+                    <div id="preg_9_0" class="CV_btn2 pregOpc"></div>
+                    <?php 
+                    if ($cur_activ12 == 1){ 
+                        echo anchor('Nivel12', ' ', array('id' => 'preg_7_1','class' => 'CV_btn1')); 
+                    }
+                    echo anchor('mapa/certificado_emergencias', '&nbsp;', array('id' => 'i4Certificado', 'class' => $certificado_emergencias, 'target' => '_blank', 'style' => 'left: 552px;
+                    top: 402px;'));
+                    ?>
                 </div>
                 <div id="popAct_10" class="caratula"> <!-- evacuando -->
                     <div class="auxilio"><p class="textCent"> </p></div>
                     <?php 
-                        echo anchor('Prevencion', ' ', array('id' => 'preg_10_1','class' => 'CV_btn1 disable')); 
-                        echo anchor('mapa/certificado_emergencias', '&nbsp;', array('id' => 'i4Certificado', 'class' => $certificado_emergencias, 'target' => '_blank', 'style' => 'left: 552px;
-                        top: 424px;'));?>                    
+                    if ($cur_activ9 == 1){ 
+                        echo anchor('Prevencion', ' ', array('id' => 'preg_10_1','class' => 'CV_btn1')); 
+                    }
+                    echo anchor('mapa/certificado_evacuando', '&nbsp;', array('id' => 'i4Certificado', 'class' => $certificado_evacuando, 'target' => '_blank', 'style' => 'left: 552px; top: 424px;'));?>                    
                     <div id="preg_10_0" class="CV_btn2 pregOpc"> </div>
                 </div>
                 <div id="popAct_11" class="caratula"> <!-- museo -->

@@ -1,0 +1,16 @@
+/* -----------------------------------------------------
+   created with https://www.codeandweb.com/texturepacker 
+   -----------------------------------------------------
+   $TexturePacker:SmartUpdate:5d3a6fa40669f0dcee0b53b7d78742bc:0d92668fdad9f9228ec29d61558bf368:314103a45b1950e89bcbcdbeb5160ce3$
+   -----------------------------------------------------
+
+   usage: <span class="{-spritename-} sprite"></span>
+
+   replace {-spritename-} with the sprite you like to use
+
+*/
+
+.sprite {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(mocrohonda.png);}
+
+.5a {width:225px; height:232px; background-position: -1px -1px}
+.5b {width:225px; height:232px; background-position: -228px -1px}

@@ -11,7 +11,7 @@ var $count_btn = 0;
 /*******************************************************************************/
 function showInicio() {
     $.post(bdir + 'ajax/init_curso').done(function (data) {
-            console.log("Init nivel: " + data);
+            //console.log("Init nivel: " + data);
         }); 
     redimensionarJuego();
     $('.instrucciones').stop().hide();
@@ -98,7 +98,7 @@ $(document).ready(function (e) {
         playSound(window.playBTN);
         sID = parseInt($(this).attr('id').split('_')[1], 10);
         $('.instrucciones').stop().delay(300).fadeOut(100);
-        console.log(sID);
+        //console.log(sID);
         if(sID == 2){
             $('#sliderPage_2_1').stop().fadeIn(500);
         }else if(sID == 3){
@@ -162,7 +162,6 @@ $(document).ready(function (e) {
         }
         sID +=1;
         if(sID==4){
-            console.log('muestra los botones');
             $('#warning').css('display','block');
             $('#btnJugar, #btnJugar2').css("display","block");
             $('#btnJugar, #btnJugar2').addClass('slider_scale');
@@ -186,7 +185,6 @@ $(document).ready(function (e) {
 
     }).on('translated.owl.carousel', function (e) {
         id_sl = e.item.index + 1;  
-        console.log(id_sl);
          if(id_sl == 3 || id_sl == 4){
             $('#s1txt_1').html('Mantener  posiciones neutrales en:');
             $('#s2txt_1').html('BRAZOS Y TRONCO');
@@ -203,7 +201,7 @@ $(document).ready(function (e) {
         }
 
         playTexto(window.window['s' + grup + sID + 'i' + id_sl]);
-        console.log(grup, sID);
+        //console.log(grup, sID);
         //$('#sliderPage_1').addClass('cvhangeimg');
         if (!completo && id_sl === e.item.count) {
             
@@ -401,10 +399,10 @@ function sl_2(){
               act_desc = true;
               //playTexto(window.txti2);
                playTexto(window['s2i'+$sIDL]);
-               console.log("s2i"+$sIDL);
+               //console.log("s2i"+$sIDL);
           }else{
               stopTexto();
-              console.log("stop audio");
+              //console.log("stop audio");
               act_desc = false;
           }  
         if ($(this).hasClass('detail')) {

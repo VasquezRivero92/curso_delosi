@@ -37,16 +37,16 @@
   height : 63px;
 }
 #powerUp_8{ 
-  left : 1232px;
-  top : 1795px;
-  width : 131px;
-  height : 82px;
+  left : 590px;
+  top : 1135px;
+  width : 135px;
+  height : 58px;
 }
 #powerUp_9{ 
-  left : 1667px;
-  top : 2109px;
-  width : 121px;
-  height : 41px;
+  left : 1659px;
+  top : 1907px;
+  width : 131px;
+  height : 82px;
 }
 #powerUp_10{ 
   left : 526px;
@@ -173,12 +173,12 @@
   z-index: 183;  
     background-image:url(../images/mapa/not1.svg); }
 #icoPel_9{ 
-  left : 1672px;
-  top : 2046px;
-  width : 104px;
-  height : 101px; 
+  left : 1352px;
+  top : 1820px;
+  width : 722px;
+  height : 448px; 
   z-index: 220;   
-    background-image:url(../images/mapa/not2.svg); }
+    background-image:url(../images/mapa/emergencia.svg); }
 #icoPel_10{ 
 
   left : 60px;
@@ -231,6 +231,14 @@
 /* #icoPel_11{ 
     background-image:url(../images/mapa/peligro11.png); } */
 
+#icoPel_16{ 
+  left : 490px;
+  top : 625px;
+  width : 402px;
+  height : 504px;
+  z-index: 90;
+  background-image:url(../images/mapa/extintores.svg); }
+
 .icoPrev{
     position:absolute;
     background-color: rgba(0,255,0,0);
@@ -275,24 +283,26 @@
   width : 27px;
   height : 65px;
   background-image:url(../images/people/pep1.svg); }
-/* #icoPrev_5{ 
-  left : 918px;
-  top : 973px;
-  width : 29px;
-  height : 62px;
-  background-image:url(../images/people/pep2.svg); } */
+#icoPrev_5{ 
+  left : 1808px;
+  top : 1685px;
+  width : 108px;
+  height : 101px;
+  z-index: 170;
+  background:url(../images/mapa/emerg.svg) no-repeat 50% 50%;
+} 
 #icoPrev_6{ 
   left : 1331px;
   top : 1029px;
   width : 41px;
   height : 82px;
   background-image:url(../images/people/pep3.svg); }
-#icoPrev_7{ 
+/* #icoPrev_7{ 
   left : 1783px;
   top : 2062px;
   width : 29px;
   height : 62px;
-  background-image:url(../images/people/pep4.svg); }
+  background-image:url(../images/people/pep4.svg); } */
 #icoPrev_8{ 
   left : 2644px;
   top : 1015px;
@@ -348,13 +358,13 @@
   height : 57px;
   z-index: 200;
   background-image:url(../images/people/pep12.svg); }
-#icoPrev_16{ 
+/* #icoPrev_16{ 
   left : 1367px;
   top : 2018px;
   width : 31px;
   height : 66px;
   z-index: 200;
-  background-image:url(../images/people/pep13.svg); }
+  background-image:url(../images/people/pep13.svg); } */
 #icoPrev_17{ 
   left : 2600px;
   top : 2142px;
@@ -409,15 +419,14 @@
 .touchIsOn #icoPrev_23{  background:url() no-repeat 50% 50%; }
 
 #icoPrev_24{ 
-  left : 1497px;
-  top : 2047px;
-  width : 43px;
-  height : 40px;
-  z-index: 134;
-  background:url(../images/gif/dog2.gif) no-repeat 50% 50%;
+  left : 897px;
+  top : 1351px;
+  width : 108px;
+  height : 101px;
+  z-index: 114;
+  background:url(../images/mapa/extintor.svg) no-repeat 50% 50%;
   background-size: contain;
 }
-.touchIsOn #icoPrev_24{  background:url() no-repeat 50% 50%; }
 
 #icoPrev_25{ 
   left : 2409px;
@@ -683,17 +692,8 @@
 }
 .touchIsOn #icoPrev_49{  background:url() no-repeat 50% 50%; }
 
-/* #icoPrev_50{ 
-  left : 3088px;
-  top : 1531px;
-  width : 69px;
-  height : 71px;
-  z-index: 200;
-  opacity: 0.4;
-  background:url(../images/gif/humo.gif) no-repeat 50% 50%;
-  background-size: contain;
-} 
-#icoPrev_51{ 
+
+/* #icoPrev_51{ 
   left : 2588px;
   top : 1881px;
   width : 164px;
@@ -922,12 +922,12 @@
 #curso_activ{
   position: absolute;
   top: 100px;
-  left: 100px;
+  left: 20px;
 }
 .cur_esp{
   background: url(../images/status_curso/checks.png) no-repeat;
   background-position-y: bottom;
-  width: 420px;
+  width: 460px;
   height: 17px;
   position: relative;
   text-indent: 26px;
@@ -938,6 +938,11 @@
   list-style: none;
   margin-bottom: 5px;
   cursor: pointer;
+}
+.cur_esp span{
+  position: absolute;
+  /* color: black; */
+  right: 0px;
 }
 
 .aprobado{
@@ -1299,6 +1304,13 @@
     background-position: 0px -76px;
     pointer-events: none;
 }
+
+.disable{
+  pointer-events: none;
+  -webkit-pointer-events: none;
+  -moz-pointer-events: none;
+}
+
 #i4Cuestionario{
     position: absolute;
     width: 190px; height: 77px;
@@ -1395,6 +1407,15 @@
     width : 169px;
     height : 51px;
     cursor: pointer;
+}
+.CV_btn4{
+  background : url(../images/popups/start.png);;
+  position : absolute ;
+left : 443px;
+top : 514px;
+  width : 169px;
+  height : 51px;
+  cursor: pointer;
 }
 
 #opcion2{
@@ -1560,11 +1581,11 @@
 
 /**********  PopUp9  ************/
 
-.pop_restring2{
-    background: url(../images/popups/restringido.svg) no-repeat;
+.pop_emergencia{
+    background: url(../images/popups/pop_emrgencias.png) no-repeat;
     position : absolute ;
-    left : 0px;
-    top : 0px;
+    left: 170px;
+    top: 16px;
     width : 1350px;
     height : 700px;
     font-size: 27px;
@@ -1572,6 +1593,19 @@
     text-align: center;
     text-decoration: none;
     font-family: 'CatalogoGruesa';
+}
+.pop_extintor{
+  background: url(../images/popups/pop_extintor.png) no-repeat;
+  position : absolute ;
+  left : 0px;
+  top : -5px;
+  width : 1350px;
+  height : 700px;
+  font-size: 27px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'CatalogoGruesa';
 }
 
 /**********  PopUp10  ************/

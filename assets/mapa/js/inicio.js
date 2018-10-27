@@ -36,8 +36,8 @@ var $pos_4 =  [ -17, -1131, 544, 1498];         // evacuando
 var $pos_5 =  [ -17, -1583, 644, 1938];         // quimicos
 var $pos_6 =  [ -1414, -1528, 2053, 1825];      // museo
 var $pos_7 =  [ -1997, -1573, 2649, 1884];      // pausas activas
-var $pos_8 =  [ -742, -1488, 1405, 1829];      // construccion1
-var $pos_9 =  [ -1055, -1585, 1714, 2034];      // construccion2
+var $pos_8 =  [ -16, -616 , 657, 1155];       // extintores
+var $pos_9 =  [ -1088, -1544, 1726, 1892];      // emergencias
 
 /*esta variable se obtendra de la base de datos.*/
 var DBValue = 1;
@@ -403,6 +403,8 @@ function pausarJuego() {
     $("#PauseGame").show();
 }
 function muestraPregunta() {
+    console.log($ActPwrUp);
+    
     var curso_value = $("#powerUp_" + $ActPwrUp).data('curso');
     var data = { mapa: curso_value };
     $.post(bdir + 'ajax/set_mapa', data).done(function (data) { 

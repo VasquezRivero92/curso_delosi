@@ -1,0 +1,16 @@
+/* -----------------------------------------------------
+   created with https://www.codeandweb.com/texturepacker 
+   -----------------------------------------------------
+   $TexturePacker:SmartUpdate:fa333dfd495b1753dc98fb9f4f513478:c0ff45b72f8c6c2c9a3bba2a897e7d2d:0e58838cc2b9dbe1a7ab3084ee446038$
+   -----------------------------------------------------
+
+   usage: <span class="{-spritename-} sprite"></span>
+
+   replace {-spritename-} with the sprite you like to use
+
+*/
+
+.sprite {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(cocina.png);}
+
+.4a {width:266px; height:345px; background-position: -1px -1px}
+.4b {width:266px; height:345px; background-position: -269px -1px}

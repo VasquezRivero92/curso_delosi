@@ -1,0 +1,257 @@
+@charset "utf-8";
+/*********************************  Power Ups  *********************************/
+.powerUp{}
+.powerUp1{
+    position:absolute; z-index:1; 
+    width:70px; height:70px;
+    background-color: rgba(0,0,0,0);
+    opacity:1;
+    transition:opacity 500ms linear;
+    font-size: 0px;
+}
+.powerUp1.hit{ opacity:0; }
+#powerUp_1{ 
+    left : 1121px;
+    top : 444px;
+    width : 50px;
+    height : 50px;
+}
+#powerUp_2{ /*microhondas*/
+    left : 756px;
+    top : 668px;
+    width : 113px;
+    height : 101px;
+}
+.owl-oficina #powerUp_2{ /*laptop*/
+    left : 1417px;
+    top : 638px;
+    width : 72px;
+    height : 55px;
+}
+
+#powerUp_3{ 
+    left : 2122px;
+    top : 156px;
+    width : 49px;
+    height : 46px;
+}
+#powerUp_4{ 
+    left : 1708px;
+    top : 157px;
+    width : 102px;
+    height : 107px;
+}
+#powerUp_5{ 
+    left : 2360px;
+    top : 141px;
+    width : 102px;
+    height : 107px;
+}
+/*******************************************************************************/
+
+.icoPel{
+    position:absolute;
+    background-color: rgba(255,0,0,0);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+#icoPel_1{ 
+    width:222px; height:316px;   left : 1040px;
+    top : 278px; background-image:url(../images/fallas/A_5.png); 
+    background-position: -1px -1px;
+    -webkit-animation: basura .3s steps(2,end) infinite;
+    animation: basura .3s steps(2,end) infinite;
+}
+@-webkit-keyframes basura { 
+    from { background-position: -1px -1px; } to { background-position: -448px -1px }
+}
+@keyframes basura {
+    from { background-position: -1px -1px; } to { background-position: -448px -1px }
+}
+
+#icoPel_2{ 
+    width:225px; height:232px;   left : 717px;
+    top : 555px; background-image:url(../images/fallas/A_2b.png); 
+    background-position: -1px -1px;
+    -webkit-animation: microhondas .3s steps(2,end) infinite;
+    animation: microhondas .3s steps(2,end) infinite;
+}
+@-webkit-keyframes microhondas { 
+    from { background-position: -1px -1px; } to { background-position: -454px -1px }
+}
+@keyframes microhondas {
+    from { background-position: -1px -1px; } to { background-position: -454px -1px }
+}
+.owl-oficina #icoPel_2{ 
+    width:186px; height:215px;  left : 1354px;
+    top : 540px; background-image:url(../images/fallas/A_4.png) !important; 
+    background-position: -1px -1px;
+    -webkit-animation: laptop .3s steps(2,end) infinite;
+    animation: laptop .3s steps(2,end) infinite;
+}
+@-webkit-keyframes laptop { 
+    from { background-position: -1px -1px; } to { background-position: -376px -1px }
+}
+@keyframes laptop {
+    from { background-position: -1px -1px; } to { background-position: -376px -1px }
+}
+#icoPel_3{ 
+    width:171px; height:128px;  left : 2032px;
+    top : 60px; background-image:url(../images/fallas/A_1.png); 
+    background-position: -1px -1px;
+    -webkit-animation: corriente .3s steps(2,end) infinite;
+    animation: corriente .3s steps(2,end) infinite;
+}
+@-webkit-keyframes corriente { 
+    from { background-position: -1px -1px; } to { background-position: -346px -1px }
+}
+@keyframes corriente {
+    from { background-position: -1px -1px; } to { background-position: -346px -1px }
+}
+#icoPel_4{ 
+    width:266px; height:345px;  left : 1633px;
+    top : -69px; background-image:url(../images/fallas/A_3.png); 
+    background-position: -1px -1px;
+    -webkit-animation: cocina .3s steps(2,end) infinite;
+    animation: cocina .3s steps(2,end) infinite;
+}
+@-webkit-keyframes cocina { 
+    from { background-position: -1px -1px; } to { background-position: -536px -1px }
+}
+@keyframes cocina {
+    from { background-position: -1px -1px; } to { background-position: -536px -1px }
+}
+#icoPel_5{ 
+    width:311px; height:198px;  left : 2271px;
+    top : -70px; background-image:url(../images/fallas/A_2.png); 
+    background-position: -1px -1px;
+    -webkit-animation: extract .3s steps(2,end) infinite;
+    animation: extract .3s steps(2,end) infinite;
+}
+@-webkit-keyframes extract { 
+    from { background-position: -1px -1px; } to { background-position: -626px -1px }
+}
+@keyframes extract {
+    from { background-position: -1px -1px; } to { background-position: -626px -1px }
+}
+
+.icoPrev{
+    position:absolute;
+    background-color: rgba(0,255,0,0);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+#icoPrev_1{ 
+    width:222px; height:316px;   left : 1040px;
+    top : 278px; background-image:url(../images/correct/basurero.png);
+    background-position: -1px -1px; 
+}
+#icoPrev_2{ 
+    width:225px; height:232px; left : 717px;
+    top : 555px; background-image:url(../images/correct/mocrohonda.png);
+    background-position: -1px -1px; 
+}
+.owl-oficina #icoPrev_2{ 
+    width:186px; height:215px; left : 1354px;
+    top : 540px; background-image:url(../images/correct/laptop.png) !important;
+    background-position: -1px -1px; 
+}
+#icoPrev_3{ 
+    width:171px; height:128px; left : 2032px;
+    top : 60px; background-image:url(../images/correct/corriente.png); 
+    background-position: -1px -1px;
+}
+#icoPrev_4{ 
+    width:266px; height:345px;  left : 1633px;
+    top : -69px; background-image:url(../images/correct/cocina.png); 
+    background-position: -1px -1px;
+}
+#icoPrev_5{ 
+    width:311px; height:198px;  left : 2271px;
+    top : -39px; background-image:url(../images/correct/extractor.png);
+    background-position: -1px -1px; 
+}
+
+
+/**********************************  Paredes  **********************************/
+.ParedMask{ position:absolute; left:0px; top:0px; width:50px; height:50px; display:none; }
+.fondoOPC{ position:absolute; top:0px; left:0px; z-index:1; display:none; }
+/***********************************  Player  ***********************************/
+#Player_1{
+    position:absolute;
+    width: 67px;
+    height: 36px;
+    z-index:2;
+    background-color: rgba(0,0,0,0);
+}
+#Player_1 .sprite{
+    position:absolute;
+    width:200px; height:200px;
+    left:-60px; bottom:-4px;
+    background-position:0px 0px;
+    background-color: rgba(250,0,0,0);
+}
+.playerP.owl-planta .sprite{ background-image: url(../images/plt_sprite_F.png); }
+.playerP.owl-oficina .sprite{ background-image: url(../images/of_sprite_F.png); }
+.playerP.owl-restaurante .sprite{ background-image: url(../images/rest_sprite_F.png); }
+.playerP.owl-driver .sprite{ background-image: url(../images/rest_sprite_F.png); }
+
+.playerM.owl-planta .sprite{ background-image: url(../images/plt_sprite_M.png); }
+.playerM.owl-oficina .sprite{ background-image: url(../images/of_sprite_M.png); }
+.playerM.owl-restaurante .sprite{ background-image: url(../images/rest_sprite_M.png); }
+.playerM.owl-driver .sprite{ background-image: url(../images/rest_sprite_M.png); }
+
+#Player_1 .ptje{
+    position:absolute; display:none;
+    width:99px; height:91px;
+    left: -70px;
+    top: -205px;
+    background: rgba(250,0,0,0) url(../images/alert.png) no-repeat 50% 50%;
+    cursor: pointer;
+}
+/*************************  Objetos por cada escenario  *************************/
+.conteo{
+    position:absolute;
+    background-repeat:no-repeat;
+    background-position:center center;
+    display: none;
+}
+#conteo1{
+    position:absolute; 
+    width:271px; height:181px;
+    left:759px; top:244px;
+    background-image:url(../images/conteo1.png);
+}
+#conteo2{
+    position:absolute; 
+    width:276px; height:181px;
+    left:536px; top:244px;
+    background-image:url(../images/conteo2.png);
+}
+#conteo3{
+    position:absolute; 
+    width:280px; height:181px;
+    left:315px; top:244px;
+    background-image:url(../images/conteo3.png);
+}
+#gameArea1{
+    position:absolute;
+    width:2548px; height:884px;
+    left:0px; top:0px;
+    background:url(../images/fondo1.jpg) no-repeat;
+    overflow:hidden;
+}
+/*******************************************************************************/
+
+#pop_up{
+    width: 1350px;
+    height: 700px;
+    background: url(../images/mesatest.png);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+#canvasextintor{
+    width: 100%;
+    height: 100%;
+}

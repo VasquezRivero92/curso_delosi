@@ -1,0 +1,16 @@
+/* -----------------------------------------------------
+   created with https://www.codeandweb.com/texturepacker 
+   -----------------------------------------------------
+   $TexturePacker:SmartUpdate:8d67365781593cac9c4c7d7b5ce6584e:ba22f1930d41ae2f8068008dc07e1f49:7c25e99cfc199a8383f59ce1513efdea$
+   -----------------------------------------------------
+
+   usage: <span class="{-spritename-} sprite"></span>
+
+   replace {-spritename-} with the sprite you like to use
+
+*/
+
+.sprite {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(corriente.png);}
+
+.1a {width:242px; height:165px; background-position: -1px -1px}
+.1b {width:242px; height:165px; background-position: -245px -1px}

@@ -1,0 +1,16 @@
+/* -----------------------------------------------------
+   created with https://www.codeandweb.com/texturepacker 
+   -----------------------------------------------------
+   $TexturePacker:SmartUpdate:51e85810228bf630b24bf59b9760f586:233c9262f568eb23ed269ba97f4535b7:f81f50f7f044d0b0c9cb67bfd61b2f29$
+   -----------------------------------------------------
+
+   usage: <span class="{-spritename-} sprite"></span>
+
+   replace {-spritename-} with the sprite you like to use
+
+*/
+
+.sprite {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(basurero.png);}
+
+.6a {width:222px; height:316px; background-position: -1px -1px}
+.6b {width:222px; height:316px; background-position: -225px -1px}

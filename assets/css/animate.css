@@ -1693,3 +1693,98 @@
   -o-pointer-events: none;
   -ms-pointer-events: none;
 }
+
+.animPeople{
+  animation: personAnim ease 0.6s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 100%;
+  -webkit-animation: personAnim ease 0.6s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-transform-origin: 50% 100%;
+  -moz-animation: personAnim ease 0.6s;
+  -moz-animation-iteration-count: infinite;
+  -moz-transform-origin: 50% 100%;
+  -o-animation: personAnim ease 0.6s;
+  -o-animation-iteration-count: infinite;
+  -o-transform-origin: 50% 100%;
+  -ms-animation: personAnim ease 0.6s;
+  -ms-animation-iteration-count: infinite;
+  -ms-transform-origin: 50% 100%;
+}
+.animPeopleSano{
+  animation: personAnim ease 2s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 100%;
+  -webkit-animation: personAnim ease 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-transform-origin: 50% 100%;
+  -moz-animation: personAnim ease 2s;
+  -moz-animation-iteration-count: infinite;
+  -moz-transform-origin: 50% 100%;
+  -o-animation: personAnim ease 2s;
+  -o-animation-iteration-count: infinite;
+  -o-transform-origin: 50% 100%;
+  -ms-animation: personAnim ease 2s;
+  -ms-animation-iteration-count: infinite;
+  -ms-transform-origin: 50% 100%;
+}
+
+@keyframes personAnim{
+  0% {
+    transform:  scaleY(1.00) ;
+  }
+  50% {
+    transform:  scaleY(1.02) ;
+  }
+  100% {
+    transform:  scaleY(1.00) ;
+  }
+}
+
+@-moz-keyframes personAnim{
+  0% {
+    -moz-transform:  scaleY(1.00) ;
+  }
+  50% {
+    -moz-transform:  scaleY(1.02) ;
+  }
+  100% {
+    -moz-transform:  scaleY(1.00) ;
+  }
+}
+
+@-webkit-keyframes personAnim {
+  0% {
+    -webkit-transform:  scaleY(1.00) ;
+  }
+  50% {
+    -webkit-transform:  scaleY(1.02) ;
+  }
+  100% {
+    -webkit-transform:  scaleY(1.00) ;
+  }
+}
+
+@-o-keyframes personAnim {
+  0% {
+    -o-transform:  scaleY(1.00) ;
+  }
+  50% {
+    -o-transform:  scaleY(1.02) ;
+  }
+  100% {
+    -o-transform:  scaleY(1.00) ;
+  }
+}
+
+@-ms-keyframes personAnim {
+  0% {
+    -ms-transform:  scaleY(1.00) ;
+  }
+  50% {
+    -ms-transform:  scaleY(1.02) ;
+  }
+  100% {
+    -ms-transform:  scaleY(1.00) ;
+  }
+}

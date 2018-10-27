@@ -139,6 +139,7 @@ $J[1].hitPowerUps = function () {
     $PowerUps.forEach(function (itm, i) {
         if( itm.enPantalla() ){
             if( PlayerMov.hittest(itm) ){
+                //console.log($ActPwrUp);               
                 hitPU = true;
                 $ActPwrUp = parseInt(itm.id.split("_")[1], 10);
                 if($ActPwrUp == 17){
