@@ -298,6 +298,8 @@
                     <?php 
                     if ($cur_activ8 == 1){ 
                         echo anchor('drivers', ' ', array('id' => 'preg_2_1','class' => 'CV_btn1'));
+                    }else{
+                        echo anchor('drivers', ' ', array('id' => 'preg_2_1','class' => 'CV_btn1 disable')); 
                     }
                     echo anchor('mapa/certificado_drivers', '&nbsp;', array('id' => 'i4Certificado', 'class' => $certificado_drivers, 'target' => '_blank', 'style' => 'left: 552px;
                     top: 402px;'));
@@ -335,6 +337,8 @@
                     <?php 
                     if ($cur_activ10 == 1){ 
                         echo anchor('Pausasactivas', ' ', array('id' => 'preg_7_1','class' => 'CV_btn1')); 
+                    }else{
+                        echo anchor('Pausasactivas', ' ', array('id' => 'preg_7_1','class' => 'CV_btn1 disable')); 
                     }
                     echo anchor('mapa/certificado_pausas', '&nbsp;', array('id' => 'i4Certificado', 'class' => $certificado_pausas, 'target' => '_blank', 'style' => 'left: 552px;
                     top: 402px;'));
@@ -347,6 +351,8 @@
                     <?php 
                     if ($cur_activ11 == 1){ 
                         echo anchor('Nivel11', ' ', array('id' => 'preg_7_1','class' => 'CV_btn1')); 
+                    }else{
+                        echo anchor('Nivel11', ' ', array('id' => 'preg_7_1','class' => 'CV_btn1 disable')); 
                     }
                     echo anchor('mapa/certificado_extintores', '&nbsp;', array('id' => 'i4Certificado', 'class' => $certificado_extintores, 'target' => '_blank', 'style' => 'left: 564px;
                     top: 418px;'));
@@ -358,6 +364,8 @@
                     <?php 
                     if ($cur_activ12 == 1){ 
                         echo anchor('Nivel12', ' ', array('id' => 'preg_7_1','class' => 'CV_btn1')); 
+                    }else{
+                        echo anchor('Nivel12', ' ', array('id' => 'preg_7_1','class' => 'CV_btn1 disable')); 
                     }
                     echo anchor('mapa/certificado_emergencias', '&nbsp;', array('id' => 'i4Certificado', 'class' => $certificado_emergencias, 'target' => '_blank', 'style' => 'left: 552px;
                     top: 402px;'));
@@ -368,6 +376,8 @@
                     <?php 
                     if ($cur_activ9 == 1){ 
                         echo anchor('Prevencion', ' ', array('id' => 'preg_10_1','class' => 'CV_btn1')); 
+                    }else{
+                        echo anchor('Prevencion', ' ', array('id' => 'preg_10_1','class' => 'CV_btn1 disable')); 
                     }
                     echo anchor('mapa/certificado_evacuando', '&nbsp;', array('id' => 'i4Certificado', 'class' => $certificado_evacuando, 'target' => '_blank', 'style' => 'left: 552px; top: 424px;'));?>                    
                     <div id="preg_10_0" class="CV_btn2 pregOpc"> </div>

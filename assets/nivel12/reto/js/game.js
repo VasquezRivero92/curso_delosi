@@ -42,6 +42,8 @@ var config = {
 //var stage = 0; ya esta definido en  js inicio.js
 var extintorState = 0;
 var $GR = $grup;
+var objects;
+
 console.log($GR);
 
 function preload() {
@@ -85,19 +87,19 @@ function create() {
     var selectedGameObject;
 
     var stages = [{
-        respuestaPaso1: [0,1],
+        respuestaPaso1: ['a','b'],
         ilustracion: $GR+'_a1',
     },{
-        respuestaPaso1: [2,3],
+        respuestaPaso1: ['c','d'],
         ilustracion: $GR+'_a2',
     },{
-        respuestaPaso1: [4,5],
+        respuestaPaso1: ['g','h'],
         ilustracion: $GR+'_a3',
     },{
-        respuestaPaso1: [6,7],
+        respuestaPaso1: ['e','f'],
         ilustracion: $GR+'_a4',
     },{
-        respuestaPaso1: [8,9],
+        respuestaPaso1: ['i','j'],
         ilustracion: $GR+'_a5',
     }];
 
@@ -113,18 +115,104 @@ function create() {
         // ilusR.alpha = 0;
 
         count = 1;
-        a = scene.add.image(869, 181, 'auxilio', 'opc_1.png').setInteractive({ useHandCursor: true });
-        b = scene.add.image(1005, 181, 'auxilio', 'opc_2.png').setInteractive({ useHandCursor: true });
-        c = scene.add.image(712, 348, 'auxilio', 'opc_3.png').setInteractive({ useHandCursor: true });
-        d = scene.add.image(848, 348, 'auxilio', 'opc_4.png').setInteractive({ useHandCursor: true });
-        e = scene.add.image(1015, 348, 'auxilio', 'opc_5.png').setInteractive({ useHandCursor: true });
-        f = scene.add.image(1151, 348, 'auxilio', 'opc_6.png').setInteractive({ useHandCursor: true });
-        g = scene.add.image(712, 515, 'auxilio', 'opc_7.png').setInteractive({ useHandCursor: true });
-        h = scene.add.image(848, 515, 'auxilio', 'opc_8.png').setInteractive({ useHandCursor: true });
-        i = scene.add.image(1016, 515, 'auxilio', 'opc_9.png').setInteractive({ useHandCursor: true });
-        j = scene.add.image(1152, 515, 'auxilio', 'opc_10.png').setInteractive({ useHandCursor: true });
+        switch (stage) {
+            case 0:
+              crearObjetos(true,true,false,false,true,true,false,false,true,true);
+            break;
+            case 1:
+              crearObjetos(true,false,true,true,true,true,true,false,false,false);
+            break;
+            case 2:
+              crearObjetos(true,true,false,true,true,false,true,true,false,false);
+            break;
+            case 3:
+              crearObjetos(false,false,true,true,true,true,false,false,true,true);
+            break;
+            case 4:
+              crearObjetos(true,true,false,false,true,true,false,false,true,true);
+            break;
+        }
+        function crearObjetos(a,b,c,d,e,f,g,h,i,j){
+            objects = [];
+            var positiones = [{x:762, y:255},{x:942, y:255},{x:1121, y:255},{x:762, y:456},{x:942, y:456},{x:1121, y:456}];
 
-        var objects = [a, b, c, d, e, f, g, h, i, j];
+            if(a){ 
+                var index = Math.floor(Math.random() * positiones.length) + 0;  
+                a = scene.add.image(positiones[index].x, positiones[index].y, 'auxilio', 'opc_1.png').setInteractive({ useHandCursor: true }); 
+                positiones.splice(index,1);
+                a.setDataEnabled();
+                a.data.set('nombre','a');
+                objects.push(a);
+            }
+            if(b){ 
+                var index = Math.floor(Math.random() * positiones.length) + 0;  
+                b = scene.add.image(positiones[index].x, positiones[index].y, 'auxilio', 'opc_2.png').setInteractive({ useHandCursor: true }); 
+                positiones.splice(index,1);
+                b.setDataEnabled();
+                b.data.set('nombre','b');
+                objects.push(b);}
+            if(c){ 
+                var index = Math.floor(Math.random() * positiones.length) + 0;  
+                c =  scene.add.image(positiones[index].x, positiones[index].y, 'auxilio', 'opc_3.png').setInteractive({ useHandCursor: true }); 
+                positiones.splice(index,1);
+                c.setDataEnabled();
+                c.data.set('nombre','c');
+                objects.push(c);}
+            if(d){ 
+                var index = Math.floor(Math.random() * positiones.length) + 0;  
+                d = scene.add.image(positiones[index].x, positiones[index].y,'auxilio', 'opc_4.png').setInteractive({ useHandCursor: true }); 
+                positiones.splice(index,1);
+                d.setDataEnabled();
+                d.data.set('nombre','d');
+                objects.push(d);}
+            if(e){ 
+                var index = Math.floor(Math.random() * positiones.length) + 0;  
+                e = scene.add.image(positiones[index].x, positiones[index].y, 'auxilio', 'opc_5.png').setInteractive({ useHandCursor: true }); 
+                positiones.splice(index,1);
+                e.setDataEnabled();                
+                e.data.set('nombre','e');                                
+                objects.push(e);
+            }
+            if(f){
+                var index = Math.floor(Math.random() * positiones.length) + 0;  
+                f = scene.add.image(positiones[index].x, positiones[index].y, 'auxilio', 'opc_6.png').setInteractive({ useHandCursor: true }); 
+                positiones.splice(index,1);
+                f.setDataEnabled();
+                f.data.set('nombre','f');                
+                objects.push(f);}       
+            if(g){
+                var index = Math.floor(Math.random() * positiones.length) + 0;  
+                g = scene.add.image(positiones[index].x, positiones[index].y, 'auxilio', 'opc_7.png').setInteractive({ useHandCursor: true }); 
+                positiones.splice(index,1);
+                g.setDataEnabled();
+                g.data.set('nombre','g');                
+                objects.push(g);
+            } 
+            if(h){
+                var index = Math.floor(Math.random() * positiones.length) + 0;  
+                h = scene.add.image(positiones[index].x, positiones[index].y, 'auxilio', 'opc_8.png').setInteractive({ useHandCursor: true }); 
+                positiones.splice(index,1);
+                h.setDataEnabled();
+                h.data.set('nombre','h');                
+                objects.push(h);
+            }
+            if(i){
+                var index = Math.floor(Math.random() * positiones.length) + 0;  
+                i = scene.add.image(positiones[index].x, positiones[index].y, 'auxilio', 'opc_9.png').setInteractive({ useHandCursor: true }); 
+                positiones.splice(index,1);
+                i.setDataEnabled();
+                i.data.set('nombre','i');                
+                objects.push(i);
+            }
+            if(j){
+                var index = Math.floor(Math.random() * positiones.length) + 0;  
+                j = scene.add.image(positiones[index].x, positiones[index].y, 'auxilio', 'opc_10.png').setInteractive({ useHandCursor: true }); 
+                positiones.splice(index,1);
+                j.setDataEnabled();
+                j.data.set('nombre','j');
+                objects.push(j);
+            } 
+        }
 
         objects.forEach(function (object) {
             object.depth = 10;
@@ -157,11 +245,12 @@ function create() {
                     ease: 'Power2'
                 });
             });
+            scene.input.setDraggable(object);
         });
 
         var timeline = scene.tweens.createTimeline();
         timeline.add({
-            targets: [a, b, c, d, e, f, g, h, i, j],
+            targets: objects,
             duration: 500,
             ease: 'Power2'
         });
@@ -176,18 +265,7 @@ function create() {
                 var graphics = scene.add.graphics();
             }
         });
-        
         timeline.play();
-        scene.input.setDraggable(a);
-        scene.input.setDraggable(b);
-        scene.input.setDraggable(c);
-        scene.input.setDraggable(d)
-        scene.input.setDraggable(e);
-        scene.input.setDraggable(f);
-        scene.input.setDraggable(g);
-        scene.input.setDraggable(h);
-        scene.input.setDraggable(i);
-        scene.input.setDraggable(j);
     }
 
     scene.input.on('dragstart', function (pointer, gameObject) {
@@ -203,120 +281,16 @@ function create() {
     scene.input.on('dragend', function (pointer, gameObject) {
         gameObject.depth = 1;
         if (extintorState == 0) {
-            //console.log(gameObject, rect);
             if (insideRect(gameObject, rect)) {
-                //console.log( respuestasGlobalP1.includes(0));
-                if (gameObject == a) {
-                    if (respuestasGlobalP1.includes(0)) {
-                        if (count < respuestasGlobalP1.length) {
-                            removeObj([a], 1);
-                            count++;
-                        } else { popUp('correcto', ilus); }
-                    } else {
-                        tweenBack(gameObject, originalX, originalY);
-                        popUp('incorrecto');
-                    }
+                if (respuestasGlobalP1.includes(gameObject.data.get('nombre'))) {
+                    if (count < respuestasGlobalP1.length) {
+                        removeObj(gameObject, 1);
+                        count++;
+                    } else { popUp('correcto', ilus); }
+                } else {
+                    tweenBack(gameObject, originalX, originalY);
+                    popUp('incorrecto');
                 }
-                if (gameObject == b) {
-                    if (respuestasGlobalP1.includes(1)) {
-                        if (count < respuestasGlobalP1.length) {
-                            removeObj([b], 1);
-                            count++;
-                        } else { popUp('correcto', ilus); }
-                    } else {
-                        tweenBack(gameObject, originalX, originalY);
-                        popUp('incorrecto');
-                    }
-                }
-                if (gameObject == c) {
-                    if (respuestasGlobalP1.includes(2)) {
-                        if (count < respuestasGlobalP1.length) {
-                            removeObj([c], 1);
-                            count++;
-                        } else { popUp('correcto', ilus); }
-                    } else {
-                        tweenBack(gameObject, originalX, originalY);
-                        popUp('incorrecto');
-                    }
-                }
-                if (gameObject == d) {
-                    if (respuestasGlobalP1.includes(3)) {
-                        if (count < respuestasGlobalP1.length) {
-                            removeObj([d], 1);
-                            count++;
-                        } else { popUp('correcto', ilus); }
-                    } else {
-                        tweenBack(gameObject, originalX, originalY);
-                        popUp('incorrecto');
-                    }
-                }
-                if (gameObject == e) {
-                    if (respuestasGlobalP1.includes(4)) {
-                        if (count < respuestasGlobalP1.length) {
-                            removeObj([e], 1);
-                            count++;
-                        } else { popUp('correcto', ilus); }
-                    } else {
-                        tweenBack(gameObject, originalX, originalY);
-                        popUp('incorrecto');
-                    }
-                }
-                if (gameObject == f) {
-                    if (respuestasGlobalP1.includes(5)) {
-                        if (count < respuestasGlobalP1.length) {
-                            removeObj([f], 1);
-                            count++;
-                        } else { popUp('correcto', ilus); }
-                    } else {
-                        tweenBack(gameObject, originalX, originalY);
-                        popUp('incorrecto');
-                    }
-                }
-                if (gameObject == g) {
-                    if (respuestasGlobalP1.includes(6)) {
-                        if (count < respuestasGlobalP1.length) {
-                            removeObj([g], 1);
-                            count++;
-                        } else { popUp('correcto', ilus); }
-                    } else {
-                        tweenBack(gameObject, originalX, originalY);
-                        popUp('incorrecto');
-                    }
-                }
-                if (gameObject == h) {
-                    if (respuestasGlobalP1.includes(7)) {
-                        if (count < respuestasGlobalP1.length) {
-                            removeObj([h], 1);
-                            count++;
-                        } else { popUp('correcto', ilus); }
-                    } else {
-                        tweenBack(gameObject, originalX, originalY);
-                        popUp('incorrecto');
-                    }
-                }
-                if (gameObject == i) {
-                    if (respuestasGlobalP1.includes(8)) {
-                        if (count < respuestasGlobalP1.length) {
-                            removeObj([i], 1);
-                            count++;
-                        } else { popUp('correcto', ilus); }
-                    } else {
-                        tweenBack(gameObject, originalX, originalY);
-                        popUp('incorrecto');
-                    }
-                }
-                if (gameObject == j) {
-                    if (respuestasGlobalP1.includes(9)) {
-                        if (count < respuestasGlobalP1.length) {
-                            removeObj([j], 1);
-                            count++;
-                        } else { popUp('correcto', ilus); }
-                    } else {
-                        tweenBack(gameObject, originalX, originalY);
-                        popUp('incorrecto');
-                    }
-                }
-
             } else {
                 tweenBack(gameObject, originalX, originalY);
             }
@@ -349,18 +323,18 @@ function create() {
             duration: 500,
             ease: 'Power2',
             onComplete: function () {
-                targets.forEach(function (element) {
-                    element.destroy();
-                });
+               
+                    targets.destroy();
+                
             }
         });
     }
     function popUp(image, ilustracion) {
-        var objects = [a, b, c, d, e, f, g, h, i, j];
+        // var objects = [a, b, c, d, e, f, g, h, i, j];
         objects.forEach(function (element) {
             element.disableInteractive();
         });
-        var objects = [a, b, c, d, e, f, g, h, i, j];
+        // var objects = [a, b, c, d, e, f, g, h, i, j];
         objects.forEach(function (element) {
             try { element.setInteractive();
             } catch (error) {  }
@@ -388,8 +362,8 @@ function create() {
                 removeObj([selectedGameObject], 1);
                 count++;
             } else {
-                var obj = [a, b, c, d, e, f, g, h, i, j];
-                removeObj(obj, 1);
+                // var obj = [a, b, c, d, e, f, g, h, i, j];
+                removeObj(objects, 1);
                 setTimeout(function(){
                     activarevent();
                 }, 500);
@@ -407,10 +381,6 @@ function create() {
         }
     }
 }
-
-
-
-
 
 function update(){
 
