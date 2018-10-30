@@ -61,19 +61,13 @@
             <div id="img_loader01"><div></div></div>
         </div>
         <div id="historia" class="resizeWindow">
-
             <div id="instrucciones_1" class="instrucciones"></div>
             <div id="instrucciones_2" class="instrucciones">
-                <!-- <div id="bg_2"></div> -->
                 <div id="welcome_2">
-                    <!-- <strong>¡Bienvenido a la Ciudad de la Prevención!</strong><br> -->
                     <p>¡Hola! soy Zoila Prevención, te doy la bienvenida a Prevencity, nuestra ciudad segura donde aprenderás como prevenir accidentes de trabajo, estaré acompañándote durante tu recorrido en la ciudad dándote algunos TIPS.<p>
-                    <p>En Prevencity encontrarás diversos lugares donde podrás ingresar, aprender y al finalizar cada curso pondrás a prueba todo lo aprendido pasando un Reto de prevención”.
-                        <!-- <br> No te pierdas ninguno de las misiones, ya que muchas de ellos podrán llevarte a formar parte del <strong>Programa de Certificación de Prevención de riesgos de acuerdo a tu puesto de trabajo.</strong> -->
-                    </p>
+                    <p>En Prevencity encontrarás diversos lugares donde podrás ingresar, aprender y al finalizar cada curso pondrás a prueba todo lo aprendido pasando un Reto de prevención”.</p>
                     <p>¡Bienvenido a la ciudad Prevencity!</p>
                 </div>
-                <!-- <div id="alcalde_2"></div> -->
                 <div id="btn_cont"></div>
             </div>
             <div id="instrucciones_3" class="instrucciones">
@@ -222,7 +216,7 @@
                         <li id="CA_6" class="cur_esp">Evacuación en caso de Emergencias <span><?php echo $curso9 . ' Puntos'; ?></span></li>
                         <li id="CA_7" class="cur_esp">Pausas Activas <span><?php echo $curso10 . ' Puntos'; ?></span></li>
                         <li id="CA_8" class="cur_esp">Uso de extintores <span><?php echo $curso11 . ' Puntos'; ?></span></li>
-                        <li id="CA_9" class="cur_esp">Emergencias <span><?php echo $curso12 . ' Puntos'; ?></span></li>
+                        <li id="CA_9" class="cur_esp">Primeros auxilios <span><?php echo $curso12 . ' Puntos'; ?></span></li>
                     </ul>
                     <div class="btn_Salir"></div>
                 </div>
