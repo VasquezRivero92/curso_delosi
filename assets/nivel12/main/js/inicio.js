@@ -187,7 +187,7 @@ $(document).ready(function (e) {
                     sli_2 = false;
                     sli_3 = false;
                 }
-                playTexto(window.window['s' + grup + sID + 'i' + 1]);
+                //playTexto(window.window['s' + grup + sID + 'i' + 1]);
                 $('#sliderPage_' + sID + ' .btnVolver').show();
                 $('#popActiv').show();
             break;
@@ -197,7 +197,7 @@ $(document).ready(function (e) {
                 sli_2 = true;
                 sli_3 = false;
             }
-                playTexto(window.window['s' + grup + sID + 'i' + 1]);
+                //playTexto(window.window['s' + grup + sID + 'i' + 1]);
             break;
             case 3:
             if (!$count_btn) {
@@ -206,7 +206,7 @@ $(document).ready(function (e) {
                 sli_3 = true;
                 $count_btn = true;
             }
-                playTexto(window.window['s' + grup + sID + 'i' + 1]);
+                //playTexto(window.window['s' + grup + sID + 'i' + 1]);
             break;
         }
         $('.s3btn').removeClass('checked');     
@@ -276,7 +276,7 @@ $(document).ready(function (e) {
     }).on('translated.owl.carousel', function (e) {
         id_sl = e.item.index + 1;             
         lAudio[sID] = 's' + grup + sID + 'i' + id_sl;
-        playTexto(window.window['s' + grup + sID + 'i' + id_sl]);
+        //playTexto(window.window['s' + grup + sID + 'i' + id_sl]);
         $('#content').removeClass('cont_msj_ok cont_msj_bad');
         //console.log(lAudio[sID]);
         if (!completo && id_sl === e.item.count) {
