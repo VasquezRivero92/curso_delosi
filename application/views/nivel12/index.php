@@ -79,6 +79,25 @@
                     <div class="owl-carousel">
                         <div class="item item2" data-id=1>
                             <div id="s1i1"></div>
+                            <div id="cur_1" class="cur_mc" data-vend=1 data-anim="zoomInRight"></div>
+                            <div id="cur_2" class="cur_mc" data-vend=2 data-anim="zoomInRight"></div>
+                            <div id="cur_3" class="cur_mc" data-vend=3 data-anim="zoomInRight"></div>
+                            <div id="cur_4" class="cur_mc" data-vend=4 data-anim="zoomInRight"></div>
+                            <div id="cur_5" class="cur_mc" data-vend=5 data-anim="zoomInRight"></div>
+                            <div id="cur_6" class="cur_mc" data-vend=6 data-anim="zoomInRight"></div>
+
+                            <div id="cur_7" class="cur_mc" data-vend=7 data-anim="zoomInLeft"></div>
+                            <div id="cur_8" class="cur_mc" data-vend=8 data-anim="zoomInLeft"></div>
+                            <div id="cur_9" class="cur_mc" data-vend=9 data-anim="zoomInLeft"></div>
+                            <div id="cur_10" class="cur_mc" data-vend=10 data-anim="zoomInLeft"></div>
+                            <div id="cur_11" class="cur_mc" data-vend=11 data-anim="zoomInLeft"></div>
+                            <div id="cur_12" class="cur_mc" data-vend=12 data-anim="zoomInLeft"></div>
+                            <!-- <div id="cur_13" class="cur_mc" data-vend=13 data-anim="zoomInLeft"></div>
+                            <div id="cur_14" class="cur_mc" data-vend=14 data-anim="zoomInLeft"></div>
+                            <div id="cur_15" class="cur_mc" data-vend=15 data-anim="zoomInLeft"></div> -->
+
+                            <div id="cur_btn" class="botiquin_mc" data-vend=15></div>
+
                         </div>
                     </div>
                 </div>
@@ -93,72 +112,72 @@
                     <div class="owl-carousel">
                         <div class="item" data-id=1>
                             <div id="s2i1"></div>
-                            <div id="btob_A_1" class="btn_prp" data-val=1 data-name="text_ok"></div>
-                            <div id="btob_A_2" class="btn_prp" data-val=2 data-name="text_ok"></div>
-                            <div id="btob_A_3" class="btn_prp" data-val=3 data-name="text_ok"></div>
-                            <div id="btob_A_4" class="btn_prp" data-val=4 data-name="text_ok"></div>
-                            <div id="btob_A_5" class="btn_prp" data-val=5 data-name="text_ok"></div>
-                            <div id="btob_A_6" class="btn_prp" data-val=6 data-name="text_ok"></div>
-                            <div id="btob_A_7" class="btn_prp" data-val=1 data-name="text_no"></div>
-                            <div id="btob_A_8" class="btn_prp" data-val=2 data-name="text_no"></div>
-                            <div id="btob_A_9" class="btn_prp" data-val=3 data-name="text_no"></div>
-                            <div id="btob_A_10" class="btn_prp" data-val=4 data-name="text_no"></div>
+                            <div id="btob_A_1" class="btn_prp ico_good" data-val=1 data-name="text_ok"></div>
+                            <div id="btob_A_2" class="btn_prp ico_good" data-val=2 data-name="text_ok"></div>
+                            <div id="btob_A_3" class="btn_prp ico_good" data-val=3 data-name="text_ok"></div>
+                            <div id="btob_A_4" class="btn_prp ico_good" data-val=4 data-name="text_ok"></div>
+                            <div id="btob_A_5" class="btn_prp ico_good" data-val=5 data-name="text_ok"></div>
+                            <div id="btob_A_6" class="btn_prp ico_good" data-val=6 data-name="text_ok"></div>
+                            <div id="btob_A_7" class="btn_prp ico_bad" data-val=1 data-name="text_no"></div>
+                            <div id="btob_A_8" class="btn_prp ico_bad" data-val=2 data-name="text_no"></div>
+                            <div id="btob_A_9" class="btn_prp ico_bad" data-val=3 data-name="text_no"></div>
+                            <div id="btob_A_10" class="btn_prp ico_bad" data-val=4 data-name="text_no"></div>
                         </div>
                         <div class="item" data-id=2>
                             <div id="s2i2"></div>
-                            <div id="btob_B_1" class="btn_prp" data-val=7 data-name="text_ok"></div>
-                            <div id="btob_B_2" class="btn_prp" data-val=8 data-name="text_ok"></div>
+                            <div id="btob_B_1" class="btn_prp ico_good" data-val=7 data-name="text_ok"></div>
+                            <div id="btob_B_2" class="btn_prp ico_good" data-val=8 data-name="text_ok"></div>
                         </div>
                         <div class="item" data-id=3>
                             <div id="s2i3"></div>
-                            <div id="btob_C_1" class="btn_prp" data-val=9 data-name="text_ok"></div>
-                            <div id="btob_C_2" class="btn_prp" data-val=10 data-name="text_ok"></div>
-                            <div id="btob_C_3" class="btn_prp" data-val=11 data-name="text_ok"></div>
+                            <div id="btob_C_1" class="btn_prp ico_good" data-val=9 data-name="text_ok"></div>
+                            <div id="btob_C_2" class="btn_prp ico_good" data-val=10 data-name="text_ok"></div>
+                            <div id="btob_C_3" class="btn_prp ico_good" data-val=11 data-name="text_ok"></div>
                         </div>
                         <div class="item" data-id=4>
                             <div id="s2i4"></div>
-                            <div id="btob_D_1" class="btn_prp" data-val=12 data-name="text_ok"></div>
-                            <div id="btob_D_2" class="btn_prp" data-val=13 data-name="text_ok"></div>
-                            <div id="btob_D_3" class="btn_prp" data-val=14 data-name="text_ok"></div>
-                            <div id="btob_D_4" class="btn_prp" data-val=15 data-name="text_ok"></div>
-                            <div id="btob_D_5" class="btn_prp" data-val=16 data-name="text_ok"></div>
-                            <div id="btob_D_6" class="btn_prp" data-val=17 data-name="text_ok"></div>
-                            <div id="btob_D_7" class="btn_prp" data-val=18 data-name="text_ok"></div>
-                            <div id="btob_D_8" class="btn_prp" data-val=19 data-name="text_ok"></div>
-                            <div id="btob_D_9" class="btn_prp" data-val=20 data-name="text_ok"></div>
+                            <div id="btob_D_1" class="btn_prp ico_good" data-val=12 data-name="text_ok"></div>
+                            <div id="btob_D_2" class="btn_prp ico_good" data-val=13 data-name="text_ok"></div>
+                            <div id="btob_D_3" class="btn_prp ico_good" data-val=14 data-name="text_ok"></div>
+                            <div id="btob_D_4" class="btn_prp ico_good" data-val=15 data-name="text_ok"></div>
+                            <div id="btob_D_5" class="btn_prp ico_good" data-val=16 data-name="text_ok"></div>
+                            <div id="btob_D_6" class="btn_prp ico_good" data-val=17 data-name="text_ok"></div>
+                            <div id="btob_D_7" class="btn_prp ico_good" data-val=18 data-name="text_ok"></div>
+                            <div id="btob_D_8" class="btn_prp ico_good" data-val=19 data-name="text_ok"></div>
+                            <div id="btob_D_9" class="btn_prp ico_good" data-val=20 data-name="text_ok"></div>
                         </div>
                         <div class="item" data-id=5>
                             <div id="s2i5"></div>
-                            <div id="btob_E_1" class="btn_prp" data-val=21 data-name="text_ok"></div>
-                            <div id="btob_E_2" class="btn_prp" data-val=22 data-name="text_ok"></div>
-                            <div id="btob_E_3" class="btn_prp" data-val=23 data-name="text_ok"></div>
-                            <div id="btob_E_4" class="btn_prp" data-val=24 data-name="text_ok"></div>
-                            <div id="btob_E_5" class="btn_prp" data-val=25 data-name="text_ok"></div>
-                            <div id="btob_E_6" class="btn_prp" data-val=5 data-name="text_no"></div>
-                            <div id="btob_E_7" class="btn_prp" data-val=6 data-name="text_no"></div>
-                            <div id="btob_E_8" class="btn_prp" data-val=7 data-name="text_no"></div>
-                            <div id="btob_E_9" class="btn_prp" data-val=8 data-name="text_no"></div>
-                            <div id="btob_E_10" class="btn_prp" data-val=9 data-name="text_no"></div>
-                            <div id="btob_E_11" class="btn_prp" data-val=10 data-name="text_no"></div>
+                            <div id="btob_E_1" class="btn_prp ico_good" data-val=21 data-name="text_ok"></div>
+                            <div id="btob_E_2" class="btn_prp ico_good" data-val=22 data-name="text_ok"></div>
+                            <div id="btob_E_3" class="btn_prp ico_good" data-val=23 data-name="text_ok"></div>
+                            <div id="btob_E_4" class="btn_prp ico_good" data-val=24 data-name="text_ok"></div>
+                            <div id="btob_E_5" class="btn_prp ico_good" data-val=25 data-name="text_ok"></div>
+                            <div id="btob_E_6" class="btn_prp ico_bad" data-val=5 data-name="text_no"></div>
+                            <div id="btob_E_7" class="btn_prp ico_bad" data-val=6 data-name="text_no"></div>
+                            <div id="btob_E_8" class="btn_prp ico_bad" data-val=7 data-name="text_no"></div>
+                            <div id="btob_E_9" class="btn_prp ico_bad" data-val=8 data-name="text_no"></div>
+                            <div id="btob_E_10" class="btn_prp ico_bad" data-val=9 data-name="text_no"></div>
+                            <div id="btob_E_11" class="btn_prp ico_bad" data-val=10 data-name="text_no"></div>
                         </div>
                         <div class="item" data-id=6>
                             <div id="s2i6"></div>
-                            <div id="btob_F_1" class="btn_prp" data-val=26 data-name="text_ok"></div>
-                            <div id="btob_F_2" class="btn_prp" data-val=27 data-name="text_ok"></div>
-                            <div id="btob_F_3" class="btn_prp" data-val=28 data-name="text_ok"></div>
-                            <div id="btob_F_4" class="btn_prp" data-val=29 data-name="text_ok"></div>
-                            <div id="btob_F_5" class="btn_prp" data-val=30 data-name="text_ok"></div>
-                            <div id="btob_F_6" class="btn_prp" data-val=11 data-name="text_no"></div>
-                            <div id="btob_F_7" class="btn_prp" data-val=12 data-name="text_no"></div>
-                            <div id="btob_F_8" class="btn_prp" data-val=13 data-name="text_no"></div>
-                            <div id="btob_F_9" class="btn_prp" data-val=14 data-name="text_no"></div>
-                            <div id="btob_F_10" class="btn_prp" data-val=15 data-name="text_no"></div>
+                            <div id="btob_F_1" class="btn_prp ico_good" data-val=26 data-name="text_ok"></div>
+                            <div id="btob_F_2" class="btn_prp ico_good" data-val=27 data-name="text_ok"></div>
+                            <div id="btob_F_3" class="btn_prp ico_good" data-val=28 data-name="text_ok"></div>
+                            <div id="btob_F_4" class="btn_prp ico_good" data-val=29 data-name="text_ok"></div>
+                            <div id="btob_F_5" class="btn_prp ico_good" data-val=30 data-name="text_ok"></div>
+                            <div id="btob_F_6" class="btn_prp ico_bad" data-val=11 data-name="text_no"></div>
+                            <div id="btob_F_7" class="btn_prp ico_bad" data-val=12 data-name="text_no"></div>
+                            <div id="btob_F_8" class="btn_prp ico_bad" data-val=13 data-name="text_no"></div>
+                            <div id="btob_F_9" class="btn_prp ico_bad" data-val=14 data-name="text_no"></div>
+                            <div id="btob_F_10" class="btn_prp ico_bad" data-val=15 data-name="text_no"></div>
                         </div>
                         <div class="item" data-id=7>
                             <div id="s2i7"></div>
-                            <div id="btob_G_1" class="btn_prp" data-val=31 data-name="text_ok"></div>
-                            <div id="btob_G_2" class="btn_prp" data-val=32 data-name="text_ok"></div>
-                            <div id="btob_G_3" class="btn_prp" data-val=33 data-name="text_ok"></div>
+                            <div id="btob_G_1" class="btn_prp ico_good" data-val=31 data-name="text_ok"></div>
+                            <div id="btob_G_2" class="btn_prp ico_good" data-val=32 data-name="text_ok"></div>
+                            <div id="btob_G_3" class="btn_prp ico_good" data-val=33 data-name="text_ok"></div>
                         </div>
                     </div>
                 </div>
@@ -170,12 +189,15 @@
             <!-- - - - - - - - - - - - - - - -  Slider 3  - - - - - - - - - - - - - - - -->
             <div id="sliderPage_3" class="instrucciones">
                 <div class="cont-carousel">
-                    <div class="owl-carousel">
+                    <div class="owl-carousel" style="top: 29px;">
                          <div class="item" data-id=1>
                             <div id="s3i1"></div>
                         </div>
                         <div class="item" data-id=2>
                             <div id="s3i2"></div>
+                        </div>
+                        <div class="item" data-id=3>
+                            <div id="s3i3"></div>
                         </div>
                     </div>
                 </div>

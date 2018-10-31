@@ -12,8 +12,6 @@ var config = {
     height: 700,
     canvas: canvasExt,
     backgroundColor: 'rgba(0, 0, 0, 0)',
-    // Menor que 1 baja la calidad pero aumenta el rendimiento, puede ser util para modo de bajo rendimiento
-    // Mayor que 1 hace que se vea mucho mejor pero tiene mucho impacto en el rendimiento
     resolution: 1,
     orientatssion: 'LANDSCAPE',
     // scene: [sceneComprobar,sceneComprobarFase1,scenePreguntas],

@@ -233,10 +233,10 @@
     background-position:0px 0px;
     background-color: rgba(250,0,0,0);
 }
-.playerP.owl-planta .sprite{ background-image: url(../images/plt_sprite_F.png); }
-.playerP.owl-oficina .sprite{ background-image: url(../images/of_sprite_F.png); }
-.playerP.owl-restaurante .sprite{ background-image: url(../images/rest_sprite_F.png); }
-.playerP.owl-driver .sprite{ background-image: url(../images/rest_sprite_F.png); }
+.playerF.owl-planta .sprite{ background-image: url(../images/plt_sprite_F.png); }
+.playerF.owl-oficina .sprite{ background-image: url(../images/of_sprite_F.png); }
+.playerF.owl-restaurante .sprite{ background-image: url(../images/rest_sprite_F.png); }
+.playerF.owl-driver .sprite{ background-image: url(../images/rest_sprite_F.png); }
 
 .playerM.owl-planta .sprite{ background-image: url(../images/plt_sprite_M.png); }
 .playerM.owl-oficina .sprite{ background-image: url(../images/of_sprite_M.png); }

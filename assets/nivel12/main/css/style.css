@@ -433,13 +433,17 @@ body{
 #btob_G_2{ left : 196px; top : 437px;}
 #btob_G_3{ left : 1072px; top : 355px;}
 
-.btn_prp{
+
+.btn_prp, .botiquin_mc{
     display: table;
     width: 50px !important; height:50px !important; 
     background: url(../images/circular.svg) no-repeat;
     cursor: pointer;
 }
-.btn_prp:after {
+.ico_good{background: url(../images/slider/good.svg) no-repeat !important;}
+.ico_bad{background: url(../images/slider/bad.svg) no-repeat !important;}
+
+.btn_prp:after, .botiquin_mc:after {
     position: absolute;
     width: 100%; height: 100%;
     left: 0; top: 0;
@@ -482,6 +486,144 @@ body{
     -moz-animation: sonarEffect3 0.5s ease-out 75ms ;
     animation: sonarEffect3 0.5s ease-out 75ms ;
 }
+
+#cur_btn{
+    width: 70px !important;
+    height: 70px !important;
+    left: 566px;
+    top: 108px;
+}
+.cur_mc{
+    position: absolute;
+}
+
+#cur_1{
+    background: url(../images/pop/a_1.svg) no-repeat;
+    top: 110px;
+    left: 1px;
+    width: 228px;
+    height: 70px;
+    opacity: 0;
+}
+#cur_2{
+    background: url(../images/pop/a_2.svg) no-repeat;
+    top: 204px;
+    left: 2px;
+    width: 228px;
+    height: 75px;
+    opacity: 0;
+}
+#cur_3{
+    background: url(../images/pop/a_3.svg) no-repeat;
+    top: 300px;
+    left: 6px;
+    width: 228px;
+    height: 75px;
+    opacity: 0;
+}
+#cur_4{
+    background: url(../images/pop/a_4.svg) no-repeat;
+    top: 110px;
+    left: 232px;
+    width: 228px;
+    height: 75px;
+    opacity: 0;
+}
+#cur_5{
+    background: url(../images/pop/a_5.svg) no-repeat;
+    top: 203px;
+    left: 231px;
+    width: 228px;
+    height: 100px;
+    opacity: 0;
+}
+#cur_6{
+    background: url(../images/pop/a_6.svg) no-repeat;
+    top: 328px;
+    left: 233px;
+    width: 228px;
+    height: 80px;
+    opacity: 0;
+}
+#cur_7{
+    background: url(../images/pop/a_7.svg) no-repeat;
+    top: 130px;
+    left: 740px;
+    width: 228px;
+    height: 88px;
+    opacity: 0;
+}
+#cur_8{
+    background: url(../images/pop/a_8.svg) no-repeat;
+    top: 243px;
+    left: 740px;
+    width: 228px;
+    height: 85px;
+    opacity: 0;
+}
+#cur_9{
+    background: url(../images/pop/a_9.svg) no-repeat;
+    top: 350px;
+    left: 740px;
+    width: 228px;
+    height: 75px;
+    opacity: 0;
+}
+#cur_10{
+    background: url(../images/pop/a_10.svg) no-repeat;
+    top: 134px;
+    left: 974px;
+    width: 228px;
+    height: 93px;
+    opacity: 0;
+}
+#cur_11{
+    background: url(../images/pop/a_11.svg) no-repeat;
+    top: 246px;
+    left: 967px;
+    width: 228px;
+    height: 93px;
+    opacity: 0;
+}
+#cur_12{
+    background: url(../images/pop/a_12.svg) no-repeat;
+    top: 362px;
+    left: 972px;
+    width: 228px;
+    height: 57px;
+    opacity: 0;
+}
+/* #cur_13{
+    background: url(../images/pop/a_13.svg) no-repeat;
+    top: 194px;
+    left: 972px;
+    width: 228px;
+    height: 57px;
+    opacity: 0;
+}
+#cur_14{
+    background: url(../images/pop/a_14.svg) no-repeat;
+    top: 255px;
+    left: 970px;
+    width: 228px;
+    height: 85px;
+    opacity: 0;
+}
+#cur_15{
+    background: url(../images/pop/a_15.svg) no-repeat;
+    top: 345px;
+    left: 971px;
+    width: 228px;
+    height: 80px;
+    opacity: 0;
+} */
+.inn{
+    opacity: 1 !important;
+}
+.out{
+    opacity: 0;
+}
+
 
 #act_txtGen{
     width: 1350px;
@@ -541,6 +683,8 @@ body{
     -ms-pointer-events: none;
     -moz-pointer-events: none;
 }
+
+
 /*******************************  general de los sliders  *******************************/
 .stit_1{
     position : absolute ;
@@ -661,17 +805,17 @@ body{
     top: -40px;
 }
 
-.oficina #s1i1{ position: absolute; top: -30px;
-    background: url(../images/slider/sl1_1.svg) no-repeat center center;}
+.oficina #s1i1{ position: absolute; top: 130px; left: 462px;  width : 280px !important; height : 261px !important;
+    background: url(../images/slider/botiquin.svg) no-repeat center center;}
 
-.planta #s1i1{ position: absolute; top: -30px;
-    background: url(../images/slider/sl1_1.svg) no-repeat center center;}
+.planta #s1i1{ position: absolute; top: 130px; left: 462px;  width : 280px !important; height : 261px !important;
+    background: url(../images/slider/botiquin.svg) no-repeat center center;}
 
-.restaurante #s1i1{ position: absolute; top: -30px;
-    background: url(../images/slider/sl1_1.svg) no-repeat center center;}
+.restaurante #s1i1{ position: absolute; top: 130px; left: 462px;  width : 280px !important; height : 261px !important;
+    background: url(../images/slider/botiquin.svg) no-repeat center center;}
 
-.driver #s1i1{ position: absolute; top: -30px;
-    background: url(../images/slider/sl1_1.svg) no-repeat center center;}
+.driver #s1i1{ position: absolute; top: 130px; left: 462px;  width : 280px !important; height : 261px !important;
+    background: url(../images/slider/botiquin.svg) no-repeat center center;}
 
     #popActiv{
         position: absolute; display: none;
@@ -773,26 +917,35 @@ body{
 /*******************************  Slider Page 3  *******************************/
 #sliderPage_3{ background: url(../images/bgspg3.png) no-repeat center center; }
 
-.oficina #s3i1{ position: absolute; top: 45px; 
+.oficina #s3i1{ position: absolute; top: 75px; 
     background: url(../images/slider/sld/sl3_1.png) no-repeat center center;}
-.oficina #s3i2{ position: absolute; top: 45px;  
+.oficina #s3i2{ position: absolute; top: 75px;  
     background: url(../images/slider/sld/sl3_2.png) no-repeat center center;}
-
-.planta #s3i1{ position: absolute; top: 45px; 
+    .oficina #s3i3{ position: absolute; top: 75px;  
+        background: url(../images/slider/sld/sl3_3.png) no-repeat center center;}
+    
+.planta #s3i1{ position: absolute; top: 75px; 
     background: url(../images/slider/sld/sl3_1.png) no-repeat center center;}
-.planta #s3i2{ position: absolute; top: 45px;  
+.planta #s3i2{ position: absolute; top: 75px;  
     background: url(../images/slider/sld/sl3_2.png) no-repeat center center;}
-
-.restaurante #s3i1{ position: absolute; top: 45px; 
+    .planta #s3i3{ position: absolute; top: 75px;  
+        background: url(../images/slider/sld/sl3_3.png) no-repeat center center;}
+    
+.restaurante #s3i1{ position: absolute; top: 75px; 
     background: url(../images/slider/sld/sl3_1.png) no-repeat center center;}
-.restaurante #s3i2{ position: absolute; top: 45px;  
+.restaurante #s3i2{ position: absolute; top: 75px;  
     background: url(../images/slider/sld/sl3_2.png) no-repeat center center;}
-
-.driver #s3i1{ position: absolute; top: 45px; 
+    .restaurante #s3i3{ position: absolute; top: 75px;  
+        background: url(../images/slider/sld/sl3_3.png) no-repeat center center;}
+    
+.driver #s3i1{ position: absolute; top: 75px; 
     background: url(../images/slider/sld/sl3_1.png) no-repeat center center;}
-.driver #s3i2{ position: absolute; top: 45px;  
+.driver #s3i2{ position: absolute; top: 75px;  
     background: url(../images/slider/sld/sl3_2.png) no-repeat center center;}
+    .driver #s3i3{ position: absolute; top: 75px;  
+        background: url(../images/slider/sld/sl3_3.png) no-repeat center center;}
 
+        
 .btnVolver{
     position: absolute; display: none;
     width: 215px;

@@ -57,7 +57,7 @@ var text_no=[   null,
                 'LO QUE NO DEBES HACER<br><br>Manipular la herida y quitar cuerpos extraños enclavados.',
                 //heridas arriba
                 //quemaduras 
-                'Aplicar cremas, pomadas, gasa parafinada estéril (JELONET), recuerden, solo se debe de brindar los primeros auxilios, el uso de lo arriba mencionado puede exponer al accidentado a posibles infecciones de la herida y/o retardar la atención en el centro de salud ya que tendrán que retirarlas para poder hacer las curaciones respectivas.',
+                'LO QUE NO DEBES HACER<br>Aplicar cremas, pomadas, gasa parafinada estéril (JELONET), recuerden, solo se debe de brindar los primeros auxilios, el uso de lo arriba mencionado puede exponer al accidentado a posibles infecciones de la herida y/o retardar la atención en el centro de salud ya que tendrán que retirarlas para poder hacer las curaciones respectivas.',
                 'LO QUE NO DEBES HACER<br><br>Enfriar demasiado al accidentado, solo las partes quemadas.',
                 'LO QUE NO DEBES HACER<br><br>Dar analgésicos por vía oral .',
                 'LO QUE NO DEBES HACER<br><br>Romper las ampollas .',
@@ -146,6 +146,17 @@ $(document).ready(function (e) {
         $('.instrucciones').stop().delay(300).fadeOut(100);
         $('#instruccion_3').stop().fadeIn(500);
     });
+
+    var animacion_mc;
+    $('#cur_btn').click(function () {
+        $( ".cur_mc" ).removeClass('inn');
+        $( ".cur_mc" ).each(function( i, el ) {            
+            window.setTimeout(function(){ 
+                animacion_mc = $(el).data('anim');
+                $(el).animateCss(animacion_mc).addClass('inn');               
+            }, 200 * i);
+        });
+    })
 
     $('.btn_prp').click(function () {
         var valuetxt = $(this).data('name');
