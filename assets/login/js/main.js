@@ -92,7 +92,7 @@ $(document).ready(function () {
                 $("#f-change").removeClass('disable');
             });
         } else {
-            $('#f-msg').show().html('Complete todos los campos');
+            $('#f-msg').show().html('Completar todos los campos');
         }
     });
 });
